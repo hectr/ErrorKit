@@ -1,0 +1,44 @@
+// Strings file generated with App Translator
+// Project: ErrorKit-Example
+// Language: en
+// Date: Sun Feb 17 20:42:53 2013
+
+/* No comment provided by engineer. */
+"%@ caught"="%@ caught";
+
+/* No comment provided by engineer. */
+"Cancel"="Cancel";
+
+/* No comment provided by engineer. */
+"Connecting..."="Connecting...";
+
+/* No comment provided by engineer. */
+"Connection failed"="Connection failed";
+
+/* No comment provided by engineer. */
+"Error"="Error";
+
+/* No comment provided by engineer. */
+"Help"="Help";
+
+/* No comment provided by engineer. */
+"Network Error"="Network Error";
+
+/* No comment provided by engineer. */
+"OK"="OK";
+
+/* No comment provided by engineer. */
+"Please check your internet connection and try again."="Please check your internet connection and try again.";
+
+/* No comment provided by engineer. */
+"Retry"="Retry";
+
+/* No comment provided by engineer. */
+"Retrying..."="Retrying...";
+
+/* No comment provided by engineer. */
+"YES"="YES";
+
+/* No comment provided by engineer. */
+"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi"="You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi";
+

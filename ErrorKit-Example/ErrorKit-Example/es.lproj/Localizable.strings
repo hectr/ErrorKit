@@ -1,0 +1,44 @@
+// Strings file generated with App Translator
+// Project: ErrorKit-Example
+// Language: es
+// Date: Sun Feb 17 20:42:53 2013
+
+/* No comment provided by engineer. */
+"%@ caught"="capturada";
+
+/* No comment provided by engineer. */
+"Cancel"="Cancelar";
+
+/* No comment provided by engineer. */
+"Connecting..."="Conectando...";
+
+/* No comment provided by engineer. */
+"Connection failed"="Conexión fallida";
+
+/* No comment provided by engineer. */
+"Error"="Error";
+
+/* No comment provided by engineer. */
+"Help"="Ayuda";
+
+/* No comment provided by engineer. */
+"Network Error"="Error de red";
+
+/* No comment provided by engineer. */
+"OK"="OK";
+
+/* No comment provided by engineer. */
+"Please check your internet connection and try again."="Por favor, compruebe su conexión a internet e inténtelo de nuevo.";
+
+/* No comment provided by engineer. */
+"Retry"="Reintentar";
+
+/* No comment provided by engineer. */
+"Retrying..."="Reintentando...";
+
+/* No comment provided by engineer. */
+"YES"="SÍ";
+
+/* No comment provided by engineer. */
+"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi"="Puedes ajustar la configuración de la red móvil de iPhone en Ajustes > General > Datos Móviles. En iPad la configuración se encuentra en Ajustes > Datos Móviles\n\nPara localizar redes Wi-Fi cercanas, pulsa Ajustes > Wi-Fi";
+
