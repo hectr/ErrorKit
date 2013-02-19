@@ -51,7 +51,10 @@
     }
 #ifdef _AFNETWORKING_
     if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
-        return NSLocalizedString(@"Network Error", nil);
+        if (error.failingURLResponse) {
+            NSInteger code = error.failingURLResponse.statusCode;
+            return [NSHTTPURLResponse localizedStringForStatusCode:code];
+        }
     }
 #endif
     return NSLocalizedString(@"Error", nil);
@@ -60,6 +63,13 @@
 + (NSString *)stringForMessageFromError:(NSError *)error
 {
     NSMutableArray *stringComponents = [NSMutableArray arrayWithCapacity:3];
+#ifdef _AFNETWORKING_
+    if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
+        if (error.failingURLResponse && error.localizedDescription) {
+            [stringComponents addObject:error.localizedDescription];
+        }
+    }
+#endif
     if (error.localizedFailureReason) {
         [stringComponents addObject:error.localizedFailureReason];
     }

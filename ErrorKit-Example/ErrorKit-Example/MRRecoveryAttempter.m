@@ -22,6 +22,10 @@
 
 #import "MRRecoveryAttempter.h"
 
+#if  ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
+#endif
+
 
 @implementation MRRecoveryAttempter
 
@@ -30,7 +34,7 @@
     NSParameterAssert(handler);
     self = [super init];
     if (self) {
-        _recoveryHandler = handler;
+        _recoveryHandler = [handler copy];
     }
     return self;
 }

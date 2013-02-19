@@ -85,7 +85,7 @@
         builder.helpAnchor = NSLocalizedString(@"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi", nil);
         builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
         [[UIAlertView alertWithTitle:nil error:builder.error] show];
-    } else if (error.code != NSURLErrorUserCancelledAuthentication && error.code != NSURLErrorCancelled) {
+    } else if (!error.isCancelledError) {
         [[UIAlertView alertWithTitle:nil error:error] show];
     }
 }
@@ -112,8 +112,12 @@
     }
 }
 
-- (void)viewDidUnload {
-    [self setUrlTextField:nil];
-    [super viewDidUnload];
+#pragma mark - UIViewController methods
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self.connectButton setTitle:NSLocalizedString(@"Connect", nil) forState:UIControlStateNormal];
 }
+
 @end

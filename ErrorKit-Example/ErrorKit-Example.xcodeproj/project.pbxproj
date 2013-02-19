@@ -17,7 +17,7 @@
 		84DB844716C802F4000BF23E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DB844616C802F4000BF23E /* Default-568h@2x.png */; };
 		84DB844A16C802F4000BF23E /* MRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB844916C802F4000BF23E /* MRViewController.m */; };
 		84DB845516C80380000BF23E /* MRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DB845316C80380000BF23E /* MRViewController.xib */; };
-		84DB845616C80380000BF23E /* UIApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DB845416C80380000BF23E /* UIApplication.xib */; };
+		84DB845616C80380000BF23E /* ErrorKitExample-Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DB845416C80380000BF23E /* ErrorKitExample-Application.xib */; };
 		84DB846E16C8048E000BF23E /* MRErrorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846516C8048E000BF23E /* MRErrorBuilder.m */; };
 		84DB846F16C8048E000BF23E /* MRErrorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846716C8048E000BF23E /* MRErrorFormatter.m */; };
 		84DB847016C8048E000BF23E /* NSError+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */; };
@@ -43,7 +43,7 @@
 		84DB844816C802F4000BF23E /* MRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRViewController.h; sourceTree = "<group>"; };
 		84DB844916C802F4000BF23E /* MRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRViewController.m; sourceTree = "<group>"; };
 		84DB845316C80380000BF23E /* MRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRViewController.xib; sourceTree = "<group>"; };
-		84DB845416C80380000BF23E /* UIApplication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIApplication.xib; sourceTree = "<group>"; };
+		84DB845416C80380000BF23E /* ErrorKitExample-Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ErrorKitExample-Application.xib"; sourceTree = "<group>"; };
 		84DB846116C8048E000BF23E /* ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit.h; path = ../../ErrorKit/ErrorKit.h; sourceTree = "<group>"; };
 		84DB846216C8048E000BF23E /* MRErrorBuilder_AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_AFNetworking.h; path = ../../ErrorKit/MRErrorBuilder_AFNetworking.h; sourceTree = "<group>"; };
 		84DB846316C8048E000BF23E /* MRErrorBuilder_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_CoreData.h; path = ../../ErrorKit/MRErrorBuilder_CoreData.h; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 		84DB843616C802F3000BF23E /* ErrorKit-Example */ = {
 			isa = PBXGroup;
 			children = (
-				84DB845416C80380000BF23E /* UIApplication.xib */,
 				84DB843F16C802F3000BF23E /* MRAppDelegate.h */,
 				84DB844016C802F4000BF23E /* MRAppDelegate.m */,
 				84DB844816C802F4000BF23E /* MRViewController.h */,
@@ -136,6 +135,7 @@
 				84DB844216C802F4000BF23E /* Default.png */,
 				84DB844416C802F4000BF23E /* Default@2x.png */,
 				84DB844616C802F4000BF23E /* Default-568h@2x.png */,
+				84DB845416C80380000BF23E /* ErrorKitExample-Application.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 				84DB844516C802F4000BF23E /* Default@2x.png in Resources */,
 				84DB844716C802F4000BF23E /* Default-568h@2x.png in Resources */,
 				84DB845516C80380000BF23E /* MRViewController.xib in Resources */,
-				84DB845616C80380000BF23E /* UIApplication.xib in Resources */,
+				84DB845616C80380000BF23E /* ErrorKitExample-Application.xib in Resources */,
 				84DB848016C82D2D000BF23E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

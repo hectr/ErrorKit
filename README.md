@@ -1,9 +1,9 @@
 ErrorKit
 ========
 
-ErrorKit is a handy iOS library for making error handling easier.
+**ErrorKit** is a handy iOS library for making `NSError` handling easier.
 
-It covers error creation, inspection, presentation and recovery.
+It covers error objects creation, inspection, presentation and recovery.
 
 Usage
 -----
@@ -24,12 +24,14 @@ Examples
     
 **Access error values**
 
+	NSString *helpAnchor = error.helpAnchor;
     NSArray *errors = error.detailedErrors;
+    NSURLRequest *request = error.failingURLRequest;
+    // and so on...
 
 **Present error to the user**
 
-        if (error.code != NSURLErrorUserCancelledAuthentication &&
-                   error.code != NSURLErrorCancelled) {
+        if (!error.isCancelledError) {
 	        [[UIAlertView alertWithTitle:nil error:error] show];
 	    }
 

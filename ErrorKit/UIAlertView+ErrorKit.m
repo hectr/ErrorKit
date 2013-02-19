@@ -200,3 +200,35 @@ static char kMRAlertViewDelegateObjectKey;
 }
 
 @end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation NSError (Helper)
+
+- (BOOL)isCancelledError
+{
+#ifdef _AFNETWORKING_
+    if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
+        return (self.code == NSURLErrorUserCancelledAuthentication ||
+                self.code == NSURLErrorCancelled);
+    }
+#endif
+    if ([self.domain isEqualToString:NSURLErrorDomain]) {
+        return (self.code == NSURLErrorUserCancelledAuthentication ||
+                self.code == NSURLErrorCancelled);
+    }
+    return ((self.code == NSUserCancelledError || self.code == NSMigrationCancelledError) &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+}
+
+- (BOOL)isValidationError
+{
+    return (self.code >= NSValidationErrorMinimum &&
+            self.code <= NSValidationErrorMaximum &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+}
+
+@end

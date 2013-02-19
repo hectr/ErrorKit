@@ -27,5 +27,6 @@
 
 @property (nonatomic, weak) IBOutlet UITextView *responseTextView;
 @property (nonatomic, weak) IBOutlet UITextField *urlTextField;
+@property (nonatomic, weak) IBOutlet UIButton *connectButton;
 
 @end

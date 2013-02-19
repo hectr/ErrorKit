@@ -34,9 +34,11 @@
 + (NSString *)stringFromError:(NSError *)error;
 
 /// Returns a suitable title for presenting a given error.
+/// @discussion Use this method in convination with `stringForMessageFromError:`.
 + (NSString *)stringForTitleFromError:(NSError *)error;
 
 /// Returns a suitable message for presenting a given error.
+/// @discussion Use this method in convination with `stringForTitleFromError:`.
 + (NSString *)stringForMessageFromError:(NSError *)error;
 
 /// Returns a suitable cancel button title for presenting a given error.

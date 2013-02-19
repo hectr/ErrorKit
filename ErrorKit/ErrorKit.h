@@ -42,16 +42,17 @@
 #endif
 
 #ifndef MRLogError
-#define MRLogError(error)                                            \
-    do {                                                             \
-        if ([error isKindOfClass:NSError.class]) {                   \
-            NSLog(@"%s [Line %d]: %@ (code: %d, domain:%@)"          \
-                                      , __PRETTY_FUNCTION__          \
-                                      , __LINE__                     \
-                                      , [error localizedDescription] \
-                                      , [error code]                 \
-                                      , [error domain]);             \
-        }                                                            \
+#define MRLogError(error)                                                    \
+    do {                                                                     \
+        NSError *mr_##error##_ = error;                                      \
+        if ([mr_##error##_ isKindOfClass:NSError.class]) {                   \
+            NSLog(@"%s [Line %d]: %@ (code: %d, domain:%@)"                  \
+                                      , __PRETTY_FUNCTION__                  \
+                                      , __LINE__                             \
+                                      , [mr_##error##_ localizedDescription] \
+                                      , [mr_##error##_ code]                 \
+                                      , [mr_##error##_ domain]);             \
+        }                                                                    \
     } while(0)
 #endif
 

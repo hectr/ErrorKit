@@ -1,13 +1,13 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: es
-// Date: Sun Feb 17 20:42:53 2013
-
-/* No comment provided by engineer. */
-"%@ caught"="capturada";
+// Date: Tue Feb 19 12:01:25 2013
 
 /* No comment provided by engineer. */
 "Cancel"="Cancelar";
+
+/* No comment provided by engineer. */
+"Connect"="Conectar";
 
 /* No comment provided by engineer. */
 "Connecting..."="Conectando...";

@@ -2,80 +2,82 @@
 <!-- AppTranslator: http://inqbarna.com/m-news/190-apptranslator-utility-for-mac.html -->
 <!DOCTYPE AppTranslator>
 <project platform="iOS" default-lang="en" name="ErrorKit-Example">
- <entry key="%@ caught" comment="No comment provided by engineer.">
-  <translation text="%@ caught" lang="en"/>
-  <translation text="capturada" lang="es"/>
-  <translation text="capturada" lang="ca"/>
-  <occurrence>MRErrorBuilder.m (66)</occurrence>
- </entry>
  <entry key="Cancel" comment="No comment provided by engineer.">
   <translation text="Cancel" lang="en"/>
   <translation text="Cancelar" lang="es"/>
   <translation text="Cancel·lar" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (105)</occurrence>
+  <occurrence>MRErrorFormatter.m (88)</occurrence>
+ </entry>
+ <entry key="Connect" comment="No comment provided by engineer.">
+  <translation text="Connect" lang="en"/>
+  <translation text="Conectar" lang="es"/>
+  <translation text="Connectar" lang="ca"/>
+  <occurrence>MRViewController.m (50)</occurrence>
+  <occurrence>MRViewController.m (64)</occurrence>
+  <occurrence>MRViewController.m (120)</occurrence>
  </entry>
  <entry key="Connecting..." comment="No comment provided by engineer.">
   <translation text="Connecting..." lang="en"/>
   <translation text="Conectando..." lang="es"/>
   <translation text="Connectant..." lang="ca"/>
-  <occurrence>MRViewController.m (41)</occurrence>
+  <occurrence>MRViewController.m (50)</occurrence>
  </entry>
  <entry key="Connection failed" comment="No comment provided by engineer.">
   <translation text="Connection failed" lang="en"/>
   <translation text="Conexión fallida" lang="es"/>
   <translation text="Connexió fallida" lang="ca"/>
-  <occurrence>MRViewController.m (54)</occurrence>
+  <occurrence>MRViewController.m (64)</occurrence>
  </entry>
  <entry key="Error" comment="No comment provided by engineer.">
   <translation text="Error" lang="en"/>
   <translation text="Error" lang="es"/>
   <translation text="Error" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (87)</occurrence>
+  <occurrence>MRErrorFormatter.m (62)</occurrence>
  </entry>
  <entry key="Help" comment="No comment provided by engineer.">
   <translation text="Help" lang="en"/>
   <translation text="Ayuda" lang="es"/>
   <translation text="Ajuda" lang="ca"/>
-  <occurrence>UIAlertView+ErrorKit.m (55)</occurrence>
-  <occurrence>UIAlertView+ErrorKit.m (192)</occurrence>
+  <occurrence>UIAlertView+ErrorKit.m (64)</occurrence>
+  <occurrence>UIAlertView+ErrorKit.m (197)</occurrence>
  </entry>
  <entry key="Network Error" comment="No comment provided by engineer.">
   <translation text="Network Error" lang="en"/>
   <translation text="Error de red" lang="es"/>
   <translation text="Error de xarxa" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (84)</occurrence>
+  <occurrence>MRErrorFormatter.m (58)</occurrence>
  </entry>
  <entry key="OK" comment="No comment provided by engineer.">
   <translation text="OK" lang="en"/>
   <translation text="OK" lang="es"/>
   <translation text="OK" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (107)</occurrence>
-  <occurrence>UIAlertView+ErrorKit.m (58)</occurrence>
+  <occurrence>MRErrorFormatter.m (90)</occurrence>
+  <occurrence>UIAlertView+ErrorKit.m (67)</occurrence>
  </entry>
  <entry key="Please check your internet connection and try again." comment="No comment provided by engineer.">
   <translation text="Please check your internet connection and try again." lang="en"/>
   <translation text="Por favor, compruebe su conexión a internet e inténtelo de nuevo." lang="es"/>
   <translation text="Si us plau, comprova la connexió a internet i torna-ho a provar." lang="ca"/>
-  <occurrence>MRViewController.m (74)</occurrence>
+  <occurrence>MRViewController.m (84)</occurrence>
  </entry>
  <entry key="Retry" comment="No comment provided by engineer.">
   <translation text="Retry" lang="en"/>
   <translation text="Reintentar" lang="es"/>
   <translation text="Tornar a provar" lang="ca"/>
-  <occurrence>MRViewController.m (43)</occurrence>
-  <occurrence>MRViewController.m (76)</occurrence>
+  <occurrence>MRViewController.m (52)</occurrence>
+  <occurrence>MRViewController.m (86)</occurrence>
  </entry>
  <entry key="Retrying..." comment="No comment provided by engineer.">
   <translation text="Retrying..." lang="en"/>
   <translation text="Reintentando..." lang="es"/>
   <translation text="Tornant a provar..." lang="ca"/>
-  <occurrence>MRViewController.m (43)</occurrence>
+  <occurrence>MRViewController.m (52)</occurrence>
  </entry>
  <entry key="YES" comment="No comment provided by engineer.">
   <translation text="YES" lang="en"/>
   <translation text="SÍ" lang="es"/>
   <translation text="SI" lang="ca"/>
-  <occurrence>MRViewController.m (69)</occurrence>
+  <occurrence>MRViewController.m (79)</occurrence>
  </entry>
  <entry key="You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi" comment="No comment provided by engineer.">
   <translation text="You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi" lang="en"/>
