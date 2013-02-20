@@ -1,0 +1,2018 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>MRErrorBuilder Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ErrorKit </a></h1>
+				<a id="developerHome" href="../index.html">Héctor Marqués</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">MRErrorBuilder Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/affectedObjects">&nbsp;&nbsp;&nbsp;&nbsp;affectedObjects</option>
+	
+	<option value="//api/name/affectedStores">&nbsp;&nbsp;&nbsp;&nbsp;affectedStores</option>
+	
+	<option value="//api/name/code">&nbsp;&nbsp;&nbsp;&nbsp;code</option>
+	
+	<option value="//api/name/detailedErrors">&nbsp;&nbsp;&nbsp;&nbsp;detailedErrors</option>
+	
+	<option value="//api/name/domain">&nbsp;&nbsp;&nbsp;&nbsp;domain</option>
+	
+	<option value="//api/name/failingURL">&nbsp;&nbsp;&nbsp;&nbsp;failingURL</option>
+	
+	<option value="//api/name/failingURLPeerTrust">&nbsp;&nbsp;&nbsp;&nbsp;failingURLPeerTrust</option>
+	
+	<option value="//api/name/failingURLRequest">&nbsp;&nbsp;&nbsp;&nbsp;failingURLRequest</option>
+	
+	<option value="//api/name/failingURLResponse">&nbsp;&nbsp;&nbsp;&nbsp;failingURLResponse</option>
+	
+	<option value="//api/name/failingURLString">&nbsp;&nbsp;&nbsp;&nbsp;failingURLString</option>
+	
+	<option value="//api/name/filePathError">&nbsp;&nbsp;&nbsp;&nbsp;filePathError</option>
+	
+	<option value="//api/name/helpAnchor">&nbsp;&nbsp;&nbsp;&nbsp;helpAnchor</option>
+	
+	<option value="//api/name/localizedDescription">&nbsp;&nbsp;&nbsp;&nbsp;localizedDescription</option>
+	
+	<option value="//api/name/localizedFailureReason">&nbsp;&nbsp;&nbsp;&nbsp;localizedFailureReason</option>
+	
+	<option value="//api/name/localizedRecoveryOptions">&nbsp;&nbsp;&nbsp;&nbsp;localizedRecoveryOptions</option>
+	
+	<option value="//api/name/localizedRecoverySuggestion">&nbsp;&nbsp;&nbsp;&nbsp;localizedRecoverySuggestion</option>
+	
+	<option value="//api/name/persistentStoreSaveConflicts">&nbsp;&nbsp;&nbsp;&nbsp;persistentStoreSaveConflicts</option>
+	
+	<option value="//api/name/recoveryAttempter">&nbsp;&nbsp;&nbsp;&nbsp;recoveryAttempter</option>
+	
+	<option value="//api/name/stringEncodingError">&nbsp;&nbsp;&nbsp;&nbsp;stringEncodingError</option>
+	
+	<option value="//api/name/underlyingError">&nbsp;&nbsp;&nbsp;&nbsp;underlyingError</option>
+	
+	<option value="//api/name/urlError">&nbsp;&nbsp;&nbsp;&nbsp;urlError</option>
+	
+	<option value="//api/name/userInfo">&nbsp;&nbsp;&nbsp;&nbsp;userInfo</option>
+	
+	<option value="//api/name/validationKey">&nbsp;&nbsp;&nbsp;&nbsp;validationKey</option>
+	
+	<option value="//api/name/validationObject">&nbsp;&nbsp;&nbsp;&nbsp;validationObject</option>
+	
+	<option value="//api/name/validationPredicate">&nbsp;&nbsp;&nbsp;&nbsp;validationPredicate</option>
+	
+	<option value="//api/name/validationValue">&nbsp;&nbsp;&nbsp;&nbsp;validationValue</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/builderWithDomain:code:">&nbsp;&nbsp;&nbsp;&nbsp;+ builderWithDomain:code:</option>
+	
+	<option value="//api/name/builderWithDomain:code:description:">&nbsp;&nbsp;&nbsp;&nbsp;+ builderWithDomain:code:description:</option>
+	
+	<option value="//api/name/builderWithError:">&nbsp;&nbsp;&nbsp;&nbsp;+ builderWithError:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/error">&nbsp;&nbsp;&nbsp;&nbsp;- error</option>
+	
+	<option value="//api/name/initWithDomain:code:userInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDomain:code:userInfo:</option>
+	
+	<option value="//api/name/setUserInfoValue:forKey:">&nbsp;&nbsp;&nbsp;&nbsp;- setUserInfoValue:forKey:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Defining error">Defining error</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_NSError userInfo values">NSError userInfo values</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_NSURLError userInfo values">NSURLError userInfo values</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and initializing Builder">Creating and initializing Builder</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating error">Creating error</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_AFNetworking Methods">ErrorKit_AFNetworking Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_CoreData Methods">ErrorKit_CoreData Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/affectedObjects">affectedObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/affectedStores">affectedStores</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/code">code</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/detailedErrors">detailedErrors</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/domain">domain</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failingURL">failingURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failingURLPeerTrust">failingURLPeerTrust</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failingURLRequest">failingURLRequest</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failingURLResponse">failingURLResponse</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failingURLString">failingURLString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filePathError">filePathError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/helpAnchor">helpAnchor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localizedDescription">localizedDescription</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localizedFailureReason">localizedFailureReason</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localizedRecoveryOptions">localizedRecoveryOptions</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localizedRecoverySuggestion">localizedRecoverySuggestion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/persistentStoreSaveConflicts">persistentStoreSaveConflicts</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recoveryAttempter">recoveryAttempter</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringEncodingError">stringEncodingError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/underlyingError">underlyingError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/urlError">urlError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userInfo">userInfo</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validationKey">validationKey</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validationObject">validationObject</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validationPredicate">validationPredicate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validationValue">validationValue</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/builderWithDomain:code:">builderWithDomain:code:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/builderWithDomain:code:description:">builderWithDomain:code:description:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/builderWithError:">builderWithError:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/error">error</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDomain:code:userInfo:">initWithDomain:code:userInfo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setUserInfoValue:forKey:">setUserInfoValue:forKey:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="MRErrorBuilder Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">MRErrorBuilder Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">MRErrorBuilder.h<br />MRErrorBuilder.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Concrete builder of <code>NSError</code> instances.</p>
+
+<p>Adds accessors for AFNetworkingOperationFailingURLRequestErrorKey and AFNetworkingOperationFailingURLResponseErrorKey <a href="#//api/name/userInfo"><code>userInfo</code></a> values.</p>
+
+<p><strong>Warning:</strong> This extension requires the AFNetworking library. Add an <code>AFNetworking.h</code> import to the header prefix of the project.</p>
+
+<p>Adds accessors for Core Data&rsquo;s <a href="#//api/name/error">error</a> <a href="#//api/name/userInfo"><code>userInfo</code></a> values.</p>
+
+<p><strong>Warning:</strong> This extension requires the Core Data framework. Add a <code>CoreData/CoreData.h</code> import to the header prefix of the project.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Defining error" name="task_Defining error"></a>
+						<h3 class="subsubtitle task-title">Defining error</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/code">&nbsp;&nbsp;code</a></code>
+		<span class="tooltip"><p>Error code.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/domain">&nbsp;&nbsp;domain</a></code>
+		<span class="tooltip"><p>Error domain.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userInfo">&nbsp;&nbsp;userInfo</a></code>
+		<span class="tooltip"><p>User info.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="NSError userInfo values" name="task_NSError userInfo values"></a>
+						<h3 class="subsubtitle task-title">NSError userInfo values</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/filePathError">&nbsp;&nbsp;filePathError</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSFilePathErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/helpAnchor">&nbsp;&nbsp;helpAnchor</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSHelpAnchorErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localizedDescription">&nbsp;&nbsp;localizedDescription</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSLocalizedDescriptionKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localizedFailureReason">&nbsp;&nbsp;localizedFailureReason</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSLocalizedFailureReasonErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localizedRecoveryOptions">&nbsp;&nbsp;localizedRecoveryOptions</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSLocalizedRecoveryOptionsErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localizedRecoverySuggestion">&nbsp;&nbsp;localizedRecoverySuggestion</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSLocalizedRecoverySuggestionErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recoveryAttempter">&nbsp;&nbsp;recoveryAttempter</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSRecoveryAttempterErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringEncodingError">&nbsp;&nbsp;stringEncodingError</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSStringEncodingErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/underlyingError">&nbsp;&nbsp;underlyingError</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSUnderlyingErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/urlError">&nbsp;&nbsp;urlError</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSURLErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="NSURLError userInfo values" name="task_NSURLError userInfo values"></a>
+						<h3 class="subsubtitle task-title">NSURLError userInfo values</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/failingURL">&nbsp;&nbsp;failingURL</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSURLErrorFailingURLErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/failingURLPeerTrust">&nbsp;&nbsp;failingURLPeerTrust</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSURLErrorFailingURLPeerTrustErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/failingURLString">&nbsp;&nbsp;failingURLString</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSURLErrorFailingURLStringErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating and initializing Builder" name="task_Creating and initializing Builder"></a>
+						<h3 class="subsubtitle task-title">Creating and initializing Builder</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/builderWithError:">+&nbsp;builderWithError:</a></code>
+		<span class="tooltip"><p>Creates and initializes an <code>MRErrorBuilder</code> object with data from another object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/builderWithDomain:code:">+&nbsp;builderWithDomain:code:</a></code>
+		<span class="tooltip"><p>Creates and initializes an <code>MRErrorBuilder</code> object for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/builderWithDomain:code:description:">+&nbsp;builderWithDomain:code:description:</a></code>
+		<span class="tooltip"><p>Creates and initializes an <code>MRErrorBuilder</code> object for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a> with a given localized description.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDomain:code:userInfo:">&ndash;&nbsp;initWithDomain:code:userInfo:</a></code>
+		<span class="tooltip"><p>Returns a <code>MRErrorBuilder</code> object initialized for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a> with a given <a href="#//api/name/userInfo">userInfo</a> dictionary.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setUserInfoValue:forKey:">&ndash;&nbsp;setUserInfoValue:forKey:</a></code>
+		<span class="tooltip"><p>Adds a given key-value pair to the user info dictionary. If given value is nil, removes the given key and its associated value from the dictionary.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating error" name="task_Creating error"></a>
+						<h3 class="subsubtitle task-title">Creating error</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/error">&ndash;&nbsp;error</a></code>
+		<span class="tooltip"><p>Creates and initializes an <code>NSError</code> object with the builder&rsquo;s <a href="#//api/name/domain">domain</a>, <a href="#//api/name/code">code</a> and user info.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="ErrorKit_AFNetworking Methods" name="task_ErrorKit_AFNetworking Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_AFNetworking Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/failingURLRequest">&nbsp;&nbsp;failingURLRequest</a></code>
+		<span class="tooltip"><p>Accessors for <code>AFNetworkingOperationFailingURLRequestErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/failingURLResponse">&nbsp;&nbsp;failingURLResponse</a></code>
+		<span class="tooltip"><p>Accessors for <code>AFNetworkingOperationFailingURLResponseErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="ErrorKit_CoreData Methods" name="task_ErrorKit_CoreData Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_CoreData Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/affectedObjects">&nbsp;&nbsp;affectedObjects</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSAffectedObjectsErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/affectedStores">&nbsp;&nbsp;affectedStores</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSAffectedStoresErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/detailedErrors">&nbsp;&nbsp;detailedErrors</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSDetailedErrorsKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/persistentStoreSaveConflicts">&nbsp;&nbsp;persistentStoreSaveConflicts</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSPersistentStoreSaveConflictsErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/validationKey">&nbsp;&nbsp;validationKey</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSValidationKeyErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/validationObject">&nbsp;&nbsp;validationObject</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSValidationObjectErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/validationPredicate">&nbsp;&nbsp;validationPredicate</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSValidationPredicateErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/validationValue">&nbsp;&nbsp;validationValue</a></code>
+		<span class="tooltip"><p>Accessors for <code>NSValidationValueErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/affectedObjects" title="affectedObjects"></a>
+	<h3 class="subsubtitle method-title">affectedObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSAffectedObjectsErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *affectedObjects</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSAffectedObjectsErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/affectedStores" title="affectedStores"></a>
+	<h3 class="subsubtitle method-title">affectedStores</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSAffectedStoresErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *affectedStores</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSAffectedStoresErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/code" title="code"></a>
+	<h3 class="subsubtitle method-title">code</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Error code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSInteger code</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/detailedErrors" title="detailedErrors"></a>
+	<h3 class="subsubtitle method-title">detailedErrors</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSDetailedErrorsKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *detailedErrors</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSDetailedErrorsKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/domain" title="domain"></a>
+	<h3 class="subsubtitle method-title">domain</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Error domain.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *domain</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Error domain.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/failingURL" title="failingURL"></a>
+	<h3 class="subsubtitle method-title">failingURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSURLErrorFailingURLErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSURL *failingURL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSURLErrorFailingURLErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/failingURLPeerTrust" title="failingURLPeerTrust"></a>
+	<h3 class="subsubtitle method-title">failingURLPeerTrust</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSURLErrorFailingURLPeerTrustErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) SecTrustRef failingURLPeerTrust</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSURLErrorFailingURLPeerTrustErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/failingURLRequest" title="failingURLRequest"></a>
+	<h3 class="subsubtitle method-title">failingURLRequest</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>AFNetworkingOperationFailingURLRequestErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSURLRequest *failingURLRequest</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>AFNetworkingOperationFailingURLRequestErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_AFNetworking.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/failingURLResponse" title="failingURLResponse"></a>
+	<h3 class="subsubtitle method-title">failingURLResponse</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>AFNetworkingOperationFailingURLResponseErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSHTTPURLResponse *failingURLResponse</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>AFNetworkingOperationFailingURLResponseErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_AFNetworking.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/failingURLString" title="failingURLString"></a>
+	<h3 class="subsubtitle method-title">failingURLString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSURLErrorFailingURLStringErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *failingURLString</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSURLErrorFailingURLStringErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/filePathError" title="filePathError"></a>
+	<h3 class="subsubtitle method-title">filePathError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSFilePathErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *filePathError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSFilePathErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/helpAnchor" title="helpAnchor"></a>
+	<h3 class="subsubtitle method-title">helpAnchor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSHelpAnchorErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *helpAnchor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSHelpAnchorErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localizedDescription" title="localizedDescription"></a>
+	<h3 class="subsubtitle method-title">localizedDescription</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSLocalizedDescriptionKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *localizedDescription</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSLocalizedDescriptionKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localizedFailureReason" title="localizedFailureReason"></a>
+	<h3 class="subsubtitle method-title">localizedFailureReason</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSLocalizedFailureReasonErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *localizedFailureReason</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSLocalizedFailureReasonErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localizedRecoveryOptions" title="localizedRecoveryOptions"></a>
+	<h3 class="subsubtitle method-title">localizedRecoveryOptions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSLocalizedRecoveryOptionsErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *localizedRecoveryOptions</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSLocalizedRecoveryOptionsErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localizedRecoverySuggestion" title="localizedRecoverySuggestion"></a>
+	<h3 class="subsubtitle method-title">localizedRecoverySuggestion</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSLocalizedRecoverySuggestionErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *localizedRecoverySuggestion</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSLocalizedRecoverySuggestionErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/persistentStoreSaveConflicts" title="persistentStoreSaveConflicts"></a>
+	<h3 class="subsubtitle method-title">persistentStoreSaveConflicts</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSPersistentStoreSaveConflictsErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *persistentStoreSaveConflicts</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSPersistentStoreSaveConflictsErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/recoveryAttempter" title="recoveryAttempter"></a>
+	<h3 class="subsubtitle method-title">recoveryAttempter</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSRecoveryAttempterErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSObject *recoveryAttempter</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSRecoveryAttempterErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringEncodingError" title="stringEncodingError"></a>
+	<h3 class="subsubtitle method-title">stringEncodingError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSStringEncodingErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSStringEncoding stringEncodingError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSStringEncodingErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/underlyingError" title="underlyingError"></a>
+	<h3 class="subsubtitle method-title">underlyingError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSUnderlyingErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSError *underlyingError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSUnderlyingErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/urlError" title="urlError"></a>
+	<h3 class="subsubtitle method-title">urlError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSURLErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSURL *urlError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSURLErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userInfo" title="userInfo"></a>
+	<h3 class="subsubtitle method-title">userInfo</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>User info.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSDictionary *userInfo</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>User info.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/validationKey" title="validationKey"></a>
+	<h3 class="subsubtitle method-title">validationKey</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSValidationKeyErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *validationKey</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSValidationKeyErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/validationObject" title="validationObject"></a>
+	<h3 class="subsubtitle method-title">validationObject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSValidationObjectErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSManagedObject *validationObject</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSValidationObjectErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/validationPredicate" title="validationPredicate"></a>
+	<h3 class="subsubtitle method-title">validationPredicate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSValidationPredicateErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSPredicate *validationPredicate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSValidationPredicateErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/validationValue" title="validationValue"></a>
+	<h3 class="subsubtitle method-title">validationValue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>NSValidationValueErrorKey</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id validationValue</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>NSValidationValueErrorKey</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder_CoreData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/builderWithDomain:code:" title="builderWithDomain:code:"></a>
+	<h3 class="subsubtitle method-title">builderWithDomain:code:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates and initializes an <code>MRErrorBuilder</code> object for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (MRErrorBuilder *)builderWithDomain:(NSString *)<em>domain</em> code:(NSInteger)<em>code</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates and initializes an <code>MRErrorBuilder</code> object for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/builderWithDomain:code:description:" title="builderWithDomain:code:description:"></a>
+	<h3 class="subsubtitle method-title">builderWithDomain:code:description:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates and initializes an <code>MRErrorBuilder</code> object for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a> with a given localized description.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (MRErrorBuilder *)builderWithDomain:(NSString *)<em>domain</em> code:(NSInteger)<em>code</em> description:(NSString *)<em>localizedDescription</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates and initializes an <code>MRErrorBuilder</code> object for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a> with a given localized description.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/builderWithError:" title="builderWithError:"></a>
+	<h3 class="subsubtitle method-title">builderWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates and initializes an <code>MRErrorBuilder</code> object with data from another object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (MRErrorBuilder *)builderWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates and initializes an <code>MRErrorBuilder</code> object with data from another object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="subsubtitle method-title">error</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates and initializes an <code>NSError</code> object with the builder&rsquo;s <a href="#//api/name/domain">domain</a>, <a href="#//api/name/code">code</a> and user info.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSError *)error</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates and initializes an <code>NSError</code> object with the builder&rsquo;s <a href="#//api/name/domain">domain</a>, <a href="#//api/name/code">code</a> and user info.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithDomain:code:userInfo:" title="initWithDomain:code:userInfo:"></a>
+	<h3 class="subsubtitle method-title">initWithDomain:code:userInfo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a <code>MRErrorBuilder</code> object initialized for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a> with a given <a href="#//api/name/userInfo">userInfo</a> dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (MRErrorBuilder *)initWithDomain:(NSString *)<em>domain</em> code:(NSInteger)<em>code</em> userInfo:(NSDictionary *)<em>userInfo</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a <code>MRErrorBuilder</code> object initialized for a given <a href="#//api/name/domain">domain</a> and <a href="#//api/name/code">code</a> with a given <a href="#//api/name/userInfo">userInfo</a> dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setUserInfoValue:forKey:" title="setUserInfoValue:forKey:"></a>
+	<h3 class="subsubtitle method-title">setUserInfoValue:forKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a given key-value pair to the user info dictionary. If given value is nil, removes the given key and its associated value from the dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setUserInfoValue:(id)<em>value</em> forKey:(NSString *)<em>key</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds a given key-value pair to the user info dictionary. If given value is nil, removes the given key and its associated value from the dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-02-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
