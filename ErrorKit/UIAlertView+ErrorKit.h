@@ -47,7 +47,7 @@
 /*
  This category adds methods that may help you decide whether or not to display an error dialog.
  */
-@interface NSError (Helper)
+@interface NSError (ErrorKit_Helper)
 
 /// Returns YES if the error code corresponds to a cancelled operation in `NSURLErrorDomain` (or `AFNetworkingErrorDomain`) or `NSCocoaErrorDomain`.
 - (BOOL)isCancelledError;

@@ -48,8 +48,8 @@ static char kMRAlertViewDelegateObjectKey;
         NSMethodSignature *signature = [self.delegate methodSignatureForSelector:self.selector];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
         [invocation setSelector:self.selector];
-        [invocation setArgument:(void *)success atIndex:2];
-        [invocation setArgument:self.contextInfo atIndex:3];
+        [invocation setArgument:(void *)&success atIndex:2];
+        [invocation setArgument:&_contextInfo atIndex:3];
         [invocation invokeWithTarget:self.delegate];
     }
 }
@@ -145,7 +145,7 @@ static char kMRAlertViewDelegateObjectKey;
 #pragma mark -
 
 
-@implementation UIAlertView (ErrorKit)
+@implementation UIAlertView (ErrorKit_Helper)
 
 + (UIAlertView *)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error
 {
