@@ -29,6 +29,11 @@
 
 @implementation NSError (ErrorKit)
 
+- (NSString *)debugDescription
+{
+    return [self.userInfo objectForKey:@"NSDebugDescription"];
+}
+
 - (NSURL *)failingURL
 {
     return [self.userInfo objectForKey:NSURLErrorFailingURLErrorKey];
@@ -57,6 +62,11 @@
 - (NSError *)underlyingError
 {
     return [self.userInfo objectForKey:NSUnderlyingErrorKey];
+}
+
+- (NSException *)underlyingException
+{
+    return [self.userInfo objectForKey:@"NSUnderlyingException"];
 }
 
 - (NSURL *)urlError

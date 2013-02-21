@@ -41,6 +41,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
         [[self alloc] initWithDomain:error.domain
                                 code:error.code
                             userInfo:error.userInfo];
+    builder.debugDescription = error.debugDescription;
     builder.failingURL = error.failingURL;
     builder.failingURLPeerTrust = error.failingURLPeerTrust;
     builder.failingURLString = error.failingURLString;
@@ -51,6 +52,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.localizedRecoveryOptions = error.localizedRecoveryOptions;
     builder.localizedRecoverySuggestion = error.localizedRecoverySuggestion;
     builder.stringEncodingError = error.stringEncodingError;
+    builder.underlyingException = error.underlyingException;
     builder.recoveryAttempter = error.recoveryAttempter;
     builder.underlyingError = error.underlyingError;
     builder.urlError = error.urlError;
@@ -116,6 +118,17 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 }
 
 #pragma mark Accessor methods
+
+- (NSString *)debugDescription
+{
+    return [self.userInfo objectForKey:@"NSDebugDescription"];
+}
+
+- (void)setDebugDescription:(NSString *)debugDescription
+{
+    [self setUserInfoValue:debugDescription.copy forKey:@"NSDebugDescription"];
+}
+
 
 - (NSURL *)failingURL
 {
@@ -235,6 +248,16 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 - (void)setUnderlyingError:(NSError *)underlyingError
 {
     [self setUserInfoValue:underlyingError.copy forKey:NSUnderlyingErrorKey];
+}
+
+- (NSException *)underlyingException
+{
+    return [self.userInfo objectForKey:@"NSUnderlyingException"];
+}
+
+- (void)setUnderlyingException:(NSException *)underlyingException
+{
+    [self setUserInfoValue:underlyingException.copy forKey:@"NSUnderlyingException"];
 }
 
 - (NSURL *)urlError

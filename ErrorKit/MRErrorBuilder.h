@@ -86,6 +86,14 @@
 /// Accessors for `NSURLErrorFailingURLStringErrorKey` user info value.
 @property (nonatomic, copy) NSString *failingURLString;
 
+/// @name Other userInfo values
+
+/// Accessors for `@"NSDebugDescription"` user info value.
+@property (nonatomic, copy) NSString *debugDescription;
+
+/// Accessors for `@"NSUnderlyingException"` user info value.
+@property (nonatomic, copy) NSException *underlyingException;
+
 /// @name Creating and initializing Builder
 
 /// Creates and initializes an `MRErrorBuilder` object with data from another object.

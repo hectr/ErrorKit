@@ -55,4 +55,12 @@
 /// Getter for `NSURLErrorFailingURLStringErrorKey` user info value.
 @property (nonatomic, readonly) NSString *failingURLString;
 
+/// @name Other userInfo values
+
+/// Getter for `@"NSDebugDescription"` user info value.
+@property (nonatomic, readonly) NSString *debugDescription;
+
+/// Getter for `@"NSUnderlyingException"` user info value.
+@property (nonatomic, readonly) NSException *underlyingException;
+
 @end
