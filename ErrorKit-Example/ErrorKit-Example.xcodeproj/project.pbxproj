@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8407A4F016D687EE00468FB2 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8407A4EF16D687EE00468FB2 /* UIResponder+ErrorKit.m */; };
 		84DB843116C802F3000BF23E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DB843016C802F3000BF23E /* UIKit.framework */; };
 		84DB843316C802F3000BF23E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DB843216C802F3000BF23E /* Foundation.framework */; };
 		84DB843B16C802F3000BF23E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DB843916C802F3000BF23E /* InfoPlist.strings */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8407A4EE16D687EE00468FB2 /* UIResponder+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+ErrorKit.h"; sourceTree = "<group>"; };
+		8407A4EF16D687EE00468FB2 /* UIResponder+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+ErrorKit.m"; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB843016C802F3000BF23E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DB843216C802F3000BF23E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				84DB845316C80380000BF23E /* MRViewController.xib */,
 				84DB847216C80510000BF23E /* MRRecoveryAttempter.h */,
 				84DB847316C80510000BF23E /* MRRecoveryAttempter.m */,
+				8407A4EE16D687EE00468FB2 /* UIResponder+ErrorKit.h */,
+				8407A4EF16D687EE00468FB2 /* UIResponder+ErrorKit.m */,
 				84DB843716C802F3000BF23E /* Supporting Files */,
 			);
 			path = "ErrorKit-Example";
@@ -239,6 +244,7 @@
 				84DB847016C8048E000BF23E /* NSError+ErrorKit.m in Sources */,
 				84DB847116C8048E000BF23E /* UIAlertView+ErrorKit.m in Sources */,
 				84DB847416C80510000BF23E /* MRRecoveryAttempter.m in Sources */,
+				8407A4F016D687EE00468FB2 /* UIResponder+ErrorKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,12 +31,12 @@
 
 #import "UIAlertView+ErrorKit.h"
 
-#ifndef _COREDATADEFINES_H
+#ifdef _COREDATADEFINES_H
 #import "MRErrorBuilder_CoreData.h"
 #import "NSError_CoreData.h"
 #endif
 
-#ifndef _AFNETWORKING_
+#ifdef _AFNETWORKING_
 #import "MRErrorBuilder_AFNetworking.h"
 #import "NSError_AFNetworking.h"
 #endif

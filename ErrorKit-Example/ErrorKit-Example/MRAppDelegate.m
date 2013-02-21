@@ -21,8 +21,6 @@
 // THE SOFTWARE.
 
 #import "MRAppDelegate.h"
-#import "MRViewController.h"
-
 
 @implementation MRAppDelegate
 

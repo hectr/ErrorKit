@@ -24,7 +24,7 @@
 
 
 /**
- Instances of `MRRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block;
+ Instances of `MRRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block.
 */
 @interface MRRecoveryAttempter : NSObject
 

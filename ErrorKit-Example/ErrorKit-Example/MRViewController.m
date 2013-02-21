@@ -23,6 +23,7 @@
 #import "MRViewController.h"
 #import "ErrorKit.h"
 #import "MRRecoveryAttempter.h"
+#import "UIResponder+ErrorKit.h"
 
 
 @interface MRViewController () {
@@ -30,6 +31,7 @@
 }
 
 @end
+
 
 @implementation MRViewController
 
@@ -62,32 +64,7 @@
 {
     MRLogError(error);
     self.responseTextView.text = NSLocalizedString(@"Connection failed", nil);
-    MRRecoveryAttempter *attempter = [[MRRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
-        if (recoveryOption == 0) {
-            NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
-            if (error.code == NSURLErrorServerCertificateUntrusted) {
-                [self.trustedDomains addObject:failingURL.host];
-            }
-            [self connectAction:nil];
-            return YES;
-        }
-        return NO;
-    }];
-    if (error.code == NSURLErrorServerCertificateUntrusted) {
-        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
-        builder.recoveryAttempter = attempter;
-        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"YES", nil) ];
-        [[UIAlertView alertWithTitle:nil error:builder.error] show];
-    } else if (error.code == NSURLErrorNotConnectedToInternet) {
-        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
-        builder.recoveryAttempter = attempter;
-        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection and try again.", nil);
-        builder.helpAnchor = NSLocalizedString(@"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi", nil);
-        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
-        [[UIAlertView alertWithTitle:nil error:builder.error] show];
-    } else if (!error.isCancelledError) {
-        [[UIAlertView alertWithTitle:nil error:error] show];
-    }
+    [self presentError:error];
 }
 
 #pragma mark - NSURLConnectionDataDelegate
@@ -118,6 +95,39 @@
 {
     [super viewDidLoad];
     [self.connectButton setTitle:NSLocalizedString(@"Connect", nil) forState:UIControlStateNormal];
+}
+
+#pragma mark - UIResponder+ErrorKit methods
+
+- (NSError *)willPresentError:(NSError *)error
+{
+    MRRecoveryAttempter *attempter = [[MRRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
+        if (recoveryOption == 0) {
+            NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
+            if (error.code == NSURLErrorServerCertificateUntrusted) {
+                [self.trustedDomains addObject:failingURL.host];
+            }
+            [self connectAction:nil];
+            return YES;
+        }
+        return NO;
+    }];
+    if (error.code == NSURLErrorServerCertificateUntrusted) {
+        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        builder.recoveryAttempter = attempter;
+        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"YES", nil) ];
+        return builder.error;
+    } else if (error.code == NSURLErrorNotConnectedToInternet) {
+        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        builder.recoveryAttempter = attempter;
+        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection and try again.", nil);
+        builder.helpAnchor = NSLocalizedString(@"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi", nil);
+        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
+        return builder.error;
+    } else if (error.isCancelledError) {
+        return nil;
+    }
+    return error;
 }
 
 @end
