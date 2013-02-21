@@ -1,14 +1,14 @@
 ErrorKit
 ========
 
-**ErrorKit** is a handy iOS library for making `NSError` handling easier.
+**Error Kit** is a handy iOS library for making `NSError` handling easier.
 
 It covers error objects creation, inspection, presentation and recovery.
 
 Usage
 -----
 
-1. To use **ErrorKit** you simply need to drag and drop the *ErrorKit* folder to your project.
+1. To use **Error Kit** you simply need to drag and drop the *ErrorKit* folder to your project.
 2. And that's it, there is no step 2.
 
 Examples
@@ -45,9 +45,9 @@ Examples
 	        [[UIAlertView alertWithTitle:nil error:builder.error] show];
 	    }
 
-See *ErrorKit-Example* project for further reference.
+See *ErrorKit-Example* project or browse online [documentation](http://hectr.github.com/ErrorKit/) for further reference.
 
 License
 -------
 
-ErrorKit is available under the MIT license. See the LICENSE file for more info.
+**Error Kit** is available under the MIT license. See the LICENSE file for more info.
