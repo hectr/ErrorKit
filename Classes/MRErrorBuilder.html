@@ -46,6 +46,8 @@
 	
 	<option value="//api/name/code">&nbsp;&nbsp;&nbsp;&nbsp;code</option>
 	
+	<option value="//api/name/debugDescription">&nbsp;&nbsp;&nbsp;&nbsp;debugDescription</option>
+	
 	<option value="//api/name/detailedErrors">&nbsp;&nbsp;&nbsp;&nbsp;detailedErrors</option>
 	
 	<option value="//api/name/domain">&nbsp;&nbsp;&nbsp;&nbsp;domain</option>
@@ -79,6 +81,8 @@
 	<option value="//api/name/stringEncodingError">&nbsp;&nbsp;&nbsp;&nbsp;stringEncodingError</option>
 	
 	<option value="//api/name/underlyingError">&nbsp;&nbsp;&nbsp;&nbsp;underlyingError</option>
+	
+	<option value="//api/name/underlyingException">&nbsp;&nbsp;&nbsp;&nbsp;underlyingException</option>
 	
 	<option value="//api/name/urlError">&nbsp;&nbsp;&nbsp;&nbsp;urlError</option>
 	
@@ -136,6 +140,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_NSURLError userInfo values">NSURLError userInfo values</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Other userInfo values">Other userInfo values</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and initializing Builder">Creating and initializing Builder</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating error">Creating error</a></span></li>
@@ -157,6 +163,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/affectedStores">affectedStores</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/code">code</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/debugDescription">debugDescription</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/detailedErrors">detailedErrors</a></span></li>
 	
@@ -191,6 +199,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringEncodingError">stringEncodingError</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/underlyingError">underlyingError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/underlyingException">underlyingException</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/urlError">urlError</a></span></li>
 	
@@ -414,6 +424,28 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/failingURLString">&nbsp;&nbsp;failingURLString</a></code>
 		<span class="tooltip"><p>Accessors for <code>NSURLErrorFailingURLStringErrorKey</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Other userInfo values" name="task_Other userInfo values"></a>
+						<h3 class="subsubtitle task-title">Other userInfo values</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugDescription">&nbsp;&nbsp;debugDescription</a></code>
+		<span class="tooltip"><p>Accessors for <code>@"NSDebugDescription"</code> user info value.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/underlyingException">&nbsp;&nbsp;underlyingException</a></code>
+		<span class="tooltip"><p>Accessors for <code>@"NSUnderlyingException"</code> user info value.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -681,6 +713,47 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/debugDescription" title="debugDescription"></a>
+	<h3 class="subsubtitle method-title">debugDescription</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>@"NSDebugDescription"</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *debugDescription</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>@"NSDebugDescription"</code> user info value.</p>
 	</div>
 	
 	
@@ -1395,6 +1468,47 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/underlyingException" title="underlyingException"></a>
+	<h3 class="subsubtitle method-title">underlyingException</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accessors for <code>@"NSUnderlyingException"</code> user info value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSException *underlyingException</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Accessors for <code>@"NSUnderlyingException"</code> user info value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorBuilder.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/urlError" title="urlError"></a>
 	<h3 class="subsubtitle method-title">urlError</h3>
 	
@@ -1915,7 +2029,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-02-20)</span><br />
+						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-02-21)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
