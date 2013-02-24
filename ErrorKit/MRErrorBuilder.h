@@ -28,7 +28,7 @@
 /**
  Concrete builder of `NSError` instances.
  */
-@interface MRErrorBuilder : NSObject {
+@interface MRErrorBuilder : NSObject <NSCopying, NSCoding> {
     NSMutableDictionary *_userInfo;
 }
 

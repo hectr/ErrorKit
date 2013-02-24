@@ -382,4 +382,31 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #endif
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    MRErrorBuilder *builer = [[[self class] allocWithZone:zone] initWithDomain:self.domain
+                                                                          code:self.code
+                                                                      userInfo:self.userInfo];
+    return builer;
+}
+
+#pragma mark - NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeInteger:self.code forKey:@"code"];
+    [aCoder encodeObject:self.domain forKey:@"domain"];
+    [aCoder encodeObject:self.userInfo forKey:@"userInfo"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [self initWithDomain:[aDecoder decodeObjectForKey:@"domain"]
+                           code:[aDecoder decodeIntegerForKey:@"code"]
+                       userInfo:[aDecoder decodeObjectForKey:@"userInfo"]];
+    return self;
+}
+
 @end

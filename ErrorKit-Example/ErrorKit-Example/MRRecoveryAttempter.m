@@ -44,4 +44,13 @@
     return self.recoveryHandler(error, recoveryOptionIndex);
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    MRRecoveryAttempter *attempter = [[[self class] allocWithZone:zone] initWithBlock:self.recoveryHandler];
+    return attempter;
+}
+
+
 @end

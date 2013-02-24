@@ -26,7 +26,7 @@
 /**
  Instances of `MRRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block.
 */
-@interface MRRecoveryAttempter : NSObject
+@interface MRRecoveryAttempter : NSObject <NSCopying>
 
 /// Recovery handler block.
 @property (nonatomic, copy, readonly) BOOL (^recoveryHandler)(NSError *, NSUInteger);
