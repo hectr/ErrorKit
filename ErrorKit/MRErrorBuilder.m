@@ -24,6 +24,7 @@
 #import "NSError+ErrorKit.h"
 #import "NSError_CoreData.h"
 #import "NSError_AFNetworking.h"
+#import "MRErrorFormatter.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -407,6 +408,17 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
                            code:[aDecoder decodeIntegerForKey:@"code"]
                        userInfo:[aDecoder decodeObjectForKey:@"userInfo"]];
     return self;
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"ErrorBuilder Domain=%@ Code=%d UserInfo=%p {%@}"
+                                      , self.domain
+                                      , self.code
+                                      , self.userInfo
+                                      , [MRErrorFormatter stringFromErrorDetail:self.userInfo]];
 }
 
 @end

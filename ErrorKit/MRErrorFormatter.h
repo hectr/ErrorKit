@@ -28,6 +28,12 @@
  */
 @interface MRErrorFormatter : NSObject
 
+/// @name Strings for debugging
+
+/// Returns a string that contains all the key-value pairs of the given dictionary.
+/// @discussion If present, `NSLocalizedDescriptionKey` is the first pair of the returned string.
++ (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo;
+
 /// @name Strings for presentation
 
 /// Returns a string representation of a given error.
