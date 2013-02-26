@@ -28,11 +28,13 @@
  */
 @interface MRErrorFormatter : NSObject
 
+@property (nonatomic, assign) BOOL shortenStrings;
+
 /// @name Strings for debugging
 
-/// Returns a string that contains all the key-value pairs of the given dictionary.
-/// @discussion If present, `NSLocalizedDescriptionKey` is the first pair of the returned string.
-+ (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo;
+/// Returns a string that contains the key-value pairs of the given dictionary.
+/// @discussion If `shortenStrings` is not set, `NSLocalizedDescriptionKey` is the first pair of the returned string, otherwise it is not included.
+- (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo;
 
 /// @name Strings for presentation
 

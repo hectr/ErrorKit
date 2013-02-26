@@ -414,11 +414,16 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 - (NSString *)description
 {
+    static MRErrorFormatter *__formatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        __formatter = [[MRErrorFormatter alloc] init];
+    });
     return [NSString stringWithFormat:@"ErrorBuilder Domain=%@ Code=%d UserInfo=%p {%@}"
                                       , self.domain
                                       , self.code
                                       , self.userInfo
-                                      , [MRErrorFormatter stringFromErrorDetail:self.userInfo]];
+                                      , [__formatter stringFromErrorDetail:self.userInfo]];
 }
 
 @end

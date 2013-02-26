@@ -29,12 +29,14 @@
 
 @implementation MRErrorFormatter
 
-+ (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo
+- (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo
 {
     NSMutableArray *components = [NSMutableArray array];
     [userInfo enumerateKeysAndObjectsUsingBlock:^(NSString *key, id object, BOOL *stop) {
         if ([key isEqualToString:NSLocalizedDescriptionKey]) {
-            [components insertObject:[NSString stringWithFormat:@"%@=%@", key, object] atIndex:0];
+            if (!self.shortenStrings) {
+                [components insertObject:[NSString stringWithFormat:@"%@=%@", key, object] atIndex:0];
+            }
         } else {
             [components addObject:[NSString stringWithFormat:@"%@=%@", key, object]];
         }
