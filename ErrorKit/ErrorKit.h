@@ -29,7 +29,9 @@
 
 #import "NSError+ErrorKit.h"
 
+#ifdef UIKIT_STATIC_INLINE
 #import "UIAlertView+ErrorKit.h"
+#endif
 
 #ifdef _COREDATADEFINES_H
 #import "MRErrorBuilder_CoreData.h"
