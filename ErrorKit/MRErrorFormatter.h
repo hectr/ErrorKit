@@ -26,11 +26,15 @@
 /**
  `MRErrorFormatter` creates localized string representations of `NSError` objects. There are also methods that aid in error presentation.
  */
-@interface MRErrorFormatter : NSObject
+@interface MRErrorFormatter : NSObject <NSCopying, NSCoding>
 
 @property (nonatomic, assign) BOOL shortenStrings;
 
 /// @name Strings for debugging
+
+/// Returns a string that represents the given error.
+/// @discussion If `shortenStrings` is set you can expect the string to be shorter than the one returned by [NSError description].
+- (NSString *)stringForDebugFromError:(NSError *)error;
 
 /// Returns a string that contains the key-value pairs of the given dictionary.
 /// @discussion If `shortenStrings` is not set, `NSLocalizedDescriptionKey` is the first pair of the returned string, otherwise it is not included.

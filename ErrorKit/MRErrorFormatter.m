@@ -29,6 +29,18 @@
 
 @implementation MRErrorFormatter
 
+- (NSString *)stringForDebugFromError:(NSError *)error
+{
+    if (self.shortenStrings) {
+        return [NSString stringWithFormat:@"<NSError: %p Domain=%@ Code=%d UserInfo=%p>"
+                                          , error
+                                          , error.domain
+                                          , error.code
+                                          , error.userInfo];
+    }
+    return error.description;
+}
+
 - (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo
 {
     NSMutableArray *components = [NSMutableArray array];
@@ -37,6 +49,8 @@
             if (!self.shortenStrings) {
                 [components insertObject:[NSString stringWithFormat:@"%@=%@", key, object] atIndex:0];
             }
+        } else if ([object isKindOfClass:NSError.class]) {
+            [components addObject:[NSString stringWithFormat:@"%@=%@", key, [self stringForDebugFromError:object]]];
         } else {
             [components addObject:[NSString stringWithFormat:@"%@=%@", key, object]];
         }
@@ -101,6 +115,39 @@
     } else {
         return NSLocalizedString(@"OK", nil);
     }
+}
+
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    MRErrorFormatter *formatter = [[[self class] allocWithZone:zone] init];
+    formatter.shortenStrings = self.shortenStrings;
+    return formatter;
+}
+
+#pragma mark - NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeBool:self.shortenStrings forKey:@"shortenStrings"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [self init];
+    self.shortenStrings = [aDecoder decodeBoolForKey:@"shortenStrings"];
+    return self;
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description
+{
+    if (self.shortenStrings) {
+        return [NSString stringWithFormat:@"<MRErrorFormatter: %p shortenStrings=1>", self];
+    }
+    return [super description];
 }
 
 @end
