@@ -97,16 +97,16 @@
 /// @name Creating and initializing Builder
 
 /// Creates and initializes an `MRErrorBuilder` object with data from another object.
-+ (MRErrorBuilder *)builderWithError:(NSError *)error;
++ (id)builderWithError:(NSError *)error;
 
 /// Creates and initializes an `MRErrorBuilder` object for a given domain and code.
-+ (MRErrorBuilder *)builderWithDomain:(NSString *)domain code:(NSInteger)code;
++ (id)builderWithDomain:(NSString *)domain code:(NSInteger)code;
 
 /// Creates and initializes an `MRErrorBuilder` object for a given domain and code with a given localized description.
-+ (MRErrorBuilder *)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription;
++ (id)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription;
 
 ///Returns a `MRErrorBuilder` object initialized for a given domain and code with a given userInfo dictionary.
-- (MRErrorBuilder *)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
+- (id)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
 
 /// Adds a given key-value pair to the user info dictionary. If given value is nil, removes the given key and its associated value from the dictionary.
 - (void)setUserInfoValue:(id)value forKey:(NSString *)key;

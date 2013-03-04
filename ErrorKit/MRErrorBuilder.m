@@ -36,7 +36,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 @implementation MRErrorBuilder
 
-+ (MRErrorBuilder *)builderWithError:(NSError *)error
++ (id)builderWithError:(NSError *)error
 {
     MRErrorBuilder *builder =
         [[self alloc] initWithDomain:error.domain
@@ -74,20 +74,20 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     return builder;
 }
 
-+ (MRErrorBuilder *)builderWithDomain:(NSString *)domain code:(NSInteger)code
++ (id)builderWithDomain:(NSString *)domain code:(NSInteger)code
 {
     MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
     return builder;
 }
 
-+ (MRErrorBuilder *)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription
++ (id)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription
 {
     MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
     builder.localizedDescription = localizedDescription;
     return builder;
 }
 
-- (MRErrorBuilder *)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
+- (id)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
 {
     self = [super init];
     if (self) {
