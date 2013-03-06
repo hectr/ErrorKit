@@ -39,6 +39,25 @@
     return self;
 }
 
+- (void)invokeRecoverSelector:(SEL)selector withdelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo
+{
+    NSMethodSignature *signature = [delegate methodSignatureForSelector:selector];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    [invocation setSelector:selector];
+    [invocation setArgument:(void *)&success atIndex:2];
+    [invocation setArgument:&contextInfo atIndex:3];
+    [invocation invokeWithTarget:delegate];
+}
+
+#pragma mark - NSErrorRecoveryAttempting
+
+- (void)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex delegate:(id)delegate didRecoverSelector:(SEL)didRecoverSelector contextInfo:(void *)contextInfo
+{
+    [self invokeRecoverSelector:didRecoverSelector withdelegate:delegate
+                        success:self.recoveryHandler(error, recoveryOptionIndex)
+                    contextInfo:contextInfo];
+}
+
 - (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex
 {
     return self.recoveryHandler(error, recoveryOptionIndex);
@@ -51,6 +70,5 @@
     MRRecoveryAttempter *attempter = [[[self class] allocWithZone:zone] initWithBlock:self.recoveryHandler];
     return attempter;
 }
-
 
 @end
