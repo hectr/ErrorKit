@@ -26,7 +26,7 @@
 #import "UIResponder+ErrorKit.h"
 
 
-@interface MRViewController () {
+@interface MRViewController () <UIAlertViewDelegate, UITextFieldDelegate> {
     NSMutableSet *_trustedDomains;
 }
 
@@ -89,6 +89,16 @@
     }
 }
 
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        self.urlTextField.text = [alertView textFieldAtIndex:0].text;
+        [self connectAction:nil];
+    }
+}
+
 #pragma mark - UIViewController methods
 
 - (void)viewDidLoad
@@ -107,7 +117,18 @@
             if (error.code == NSURLErrorServerCertificateUntrusted) {
                 [self.trustedDomains addObject:failingURL.host];
             }
-            [self connectAction:nil];
+            if (error.code == NSURLErrorCannotFindHost) {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Connect to", nil)
+                                                               message:nil
+                                                              delegate:self
+                                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                                                     otherButtonTitles:NSLocalizedString(@"Retry", nil), nil];
+                alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+                [alert textFieldAtIndex:0].text = self.urlTextField.text;
+                [alert show];
+            } else {
+                [self connectAction:nil];
+            }
             return YES;
         }
         return NO;
@@ -123,6 +144,11 @@
         builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection and try again.", nil);
         builder.helpAnchor = NSLocalizedString(@"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi", nil);
         builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
+        return builder.error;
+    } else if (error.code == NSURLErrorCannotFindHost) {
+        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        builder.recoveryAttempter = attempter;
+        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Change URL", nil) ];
         return builder.error;
     } else if (error.isCancelledError) {
         return nil;
