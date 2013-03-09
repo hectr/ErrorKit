@@ -26,6 +26,7 @@
 #import "MRErrorBuilder.h"
 
 #import "MRErrorFormatter.h"
+#import "MRErrorFormatter+ErrorCode.h"
 
 #import "NSError+ErrorKit.h"
 
@@ -40,6 +41,10 @@
 #ifdef _COREDATADEFINES_H
 #import "MRErrorBuilder_CoreData.h"
 #import "NSError_CoreData.h"
+#endif
+
+#ifdef ACCOUNTS_EXTERN
+#import "MRErrorFormatter_ACErrorDomain.h"
 #endif
 
 #ifdef _AFNETWORKING_

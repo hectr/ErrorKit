@@ -37,7 +37,7 @@
  
  @discussion If `shortenStrings` is set you can expect the string to be shorter than the one returned by [NSError description].
  */
-- (NSString *)stringForDebugFromError:(NSError *)error;
+- (NSString *)debugStringFromError:(NSError *)error;
 
 /**
  Returns a string that contains the key-value pairs of the given dictionary.

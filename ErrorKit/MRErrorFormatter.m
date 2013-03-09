@@ -29,7 +29,7 @@
 
 @implementation MRErrorFormatter
 
-- (NSString *)stringForDebugFromError:(NSError *)error
+- (NSString *)debugStringFromError:(NSError *)error
 {
     if (self.shortenStrings) {
         return [NSString stringWithFormat:@"<NSError: %p Domain=%@ Code=%d UserInfo=%p>"
@@ -50,7 +50,7 @@
                 [components insertObject:[NSString stringWithFormat:@"%@=%@", key, object] atIndex:0];
             }
         } else if ([object isKindOfClass:NSError.class]) {
-            [components addObject:[NSString stringWithFormat:@"%@=%@", key, [self stringForDebugFromError:object]]];
+            [components addObject:[NSString stringWithFormat:@"%@=%@", key, [self debugStringFromError:object]]];
         } else {
             [components addObject:[NSString stringWithFormat:@"%@=%@", key, object]];
         }

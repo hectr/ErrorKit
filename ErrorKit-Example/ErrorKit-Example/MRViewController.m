@@ -61,6 +61,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     MRLogError(error);
+    NSLog(@"%@", [MRErrorFormatter debugStringFromCocoaCode:error.code]);
     self.responseTextView.text = NSLocalizedString(@"Connection failed", nil);
     [self presentError:error];
 }
