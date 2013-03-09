@@ -42,15 +42,36 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/debugStringFromAccountsCode:">&nbsp;&nbsp;&nbsp;&nbsp;+ debugStringFromAccountsCode:</option>
+	
+	<option value="//api/name/debugStringFromCocoaCode:">&nbsp;&nbsp;&nbsp;&nbsp;+ debugStringFromCocoaCode:</option>
+	
+	<option value="//api/name/debugStringFromURLCode:">&nbsp;&nbsp;&nbsp;&nbsp;+ debugStringFromURLCode:</option>
+	
 	<option value="//api/name/stringForCancelButtonFromError:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringForCancelButtonFromError:</option>
 	
 	<option value="//api/name/stringForMessageFromError:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringForMessageFromError:</option>
 	
 	<option value="//api/name/stringForTitleFromError:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringForTitleFromError:</option>
 	
+	<option value="//api/name/stringFromAccountsCode:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringFromAccountsCode:</option>
+	
+	<option value="//api/name/stringFromCocoaCode:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringFromCocoaCode:</option>
+	
 	<option value="//api/name/stringFromError:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringFromError:</option>
 	
+	<option value="//api/name/stringFromHTTPCode:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringFromHTTPCode:</option>
 	
+	<option value="//api/name/stringFromURLCode:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringFromURLCode:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/debugStringFromError:">&nbsp;&nbsp;&nbsp;&nbsp;- debugStringFromError:</option>
+	
+	<option value="//api/name/stringFromErrorDetail:">&nbsp;&nbsp;&nbsp;&nbsp;- stringFromErrorDetail:</option>
 	
 	
 	
@@ -68,7 +89,11 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Strings for debugging">Strings for debugging</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Strings for presentation">Strings for presentation</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorCode Methods">ErrorCode Methods</a></span></li>
 	
 </ul></li>
 
@@ -80,17 +105,39 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/debugStringFromAccountsCode:">debugStringFromAccountsCode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/debugStringFromCocoaCode:">debugStringFromCocoaCode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/debugStringFromURLCode:">debugStringFromURLCode:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringForCancelButtonFromError:">stringForCancelButtonFromError:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringForMessageFromError:">stringForMessageFromError:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringForTitleFromError:">stringForTitleFromError:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromAccountsCode:">stringFromAccountsCode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromCocoaCode:">stringFromCocoaCode:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromError:">stringFromError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromHTTPCode:">stringFromHTTPCode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromURLCode:">stringFromURLCode:</a></span></li>
 	
 </ul></li>
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/debugStringFromError:">debugStringFromError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromErrorDetail:">stringFromErrorDetail:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -116,6 +163,9 @@
 	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSCoding<br />NSCopying</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">MRErrorFormatter.h<br />MRErrorFormatter.m</td>
 </tr>
@@ -128,6 +178,10 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p><code>MRErrorFormatter</code> creates localized string representations of <code>NSError</code> objects. There are also methods that aid in error presentation.</p>
+
+<p>Adds methods for <em>stringizing</em> error codes.</p>
+
+<p>Adds methods for <em>stringizing</em> ACErrorDomain error codes.</p><p><strong>Warning:</strong> This extension requires the Accounts framework. Add a <code>Accounts/Accounts.h</code> import to the header prefix of the project.</p>
 					</div>
 					
 					
@@ -139,9 +193,31 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Strings for presentation" name="task_Strings for presentation"></a>
+						<a title="Strings for debugging" name="task_Strings for debugging"></a>
+						<h3 class="subsubtitle task-title">Strings for debugging</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringFromError:">&ndash;&nbsp;debugStringFromError:</a></code>
+		<span class="tooltip"><p>Returns a string that represents the given error.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringFromErrorDetail:">&ndash;&nbsp;stringFromErrorDetail:</a></code>
+		<span class="tooltip"><p>Returns a string that contains the key-value pairs of the given dictionary.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
 						
-<h3 class="subsubtitle task-title">Strings for presentation</h3>
+						
+						<a title="Strings for presentation" name="task_Strings for presentation"></a>
+						<h3 class="subsubtitle task-title">Strings for presentation</h3>
+
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
@@ -174,6 +250,63 @@
 </li>
 						</ul>
 						
+						
+						<a title="ErrorCode Methods" name="task_ErrorCode Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorCode Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringFromCocoaCode:">+&nbsp;debugStringFromCocoaCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given NSCocoaErrorDomain error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringFromURLCode:">+&nbsp;debugStringFromURLCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given NSURLErrorDomain error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringFromCocoaCode:">+&nbsp;stringFromCocoaCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given NSCocoaErrorDomain error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringFromURLCode:">+&nbsp;stringFromURLCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given NSURLErrorDomain error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringFromHTTPCode:">+&nbsp;stringFromHTTPCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given HTTP status code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringFromAccountsCode:">+&nbsp;debugStringFromAccountsCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given ACErrorDomain error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringFromAccountsCode:">+&nbsp;stringFromAccountsCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given ACErrorDomain error code.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -185,6 +318,129 @@
 					<div class="section section-methods">
 						<a title="Class Methods" name="class_methods"></a>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/debugStringFromAccountsCode:" title="debugStringFromAccountsCode:"></a>
+	<h3 class="subsubtitle method-title">debugStringFromAccountsCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the given ACErrorDomain error code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)debugStringFromAccountsCode:(NSInteger)<em>errorCode</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string representation of the given ACErrorDomain error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter_ACErrorDomain.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/debugStringFromCocoaCode:" title="debugStringFromCocoaCode:"></a>
+	<h3 class="subsubtitle method-title">debugStringFromCocoaCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the given NSCocoaErrorDomain error code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)debugStringFromCocoaCode:(NSInteger)<em>errorCode</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string representation of the given NSCocoaErrorDomain error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter+ErrorCode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/debugStringFromURLCode:" title="debugStringFromURLCode:"></a>
+	<h3 class="subsubtitle method-title">debugStringFromURLCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the given NSURLErrorDomain error code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)debugStringFromURLCode:(NSInteger)<em>errorCode</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string representation of the given NSURLErrorDomain error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter+ErrorCode.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/stringForCancelButtonFromError:" title="stringForCancelButtonFromError:"></a>
@@ -310,6 +566,88 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/stringFromAccountsCode:" title="stringFromAccountsCode:"></a>
+	<h3 class="subsubtitle method-title">stringFromAccountsCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the given ACErrorDomain error code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)stringFromAccountsCode:(NSInteger)<em>errorCode</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string representation of the given ACErrorDomain error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter_ACErrorDomain.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringFromCocoaCode:" title="stringFromCocoaCode:"></a>
+	<h3 class="subsubtitle method-title">stringFromCocoaCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the given NSCocoaErrorDomain error code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)stringFromCocoaCode:(NSInteger)<em>errorCode</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string representation of the given NSCocoaErrorDomain error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter+ErrorCode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/stringFromError:" title="stringFromError:"></a>
 	<h3 class="subsubtitle method-title">stringFromError:</h3>
 	
@@ -350,9 +688,179 @@
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/stringFromHTTPCode:" title="stringFromHTTPCode:"></a>
+	<h3 class="subsubtitle method-title">stringFromHTTPCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the given HTTP status code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)stringFromHTTPCode:(NSInteger)<em>statusCode</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string representation of the given HTTP status code.</p><p>This method is a wrapper for <code>[NSHTTPURLResponse localizedStringForStatusCode:statusCode]</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter+ErrorCode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringFromURLCode:" title="stringFromURLCode:"></a>
+	<h3 class="subsubtitle method-title">stringFromURLCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the given NSURLErrorDomain error code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)stringFromURLCode:(NSInteger)<em>errorCode</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string representation of the given NSURLErrorDomain error code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter+ErrorCode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/debugStringFromError:" title="debugStringFromError:"></a>
+	<h3 class="subsubtitle method-title">debugStringFromError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string that represents the given error.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)debugStringFromError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string that represents the given error.</p><p>If <code>shortenStrings</code> is set you can expect the string to be shorter than the one returned by [NSError description].</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringFromErrorDetail:" title="stringFromErrorDetail:"></a>
+	<h3 class="subsubtitle method-title">stringFromErrorDetail:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string that contains the key-value pairs of the given dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringFromErrorDetail:(NSDictionary *)<em>userInfo</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string that contains the key-value pairs of the given dictionary.</p><p>If <code>shortenStrings</code> is not set, <code>NSLocalizedDescriptionKey</code> is the first pair of the returned string, otherwise it is not included.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRErrorFormatter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 				</div>
@@ -365,7 +873,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-02-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-03-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

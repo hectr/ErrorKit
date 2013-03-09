@@ -38,18 +38,13 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/recoveryHandler">&nbsp;&nbsp;&nbsp;&nbsp;recoveryHandler</option>
-	
-	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBlock:</option>
+	<option value="//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- invokeRecoverSelector:withDelegate:success:contextInfo:</option>
 	
 	
 	
@@ -73,19 +68,13 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recoveryHandler">recoveryHandler</a></span></li>
-	
-</ul></li>
-
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBlock:">initWithBlock:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:">invokeRecoverSelector:withDelegate:success:contextInfo:</a></span></li>
 	
 </ul></li>
 
@@ -124,7 +113,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Instances of <code>MRRecoveryAttempter</code> implement attemptRecoveryFromError:optionIndex: (see <code>NSErrorRecoveryAttempting</code> informal protocol) by invoking their <a href="#//api/name/recoveryHandler"><code>recoveryHandler</code></a> block.</p>
+						<p><a href="../Classes/MRBlockRecoveryAttempter.html"><code>MRBlockRecoveryAttempter</code></a> is used as base class for implementing various recovery attempters.</p>
 					</div>
 					
 					
@@ -142,15 +131,8 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/recoveryHandler">&nbsp;&nbsp;recoveryHandler</a></code>
-		<span class="tooltip"><p>Recovery handler block.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/initWithBlock:">&ndash;&nbsp;initWithBlock:</a></code>
-		<span class="tooltip"><p>Init method.</p></span>
+		<code><a href="#//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:">&ndash;&nbsp;invokeRecoverSelector:withDelegate:success:contextInfo:</a></code>
+		<span class="tooltip"><p>Helper method used by subclasses for invoking didRecoverSelector.</p></span>
 	</span>
 	
 	
@@ -163,53 +145,6 @@
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/recoveryHandler" title="recoveryHandler"></a>
-	<h3 class="subsubtitle method-title">recoveryHandler</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Recovery handler block.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) BOOL ( ^ ) ( NSError *, NSUInteger ) recoveryHandler</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Recovery handler block.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MRRecoveryAttempter.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
 					
 					
 					
@@ -219,18 +154,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithBlock:" title="initWithBlock:"></a>
-	<h3 class="subsubtitle method-title">initWithBlock:</h3>
+	<a name="//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:" title="invokeRecoverSelector:withDelegate:success:contextInfo:"></a>
+	<h3 class="subsubtitle method-title">invokeRecoverSelector:withDelegate:success:contextInfo:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Init method.</p>
+		<p>Helper method used by subclasses for invoking didRecoverSelector.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithBlock:(BOOL ( ^ ) ( NSError *error , NSUInteger recoveryOption ))<em>handler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)invokeRecoverSelector:(SEL)<em>selector</em> withDelegate:(id)<em>delegate</em> success:(BOOL)<em>success</em> contextInfo:(void *)<em>contextInfo</em></code></div>
 
     
 	
@@ -242,7 +177,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Init method.</p>
+		<p>Helper method used by subclasses for invoking didRecoverSelector.</p>
 	</div>
 	
 	
@@ -272,7 +207,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-02-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-03-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
