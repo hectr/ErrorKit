@@ -1,4 +1,4 @@
-// MRErrorBuilder_AFNetworking.h
+// MRRecoveryAttempter.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,26 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRErrorBuilder.h"
-
-#ifndef _AFNETWORKING_
-#warning This extension requires the AFNetworking library.
-#endif
+#import <Foundation/Foundation.h>
 
 
 /**
- Adds accessors for AFNetworkingOperationFailingURLRequestErrorKey and AFNetworkingOperationFailingURLResponseErrorKey `userInfo` values.
- 
- @discussion **Warning:** This extension requires the AFNetworking library. Add an `AFNetworking.h` import to the header prefix of the project.
- */
-@interface MRErrorBuilder (ErrorKit_AFNetworking)
+ `MRBlockRecoveryAttempter` is used as base class for implementing various recovery attempters.
+*/
+@interface MRRecoveryAttempter : NSObject
 
-/// @name AFRequestOperation error userInfo values
-
-/// Accessors for `AFNetworkingOperationFailingURLRequestErrorKey` user info value.
-@property (nonatomic, copy) NSURLRequest *failingURLRequest;
-
-/// Accessors for `AFNetworkingOperationFailingURLResponseErrorKey` user info value.
-@property (nonatomic, copy) NSHTTPURLResponse *failingURLResponse;
+/// Helper method used by subclasses for invoking didRecoverSelector.
+- (void)invokeRecoverSelector:(SEL)selector withDelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo;
 
 @end

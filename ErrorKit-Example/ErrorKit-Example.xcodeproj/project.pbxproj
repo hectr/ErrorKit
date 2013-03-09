@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8407A4F016D687EE00468FB2 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8407A4EF16D687EE00468FB2 /* UIResponder+ErrorKit.m */; };
 		84DB843116C802F3000BF23E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DB843016C802F3000BF23E /* UIKit.framework */; };
 		84DB843316C802F3000BF23E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DB843216C802F3000BF23E /* Foundation.framework */; };
 		84DB843B16C802F3000BF23E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DB843916C802F3000BF23E /* InfoPlist.strings */; };
@@ -23,14 +22,15 @@
 		84DB846F16C8048E000BF23E /* MRErrorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846716C8048E000BF23E /* MRErrorFormatter.m */; };
 		84DB847016C8048E000BF23E /* NSError+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */; };
 		84DB847116C8048E000BF23E /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */; };
-		84DB847416C80510000BF23E /* MRRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB847316C80510000BF23E /* MRRecoveryAttempter.m */; };
 		84DB848016C82D2D000BF23E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DB847E16C82D2D000BF23E /* Localizable.strings */; };
 		84DBA06016CFB98C000944DA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DBA05F16CFB98C000944DA /* CoreData.framework */; };
+		84EB27E316EAD98700F98BD0 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */; };
+		84EB27E416EAD98700F98BD0 /* MRBlockRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27DE16EAD98700F98BD0 /* MRBlockRecoveryAttempter.m */; };
+		84EB27E516EAD98700F98BD0 /* MRRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27E016EAD98700F98BD0 /* MRRecoveryAttempter.m */; };
+		84EB27E616EAD98700F98BD0 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27E216EAD98700F98BD0 /* UIResponder+ErrorKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8407A4EE16D687EE00468FB2 /* UIResponder+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+ErrorKit.h"; sourceTree = "<group>"; };
-		8407A4EF16D687EE00468FB2 /* UIResponder+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+ErrorKit.m"; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB843016C802F3000BF23E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DB843216C802F3000BF23E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,14 +60,20 @@
 		84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+ErrorKit.m"; path = "../../ErrorKit/NSError+ErrorKit.m"; sourceTree = "<group>"; };
 		84DB846C16C8048E000BF23E /* UIAlertView+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+ErrorKit.h"; path = "../../ErrorKit/UIAlertView+ErrorKit.h"; sourceTree = "<group>"; };
 		84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+ErrorKit.m"; path = "../../ErrorKit/UIAlertView+ErrorKit.m"; sourceTree = "<group>"; };
-		84DB847216C80510000BF23E /* MRRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRRecoveryAttempter.h; sourceTree = "<group>"; };
-		84DB847316C80510000BF23E /* MRRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRRecoveryAttempter.m; sourceTree = "<group>"; };
 		84DB847516C8242E000BF23E /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84DB847616C82432000BF23E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84DB847F16C82D2D000BF23E /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84DB848116C82D36000BF23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84DB848216C82D42000BF23E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84DBA05F16CFB98C000944DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		84EB27DB16EAD98600F98BD0 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAlertRecoveryAttempter.h; path = ../../ErrorKit/MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
+		84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAlertRecoveryAttempter.m; path = ../../ErrorKit/MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
+		84EB27DD16EAD98700F98BD0 /* MRBlockRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRBlockRecoveryAttempter.h; path = ../../ErrorKit/MRBlockRecoveryAttempter.h; sourceTree = "<group>"; };
+		84EB27DE16EAD98700F98BD0 /* MRBlockRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRBlockRecoveryAttempter.m; path = ../../ErrorKit/MRBlockRecoveryAttempter.m; sourceTree = "<group>"; };
+		84EB27DF16EAD98700F98BD0 /* MRRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRRecoveryAttempter.h; path = ../../ErrorKit/MRRecoveryAttempter.h; sourceTree = "<group>"; };
+		84EB27E016EAD98700F98BD0 /* MRRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRRecoveryAttempter.m; path = ../../ErrorKit/MRRecoveryAttempter.m; sourceTree = "<group>"; };
+		84EB27E116EAD98700F98BD0 /* UIResponder+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+ErrorKit.h"; path = "../../ErrorKit/UIResponder+ErrorKit.h"; sourceTree = "<group>"; };
+		84EB27E216EAD98700F98BD0 /* UIResponder+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+ErrorKit.m"; path = "../../ErrorKit/UIResponder+ErrorKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +126,6 @@
 				84DB844816C802F4000BF23E /* MRViewController.h */,
 				84DB844916C802F4000BF23E /* MRViewController.m */,
 				84DB845316C80380000BF23E /* MRViewController.xib */,
-				84DB847216C80510000BF23E /* MRRecoveryAttempter.h */,
-				84DB847316C80510000BF23E /* MRRecoveryAttempter.m */,
-				8407A4EE16D687EE00468FB2 /* UIResponder+ErrorKit.h */,
-				8407A4EF16D687EE00468FB2 /* UIResponder+ErrorKit.m */,
 				84DB843716C802F3000BF23E /* Supporting Files */,
 			);
 			path = "ErrorKit-Example";
@@ -149,21 +151,61 @@
 			isa = PBXGroup;
 			children = (
 				84DB846116C8048E000BF23E /* ErrorKit.h */,
-				84DB846216C8048E000BF23E /* MRErrorBuilder_AFNetworking.h */,
-				84DB846316C8048E000BF23E /* MRErrorBuilder_CoreData.h */,
-				84DB846416C8048E000BF23E /* MRErrorBuilder.h */,
-				84DB846516C8048E000BF23E /* MRErrorBuilder.m */,
-				84DB846616C8048E000BF23E /* MRErrorFormatter.h */,
-				84DB846716C8048E000BF23E /* MRErrorFormatter.m */,
-				84DB846816C8048E000BF23E /* NSError_AFNetworking.h */,
-				84DB846916C8048E000BF23E /* NSError_CoreData.h */,
-				84DB846A16C8048E000BF23E /* NSError+ErrorKit.h */,
-				84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */,
-				84DB846C16C8048E000BF23E /* UIAlertView+ErrorKit.h */,
-				84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */,
+				84EB27EA16EADA9400F98BD0 /* access */,
+				84EB27E716EAD9E300F98BD0 /* build */,
+				84EB27E816EAD9F000F98BD0 /* present */,
+				84EB27E916EADA3600F98BD0 /* recover */,
 			);
 			name = ErrorKit;
 			path = "ErrorKit-Example";
+			sourceTree = "<group>";
+		};
+		84EB27E716EAD9E300F98BD0 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				84DB846416C8048E000BF23E /* MRErrorBuilder.h */,
+				84DB846516C8048E000BF23E /* MRErrorBuilder.m */,
+				84DB846316C8048E000BF23E /* MRErrorBuilder_CoreData.h */,
+				84DB846216C8048E000BF23E /* MRErrorBuilder_AFNetworking.h */,
+			);
+			name = build;
+			sourceTree = "<group>";
+		};
+		84EB27E816EAD9F000F98BD0 /* present */ = {
+			isa = PBXGroup;
+			children = (
+				84DB846616C8048E000BF23E /* MRErrorFormatter.h */,
+				84DB846716C8048E000BF23E /* MRErrorFormatter.m */,
+				84DB846C16C8048E000BF23E /* UIAlertView+ErrorKit.h */,
+				84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */,
+				84EB27E116EAD98700F98BD0 /* UIResponder+ErrorKit.h */,
+				84EB27E216EAD98700F98BD0 /* UIResponder+ErrorKit.m */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		84EB27E916EADA3600F98BD0 /* recover */ = {
+			isa = PBXGroup;
+			children = (
+				84EB27DF16EAD98700F98BD0 /* MRRecoveryAttempter.h */,
+				84EB27E016EAD98700F98BD0 /* MRRecoveryAttempter.m */,
+				84EB27DD16EAD98700F98BD0 /* MRBlockRecoveryAttempter.h */,
+				84EB27DE16EAD98700F98BD0 /* MRBlockRecoveryAttempter.m */,
+				84EB27DB16EAD98600F98BD0 /* MRAlertRecoveryAttempter.h */,
+				84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */,
+			);
+			name = recover;
+			sourceTree = "<group>";
+		};
+		84EB27EA16EADA9400F98BD0 /* access */ = {
+			isa = PBXGroup;
+			children = (
+				84DB846A16C8048E000BF23E /* NSError+ErrorKit.h */,
+				84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */,
+				84DB846916C8048E000BF23E /* NSError_CoreData.h */,
+				84DB846816C8048E000BF23E /* NSError_AFNetworking.h */,
+			);
+			name = access;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +285,10 @@
 				84DB846F16C8048E000BF23E /* MRErrorFormatter.m in Sources */,
 				84DB847016C8048E000BF23E /* NSError+ErrorKit.m in Sources */,
 				84DB847116C8048E000BF23E /* UIAlertView+ErrorKit.m in Sources */,
-				84DB847416C80510000BF23E /* MRRecoveryAttempter.m in Sources */,
-				8407A4F016D687EE00468FB2 /* UIResponder+ErrorKit.m in Sources */,
+				84EB27E316EAD98700F98BD0 /* MRAlertRecoveryAttempter.m in Sources */,
+				84EB27E416EAD98700F98BD0 /* MRBlockRecoveryAttempter.m in Sources */,
+				84EB27E516EAD98700F98BD0 /* MRRecoveryAttempter.m in Sources */,
+				84EB27E616EAD98700F98BD0 /* UIResponder+ErrorKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

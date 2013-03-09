@@ -40,6 +40,7 @@ static char kMRAlertViewDelegateObjectKey;
 @property (nonatomic, strong) UIAlertView *onDismissAlert;
 @end
 
+
 @implementation MRAlertViewRecoveryDelegate
 
 - (void)invokeRecoverSelectorWithSuccess:(BOOL)success

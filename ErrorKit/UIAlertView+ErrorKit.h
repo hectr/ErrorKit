@@ -44,7 +44,7 @@
 @end
 
 
-/*
+/**
  This category adds methods that may help you decide whether or not to display an error dialog.
  */
 @interface NSError (ErrorKit_Helper)

@@ -29,8 +29,12 @@
 
 #import "NSError+ErrorKit.h"
 
+#import "MRBlockRecoveryAttempter.h"
+
 #ifdef UIKIT_STATIC_INLINE
 #import "UIAlertView+ErrorKit.h"
+#import "UIResponder+ErrorKit.h"
+#import "MRAlertRecoveryAttempter.h"
 #endif
 
 #ifdef _COREDATADEFINES_H

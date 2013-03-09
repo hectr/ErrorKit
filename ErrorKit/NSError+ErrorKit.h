@@ -25,7 +25,7 @@
 @class NSManagedObject;
 
 
-/*
+/**
  Adds getter methods for common `userInfo` values.
  */
 @interface NSError (ErrorKit)

@@ -22,8 +22,6 @@
 
 #import "MRViewController.h"
 #import "ErrorKit.h"
-#import "MRRecoveryAttempter.h"
-#import "UIResponder+ErrorKit.h"
 
 
 @interface MRViewController () <UIAlertViewDelegate, UITextFieldDelegate> {
@@ -89,16 +87,6 @@
     }
 }
 
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex != alertView.cancelButtonIndex) {
-        self.urlTextField.text = [alertView textFieldAtIndex:0].text;
-        [self connectAction:nil];
-    }
-}
-
 #pragma mark - UIViewController methods
 
 - (void)viewDidLoad
@@ -111,47 +99,62 @@
 
 - (NSError *)willPresentError:(NSError *)error
 {
-    MRRecoveryAttempter *attempter = [[MRRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
-        if (recoveryOption == 0) {
-            NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
-            if (error.code == NSURLErrorServerCertificateUntrusted) {
-                [self.trustedDomains addObject:failingURL.host];
+    if (error.code == NSURLErrorCannotFindHost) {
+        MRAlertRecoveryAttempter *attempter = [[MRAlertRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption, BOOL *finished) {
+            if (recoveryOption == 0) {
+                if (error.code == NSURLErrorCannotFindHost) {
+                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Connect to", nil)
+                                                                   message:nil
+                                                                  delegate:error.recoveryAttempter
+                                                         cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                                                         otherButtonTitles:NSLocalizedString(@"Retry", nil), nil];
+                    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+                    [alert textFieldAtIndex:0].text = self.urlTextField.text;
+                    [alert show];
+                }
             }
-            if (error.code == NSURLErrorCannotFindHost) {
-                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Connect to", nil)
-                                                               message:nil
-                                                              delegate:self
-                                                     cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
-                                                     otherButtonTitles:NSLocalizedString(@"Retry", nil), nil];
-                alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-                [alert textFieldAtIndex:0].text = self.urlTextField.text;
-                [alert show];
-            } else {
+            return NO;
+        }];
+        attempter.delegateHandler = ^BOOL(UIAlertView *alertView, NSInteger buttonIndex, BOOL *finished) {
+            *finished = YES;
+            if (buttonIndex != alertView.cancelButtonIndex) {
+                self.urlTextField.text = [alertView textFieldAtIndex:0].text;
                 [self connectAction:nil];
+                return YES;
             }
-            return YES;
-        }
-        return NO;
-    }];
-    if (error.code == NSURLErrorServerCertificateUntrusted) {
-        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
-        builder.recoveryAttempter = attempter;
-        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"YES", nil) ];
-        return builder.error;
-    } else if (error.code == NSURLErrorNotConnectedToInternet) {
-        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
-        builder.recoveryAttempter = attempter;
-        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection and try again.", nil);
-        builder.helpAnchor = NSLocalizedString(@"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi", nil);
-        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
-        return builder.error;
-    } else if (error.code == NSURLErrorCannotFindHost) {
+            return NO;
+        };
         MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
         builder.recoveryAttempter = attempter;
         builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Change URL", nil) ];
         return builder.error;
-    } else if (error.isCancelledError) {
-        return nil;
+    } else {
+        MRBlockRecoveryAttempter *attempter = [[MRBlockRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
+            if (recoveryOption == 0) {
+                NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
+                if (error.code == NSURLErrorServerCertificateUntrusted) {
+                    [self.trustedDomains addObject:failingURL.host];
+                }
+                [self connectAction:nil];
+                return YES;
+            }
+            return NO;
+        }];
+        if (error.code == NSURLErrorServerCertificateUntrusted) {
+            MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+            builder.recoveryAttempter = attempter;
+            builder.localizedRecoveryOptions = @[ NSLocalizedString(@"YES", nil) ];
+            return builder.error;
+        } else if (error.code == NSURLErrorNotConnectedToInternet) {
+            MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+            builder.recoveryAttempter = attempter;
+            builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection and try again.", nil);
+            builder.helpAnchor = NSLocalizedString(@"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi", nil);
+            builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
+            return builder.error;
+        } else if (error.isCancelledError) {
+            return nil;
+        }
     }
     return error;
 }

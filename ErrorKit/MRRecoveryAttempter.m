@@ -1,4 +1,4 @@
-// MRRecoveryAttempter.h
+// MRRecoveryAttempter.m
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,18 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "MRRecoveryAttempter.h"
+
+#if  ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
+#endif
 
 
-/**
- Instances of `MRRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: and attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block.
-*/
-@interface MRRecoveryAttempter : NSObject <NSCopying>
+@implementation MRRecoveryAttempter
 
-/// Recovery handler block.
-@property (nonatomic, copy, readonly) BOOL (^recoveryHandler)(NSError *, NSUInteger);
-
-/// Init method.
-- (id)initWithBlock:(BOOL (^)(NSError *error, NSUInteger recoveryOption))handler;
+- (void)invokeRecoverSelector:(SEL)selector withDelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo
+{
+    NSMethodSignature *signature = [delegate methodSignatureForSelector:selector];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    [invocation setSelector:selector];
+    [invocation setArgument:(void *)&success atIndex:2];
+    [invocation setArgument:&contextInfo atIndex:3];
+    [invocation invokeWithTarget:delegate];
+}
 
 @end

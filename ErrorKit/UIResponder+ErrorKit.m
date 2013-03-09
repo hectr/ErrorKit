@@ -118,6 +118,9 @@ static BOOL __didRecover = NO;
 - (BOOL)presentError:(NSError *)error
 {
     NSAssert(__errorAlertView == nil, nil);
+    if (__errorAlertView) {
+        return NO;
+    }
     NSError *customizedError = [self willPresentError:error];
     if (customizedError && __errorAlertView == nil) {
         __errorAlertView = [UIAlertView alertWithTitle:nil

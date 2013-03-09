@@ -32,12 +32,18 @@
 
 /// @name Strings for debugging
 
-/// Returns a string that represents the given error.
-/// @discussion If `shortenStrings` is set you can expect the string to be shorter than the one returned by [NSError description].
+/**
+ Returns a string that represents the given error.
+ 
+ @discussion If `shortenStrings` is set you can expect the string to be shorter than the one returned by [NSError description].
+ */
 - (NSString *)stringForDebugFromError:(NSError *)error;
 
-/// Returns a string that contains the key-value pairs of the given dictionary.
-/// @discussion If `shortenStrings` is not set, `NSLocalizedDescriptionKey` is the first pair of the returned string, otherwise it is not included.
+/**
+ Returns a string that contains the key-value pairs of the given dictionary.
+
+ @discussion If `shortenStrings` is not set, `NSLocalizedDescriptionKey` is the first pair of the returned string, otherwise it is not included.
+ */
 - (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo;
 
 /// @name Strings for presentation
@@ -45,12 +51,18 @@
 /// Returns a string representation of a given error.
 + (NSString *)stringFromError:(NSError *)error;
 
-/// Returns a suitable title for presenting a given error.
-/// @discussion Use this method in convination with `stringForMessageFromError:`.
+/**
+ Returns a suitable title for presenting a given error.
+
+ @discussion Use this method in convination with `stringForMessageFromError:`.
+ */
 + (NSString *)stringForTitleFromError:(NSError *)error;
 
-/// Returns a suitable message for presenting a given error.
-/// @discussion Use this method in convination with `stringForTitleFromError:`.
+/**
+ Returns a suitable message for presenting a given error.
+ 
+ @discussion Use this method in convination with `stringForTitleFromError:`.
+ */
 + (NSString *)stringForMessageFromError:(NSError *)error;
 
 /// Returns a suitable cancel button title for presenting a given error.

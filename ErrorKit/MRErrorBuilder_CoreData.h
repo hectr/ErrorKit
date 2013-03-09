@@ -30,7 +30,7 @@
 /**
  Adds accessors for Core Data's error `userInfo` values.
  
- **Warning:** This extension requires the Core Data framework. Add a `CoreData/CoreData.h` import to the header prefix of the project.
+ @discussion **Warning:** This extension requires the Core Data framework. Add a `CoreData/CoreData.h` import to the header prefix of the project.
  */
 @interface MRErrorBuilder (ErrorKit_CoreData)
 

@@ -22,9 +22,13 @@
 
 #import "MRErrorBuilder.h"
 #import "NSError+ErrorKit.h"
-#import "NSError_CoreData.h"
-#import "NSError_AFNetworking.h"
 #import "MRErrorFormatter.h"
+#ifdef _COREDATADEFINES_H
+#import "NSError_CoreData.h"
+#endif
+#ifdef _AFNETWORKING_
+#import "NSError_AFNetworking.h"
+#endif
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag

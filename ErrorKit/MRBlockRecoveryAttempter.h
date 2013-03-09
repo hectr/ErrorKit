@@ -1,4 +1,4 @@
-// MRErrorBuilder_AFNetworking.h
+// MRBlockRecoveryAttempter.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,26 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRErrorBuilder.h"
-
-#ifndef _AFNETWORKING_
-#warning This extension requires the AFNetworking library.
-#endif
+#import "MRRecoveryAttempter.h"
 
 
 /**
- Adds accessors for AFNetworkingOperationFailingURLRequestErrorKey and AFNetworkingOperationFailingURLResponseErrorKey `userInfo` values.
- 
- @discussion **Warning:** This extension requires the AFNetworking library. Add an `AFNetworking.h` import to the header prefix of the project.
- */
-@interface MRErrorBuilder (ErrorKit_AFNetworking)
+ Instances of `MRBlockRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: and attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block.
+*/
+@interface MRBlockRecoveryAttempter : MRRecoveryAttempter
 
-/// @name AFRequestOperation error userInfo values
+/// Recovery handler block.
+@property (nonatomic, copy) BOOL (^recoveryHandler)(NSError *, NSUInteger);
 
-/// Accessors for `AFNetworkingOperationFailingURLRequestErrorKey` user info value.
-@property (nonatomic, copy) NSURLRequest *failingURLRequest;
-
-/// Accessors for `AFNetworkingOperationFailingURLResponseErrorKey` user info value.
-@property (nonatomic, copy) NSHTTPURLResponse *failingURLResponse;
+/// Designated initializer.
+- (id)initWithBlock:(BOOL (^)(NSError *error, NSUInteger recoveryOption))handler;
 
 @end

@@ -1,4 +1,4 @@
-// MRRecoveryAttempter.m
+// MRBlockRecoveryAttempter.m
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,40 +20,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRRecoveryAttempter.h"
+#import "MRBlockRecoveryAttempter.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
 #endif
 
 
-@implementation MRRecoveryAttempter
+@implementation MRBlockRecoveryAttempter
 
 - (id)initWithBlock:(BOOL (^)(NSError *, NSUInteger))handler
 {
     NSParameterAssert(handler);
     self = [super init];
     if (self) {
-        _recoveryHandler = [handler copy];
+        self.recoveryHandler = handler;
     }
     return self;
-}
-
-- (void)invokeRecoverSelector:(SEL)selector withdelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo
-{
-    NSMethodSignature *signature = [delegate methodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    [invocation setSelector:selector];
-    [invocation setArgument:(void *)&success atIndex:2];
-    [invocation setArgument:&contextInfo atIndex:3];
-    [invocation invokeWithTarget:delegate];
 }
 
 #pragma mark - NSErrorRecoveryAttempting
 
 - (void)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex delegate:(id)delegate didRecoverSelector:(SEL)didRecoverSelector contextInfo:(void *)contextInfo
 {
-    [self invokeRecoverSelector:didRecoverSelector withdelegate:delegate
+    [self invokeRecoverSelector:didRecoverSelector
+                   withDelegate:delegate
                         success:self.recoveryHandler(error, recoveryOptionIndex)
                     contextInfo:contextInfo];
 }
@@ -61,14 +52,6 @@
 - (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex
 {
     return self.recoveryHandler(error, recoveryOptionIndex);
-}
-
-#pragma mark - NSCopying
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    MRRecoveryAttempter *attempter = [[[self class] allocWithZone:zone] initWithBlock:self.recoveryHandler];
-    return attempter;
 }
 
 @end
