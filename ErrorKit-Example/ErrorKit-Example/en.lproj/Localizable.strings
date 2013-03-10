@@ -1,34 +1,379 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: en
-// Date: Tue Feb 19 12:01:25 2013
+// Date: Sun Mar 10 19:18:08 2013
+
+/* No comment provided by engineer. */
+"Access Information Invalid"="Access Information Invalid";
+
+/* No comment provided by engineer. */
+"Account Already Exists"="Account Already Exists";
+
+/* No comment provided by engineer. */
+"Account Error"="Account Error";
+
+/* No comment provided by engineer. */
+"Account Missing Required Property"="Account Missing Required Property";
+
+/* No comment provided by engineer. */
+"Account Not Found"="Account Not Found";
+
+/* No comment provided by engineer. */
+"Account Type Invalid"="Account Type Invalid";
+
+/* No comment provided by engineer. */
+"Bad Server Response"="Bad Server Response";
+
+/* No comment provided by engineer. */
+"Bad URL"="Bad URL";
+
+/* No comment provided by engineer. */
+"Call Is Active"="Call Is Active";
 
 /* No comment provided by engineer. */
 "Cancel"="Cancel";
 
 /* No comment provided by engineer. */
+"Cancelled"="Cancelled";
+
+/* No comment provided by engineer. */
+"Cannot Close File"="Cannot Close File";
+
+/* No comment provided by engineer. */
+"Cannot Connect To Host"="Cannot Connect To Host";
+
+/* No comment provided by engineer. */
+"Cannot Create File"="Cannot Create File";
+
+/* No comment provided by engineer. */
+"Cannot Decode Content Data"="Cannot Decode Content Data";
+
+/* No comment provided by engineer. */
+"Cannot Decode Raw Data"="Cannot Decode Raw Data";
+
+/* No comment provided by engineer. */
+"Cannot Filter Deferred Distance"="Cannot Filter Deferred Distance";
+
+/* No comment provided by engineer. */
+"Cannot Find Host"="Cannot Find Host";
+
+/* No comment provided by engineer. */
+"Cannot Load From Network"="Cannot Load From Network";
+
+/* No comment provided by engineer. */
+"Cannot Move File"="Cannot Move File";
+
+/* No comment provided by engineer. */
+"Cannot Open File"="Cannot Open File";
+
+/* No comment provided by engineer. */
+"Cannot Parse Response"="Cannot Parse Response";
+
+/* No comment provided by engineer. */
+"Cannot Remove File"="Cannot Remove File";
+
+/* No comment provided by engineer. */
+"Cannot Write To File"="Cannot Write To File";
+
+/* No comment provided by engineer. */
+"Change URL"="Change URL";
+
+/* No comment provided by engineer. */
+"Client Certificate Rejected"="Client Certificate Rejected";
+
+/* No comment provided by engineer. */
+"Client Certificate Required"="Client Certificate Required";
+
+/* No comment provided by engineer. */
 "Connect"="Connect";
+
+/* No comment provided by engineer. */
+"Connect to"="Connect to";
 
 /* No comment provided by engineer. */
 "Connecting..."="Connecting...";
 
 /* No comment provided by engineer. */
+"Connection Lost"="Connection Lost";
+
+/* No comment provided by engineer. */
 "Connection failed"="Connection failed";
+
+/* No comment provided by engineer. */
+"Corrupt File"="Corrupt File";
+
+/* No comment provided by engineer. */
+"DNS Lookup Failed"="DNS Lookup Failed";
+
+/* No comment provided by engineer. */
+"Data Base Error"="Data Base Error";
+
+/* No comment provided by engineer. */
+"Data Error"="Data Error";
+
+/* No comment provided by engineer. */
+"Data Length Exceeds Maximum"="Data Length Exceeds Maximum";
+
+/* No comment provided by engineer. */
+"Data Not Allowed"="Data Not Allowed";
+
+/* No comment provided by engineer. */
+"Date Too Late"="Date Too Late";
+
+/* No comment provided by engineer. */
+"Date Too Soon"="Date Too Soon";
+
+/* No comment provided by engineer. */
+"Deferred Accuracy Too Low"="Deferred Accuracy Too Low";
+
+/* No comment provided by engineer. */
+"Deferred Not Updating Location"="Deferred Not Updating Location";
+
+/* No comment provided by engineer. */
+"Deferred Update Canceled"="Deferred Update Canceled";
+
+/* No comment provided by engineer. */
+"Deferred Update Failed"="Deferred Update Failed";
+
+/* No comment provided by engineer. */
+"Delete Denied"="Delete Denied";
+
+/* No comment provided by engineer. */
+"Denied"="Denied";
+
+/* No comment provided by engineer. */
+"Destination Store Error"="Destination Store Error";
+
+/* No comment provided by engineer. */
+"Download Decoding Failed"="Download Decoding Failed";
+
+/* No comment provided by engineer. */
+"Download Decoding Failed To Complete"="Download Decoding Failed To Complete";
+
+/* No comment provided by engineer. */
+"Entity Migration Policy Error"="Entity Migration Policy Error";
 
 /* No comment provided by engineer. */
 "Error"="Error";
 
 /* No comment provided by engineer. */
+"Executable Architecture Mismatch"="Executable Architecture Mismatch";
+
+/* No comment provided by engineer. */
+"Executable Error"="Executable Error";
+
+/* No comment provided by engineer. */
+"Executable Link Error"="Executable Link Error";
+
+/* No comment provided by engineer. */
+"Executable Load Error"="Executable Load Error";
+
+/* No comment provided by engineer. */
+"Executable Not Loadable"="Executable Not Loadable";
+
+/* No comment provided by engineer. */
+"Executable Runtime Mismatch"="Executable Runtime Mismatch";
+
+/* No comment provided by engineer. */
+"External Record Import Error"="External Record Import Error";
+
+/* No comment provided by engineer. */
+"External Relationship Error"="External Relationship Error";
+
+/* No comment provided by engineer. */
+"Feature Unsupported"="Feature Unsupported";
+
+/* No comment provided by engineer. */
+"File Already Exists"="File Already Exists";
+
+/* No comment provided by engineer. */
+"File Does Not Exist"="File Does Not Exist";
+
+/* No comment provided by engineer. */
+"File Error"="File Error";
+
+/* No comment provided by engineer. */
+"File Is Directory"="File Is Directory";
+
+/* No comment provided by engineer. */
+"File Locking Error"="File Locking Error";
+
+/* No comment provided by engineer. */
+"File Read Error"="File Read Error";
+
+/* No comment provided by engineer. */
+"File Too Large"="File Too Large";
+
+/* No comment provided by engineer. */
+"File Write Error"="File Write Error";
+
+/* No comment provided by engineer. */
+"Formatting Error"="Formatting Error";
+
+/* No comment provided by engineer. */
+"Geocode Canceled"="Geocode Canceled";
+
+/* No comment provided by engineer. */
+"Geocode Found No Result"="Geocode Found No Result";
+
+/* No comment provided by engineer. */
+"Geocode Found Partial Result"="Geocode Found Partial Result";
+
+/* No comment provided by engineer. */
+"HTTP Too Many Redirects"="HTTP Too Many Redirects";
+
+/* No comment provided by engineer. */
+"Heading Failure"="Heading Failure";
+
+/* No comment provided by engineer. */
 "Help"="Help";
+
+/* No comment provided by engineer. */
+"Inapplicable Encoding"="Inapplicable Encoding";
+
+/* No comment provided by engineer. */
+"Incompatible Schema"="Incompatible Schema";
+
+/* No comment provided by engineer. */
+"Incompatible Version Hash"="Incompatible Version Hash";
+
+/* No comment provided by engineer. */
+"Incomplete Save"="Incomplete Save";
+
+/* No comment provided by engineer. */
+"Inferred Mapping Model Error"="Inferred Mapping Model Error";
+
+/* No comment provided by engineer. */
+"International Roaming Off"="International Roaming Off";
+
+/* No comment provided by engineer. */
+"Invalid Date"="Invalid Date";
+
+/* No comment provided by engineer. */
+"Invalid File Name"="Invalid File Name";
+
+/* No comment provided by engineer. */
+"Invalid Type"="Invalid Type";
+
+/* No comment provided by engineer. */
+"Location Error"="Location Error";
+
+/* No comment provided by engineer. */
+"Location Unknown"="Location Unknown";
+
+/* No comment provided by engineer. */
+"Locking Error"="Locking Error";
+
+/* No comment provided by engineer. */
+"Merge Error"="Merge Error";
+
+/* No comment provided by engineer. */
+"Migration Cancelled"="Migration Cancelled";
+
+/* No comment provided by engineer. */
+"Migration Error"="Migration Error";
+
+/* No comment provided by engineer. */
+"Missing Mandatory Property"="Missing Mandatory Property";
+
+/* No comment provided by engineer. */
+"Missing Mapping Model"="Missing Mapping Model";
+
+/* No comment provided by engineer. */
+"Missing Source Model"="Missing Source Model";
+
+/* No comment provided by engineer. */
+"Multiple Validation Errors"="Multiple Validation Errors";
 
 /* No comment provided by engineer. */
 "Network Error"="Network Error";
 
 /* No comment provided by engineer. */
+"No Permissions To Read File"="No Permissions To Read File";
+
+/* No comment provided by engineer. */
+"No Read Permission"="No Read Permission";
+
+/* No comment provided by engineer. */
+"No Such File"="No Such File";
+
+/* No comment provided by engineer. */
+"No Write Permission"="No Write Permission";
+
+/* No comment provided by engineer. */
+"Not Connected To Internet"="Not Connected To Internet";
+
+/* No comment provided by engineer. */
+"Number Too Large"="Number Too Large";
+
+/* No comment provided by engineer. */
+"Number Too Small"="Number Too Small";
+
+/* No comment provided by engineer. */
 "OK"="OK";
 
 /* No comment provided by engineer. */
+"Operation Error"="Operation Error";
+
+/* No comment provided by engineer. */
+"Out Of Space"="Out Of Space";
+
+/* No comment provided by engineer. */
+"Pattern Matching Error"="Pattern Matching Error";
+
+/* No comment provided by engineer. */
+"Permission Denied"="Permission Denied";
+
+/* No comment provided by engineer. */
+"Persistent Store Open Error"="Persistent Store Open Error";
+
+/* No comment provided by engineer. */
 "Please check your internet connection and try again."="Please check your internet connection and try again.";
+
+/* No comment provided by engineer. */
+"Property List Corrupt"="Property List Corrupt";
+
+/* No comment provided by engineer. */
+"Property List Error"="Property List Error";
+
+/* No comment provided by engineer. */
+"Property List Stream Error"="Property List Stream Error";
+
+/* No comment provided by engineer. */
+"Property List Unknown Version"="Property List Unknown Version";
+
+/* No comment provided by engineer. */
+"Read Only Volume"="Read Only Volume";
+
+/* No comment provided by engineer. */
+"Redirect To Non Existent Location"="Redirect To Non Existent Location";
+
+/* No comment provided by engineer. */
+"Referential Integrity Error"="Referential Integrity Error";
+
+/* No comment provided by engineer. */
+"Region Monitoring Denied"="Region Monitoring Denied";
+
+/* No comment provided by engineer. */
+"Region Monitoring Failure"="Region Monitoring Failure";
+
+/* No comment provided by engineer. */
+"Region Monitoring Response Delayed"="Region Monitoring Response Delayed";
+
+/* No comment provided by engineer. */
+"Region Monitoring Setup Delayed"="Region Monitoring Setup Delayed";
+
+/* No comment provided by engineer. */
+"Relationship Exceeds Maximum Count"="Relationship Exceeds Maximum Count";
+
+/* No comment provided by engineer. */
+"Relationship Lacks Minimum Count"="Relationship Lacks Minimum Count";
+
+/* No comment provided by engineer. */
+"Request Body Stream Exhausted"="Request Body Stream Exhausted";
+
+/* No comment provided by engineer. */
+"Resource Unavailable"="Resource Unavailable";
 
 /* No comment provided by engineer. */
 "Retry"="Retry";
@@ -37,8 +382,86 @@
 "Retrying..."="Retrying...";
 
 /* No comment provided by engineer. */
+"Save Conflicts"="Save Conflicts";
+
+/* No comment provided by engineer. */
+"Save Error"="Save Error";
+
+/* No comment provided by engineer. */
+"Secure Connection Failed"="Secure Connection Failed";
+
+/* No comment provided by engineer. */
+"Server Certificate Has Bad Date"="Server Certificate Has Bad Date";
+
+/* No comment provided by engineer. */
+"Server Certificate Has Unknown Root"="Server Certificate Has Unknown Root";
+
+/* No comment provided by engineer. */
+"Server Certificate Not Yet Valid"="Server Certificate Not Yet Valid";
+
+/* No comment provided by engineer. */
+"Server Certificate Untrusted"="Server Certificate Untrusted";
+
+/* No comment provided by engineer. */
+"Source Store Error"="Source Store Error";
+
+/* No comment provided by engineer. */
+"String Too Long"="String Too Long";
+
+/* No comment provided by engineer. */
+"String Too Short"="String Too Short";
+
+/* No comment provided by engineer. */
+"Timed Out"="Timed Out";
+
+/* No comment provided by engineer. */
+"Type Mismatch"="Type Mismatch";
+
+/* No comment provided by engineer. */
+"URL Error"="URL Error";
+
+/* No comment provided by engineer. */
+"Unknown Encoding"="Unknown Encoding";
+
+/* No comment provided by engineer. */
+"Unknown Error"="Unknown Error";
+
+/* No comment provided by engineer. */
+"Unsupported Request Type"="Unsupported Request Type";
+
+/* No comment provided by engineer. */
+"Unsupported Scheme"="Unsupported Scheme";
+
+/* No comment provided by engineer. */
+"Unsupported URL"="Unsupported URL";
+
+/* No comment provided by engineer. */
+"User Authentication Required"="User Authentication Required";
+
+/* No comment provided by engineer. */
+"User Cancelled Authentication"="User Cancelled Authentication";
+
+/* No comment provided by engineer. */
+"Validation Error"="Validation Error";
+
+/* No comment provided by engineer. */
+"XPC Connection Error"="XPC Connection Error";
+
+/* No comment provided by engineer. */
+"XPC Connection Interrupted"="XPC Connection Interrupted";
+
+/* No comment provided by engineer. */
+"XPC Connection Invalid"="XPC Connection Invalid";
+
+/* No comment provided by engineer. */
+"XPC Connection Reply Invalid"="XPC Connection Reply Invalid";
+
+/* No comment provided by engineer. */
 "YES"="YES";
 
 /* No comment provided by engineer. */
 "You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi"="You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi";
+
+/* No comment provided by engineer. */
+"Zero Byte Resource"="Zero Byte Resource";
 

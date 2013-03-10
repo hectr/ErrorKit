@@ -1,34 +1,379 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: ca
-// Date: Tue Feb 19 12:01:25 2013
+// Date: Sun Mar 10 19:18:09 2013
+
+/* No comment provided by engineer. */
+"Access Information Invalid"="Informació d'accés invàlida";
+
+/* No comment provided by engineer. */
+"Account Already Exists"="El compte ja existeix";
+
+/* No comment provided by engineer. */
+"Account Error"="Error de compte";
+
+/* No comment provided by engineer. */
+"Account Missing Required Property"="Falta propietat necessària del compte";
+
+/* No comment provided by engineer. */
+"Account Not Found"="Compte no trobat";
+
+/* No comment provided by engineer. */
+"Account Type Invalid"="Tipus de compte invàlid";
+
+/* No comment provided by engineer. */
+"Bad Server Response"="Resposta de servidor invàlida";
+
+/* No comment provided by engineer. */
+"Bad URL"="URL invàlida";
+
+/* No comment provided by engineer. */
+"Call Is Active"="Trucada activa";
 
 /* No comment provided by engineer. */
 "Cancel"="Cancel·lar";
 
 /* No comment provided by engineer. */
+"Cancelled"="Cancel·lat";
+
+/* No comment provided by engineer. */
+"Cannot Close File"="No es pot tancar el fitxer";
+
+/* No comment provided by engineer. */
+"Cannot Connect To Host"="No es pot connectar al host";
+
+/* No comment provided by engineer. */
+"Cannot Create File"="No es pot crear el fitxer";
+
+/* No comment provided by engineer. */
+"Cannot Decode Content Data"="No es poden descodificar les dades del contingut";
+
+/* No comment provided by engineer. */
+"Cannot Decode Raw Data"="No es poden descodificar les dades";
+
+/* No comment provided by engineer. */
+"Cannot Filter Deferred Distance"="No es pot filtrar distància diferida";
+
+/* No comment provided by engineer. */
+"Cannot Find Host"="No es pot trobar el host";
+
+/* No comment provided by engineer. */
+"Cannot Load From Network"="No es pot carregar des de la xarxa";
+
+/* No comment provided by engineer. */
+"Cannot Move File"="No es pot moure el fitxer";
+
+/* No comment provided by engineer. */
+"Cannot Open File"="No es pot obrir el fitxer";
+
+/* No comment provided by engineer. */
+"Cannot Parse Response"="No es pot analitzar la resposta";
+
+/* No comment provided by engineer. */
+"Cannot Remove File"="No es pot suprimir el fitxer";
+
+/* No comment provided by engineer. */
+"Cannot Write To File"="No es pot escriure al fitxer";
+
+/* No comment provided by engineer. */
+"Change URL"="Canvia l'URL";
+
+/* No comment provided by engineer. */
+"Client Certificate Rejected"="Certificat de client rebutjat";
+
+/* No comment provided by engineer. */
+"Client Certificate Required"="Necessari certificat de client";
+
+/* No comment provided by engineer. */
 "Connect"="Connectar";
+
+/* No comment provided by engineer. */
+"Connect to"="Connectar-se a";
 
 /* No comment provided by engineer. */
 "Connecting..."="Connectant...";
 
 /* No comment provided by engineer. */
+"Connection Lost"="S'ha perdut la connexió";
+
+/* No comment provided by engineer. */
 "Connection failed"="Connexió fallida";
+
+/* No comment provided by engineer. */
+"Corrupt File"="Fitxer corrupte";
+
+/* No comment provided by engineer. */
+"DNS Lookup Failed"="Consulta de DNS fallida";
+
+/* No comment provided by engineer. */
+"Data Base Error"="Error a la Base de Dades";
+
+/* No comment provided by engineer. */
+"Data Error"="Error de dades";
+
+/* No comment provided by engineer. */
+"Data Length Exceeds Maximum"="La longitud de les dades supera el màxim";
+
+/* No comment provided by engineer. */
+"Data Not Allowed"="No s'admeten les dades";
+
+/* No comment provided by engineer. */
+"Date Too Late"="Data massa tard";
+
+/* No comment provided by engineer. */
+"Date Too Soon"="Data massa aviat";
+
+/* No comment provided by engineer. */
+"Deferred Accuracy Too Low"="Precisió de diferit massa baixa";
+
+/* No comment provided by engineer. */
+"Deferred Not Updating Location"="No s'actualitza la ubicació diferida";
+
+/* No comment provided by engineer. */
+"Deferred Update Canceled"="Actualització diferida cancel·lada";
+
+/* No comment provided by engineer. */
+"Deferred Update Failed"="Actualització diferida fallida";
+
+/* No comment provided by engineer. */
+"Delete Denied"="Supressió denegada";
+
+/* No comment provided by engineer. */
+"Denied"="Denegat";
+
+/* No comment provided by engineer. */
+"Destination Store Error"="Error al magatzem de destí";
+
+/* No comment provided by engineer. */
+"Download Decoding Failed"="La descodificació ha fallat durant la descarregar";
+
+/* No comment provided by engineer. */
+"Download Decoding Failed To Complete"="La descodificació de la descàrrega no s'ha pogut completar";
+
+/* No comment provided by engineer. */
+"Entity Migration Policy Error"="Error de la política de migració de l'entitat";
 
 /* No comment provided by engineer. */
 "Error"="Error";
 
 /* No comment provided by engineer. */
+"Executable Architecture Mismatch"="L'arquitectura de l'executable no correspon";
+
+/* No comment provided by engineer. */
+"Executable Error"="Error a l'executable";
+
+/* No comment provided by engineer. */
+"Executable Link Error"="Error d'enllaçat de l'executable";
+
+/* No comment provided by engineer. */
+"Executable Load Error"="Error de càrrega de l'executable";
+
+/* No comment provided by engineer. */
+"Executable Not Loadable"="Executable no carregable";
+
+/* No comment provided by engineer. */
+"Executable Runtime Mismatch"="L'entorn d'execució i l'executable no coincideixen";
+
+/* No comment provided by engineer. */
+"External Record Import Error"="Error d'importació de registre extern";
+
+/* No comment provided by engineer. */
+"External Relationship Error"="Error de relació externa";
+
+/* No comment provided by engineer. */
+"Feature Unsupported"="Característica no suportada";
+
+/* No comment provided by engineer. */
+"File Already Exists"="El fitxer ja existeix";
+
+/* No comment provided by engineer. */
+"File Does Not Exist"="El fitxer no existeix";
+
+/* No comment provided by engineer. */
+"File Error"="Error de fitxer";
+
+/* No comment provided by engineer. */
+"File Is Directory"="L'arxiu és un directori";
+
+/* No comment provided by engineer. */
+"File Locking Error"="Error de bloqueig de l'arxiu";
+
+/* No comment provided by engineer. */
+"File Read Error"="Error de lectura de fitxer";
+
+/* No comment provided by engineer. */
+"File Too Large"="Fitxer massa gran";
+
+/* No comment provided by engineer. */
+"File Write Error"="Error d'escritura de fitxer";
+
+/* No comment provided by engineer. */
+"Formatting Error"="Error de format";
+
+/* No comment provided by engineer. */
+"Geocode Canceled"="Geocodificació cancel·lada";
+
+/* No comment provided by engineer. */
+"Geocode Found No Result"="La geocodificació no ha trobat cap resultat";
+
+/* No comment provided by engineer. */
+"Geocode Found Partial Result"="La geocodificació ha trobat un resultat parcial";
+
+/* No comment provided by engineer. */
+"HTTP Too Many Redirects"="Massa redireccions HTTP";
+
+/* No comment provided by engineer. */
+"Heading Failure"="Error determinant el rumb";
+
+/* No comment provided by engineer. */
 "Help"="Ajuda";
+
+/* No comment provided by engineer. */
+"Inapplicable Encoding"="Codificació no aplicable";
+
+/* No comment provided by engineer. */
+"Incompatible Schema"="Esquema incompatible";
+
+/* No comment provided by engineer. */
+"Incompatible Version Hash"="Versió de hash incompatible";
+
+/* No comment provided by engineer. */
+"Incomplete Save"="Desat incomplet";
+
+/* No comment provided by engineer. */
+"Inferred Mapping Model Error"="Error de correspondencia al model inferit";
+
+/* No comment provided by engineer. */
+"International Roaming Off"="Roaming internacional desactivat";
+
+/* No comment provided by engineer. */
+"Invalid Date"="Data invàlida";
+
+/* No comment provided by engineer. */
+"Invalid File Name"="Nom de fitxer invàlid";
+
+/* No comment provided by engineer. */
+"Invalid Type"="Tipus invàlid";
+
+/* No comment provided by engineer. */
+"Location Error"="Error d'ubicació";
+
+/* No comment provided by engineer. */
+"Location Unknown"="Localització desconeguda";
+
+/* No comment provided by engineer. */
+"Locking Error"="Error de bloqueig";
+
+/* No comment provided by engineer. */
+"Merge Error"="Error de combinació";
+
+/* No comment provided by engineer. */
+"Migration Cancelled"="Migració cancel·lada";
+
+/* No comment provided by engineer. */
+"Migration Error"="Error de migració";
+
+/* No comment provided by engineer. */
+"Missing Mandatory Property"="Falta propietat obligatori";
+
+/* No comment provided by engineer. */
+"Missing Mapping Model"="Error de correspondència del model";
+
+/* No comment provided by engineer. */
+"Missing Source Model"="Falta el model original";
+
+/* No comment provided by engineer. */
+"Multiple Validation Errors"="Múltiples errors de validació";
 
 /* No comment provided by engineer. */
 "Network Error"="Error de xarxa";
 
 /* No comment provided by engineer. */
+"No Permissions To Read File"="Sense permís per llegir l'arxiu";
+
+/* No comment provided by engineer. */
+"No Read Permission"="Necessita permís de lectura";
+
+/* No comment provided by engineer. */
+"No Such File"="No hi ha arxiu";
+
+/* No comment provided by engineer. */
+"No Write Permission"="Sense permís d'escriptura";
+
+/* No comment provided by engineer. */
+"Not Connected To Internet"="No connectat a Internet";
+
+/* No comment provided by engineer. */
+"Number Too Large"="Número massa gran";
+
+/* No comment provided by engineer. */
+"Number Too Small"="Número massa petit";
+
+/* No comment provided by engineer. */
 "OK"="OK";
 
 /* No comment provided by engineer. */
+"Operation Error"="Error a l'operació";
+
+/* No comment provided by engineer. */
+"Out Of Space"="Sense espai";
+
+/* No comment provided by engineer. */
+"Pattern Matching Error"="Error de no coincidència amb patró";
+
+/* No comment provided by engineer. */
+"Permission Denied"="Permís denegat";
+
+/* No comment provided by engineer. */
+"Persistent Store Open Error"="Error d'obertura al magatzem persistent";
+
+/* No comment provided by engineer. */
 "Please check your internet connection and try again."="Si us plau, comprova la connexió a internet i torna-ho a provar.";
+
+/* No comment provided by engineer. */
+"Property List Corrupt"="Llista de propietats corrupte";
+
+/* No comment provided by engineer. */
+"Property List Error"="Error de llista de propietat";
+
+/* No comment provided by engineer. */
+"Property List Stream Error"="Error de seqüència de llista de propietats";
+
+/* No comment provided by engineer. */
+"Property List Unknown Version"="Versió desconeguda de llista de propietats";
+
+/* No comment provided by engineer. */
+"Read Only Volume"="Volum només de lectura";
+
+/* No comment provided by engineer. */
+"Redirect To Non Existent Location"="Redirecció a una ubicació inexistent";
+
+/* No comment provided by engineer. */
+"Referential Integrity Error"="Error d'integritat referencial";
+
+/* No comment provided by engineer. */
+"Region Monitoring Denied"="Monitorització de regió denegada";
+
+/* No comment provided by engineer. */
+"Region Monitoring Failure"="Error de monitorització de regió";
+
+/* No comment provided by engineer. */
+"Region Monitoring Response Delayed"="Resposta de la monitorització de regió retrassada";
+
+/* No comment provided by engineer. */
+"Region Monitoring Setup Delayed"="Inici de la monitorizació de regió retrassat";
+
+/* No comment provided by engineer. */
+"Relationship Exceeds Maximum Count"="La relació supera el nombre màxim";
+
+/* No comment provided by engineer. */
+"Relationship Lacks Minimum Count"="La relació no arriba al nombre mínim";
+
+/* No comment provided by engineer. */
+"Request Body Stream Exhausted"="Seqüència del cos de la sol·licitud esgotada";
+
+/* No comment provided by engineer. */
+"Resource Unavailable"="Recurs no disponible";
 
 /* No comment provided by engineer. */
 "Retry"="Tornar a provar";
@@ -37,8 +382,86 @@
 "Retrying..."="Tornant a provar...";
 
 /* No comment provided by engineer. */
+"Save Conflicts"="Conflictes al desar";
+
+/* No comment provided by engineer. */
+"Save Error"="Error de desat";
+
+/* No comment provided by engineer. */
+"Secure Connection Failed"="La connexió segura ha fallat";
+
+/* No comment provided by engineer. */
+"Server Certificate Has Bad Date"="El certificat del servidor té malament la data";
+
+/* No comment provided by engineer. */
+"Server Certificate Has Unknown Root"="Certificat de servidor d'arrel desconeguda";
+
+/* No comment provided by engineer. */
+"Server Certificate Not Yet Valid"="El certificat del servidor no és encara vàlid";
+
+/* No comment provided by engineer. */
+"Server Certificate Untrusted"="El certificat del servidor no és de confiança";
+
+/* No comment provided by engineer. */
+"Source Store Error"="Error al magatzem d'origen";
+
+/* No comment provided by engineer. */
+"String Too Long"="Text massa llarg";
+
+/* No comment provided by engineer. */
+"String Too Short"="Text massa curt";
+
+/* No comment provided by engineer. */
+"Timed Out"="Temps superat";
+
+/* No comment provided by engineer. */
+"Type Mismatch"="Els tipus no coincideixen";
+
+/* No comment provided by engineer. */
+"URL Error"="Error d'URL";
+
+/* No comment provided by engineer. */
+"Unknown Encoding"="Codificació de desconeguda";
+
+/* No comment provided by engineer. */
+"Unknown Error"="Error desconegut";
+
+/* No comment provided by engineer. */
+"Unsupported Request Type"="Tipus de sol·licitud no admès";
+
+/* No comment provided by engineer. */
+"Unsupported Scheme"="Eesquema no suportat";
+
+/* No comment provided by engineer. */
+"Unsupported URL"="URL no suportada";
+
+/* No comment provided by engineer. */
+"User Authentication Required"="Autenticació d'usuari requerida";
+
+/* No comment provided by engineer. */
+"User Cancelled Authentication"="L'usuari ha cancel·lat l'autenticació";
+
+/* No comment provided by engineer. */
+"Validation Error"="Error de validació";
+
+/* No comment provided by engineer. */
+"XPC Connection Error"="Error de connexió XPC";
+
+/* No comment provided by engineer. */
+"XPC Connection Interrupted"="Connexió XPC interrompuda";
+
+/* No comment provided by engineer. */
+"XPC Connection Invalid"="Connexió XPC invàlida";
+
+/* No comment provided by engineer. */
+"XPC Connection Reply Invalid"="Resposta de connexió XPC invàlida";
+
+/* No comment provided by engineer. */
 "YES"="SI";
 
 /* No comment provided by engineer. */
 "You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi"="A l'iPhone, pots ajustar la configuració de xarxa mòbil a Configuració > General > Dades Mòbils. A l'iPad es troba a Configuració > Dades Mòbils\n\nPer localitzar xarxes Wi-Fi properes, ves a Configuració > Wi-Fi";
+
+/* No comment provided by engineer. */
+"Zero Byte Resource"="Recurs de zero bytes";
 

@@ -1,34 +1,379 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: es
-// Date: Tue Feb 19 12:01:25 2013
+// Date: Sun Mar 10 19:18:09 2013
+
+/* No comment provided by engineer. */
+"Access Information Invalid"="Información de acceso inválida";
+
+/* No comment provided by engineer. */
+"Account Already Exists"="La cuenta ya existe";
+
+/* No comment provided by engineer. */
+"Account Error"="Error de cuenta";
+
+/* No comment provided by engineer. */
+"Account Missing Required Property"="Falta una propiedad necesaria de la cuenta";
+
+/* No comment provided by engineer. */
+"Account Not Found"="Cuenta no encontrada";
+
+/* No comment provided by engineer. */
+"Account Type Invalid"="Tipo de cuenta inválido";
+
+/* No comment provided by engineer. */
+"Bad Server Response"="Respuesta del servidor inválida";
+
+/* No comment provided by engineer. */
+"Bad URL"="URL inválida";
+
+/* No comment provided by engineer. */
+"Call Is Active"="Llamada activa";
 
 /* No comment provided by engineer. */
 "Cancel"="Cancelar";
 
 /* No comment provided by engineer. */
+"Cancelled"="Cancelado";
+
+/* No comment provided by engineer. */
+"Cannot Close File"="No se puede cerrar el archivo";
+
+/* No comment provided by engineer. */
+"Cannot Connect To Host"="No se puede conectar al host";
+
+/* No comment provided by engineer. */
+"Cannot Create File"="No se puede crear el archivo";
+
+/* No comment provided by engineer. */
+"Cannot Decode Content Data"="No se pueden descodificar los datos del contenido";
+
+/* No comment provided by engineer. */
+"Cannot Decode Raw Data"="No se pueden descodificar los datos";
+
+/* No comment provided by engineer. */
+"Cannot Filter Deferred Distance"="No se puede filtrar la distancia diferida";
+
+/* No comment provided by engineer. */
+"Cannot Find Host"="No se puede encontrar el host";
+
+/* No comment provided by engineer. */
+"Cannot Load From Network"="No se puede cargar de la red";
+
+/* No comment provided by engineer. */
+"Cannot Move File"="No se puede mover el archivo";
+
+/* No comment provided by engineer. */
+"Cannot Open File"="No se puede abrir el archivo";
+
+/* No comment provided by engineer. */
+"Cannot Parse Response"="No puede analizar la respuesta";
+
+/* No comment provided by engineer. */
+"Cannot Remove File"="No se puede borrar el archivo";
+
+/* No comment provided by engineer. */
+"Cannot Write To File"="No se puede escribir en el archivo";
+
+/* No comment provided by engineer. */
+"Change URL"="Cambia la URL";
+
+/* No comment provided by engineer. */
+"Client Certificate Rejected"="Certificado de cliente rechazado";
+
+/* No comment provided by engineer. */
+"Client Certificate Required"="Necesario certificado de cliente";
+
+/* No comment provided by engineer. */
 "Connect"="Conectar";
+
+/* No comment provided by engineer. */
+"Connect to"="Conectar con";
 
 /* No comment provided by engineer. */
 "Connecting..."="Conectando...";
 
 /* No comment provided by engineer. */
+"Connection Lost"="Conexión perdida";
+
+/* No comment provided by engineer. */
 "Connection failed"="Conexión fallida";
+
+/* No comment provided by engineer. */
+"Corrupt File"="Archivo corrupto";
+
+/* No comment provided by engineer. */
+"DNS Lookup Failed"="Búsqueda DNS fallida";
+
+/* No comment provided by engineer. */
+"Data Base Error"="Error de Base de Datos";
+
+/* No comment provided by engineer. */
+"Data Error"="Error de datos";
+
+/* No comment provided by engineer. */
+"Data Length Exceeds Maximum"="La longitud de los datos excede el máximo";
+
+/* No comment provided by engineer. */
+"Data Not Allowed"="Datos no permitidos";
+
+/* No comment provided by engineer. */
+"Date Too Late"="Fecha demasiado tarde";
+
+/* No comment provided by engineer. */
+"Date Too Soon"="Fecha demasiado pronto";
+
+/* No comment provided by engineer. */
+"Deferred Accuracy Too Low"="Precisión de diferido demasiado baja";
+
+/* No comment provided by engineer. */
+"Deferred Not Updating Location"="No se actualiza ubicación diferida";
+
+/* No comment provided by engineer. */
+"Deferred Update Canceled"="Actualización diferida cancelada";
+
+/* No comment provided by engineer. */
+"Deferred Update Failed"="Actualización diferida fallida";
+
+/* No comment provided by engineer. */
+"Delete Denied"="Eliminación denegada";
+
+/* No comment provided by engineer. */
+"Denied"="Denegado";
+
+/* No comment provided by engineer. */
+"Destination Store Error"="Error en el almacén de destino";
+
+/* No comment provided by engineer. */
+"Download Decoding Failed"="La descodificación ha fallado durante la descarga";
+
+/* No comment provided by engineer. */
+"Download Decoding Failed To Complete"="El descodificación de la descarga no se ha podido completar";
+
+/* No comment provided by engineer. */
+"Entity Migration Policy Error"="Error de política de migración de entidad";
 
 /* No comment provided by engineer. */
 "Error"="Error";
 
 /* No comment provided by engineer. */
+"Executable Architecture Mismatch"="La arquitectura del ejecutable no coincide";
+
+/* No comment provided by engineer. */
+"Executable Error"="Error en el ejecutable";
+
+/* No comment provided by engineer. */
+"Executable Link Error"="Error de enlazado del ejecutable";
+
+/* No comment provided by engineer. */
+"Executable Load Error"="Error de carga del ejecutable";
+
+/* No comment provided by engineer. */
+"Executable Not Loadable"="Ejecutable no cargable";
+
+/* No comment provided by engineer. */
+"Executable Runtime Mismatch"="El entorno de ejecución i el ejecutable no coinciden";
+
+/* No comment provided by engineer. */
+"External Record Import Error"="Error de importación de registro externo";
+
+/* No comment provided by engineer. */
+"External Relationship Error"="Error en relación externa";
+
+/* No comment provided by engineer. */
+"Feature Unsupported"="Característica no soportada";
+
+/* No comment provided by engineer. */
+"File Already Exists"="Ya existe el archivo";
+
+/* No comment provided by engineer. */
+"File Does Not Exist"="El archivo no existe";
+
+/* No comment provided by engineer. */
+"File Error"="Error de archivo";
+
+/* No comment provided by engineer. */
+"File Is Directory"="El archivo es un directorio";
+
+/* No comment provided by engineer. */
+"File Locking Error"="Error de bloqueo del archivo";
+
+/* No comment provided by engineer. */
+"File Read Error"="Error de lectura de archivo";
+
+/* No comment provided by engineer. */
+"File Too Large"="Archivo demasiado grande";
+
+/* No comment provided by engineer. */
+"File Write Error"="Error de escritura de archivo";
+
+/* No comment provided by engineer. */
+"Formatting Error"="Error de formato";
+
+/* No comment provided by engineer. */
+"Geocode Canceled"="Geocodificación cancelada";
+
+/* No comment provided by engineer. */
+"Geocode Found No Result"="La geocodificación no encontró ningún resultado";
+
+/* No comment provided by engineer. */
+"Geocode Found Partial Result"="La geocodificación encontró un resultado parcial";
+
+/* No comment provided by engineer. */
+"HTTP Too Many Redirects"="Demasiados redireccionamientos HTTP";
+
+/* No comment provided by engineer. */
+"Heading Failure"="Error determinando el rumbo";
+
+/* No comment provided by engineer. */
 "Help"="Ayuda";
+
+/* No comment provided by engineer. */
+"Inapplicable Encoding"="Codificación no aplicable";
+
+/* No comment provided by engineer. */
+"Incompatible Schema"="Esquema incompatible";
+
+/* No comment provided by engineer. */
+"Incompatible Version Hash"="Versión de hash incompatible";
+
+/* No comment provided by engineer. */
+"Incomplete Save"="Guardado incompleto";
+
+/* No comment provided by engineer. */
+"Inferred Mapping Model Error"="Error de correspondencia en el modelo inferido";
+
+/* No comment provided by engineer. */
+"International Roaming Off"="Roaming internacional desactivado";
+
+/* No comment provided by engineer. */
+"Invalid Date"="Fecha inválida";
+
+/* No comment provided by engineer. */
+"Invalid File Name"="Nombre de archivo no válido";
+
+/* No comment provided by engineer. */
+"Invalid Type"="Tipo inválido";
+
+/* No comment provided by engineer. */
+"Location Error"="Error de ubicación";
+
+/* No comment provided by engineer. */
+"Location Unknown"="Ubicación desconocida";
+
+/* No comment provided by engineer. */
+"Locking Error"="Error de bloqueo";
+
+/* No comment provided by engineer. */
+"Merge Error"="Combinación fallida";
+
+/* No comment provided by engineer. */
+"Migration Cancelled"="Migración cancelada";
+
+/* No comment provided by engineer. */
+"Migration Error"="Error de migración";
+
+/* No comment provided by engineer. */
+"Missing Mandatory Property"="Falta propiedad obligatoria";
+
+/* No comment provided by engineer. */
+"Missing Mapping Model"="Fallo de correspondencia del modelo";
+
+/* No comment provided by engineer. */
+"Missing Source Model"="Falta el modelo original";
+
+/* No comment provided by engineer. */
+"Multiple Validation Errors"="Varios errores de validación";
 
 /* No comment provided by engineer. */
 "Network Error"="Error de red";
 
 /* No comment provided by engineer. */
+"No Permissions To Read File"="Sin permisos para leer el archivo";
+
+/* No comment provided by engineer. */
+"No Read Permission"="No tiene permiso de lectura";
+
+/* No comment provided by engineer. */
+"No Such File"="No hay tal archivo";
+
+/* No comment provided by engineer. */
+"No Write Permission"="No tiene permiso de escritura";
+
+/* No comment provided by engineer. */
+"Not Connected To Internet"="No conectado a Internet";
+
+/* No comment provided by engineer. */
+"Number Too Large"="Número demasiado grande";
+
+/* No comment provided by engineer. */
+"Number Too Small"="Número demasiado pequeño";
+
+/* No comment provided by engineer. */
 "OK"="OK";
 
 /* No comment provided by engineer. */
+"Operation Error"="Error en la operación";
+
+/* No comment provided by engineer. */
+"Out Of Space"="Sin espacio";
+
+/* No comment provided by engineer. */
+"Pattern Matching Error"="Error de no coincidencia con patrón";
+
+/* No comment provided by engineer. */
+"Permission Denied"="Permiso denegado";
+
+/* No comment provided by engineer. */
+"Persistent Store Open Error"="Error de apertura en almacenamiento persistente";
+
+/* No comment provided by engineer. */
 "Please check your internet connection and try again."="Por favor, compruebe su conexión a internet e inténtelo de nuevo.";
+
+/* No comment provided by engineer. */
+"Property List Corrupt"="Lista de propiedades corrupta";
+
+/* No comment provided by engineer. */
+"Property List Error"="Error en lista de propiedades";
+
+/* No comment provided by engineer. */
+"Property List Stream Error"="Error de secuencia de lista de propiedades";
+
+/* No comment provided by engineer. */
+"Property List Unknown Version"="Versión desconocida de lista de propiedades";
+
+/* No comment provided by engineer. */
+"Read Only Volume"="Volumen solo de lectura";
+
+/* No comment provided by engineer. */
+"Redirect To Non Existent Location"="Redirección a una ubicación inexistente";
+
+/* No comment provided by engineer. */
+"Referential Integrity Error"="Error de integridad referencial";
+
+/* No comment provided by engineer. */
+"Region Monitoring Denied"="Monitorización de región denegada";
+
+/* No comment provided by engineer. */
+"Region Monitoring Failure"="Error de monitorización de región";
+
+/* No comment provided by engineer. */
+"Region Monitoring Response Delayed"="Respuesta de la monitorización de región retrasada";
+
+/* No comment provided by engineer. */
+"Region Monitoring Setup Delayed"="Inicio de la monitorización de región retrasado";
+
+/* No comment provided by engineer. */
+"Relationship Exceeds Maximum Count"="La relación supera la cantidad máxima";
+
+/* No comment provided by engineer. */
+"Relationship Lacks Minimum Count"="La relación no llega a la cantidad mínima";
+
+/* No comment provided by engineer. */
+"Request Body Stream Exhausted"="Secuencia del cuerpo de la solicitud agotada";
+
+/* No comment provided by engineer. */
+"Resource Unavailable"="Recurso no disponible";
 
 /* No comment provided by engineer. */
 "Retry"="Reintentar";
@@ -37,8 +382,86 @@
 "Retrying..."="Reintentando...";
 
 /* No comment provided by engineer. */
+"Save Conflicts"="Conflictos al guardar";
+
+/* No comment provided by engineer. */
+"Save Error"="Error de guardado";
+
+/* No comment provided by engineer. */
+"Secure Connection Failed"="Fallo en la conexión segura";
+
+/* No comment provided by engineer. */
+"Server Certificate Has Bad Date"="El certificado del servidor tiene mal la fecha";
+
+/* No comment provided by engineer. */
+"Server Certificate Has Unknown Root"="Reaíz de certificado de servidor desconocida";
+
+/* No comment provided by engineer. */
+"Server Certificate Not Yet Valid"="El certificado del servidor no es todavía válido";
+
+/* No comment provided by engineer. */
+"Server Certificate Untrusted"="El certificado del servidor no es de confianza";
+
+/* No comment provided by engineer. */
+"Source Store Error"="Error en el almacén de origen";
+
+/* No comment provided by engineer. */
+"String Too Long"="Texto demasiado largo";
+
+/* No comment provided by engineer. */
+"String Too Short"="Texto demasiado corto";
+
+/* No comment provided by engineer. */
+"Timed Out"="Tiempo agotado";
+
+/* No comment provided by engineer. */
+"Type Mismatch"="Los tipos no coinciden";
+
+/* No comment provided by engineer. */
+"URL Error"="Error de URL";
+
+/* No comment provided by engineer. */
+"Unknown Encoding"="Codificación desconocida";
+
+/* No comment provided by engineer. */
+"Unknown Error"="Error desconocido";
+
+/* No comment provided by engineer. */
+"Unsupported Request Type"="Tipo de petición no soportado";
+
+/* No comment provided by engineer. */
+"Unsupported Scheme"="Esquema no suportat";
+
+/* No comment provided by engineer. */
+"Unsupported URL"="URL no soportada";
+
+/* No comment provided by engineer. */
+"User Authentication Required"="Necesaria autenticación de usuario";
+
+/* No comment provided by engineer. */
+"User Cancelled Authentication"="Autenticación cancelada por el usuario";
+
+/* No comment provided by engineer. */
+"Validation Error"="Error de validación";
+
+/* No comment provided by engineer. */
+"XPC Connection Error"="Error de conexión XPC";
+
+/* No comment provided by engineer. */
+"XPC Connection Interrupted"="Conexión XPC interrumpida";
+
+/* No comment provided by engineer. */
+"XPC Connection Invalid"="Conexión XPC inválida";
+
+/* No comment provided by engineer. */
+"XPC Connection Reply Invalid"="Respuesta de conexión XPC inválida";
+
+/* No comment provided by engineer. */
 "YES"="SÍ";
 
 /* No comment provided by engineer. */
 "You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi"="Puedes ajustar la configuración de la red móvil de iPhone en Ajustes > General > Datos Móviles. En iPad la configuración se encuentra en Ajustes > Datos Móviles\n\nPara localizar redes Wi-Fi cercanas, pulsa Ajustes > Wi-Fi";
+
+/* No comment provided by engineer. */
+"Zero Byte Resource"="Recurso de cero bytes";
 

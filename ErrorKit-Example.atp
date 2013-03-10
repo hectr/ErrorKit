@@ -1,87 +1,774 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- AppTranslator: http://inqbarna.com/m-news/190-apptranslator-utility-for-mac.html -->
 <!DOCTYPE AppTranslator>
 <project platform="iOS" default-lang="en" name="ErrorKit-Example">
+ <entry key="Access Information Invalid" comment="No comment provided by engineer.">
+  <translation text="Access Information Invalid" lang="en"/>
+  <translation text="Información de acceso inválida" lang="es"/>
+  <translation text="Informació d'accés invàlida" lang="ca"/>
+ </entry>
+ <entry key="Account Already Exists" comment="No comment provided by engineer.">
+  <translation text="Account Already Exists" lang="en"/>
+  <translation text="La cuenta ya existe" lang="es"/>
+  <translation text="El compte ja existeix" lang="ca"/>
+ </entry>
+ <entry key="Account Error" comment="No comment provided by engineer.">
+  <translation text="Account Error" lang="en"/>
+  <translation text="Error de cuenta" lang="es"/>
+  <translation text="Error de compte" lang="ca"/>
+ </entry>
+ <entry key="Account Missing Required Property" comment="No comment provided by engineer.">
+  <translation text="Account Missing Required Property" lang="en"/>
+  <translation text="Falta una propiedad necesaria de la cuenta" lang="es"/>
+  <translation text="Falta propietat necessària del compte" lang="ca"/>
+ </entry>
+ <entry key="Account Not Found" comment="No comment provided by engineer.">
+  <translation text="Account Not Found" lang="en"/>
+  <translation text="Cuenta no encontrada" lang="es"/>
+  <translation text="Compte no trobat" lang="ca"/>
+ </entry>
+ <entry key="Account Type Invalid" comment="No comment provided by engineer.">
+  <translation text="Account Type Invalid" lang="en"/>
+  <translation text="Tipo de cuenta inválido" lang="es"/>
+  <translation text="Tipus de compte invàlid" lang="ca"/>
+ </entry>
+ <entry key="Bad Server Response" comment="No comment provided by engineer.">
+  <translation text="Bad Server Response" lang="en"/>
+  <translation text="Respuesta del servidor inválida" lang="es"/>
+  <translation text="Resposta de servidor invàlida" lang="ca"/>
+ </entry>
+ <entry key="Bad URL" comment="No comment provided by engineer.">
+  <translation text="Bad URL" lang="en"/>
+  <translation text="URL inválida" lang="es"/>
+  <translation text="URL invàlida" lang="ca"/>
+ </entry>
+ <entry key="Call Is Active" comment="No comment provided by engineer.">
+  <translation text="Call Is Active" lang="en"/>
+  <translation text="Llamada activa" lang="es"/>
+  <translation text="Trucada activa" lang="ca"/>
+ </entry>
  <entry key="Cancel" comment="No comment provided by engineer.">
   <translation text="Cancel" lang="en"/>
   <translation text="Cancelar" lang="es"/>
   <translation text="Cancel·lar" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (88)</occurrence>
+ </entry>
+ <entry key="Cancelled" comment="No comment provided by engineer.">
+  <translation text="Cancelled" lang="en"/>
+  <translation text="Cancelado" lang="es"/>
+  <translation text="Cancel·lat" lang="ca"/>
+ </entry>
+ <entry key="Cannot Close File" comment="No comment provided by engineer.">
+  <translation text="Cannot Close File" lang="en"/>
+  <translation text="No se puede cerrar el archivo" lang="es"/>
+  <translation text="No es pot tancar el fitxer" lang="ca"/>
+ </entry>
+ <entry key="Cannot Connect To Host" comment="No comment provided by engineer.">
+  <translation text="Cannot Connect To Host" lang="en"/>
+  <translation text="No se puede conectar al host" lang="es"/>
+  <translation text="No es pot connectar al host" lang="ca"/>
+ </entry>
+ <entry key="Cannot Create File" comment="No comment provided by engineer.">
+  <translation text="Cannot Create File" lang="en"/>
+  <translation text="No se puede crear el archivo" lang="es"/>
+  <translation text="No es pot crear el fitxer" lang="ca"/>
+ </entry>
+ <entry key="Cannot Decode Content Data" comment="No comment provided by engineer.">
+  <translation text="Cannot Decode Content Data" lang="en"/>
+  <translation text="No se pueden descodificar los datos del contenido" lang="es"/>
+  <translation text="No es poden descodificar les dades del contingut" lang="ca"/>
+ </entry>
+ <entry key="Cannot Decode Raw Data" comment="No comment provided by engineer.">
+  <translation text="Cannot Decode Raw Data" lang="en"/>
+  <translation text="No se pueden descodificar los datos" lang="es"/>
+  <translation text="No es poden descodificar les dades" lang="ca"/>
+ </entry>
+ <entry key="Cannot Filter Deferred Distance" comment="No comment provided by engineer.">
+  <translation text="Cannot Filter Deferred Distance" lang="en"/>
+  <translation text="No se puede filtrar la distancia diferida" lang="es"/>
+  <translation text="No es pot filtrar distància diferida" lang="ca"/>
+ </entry>
+ <entry key="Cannot Find Host" comment="No comment provided by engineer.">
+  <translation text="Cannot Find Host" lang="en"/>
+  <translation text="No se puede encontrar el host" lang="es"/>
+  <translation text="No es pot trobar el host" lang="ca"/>
+ </entry>
+ <entry key="Cannot Load From Network" comment="No comment provided by engineer.">
+  <translation text="Cannot Load From Network" lang="en"/>
+  <translation text="No se puede cargar de la red" lang="es"/>
+  <translation text="No es pot carregar des de la xarxa" lang="ca"/>
+ </entry>
+ <entry key="Cannot Move File" comment="No comment provided by engineer.">
+  <translation text="Cannot Move File" lang="en"/>
+  <translation text="No se puede mover el archivo" lang="es"/>
+  <translation text="No es pot moure el fitxer" lang="ca"/>
+ </entry>
+ <entry key="Cannot Open File" comment="No comment provided by engineer.">
+  <translation text="Cannot Open File" lang="en"/>
+  <translation text="No se puede abrir el archivo" lang="es"/>
+  <translation text="No es pot obrir el fitxer" lang="ca"/>
+ </entry>
+ <entry key="Cannot Parse Response" comment="No comment provided by engineer.">
+  <translation text="Cannot Parse Response" lang="en"/>
+  <translation text="No puede analizar la respuesta" lang="es"/>
+  <translation text="No es pot analitzar la resposta" lang="ca"/>
+ </entry>
+ <entry key="Cannot Remove File" comment="No comment provided by engineer.">
+  <translation text="Cannot Remove File" lang="en"/>
+  <translation text="No se puede borrar el archivo" lang="es"/>
+  <translation text="No es pot suprimir el fitxer" lang="ca"/>
+ </entry>
+ <entry key="Cannot Write To File" comment="No comment provided by engineer.">
+  <translation text="Cannot Write To File" lang="en"/>
+  <translation text="No se puede escribir en el archivo" lang="es"/>
+  <translation text="No es pot escriure al fitxer" lang="ca"/>
+ </entry>
+ <entry key="Change URL" comment="No comment provided by engineer.">
+  <translation text="Change URL" lang="en"/>
+  <translation text="Cambia la URL" lang="es"/>
+  <translation text="Canvia l'URL" lang="ca"/>
+ </entry>
+ <entry key="Client Certificate Rejected" comment="No comment provided by engineer.">
+  <translation text="Client Certificate Rejected" lang="en"/>
+  <translation text="Certificado de cliente rechazado" lang="es"/>
+  <translation text="Certificat de client rebutjat" lang="ca"/>
+ </entry>
+ <entry key="Client Certificate Required" comment="No comment provided by engineer.">
+  <translation text="Client Certificate Required" lang="en"/>
+  <translation text="Necesario certificado de cliente" lang="es"/>
+  <translation text="Necessari certificat de client" lang="ca"/>
  </entry>
  <entry key="Connect" comment="No comment provided by engineer.">
   <translation text="Connect" lang="en"/>
   <translation text="Conectar" lang="es"/>
   <translation text="Connectar" lang="ca"/>
-  <occurrence>MRViewController.m (50)</occurrence>
-  <occurrence>MRViewController.m (64)</occurrence>
-  <occurrence>MRViewController.m (120)</occurrence>
+ </entry>
+ <entry key="Connect to" comment="No comment provided by engineer.">
+  <translation text="Connect to" lang="en"/>
+  <translation text="Conectar con" lang="es"/>
+  <translation text="Connectar-se a" lang="ca"/>
  </entry>
  <entry key="Connecting..." comment="No comment provided by engineer.">
   <translation text="Connecting..." lang="en"/>
   <translation text="Conectando..." lang="es"/>
   <translation text="Connectant..." lang="ca"/>
-  <occurrence>MRViewController.m (50)</occurrence>
+ </entry>
+ <entry key="Connection Lost" comment="No comment provided by engineer.">
+  <translation text="Connection Lost" lang="en"/>
+  <translation text="Conexión perdida" lang="es"/>
+  <translation text="S'ha perdut la connexió" lang="ca"/>
  </entry>
  <entry key="Connection failed" comment="No comment provided by engineer.">
   <translation text="Connection failed" lang="en"/>
   <translation text="Conexión fallida" lang="es"/>
   <translation text="Connexió fallida" lang="ca"/>
-  <occurrence>MRViewController.m (64)</occurrence>
+ </entry>
+ <entry key="Corrupt File" comment="No comment provided by engineer.">
+  <translation text="Corrupt File" lang="en"/>
+  <translation text="Archivo corrupto" lang="es"/>
+  <translation text="Fitxer corrupte" lang="ca"/>
+ </entry>
+ <entry key="DNS Lookup Failed" comment="No comment provided by engineer.">
+  <translation text="DNS Lookup Failed" lang="en"/>
+  <translation text="Búsqueda DNS fallida" lang="es"/>
+  <translation text="Consulta de DNS fallida" lang="ca"/>
+ </entry>
+ <entry key="Data Base Error" comment="No comment provided by engineer.">
+  <translation text="Data Base Error" lang="en"/>
+  <translation text="Error de Base de Datos" lang="es"/>
+  <translation text="Error a la Base de Dades" lang="ca"/>
+ </entry>
+ <entry key="Data Error" comment="No comment provided by engineer.">
+  <translation text="Data Error" lang="en"/>
+  <translation text="Error de datos" lang="es"/>
+  <translation text="Error de dades" lang="ca"/>
+ </entry>
+ <entry key="Data Length Exceeds Maximum" comment="No comment provided by engineer.">
+  <translation text="Data Length Exceeds Maximum" lang="en"/>
+  <translation text="La longitud de los datos excede el máximo" lang="es"/>
+  <translation text="La longitud de les dades supera el màxim" lang="ca"/>
+ </entry>
+ <entry key="Data Not Allowed" comment="No comment provided by engineer.">
+  <translation text="Data Not Allowed" lang="en"/>
+  <translation text="Datos no permitidos" lang="es"/>
+  <translation text="No s'admeten les dades" lang="ca"/>
+ </entry>
+ <entry key="Date Too Late" comment="No comment provided by engineer.">
+  <translation text="Date Too Late" lang="en"/>
+  <translation text="Fecha demasiado tarde" lang="es"/>
+  <translation text="Data massa tard" lang="ca"/>
+ </entry>
+ <entry key="Date Too Soon" comment="No comment provided by engineer.">
+  <translation text="Date Too Soon" lang="en"/>
+  <translation text="Fecha demasiado pronto" lang="es"/>
+  <translation text="Data massa aviat" lang="ca"/>
+ </entry>
+ <entry key="Deferred Accuracy Too Low" comment="No comment provided by engineer.">
+  <translation text="Deferred Accuracy Too Low" lang="en"/>
+  <translation text="Precisión de diferido demasiado baja" lang="es"/>
+  <translation text="Precisió de diferit massa baixa" lang="ca"/>
+ </entry>
+ <entry key="Deferred Not Updating Location" comment="No comment provided by engineer.">
+  <translation text="Deferred Not Updating Location" lang="en"/>
+  <translation text="No se actualiza ubicación diferida" lang="es"/>
+  <translation text="No s'actualitza la ubicació diferida" lang="ca"/>
+ </entry>
+ <entry key="Deferred Update Canceled" comment="No comment provided by engineer.">
+  <translation text="Deferred Update Canceled" lang="en"/>
+  <translation text="Actualización diferida cancelada" lang="es"/>
+  <translation text="Actualització diferida cancel·lada" lang="ca"/>
+ </entry>
+ <entry key="Deferred Update Failed" comment="No comment provided by engineer.">
+  <translation text="Deferred Update Failed" lang="en"/>
+  <translation text="Actualización diferida fallida" lang="es"/>
+  <translation text="Actualització diferida fallida" lang="ca"/>
+ </entry>
+ <entry key="Delete Denied" comment="No comment provided by engineer.">
+  <translation text="Delete Denied" lang="en"/>
+  <translation text="Eliminación denegada" lang="es"/>
+  <translation text="Supressió denegada" lang="ca"/>
+ </entry>
+ <entry key="Denied" comment="No comment provided by engineer.">
+  <translation text="Denied" lang="en"/>
+  <translation text="Denegado" lang="es"/>
+  <translation text="Denegat" lang="ca"/>
+ </entry>
+ <entry key="Destination Store Error" comment="No comment provided by engineer.">
+  <translation text="Destination Store Error" lang="en"/>
+  <translation text="Error en el almacén de destino" lang="es"/>
+  <translation text="Error al magatzem de destí" lang="ca"/>
+ </entry>
+ <entry key="Download Decoding Failed" comment="No comment provided by engineer.">
+  <translation text="Download Decoding Failed" lang="en"/>
+  <translation text="La descodificación ha fallado durante la descarga" lang="es"/>
+  <translation text="La descodificació ha fallat durant la descarregar" lang="ca"/>
+ </entry>
+ <entry key="Download Decoding Failed To Complete" comment="No comment provided by engineer.">
+  <translation text="Download Decoding Failed To Complete" lang="en"/>
+  <translation text="El descodificación de la descarga no se ha podido completar" lang="es"/>
+  <translation text="La descodificació de la descàrrega no s'ha pogut completar" lang="ca"/>
+ </entry>
+ <entry key="Entity Migration Policy Error" comment="No comment provided by engineer.">
+  <translation text="Entity Migration Policy Error" lang="en"/>
+  <translation text="Error de política de migración de entidad" lang="es"/>
+  <translation text="Error de la política de migració de l'entitat" lang="ca"/>
  </entry>
  <entry key="Error" comment="No comment provided by engineer.">
   <translation text="Error" lang="en"/>
   <translation text="Error" lang="es"/>
   <translation text="Error" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (62)</occurrence>
+ </entry>
+ <entry key="Executable Architecture Mismatch" comment="No comment provided by engineer.">
+  <translation text="Executable Architecture Mismatch" lang="en"/>
+  <translation text="La arquitectura del ejecutable no coincide" lang="es"/>
+  <translation text="L'arquitectura de l'executable no correspon" lang="ca"/>
+ </entry>
+ <entry key="Executable Error" comment="No comment provided by engineer.">
+  <translation text="Executable Error" lang="en"/>
+  <translation text="Error en el ejecutable" lang="es"/>
+  <translation text="Error a l'executable" lang="ca"/>
+ </entry>
+ <entry key="Executable Link Error" comment="No comment provided by engineer.">
+  <translation text="Executable Link Error" lang="en"/>
+  <translation text="Error de enlazado del ejecutable" lang="es"/>
+  <translation text="Error d'enllaçat de l'executable" lang="ca"/>
+ </entry>
+ <entry key="Executable Load Error" comment="No comment provided by engineer.">
+  <translation text="Executable Load Error" lang="en"/>
+  <translation text="Error de carga del ejecutable" lang="es"/>
+  <translation text="Error de càrrega de l'executable" lang="ca"/>
+ </entry>
+ <entry key="Executable Not Loadable" comment="No comment provided by engineer.">
+  <translation text="Executable Not Loadable" lang="en"/>
+  <translation text="Ejecutable no cargable" lang="es"/>
+  <translation text="Executable no carregable" lang="ca"/>
+ </entry>
+ <entry key="Executable Runtime Mismatch" comment="No comment provided by engineer.">
+  <translation text="Executable Runtime Mismatch" lang="en"/>
+  <translation text="El entorno de ejecución i el ejecutable no coinciden" lang="es"/>
+  <translation text="L'entorn d'execució i l'executable no coincideixen" lang="ca"/>
+ </entry>
+ <entry key="External Record Import Error" comment="No comment provided by engineer.">
+  <translation text="External Record Import Error" lang="en"/>
+  <translation text="Error de importación de registro externo" lang="es"/>
+  <translation text="Error d'importació de registre extern" lang="ca"/>
+ </entry>
+ <entry key="External Relationship Error" comment="No comment provided by engineer.">
+  <translation text="External Relationship Error" lang="en"/>
+  <translation text="Error en relación externa" lang="es"/>
+  <translation text="Error de relació externa" lang="ca"/>
+ </entry>
+ <entry key="Feature Unsupported" comment="No comment provided by engineer.">
+  <translation text="Feature Unsupported" lang="en"/>
+  <translation text="Característica no soportada" lang="es"/>
+  <translation text="Característica no suportada" lang="ca"/>
+ </entry>
+ <entry key="File Already Exists" comment="No comment provided by engineer.">
+  <translation text="File Already Exists" lang="en"/>
+  <translation text="Ya existe el archivo" lang="es"/>
+  <translation text="El fitxer ja existeix" lang="ca"/>
+ </entry>
+ <entry key="File Does Not Exist" comment="No comment provided by engineer.">
+  <translation text="File Does Not Exist" lang="en"/>
+  <translation text="El archivo no existe" lang="es"/>
+  <translation text="El fitxer no existeix" lang="ca"/>
+ </entry>
+ <entry key="File Error" comment="No comment provided by engineer.">
+  <translation text="File Error" lang="en"/>
+  <translation text="Error de archivo" lang="es"/>
+  <translation text="Error de fitxer" lang="ca"/>
+ </entry>
+ <entry key="File Is Directory" comment="No comment provided by engineer.">
+  <translation text="File Is Directory" lang="en"/>
+  <translation text="El archivo es un directorio" lang="es"/>
+  <translation text="L'arxiu és un directori" lang="ca"/>
+ </entry>
+ <entry key="File Locking Error" comment="No comment provided by engineer.">
+  <translation text="File Locking Error" lang="en"/>
+  <translation text="Error de bloqueo del archivo" lang="es"/>
+  <translation text="Error de bloqueig de l'arxiu" lang="ca"/>
+ </entry>
+ <entry key="File Read Error" comment="No comment provided by engineer.">
+  <translation text="File Read Error" lang="en"/>
+  <translation text="Error de lectura de archivo" lang="es"/>
+  <translation text="Error de lectura de fitxer" lang="ca"/>
+ </entry>
+ <entry key="File Too Large" comment="No comment provided by engineer.">
+  <translation text="File Too Large" lang="en"/>
+  <translation text="Archivo demasiado grande" lang="es"/>
+  <translation text="Fitxer massa gran" lang="ca"/>
+ </entry>
+ <entry key="File Write Error" comment="No comment provided by engineer.">
+  <translation text="File Write Error" lang="en"/>
+  <translation text="Error de escritura de archivo" lang="es"/>
+  <translation text="Error d'escritura de fitxer" lang="ca"/>
+ </entry>
+ <entry key="Formatting Error" comment="No comment provided by engineer.">
+  <translation text="Formatting Error" lang="en"/>
+  <translation text="Error de formato" lang="es"/>
+  <translation text="Error de format" lang="ca"/>
+ </entry>
+ <entry key="Geocode Canceled" comment="No comment provided by engineer.">
+  <translation text="Geocode Canceled" lang="en"/>
+  <translation text="Geocodificación cancelada" lang="es"/>
+  <translation text="Geocodificació cancel·lada" lang="ca"/>
+ </entry>
+ <entry key="Geocode Found No Result" comment="No comment provided by engineer.">
+  <translation text="Geocode Found No Result" lang="en"/>
+  <translation text="La geocodificación no encontró ningún resultado" lang="es"/>
+  <translation text="La geocodificació no ha trobat cap resultat" lang="ca"/>
+ </entry>
+ <entry key="Geocode Found Partial Result" comment="No comment provided by engineer.">
+  <translation text="Geocode Found Partial Result" lang="en"/>
+  <translation text="La geocodificación encontró un resultado parcial" lang="es"/>
+  <translation text="La geocodificació ha trobat un resultat parcial" lang="ca"/>
+ </entry>
+ <entry key="HTTP Too Many Redirects" comment="No comment provided by engineer.">
+  <translation text="HTTP Too Many Redirects" lang="en"/>
+  <translation text="Demasiados redireccionamientos HTTP" lang="es"/>
+  <translation text="Massa redireccions HTTP" lang="ca"/>
+ </entry>
+ <entry key="Heading Failure" comment="No comment provided by engineer.">
+  <translation text="Heading Failure" lang="en"/>
+  <translation text="Error determinando el rumbo" lang="es"/>
+  <translation text="Error determinant el rumb" lang="ca"/>
  </entry>
  <entry key="Help" comment="No comment provided by engineer.">
   <translation text="Help" lang="en"/>
   <translation text="Ayuda" lang="es"/>
   <translation text="Ajuda" lang="ca"/>
-  <occurrence>UIAlertView+ErrorKit.m (64)</occurrence>
-  <occurrence>UIAlertView+ErrorKit.m (197)</occurrence>
+ </entry>
+ <entry key="Inapplicable Encoding" comment="No comment provided by engineer.">
+  <translation text="Inapplicable Encoding" lang="en"/>
+  <translation text="Codificación no aplicable" lang="es"/>
+  <translation text="Codificació no aplicable" lang="ca"/>
+ </entry>
+ <entry key="Incompatible Schema" comment="No comment provided by engineer.">
+  <translation text="Incompatible Schema" lang="en"/>
+  <translation text="Esquema incompatible" lang="es"/>
+  <translation text="Esquema incompatible" lang="ca"/>
+ </entry>
+ <entry key="Incompatible Version Hash" comment="No comment provided by engineer.">
+  <translation text="Incompatible Version Hash" lang="en"/>
+  <translation text="Versión de hash incompatible" lang="es"/>
+  <translation text="Versió de hash incompatible" lang="ca"/>
+ </entry>
+ <entry key="Incomplete Save" comment="No comment provided by engineer.">
+  <translation text="Incomplete Save" lang="en"/>
+  <translation text="Guardado incompleto" lang="es"/>
+  <translation text="Desat incomplet" lang="ca"/>
+ </entry>
+ <entry key="Inferred Mapping Model Error" comment="No comment provided by engineer.">
+  <translation text="Inferred Mapping Model Error" lang="en"/>
+  <translation text="Error de correspondencia en el modelo inferido" lang="es"/>
+  <translation text="Error de correspondencia al model inferit" lang="ca"/>
+ </entry>
+ <entry key="International Roaming Off" comment="No comment provided by engineer.">
+  <translation text="International Roaming Off" lang="en"/>
+  <translation text="Roaming internacional desactivado" lang="es"/>
+  <translation text="Roaming internacional desactivat" lang="ca"/>
+ </entry>
+ <entry key="Invalid Date" comment="No comment provided by engineer.">
+  <translation text="Invalid Date" lang="en"/>
+  <translation text="Fecha inválida" lang="es"/>
+  <translation text="Data invàlida" lang="ca"/>
+ </entry>
+ <entry key="Invalid File Name" comment="No comment provided by engineer.">
+  <translation text="Invalid File Name" lang="en"/>
+  <translation text="Nombre de archivo no válido" lang="es"/>
+  <translation text="Nom de fitxer invàlid" lang="ca"/>
+ </entry>
+ <entry key="Invalid Type" comment="No comment provided by engineer.">
+  <translation text="Invalid Type" lang="en"/>
+  <translation text="Tipo inválido" lang="es"/>
+  <translation text="Tipus invàlid" lang="ca"/>
+ </entry>
+ <entry key="Location Error" comment="No comment provided by engineer.">
+  <translation text="Location Error" lang="en"/>
+  <translation text="Error de ubicación" lang="es"/>
+  <translation text="Error d'ubicació" lang="ca"/>
+ </entry>
+ <entry key="Location Unknown" comment="No comment provided by engineer.">
+  <translation text="Location Unknown" lang="en"/>
+  <translation text="Ubicación desconocida" lang="es"/>
+  <translation text="Localització desconeguda" lang="ca"/>
+ </entry>
+ <entry key="Locking Error" comment="No comment provided by engineer.">
+  <translation text="Locking Error" lang="en"/>
+  <translation text="Error de bloqueo" lang="es"/>
+  <translation text="Error de bloqueig" lang="ca"/>
+ </entry>
+ <entry key="Merge Error" comment="No comment provided by engineer.">
+  <translation text="Merge Error" lang="en"/>
+  <translation text="Combinación fallida" lang="es"/>
+  <translation text="Error de combinació" lang="ca"/>
+ </entry>
+ <entry key="Migration Cancelled" comment="No comment provided by engineer.">
+  <translation text="Migration Cancelled" lang="en"/>
+  <translation text="Migración cancelada" lang="es"/>
+  <translation text="Migració cancel·lada" lang="ca"/>
+ </entry>
+ <entry key="Migration Error" comment="No comment provided by engineer.">
+  <translation text="Migration Error" lang="en"/>
+  <translation text="Error de migración" lang="es"/>
+  <translation text="Error de migració" lang="ca"/>
+ </entry>
+ <entry key="Missing Mandatory Property" comment="No comment provided by engineer.">
+  <translation text="Missing Mandatory Property" lang="en"/>
+  <translation text="Falta propiedad obligatoria" lang="es"/>
+  <translation text="Falta propietat obligatori" lang="ca"/>
+ </entry>
+ <entry key="Missing Mapping Model" comment="No comment provided by engineer.">
+  <translation text="Missing Mapping Model" lang="en"/>
+  <translation text="Fallo de correspondencia del modelo" lang="es"/>
+  <translation text="Error de correspondència del model" lang="ca"/>
+ </entry>
+ <entry key="Missing Source Model" comment="No comment provided by engineer.">
+  <translation text="Missing Source Model" lang="en"/>
+  <translation text="Falta el modelo original" lang="es"/>
+  <translation text="Falta el model original" lang="ca"/>
+ </entry>
+ <entry key="Multiple Validation Errors" comment="No comment provided by engineer.">
+  <translation text="Multiple Validation Errors" lang="en"/>
+  <translation text="Varios errores de validación" lang="es"/>
+  <translation text="Múltiples errors de validació" lang="ca"/>
  </entry>
  <entry key="Network Error" comment="No comment provided by engineer.">
   <translation text="Network Error" lang="en"/>
   <translation text="Error de red" lang="es"/>
   <translation text="Error de xarxa" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (58)</occurrence>
+ </entry>
+ <entry key="No Permissions To Read File" comment="No comment provided by engineer.">
+  <translation text="No Permissions To Read File" lang="en"/>
+  <translation text="Sin permisos para leer el archivo" lang="es"/>
+  <translation text="Sense permís per llegir l'arxiu" lang="ca"/>
+ </entry>
+ <entry key="No Read Permission" comment="No comment provided by engineer.">
+  <translation text="No Read Permission" lang="en"/>
+  <translation text="No tiene permiso de lectura" lang="es"/>
+  <translation text="Necessita permís de lectura" lang="ca"/>
+ </entry>
+ <entry key="No Such File" comment="No comment provided by engineer.">
+  <translation text="No Such File" lang="en"/>
+  <translation text="No hay tal archivo" lang="es"/>
+  <translation text="No hi ha arxiu" lang="ca"/>
+ </entry>
+ <entry key="No Write Permission" comment="No comment provided by engineer.">
+  <translation text="No Write Permission" lang="en"/>
+  <translation text="No tiene permiso de escritura" lang="es"/>
+  <translation text="Sense permís d'escriptura" lang="ca"/>
+ </entry>
+ <entry key="Not Connected To Internet" comment="No comment provided by engineer.">
+  <translation text="Not Connected To Internet" lang="en"/>
+  <translation text="No conectado a Internet" lang="es"/>
+  <translation text="No connectat a Internet" lang="ca"/>
+ </entry>
+ <entry key="Number Too Large" comment="No comment provided by engineer.">
+  <translation text="Number Too Large" lang="en"/>
+  <translation text="Número demasiado grande" lang="es"/>
+  <translation text="Número massa gran" lang="ca"/>
+ </entry>
+ <entry key="Number Too Small" comment="No comment provided by engineer.">
+  <translation text="Number Too Small" lang="en"/>
+  <translation text="Número demasiado pequeño" lang="es"/>
+  <translation text="Número massa petit" lang="ca"/>
  </entry>
  <entry key="OK" comment="No comment provided by engineer.">
   <translation text="OK" lang="en"/>
   <translation text="OK" lang="es"/>
   <translation text="OK" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (90)</occurrence>
-  <occurrence>UIAlertView+ErrorKit.m (67)</occurrence>
+ </entry>
+ <entry key="Operation Error" comment="No comment provided by engineer.">
+  <translation text="Operation Error" lang="en"/>
+  <translation text="Error en la operación" lang="es"/>
+  <translation text="Error a l'operació" lang="ca"/>
+ </entry>
+ <entry key="Out Of Space" comment="No comment provided by engineer.">
+  <translation text="Out Of Space" lang="en"/>
+  <translation text="Sin espacio" lang="es"/>
+  <translation text="Sense espai" lang="ca"/>
+ </entry>
+ <entry key="Pattern Matching Error" comment="No comment provided by engineer.">
+  <translation text="Pattern Matching Error" lang="en"/>
+  <translation text="Error de no coincidencia con patrón" lang="es"/>
+  <translation text="Error de no coincidència amb patró" lang="ca"/>
+ </entry>
+ <entry key="Permission Denied" comment="No comment provided by engineer.">
+  <translation text="Permission Denied" lang="en"/>
+  <translation text="Permiso denegado" lang="es"/>
+  <translation text="Permís denegat" lang="ca"/>
+ </entry>
+ <entry key="Persistent Store Open Error" comment="No comment provided by engineer.">
+  <translation text="Persistent Store Open Error" lang="en"/>
+  <translation text="Error de apertura en almacenamiento persistente" lang="es"/>
+  <translation text="Error d'obertura al magatzem persistent" lang="ca"/>
  </entry>
  <entry key="Please check your internet connection and try again." comment="No comment provided by engineer.">
   <translation text="Please check your internet connection and try again." lang="en"/>
   <translation text="Por favor, compruebe su conexión a internet e inténtelo de nuevo." lang="es"/>
   <translation text="Si us plau, comprova la connexió a internet i torna-ho a provar." lang="ca"/>
-  <occurrence>MRViewController.m (84)</occurrence>
+ </entry>
+ <entry key="Property List Corrupt" comment="No comment provided by engineer.">
+  <translation text="Property List Corrupt" lang="en"/>
+  <translation text="Lista de propiedades corrupta" lang="es"/>
+  <translation text="Llista de propietats corrupte" lang="ca"/>
+ </entry>
+ <entry key="Property List Error" comment="No comment provided by engineer.">
+  <translation text="Property List Error" lang="en"/>
+  <translation text="Error en lista de propiedades" lang="es"/>
+  <translation text="Error de llista de propietat" lang="ca"/>
+ </entry>
+ <entry key="Property List Stream Error" comment="No comment provided by engineer.">
+  <translation text="Property List Stream Error" lang="en"/>
+  <translation text="Error de secuencia de lista de propiedades" lang="es"/>
+  <translation text="Error de seqüència de llista de propietats" lang="ca"/>
+ </entry>
+ <entry key="Property List Unknown Version" comment="No comment provided by engineer.">
+  <translation text="Property List Unknown Version" lang="en"/>
+  <translation text="Versión desconocida de lista de propiedades" lang="es"/>
+  <translation text="Versió desconeguda de llista de propietats" lang="ca"/>
+ </entry>
+ <entry key="Read Only Volume" comment="No comment provided by engineer.">
+  <translation text="Read Only Volume" lang="en"/>
+  <translation text="Volumen solo de lectura" lang="es"/>
+  <translation text="Volum només de lectura" lang="ca"/>
+ </entry>
+ <entry key="Redirect To Non Existent Location" comment="No comment provided by engineer.">
+  <translation text="Redirect To Non Existent Location" lang="en"/>
+  <translation text="Redirección a una ubicación inexistente" lang="es"/>
+  <translation text="Redirecció a una ubicació inexistent" lang="ca"/>
+ </entry>
+ <entry key="Referential Integrity Error" comment="No comment provided by engineer.">
+  <translation text="Referential Integrity Error" lang="en"/>
+  <translation text="Error de integridad referencial" lang="es"/>
+  <translation text="Error d'integritat referencial" lang="ca"/>
+ </entry>
+ <entry key="Region Monitoring Denied" comment="No comment provided by engineer.">
+  <translation text="Region Monitoring Denied" lang="en"/>
+  <translation text="Monitorización de región denegada" lang="es"/>
+  <translation text="Monitorització de regió denegada" lang="ca"/>
+ </entry>
+ <entry key="Region Monitoring Failure" comment="No comment provided by engineer.">
+  <translation text="Region Monitoring Failure" lang="en"/>
+  <translation text="Error de monitorización de región" lang="es"/>
+  <translation text="Error de monitorització de regió" lang="ca"/>
+ </entry>
+ <entry key="Region Monitoring Response Delayed" comment="No comment provided by engineer.">
+  <translation text="Region Monitoring Response Delayed" lang="en"/>
+  <translation text="Respuesta de la monitorización de región retrasada" lang="es"/>
+  <translation text="Resposta de la monitorització de regió retrassada" lang="ca"/>
+ </entry>
+ <entry key="Region Monitoring Setup Delayed" comment="No comment provided by engineer.">
+  <translation text="Region Monitoring Setup Delayed" lang="en"/>
+  <translation text="Inicio de la monitorización de región retrasado" lang="es"/>
+  <translation text="Inici de la monitorizació de regió retrassat" lang="ca"/>
+ </entry>
+ <entry key="Relationship Exceeds Maximum Count" comment="No comment provided by engineer.">
+  <translation text="Relationship Exceeds Maximum Count" lang="en"/>
+  <translation text="La relación supera la cantidad máxima" lang="es"/>
+  <translation text="La relació supera el nombre màxim" lang="ca"/>
+ </entry>
+ <entry key="Relationship Lacks Minimum Count" comment="No comment provided by engineer.">
+  <translation text="Relationship Lacks Minimum Count" lang="en"/>
+  <translation text="La relación no llega a la cantidad mínima" lang="es"/>
+  <translation text="La relació no arriba al nombre mínim" lang="ca"/>
+ </entry>
+ <entry key="Request Body Stream Exhausted" comment="No comment provided by engineer.">
+  <translation text="Request Body Stream Exhausted" lang="en"/>
+  <translation text="Secuencia del cuerpo de la solicitud agotada" lang="es"/>
+  <translation text="Seqüència del cos de la sol·licitud esgotada" lang="ca"/>
+ </entry>
+ <entry key="Resource Unavailable" comment="No comment provided by engineer.">
+  <translation text="Resource Unavailable" lang="en"/>
+  <translation text="Recurso no disponible" lang="es"/>
+  <translation text="Recurs no disponible" lang="ca"/>
  </entry>
  <entry key="Retry" comment="No comment provided by engineer.">
   <translation text="Retry" lang="en"/>
   <translation text="Reintentar" lang="es"/>
   <translation text="Tornar a provar" lang="ca"/>
-  <occurrence>MRViewController.m (52)</occurrence>
-  <occurrence>MRViewController.m (86)</occurrence>
  </entry>
  <entry key="Retrying..." comment="No comment provided by engineer.">
   <translation text="Retrying..." lang="en"/>
   <translation text="Reintentando..." lang="es"/>
   <translation text="Tornant a provar..." lang="ca"/>
-  <occurrence>MRViewController.m (52)</occurrence>
+ </entry>
+ <entry key="Save Conflicts" comment="No comment provided by engineer.">
+  <translation text="Save Conflicts" lang="en"/>
+  <translation text="Conflictos al guardar" lang="es"/>
+  <translation text="Conflictes al desar" lang="ca"/>
+ </entry>
+ <entry key="Save Error" comment="No comment provided by engineer.">
+  <translation text="Save Error" lang="en"/>
+  <translation text="Error de guardado" lang="es"/>
+  <translation text="Error de desat" lang="ca"/>
+ </entry>
+ <entry key="Secure Connection Failed" comment="No comment provided by engineer.">
+  <translation text="Secure Connection Failed" lang="en"/>
+  <translation text="Fallo en la conexión segura" lang="es"/>
+  <translation text="La connexió segura ha fallat" lang="ca"/>
+ </entry>
+ <entry key="Server Certificate Has Bad Date" comment="No comment provided by engineer.">
+  <translation text="Server Certificate Has Bad Date" lang="en"/>
+  <translation text="El certificado del servidor tiene mal la fecha" lang="es"/>
+  <translation text="El certificat del servidor té malament la data" lang="ca"/>
+ </entry>
+ <entry key="Server Certificate Has Unknown Root" comment="No comment provided by engineer.">
+  <translation text="Server Certificate Has Unknown Root" lang="en"/>
+  <translation text="Reaíz de certificado de servidor desconocida" lang="es"/>
+  <translation text="Certificat de servidor d'arrel desconeguda" lang="ca"/>
+ </entry>
+ <entry key="Server Certificate Not Yet Valid" comment="No comment provided by engineer.">
+  <translation text="Server Certificate Not Yet Valid" lang="en"/>
+  <translation text="El certificado del servidor no es todavía válido" lang="es"/>
+  <translation text="El certificat del servidor no és encara vàlid" lang="ca"/>
+ </entry>
+ <entry key="Server Certificate Untrusted" comment="No comment provided by engineer.">
+  <translation text="Server Certificate Untrusted" lang="en"/>
+  <translation text="El certificado del servidor no es de confianza" lang="es"/>
+  <translation text="El certificat del servidor no és de confiança" lang="ca"/>
+ </entry>
+ <entry key="Source Store Error" comment="No comment provided by engineer.">
+  <translation text="Source Store Error" lang="en"/>
+  <translation text="Error en el almacén de origen" lang="es"/>
+  <translation text="Error al magatzem d'origen" lang="ca"/>
+ </entry>
+ <entry key="String Too Long" comment="No comment provided by engineer.">
+  <translation text="String Too Long" lang="en"/>
+  <translation text="Texto demasiado largo" lang="es"/>
+  <translation text="Text massa llarg" lang="ca"/>
+ </entry>
+ <entry key="String Too Short" comment="No comment provided by engineer.">
+  <translation text="String Too Short" lang="en"/>
+  <translation text="Texto demasiado corto" lang="es"/>
+  <translation text="Text massa curt" lang="ca"/>
+ </entry>
+ <entry key="Timed Out" comment="No comment provided by engineer.">
+  <translation text="Timed Out" lang="en"/>
+  <translation text="Tiempo agotado" lang="es"/>
+  <translation text="Temps superat" lang="ca"/>
+ </entry>
+ <entry key="Type Mismatch" comment="No comment provided by engineer.">
+  <translation text="Type Mismatch" lang="en"/>
+  <translation text="Los tipos no coinciden" lang="es"/>
+  <translation text="Els tipus no coincideixen" lang="ca"/>
+ </entry>
+ <entry key="URL Error" comment="No comment provided by engineer.">
+  <translation text="URL Error" lang="en"/>
+  <translation text="Error de URL" lang="es"/>
+  <translation text="Error d'URL" lang="ca"/>
+ </entry>
+ <entry key="Unknown Encoding" comment="No comment provided by engineer.">
+  <translation text="Unknown Encoding" lang="en"/>
+  <translation text="Codificación desconocida" lang="es"/>
+  <translation text="Codificació de desconeguda" lang="ca"/>
+ </entry>
+ <entry key="Unknown Error" comment="No comment provided by engineer.">
+  <translation text="Unknown Error" lang="en"/>
+  <translation text="Error desconocido" lang="es"/>
+  <translation text="Error desconegut" lang="ca"/>
+ </entry>
+ <entry key="Unsupported Request Type" comment="No comment provided by engineer.">
+  <translation text="Unsupported Request Type" lang="en"/>
+  <translation text="Tipo de petición no soportado" lang="es"/>
+  <translation text="Tipus de sol·licitud no admès" lang="ca"/>
+ </entry>
+ <entry key="Unsupported Scheme" comment="No comment provided by engineer.">
+  <translation text="Unsupported Scheme" lang="en"/>
+  <translation text="Esquema no suportat" lang="es"/>
+  <translation text="Eesquema no suportat" lang="ca"/>
+ </entry>
+ <entry key="Unsupported URL" comment="No comment provided by engineer.">
+  <translation text="Unsupported URL" lang="en"/>
+  <translation text="URL no soportada" lang="es"/>
+  <translation text="URL no suportada" lang="ca"/>
+ </entry>
+ <entry key="User Authentication Required" comment="No comment provided by engineer.">
+  <translation text="User Authentication Required" lang="en"/>
+  <translation text="Necesaria autenticación de usuario" lang="es"/>
+  <translation text="Autenticació d'usuari requerida" lang="ca"/>
+ </entry>
+ <entry key="User Cancelled Authentication" comment="No comment provided by engineer.">
+  <translation text="User Cancelled Authentication" lang="en"/>
+  <translation text="Autenticación cancelada por el usuario" lang="es"/>
+  <translation text="L'usuari ha cancel·lat l'autenticació" lang="ca"/>
+ </entry>
+ <entry key="Validation Error" comment="No comment provided by engineer.">
+  <translation text="Validation Error" lang="en"/>
+  <translation text="Error de validación" lang="es"/>
+  <translation text="Error de validació" lang="ca"/>
+ </entry>
+ <entry key="XPC Connection Error" comment="No comment provided by engineer.">
+  <translation text="XPC Connection Error" lang="en"/>
+  <translation text="Error de conexión XPC" lang="es"/>
+  <translation text="Error de connexió XPC" lang="ca"/>
+ </entry>
+ <entry key="XPC Connection Interrupted" comment="No comment provided by engineer.">
+  <translation text="XPC Connection Interrupted" lang="en"/>
+  <translation text="Conexión XPC interrumpida" lang="es"/>
+  <translation text="Connexió XPC interrompuda" lang="ca"/>
+ </entry>
+ <entry key="XPC Connection Invalid" comment="No comment provided by engineer.">
+  <translation text="XPC Connection Invalid" lang="en"/>
+  <translation text="Conexión XPC inválida" lang="es"/>
+  <translation text="Connexió XPC invàlida" lang="ca"/>
+ </entry>
+ <entry key="XPC Connection Reply Invalid" comment="No comment provided by engineer.">
+  <translation text="XPC Connection Reply Invalid" lang="en"/>
+  <translation text="Respuesta de conexión XPC inválida" lang="es"/>
+  <translation text="Resposta de connexió XPC invàlida" lang="ca"/>
  </entry>
  <entry key="YES" comment="No comment provided by engineer.">
   <translation text="YES" lang="en"/>
   <translation text="SÍ" lang="es"/>
   <translation text="SI" lang="ca"/>
-  <occurrence>MRViewController.m (79)</occurrence>
  </entry>
  <entry key="You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi" comment="No comment provided by engineer.">
   <translation text="You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi" lang="en"/>
   <translation text="Puedes ajustar la configuración de la red móvil de iPhone en Ajustes > General > Datos Móviles. En iPad la configuración se encuentra en Ajustes > Datos Móviles\n\nPara localizar redes Wi-Fi cercanas, pulsa Ajustes > Wi-Fi" lang="es"/>
   <translation text="A l'iPhone, pots ajustar la configuració de xarxa mòbil a Configuració > General > Dades Mòbils. A l'iPad es troba a Configuració > Dades Mòbils\n\nPer localitzar xarxes Wi-Fi properes, ves a Configuració > Wi-Fi" lang="ca"/>
+ </entry>
+ <entry key="Zero Byte Resource" comment="No comment provided by engineer.">
+  <translation text="Zero Byte Resource" lang="en"/>
+  <translation text="Recurso de cero bytes" lang="es"/>
+  <translation text="Recurs de zero bytes" lang="ca"/>
  </entry>
 </project>

@@ -334,7 +334,7 @@
         case NSPersistentStoreOpenError:
             return NSLocalizedString(@"Persistent Store Open Error", nil);
         case NSPersistentStoreTimeoutError:
-            return NSLocalizedString(@"Timeout Error", nil);
+            return NSLocalizedString(@"Timed Out", nil);
         case NSPersistentStoreUnsupportedRequestTypeError:
             return NSLocalizedString(@"Unsupported Request Type", nil);
         case NSPersistentStoreIncompatibleVersionHashError:
@@ -559,7 +559,7 @@
         case NSURLErrorCannotMoveFile:
             return NSLocalizedString(@"Cannot Move File", nil);
         case NSURLErrorDownloadDecodingFailedMidStream:
-            return NSLocalizedString(@"Download Decoding Failed Mid Stream", nil);
+            return NSLocalizedString(@"Download Decoding Failed", nil);
         case NSURLErrorDownloadDecodingFailedToComplete:
             return NSLocalizedString(@"Download Decoding Failed To Complete", nil);
         case NSURLErrorInternationalRoamingOff:
@@ -700,15 +700,15 @@
         case kCLErrorGeocodeCanceled:
             return NSLocalizedString(@"Geocode Canceled", nil);
         case kCLErrorDeferredFailed:
-            return NSLocalizedString(@"Deferred Failed", nil);
+            return NSLocalizedString(@"Deferred Update Failed", nil);
         case kCLErrorDeferredNotUpdatingLocation:
             return NSLocalizedString(@"Deferred Not Updating Location", nil);
         case kCLErrorDeferredAccuracyTooLow:
             return NSLocalizedString(@"Deferred Accuracy Too Low", nil);
         case kCLErrorDeferredDistanceFiltered:
-            return NSLocalizedString(@"Deferred Distance Filtered", nil);
+            return NSLocalizedString(@"Cannot Filter Deferred Distance", nil);
         case kCLErrorDeferredCanceled:
-            return NSLocalizedString(@"Deferred Canceled", nil);
+            return NSLocalizedString(@"Deferred Update Canceled", nil);
     }
     return NSLocalizedString(@"Location Error", nil);
 }

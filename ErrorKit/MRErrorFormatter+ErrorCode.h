@@ -25,6 +25,8 @@
 
 /**
  Adds methods for *stringizing* error codes.
+ 
+ @warning The strings supplied by these methods are not suitable for using in production environments.
  */
 @interface MRErrorFormatter (ErrorCode)
 
