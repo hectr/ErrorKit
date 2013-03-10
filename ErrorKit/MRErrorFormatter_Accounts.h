@@ -1,4 +1,4 @@
-// NSError_AFNetworking.h
+// MRErrorFormatter_Accounts.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,26 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSError+ErrorKit.h"
+#import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef _AFNETWORKING_
-#warning This extension requires the AFNetworking library.
+#ifndef ACCOUNTS_EXTERN
+#warning This extension requires the Accounts framework.
 #endif
 
 
 /**
- Adds getters for AFNetworkingOperationFailingURLRequestErrorKey and AFNetworkingOperationFailingURLResponseErrorKey user info values.
+ Adds methods for *stringizing* `ACErrorDomain` error codes.
  
- @warning This extension requires the AFNetworking library. Add an `AFNetworking.h` import to the header prefix of the project.
+ @discussion **Warning:** This extension requires the Accounts framework. Add a `Accounts/Accounts.h` import to the header prefix of the project.
  */
-@interface NSError (ErrorKit_AFNetworking)
+@interface MRErrorFormatter (ErrorKit_Accounts)
 
-/// @name AFRequestOperation error userInfo values
+/// @name Strings for debugging
 
-/// Getter for `AFNetworkingOperationFailingURLRequestErrorKey` user info value.
-@property (nonatomic, readonly) NSURLRequest *failingURLRequest;
+/// Returns a string representation of the given `ACErrorDomain` error code.
++ (NSString *)debugStringFromAccountsCode:(NSInteger)errorCode;
 
-/// Getter for `AFNetworkingOperationFailingURLResponseErrorKey` user info value.
-@property (nonatomic, readonly) NSHTTPURLResponse *failingURLResponse;
+/// @name Strings for presentation
+
+/// Returns a string representation of the given `ACErrorDomain` error code.
++ (NSString *)stringFromAccountsCode:(NSInteger)errorCode;
 
 @end

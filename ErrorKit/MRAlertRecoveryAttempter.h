@@ -26,7 +26,7 @@
 /**
  Instances of `MRAlertRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: and attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block.
  
- @discussion This attempter conforms to `UIAlertViewDelegate` and `UIActionSheetDelegate` protocols. The index of the button index is passed as parameter to the delegate block.
+ @discussion This attempter conforms to `UIAlertViewDelegate` and `UIActionSheetDelegate` protocols. The index of the button index clicked is passed as parameter to the delegate block.
 */
 @interface MRAlertRecoveryAttempter : MRRecoveryAttempter <UIAlertViewDelegate, UIActionSheetDelegate>
 

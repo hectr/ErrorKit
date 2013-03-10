@@ -23,12 +23,12 @@
 #ifndef _ERRORKIT_H
 #define _ERRORKIT_H
 
+#import "NSError+ErrorKit.h"
+
 #import "MRErrorBuilder.h"
 
 #import "MRErrorFormatter.h"
 #import "MRErrorFormatter+ErrorCode.h"
-
-#import "NSError+ErrorKit.h"
 
 #import "MRBlockRecoveryAttempter.h"
 
@@ -38,18 +38,22 @@
 #import "MRAlertRecoveryAttempter.h"
 #endif
 
-#ifdef _COREDATADEFINES_H
-#import "MRErrorBuilder_CoreData.h"
-#import "NSError_CoreData.h"
+#ifdef ACCOUNTS_EXTERN
+#import "MRErrorFormatter_Accounts.h"
 #endif
 
-#ifdef ACCOUNTS_EXTERN
-#import "MRErrorFormatter_ACErrorDomain.h"
+#ifdef _COREDATADEFINES_H
+#import "NSError_CoreData.h"
+#import "MRErrorBuilder_CoreData.h"
+#endif
+
+#ifdef __CORELOCATION__
+#import "MRErrorBuilder_CoreLocation.h"
 #endif
 
 #ifdef _AFNETWORKING_
-#import "MRErrorBuilder_AFNetworking.h"
 #import "NSError_AFNetworking.h"
+#import "MRErrorBuilder_AFNetworking.h"
 #endif
 
 #ifndef MRLogError

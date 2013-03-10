@@ -28,7 +28,7 @@
 
 
 /**
- Adds accessors for AFNetworkingOperationFailingURLRequestErrorKey and AFNetworkingOperationFailingURLResponseErrorKey `userInfo` values.
+ Adds accessors for `AFNetworkingOperationFailingURLRequestErrorKey` and `AFNetworkingOperationFailingURLResponseErrorKey` user info values.
  
  @discussion **Warning:** This extension requires the AFNetworking library. Add an `AFNetworking.h` import to the header prefix of the project.
  */

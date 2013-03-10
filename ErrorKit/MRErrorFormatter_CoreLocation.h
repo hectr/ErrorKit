@@ -1,4 +1,4 @@
-// MRErrorFormatter_ACErrorDomain.h
+// MRErrorFormatter_CoreLocation.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -22,26 +22,26 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef ACCOUNTS_EXTERN
-#warning This extension requires the Accounts framework.
+#ifndef __CORELOCATION__
+#warning This extension requires the Core Location framework.
 #endif
 
 
 /**
- Adds methods for *stringizing* ACErrorDomain error codes.
+ Adds methods for *stringizing* `kCLErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the Accounts framework. Add a `Accounts/Accounts.h` import to the header prefix of the project.
+ @discussion **Warning:** This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
  */
-@interface MRErrorFormatter (ACErrorDomain)
+@interface MRErrorFormatter (ErrorKit_CoreLocation)
 
 /// @name Strings for debugging
 
-/// Returns a string representation of the given ACErrorDomain error code.
-+ (NSString *)debugStringFromAccountsCode:(NSInteger)errorCode;
+/// Returns a string representation of the given `kCLErrorDomain` error code.
++ (NSString *)debugStringFromCoreLocationCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
-/// Returns a string representation of the given ACErrorDomain error code.
-+ (NSString *)stringFromAccountsCode:(NSInteger)errorCode;
+/// Returns a string representation of the given `kCLErrorDomain` error code.
++ (NSString *)stringFromCoreLocationCode:(NSInteger)errorCode
 
 @end

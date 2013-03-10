@@ -26,6 +26,9 @@
 #ifdef _COREDATADEFINES_H
 #import "NSError_CoreData.h"
 #endif
+#ifdef __CORELOCATION__
+#import "NSError_CoreLocation.h"
+#endif
 #ifdef _AFNETWORKING_
 #import "NSError_AFNetworking.h"
 #endif
@@ -42,6 +45,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 + (id)builderWithError:(NSError *)error
 {
+    if (error == nil) {
+        return nil;
+    }
     MRErrorBuilder *builder =
         [[self alloc] initWithDomain:error.domain
                                 code:error.code
@@ -70,6 +76,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.validationObject = error.validationObject;
     builder.validationPredicate = error.validationPredicate;
     builder.validationValue = error.validationValue;
+#endif
+#ifdef __CORELOCATION__
+    builder.alternateRegion = error.alternateRegion;
 #endif
 #ifdef _AFNETWORKING_
     builder.failingURLRequest = error.failingURLRequest;
@@ -357,6 +366,22 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 - (void)setValidationValue:(id)validationValue
 {
     [self setUserInfoValue:validationValue forKey:NSValidationValueErrorKey];
+}
+
+#endif
+
+#pragma mark -
+
+#ifdef __CORELOCATION__
+
+- (CLRegion *)alternateRegion
+{
+    return [self.userInfo objectForKey:kCLErrorUserInfoAlternateRegionKey];
+}
+
+- (void)setAlternateRegion:(CLRegion *)alternateRegion
+{
+    [self setUserInfoValue:alternateRegion.copy forKey:kCLErrorUserInfoAlternateRegionKey];
 }
 
 #endif

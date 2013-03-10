@@ -1,4 +1,4 @@
-// NSError_AFNetworking.h
+// NSError_CoreLocation.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,26 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSError+ErrorKit.h"
+#import <Foundation/Foundation.h>
 
-#ifndef _AFNETWORKING_
-#warning This extension requires the AFNetworking library.
+#ifndef __CORELOCATION__
+#warning This extension requires the Core Location framework.
 #endif
 
 
 /**
- Adds getters for AFNetworkingOperationFailingURLRequestErrorKey and AFNetworkingOperationFailingURLResponseErrorKey user info values.
+ Adds getters for Core Location's error `userInfo` values.
  
- @warning This extension requires the AFNetworking library. Add an `AFNetworking.h` import to the header prefix of the project.
+ @warning This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
  */
-@interface NSError (ErrorKit_AFNetworking)
+@interface NSError (ErrorKit_CoreLocation)
 
-/// @name AFRequestOperation error userInfo values
+/// @name CoreLocation userInfo values
 
-/// Getter for `AFNetworkingOperationFailingURLRequestErrorKey` user info value.
-@property (nonatomic, readonly) NSURLRequest *failingURLRequest;
-
-/// Getter for `AFNetworkingOperationFailingURLResponseErrorKey` user info value.
-@property (nonatomic, readonly) NSHTTPURLResponse *failingURLResponse;
+/// Getter for `kCLErrorUserInfoAlternateRegionKey` user info value.
+@property (nonatomic, readonly) CLRegion *alternateRegion;
 
 @end

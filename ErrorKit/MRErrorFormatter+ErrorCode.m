@@ -100,6 +100,90 @@
             return mr_stringize_error_code(NSXPCConnectionInvalid);
         case NSXPCConnectionReplyInvalid:
             return mr_stringize_error_code(NSXPCConnectionReplyInvalid);
+#ifdef _COREDATADEFINES_H
+        case NSManagedObjectValidationError:
+            return mr_stringize_error_code(NSManagedObjectValidationError);
+        case NSValidationMultipleErrorsError:
+            return mr_stringize_error_code(NSValidationMultipleErrorsError);
+        case NSValidationMissingMandatoryPropertyError:
+            return mr_stringize_error_code(NSValidationMissingMandatoryPropertyError);
+        case NSValidationRelationshipLacksMinimumCountError:
+            return mr_stringize_error_code(NSValidationRelationshipLacksMinimumCountError);
+        case NSValidationRelationshipExceedsMaximumCountError:
+            return mr_stringize_error_code(NSValidationRelationshipExceedsMaximumCountError);
+        case NSValidationRelationshipDeniedDeleteError:
+            return mr_stringize_error_code(NSValidationRelationshipDeniedDeleteError);
+        case NSValidationNumberTooLargeError:
+            return mr_stringize_error_code(NSValidationNumberTooLargeError);
+        case NSValidationNumberTooSmallError:
+            return mr_stringize_error_code(NSValidationNumberTooSmallError);
+        case NSValidationDateTooLateError:
+            return mr_stringize_error_code(NSValidationDateTooLateError);
+        case NSValidationDateTooSoonError:
+            return mr_stringize_error_code(NSValidationDateTooSoonError);
+        case NSValidationInvalidDateError:
+            return mr_stringize_error_code(NSValidationInvalidDateError);
+        case NSValidationStringTooLongError:
+            return mr_stringize_error_code(NSValidationStringTooLongError);
+        case NSValidationStringTooShortError:
+            return mr_stringize_error_code(NSValidationStringTooShortError);
+        case NSValidationStringPatternMatchingError:
+            return mr_stringize_error_code(NSValidationStringPatternMatchingError);
+        case NSManagedObjectContextLockingError:
+            return mr_stringize_error_code(NSManagedObjectContextLockingError);
+        case NSPersistentStoreCoordinatorLockingError:
+            return mr_stringize_error_code(NSPersistentStoreCoordinatorLockingError);
+        case NSManagedObjectReferentialIntegrityError:
+            return mr_stringize_error_code(NSManagedObjectReferentialIntegrityError);
+        case NSManagedObjectExternalRelationshipError:
+            return mr_stringize_error_code(NSManagedObjectExternalRelationshipError);
+        case NSManagedObjectMergeError:
+            return mr_stringize_error_code(NSManagedObjectMergeError);
+        case NSPersistentStoreInvalidTypeError:
+            return mr_stringize_error_code(NSPersistentStoreInvalidTypeError);
+        case NSPersistentStoreTypeMismatchError:
+            return mr_stringize_error_code(NSPersistentStoreTypeMismatchError);
+        case NSPersistentStoreIncompatibleSchemaError:
+            return mr_stringize_error_code(NSPersistentStoreIncompatibleSchemaError);
+        case NSPersistentStoreSaveError:
+            return mr_stringize_error_code(NSPersistentStoreSaveError);
+        case NSPersistentStoreIncompleteSaveError:
+            return mr_stringize_error_code(NSPersistentStoreIncompleteSaveError);
+        case NSPersistentStoreSaveConflictsError:
+            return mr_stringize_error_code(NSPersistentStoreSaveConflictsError);
+        case NSCoreDataError:
+            return mr_stringize_error_code(NSCoreDataError);
+        case NSPersistentStoreOperationError:
+            return mr_stringize_error_code(NSPersistentStoreOperationError);
+        case NSPersistentStoreOpenError:
+            return mr_stringize_error_code(NSPersistentStoreOpenError);
+        case NSPersistentStoreTimeoutError:
+            return mr_stringize_error_code(NSPersistentStoreTimeoutError);
+        case NSPersistentStoreUnsupportedRequestTypeError:
+            return mr_stringize_error_code(NSPersistentStoreUnsupportedRequestTypeError);
+        case NSPersistentStoreIncompatibleVersionHashError:
+            return mr_stringize_error_code(NSPersistentStoreIncompatibleVersionHashError);
+        case NSMigrationError:
+            return mr_stringize_error_code(NSMigrationError);
+        case NSMigrationCancelledError:
+            return mr_stringize_error_code(NSMigrationCancelledError);
+        case NSMigrationMissingSourceModelError:
+            return mr_stringize_error_code(NSMigrationMissingSourceModelError);
+        case NSMigrationMissingMappingModelError:
+            return mr_stringize_error_code(NSMigrationMissingMappingModelError);
+        case NSMigrationManagerSourceStoreError:
+            return mr_stringize_error_code(NSMigrationManagerSourceStoreError);
+        case NSMigrationManagerDestinationStoreError:
+            return mr_stringize_error_code(NSMigrationManagerDestinationStoreError);
+        case NSEntityMigrationPolicyError:
+            return mr_stringize_error_code(NSEntityMigrationPolicyError);
+        case NSSQLiteError:
+            return mr_stringize_error_code(NSSQLiteError);
+        case NSInferredMappingModelError:
+            return mr_stringize_error_code(NSInferredMappingModelError);
+        case NSExternalRecordImportError:
+            return mr_stringize_error_code(NSExternalRecordImportError);
+#endif
         default:
             if (NSFileErrorMinimum >= code
                 && code <= NSFileErrorMaximum) {
@@ -144,14 +228,14 @@
             return NSLocalizedString(@"No Such File", nil);
         case NSFileReadInapplicableStringEncodingError:
         case NSFileWriteInapplicableStringEncodingError:
-            return NSLocalizedString(@"Inapplicable String Encoding", nil);
+            return NSLocalizedString(@"Inapplicable Encoding", nil);
         case NSFileReadUnsupportedSchemeError:
         case NSFileWriteUnsupportedSchemeError:
             return NSLocalizedString(@"Unsupported Scheme", nil);
         case NSFileReadTooLargeError:
             return NSLocalizedString(@"File Too Large", nil);
         case NSFileReadUnknownStringEncodingError:
-            return NSLocalizedString(@"Unknown String Encoding", nil);
+            return NSLocalizedString(@"Unknown Encoding", nil);
         case NSFileWriteUnknownError:
             return NSLocalizedString(@"File Write Error", nil);
         case NSFileWriteNoPermissionError:
@@ -163,7 +247,7 @@
         case NSFileWriteVolumeReadOnlyError:
             return NSLocalizedString(@"Read Only Volume", nil);
         case NSKeyValueValidationError:
-            return NSLocalizedString(@"Key Value Validation Error", nil);
+            return NSLocalizedString(@"Validation Error", nil);
         case NSFormattingError:
             return NSLocalizedString(@"Formatting Error", nil);
         case NSUserCancelledError:
@@ -193,6 +277,89 @@
             return NSLocalizedString(@"XPC Connection Invalid", nil);
         case NSXPCConnectionReplyInvalid:
             return NSLocalizedString(@"XPC Connection Reply Invalid", nil);
+#ifdef _COREDATADEFINES_H
+        case NSManagedObjectValidationError:
+            return NSLocalizedString(@"Validation Error", nil);
+        case NSValidationMultipleErrorsError:
+            return NSLocalizedString(@"Multiple Validation Errors", nil);
+        case NSValidationMissingMandatoryPropertyError:
+            return NSLocalizedString(@"Missing Mandatory Property", nil);
+        case NSValidationRelationshipLacksMinimumCountError:
+            return NSLocalizedString(@"Relationship Lacks Minimum Count", nil);
+        case NSValidationRelationshipExceedsMaximumCountError:
+            return NSLocalizedString(@"Relationship Exceeds Maximum Count", nil);
+        case NSValidationRelationshipDeniedDeleteError:
+            return NSLocalizedString(@"Delete Denied", nil);
+        case NSValidationNumberTooLargeError:
+            return NSLocalizedString(@"Number Too Large", nil);
+        case NSValidationNumberTooSmallError:
+            return NSLocalizedString(@"Number Too Small", nil);
+        case NSValidationDateTooLateError:
+            return NSLocalizedString(@"Date Too Late", nil);
+        case NSValidationDateTooSoonError:
+            return NSLocalizedString(@"Date Too Soon", nil);
+        case NSValidationInvalidDateError:
+            return NSLocalizedString(@"Invalid Date", nil);
+        case NSValidationStringTooLongError:
+            return NSLocalizedString(@"String Too Long", nil);
+        case NSValidationStringTooShortError:
+            return NSLocalizedString(@"String Too Short", nil);
+        case NSValidationStringPatternMatchingError:
+            return NSLocalizedString(@"Pattern Matching Error", nil);
+        case NSManagedObjectContextLockingError:
+        case NSPersistentStoreCoordinatorLockingError:
+            return NSLocalizedString(@"Locking Error", nil);
+        case NSManagedObjectReferentialIntegrityError:
+            return NSLocalizedString(@"Referential Integrity Error", nil);
+        case NSManagedObjectExternalRelationshipError:
+            return NSLocalizedString(@"External Relationship Error", nil);
+        case NSManagedObjectMergeError:
+            return NSLocalizedString(@"Merge Error", nil);
+        case NSPersistentStoreInvalidTypeError:
+            return NSLocalizedString(@"Invalid Type", nil);
+        case NSPersistentStoreTypeMismatchError:
+            return NSLocalizedString(@"Type Mismatch", nil);
+        case NSPersistentStoreIncompatibleSchemaError:
+            return NSLocalizedString(@"Incompatible Schema", nil);
+        case NSPersistentStoreSaveError:
+            return NSLocalizedString(@"Save Error", nil);
+        case NSPersistentStoreIncompleteSaveError:
+            return NSLocalizedString(@"Incomplete Save", nil);
+        case NSPersistentStoreSaveConflictsError:
+            return NSLocalizedString(@"Save Conflicts", nil);
+        case NSCoreDataError:
+            return NSLocalizedString(@"Data Error", nil);
+        case NSPersistentStoreOperationError:
+            return NSLocalizedString(@"Operation Error", nil);
+        case NSPersistentStoreOpenError:
+            return NSLocalizedString(@"Persistent Store Open Error", nil);
+        case NSPersistentStoreTimeoutError:
+            return NSLocalizedString(@"Timeout Error", nil);
+        case NSPersistentStoreUnsupportedRequestTypeError:
+            return NSLocalizedString(@"Unsupported Request Type", nil);
+        case NSPersistentStoreIncompatibleVersionHashError:
+            return NSLocalizedString(@"Incompatible Version Hash", nil);
+        case NSMigrationError:
+            return NSLocalizedString(@"Migration Error", nil);
+        case NSMigrationCancelledError:
+            return NSLocalizedString(@"Migration Cancelled", nil);
+        case NSMigrationMissingSourceModelError:
+            return NSLocalizedString(@"Missing Source Model", nil);
+        case NSMigrationMissingMappingModelError:
+            return NSLocalizedString(@"Missing Mapping Model", nil);
+        case NSMigrationManagerSourceStoreError:
+            return NSLocalizedString(@"Source Store Error", nil);
+        case NSMigrationManagerDestinationStoreError:
+            return NSLocalizedString(@"Destination Store Error", nil);
+        case NSEntityMigrationPolicyError:
+            return NSLocalizedString(@"Entity Migration Policy Error", nil);
+        case NSSQLiteError:
+            return NSLocalizedString(@"Data Base Error", nil);
+        case NSInferredMappingModelError:
+            return NSLocalizedString(@"Inferred Mapping Model Error", nil);
+        case NSExternalRecordImportError:
+            return NSLocalizedString(@"External Record Import Error", nil);
+#endif
         default:
             if (NSFileErrorMinimum >= code
                 && code <= NSFileErrorMaximum) {
@@ -330,7 +497,7 @@
         case NSURLErrorCannotConnectToHost:
             return NSLocalizedString(@"Cannot Connect To Host", nil);
         case NSURLErrorNetworkConnectionLost:
-            return NSLocalizedString(@"Network Connection Lost", nil);
+            return NSLocalizedString(@"Connection Lost", nil);
         case NSURLErrorDNSLookupFailed:
             return NSLocalizedString(@"DNS Lookup Failed", nil);
         case NSURLErrorHTTPTooManyRedirects:
@@ -338,11 +505,11 @@
         case NSURLErrorResourceUnavailable:
             return NSLocalizedString(@"Resource Unavailable", nil);
         case NSURLErrorNotConnectedToInternet:
-            return NSLocalizedString(@"NotConnectedToInternet", nil);
+            return NSLocalizedString(@"Not Connected To Internet", nil);
         case NSURLErrorRedirectToNonExistentLocation:
-            return NSLocalizedString(@"RedirectToNonExistentLocation", nil);
+            return NSLocalizedString(@"Redirect To Non Existent Location", nil);
         case NSURLErrorBadServerResponse:
-            return NSLocalizedString(@"BadServerResponse", nil);
+            return NSLocalizedString(@"Bad Server Response", nil);
         case NSURLErrorUserCancelledAuthentication:
             return NSLocalizedString(@"User Cancelled Authentication", nil);
         case NSURLErrorUserAuthenticationRequired:
@@ -460,6 +627,90 @@
             return NSLocalizedString(@"Access Information Invalid", nil);
     }
     return NSLocalizedString(@"Account Error", nil);
+}
+
+#endif
+
+#pragma mark -
+
+#ifdef __CORELOCATION__
+
++ (NSString *)debugStringFromCoreLocationCode:(NSInteger)code
+{
+    switch (code) {
+        case kCLErrorLocationUnknown:
+            return mr_stringize_error_code(kCLErrorLocationUnknown);
+        case kCLErrorDenied:
+            return mr_stringize_error_code(kCLErrorDenied);
+        case kCLErrorNetwork:
+            return mr_stringize_error_code(kCLErrorNetwork);
+        case kCLErrorHeadingFailure:
+            return mr_stringize_error_code(kCLErrorHeadingFailure);
+        case kCLErrorRegionMonitoringDenied:
+            return mr_stringize_error_code(kCLErrorRegionMonitoringDenied);
+        case kCLErrorRegionMonitoringFailure:
+            return mr_stringize_error_code(kCLErrorRegionMonitoringFailure);
+        case kCLErrorRegionMonitoringSetupDelayed:
+            return mr_stringize_error_code(kCLErrorRegionMonitoringSetupDelayed);
+        case kCLErrorRegionMonitoringResponseDelayed:
+            return mr_stringize_error_code(kCLErrorRegionMonitoringResponseDelayed);
+        case kCLErrorGeocodeFoundNoResult:
+            return mr_stringize_error_code(kCLErrorGeocodeFoundNoResult);
+        case kCLErrorGeocodeFoundPartialResult:
+            return mr_stringize_error_code(kCLErrorGeocodeFoundPartialResult);
+        case kCLErrorGeocodeCanceled:
+            return mr_stringize_error_code(kCLErrorGeocodeCanceled);
+        case kCLErrorDeferredFailed:
+            return mr_stringize_error_code(kCLErrorDeferredFailed);
+        case kCLErrorDeferredNotUpdatingLocation:
+            return mr_stringize_error_code(kCLErrorDeferredNotUpdatingLocation);
+        case kCLErrorDeferredAccuracyTooLow:
+            return mr_stringize_error_code(kCLErrorDeferredAccuracyTooLow);
+        case kCLErrorDeferredDistanceFiltered:
+            return mr_stringize_error_code(kCLErrorDeferredDistanceFiltered);
+        case kCLErrorDeferredCanceled:
+            return mr_stringize_error_code(kCLErrorDeferredCanceled);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringFromCoreLocationCode:(NSInteger)code
+{
+    switch (code) {
+        case kCLErrorLocationUnknown:
+            return NSLocalizedString(@"Location Unknown", nil);
+        case kCLErrorDenied:
+            return NSLocalizedString(@"Denied", nil);
+        case kCLErrorNetwork:
+            return NSLocalizedString(@"Network Error", nil);
+        case kCLErrorHeadingFailure:
+            return NSLocalizedString(@"Heading Failure", nil);
+        case kCLErrorRegionMonitoringDenied:
+            return NSLocalizedString(@"Region Monitoring Denied", nil);
+        case kCLErrorRegionMonitoringFailure:
+            return NSLocalizedString(@"Region Monitoring Failure", nil);
+        case kCLErrorRegionMonitoringSetupDelayed:
+            return NSLocalizedString(@"Region Monitoring Setup Delayed", nil);
+        case kCLErrorRegionMonitoringResponseDelayed:
+            return NSLocalizedString(@"Region Monitoring Response Delayed", nil);
+        case kCLErrorGeocodeFoundNoResult:
+            return NSLocalizedString(@"Geocode Found No Result", nil);
+        case kCLErrorGeocodeFoundPartialResult:
+            return NSLocalizedString(@"Geocode Found Partial Result", nil);
+        case kCLErrorGeocodeCanceled:
+            return NSLocalizedString(@"Geocode Canceled", nil);
+        case kCLErrorDeferredFailed:
+            return NSLocalizedString(@"Deferred Failed", nil);
+        case kCLErrorDeferredNotUpdatingLocation:
+            return NSLocalizedString(@"Deferred Not Updating Location", nil);
+        case kCLErrorDeferredAccuracyTooLow:
+            return NSLocalizedString(@"Deferred Accuracy Too Low", nil);
+        case kCLErrorDeferredDistanceFiltered:
+            return NSLocalizedString(@"Deferred Distance Filtered", nil);
+        case kCLErrorDeferredCanceled:
+            return NSLocalizedString(@"Deferred Canceled", nil);
+    }
+    return NSLocalizedString(@"Location Error", nil);
 }
 
 #endif

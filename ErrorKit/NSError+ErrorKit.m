@@ -122,6 +122,17 @@
 
 #pragma mark -
 
+#ifdef __CORELOCATION__
+
+- (CLRegion *)alternateRegion
+{
+    return [self.userInfo objectForKey:kCLErrorUserInfoAlternateRegionKey];
+}
+
+#endif
+
+#pragma mark -
+
 #ifdef _AFNETWORKING_
 
 - (NSURLRequest *)failingURLRequest

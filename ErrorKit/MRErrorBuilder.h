@@ -96,7 +96,11 @@
 
 /// @name Creating and initializing Builder
 
-/// Creates and initializes an `MRErrorBuilder` object with data from another object.
+/**
+ Creates and initializes an `MRErrorBuilder` object with data from another object.
+ 
+ @discussion If no error parameter is passed, no buider is created and the return is nil.
+*/
 + (id)builderWithError:(NSError *)error;
 
 /// Creates and initializes an `MRErrorBuilder` object for a given domain and code.
@@ -105,7 +109,11 @@
 /// Creates and initializes an `MRErrorBuilder` object for a given domain and code with a given localized description.
 + (id)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription;
 
-///Returns a `MRErrorBuilder` object initialized for a given domain and code with a given userInfo dictionary.
+/**
+ Designated initializer.
+ 
+ @discussion Returns a `MRErrorBuilder` object initialized for a given domain and code with a given userInfo dictionary.
+ */
 - (id)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
 
 /// Adds a given key-value pair to the user info dictionary. If given value is nil, removes the given key and its associated value from the dictionary.
