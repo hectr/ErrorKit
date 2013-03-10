@@ -103,7 +103,11 @@
 */
 + (id)builderWithError:(NSError *)error;
 
-/// Creates and initializes an `MRErrorBuilder` object for a given domain and code.
+/**
+ Creates and initializes an `MRErrorBuilder` object for a given domain and code.
+ 
+ @discussion The builder is given a predefined localized description, according its domain and code; but this string may not be suitable for being presented to the user.
+ */
 + (id)builderWithDomain:(NSString *)domain code:(NSInteger)code;
 
 /// Creates and initializes an `MRErrorBuilder` object for a given domain and code with a given localized description.

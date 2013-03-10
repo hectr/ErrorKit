@@ -42,6 +42,11 @@
 #import "MRErrorFormatter_Accounts.h"
 #endif
 
+#ifdef _AFNETWORKING_
+#import "NSError_AFNetworking.h"
+#import "MRErrorBuilder_AFNetworking.h"
+#endif
+
 #ifdef _COREDATADEFINES_H
 #import "NSError_CoreData.h"
 #import "MRErrorBuilder_CoreData.h"
@@ -49,11 +54,6 @@
 
 #ifdef __CORELOCATION__
 #import "MRErrorBuilder_CoreLocation.h"
-#endif
-
-#ifdef _AFNETWORKING_
-#import "NSError_AFNetworking.h"
-#import "MRErrorBuilder_AFNetworking.h"
 #endif
 
 #ifndef MRLogError

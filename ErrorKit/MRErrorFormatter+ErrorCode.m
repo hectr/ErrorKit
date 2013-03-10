@@ -381,7 +381,7 @@
                 return NSLocalizedString(@"XPC Connection Error", nil);
             }
     }
-    return NSLocalizedString(@"Error", nil);
+    return NSLocalizedString(@"Unknown Error", nil);
 }
 
 + (NSString *)debugStringFromURLCode:(NSInteger)code

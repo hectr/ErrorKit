@@ -1,7 +1,7 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: en
-// Date: Sun Mar 10 19:18:08 2013
+// Date: Sun Mar 10 21:44:15 2013
 
 /* No comment provided by engineer. */
 "Access Information Invalid"="Access Information Invalid";
@@ -299,6 +299,9 @@
 
 /* No comment provided by engineer. */
 "No Write Permission"="No Write Permission";
+
+/* No comment provided by engineer. */
+"No error description provided"="No error description provided";
 
 /* No comment provided by engineer. */
 "Not Connected To Internet"="Not Connected To Internet";

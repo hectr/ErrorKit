@@ -23,14 +23,19 @@
 #import "MRErrorBuilder.h"
 #import "NSError+ErrorKit.h"
 #import "MRErrorFormatter.h"
+#import "MRErrorFormatter+ErrorCode.h"
+#ifdef ACCOUNTS_EXTERN
+#import "MRErrorFormatter_Accounts.h"
+#endif
+#ifdef _AFNETWORKING_
+#import "NSError_AFNetworking.h"
+#endif
 #ifdef _COREDATADEFINES_H
 #import "NSError_CoreData.h"
 #endif
 #ifdef __CORELOCATION__
 #import "NSError_CoreLocation.h"
-#endif
-#ifdef _AFNETWORKING_
-#import "NSError_AFNetworking.h"
+#import "MRErrorFormatter_CoreLocation.h"
 #endif
 
 #if  ! __has_feature(objc_arc)
@@ -67,6 +72,10 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.recoveryAttempter = error.recoveryAttempter;
     builder.underlyingError = error.underlyingError;
     builder.urlError = error.urlError;
+#ifdef _AFNETWORKING_
+    builder.failingURLRequest = error.failingURLRequest;
+    builder.failingURLResponse = error.failingURLResponse;
+#endif
 #ifdef _COREDATADEFINES_H
     builder.affectedObjects = error.affectedObjects;
     builder.affectedStores = error.affectedStores;
@@ -80,16 +89,30 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 #ifdef __CORELOCATION__
     builder.alternateRegion = error.alternateRegion;
 #endif
-#ifdef _AFNETWORKING_
-    builder.failingURLRequest = error.failingURLRequest;
-    builder.failingURLResponse = error.failingURLResponse;
-#endif
     return builder;
 }
 
 + (id)builderWithDomain:(NSString *)domain code:(NSInteger)code
 {
     MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
+    if ([domain isEqualToString:NSCocoaErrorDomain]) {
+        builder.localizedDescription = [MRErrorFormatter stringFromCocoaCode:code];
+    } else if ([domain isEqualToString:NSURLErrorDomain]) {
+        builder.localizedDescription = [MRErrorFormatter stringFromURLCode:code];
+    }
+#ifdef _AFNETWORKING_
+    else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
+        builder.localizedDescription = [MRErrorFormatter stringFromURLCode:code];
+    }
+#endif
+#ifdef __CORELOCATION__
+    else if ([domain isEqualToString:kCLErrorDomain]) {
+        builder.localizedDescription = [MRErrorFormatter stringFromURLCode:code];
+    }
+#endif
+    else {
+        builder.localizedDescription = NSLocalizedString(@"No error description provided", nil);
+    }
     return builder;
 }
 
@@ -102,6 +125,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 - (id)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
 {
+    NSParameterAssert(domain);
     self = [super init];
     if (self) {
         self.domain = domain;
@@ -286,6 +310,32 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #pragma mark -
 
+#ifdef _AFNETWORKING_
+
+- (NSURLRequest *)failingURLRequest
+{
+    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLRequestErrorKey];
+}
+
+- (void)setFailingURLRequest:(NSURLRequest *)failingURLRequest
+{
+    [self setUserInfoValue:failingURLRequest.copy forKey:AFNetworkingOperationFailingURLRequestErrorKey];
+}
+
+- (NSHTTPURLResponse *)failingURLResponse
+{
+    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLResponseErrorKey];
+}
+
+- (void)setFailingURLResponse:(NSHTTPURLResponse *)failingURLResponse
+{
+    [self setUserInfoValue:failingURLResponse.copy forKey:AFNetworkingOperationFailingURLResponseErrorKey];
+}
+
+#endif
+
+#pragma mark -
+
 #ifdef _COREDATADEFINES_H
 
 - (NSArray *)affectedObjects
@@ -382,32 +432,6 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 - (void)setAlternateRegion:(CLRegion *)alternateRegion
 {
     [self setUserInfoValue:alternateRegion.copy forKey:kCLErrorUserInfoAlternateRegionKey];
-}
-
-#endif
-
-#pragma mark -
-
-#ifdef _AFNETWORKING_
-
-- (NSURLRequest *)failingURLRequest
-{
-    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLRequestErrorKey];
-}
-
-- (void)setFailingURLRequest:(NSURLRequest *)failingURLRequest
-{
-    [self setUserInfoValue:failingURLRequest.copy forKey:AFNetworkingOperationFailingURLRequestErrorKey];
-}
-
-- (NSHTTPURLResponse *)failingURLResponse
-{
-    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLResponseErrorKey];
-}
-
-- (void)setFailingURLResponse:(NSHTTPURLResponse *)failingURLResponse
-{
-    [self setUserInfoValue:failingURLResponse.copy forKey:AFNetworkingOperationFailingURLResponseErrorKey];
 }
 
 #endif

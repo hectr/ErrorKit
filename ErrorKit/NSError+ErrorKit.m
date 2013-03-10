@@ -76,6 +76,22 @@
 
 #pragma mark -
 
+#ifdef _AFNETWORKING_
+
+- (NSURLRequest *)failingURLRequest
+{
+    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLRequestErrorKey];
+}
+
+- (NSHTTPURLResponse *)failingURLResponse
+{
+    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLResponseErrorKey];
+}
+
+#endif
+
+#pragma mark -
+
 #ifdef _COREDATADEFINES_H
 
 - (NSArray *)affectedObjects
@@ -127,22 +143,6 @@
 - (CLRegion *)alternateRegion
 {
     return [self.userInfo objectForKey:kCLErrorUserInfoAlternateRegionKey];
-}
-
-#endif
-
-#pragma mark -
-
-#ifdef _AFNETWORKING_
-
-- (NSURLRequest *)failingURLRequest
-{
-    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLRequestErrorKey];
-}
-
-- (NSHTTPURLResponse *)failingURLResponse
-{
-    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLResponseErrorKey];
 }
 
 #endif

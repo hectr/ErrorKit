@@ -496,6 +496,11 @@
   <translation text="No tiene permiso de escritura" lang="es"/>
   <translation text="Sense permís d'escriptura" lang="ca"/>
  </entry>
+ <entry key="No error description provided" comment="No comment provided by engineer.">
+  <translation text="No error description provided" lang="en"/>
+  <translation text="No se ha proporcionado ninguna descripción del error" lang="es"/>
+  <translation text="No s'ha proporcionat cap descripció de l'error" lang="ca"/>
+ </entry>
  <entry key="Not Connected To Internet" comment="No comment provided by engineer.">
   <translation text="Not Connected To Internet" lang="en"/>
   <translation text="No conectado a Internet" lang="es"/>

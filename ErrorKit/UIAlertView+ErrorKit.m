@@ -211,16 +211,16 @@ static char kMRAlertViewDelegateObjectKey;
 
 - (BOOL)isCancelledError
 {
-#ifdef __CORELOCATION__
-    if ([self.domain isEqualToString:kCLErrorDomain]) {
-        return (self.code == kCLErrorGeocodeCanceled ||
-                self.code == kCLErrorDeferredCanceled);
-    }
-#endif
 #ifdef _AFNETWORKING_
     if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
         return (self.code == NSURLErrorUserCancelledAuthentication ||
                 self.code == NSURLErrorCancelled);
+    }
+#endif
+#ifdef __CORELOCATION__
+    if ([self.domain isEqualToString:kCLErrorDomain]) {
+        return (self.code == kCLErrorGeocodeCanceled ||
+                self.code == kCLErrorDeferredCanceled);
     }
 #endif
     if ([self.domain isEqualToString:NSURLErrorDomain]) {
@@ -230,7 +230,7 @@ static char kMRAlertViewDelegateObjectKey;
 #ifdef _COREDATADEFINES_H
     return ((self.code == NSUserCancelledError || self.code == NSMigrationCancelledError) &&
             [self.domain isEqualToString:NSCocoaErrorDomain]);
-#else 
+#else
     return (self.code == NSUserCancelledError &&
             [self.domain isEqualToString:NSCocoaErrorDomain]);
 #endif

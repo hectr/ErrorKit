@@ -1,7 +1,7 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: ca
-// Date: Sun Mar 10 19:18:09 2013
+// Date: Sun Mar 10 21:44:15 2013
 
 /* No comment provided by engineer. */
 "Access Information Invalid"="Informació d'accés invàlida";
@@ -299,6 +299,9 @@
 
 /* No comment provided by engineer. */
 "No Write Permission"="Sense permís d'escriptura";
+
+/* No comment provided by engineer. */
+"No error description provided"="No s'ha proporcionat cap descripció de l'error";
 
 /* No comment provided by engineer. */
 "Not Connected To Internet"="No connectat a Internet";
