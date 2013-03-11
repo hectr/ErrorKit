@@ -28,7 +28,7 @@
 
 
 /**
- Adds getters for AFNetworkingOperationFailingURLRequestErrorKey and AFNetworkingOperationFailingURLResponseErrorKey user info values.
+ Adds getters for `AFNetworkingOperationFailingURLRequestErrorKey` and `AFNetworkingOperationFailingURLResponseErrorKey` user info values.
  
  @warning This extension requires the AFNetworking library. Add an `AFNetworking.h` import to the header prefix of the project.
  */

@@ -715,4 +715,20 @@
 
 #endif
 
+#pragma mark -
+
+#ifdef _JSONKIT_H_
+
++ (NSString *)debugStringFromJSONKitCode:(NSInteger)code
+{
+    return @(code).stringValue;
+}
+
++ (NSString *)stringFromCoreLocationCode:(NSInteger)code
+{
+    return NSLocalizedString(@"JSON Error", nil);
+}
+
+#endif
+
 @end

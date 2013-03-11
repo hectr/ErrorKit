@@ -53,7 +53,15 @@
 #endif
 
 #ifdef __CORELOCATION__
+#import "NSError_CoreLocation.h"
 #import "MRErrorBuilder_CoreLocation.h"
+#import "MRErrorFormatter_CoreLocation.h"
+#endif
+
+#ifdef _JSONKIT_H_
+#import "NSError_JSONKit.h"
+#import "MRErrorBuilder_JSONKit.h"
+#import "MRErrorFormatter_JSONKit.h"
 #endif
 
 #ifndef MRLogError

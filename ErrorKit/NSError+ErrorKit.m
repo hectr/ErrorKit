@@ -147,4 +147,20 @@
 
 #endif
 
+#pragma mark -
+
+#ifdef _JSONKIT_H_
+
+- (unsigned long)atIndex
+{
+    return [[self.userInfo objectForKey:@"JKAtIndexKey"] unsignedLongValue];
+}
+
+- (unsigned long)lineNumber
+{
+    return [[self.userInfo objectForKey:@"JKLineNumberKey"] unsignedLongValue];
+}
+
+#endif
+
 @end

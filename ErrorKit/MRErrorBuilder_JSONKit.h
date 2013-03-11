@@ -1,4 +1,4 @@
-// MRErrorBuilder_CoreLocation.h
+// MRErrorBuilder_JSONKit.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,21 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 #import "MRErrorBuilder.h"
 
-#ifndef __CORELOCATION__
-#warning This extension requires the Core Location framework.
+#ifndef _JSONKIT_H_
+#warning This extension requires the JSONKit library.
 #endif
 
 
 /**
- Adds accessors for `kCLErrorUserInfoAlternateRegionKey` user info value.
+ Adds accessors for `@"JKAtIndexKey"` and `@"JKLineNumberKey"` user info values.
  
- @discussion **Warning:** This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
+ @discussion **Warning:** This extension requires the JSONKit library. Add an `JSONKit.h` import to the header prefix of the project.
  */
-@interface MRErrorBuilder (ErrorKit_CoreLocation)
+@interface MRErrorBuilder (ErrorKit_JSONKit)
 
-/// Accessors for `kCLErrorUserInfoAlternateRegionKey` user info value.
-@property (nonatomic, copy) CLRegion *alternateRegion;
+/// @name CoreLocation userInfo values
+
+/// Accessors for `@"JKAtIndexKey"` user info value.
+@property (nonatomic, readonly) unsigned long atIndex;
+
+/// Accessors for `@"JKLineNumberKey"` user info value.
+@property (nonatomic, readonly) unsigned long lineNumber;
 
 @end

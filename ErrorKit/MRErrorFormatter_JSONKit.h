@@ -1,4 +1,4 @@
-// MRErrorBuilder_CoreLocation.h
+// MRErrorFormatter_JSONKit.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,21 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRErrorBuilder.h"
+#import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef __CORELOCATION__
-#warning This extension requires the Core Location framework.
+#ifndef _JSONKIT_H_
+#warning This extension requires the JSONKit library.
 #endif
 
 
 /**
- Adds accessors for `kCLErrorUserInfoAlternateRegionKey` user info value.
+ Adds methods for *stringizing* `@"JKErrorDomain"` error codes.
  
- @discussion **Warning:** This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
+ @discussion **Warning:** This extension requires the JSONKit library. Add a `JSONKit.h` import to the header prefix of the project.
  */
-@interface MRErrorBuilder (ErrorKit_CoreLocation)
+@interface MRErrorFormatter (ErrorKit_JSONKit)
 
-/// Accessors for `kCLErrorUserInfoAlternateRegionKey` user info value.
-@property (nonatomic, copy) CLRegion *alternateRegion;
+/// @name Strings for debugging
+
+/// Returns a string representation of the given `@"JKErrorDomain"` error code.
++ (NSString *)debugStringFromJSONKitCode:(NSInteger)errorCode;
+
+/// @name Strings for presentation
+
+/// Returns a string representation of the given `@"JKErrorDomain"` error code.
++ (NSString *)stringFromJSONKitCode:(NSInteger)errorCode
 
 @end

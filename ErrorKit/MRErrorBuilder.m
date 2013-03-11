@@ -89,6 +89,10 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 #ifdef __CORELOCATION__
     builder.alternateRegion = error.alternateRegion;
 #endif
+#ifdef _JSONKIT_H_
+    builder.atIndex = error.atIndex;
+    builder.lineNumber = error.lineNumber;
+#endif
     return builder;
 }
 
@@ -432,6 +436,32 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 - (void)setAlternateRegion:(CLRegion *)alternateRegion
 {
     [self setUserInfoValue:alternateRegion.copy forKey:kCLErrorUserInfoAlternateRegionKey];
+}
+
+#endif
+
+#pragma mark -
+
+#ifdef _JSONKIT_H_
+
+- (unsigned long)atIndex
+{
+    return [[self.userInfo objectForKey:@"JKAtIndexKey"] unsignedLongValue];
+}
+
+- (void)setAtIndex:(unsigned long)atIndex
+{
+    [self setUserInfoValue:@(atIndex) forKey:@"JKAtIndexKey"];
+}
+
+- (unsigned long)lineNumber
+{
+    return [[self.userInfo objectForKey:@"JKLineNumberKey"] unsignedLongValue];
+}
+
+- (void)setLineNumber:(unsigned long)lineNumber
+{
+    [self setUserInfoValue:@(lineNumber) forKey:@"JKLineNumberKey"];
 }
 
 #endif
