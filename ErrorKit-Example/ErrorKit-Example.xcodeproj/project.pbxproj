@@ -71,6 +71,7 @@
 		84DCF7C616EC0CFF00F50750 /* MRErrorFormatter_CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_CoreLocation.h; path = ../../ErrorKit/MRErrorFormatter_CoreLocation.h; sourceTree = "<group>"; };
 		84DCF7C716EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+ErrorCode.h"; path = "../../ErrorKit/MRErrorFormatter+ErrorCode.h"; sourceTree = "<group>"; };
 		84DCF7C816EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+ErrorCode.m"; path = "../../ErrorKit/MRErrorFormatter+ErrorCode.m"; sourceTree = "<group>"; };
+		84DD938116EFCBAC002F63A1 /* MRErrorFormatter_Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_Admob.h; path = ../../ErrorKit/MRErrorFormatter_Admob.h; sourceTree = "<group>"; };
 		84EB27DB16EAD98600F98BD0 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAlertRecoveryAttempter.h; path = ../../ErrorKit/MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
 		84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAlertRecoveryAttempter.m; path = ../../ErrorKit/MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
 		84EB27DD16EAD98700F98BD0 /* MRBlockRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRBlockRecoveryAttempter.h; path = ../../ErrorKit/MRBlockRecoveryAttempter.h; sourceTree = "<group>"; };
@@ -176,6 +177,7 @@
 				84DCF7C716EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.h */,
 				84DCF7C816EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m */,
 				84DCF7C516EC0CFE00F50750 /* MRErrorFormatter_Accounts.h */,
+				84DD938116EFCBAC002F63A1 /* MRErrorFormatter_Admob.h */,
 				84DCF7C616EC0CFF00F50750 /* MRErrorFormatter_CoreLocation.h */,
 				84ECCA0D16EE8E22002228AE /* MRErrorFormatter_JSONKit.h */,
 				846F6B7516EFABD20005B913 /* MRErrorFormatter_Security.h */,

@@ -28,8 +28,18 @@
  </entry>
  <entry key="Account Type Invalid" comment="No comment provided by engineer.">
   <translation text="Account Type Invalid" lang="en"/>
-  <translation text="Tipo de cuenta inválido" lang="es"/>
-  <translation text="Tipus de compte invàlid" lang="ca"/>
+  <translation text="Tipo de cuenta no válido" lang="es"/>
+  <translation text="Tipus de compte no vàlid" lang="ca"/>
+ </entry>
+ <entry key="Admob Error" comment="No comment provided by engineer.">
+  <translation text="Admob Error" lang="en"/>
+  <translation text="Error de Admob" lang="es"/>
+  <translation text="Error d'Admob" lang="ca"/>
+ </entry>
+ <entry key="Authorization/Authentication Failed" comment="No comment provided by engineer.">
+  <translation text="Authorization/Authentication Failed" lang="en"/>
+  <translation text="Fallo de autorización/autenticación" lang="es"/>
+  <translation text="Error d'autorització/autenticació" lang="ca"/>
  </entry>
  <entry key="Bad Server Response" comment="No comment provided by engineer.">
   <translation text="Bad Server Response" lang="en"/>
@@ -401,10 +411,25 @@
   <translation text="Error de correspondencia en el modelo inferido" lang="es"/>
   <translation text="Error de correspondencia al model inferit" lang="ca"/>
  </entry>
+ <entry key="Interaction Not Allowed" comment="No comment provided by engineer.">
+  <translation text="Interaction Not Allowed" lang="en"/>
+  <translation text="Interacción no permitido" lang="es"/>
+  <translation text="Interacció no permesa" lang="ca"/>
+ </entry>
  <entry key="International Roaming Off" comment="No comment provided by engineer.">
   <translation text="International Roaming Off" lang="en"/>
   <translation text="Roaming internacional desactivado" lang="es"/>
   <translation text="Roaming internacional desactivat" lang="ca"/>
+ </entry>
+ <entry key="Interstitial Already Used" comment="No comment provided by engineer.">
+  <translation text="Interstitial Already Used" lang="en"/>
+  <translation text="Interstitial ya usado" lang="es"/>
+  <translation text="Interstitial ja utilitzat" lang="ca"/>
+ </entry>
+ <entry key="Invalid Ad Size" comment="No comment provided by engineer.">
+  <translation text="Invalid Ad Size" lang="en"/>
+  <translation text="Tamaño de anuncio no válido" lang="es"/>
+  <translation text="Mida d'anunci no vàlida" lang="ca"/>
  </entry>
  <entry key="Invalid Date" comment="No comment provided by engineer.">
   <translation text="Invalid Date" lang="en"/>
@@ -414,12 +439,47 @@
  <entry key="Invalid File Name" comment="No comment provided by engineer.">
   <translation text="Invalid File Name" lang="en"/>
   <translation text="Nombre de archivo no válido" lang="es"/>
-  <translation text="Nom de fitxer invàlid" lang="ca"/>
+  <translation text="Nom de fitxer no vàlid" lang="ca"/>
+ </entry>
+ <entry key="Invalid Parameter" comment="No comment provided by engineer.">
+  <translation text="Invalid Parameter" lang="en"/>
+  <translation text="Parámetro no válido" lang="es"/>
+  <translation text="Paràmetre no vàlid" lang="ca"/>
+ </entry>
+ <entry key="Invalid Request" comment="No comment provided by engineer.">
+  <translation text="Invalid Request" lang="en"/>
+  <translation text="Petición no válida" lang="es"/>
+  <translation text="Sol·licitud no vàlida" lang="ca"/>
+ </entry>
+ <entry key="Invalid Response" comment="No comment provided by engineer.">
+  <translation text="Invalid Response" lang="en"/>
+  <translation text="Respuesta inválida" lang="es"/>
+  <translation text="Resposta invàlida" lang="ca"/>
  </entry>
  <entry key="Invalid Type" comment="No comment provided by engineer.">
   <translation text="Invalid Type" lang="en"/>
-  <translation text="Tipo inválido" lang="es"/>
-  <translation text="Tipus invàlid" lang="ca"/>
+  <translation text="Tipo no válido" lang="es"/>
+  <translation text="Tipus no vàlid" lang="ca"/>
+ </entry>
+ <entry key="Item Already Exists" comment="No comment provided by engineer.">
+  <translation text="Item Already Exists" lang="en"/>
+  <translation text="El elemento ya existe" lang="es"/>
+  <translation text="L'eElement ja existeix" lang="ca"/>
+ </entry>
+ <entry key="Item Not Found" comment="No comment provided by engineer.">
+  <translation text="Item Not Found" lang="en"/>
+  <translation text="Elemento no encontrado" lang="es"/>
+  <translation text="Element no trobat" lang="ca"/>
+ </entry>
+ <entry key="JSON Error" comment="No comment provided by engineer.">
+  <translation text="JSON Error" lang="en"/>
+  <translation text="Error en documento JSON" lang="es"/>
+  <translation text="Error a document JSON" lang="ca"/>
+ </entry>
+ <entry key="Keychain Error" comment="No comment provided by engineer.">
+  <translation text="Keychain Error" lang="en"/>
+  <translation text="Error del Gestor de claves" lang="es"/>
+  <translation text="Error del Gestor de claus" lang="ca"/>
  </entry>
  <entry key="Location Error" comment="No comment provided by engineer.">
   <translation text="Location Error" lang="en"/>
@@ -435,6 +495,16 @@
   <translation text="Locking Error" lang="en"/>
   <translation text="Error de bloqueo" lang="es"/>
   <translation text="Error de bloqueig" lang="ca"/>
+ </entry>
+ <entry key="Mediation Adapter Error" comment="No comment provided by engineer.">
+  <translation text="Mediation Adapter Error" lang="en"/>
+  <translation text="Error en el adaptador de mediación" lang="es"/>
+  <translation text="Error a l'adaptador de mediació" lang="ca"/>
+ </entry>
+ <entry key="Memory Allocation Error" comment="No comment provided by engineer.">
+  <translation text="Memory Allocation Error" lang="en"/>
+  <translation text="Error de asignación de memoria" lang="es"/>
+  <translation text="Error d'assignació de memòria" lang="ca"/>
  </entry>
  <entry key="Merge Error" comment="No comment provided by engineer.">
   <translation text="Merge Error" lang="en"/>
@@ -476,6 +546,16 @@
   <translation text="Error de red" lang="es"/>
   <translation text="Error de xarxa" lang="ca"/>
  </entry>
+ <entry key="No Ad Error" comment="No comment provided by engineer.">
+  <translation text="No Ad Error" lang="en"/>
+  <translation text="Anuncio no disponible" lang="es"/>
+  <translation text="Anunci no disponible" lang="ca"/>
+ </entry>
+ <entry key="No Error" comment="No comment provided by engineer.">
+  <translation text="No Error" lang="en"/>
+  <translation text="Ningún error" lang="es"/>
+  <translation text="Cap error" lang="ca"/>
+ </entry>
  <entry key="No Permissions To Read File" comment="No comment provided by engineer.">
   <translation text="No Permissions To Read File" lang="en"/>
   <translation text="Sin permisos para leer el archivo" lang="es"/>
@@ -490,6 +570,11 @@
   <translation text="No Such File" lang="en"/>
   <translation text="No hay tal archivo" lang="es"/>
   <translation text="No hi ha arxiu" lang="ca"/>
+ </entry>
+ <entry key="No Trust Results Available" comment="No comment provided by engineer.">
+  <translation text="No Trust Results Available" lang="en"/>
+  <translation text="Resultados no disponibles" lang="es"/>
+  <translation text="Resultats no disponibles" lang="ca"/>
  </entry>
  <entry key="No Write Permission" comment="No comment provided by engineer.">
   <translation text="No Write Permission" lang="en"/>
@@ -520,6 +605,11 @@
   <translation text="OK" lang="en"/>
   <translation text="OK" lang="es"/>
   <translation text="OK" lang="ca"/>
+ </entry>
+ <entry key="OS Version Too Low" comment="No comment provided by engineer.">
+  <translation text="OS Version Too Low" lang="en"/>
+  <translation text="La versión del SO demasiado baja" lang="es"/>
+  <translation text="La versió del SO és massa baixa" lang="ca"/>
  </entry>
  <entry key="Operation Error" comment="No comment provided by engineer.">
   <translation text="Operation Error" lang="en"/>
@@ -671,6 +761,11 @@
   <translation text="El certificado del servidor no es de confianza" lang="es"/>
   <translation text="El certificat del servidor no és de confiança" lang="ca"/>
  </entry>
+ <entry key="Server Error" comment="No comment provided by engineer.">
+  <translation text="Server Error" lang="en"/>
+  <translation text="Error de servidor" lang="es"/>
+  <translation text="Error de servidor" lang="ca"/>
+ </entry>
  <entry key="Source Store Error" comment="No comment provided by engineer.">
   <translation text="Source Store Error" lang="en"/>
   <translation text="Error en el almacén de origen" lang="es"/>
@@ -700,6 +795,11 @@
   <translation text="URL Error" lang="en"/>
   <translation text="Error de URL" lang="es"/>
   <translation text="Error d'URL" lang="ca"/>
+ </entry>
+ <entry key="Unimplemented" comment="No comment provided by engineer.">
+  <translation text="Unimplemented" lang="en"/>
+  <translation text="No implementado" lang="es"/>
+  <translation text="No implementat" lang="ca"/>
  </entry>
  <entry key="Unknown Encoding" comment="No comment provided by engineer.">
   <translation text="Unknown Encoding" lang="en"/>

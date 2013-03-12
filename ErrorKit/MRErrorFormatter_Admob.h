@@ -1,4 +1,4 @@
-// MRErrorFormatter_Security.h
+// MRErrorFormatter_Admob.h
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,26 +20,26 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef _SECURITY_SECITEM_H_
-#warning This extension requires the Security framework.
+#if !defined(GAD_SIMULATOR_ID) && !defined(GAD_SIZE_320x50)
+#warning This extension requires the Admob library.
 #endif
 
 
 /**
- Adds methods for *stringizing* the most common result codes returned by Keychain Services.
+ Adds methods for *stringizing* `kGADErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the Security framework. Add a `Security/Security.h` import to the header prefix of the project.
+ @discussion **Warning:** This extension requires the Admob library. Add a `GADBannerView.h` import to the header prefix of the project.
  */
-@interface MRErrorFormatter (ErrorKit_Security)
+@interface MRErrorFormatter (ErrorKit_Admob)
 
 /// @name Strings for debugging
 
-/// Returns a string representation of the given result code.
-+ (NSString *)debugStringFromKeychainServiceCode:(NSInteger)resultCode;
+/// Returns a string representation of the given `kGADErrorDomain` error code.
++ (NSString *)debugStringFromAdmobCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
-/// Returns a string representation of the given result code.
-+ (NSString *)stringFromKeychainServiceCode:(NSInteger)resultCode;
+/// Returns a string representation of the given `kGADErrorDomain` error code.
++ (NSString *)stringFromAdmobCode:(NSInteger)errorCode;
 
 @end

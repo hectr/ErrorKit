@@ -42,6 +42,10 @@
 #import "MRErrorFormatter_Accounts.h"
 #endif
 
+#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+#import "MRErrorFormatter_Admob.h"
+#endif
+
 #ifdef _AFNETWORKING_
 #import "NSError_AFNetworking.h"
 #import "MRErrorBuilder_AFNetworking.h"

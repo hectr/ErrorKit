@@ -633,6 +633,69 @@
 
 #pragma mark -
 
+#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+
++ (NSString *)debugStringFromAdmobCode:(NSInteger)errorCode
+{
+    switch (code) {
+        case kGADErrorInvalidRequest:
+            return mr_stringize_error_code(kGADErrorInvalidRequest);
+        case kGADErrorNoFill:
+            return mr_stringize_error_code(kGADErrorNoFill);
+        case kGADErrorNetworkError:
+            return mr_stringize_error_code(kGADErrorNetworkError);
+        case kGADErrorServerError:
+            return mr_stringize_error_code(kGADErrorServerError);
+        case kGADErrorOSVersionTooLow:
+            return mr_stringize_error_code(kGADErrorOSVersionTooLow);
+        case kGADErrorTimeout:
+            return mr_stringize_error_code(kGADErrorTimeout);
+        case kGADErrorInterstitialAlreadyUsed:
+            return mr_stringize_error_code(kGADErrorInterstitialAlreadyUsed);
+        case kGADErrorMediationDataError:
+            return mr_stringize_error_code(kGADErrorMediationDataError);
+        case kGADErrorMediationAdapterError:
+            return mr_stringize_error_code(kGADErrorMediationAdapterError);
+        case kGADErrorMediationNoFill:
+            return mr_stringize_error_code(kGADErrorMediationNoFill);
+        case kGADErrorMediationInvalidAdSize:
+            return mr_stringize_error_code(kGADErrorMediationInvalidAdSize);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringFromAdmobCode:(NSInteger)errorCode
+{
+    switch (code) {
+        case kGADErrorInvalidRequest:
+            return NSLocalizedString(@"Invalid Request", nil);
+        case kGADErrorNoFill:
+        case kGADErrorMediationNoFill:
+            return NSLocalizedString(@"No Ad Error", nil);
+        case kGADErrorNetworkError:
+            return NSLocalizedString(@"Network Error", nil);
+        case kGADErrorServerError:
+            return NSLocalizedString(@"Server Error", nil);
+        case kGADErrorOSVersionTooLow:
+            return NSLocalizedString(@"OS Version Too Low", nil);
+        case kGADErrorTimeout:
+            return NSLocalizedString(@"Timed Out", nil);
+        case kGADErrorInterstitialAlreadyUsed:
+            return NSLocalizedString(@"Interstitial Already Used", nil);
+        case kGADErrorMediationDataError:
+            return NSLocalizedString(@"Invalid Response", nil);
+        case kGADErrorMediationAdapterError:
+            return NSLocalizedString(@"Mediation Adapter Error", nil);
+        case kGADErrorMediationInvalidAdSize:
+            return NSLocalizedString(@"Invalid Ad Size", nil);
+    }
+    return NSLocalizedString(@"Admob Error", nil);
+}
+
+#endif
+
+#pragma mark -
+
 #ifdef __CORELOCATION__
 
 + (NSString *)debugStringFromCoreLocationCode:(NSInteger)code

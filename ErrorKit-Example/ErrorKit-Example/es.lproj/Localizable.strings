@@ -1,7 +1,7 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: es
-// Date: Sun Mar 10 21:44:15 2013
+// Date: Tue Mar 12 22:33:55 2013
 
 /* No comment provided by engineer. */
 "Access Information Invalid"="Información de acceso inválida";
@@ -19,7 +19,13 @@
 "Account Not Found"="Cuenta no encontrada";
 
 /* No comment provided by engineer. */
-"Account Type Invalid"="Tipo de cuenta inválido";
+"Account Type Invalid"="Tipo de cuenta no válido";
+
+/* No comment provided by engineer. */
+"Admob Error"="Error de Admob";
+
+/* No comment provided by engineer. */
+"Authorization/Authentication Failed"="Fallo de autorización/autenticación";
 
 /* No comment provided by engineer. */
 "Bad Server Response"="Respuesta del servidor inválida";
@@ -244,7 +250,16 @@
 "Inferred Mapping Model Error"="Error de correspondencia en el modelo inferido";
 
 /* No comment provided by engineer. */
+"Interaction Not Allowed"="Interacción no permitido";
+
+/* No comment provided by engineer. */
 "International Roaming Off"="Roaming internacional desactivado";
+
+/* No comment provided by engineer. */
+"Interstitial Already Used"="Interstitial ya usado";
+
+/* No comment provided by engineer. */
+"Invalid Ad Size"="Tamaño de anuncio no válido";
 
 /* No comment provided by engineer. */
 "Invalid Date"="Fecha inválida";
@@ -253,7 +268,28 @@
 "Invalid File Name"="Nombre de archivo no válido";
 
 /* No comment provided by engineer. */
-"Invalid Type"="Tipo inválido";
+"Invalid Parameter"="Parámetro no válido";
+
+/* No comment provided by engineer. */
+"Invalid Request"="Petición no válida";
+
+/* No comment provided by engineer. */
+"Invalid Response"="Respuesta inválida";
+
+/* No comment provided by engineer. */
+"Invalid Type"="Tipo no válido";
+
+/* No comment provided by engineer. */
+"Item Already Exists"="El elemento ya existe";
+
+/* No comment provided by engineer. */
+"Item Not Found"="Elemento no encontrado";
+
+/* No comment provided by engineer. */
+"JSON Error"="Error en documento JSON";
+
+/* No comment provided by engineer. */
+"Keychain Error"="Error del Gestor de claves";
 
 /* No comment provided by engineer. */
 "Location Error"="Error de ubicación";
@@ -263,6 +299,12 @@
 
 /* No comment provided by engineer. */
 "Locking Error"="Error de bloqueo";
+
+/* No comment provided by engineer. */
+"Mediation Adapter Error"="Error en el adaptador de mediación";
+
+/* No comment provided by engineer. */
+"Memory Allocation Error"="Error de asignación de memoria";
 
 /* No comment provided by engineer. */
 "Merge Error"="Combinación fallida";
@@ -289,6 +331,12 @@
 "Network Error"="Error de red";
 
 /* No comment provided by engineer. */
+"No Ad Error"="Anuncio no disponible";
+
+/* No comment provided by engineer. */
+"No Error"="Ningún error";
+
+/* No comment provided by engineer. */
 "No Permissions To Read File"="Sin permisos para leer el archivo";
 
 /* No comment provided by engineer. */
@@ -296,6 +344,9 @@
 
 /* No comment provided by engineer. */
 "No Such File"="No hay tal archivo";
+
+/* No comment provided by engineer. */
+"No Trust Results Available"="Resultados no disponibles";
 
 /* No comment provided by engineer. */
 "No Write Permission"="No tiene permiso de escritura";
@@ -314,6 +365,9 @@
 
 /* No comment provided by engineer. */
 "OK"="OK";
+
+/* No comment provided by engineer. */
+"OS Version Too Low"="La versión del SO demasiado baja";
 
 /* No comment provided by engineer. */
 "Operation Error"="Error en la operación";
@@ -406,6 +460,9 @@
 "Server Certificate Untrusted"="El certificado del servidor no es de confianza";
 
 /* No comment provided by engineer. */
+"Server Error"="Error de servidor";
+
+/* No comment provided by engineer. */
 "Source Store Error"="Error en el almacén de origen";
 
 /* No comment provided by engineer. */
@@ -422,6 +479,9 @@
 
 /* No comment provided by engineer. */
 "URL Error"="Error de URL";
+
+/* No comment provided by engineer. */
+"Unimplemented"="No implementado";
 
 /* No comment provided by engineer. */
 "Unknown Encoding"="Codificación desconocida";

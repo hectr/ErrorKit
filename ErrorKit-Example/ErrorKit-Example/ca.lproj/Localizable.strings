@@ -1,7 +1,7 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: ca
-// Date: Sun Mar 10 21:44:15 2013
+// Date: Tue Mar 12 22:33:55 2013
 
 /* No comment provided by engineer. */
 "Access Information Invalid"="Informació d'accés invàlida";
@@ -19,7 +19,13 @@
 "Account Not Found"="Compte no trobat";
 
 /* No comment provided by engineer. */
-"Account Type Invalid"="Tipus de compte invàlid";
+"Account Type Invalid"="Tipus de compte no vàlid";
+
+/* No comment provided by engineer. */
+"Admob Error"="Error d'Admob";
+
+/* No comment provided by engineer. */
+"Authorization/Authentication Failed"="Error d'autorització/autenticació";
 
 /* No comment provided by engineer. */
 "Bad Server Response"="Resposta de servidor invàlida";
@@ -244,16 +250,46 @@
 "Inferred Mapping Model Error"="Error de correspondencia al model inferit";
 
 /* No comment provided by engineer. */
+"Interaction Not Allowed"="Interacció no permesa";
+
+/* No comment provided by engineer. */
 "International Roaming Off"="Roaming internacional desactivat";
+
+/* No comment provided by engineer. */
+"Interstitial Already Used"="Interstitial ja utilitzat";
+
+/* No comment provided by engineer. */
+"Invalid Ad Size"="Mida d'anunci no vàlida";
 
 /* No comment provided by engineer. */
 "Invalid Date"="Data invàlida";
 
 /* No comment provided by engineer. */
-"Invalid File Name"="Nom de fitxer invàlid";
+"Invalid File Name"="Nom de fitxer no vàlid";
 
 /* No comment provided by engineer. */
-"Invalid Type"="Tipus invàlid";
+"Invalid Parameter"="Paràmetre no vàlid";
+
+/* No comment provided by engineer. */
+"Invalid Request"="Sol·licitud no vàlida";
+
+/* No comment provided by engineer. */
+"Invalid Response"="Resposta invàlida";
+
+/* No comment provided by engineer. */
+"Invalid Type"="Tipus no vàlid";
+
+/* No comment provided by engineer. */
+"Item Already Exists"="L'eElement ja existeix";
+
+/* No comment provided by engineer. */
+"Item Not Found"="Element no trobat";
+
+/* No comment provided by engineer. */
+"JSON Error"="Error a document JSON";
+
+/* No comment provided by engineer. */
+"Keychain Error"="Error del Gestor de claus";
 
 /* No comment provided by engineer. */
 "Location Error"="Error d'ubicació";
@@ -263,6 +299,12 @@
 
 /* No comment provided by engineer. */
 "Locking Error"="Error de bloqueig";
+
+/* No comment provided by engineer. */
+"Mediation Adapter Error"="Error a l'adaptador de mediació";
+
+/* No comment provided by engineer. */
+"Memory Allocation Error"="Error d'assignació de memòria";
 
 /* No comment provided by engineer. */
 "Merge Error"="Error de combinació";
@@ -289,6 +331,12 @@
 "Network Error"="Error de xarxa";
 
 /* No comment provided by engineer. */
+"No Ad Error"="Anunci no disponible";
+
+/* No comment provided by engineer. */
+"No Error"="Cap error";
+
+/* No comment provided by engineer. */
 "No Permissions To Read File"="Sense permís per llegir l'arxiu";
 
 /* No comment provided by engineer. */
@@ -296,6 +344,9 @@
 
 /* No comment provided by engineer. */
 "No Such File"="No hi ha arxiu";
+
+/* No comment provided by engineer. */
+"No Trust Results Available"="Resultats no disponibles";
 
 /* No comment provided by engineer. */
 "No Write Permission"="Sense permís d'escriptura";
@@ -314,6 +365,9 @@
 
 /* No comment provided by engineer. */
 "OK"="OK";
+
+/* No comment provided by engineer. */
+"OS Version Too Low"="La versió del SO és massa baixa";
 
 /* No comment provided by engineer. */
 "Operation Error"="Error a l'operació";
@@ -406,6 +460,9 @@
 "Server Certificate Untrusted"="El certificat del servidor no és de confiança";
 
 /* No comment provided by engineer. */
+"Server Error"="Error de servidor";
+
+/* No comment provided by engineer. */
 "Source Store Error"="Error al magatzem d'origen";
 
 /* No comment provided by engineer. */
@@ -422,6 +479,9 @@
 
 /* No comment provided by engineer. */
 "URL Error"="Error d'URL";
+
+/* No comment provided by engineer. */
+"Unimplemented"="No implementat";
 
 /* No comment provided by engineer. */
 "Unknown Encoding"="Codificació de desconeguda";
