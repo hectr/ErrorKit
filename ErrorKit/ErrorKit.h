@@ -64,6 +64,10 @@
 #import "MRErrorFormatter_JSONKit.h"
 #endif
 
+#ifdef _SECURITY_SECITEM_H_
+#import "MRErrorFormatter_Security.h"
+#endif
+
 #ifndef MRLogError
 #define MRLogError(error)                                                    \
     do {                                                                     \

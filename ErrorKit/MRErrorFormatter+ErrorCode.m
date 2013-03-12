@@ -731,4 +731,60 @@
 
 #endif
 
+#pragma mark -
+
+#ifdef _SECURITY_SECITEM_H_
+
++ (NSString *)debugStringFromKeychainServiceCode:(NSInteger)code
+{
+    switch (code) {
+        case errSecSuccess:
+            return mr_stringize_error_code(errSecSuccess);
+        case errSecUnimplemented:
+            return mr_stringize_error_code(errSecUnimplemented);
+        case errSecParam:
+            return mr_stringize_error_code(errSecParam);
+        case errSecAllocate:
+            return mr_stringize_error_code(errSecAllocate);
+        case errSecNotAvailable:
+            return mr_stringize_error_code(errSecNotAvailable);
+        case errSecAuthFailed:
+            return mr_stringize_error_code(errSecAuthFailed);
+        case errSecDuplicateItem:
+            return mr_stringize_error_code(errSecDuplicateItem);
+        case errSecItemNotFound:
+            return mr_stringize_error_code(errSecItemNotFound);
+        case errSecInteractionNotAllowed:
+            return mr_stringize_error_code(errSecInteractionNotAllowed);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringFromKeychainServiceCode:(NSInteger)code
+{
+    switch (code) {
+        case errSecSuccess:
+            return NSLocalizedString(@"No Error", nil);
+        case errSecUnimplemented:
+            return NSLocalizedString(@"Unimplemented", nil);
+        case errSecParam:
+            return NSLocalizedString(@"Invalid Parameter", nil);
+        case errSecAllocate:
+            return NSLocalizedString(@"Memory Allocation Error", nil);
+        case errSecNotAvailable:
+            return NSLocalizedString(@"No Trust Results Available", nil);
+        case errSecAuthFailed:
+            return NSLocalizedString(@"Authorization/Authentication Failed", nil);
+        case errSecDuplicateItem:
+            return NSLocalizedString(@"Item Already Exists", nil);
+        case errSecItemNotFound:
+            return NSLocalizedString(@"Item Not Found", nil);
+        case errSecInteractionNotAllowed:
+            return NSLocalizedString(@"Interaction Not Allowed", nil);
+    }
+    return NSLocalizedString(@"Keychain Error", nil);
+}
+
+#endif
+
 @end
