@@ -37,11 +37,11 @@
 /// @name Strings for debugging
 
 /// Returns a string representation of the given `ACErrorDomain` error code.
-+ (NSString *)debugStringFromAccountsCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithAccountsCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `ACErrorDomain` error code.
-+ (NSString *)stringFromAccountsCode:(NSInteger)errorCode;
++ (NSString *)stringWithAccountsCode:(NSInteger)errorCode;
 
 @end

@@ -28,7 +28,7 @@
 #import "MRErrorBuilder.h"
 
 #import "MRErrorFormatter.h"
-#import "MRErrorFormatter+ErrorCode.h"
+#import "MRErrorFormatter_HTTP.h"
 
 #import "MRBlockRecoveryAttempter.h"
 
@@ -36,14 +36,6 @@
 #import "UIAlertView+ErrorKit.h"
 #import "UIResponder+ErrorKit.h"
 #import "MRAlertRecoveryAttempter.h"
-#endif
-
-#ifdef ACCOUNTS_EXTERN
-#import "MRErrorFormatter_Accounts.h"
-#endif
-
-#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
-#import "MRErrorFormatter_Admob.h"
 #endif
 
 #ifdef _AFNETWORKING_
@@ -59,25 +51,15 @@
 #ifdef __CORELOCATION__
 #import "NSError_CoreLocation.h"
 #import "MRErrorBuilder_CoreLocation.h"
-#import "MRErrorFormatter_CoreLocation.h"
 #endif
 
 #ifdef _JSONKIT_H_
 #import "NSError_JSONKit.h"
 #import "MRErrorBuilder_JSONKit.h"
-#import "MRErrorFormatter_JSONKit.h"
-#endif
-
-#ifdef MK_EXTERN
-#import "MRErrorFormatter_MapKit.h"
 #endif
 
 #ifdef _SECURITY_SECITEM_H_
 #import "MRErrorFormatter_Security.h"
-#endif
-
-#ifdef SK_EXTERN
-#import "MRErrorFormatter_StoreKit.h"
 #endif
 
 #ifndef MRLogError

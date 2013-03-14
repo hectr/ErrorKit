@@ -27,7 +27,7 @@
 
 @implementation MRErrorFormatter (ErrorCode)
 
-+ (NSString *)debugStringFromCocoaCode:(NSInteger)code
++ (NSString *)debugStringWithCocoaCode:(NSInteger)code
 {
     switch (code) {
         case NSFileNoSuchFileError:
@@ -208,7 +208,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromCocoaCode:(NSInteger)code
++ (NSString *)stringWithCocoaCode:(NSInteger)code
 {
     switch (code) {
         case NSFileNoSuchFileError:
@@ -384,7 +384,7 @@
     return NSLocalizedString(@"Unknown Error", nil);
 }
 
-+ (NSString *)debugStringFromURLCode:(NSInteger)code
++ (NSString *)debugStringWithURLCode:(NSInteger)code
 {
     switch (code) {
         case NSURLErrorUnknown:
@@ -479,7 +479,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromURLCode:(NSInteger)code
++ (NSString *)stringWithURLCode:(NSInteger)code
 {
     switch (code) {
         case NSURLErrorUnknown:
@@ -574,12 +574,7 @@
     return NSLocalizedString(@"URL Error", nil);
 }
 
-+ (NSString *)stringFromHTTPCode:(NSInteger)statusCode
-{
-    return [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
-}
-
-+ (NSString *)debugStringFromXMLParserCode:(NSInteger)code
++ (NSString *)debugStringWithXMLParserCode:(NSInteger)code
 {
     switch (code) {
         case NSXMLParserInternalError:
@@ -772,7 +767,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromXMLParserCode:(NSInteger)code
++ (NSString *)stringWithXMLParserCode:(NSInteger)code
 {
     switch (code) {
         case NSXMLParserInternalError:
@@ -969,7 +964,7 @@
 
 #ifdef ACCOUNTS_EXTERN
 
-+ (NSString *)debugStringFromAccountsCode:(NSInteger)code
++ (NSString *)debugStringWithAccountsCode:(NSInteger)code
 {
     switch (code) {
         case ACErrorUnknown:
@@ -992,7 +987,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromAccountsCode:(NSInteger)code
++ (NSString *)stringWithAccountsCode:(NSInteger)code
 {
     switch (code) {
         case ACErrorUnknown:
@@ -1021,7 +1016,7 @@
 
 #if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
 
-+ (NSString *)debugStringFromAdmobCode:(NSInteger)errorCode
++ (NSString *)debugStringWithAdmobCode:(NSInteger)errorCode
 {
     switch (code) {
         case kGADErrorInvalidRequest:
@@ -1050,7 +1045,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromAdmobCode:(NSInteger)errorCode
++ (NSString *)stringWithAdmobCode:(NSInteger)errorCode
 {
     switch (code) {
         case kGADErrorInvalidRequest:
@@ -1084,7 +1079,7 @@
 
 #ifdef __CORELOCATION__
 
-+ (NSString *)debugStringFromCoreLocationCode:(NSInteger)code
++ (NSString *)debugStringWithCoreLocationCode:(NSInteger)code
 {
     switch (code) {
         case kCLErrorLocationUnknown:
@@ -1123,7 +1118,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromCoreLocationCode:(NSInteger)code
++ (NSString *)stringWithCoreLocationCode:(NSInteger)code
 {
     switch (code) {
         case kCLErrorLocationUnknown:
@@ -1166,12 +1161,19 @@
 
 #pragma mark -
 
-+ (NSString *)debugStringFromJSONKitCode:(NSInteger)code
++ (NSString *)stringWithHTTPCode:(NSInteger)statusCode
+{
+    return [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
+}
+
+#pragma mark -
+
++ (NSString *)debugStringWithJSONKitCode:(NSInteger)code
 {
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromCoreLocationCode:(NSInteger)code
++ (NSString *)stringWithCoreLocationCode:(NSInteger)code
 {
     return NSLocalizedString(@"JSON Error", nil);
 }
@@ -1180,7 +1182,7 @@
 
 #ifdef MK_EXTERN
 
-+ (NSString *)debugStringFromMapKitCode:(NSInteger)code
++ (NSString *)debugStringWithMapKitCode:(NSInteger)code
 {
     switch (code) {
         case MKErrorUnknown:
@@ -1195,7 +1197,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromMapKitCode:(NSInteger)code
++ (NSString *)stringWithMapKitCode:(NSInteger)code
 {
     switch (code) {
         case MKErrorUnknown:
@@ -1216,7 +1218,7 @@
 
 #ifdef _SECURITY_SECITEM_H_
 
-+ (NSString *)debugStringFromKeychainServiceCode:(NSInteger)code
++ (NSString *)debugStringWithKeychainServiceCode:(NSInteger)code
 {
     switch (code) {
         case errSecSuccess:
@@ -1241,7 +1243,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromKeychainServiceCode:(NSInteger)code
++ (NSString *)stringWithKeychainServiceCode:(NSInteger)code
 {
     switch (code) {
         case errSecSuccess:
@@ -1272,7 +1274,7 @@
 
 #ifdef SK_EXTERN
 
-+ (NSString *)debugStringFromStoreKitCode:(NSInteger)code
++ (NSString *)debugStringWithStoreKitCode:(NSInteger)code
 {
     switch (code) {
         case SKErrorUnknown:
@@ -1291,7 +1293,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringFromStoreKitCode:(NSInteger)code
++ (NSString *)stringWithStoreKitCode:(NSInteger)code
 {
     switch (code) {
         case SKErrorUnknown:

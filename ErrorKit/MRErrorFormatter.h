@@ -44,9 +44,19 @@
 
  @discussion If `shortenStrings` is not set, `NSLocalizedDescriptionKey` is the first pair of the returned string, otherwise it is not included.
  */
-- (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo;
+- (NSString *)stringWithErrorDetail:(NSDictionary *)userInfo;
+
+/// Returns a debug string representation for the given domain and error code combination.
++ (NSString *)debugStringWithDomain:(NSString *)domain code:(NSInteger)errorCode;
 
 /// @name Strings for presentation
+
+/**
+ Returns a localized string representation for the given domain and error code combination.
+
+ @discussion This method may return `nil` if the given domain is not known.
+ */
++ (NSString *)stringWithDomain:(NSString *)domain code:(NSInteger)errorCode;
 
 /// Returns a string representation of a given error.
 + (NSString *)stringFromError:(NSError *)error;

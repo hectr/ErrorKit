@@ -37,11 +37,11 @@
 /// @name Strings for debugging
 
 /// Returns a string representation of the given `@"JKErrorDomain"` error code.
-+ (NSString *)debugStringFromJSONKitCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithJSONKitCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `@"JKErrorDomain"` error code.
-+ (NSString *)stringFromJSONKitCode:(NSInteger)errorCode
++ (NSString *)stringWithJSONKitCode:(NSInteger)errorCode
 
 @end

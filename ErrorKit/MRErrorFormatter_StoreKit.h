@@ -37,11 +37,11 @@
 /// @name Strings for debugging
 
 /// Returns a string representation of the given `SKErrorDomain` error code.
-+ (NSString *)debugStringFromStoreKitCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithStoreKitCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `SKErrorDomain` error code.
-+ (NSString *)stringFromStoreKitCode:(NSInteger)errorCode
++ (NSString *)stringWithStoreKitCode:(NSInteger)errorCode
 
 @end

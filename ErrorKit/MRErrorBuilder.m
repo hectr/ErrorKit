@@ -23,10 +23,6 @@
 #import "MRErrorBuilder.h"
 #import "NSError+ErrorKit.h"
 #import "MRErrorFormatter.h"
-#import "MRErrorFormatter+ErrorCode.h"
-#ifdef ACCOUNTS_EXTERN
-#import "MRErrorFormatter_Accounts.h"
-#endif
 #ifdef _AFNETWORKING_
 #import "NSError_AFNetworking.h"
 #endif
@@ -35,7 +31,6 @@
 #endif
 #ifdef __CORELOCATION__
 #import "NSError_CoreLocation.h"
-#import "MRErrorFormatter_CoreLocation.h"
 #endif
 
 #if  ! __has_feature(objc_arc)
@@ -68,9 +63,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.localizedRecoveryOptions = error.localizedRecoveryOptions;
     builder.localizedRecoverySuggestion = error.localizedRecoverySuggestion;
     builder.stringEncodingError = error.stringEncodingError;
-    builder.underlyingException = error.underlyingException;
     builder.recoveryAttempter = error.recoveryAttempter;
     builder.underlyingError = error.underlyingError;
+    builder.underlyingException = error.underlyingException;
     builder.urlError = error.urlError;
 #ifdef _AFNETWORKING_
     builder.failingURLRequest = error.failingURLRequest;
@@ -99,24 +94,8 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 + (id)builderWithDomain:(NSString *)domain code:(NSInteger)code
 {
     MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
-    if ([domain isEqualToString:NSCocoaErrorDomain]) {
-        builder.localizedDescription = [MRErrorFormatter stringFromCocoaCode:code];
-    } else if ([domain isEqualToString:NSURLErrorDomain]) {
-        builder.localizedDescription = [MRErrorFormatter stringFromURLCode:code];
-    }
-#ifdef _AFNETWORKING_
-    else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
-        builder.localizedDescription = [MRErrorFormatter stringFromURLCode:code];
-    }
-#endif
-#ifdef __CORELOCATION__
-    else if ([domain isEqualToString:kCLErrorDomain]) {
-        builder.localizedDescription = [MRErrorFormatter stringFromURLCode:code];
-    }
-#endif
-    else {
-        builder.localizedDescription = NSLocalizedString(@"No error description provided", nil);
-    }
+    builder.localizedDescription = ([MRErrorFormatter stringWithDomain:domain code:code]
+                                    ?: NSLocalizedString(@"No error description provided", nil));
     return builder;
 }
 
@@ -442,8 +421,6 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #pragma mark -
 
-#ifdef _JSONKIT_H_
-
 - (unsigned long)atIndex
 {
     return [[self.userInfo objectForKey:@"JKAtIndexKey"] unsignedLongValue];
@@ -463,8 +440,6 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 {
     [self setUserInfoValue:@(lineNumber) forKey:@"JKLineNumberKey"];
 }
-
-#endif
 
 #pragma mark - NSCopying
 
@@ -506,7 +481,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
                                       , self.domain
                                       , self.code
                                       , self.userInfo
-                                      , [__formatter stringFromErrorDetail:self.userInfo]];
+                                      , [__formatter stringWithErrorDetail:self.userInfo]];
 }
 
 @end

@@ -35,11 +35,11 @@
 /// @name Strings for debugging
 
 /// Returns a string representation of the given `kGADErrorDomain` error code.
-+ (NSString *)debugStringFromAdmobCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithAdmobCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `kGADErrorDomain` error code.
-+ (NSString *)stringFromAdmobCode:(NSInteger)errorCode;
++ (NSString *)stringWithAdmobCode:(NSInteger)errorCode;
 
 @end

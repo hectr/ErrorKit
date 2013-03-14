@@ -86,6 +86,7 @@
 		84ECCA0B16EE8DFA002228AE /* NSError_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSError_JSONKit.h; path = ../../ErrorKit/NSError_JSONKit.h; sourceTree = "<group>"; };
 		84ECCA0C16EE8E09002228AE /* MRErrorBuilder_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_JSONKit.h; path = ../../ErrorKit/MRErrorBuilder_JSONKit.h; sourceTree = "<group>"; };
 		84ECCA0D16EE8E22002228AE /* MRErrorFormatter_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_JSONKit.h; path = ../../ErrorKit/MRErrorFormatter_JSONKit.h; sourceTree = "<group>"; };
+		84FC301116F29710006DF5BC /* MRErrorFormatter_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_HTTP.h; path = ../../ErrorKit/MRErrorFormatter_HTTP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +182,7 @@
 				84DCF7C516EC0CFE00F50750 /* MRErrorFormatter_Accounts.h */,
 				84DD938116EFCBAC002F63A1 /* MRErrorFormatter_Admob.h */,
 				84DCF7C616EC0CFF00F50750 /* MRErrorFormatter_CoreLocation.h */,
+				84FC301116F29710006DF5BC /* MRErrorFormatter_HTTP.h */,
 				84ECCA0D16EE8E22002228AE /* MRErrorFormatter_JSONKit.h */,
 				844575FC16F119190057CC62 /* MRErrorFormatter_MapKit.h */,
 				846F6B7516EFABD20005B913 /* MRErrorFormatter_Security.h */,

@@ -33,30 +33,23 @@
 /// @name Strings for debugging
 
 /// Returns a string representation of the given `NSCocoaErrorDomain` error code.
-+ (NSString *)debugStringFromCocoaCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithCocoaCode:(NSInteger)errorCode;
 
 /// Returns a string representation of the given `NSURLErrorDomain` error code.
-+ (NSString *)debugStringFromURLCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithURLCode:(NSInteger)errorCode;
 
 /// Returns a string representation of the given `NSXMLParserErrorDomain` error code.
-+ (NSString *)debugStringFromXMLParserCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithXMLParserCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `NSCocoaErrorDomain` error code.
-+ (NSString *)stringFromCocoaCode:(NSInteger)errorCode;
++ (NSString *)stringWithCocoaCode:(NSInteger)errorCode;
 
 /// Returns a string representation of the given `NSURLErrorDomain` error code.
-+ (NSString *)stringFromURLCode:(NSInteger)errorCode;
-
-/**
- Returns a string representation of the given HTTP status code.
- 
- @discussion This method is a wrapper for `[NSHTTPURLResponse localizedStringForStatusCode:statusCode]`.
- */
-+ (NSString *)stringFromHTTPCode:(NSInteger)statusCode;
++ (NSString *)stringWithURLCode:(NSInteger)errorCode;
 
 /// Returns a string representation of the given `NSXMLParserErrorDomain` error code.
-+ (NSString *)stringFromXMLParserCode:(NSInteger)errorCode;
++ (NSString *)stringWithXMLParserCode:(NSInteger)errorCode;
 
 @end

@@ -1,4 +1,4 @@
-// MRErrorFormatter_MapKit.h
+// MRErrorFormatter_HTTP.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -22,26 +22,17 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef MK_EXTERN
-#warning This extension requires the Ma Kit framework.
-#endif
-
 
 /**
- Adds methods for *stringizing* `MKErrorDomain` error codes.
+ Adds a method for *stringizing* HTTP status codes.
+*/
+@interface MRErrorFormatter (ErrorKit_HTTP)
+
+/**
+ Returns a string representation of the given HTTP status code.
  
- @discussion **Warning:** This extension requires the Store Kit framework. Add a `MapKitKit/MapKit.h` import to the header prefix of the project.
+ @discussion This method is a wrapper for `[NSHTTPURLResponse localizedStringForStatusCode:statusCode]`.
  */
-@interface MRErrorFormatter (ErrorKit_MapKit)
-
-/// @name Strings for debugging
-
-/// Returns a string representation of the given `MKErrorDomain` error code.
-+ (NSString *)debugStringWithMapKitCode:(NSInteger)errorCode;
-
-/// @name Strings for presentation
-
-/// Returns a string representation of the given `MKErrorDomain` error code.
-+ (NSString *)stringWithMapKitCode:(NSInteger)errorCode
++ (NSString *)stringWithHTTPCode:(NSInteger)statusCode;
 
 @end

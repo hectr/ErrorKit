@@ -21,6 +21,9 @@
 // THE SOFTWARE.
 
 #import "NSError+ErrorKit.h"
+#ifdef _COREDATADEFINES_H
+#import "MRErrorBuilder_CoreData.h"
+#endif
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -149,8 +152,6 @@
 
 #pragma mark -
 
-#ifdef _JSONKIT_H_
-
 - (unsigned long)atIndex
 {
     return [[self.userInfo objectForKey:@"JKAtIndexKey"] unsignedLongValue];
@@ -160,8 +161,6 @@
 {
     return [[self.userInfo objectForKey:@"JKLineNumberKey"] unsignedLongValue];
 }
-
-#endif
 
 @end
 
@@ -210,5 +209,27 @@
             self.code <= NSValidationErrorMaximum &&
             [self.domain isEqualToString:NSCocoaErrorDomain]);
 }
+
+#pragma mark -
+
+#ifdef _COREDATADEFINES_H
+
+- (NSError *)errorByCombiningWithError:(NSError *)errorOrNil
+{
+    if (errorOrNil == nil) {
+        return self;
+    }
+    MRErrorBuilder *builder;
+    if (self.code == NSValidationMultipleErrorsError) {
+        builder = [MRErrorBuilder builderWithError:self];
+        builder.detailedErrors = ([builder.detailedErrors arrayByAddingObject:errorOrNil] ?: @[ errorOrNil ]);
+    } else {
+        builder = [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain code:NSValidationMultipleErrorsError];
+        builder.detailedErrors = @[ self, errorOrNil ];
+    }
+    return builder.error;
+}
+
+#endif
 
 @end

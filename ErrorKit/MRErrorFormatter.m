@@ -21,6 +21,25 @@
 // THE SOFTWARE.
 
 #import "MRErrorFormatter.h"
+#import "MRErrorFormatter+ErrorCode.h"
+#ifdef ACCOUNTS_EXTERN
+#import "MRErrorFormatter_Accounts.h"
+#endif
+#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+#import "MRErrorFormatter_Admob.h"
+#endif
+#ifdef __CORELOCATION__
+#import "MRErrorFormatter_CoreLocation.h"
+#endif
+#ifdef _JSONKIT_H_
+#import "MRErrorFormatter_JSONKit.h"
+#endif
+#ifdef MK_EXTERN
+#import "MRErrorFormatter_MapKit.h"
+#endif
+#ifdef SK_EXTERN
+#import "MRErrorFormatter_StoreKit.h"
+#endif
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -41,7 +60,7 @@
     return error.description;
 }
 
-- (NSString *)stringFromErrorDetail:(NSDictionary *)userInfo
+- (NSString *)stringWithErrorDetail:(NSDictionary *)userInfo
 {
     NSMutableArray *components = [NSMutableArray array];
     [userInfo enumerateKeysAndObjectsUsingBlock:^(NSString *key, id object, BOOL *stop) {
@@ -115,6 +134,100 @@
     } else {
         return NSLocalizedString(@"OK", nil);
     }
+}
+
++ (NSString *)debugStringWithDomain:(NSString *)domain code:(NSInteger)code
+{
+    if ([domain isEqualToString:NSCocoaErrorDomain]) {
+        return [MRErrorFormatter debugStringWithCocoaCode:code];
+    } else if ([domain isEqualToString:NSURLErrorDomain]) {
+        return [MRErrorFormatter debugStringWithURLCode:code];
+    } else if ([domain isEqualToString:NSXMLParserErrorDomain]) {
+        return [MRErrorFormatter debugStringWithXMLParserCode:code];
+    }
+#ifdef ACCOUNTS_EXTERN
+    else if ([domain isEqualToString:ACErrorDomain]) {
+        return [MRErrorFormatter debugStringWithAccountsCode:code];
+    }
+#endif
+#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+    else if ([domain isEqualToString:kGADErrorDomain]) {
+        return [MRErrorFormatter debugStringWithAdmobCode:code];
+    }
+#endif
+#ifdef _AFNETWORKING_
+    else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
+        return [MRErrorFormatter debugStringWithURLCode:code];
+    }
+#endif
+#ifdef __CORELOCATION__
+    else if ([domain isEqualToString:kCLErrorDomain]) {
+        return [MRErrorFormatter debugStringWithCoreLocationCode:code];
+    }
+#endif
+#ifdef _JSONKIT_H_
+    else if ([domain isEqualToString:@"JKErrorDomain"]) {
+        return [MRErrorFormatter debugStringWithJSONKitCode:code];
+    }
+#endif
+#ifdef MK_EXTERN
+    else if ([domain isEqualToString:MKErrorDomain]) {
+        return [MRErrorFormatter debugStringWithMapKitCode:code];
+    }
+#endif
+#ifdef SK_EXTERN
+    else if ([domain isEqualToString:SKErrorDomain]) {
+        return [MRErrorFormatter debugStringWithStoreKitCode:code];
+    }
+#endif
+    return @(code).stringValue;
+}
+
++ (NSString *)stringWithDomain:(NSString *)domain code:(NSInteger)code
+{
+    if ([domain isEqualToString:NSCocoaErrorDomain]) {
+        return [MRErrorFormatter stringWithCocoaCode:code];
+    } else if ([domain isEqualToString:NSURLErrorDomain]) {
+        return [MRErrorFormatter stringWithURLCode:code];
+    } else if ([domain isEqualToString:NSXMLParserErrorDomain]) {
+        return [MRErrorFormatter stringWithXMLParserCode:code];
+    }
+#ifdef ACCOUNTS_EXTERN
+    else if ([domain isEqualToString:ACErrorDomain]) {
+        return [MRErrorFormatter stringWithAccountsCode:code];
+    }
+#endif
+#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+    else if ([domain isEqualToString:kGADErrorDomain]) {
+        return [MRErrorFormatter stringWithAdmobCode:code];
+    }
+#endif
+#ifdef _AFNETWORKING_
+    else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
+        return [MRErrorFormatter stringWithURLCode:code];
+    }
+#endif
+#ifdef __CORELOCATION__
+    else if ([domain isEqualToString:kCLErrorDomain]) {
+        return [MRErrorFormatter stringWithCoreLocationCode:code];
+    }
+#endif
+#ifdef _JSONKIT_H_
+    else if ([domain isEqualToString:@"JKErrorDomain"]) {
+        return [MRErrorFormatter stringWithJSONKitCode:code];
+    }
+#endif
+#ifdef MK_EXTERN
+    else if ([domain isEqualToString:MKErrorDomain]) {
+        return [MRErrorFormatter stringWithMapKitCode:code];
+    }
+#endif
+#ifdef SK_EXTERN
+    else if ([domain isEqualToString:SKErrorDomain]) {
+        return [MRErrorFormatter stringWithStoreKitCode:code];
+    }
+#endif
+    return nil;
 }
 
 #pragma mark - NSCopying

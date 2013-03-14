@@ -61,3 +61,16 @@
 @property (nonatomic, readonly) id validationValue;
 
 @end
+
+
+/**
+ Adds a method for combining validation errors.
+ 
+ @warning This extension requires the Core Data framework. Add a `CoreData/CoreData.h` import to the header prefix of the project.
+ */
+@interface NSError (ErrorKit_CoreData_Helper)
+
+/// Creates a new validation error by combining the receiver with the given error.
+- (NSError *)errorByCombiningWithError:(NSError *)errorOrNil;
+
+@endif

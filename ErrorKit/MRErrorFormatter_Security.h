@@ -35,11 +35,11 @@
 /// @name Strings for debugging
 
 /// Returns a string representation of the given result code.
-+ (NSString *)debugStringFromKeychainServiceCode:(NSInteger)resultCode;
++ (NSString *)debugStringWithKeychainServiceCode:(NSInteger)resultCode;
 
 /// @name Strings for presentation
 
 /// Returns a string representation of the given result code.
-+ (NSString *)stringFromKeychainServiceCode:(NSInteger)resultCode;
++ (NSString *)stringWithKeychainServiceCode:(NSInteger)resultCode;
 
 @end

@@ -37,11 +37,11 @@
 /// @name Strings for debugging
 
 /// Returns a string representation of the given `kCLErrorDomain` error code.
-+ (NSString *)debugStringFromCoreLocationCode:(NSInteger)errorCode;
++ (NSString *)debugStringWithCoreLocationCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `kCLErrorDomain` error code.
-+ (NSString *)stringFromCoreLocationCode:(NSInteger)errorCode
++ (NSString *)stringWithCoreLocationCode:(NSInteger)errorCode
 
 @end

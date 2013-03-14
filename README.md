@@ -3,7 +3,7 @@ ErrorKit
 
 **Error Kit** is a handy iOS library for making `NSError` handling easier.
 
-It covers error objects creation, inspection, presentation and recovery.
+It covers error object creation, inspection, presentation and recovery.
 
 Usage
 -----
