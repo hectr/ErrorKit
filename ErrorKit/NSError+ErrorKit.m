@@ -164,3 +164,51 @@
 #endif
 
 @end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation NSError (ErrorKit_Helper)
+
+- (BOOL)isCancelledError
+{
+#ifdef _AFNETWORKING_
+    if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
+        return (self.code == NSURLErrorUserCancelledAuthentication ||
+                self.code == NSURLErrorCancelled);
+    }
+#endif
+#ifdef __CORELOCATION__
+    if ([self.domain isEqualToString:kCLErrorDomain]) {
+        return (self.code == kCLErrorGeocodeCanceled ||
+                self.code == kCLErrorDeferredCanceled);
+    }
+#endif
+#ifdef SK_EXTERN
+    if ([self.domain isEqualToString:SKErrorDomain]) {
+        return (self.code == SKErrorPaymentCancelled);
+    }
+#endif
+    if ([self.domain isEqualToString:NSURLErrorDomain]) {
+        return (self.code == NSURLErrorUserCancelledAuthentication ||
+                self.code == NSURLErrorCancelled);
+    }
+#ifdef _COREDATADEFINES_H
+    return ((self.code == NSUserCancelledError || self.code == NSMigrationCancelledError) &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+#else
+    return (self.code == NSUserCancelledError &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+#endif
+}
+
+- (BOOL)isValidationError
+{
+    return (self.code >= NSValidationErrorMinimum &&
+            self.code <= NSValidationErrorMaximum &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+}
+
+@end

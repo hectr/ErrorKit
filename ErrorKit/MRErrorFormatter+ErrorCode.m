@@ -579,6 +579,392 @@
     return [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
 }
 
++ (NSString *)debugStringFromXMLParserCode:(NSInteger)code
+{
+    switch (code) {
+        case NSXMLParserInternalError:
+            return mr_stringize_error_code(NSXMLParserInternalError);
+        case NSXMLParserOutOfMemoryError:
+            return mr_stringize_error_code(NSXMLParserOutOfMemoryError);
+        case NSXMLParserDocumentStartError:
+            return mr_stringize_error_code(NSXMLParserDocumentStartError);
+        case NSXMLParserEmptyDocumentError:
+            return mr_stringize_error_code(NSXMLParserEmptyDocumentError);
+        case NSXMLParserPrematureDocumentEndError:
+            return mr_stringize_error_code(NSXMLParserPrematureDocumentEndError);
+        case NSXMLParserInvalidHexCharacterRefError:
+            return mr_stringize_error_code(NSXMLParserInvalidHexCharacterRefError);
+        case NSXMLParserInvalidDecimalCharacterRefError:
+            return mr_stringize_error_code(NSXMLParserInvalidDecimalCharacterRefError);
+        case NSXMLParserInvalidCharacterRefError:
+            return mr_stringize_error_code(NSXMLParserInvalidCharacterRefError);
+        case NSXMLParserInvalidCharacterError:
+            return mr_stringize_error_code(NSXMLParserInvalidCharacterError);
+        case NSXMLParserCharacterRefAtEOFError:
+            return mr_stringize_error_code(NSXMLParserCharacterRefAtEOFError);
+        case NSXMLParserCharacterRefInPrologError:
+            return mr_stringize_error_code(NSXMLParserCharacterRefInPrologError);
+        case NSXMLParserCharacterRefInEpilogError:
+            return mr_stringize_error_code(NSXMLParserCharacterRefInEpilogError);
+        case NSXMLParserCharacterRefInDTDError:
+            return mr_stringize_error_code(NSXMLParserCharacterRefInDTDError);
+        case NSXMLParserEntityRefAtEOFError:
+            return mr_stringize_error_code(NSXMLParserEntityRefAtEOFError);
+        case NSXMLParserEntityRefInPrologError:
+            return mr_stringize_error_code(NSXMLParserEntityRefInPrologError);
+        case NSXMLParserEntityRefInEpilogError:
+            return mr_stringize_error_code(NSXMLParserEntityRefInEpilogError);
+        case NSXMLParserEntityRefInDTDError:
+            return mr_stringize_error_code(NSXMLParserEntityRefInDTDError);
+        case NSXMLParserParsedEntityRefAtEOFError:
+            return mr_stringize_error_code(NSXMLParserParsedEntityRefAtEOFError);
+        case NSXMLParserParsedEntityRefInPrologError:
+            return mr_stringize_error_code(NSXMLParserParsedEntityRefInPrologError);
+        case NSXMLParserParsedEntityRefInEpilogError:
+            return mr_stringize_error_code(NSXMLParserParsedEntityRefInEpilogError);
+        case NSXMLParserParsedEntityRefInInternalSubsetError:
+            return mr_stringize_error_code(NSXMLParserParsedEntityRefInInternalSubsetError);
+        case NSXMLParserEntityReferenceWithoutNameError:
+            return mr_stringize_error_code(NSXMLParserEntityReferenceWithoutNameError);
+        case NSXMLParserEntityReferenceMissingSemiError:
+            return mr_stringize_error_code(NSXMLParserEntityReferenceMissingSemiError);
+        case NSXMLParserParsedEntityRefNoNameError:
+            return mr_stringize_error_code(NSXMLParserParsedEntityRefNoNameError);
+        case NSXMLParserParsedEntityRefMissingSemiError:
+            return mr_stringize_error_code(NSXMLParserParsedEntityRefMissingSemiError);
+        case NSXMLParserUndeclaredEntityError:
+            return mr_stringize_error_code(NSXMLParserUndeclaredEntityError);
+        case NSXMLParserUnparsedEntityError:
+            return mr_stringize_error_code(NSXMLParserUnparsedEntityError);
+        case NSXMLParserEntityIsExternalError:
+            return mr_stringize_error_code(NSXMLParserEntityIsExternalError);
+        case NSXMLParserEntityIsParameterError:
+            return mr_stringize_error_code(NSXMLParserEntityIsParameterError);
+        case NSXMLParserUnknownEncodingError:
+            return mr_stringize_error_code(NSXMLParserUnknownEncodingError);
+        case NSXMLParserEncodingNotSupportedError:
+            return mr_stringize_error_code(NSXMLParserEncodingNotSupportedError);
+        case NSXMLParserStringNotStartedError:
+            return mr_stringize_error_code(NSXMLParserStringNotStartedError);
+        case NSXMLParserStringNotClosedError:
+            return mr_stringize_error_code(NSXMLParserStringNotClosedError);
+        case NSXMLParserNamespaceDeclarationError:
+            return mr_stringize_error_code(NSXMLParserNamespaceDeclarationError);
+        case NSXMLParserEntityNotStartedError:
+            return mr_stringize_error_code(NSXMLParserEntityNotStartedError);
+        case NSXMLParserEntityNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserEntityNotFinishedError);
+        case NSXMLParserLessThanSymbolInAttributeError:
+            return mr_stringize_error_code(NSXMLParserLessThanSymbolInAttributeError);
+        case NSXMLParserAttributeNotStartedError:
+            return mr_stringize_error_code(NSXMLParserAttributeNotStartedError);
+        case NSXMLParserAttributeNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserAttributeNotFinishedError);
+        case NSXMLParserAttributeHasNoValueError:
+            return mr_stringize_error_code(NSXMLParserAttributeHasNoValueError);
+        case NSXMLParserAttributeRedefinedError:
+            return mr_stringize_error_code(NSXMLParserAttributeRedefinedError);
+        case NSXMLParserLiteralNotStartedError:
+            return mr_stringize_error_code(NSXMLParserLiteralNotStartedError);
+        case NSXMLParserLiteralNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserLiteralNotFinishedError);
+        case NSXMLParserCommentNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserCommentNotFinishedError);
+        case NSXMLParserProcessingInstructionNotStartedError:
+            return mr_stringize_error_code(NSXMLParserProcessingInstructionNotStartedError);
+        case NSXMLParserProcessingInstructionNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserProcessingInstructionNotFinishedError);
+        case NSXMLParserNotationNotStartedError:
+            return mr_stringize_error_code(NSXMLParserNotationNotStartedError);
+        case NSXMLParserNotationNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserNotationNotFinishedError);
+        case NSXMLParserAttributeListNotStartedError:
+            return mr_stringize_error_code(NSXMLParserAttributeListNotStartedError);
+        case NSXMLParserAttributeListNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserAttributeListNotFinishedError);
+        case NSXMLParserMixedContentDeclNotStartedError:
+            return mr_stringize_error_code(NSXMLParserMixedContentDeclNotStartedError);
+        case NSXMLParserMixedContentDeclNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserMixedContentDeclNotFinishedError);
+        case NSXMLParserElementContentDeclNotStartedError:
+            return mr_stringize_error_code(NSXMLParserElementContentDeclNotStartedError);
+        case NSXMLParserElementContentDeclNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserElementContentDeclNotFinishedError);
+        case NSXMLParserXMLDeclNotStartedError:
+            return mr_stringize_error_code(NSXMLParserXMLDeclNotStartedError);
+        case NSXMLParserXMLDeclNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserXMLDeclNotFinishedError);
+        case NSXMLParserConditionalSectionNotStartedError:
+            return mr_stringize_error_code(NSXMLParserConditionalSectionNotStartedError);
+        case NSXMLParserConditionalSectionNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserConditionalSectionNotFinishedError);
+        case NSXMLParserExternalSubsetNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserExternalSubsetNotFinishedError);
+        case NSXMLParserDOCTYPEDeclNotFinishedError:
+            return mr_stringize_error_code(NSXMLParserDOCTYPEDeclNotFinishedError);
+        case NSXMLParserMisplacedCDATAEndStringError:
+            return mr_stringize_error_code(NSXMLParserMisplacedCDATAEndStringError);
+        case NSXMLParserCDATANotFinishedError:
+            return mr_stringize_error_code(NSXMLParserCDATANotFinishedError);
+        case NSXMLParserMisplacedXMLDeclarationError:
+            return mr_stringize_error_code(NSXMLParserMisplacedXMLDeclarationError);
+        case NSXMLParserSpaceRequiredError:
+            return mr_stringize_error_code(NSXMLParserSpaceRequiredError);
+        case NSXMLParserSeparatorRequiredError:
+            return mr_stringize_error_code(NSXMLParserSeparatorRequiredError);
+        case NSXMLParserNMTOKENRequiredError:
+            return mr_stringize_error_code(NSXMLParserNMTOKENRequiredError);
+        case NSXMLParserNAMERequiredError:
+            return mr_stringize_error_code(NSXMLParserNAMERequiredError);
+        case NSXMLParserPCDATARequiredError:
+            return mr_stringize_error_code(NSXMLParserPCDATARequiredError);
+        case NSXMLParserURIRequiredError:
+            return mr_stringize_error_code(NSXMLParserURIRequiredError);
+        case NSXMLParserPublicIdentifierRequiredError:
+            return mr_stringize_error_code(NSXMLParserPublicIdentifierRequiredError);
+        case NSXMLParserLTRequiredError:
+            return mr_stringize_error_code(NSXMLParserLTRequiredError);
+        case NSXMLParserGTRequiredError:
+            return mr_stringize_error_code(NSXMLParserGTRequiredError);
+        case NSXMLParserLTSlashRequiredError:
+            return mr_stringize_error_code(NSXMLParserLTSlashRequiredError);
+        case NSXMLParserEqualExpectedError:
+            return mr_stringize_error_code(NSXMLParserEqualExpectedError);
+        case NSXMLParserTagNameMismatchError:
+            return mr_stringize_error_code(NSXMLParserTagNameMismatchError);
+        case NSXMLParserUnfinishedTagError:
+            return mr_stringize_error_code(NSXMLParserUnfinishedTagError);
+        case NSXMLParserStandaloneValueError:
+            return mr_stringize_error_code(NSXMLParserStandaloneValueError);
+        case NSXMLParserInvalidEncodingNameError:
+            return mr_stringize_error_code(NSXMLParserInvalidEncodingNameError);
+        case NSXMLParserCommentContainsDoubleHyphenError:
+            return mr_stringize_error_code(NSXMLParserCommentContainsDoubleHyphenError);
+        case NSXMLParserInvalidEncodingError:
+            return mr_stringize_error_code(NSXMLParserInvalidEncodingError);
+        case NSXMLParserExternalStandaloneEntityError:
+            return mr_stringize_error_code(NSXMLParserExternalStandaloneEntityError);
+        case NSXMLParserInvalidConditionalSectionError:
+            return mr_stringize_error_code(NSXMLParserInvalidConditionalSectionError);
+        case NSXMLParserEntityValueRequiredError:
+            return mr_stringize_error_code(NSXMLParserEntityValueRequiredError);
+        case NSXMLParserNotWellBalancedError:
+            return mr_stringize_error_code(NSXMLParserNotWellBalancedError);
+        case NSXMLParserExtraContentError:
+            return mr_stringize_error_code(NSXMLParserExtraContentError);
+        case NSXMLParserInvalidCharacterInEntityError:
+            return mr_stringize_error_code(NSXMLParserInvalidCharacterInEntityError);
+        case NSXMLParserParsedEntityRefInInternalError:
+            return mr_stringize_error_code(NSXMLParserParsedEntityRefInInternalError);
+        case NSXMLParserEntityRefLoopError:
+            return mr_stringize_error_code(NSXMLParserEntityRefLoopError);
+        case NSXMLParserEntityBoundaryError:
+            return mr_stringize_error_code(NSXMLParserEntityBoundaryError);
+        case NSXMLParserInvalidURIError:
+            return mr_stringize_error_code(NSXMLParserInvalidURIError);
+        case NSXMLParserURIFragmentError:
+            return mr_stringize_error_code(NSXMLParserURIFragmentError);
+        case NSXMLParserNoDTDError:
+            return mr_stringize_error_code(NSXMLParserNoDTDError);
+        case NSXMLParserDelegateAbortedParseError:
+            return mr_stringize_error_code(NSXMLParserDelegateAbortedParseError);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringFromXMLParserCode:(NSInteger)code
+{
+    switch (code) {
+        case NSXMLParserInternalError:
+            return NSLocalizedString(@"Internal Error", nil);
+        case NSXMLParserOutOfMemoryError:
+            return NSLocalizedString(@"Out Of Memory", nil);
+        case NSXMLParserDocumentStartError:
+            return NSLocalizedString(@"Document Start Error", nil);
+        case NSXMLParserEmptyDocumentError:
+            return NSLocalizedString(@"Empty Document", nil);
+        case NSXMLParserPrematureDocumentEndError:
+            return NSLocalizedString(@"Premature Document End", nil);
+        case NSXMLParserInvalidHexCharacterRefError:
+            return NSLocalizedString(@"Invalid Hex Character Reference", nil);
+        case NSXMLParserInvalidDecimalCharacterRefError:
+            return NSLocalizedString(@"Invalid Decimal Character Reference", nil);
+        case NSXMLParserInvalidCharacterRefError:
+            return NSLocalizedString(@"Invalid Character", nil);
+        case NSXMLParserInvalidCharacterError:
+            return NSLocalizedString(@"Invalid Character", nil);
+        case NSXMLParserCharacterRefAtEOFError:
+            return NSLocalizedString(@"Character Reference Target Not Found", nil);
+        case NSXMLParserCharacterRefInPrologError:
+            return NSLocalizedString(@"Invalid Character Reference In Prolog", nil);
+        case NSXMLParserCharacterRefInEpilogError:
+            return NSLocalizedString(@"Invalid Character Reference In Epilog", nil);
+        case NSXMLParserCharacterRefInDTDError:
+            return NSLocalizedString(@"Invalid Character Reference In DTD", nil);
+        case NSXMLParserEntityRefAtEOFError:
+            return NSLocalizedString(@"Entity Reference Target Not Found", nil);
+        case NSXMLParserEntityRefInPrologError:
+            return NSLocalizedString(@"Invalid Entity Reference In Prolog", nil);
+        case NSXMLParserEntityRefInEpilogError:
+            return NSLocalizedString(@"Invalid Entity Reference In Epilog", nil);
+        case NSXMLParserEntityRefInDTDError:
+            return NSLocalizedString(@"Invalid Entity Reference In DTD", nil);
+        case NSXMLParserParsedEntityRefAtEOFError:
+            return NSLocalizedString(@"Entity Reference Target Not Found", nil);
+        case NSXMLParserParsedEntityRefInPrologError:
+            return NSLocalizedString(@"Entity Reference Target Not Found In Prolog", nil);
+        case NSXMLParserParsedEntityRefInEpilogError:
+            return NSLocalizedString(@"Entity Reference Target Not Found In Epilog", nil);
+        case NSXMLParserParsedEntityRefInInternalSubsetError:
+            return NSLocalizedString(@"Entity Reference Target Not Found In Internal Subset", nil);
+        case NSXMLParserEntityReferenceWithoutNameError:
+            return NSLocalizedString(@"Entity Reference Without Name", nil);
+        case NSXMLParserEntityReferenceMissingSemiError:
+            return NSLocalizedString(@"Entity Reference Missing Semicolon", nil);
+        case NSXMLParserParsedEntityRefNoNameError:
+            return NSLocalizedString(@"Parsed Entity Reference Without Name", nil);
+        case NSXMLParserParsedEntityRefMissingSemiError:
+            return NSLocalizedString(@"Parsed Entity Reference Missing Semicolon", nil);
+        case NSXMLParserUndeclaredEntityError:
+            return NSLocalizedString(@"Undeclared Entity", nil);
+        case NSXMLParserUnparsedEntityError:
+            return NSLocalizedString(@"Cannot Parse Entity", nil);
+        case NSXMLParserEntityIsExternalError:
+            return NSLocalizedString(@"Cannot Parse External Entity", nil);
+        case NSXMLParserEntityIsParameterError:
+            return NSLocalizedString(@"Entity Is Parameter Error", nil);
+        case NSXMLParserUnknownEncodingError:
+            return NSLocalizedString(@"Unknown Encoding", nil);
+        case NSXMLParserEncodingNotSupportedError:
+            return NSLocalizedString(@"Encoding Not Supported", nil);
+        case NSXMLParserStringNotStartedError:
+            return NSLocalizedString(@"String Not Started", nil);
+        case NSXMLParserStringNotClosedError:
+            return NSLocalizedString(@"String Not Closed", nil);
+        case NSXMLParserNamespaceDeclarationError:
+            return NSLocalizedString(@"Invalid Namespace Declaration", nil);
+        case NSXMLParserEntityNotStartedError:
+            return NSLocalizedString(@"Entity Not Started", nil);
+        case NSXMLParserEntityNotFinishedError:
+            return NSLocalizedString(@"Entity Not Finished", nil);
+        case NSXMLParserLessThanSymbolInAttributeError:
+            return NSLocalizedString(@"'<' Used In Attribute Error", nil);
+        case NSXMLParserAttributeNotStartedError:
+            return NSLocalizedString(@"Attribute Not Started", nil);
+        case NSXMLParserAttributeNotFinishedError:
+            return NSLocalizedString(@"Attribute Not Finished", nil);
+        case NSXMLParserAttributeHasNoValueError:
+            return NSLocalizedString(@"Attribute Has No Value", nil);
+        case NSXMLParserAttributeRedefinedError:
+            return NSLocalizedString(@"Attribute Redefined", nil);
+        case NSXMLParserLiteralNotStartedError:
+            return NSLocalizedString(@"Literal Not Started", nil);
+        case NSXMLParserLiteralNotFinishedError:
+            return NSLocalizedString(@"Literal Not Finished", nil);
+        case NSXMLParserCommentNotFinishedError:
+            return NSLocalizedString(@"Comment Not Finished", nil);
+        case NSXMLParserProcessingInstructionNotStartedError:
+            return NSLocalizedString(@"Processing Instruction Not Started", nil);
+        case NSXMLParserProcessingInstructionNotFinishedError:
+            return NSLocalizedString(@"Processing Instruction Not Finished", nil);
+        case NSXMLParserNotationNotStartedError:
+            return NSLocalizedString(@"Notation Not Started", nil);
+        case NSXMLParserNotationNotFinishedError:
+            return NSLocalizedString(@"Notation Not Finished", nil);
+        case NSXMLParserAttributeListNotStartedError:
+            return NSLocalizedString(@"Attribute List Not Started", nil);
+        case NSXMLParserAttributeListNotFinishedError:
+            return NSLocalizedString(@"Attribute List Not Finished", nil);
+        case NSXMLParserMixedContentDeclNotStartedError:
+            return NSLocalizedString(@"Mixed Content Declaration Not Started", nil);
+        case NSXMLParserMixedContentDeclNotFinishedError:
+            return NSLocalizedString(@"Mixed Content Declaration Not Finished", nil);
+        case NSXMLParserElementContentDeclNotStartedError:
+            return NSLocalizedString(@"Element Content Declaration Not Started", nil);
+        case NSXMLParserElementContentDeclNotFinishedError:
+            return NSLocalizedString(@"Element Content Declaration Not Finished", nil);
+        case NSXMLParserXMLDeclNotStartedError:
+            return NSLocalizedString(@"XML Declaration Not Started", nil);
+        case NSXMLParserXMLDeclNotFinishedError:
+            return NSLocalizedString(@"XML Declaration Not Finished", nil);
+        case NSXMLParserConditionalSectionNotStartedError:
+            return NSLocalizedString(@"Conditional Section Not Started", nil);
+        case NSXMLParserConditionalSectionNotFinishedError:
+            return NSLocalizedString(@"Conditional Section Not Finished", nil);
+        case NSXMLParserExternalSubsetNotFinishedError:
+            return NSLocalizedString(@"External Subset Not Finished", nil);
+        case NSXMLParserDOCTYPEDeclNotFinishedError:
+            return NSLocalizedString(@"DOCTYPE Declaration Not Finished", nil);
+        case NSXMLParserMisplacedCDATAEndStringError:
+            return NSLocalizedString(@"Misplaced CDATA End String", nil);
+        case NSXMLParserCDATANotFinishedError:
+            return NSLocalizedString(@"CDATA Not Finished", nil);
+        case NSXMLParserMisplacedXMLDeclarationError:
+            return NSLocalizedString(@"Misplaced XML Declaration", nil);
+        case NSXMLParserSpaceRequiredError:
+            return NSLocalizedString(@"Space Required", nil);
+        case NSXMLParserSeparatorRequiredError:
+            return NSLocalizedString(@"Separator Required", nil);
+        case NSXMLParserNMTOKENRequiredError:
+            return NSLocalizedString(@"NAME Token Required", nil);
+        case NSXMLParserNAMERequiredError:
+            return NSLocalizedString(@"NAME Required", nil);
+        case NSXMLParserPCDATARequiredError:
+            return NSLocalizedString(@"CDATA Required", nil);
+        case NSXMLParserURIRequiredError:
+            return NSLocalizedString(@"URI Required", nil);
+        case NSXMLParserPublicIdentifierRequiredError:
+            return NSLocalizedString(@"Public Identifier Required", nil);
+        case NSXMLParserLTRequiredError:
+            return NSLocalizedString(@"'<' Required", nil);
+        case NSXMLParserGTRequiredError:
+            return NSLocalizedString(@"'>' Required", nil);
+        case NSXMLParserLTSlashRequiredError:
+            return NSLocalizedString(@"'</' Required", nil);
+        case NSXMLParserEqualExpectedError:
+            return NSLocalizedString(@"'=' Expected", nil);
+        case NSXMLParserTagNameMismatchError:
+            return NSLocalizedString(@"Tag Name Mismatch", nil);
+        case NSXMLParserUnfinishedTagError:
+            return NSLocalizedString(@"Unfinished Tag", nil);
+        case NSXMLParserStandaloneValueError:
+            return NSLocalizedString(@"Standalone Value Error", nil);
+        case NSXMLParserInvalidEncodingNameError:
+            return NSLocalizedString(@"Invalid Encoding Name", nil);
+        case NSXMLParserCommentContainsDoubleHyphenError:
+            return NSLocalizedString(@"Comment Contains Double Hyphen", nil);
+        case NSXMLParserInvalidEncodingError:
+            return NSLocalizedString(@"Invalid Encoding", nil);
+        case NSXMLParserExternalStandaloneEntityError:
+            return NSLocalizedString(@"External Standalone Entity Error", nil);
+        case NSXMLParserInvalidConditionalSectionError:
+            return NSLocalizedString(@"Invalid Conditional Section", nil);
+        case NSXMLParserEntityValueRequiredError:
+            return NSLocalizedString(@"Entity Value Required", nil);
+        case NSXMLParserNotWellBalancedError:
+            return NSLocalizedString(@"Not Well Balanced", nil);
+        case NSXMLParserExtraContentError:
+            return NSLocalizedString(@"Extra Content Error", nil);
+        case NSXMLParserInvalidCharacterInEntityError:
+            return NSLocalizedString(@"Invalid Character In Entity", nil);
+        case NSXMLParserParsedEntityRefInInternalError:
+            return NSLocalizedString(@"Internal Error In Parsed Entity Reference", nil);
+        case NSXMLParserEntityRefLoopError:
+            return NSLocalizedString(@"Entity Reference Loop Error", nil);
+        case NSXMLParserEntityBoundaryError:
+            return NSLocalizedString(@"Entity Boundary Error", nil);
+        case NSXMLParserInvalidURIError:
+            return NSLocalizedString(@"Invalid URI", nil);
+        case NSXMLParserURIFragmentError:
+            return NSLocalizedString(@"URI Fragment Error", nil);
+        case NSXMLParserNoDTDError:
+            return NSLocalizedString(@"Missing DTD", nil);
+        case NSXMLParserDelegateAbortedParseError:
+            return NSLocalizedString(@"Delegate Aborted Parse", nil);
+    }
+    return NSLocalizedString(@"XML Error", nil);
+}
+
 #pragma mark -
 
 #ifdef ACCOUNTS_EXTERN
@@ -780,8 +1166,6 @@
 
 #pragma mark -
 
-#ifdef _JSONKIT_H_
-
 + (NSString *)debugStringFromJSONKitCode:(NSInteger)code
 {
     return @(code).stringValue;
@@ -790,6 +1174,40 @@
 + (NSString *)stringFromCoreLocationCode:(NSInteger)code
 {
     return NSLocalizedString(@"JSON Error", nil);
+}
+
+#pragma mark -
+
+#ifdef MK_EXTERN
+
++ (NSString *)debugStringFromMapKitCode:(NSInteger)code
+{
+    switch (code) {
+        case MKErrorUnknown:
+            return mr_stringize_error_code(MKErrorUnknown);
+        case MKErrorServerFailure:
+            return mr_stringize_error_code(MKErrorServerFailure);
+        case MKErrorLoadingThrottled:
+            return mr_stringize_error_code(MKErrorLoadingThrottled);
+        case MKErrorPlacemarkNotFound:
+            return mr_stringize_error_code(MKErrorPlacemarkNotFound);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringFromMapKitCode:(NSInteger)code
+{
+    switch (code) {
+        case MKErrorUnknown:
+            return NSLocalizedString(@"Unknown Error", nil);
+        case MKErrorServerFailure:
+            return NSLocalizedString(@"Server Error", nil);
+        case MKErrorLoadingThrottled:
+            return NSLocalizedString(@"Loading Throttled Error", nil);
+        case MKErrorPlacemarkNotFound:
+            return NSLocalizedString(@"Placemark Not Found", nil);
+    }
+    return NSLocalizedString(@"Map Error", nil);
 }
 
 #endif
@@ -846,6 +1264,50 @@
             return NSLocalizedString(@"Interaction Not Allowed", nil);
     }
     return NSLocalizedString(@"Keychain Error", nil);
+}
+
+#endif
+
+#pragma mark -
+
+#ifdef SK_EXTERN
+
++ (NSString *)debugStringFromStoreKitCode:(NSInteger)code
+{
+    switch (code) {
+        case SKErrorUnknown:
+            return mr_stringize_error_code(SKErrorUnknown);
+        case SKErrorClientInvalid:
+            return mr_stringize_error_code(SKErrorClientInvalid);
+        case SKErrorPaymentCancelled:
+            return mr_stringize_error_code(SKErrorPaymentCancelled);
+        case SKErrorPaymentInvalid:
+            return mr_stringize_error_code(SKErrorPaymentInvalid);
+        case SKErrorPaymentNotAllowed:
+            return mr_stringize_error_code(SKErrorPaymentNotAllowed);
+        case SKErrorStoreProductNotAvailable:
+            return mr_stringize_error_code(SKErrorStoreProductNotAvailable);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringFromStoreKitCode:(NSInteger)code
+{
+    switch (code) {
+        case SKErrorUnknown:
+            return NSLocalizedString(@"Unknown Error", nil);
+        case SKErrorClientInvalid:
+            return NSLocalizedString(@"Invalid Client", nil);
+        case SKErrorPaymentCancelled:
+            return NSLocalizedString(@"Payment Cancelled", nil);
+        case SKErrorPaymentInvalid:
+            return NSLocalizedString(@"Invalid Payment", nil);
+        case SKErrorPaymentNotAllowed:
+            return NSLocalizedString(@"Payment Not Allowed", nil);
+        case SKErrorStoreProductNotAvailable:
+            return NSLocalizedString(@"Product Not Available", nil);
+    }
+    return NSLocalizedString(@"Store Error", nil);
 }
 
 #endif

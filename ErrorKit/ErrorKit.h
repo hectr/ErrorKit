@@ -68,8 +68,16 @@
 #import "MRErrorFormatter_JSONKit.h"
 #endif
 
+#ifdef MK_EXTERN
+#import "MRErrorFormatter_MapKit.h"
+#endif
+
 #ifdef _SECURITY_SECITEM_H_
 #import "MRErrorFormatter_Security.h"
+#endif
+
+#ifdef SK_EXTERN
+#import "MRErrorFormatter_StoreKit.h"
 #endif
 
 #ifndef MRLogError

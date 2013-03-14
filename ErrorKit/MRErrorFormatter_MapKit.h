@@ -1,4 +1,4 @@
-// UIAlertView+ErrorKit.h
+// MRErrorFormatter_MapKit.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,25 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "MRErrorFormatter+ErrorCode.h"
+
+#ifndef MK_EXTERN
+#warning This extension requires the Ma Kit framework.
+#endif
 
 
 /**
- Extracts the localized error description, failure reason and recovery suggestion and the recovery options from error and uses them as the alert’s message and button titles, respectively.
+ Adds methods for *stringizing* `MKErrorDomain` error codes.
  
- @discussion If the error's `localizedRecoveryOptions` is nil, a single localized "OK" button is shown. If `helpAnchor` is set, a localized "Help" button is also shown.
+ @discussion **Warning:** This extension requires the Store Kit framework. Add a `MapKitKit/MapKit.h` import to the header prefix of the project.
  */
-@interface UIAlertView (ErrorKit)
+@interface MRErrorFormatter (ErrorKit_MapKit)
 
-/// Convenience method for initializing an alert view with data from an error object.
-+ (UIAlertView *)alertWithTitle:(NSString *)titleOrNil
-                          error:(NSError *)error;
+/// @name Strings for debugging
 
-/// Convenience method for initializing an alert view with data from an error object.
-+ (UIAlertView *)alertWithTitle:(NSString *)titleOrNil
-                          error:(NSError *)error
-                       delegate:(id)delegate
-             didRecoverSelector:(SEL)selector
-                    contextInfo:(void *)context;
+/// Returns a string representation of the given `MKErrorDomain` error code.
++ (NSString *)debugStringFromMapKitCode:(NSInteger)errorCode;
+
+/// @name Strings for presentation
+
+/// Returns a string representation of the given `MKErrorDomain` error code.
++ (NSString *)stringFromMapKitCode:(NSInteger)errorCode
 
 @end
