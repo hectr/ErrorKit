@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>NSError(ErrorKit_AFNetworking) Category Reference</title>
+		<title>NSError(ErrorKit_CoreLocation) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">NSError(ErrorKit_AFNetworking) Category Reference</h1>
+				<h1 class="hideInXcode">NSError(ErrorKit_CoreLocation) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -40,9 +40,7 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/failingURLRequest">&nbsp;&nbsp;&nbsp;&nbsp;failingURLRequest</option>
-	
-	<option value="//api/name/failingURLResponse">&nbsp;&nbsp;&nbsp;&nbsp;failingURLResponse</option>
+	<option value="//api/name/alternateRegion">&nbsp;&nbsp;&nbsp;&nbsp;alternateRegion</option>
 	
 	
 	
@@ -64,7 +62,7 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AFRequestOperation error userInfo values">AFRequestOperation error userInfo values</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreLocation userInfo values">CoreLocation userInfo values</a></span></li>
 	
 </ul></li>
 
@@ -74,9 +72,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failingURLRequest">failingURLRequest</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failingURLResponse">failingURLResponse</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/alternateRegion">alternateRegion</a></span></li>
 	
 </ul></li>
 
@@ -89,7 +85,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="NSError(ErrorKit_AFNetworking) Category Reference" name="top"></a>
+				<a title="NSError(ErrorKit_CoreLocation) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -98,7 +94,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">NSError(ErrorKit_AFNetworking) Category Reference</h1>
+						<h1 class="title title-header">NSError(ErrorKit_CoreLocation) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -106,7 +102,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">NSError_AFNetworking.h</td>
+	<td class="specification-value">NSError_CoreLocation.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -116,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Adds getters for <code>AFNetworkingOperationFailingURLRequestErrorKey</code> and <code>AFNetworkingOperationFailingURLResponseErrorKey</code> user info values.</p><div class="warning"><p><strong>Warning:</strong> This extension requires the AFNetworking library. Add an <code>AFNetworking.h</code> import to the header prefix of the project.</p></div>
+						<p>Adds getters for Core Location&rsquo;s error <code>userInfo</code> values.</p><div class="warning"><p><strong>Warning:</strong> This extension requires the Core Location framework. Add a <code>CoreLocation/CoreLocation.h</code> import to the header prefix of the project.</p></div>
 					</div>
 					
 					
@@ -128,21 +124,14 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="AFRequestOperation error userInfo values" name="task_AFRequestOperation error userInfo values"></a>
+						<a title="CoreLocation userInfo values" name="task_CoreLocation userInfo values"></a>
 						
-<h3 class="subsubtitle task-title">AFRequestOperation error userInfo values</h3>
+<h3 class="subsubtitle task-title">CoreLocation userInfo values</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/failingURLRequest">&nbsp;&nbsp;failingURLRequest</a></code>
-		<span class="tooltip"><p>Getter for <code>AFNetworkingOperationFailingURLRequestErrorKey</code> user info value.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/failingURLResponse">&nbsp;&nbsp;failingURLResponse</a></code>
-		<span class="tooltip"><p>Getter for <code>AFNetworkingOperationFailingURLResponseErrorKey</code> user info value.</p></span>
+		<code><a href="#//api/name/alternateRegion">&nbsp;&nbsp;alternateRegion</a></code>
+		<span class="tooltip"><p>Getter for <code>kCLErrorUserInfoAlternateRegionKey</code> user info value.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -160,18 +149,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/failingURLRequest" title="failingURLRequest"></a>
-	<h3 class="subsubtitle method-title">failingURLRequest</h3>
+	<a name="//api/name/alternateRegion" title="alternateRegion"></a>
+	<h3 class="subsubtitle method-title">alternateRegion</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Getter for <code>AFNetworkingOperationFailingURLRequestErrorKey</code> user info value.</p>
+		<p>Getter for <code>kCLErrorUserInfoAlternateRegionKey</code> user info value.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSURLRequest *failingURLRequest</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CLRegion *alternateRegion</code></div>
 
     
 	
@@ -183,7 +172,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Getter for <code>AFNetworkingOperationFailingURLRequestErrorKey</code> user info value.</p>
+		<p>Getter for <code>kCLErrorUserInfoAlternateRegionKey</code> user info value.</p>
 	</div>
 	
 	
@@ -194,48 +183,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSError_AFNetworking.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/failingURLResponse" title="failingURLResponse"></a>
-	<h3 class="subsubtitle method-title">failingURLResponse</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Getter for <code>AFNetworkingOperationFailingURLResponseErrorKey</code> user info value.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSHTTPURLResponse *failingURLResponse</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Getter for <code>AFNetworkingOperationFailingURLResponseErrorKey</code> user info value.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSError_AFNetworking.h</code><br />
+		<code class="declared-in-ref">NSError_CoreLocation.h</code><br />
 	</div>				
 	
 	
