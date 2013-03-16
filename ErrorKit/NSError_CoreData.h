@@ -73,4 +73,4 @@
 /// Creates a new validation error by combining the receiver with the given error.
 - (NSError *)errorByCombiningWithError:(NSError *)errorOrNil;
 
-@endif
+@end
