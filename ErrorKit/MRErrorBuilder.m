@@ -29,7 +29,7 @@
 #ifdef _COREDATADEFINES_H
 #import "NSError_CoreData.h"
 #endif
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 #import "NSError_CoreLocation.h"
 #endif
 
@@ -81,7 +81,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.validationPredicate = error.validationPredicate;
     builder.validationValue = error.validationValue;
 #endif
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
     builder.alternateRegion = error.alternateRegion;
 #endif
 #ifdef _JSONKIT_H_
@@ -405,7 +405,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #pragma mark -
 
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 - (CLRegion *)alternateRegion
 {

@@ -141,7 +141,7 @@
 
 #pragma mark -
 
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 - (CLRegion *)alternateRegion
 {
@@ -179,10 +179,14 @@
                 self.code == NSURLErrorCancelled);
     }
 #endif
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
     if ([self.domain isEqualToString:kCLErrorDomain]) {
+#if TARGET_OS_MAC
+        return (self.code == kCLErrorGeocodeCanceled);
+#else
         return (self.code == kCLErrorGeocodeCanceled ||
                 self.code == kCLErrorDeferredCanceled);
+#endif
     }
 #endif
 #ifdef SK_EXTERN

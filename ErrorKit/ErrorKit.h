@@ -48,7 +48,7 @@
 #import "MRErrorBuilder_CoreData.h"
 #endif
 
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 #import "NSError_CoreLocation.h"
 #import "MRErrorBuilder_CoreLocation.h"
 #endif

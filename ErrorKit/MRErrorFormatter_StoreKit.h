@@ -42,6 +42,6 @@
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `SKErrorDomain` error code.
-+ (NSString *)stringWithStoreKitCode:(NSInteger)errorCode
++ (NSString *)stringWithStoreKitCode:(NSInteger)errorCode;
 
 @end

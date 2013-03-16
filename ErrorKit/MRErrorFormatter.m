@@ -28,7 +28,7 @@
 #if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
 #import "MRErrorFormatter_Admob.h"
 #endif
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 #import "MRErrorFormatter_CoreLocation.h"
 #endif
 #ifdef _JSONKIT_H_
@@ -160,7 +160,7 @@
         return [MRErrorFormatter debugStringWithURLCode:code];
     }
 #endif
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter debugStringWithCoreLocationCode:code];
     }
@@ -207,7 +207,7 @@
         return [MRErrorFormatter stringWithURLCode:code];
     }
 #endif
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter stringWithCoreLocationCode:code];
     }

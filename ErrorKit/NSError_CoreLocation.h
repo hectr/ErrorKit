@@ -22,7 +22,7 @@
 
 #import "NSError+ErrorKit.h"
 
-#ifndef __CORELOCATION__
+#if !defined(__CORELOCATION__) || !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 #warning This extension requires the Core Location framework.
 #endif
 

@@ -995,7 +995,7 @@
         case ACErrorAccountMissingRequiredProperty:
             return NSLocalizedString(@"Account Missing Required Property", nil);
         case ACErrorAccountAuthenticationFailed:
-            return NSLocalizedString(@"Account Authentication Failed");
+            return NSLocalizedString(@"Account Authentication Failed", nil);
         case ACErrorAccountTypeInvalid:
             return NSLocalizedString(@"Account Type Invalid", nil);
         case ACErrorAccountAlreadyExists:
@@ -1077,7 +1077,7 @@
 
 #pragma mark -
 
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 + (NSString *)debugStringWithCoreLocationCode:(NSInteger)code
 {
@@ -1104,6 +1104,7 @@
             return mr_stringize_error_code(kCLErrorGeocodeFoundPartialResult);
         case kCLErrorGeocodeCanceled:
             return mr_stringize_error_code(kCLErrorGeocodeCanceled);
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
         case kCLErrorDeferredFailed:
             return mr_stringize_error_code(kCLErrorDeferredFailed);
         case kCLErrorDeferredNotUpdatingLocation:
@@ -1114,6 +1115,7 @@
             return mr_stringize_error_code(kCLErrorDeferredDistanceFiltered);
         case kCLErrorDeferredCanceled:
             return mr_stringize_error_code(kCLErrorDeferredCanceled);
+#endif
     }
     return @(code).stringValue;
 }
@@ -1143,6 +1145,7 @@
             return NSLocalizedString(@"Geocode Found Partial Result", nil);
         case kCLErrorGeocodeCanceled:
             return NSLocalizedString(@"Geocode Canceled", nil);
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
         case kCLErrorDeferredFailed:
             return NSLocalizedString(@"Deferred Update Failed", nil);
         case kCLErrorDeferredNotUpdatingLocation:
@@ -1153,6 +1156,7 @@
             return NSLocalizedString(@"Cannot Filter Deferred Distance", nil);
         case kCLErrorDeferredCanceled:
             return NSLocalizedString(@"Deferred Update Canceled", nil);
+#endif
     }
     return NSLocalizedString(@"Location Error", nil);
 }
@@ -1173,7 +1177,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithCoreLocationCode:(NSInteger)code
++ (NSString *)stringWithJSONKitCode:(NSInteger)code
 {
     return NSLocalizedString(@"JSON Error", nil);
 }
@@ -1287,8 +1291,10 @@
             return mr_stringize_error_code(SKErrorPaymentInvalid);
         case SKErrorPaymentNotAllowed:
             return mr_stringize_error_code(SKErrorPaymentNotAllowed);
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
         case SKErrorStoreProductNotAvailable:
             return mr_stringize_error_code(SKErrorStoreProductNotAvailable);
+#endif
     }
     return @(code).stringValue;
 }
@@ -1306,8 +1312,10 @@
             return NSLocalizedString(@"Invalid Payment", nil);
         case SKErrorPaymentNotAllowed:
             return NSLocalizedString(@"Payment Not Allowed", nil);
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
         case SKErrorStoreProductNotAvailable:
             return NSLocalizedString(@"Product Not Available", nil);
+#endif
     }
     return NSLocalizedString(@"Store Error", nil);
 }

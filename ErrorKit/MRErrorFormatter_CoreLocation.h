@@ -22,7 +22,7 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef __CORELOCATION__
+#if !defined(__CORELOCATION__) || !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 #warning This extension requires the Core Location framework.
 #endif
 
@@ -42,6 +42,6 @@
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `kCLErrorDomain` error code.
-+ (NSString *)stringWithCoreLocationCode:(NSInteger)errorCode
++ (NSString *)stringWithCoreLocationCode:(NSInteger)errorCode;
 
 @end
