@@ -42,6 +42,6 @@
 /// @name Strings for presentation
 
 /// Returns a string representation of the given `MKErrorDomain` error code.
-+ (NSString *)stringWithMapKitCode:(NSInteger)errorCode
++ (NSString *)stringWithMapKitCode:(NSInteger)errorCode;
 
 @end
