@@ -29,9 +29,10 @@
 #ifdef _COREDATADEFINES_H
 #import "NSError_CoreData.h"
 #endif
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifdef __CORELOCATION__
 #import "NSError_CoreLocation.h"
 #endif
+#import "NSError_JSONKit.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -81,13 +82,11 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.validationPredicate = error.validationPredicate;
     builder.validationValue = error.validationValue;
 #endif
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#if defined(__CORELOCATION__) && defined(ERROR_KIT_CORE_LOCATION)
     builder.alternateRegion = error.alternateRegion;
 #endif
-#ifdef _JSONKIT_H_
     builder.atIndex = error.atIndex;
     builder.lineNumber = error.lineNumber;
-#endif
     return builder;
 }
 
@@ -405,15 +404,17 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #pragma mark -
 
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#if defined(__CORELOCATION__) && defined(ERROR_KIT_CORE_LOCATION)
 
 - (CLRegion *)alternateRegion
 {
+    // FIXME
     return [self.userInfo objectForKey:kCLErrorUserInfoAlternateRegionKey];
 }
 
 - (void)setAlternateRegion:(CLRegion *)alternateRegion
 {
+    // FIXME
     [self setUserInfoValue:alternateRegion.copy forKey:kCLErrorUserInfoAlternateRegionKey];
 }
 

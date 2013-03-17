@@ -33,6 +33,8 @@
 /* Begin PBXFileReference section */
 		844575F816F1154A0057CC62 /* MRErrorFormatter_StoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_StoreKit.h; path = ../../ErrorKit/MRErrorFormatter_StoreKit.h; sourceTree = "<group>"; };
 		844575FC16F119190057CC62 /* MRErrorFormatter_MapKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_MapKit.h; path = ../../ErrorKit/MRErrorFormatter_MapKit.h; sourceTree = "<group>"; };
+		84671A0216F66E9F0033F83E /* MRErrorFormatter_iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_iAD.h; path = ../../ErrorKit/MRErrorFormatter_iAD.h; sourceTree = "<group>"; };
+		84671A0316F674120033F83E /* MRErrorFormatter_MessageUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_MessageUI.h; path = ../../ErrorKit/MRErrorFormatter_MessageUI.h; sourceTree = "<group>"; };
 		846F6B7516EFABD20005B913 /* MRErrorFormatter_Security.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_Security.h; path = ../../ErrorKit/MRErrorFormatter_Security.h; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB843016C802F3000BF23E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -183,8 +185,10 @@
 				84DD938116EFCBAC002F63A1 /* MRErrorFormatter_Admob.h */,
 				84DCF7C616EC0CFF00F50750 /* MRErrorFormatter_CoreLocation.h */,
 				84FC301116F29710006DF5BC /* MRErrorFormatter_HTTP.h */,
+				84671A0216F66E9F0033F83E /* MRErrorFormatter_iAD.h */,
 				84ECCA0D16EE8E22002228AE /* MRErrorFormatter_JSONKit.h */,
 				844575FC16F119190057CC62 /* MRErrorFormatter_MapKit.h */,
+				84671A0316F674120033F83E /* MRErrorFormatter_MessageUI.h */,
 				846F6B7516EFABD20005B913 /* MRErrorFormatter_Security.h */,
 				844575F816F1154A0057CC62 /* MRErrorFormatter_StoreKit.h */,
 			);
@@ -415,6 +419,7 @@
 				GCC_PREFIX_HEADER = "ErrorKit-Example/ErrorKit-Example-Prefix.pch";
 				INFOPLIST_FILE = "ErrorKit-Example/ErrorKit-Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

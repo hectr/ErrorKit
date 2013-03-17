@@ -48,7 +48,7 @@
 #import "MRErrorBuilder_CoreData.h"
 #endif
 
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifdef __CORELOCATION__
 #import "NSError_CoreLocation.h"
 #import "MRErrorBuilder_CoreLocation.h"
 #endif
@@ -58,10 +58,15 @@
 #import "MRErrorBuilder_JSONKit.h"
 #endif
 
+#ifdef ERROR_KIT_MESSAGE_UI
+#import "MRErrorFormatter_MessageUI.h"
+#endif
+
 #ifdef _SECURITY_SECITEM_H_
 #import "MRErrorFormatter_Security.h"
 #endif
 
+// Logger
 #ifndef MRLogError
 #define MRLogError(error)                                                    \
     do {                                                                     \
@@ -77,6 +82,7 @@
     } while(0)
 #endif
 
+// Assertion
 #ifndef MRNotErrorAssert
 #ifndef NS_BLOCK_ASSERTIONS
 #define MRNotErrorAssert(error)                                    \
@@ -91,5 +97,14 @@
 #define MRNotErrorAssert(error)
 #endif
 #endif
+
+// Enables iAd error codes stringizing methods.
+//#define ERROR_KIT_IAD
+
+// Enables MessageUI error codes stringizing methods.
+//#define ERROR_KIT_MESSAGE_UI
+
+// Enables unsupported Core Location accessors.
+//#define ERROR_KIT_CORE_LOCATION
 
 #endif

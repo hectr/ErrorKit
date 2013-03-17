@@ -22,10 +22,14 @@
 
 #import "MRErrorBuilder.h"
 
-#if !defined(__CORELOCATION__) || !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifndef __CORELOCATION__
 #warning This extension requires the Core Location framework.
 #endif
 
+
+#ifdef ERROR_KIT_CORE_LOCATION
+
+#warning MRErrorBuilder (ErrorKit_CoreLocation) is unsupported!
 
 /**
  Adds accessors for `kCLErrorUserInfoAlternateRegionKey` user info value.
@@ -38,3 +42,5 @@
 @property (nonatomic, copy) CLRegion *alternateRegion;
 
 @end
+
+#endif

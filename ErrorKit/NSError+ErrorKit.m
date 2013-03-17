@@ -141,10 +141,11 @@
 
 #pragma mark -
 
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#if defined(__CORELOCATION__) && defined(ERROR_KIT_CORE_LOCATION)
 
 - (CLRegion *)alternateRegion
 {
+    // FIXME
     return [self.userInfo objectForKey:kCLErrorUserInfoAlternateRegionKey];
 }
 
@@ -179,7 +180,7 @@
                 self.code == NSURLErrorCancelled);
     }
 #endif
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifdef __CORELOCATION__
     if ([self.domain isEqualToString:kCLErrorDomain]) {
 #if TARGET_OS_MAC
         return (self.code == kCLErrorGeocodeCanceled);

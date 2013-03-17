@@ -1,4 +1,4 @@
-// MRErrorFormatter_JSONKit.h
+// MRErrorFormatter_MessageUI.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -23,19 +23,37 @@
 #import "MRErrorFormatter+ErrorCode.h"
 
 
+#ifdef ERROR_KIT_MESSAGE_UI
+
 /**
- Adds methods for *stringizing* `@"JKErrorDomain"` error codes.
-*/
-@interface MRErrorFormatter (ErrorKit_JSONKit)
+ Adds methods for *stringizing* `MFMailComposeErrorDomain` error codes.
+ 
+ @discussion **Warning:** This extension requires the MessageUI framework.
+ */
+@interface MRErrorFormatter (ErrorKit_MessageUI)
 
 /// @name Strings for debugging
 
-/// Returns a string representation of the given `@"JKErrorDomain"` error code.
-+ (NSString *)debugStringWithJSONKitCode:(NSInteger)errorCode;
+/// Returns a string representation of the given `MFMailComposeErrorDomain` error code.
++ (NSString *)debugStringWithMailComposeCode:(NSInteger)errorCode;
+
+/// Returns a string representation of the given result code.
++ (NSString *)debugStringWithMailComposeResult:(NSInteger)resultCode;
+
+/// Returns a string representation of the given result code.
++ (NSString *)debugStringWithMessageComposeResult:(NSInteger)resultCode;
 
 /// @name Strings for presentation
 
-/// Returns a string representation of the given `@"JKErrorDomain"` error code.
-+ (NSString *)stringWithJSONKitCode:(NSInteger)errorCode;
+/// Returns a string representation of the given `MFMailComposeErrorDomain` error code.
++ (NSString *)stringWithMailComposeCode:(NSInteger)errorCode;
+
+/// Returns a string representation of the given result code.
++ (NSString *)stringWithMailComposeResult:(NSInteger)resultCode;
+
+/// Returns a string representation of the given result code.
++ (NSString *)stringWithMessageComposeResult:(NSInteger)resultCode;
 
 @end
+
+#endif

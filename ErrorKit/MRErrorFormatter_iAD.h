@@ -1,4 +1,4 @@
-// NSError_JSONKit.h
+// MRErrorFormatter_iAD.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,20 +20,29 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSError+ErrorKit.h"
 
+#import "MRErrorFormatter+ErrorCode.h"
+
+
+#ifdef ERROR_KIT_IAD
 
 /**
- Adds getters for `@"JKAtIndexKey"` and `@"JKLineNumberKey"` user info values.
+ Adds methods for *stringizing* `ADErrorDomain` error codes.
+ 
+ @discussion **Warning:** This extension requires the iAD framework.
  */
-@interface NSError (ErrorKit_JSONKit)
+@interface MRErrorFormatter (ErrorKit_iAD)
 
-/// @name CoreLocation userInfo values
+/// @name Strings for debugging
 
-/// Getter for `@"JKAtIndexKey"` user info value.
-@property (nonatomic, readonly) unsigned long atIndex;
+/// Returns a string representation of the given `ADErrorDomain` error code.
++ (NSString *)debugStringWithIADCode:(NSInteger)errorCode;
 
-/// Getter for `@"JKLineNumberKey"` user info value.
-@property (nonatomic, readonly) unsigned long lineNumber;
+/// @name Strings for presentation
+
+/// Returns a string representation of the given `ADErrorDomain` error code.
++ (NSString *)stringWithIADCode:(NSInteger)errorCode;
 
 @end
+
+#endif

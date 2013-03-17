@@ -1016,7 +1016,7 @@
 
 #if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
 
-+ (NSString *)debugStringWithAdmobCode:(NSInteger)errorCode
++ (NSString *)debugStringWithAdmobCode:(NSInteger)code
 {
     switch (code) {
         case kGADErrorInvalidRequest:
@@ -1045,7 +1045,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithAdmobCode:(NSInteger)errorCode
++ (NSString *)stringWithAdmobCode:(NSInteger)code
 {
     switch (code) {
         case kGADErrorInvalidRequest:
@@ -1077,7 +1077,7 @@
 
 #pragma mark -
 
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifdef __CORELOCATION__
 
 + (NSString *)debugStringWithCoreLocationCode:(NSInteger)code
 {
@@ -1172,6 +1172,62 @@
 
 #pragma mark -
 
+#ifdef ERROR_KIT_IAD
+
++ (NSString *)debugStringWithIADCode:(NSInteger)code
+{
+    switch (code) {
+        case ADErrorUnknown:
+            return mr_stringize_error_code(ADErrorUnknown);
+        case ADErrorServerFailure:
+            return mr_stringize_error_code(ADErrorServerFailure);
+        case ADErrorLoadingThrottled:
+            return mr_stringize_error_code(ADErrorLoadingThrottled);
+        case ADErrorInventoryUnavailable:
+            return mr_stringize_error_code(ADErrorInventoryUnavailable);
+        case ADErrorConfigurationError:
+            return mr_stringize_error_code(ADErrorConfigurationError);
+        case ADErrorBannerVisibleWithoutContent:
+            return mr_stringize_error_code(ADErrorBannerVisibleWithoutContent);
+        case ADErrorApplicationInactive:
+            return mr_stringize_error_code(ADErrorApplicationInactive);
+#if __IPHONE_6_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+        case ADErrorAdUnloaded:
+            return mr_stringize_error_code(ADErrorAdUnloaded);
+#endif
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringWithIADCode:(NSInteger)code
+{
+    switch (code) {
+        case ADErrorUnknown:
+            return NSLocalizedString(@"Unknown Error", nil);
+        case ADErrorServerFailure:
+            return NSLocalizedString(@"Server Failure", nil);
+        case ADErrorLoadingThrottled:
+            return NSLocalizedString(@"Loading Throttled", nil);
+        case ADErrorInventoryUnavailable:
+            return NSLocalizedString(@"Inventory Unavailable", nil);
+        case ADErrorConfigurationError:
+            return NSLocalizedString(@"Configuration Error", nil);
+        case ADErrorBannerVisibleWithoutContent:
+            return NSLocalizedString(@"Banner Visible Without Content", nil);
+        case ADErrorApplicationInactive:
+            return NSLocalizedString(@"Application Inactive Error", nil);
+#if __IPHONE_6_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+        case ADErrorAdUnloaded:
+            return NSLocalizedString(@"Ad Unloaded Error", nil);
+#endif
+    }
+    return NSLocalizedString(@"iAd Error", nil);
+}
+
+#endif
+
+#pragma mark -
+
 + (NSString *)debugStringWithJSONKitCode:(NSInteger)code
 {
     return @(code).stringValue;
@@ -1214,6 +1270,90 @@
             return NSLocalizedString(@"Placemark Not Found", nil);
     }
     return NSLocalizedString(@"Map Error", nil);
+}
+
+#endif
+
+#pragma mark -
+
+#ifdef ERROR_KIT_MESSAGE_UI
+
++ (NSString *)debugStringWithMailComposeCode:(NSInteger)code
+{
+    switch (code) {
+        case MFMailComposeErrorCodeSaveFailed:
+            return mr_stringize_error_code(MFMailComposeErrorCodeSaveFailed);
+        case MFMailComposeErrorCodeSendFailed:
+            return mr_stringize_error_code(MFMailComposeErrorCodeSendFailed);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)debugStringWithMailComposeResult:(NSInteger)code
+{
+    switch (code) {
+        case MFMailComposeResultCancelled:
+            return mr_stringize_error_code(MFMailComposeResultCancelled);
+        case MFMailComposeResultSaved:
+            return mr_stringize_error_code(MFMailComposeResultSaved);
+        case MFMailComposeResultSent:
+            return mr_stringize_error_code(MFMailComposeResultSent);
+        case MFMailComposeResultFailed:
+            return mr_stringize_error_code(MFMailComposeResultFailed);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)debugStringWithMessageComposeResult:(NSInteger)code
+{
+    switch (code) {
+        case MessageComposeResultCancelled:
+            return mr_stringize_error_code(MessageComposeResultCancelled);
+        case MessageComposeResultSent:
+            return mr_stringize_error_code(MessageComposeResultSent);
+        case MessageComposeResultFailed:
+            return mr_stringize_error_code(MessageComposeResultFailed);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringWithMailComposeCode:(NSInteger)code
+{
+    switch (code) {
+        case MFMailComposeErrorCodeSaveFailed:
+            return NSLocalizedString(@"Mail Save Failed", nil);
+        case MFMailComposeErrorCodeSendFailed:
+            return NSLocalizedString(@"Mail Send Failed", nil);
+    }
+    return NSLocalizedString(@"Mail Error", nil);
+}
+
++ (NSString *)stringWithMailComposeResult:(NSInteger)code
+{
+    switch (code) {
+        case MFMailComposeResultCancelled:
+            return NSLocalizedString(@"Mail Cancelled", nil);
+        case MFMailComposeResultSaved:
+            return NSLocalizedString(@"Mail Saved", nil);
+        case MFMailComposeResultSent:
+            return NSLocalizedString(@"Mail Sent", nil);
+        case MFMailComposeResultFailed:
+            return NSLocalizedString(@"Mail Failed", nil);
+    }
+    return NSLocalizedString(@"Unknown Result", nil);
+}
+
++ (NSString *)stringWithMessageComposeResult:(NSInteger)code
+{
+    switch (code) {
+        case MessageComposeResultCancelled:
+            return NSLocalizedString(@"Message Cancelled", nil);
+        case MessageComposeResultSent:
+            return NSLocalizedString(@"Message Sent", nil);
+        case MessageComposeResultFailed:
+            return NSLocalizedString(@"Message Failed", nil);
+    }
+    return NSLocalizedString(@"Unknown Result", nil);
 }
 
 #endif

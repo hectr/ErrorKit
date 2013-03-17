@@ -28,14 +28,18 @@
 #if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
 #import "MRErrorFormatter_Admob.h"
 #endif
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifdef __CORELOCATION__
 #import "MRErrorFormatter_CoreLocation.h"
 #endif
-#ifdef _JSONKIT_H_
-#import "MRErrorFormatter_JSONKit.h"
+#ifdef ERROR_KIT_IAD
+#import "MRErrorFormatter_iAD.h"
 #endif
+#import "MRErrorFormatter_JSONKit.h"
 #ifdef MK_EXTERN
 #import "MRErrorFormatter_MapKit.h"
+#endif
+#ifdef ERROR_KIT_MESSAGE_UI
+#import "MRErrorFormatter_MessageUI.h"
 #endif
 #ifdef SK_EXTERN
 #import "MRErrorFormatter_StoreKit.h"
@@ -160,19 +164,27 @@
         return [MRErrorFormatter debugStringWithURLCode:code];
     }
 #endif
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifdef __CORELOCATION__
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter debugStringWithCoreLocationCode:code];
     }
 #endif
-#ifdef _JSONKIT_H_
+#ifdef ERROR_KIT_IAD
+    else if ([domain isEqualToString:ADErrorDomain]) {
+        return [MRErrorFormatter debugStringWithIADCode:code];
+    }
+#endif
     else if ([domain isEqualToString:@"JKErrorDomain"]) {
         return [MRErrorFormatter debugStringWithJSONKitCode:code];
     }
-#endif
 #ifdef MK_EXTERN
     else if ([domain isEqualToString:MKErrorDomain]) {
         return [MRErrorFormatter debugStringWithMapKitCode:code];
+    }
+#endif
+#ifdef ERROR_KIT_MESSAGE_UI
+    else if ([domain isEqualToString:MFMailComposeErrorDomain]) {
+        return [MRErrorFormatter debugStringWithMailComposeCode:code];
     }
 #endif
 #ifdef SK_EXTERN
@@ -207,19 +219,27 @@
         return [MRErrorFormatter stringWithURLCode:code];
     }
 #endif
-#if defined(__CORELOCATION__) && (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifdef __CORELOCATION__
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter stringWithCoreLocationCode:code];
     }
 #endif
-#ifdef _JSONKIT_H_
+#ifdef ERROR_KIT_IAD
+    else if ([domain isEqualToString:ADErrorDomain]) {
+        return [MRErrorFormatter stringWithIADCode:code];
+    }
+#endif
     else if ([domain isEqualToString:@"JKErrorDomain"]) {
         return [MRErrorFormatter stringWithJSONKitCode:code];
     }
-#endif
 #ifdef MK_EXTERN
     else if ([domain isEqualToString:MKErrorDomain]) {
         return [MRErrorFormatter stringWithMapKitCode:code];
+    }
+#endif
+#ifdef ERROR_KIT_MESSAGE_UI
+    else if ([domain isEqualToString:MFMailComposeErrorDomain]) {
+        return [MRErrorFormatter stringWithMailComposeCode:code];
     }
 #endif
 #ifdef SK_EXTERN

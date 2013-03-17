@@ -22,10 +22,14 @@
 
 #import "NSError+ErrorKit.h"
 
-#if !defined(__CORELOCATION__) || !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#ifndef __CORELOCATION__
 #warning This extension requires the Core Location framework.
 #endif
 
+
+#ifdef ERROR_KIT_CORE_LOCATION
+
+#warning NSError (ErrorKit_CoreLocation) is unsupported!
 
 /**
  Adds getters for Core Location's error `userInfo` values.
@@ -40,3 +44,5 @@
 @property (nonatomic, readonly) CLRegion *alternateRegion;
 
 @end
+
+#endif
