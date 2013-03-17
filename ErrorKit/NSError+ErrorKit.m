@@ -182,7 +182,7 @@
 #endif
 #ifdef __CORELOCATION__
     if ([self.domain isEqualToString:kCLErrorDomain]) {
-#if TARGET_OS_MAC
+#if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         return (self.code == kCLErrorGeocodeCanceled);
 #else
         return (self.code == kCLErrorGeocodeCanceled ||

@@ -1104,7 +1104,7 @@
             return mr_stringize_error_code(kCLErrorGeocodeFoundPartialResult);
         case kCLErrorGeocodeCanceled:
             return mr_stringize_error_code(kCLErrorGeocodeCanceled);
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         case kCLErrorDeferredFailed:
             return mr_stringize_error_code(kCLErrorDeferredFailed);
         case kCLErrorDeferredNotUpdatingLocation:
@@ -1145,7 +1145,7 @@
             return NSLocalizedString(@"Geocode Found Partial Result", nil);
         case kCLErrorGeocodeCanceled:
             return NSLocalizedString(@"Geocode Canceled", nil);
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         case kCLErrorDeferredFailed:
             return NSLocalizedString(@"Deferred Update Failed", nil);
         case kCLErrorDeferredNotUpdatingLocation:
@@ -1383,6 +1383,64 @@
             return mr_stringize_error_code(errSecItemNotFound);
         case errSecInteractionNotAllowed:
             return mr_stringize_error_code(errSecInteractionNotAllowed);
+#if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+        case errSecReadOnly:
+            return mr_stringize_error_code(errSecReadOnly);
+        case errSecNoSuchKeychain:
+            return mr_stringize_error_code(errSecNoSuchKeychain);
+        case errSecInvalidKeychain:
+            return mr_stringize_error_code(errSecInvalidKeychain);
+        case errSecDuplicateKeychain:
+            return mr_stringize_error_code(errSecDuplicateKeychain);
+        case errSecDuplicateCallback:
+            return mr_stringize_error_code(errSecDuplicateCallback);
+        case errSecInvalidCallback:
+            return mr_stringize_error_code(errSecInvalidCallback);
+        case errSecBufferTooSmall:
+            return mr_stringize_error_code(errSecBufferTooSmall);
+        case errSecDataTooLarge:
+            return mr_stringize_error_code(errSecDataTooLarge);
+        case errSecNoSuchAttr:
+            return mr_stringize_error_code(errSecNoSuchAttr);
+        case errSecInvalidItemRef:
+            return mr_stringize_error_code(errSecInvalidItemRef);
+        case errSecInvalidSearchRef:
+            return mr_stringize_error_code(errSecInvalidSearchRef);
+        case errSecNoSuchClass:
+            return mr_stringize_error_code(errSecNoSuchClass);
+        case errSecNoDefaultKeychain:
+            return mr_stringize_error_code(errSecNoDefaultKeychain);
+        case errSecReadOnlyAttr:
+            return mr_stringize_error_code(errSecReadOnlyAttr);
+        case errSecWrongSecVersion:
+            return mr_stringize_error_code(errSecWrongSecVersion);
+        case errSecKeySizeNotAllowed:
+            return mr_stringize_error_code(errSecKeySizeNotAllowed);
+        case errSecNoStorageModule:
+            return mr_stringize_error_code(errSecNoStorageModule);
+        case errSecNoCertificateModule:
+            return mr_stringize_error_code(errSecNoCertificateModule);
+        case errSecNoPolicyModule:
+            return mr_stringize_error_code(errSecNoPolicyModule);
+        case errSecInteractionRequired:
+            return mr_stringize_error_code(errSecInteractionRequired);
+        case errSecDataNotAvailable:
+            return mr_stringize_error_code(errSecDataNotAvailable);
+        case errSecDataNotModifiable:
+            return mr_stringize_error_code(errSecDataNotModifiable);
+        case errSecCreateChainFailed:
+            return mr_stringize_error_code(errSecCreateChainFailed);
+        case errSecACLNotSimple:
+            return mr_stringize_error_code(errSecACLNotSimple);
+        case errSecPolicyNotFound:
+            return mr_stringize_error_code(errSecPolicyNotFound);
+        case errSecInvalidTrustSetting:
+            return mr_stringize_error_code(errSecInvalidTrustSetting);
+        case errSecNoAccessForItem:
+            return mr_stringize_error_code(errSecNoAccessForItem);
+        case errSecInvalidOwnerEdit:
+            return mr_stringize_error_code(errSecInvalidOwnerEdit);
+#endif
     }
     return @(code).stringValue;
 }
@@ -1408,6 +1466,64 @@
             return NSLocalizedString(@"Item Not Found", nil);
         case errSecInteractionNotAllowed:
             return NSLocalizedString(@"Interaction Not Allowed", nil);
+#if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+        case errSecReadOnly:
+            return NSLocalizedString(@"Read Only Error", nil);
+        case errSecNoSuchKeychain:
+            return NSLocalizedString(@"Keychain Non Existent", nil);
+        case errSecInvalidKeychain:
+            return NSLocalizedString(@"Invalid Keychain", nil);
+        case errSecDuplicateKeychain:
+            return NSLocalizedString(@"Duplicate Keychain", nil);
+        case errSecDuplicateCallback:
+            return NSLocalizedString(@"Duplicate Callback", nil);
+        case errSecInvalidCallback:
+            return NSLocalizedString(@"Invalid Callback", nil);
+        case errSecBufferTooSmall:
+            return NSLocalizedString(@"Buffer Too Small", nil);
+        case errSecDataTooLarge:
+            return NSLocalizedString(@"Data Too Large", nil);
+        case errSecNoSuchAttr:
+            return NSLocalizedString(@"Attribute Non Existent", nil);
+        case errSecInvalidItemRef:
+            return NSLocalizedString(@"Invalid Item Reference", nil);
+        case errSecInvalidSearchRef:
+            return NSLocalizedString(@"Invalid Search Reference", nil);
+        case errSecNoSuchClass:
+            return NSLocalizedString(@"Keychain Class Non Existent", nil);
+        case errSecNoDefaultKeychain:
+            return NSLocalizedString(@"Default Keychain Non Existent", nil);
+        case errSecReadOnlyAttr:
+            return NSLocalizedString(@"Read Only Attribute", nil);
+        case errSecWrongSecVersion:
+            return NSLocalizedString(@"Wrong Version", nil);
+        case errSecKeySizeNotAllowed:
+            return NSLocalizedString(@"Key Size Not Allowed", nil);
+        case errSecNoStorageModule:
+            return NSLocalizedString(@"No Storage Module", nil);
+        case errSecNoCertificateModule:
+            return NSLocalizedString(@"No Certificate Module Available", nil);
+        case errSecNoPolicyModule:
+            return NSLocalizedString(@"No Policy Module Available", nil);
+        case errSecInteractionRequired:
+            return NSLocalizedString(@"User Interaction Required", nil);
+        case errSecDataNotAvailable:
+            return NSLocalizedString(@"Data Not Available", nil);
+        case errSecDataNotModifiable:
+            return NSLocalizedString(@"Data Not Modifiable", nil);
+        case errSecCreateChainFailed:
+            return NSLocalizedString(@"Certificate chain Creation Failed", nil);
+        case errSecACLNotSimple:
+            return NSLocalizedString(@"Access Control List Not In Standard Simple Form", nil);
+        case errSecPolicyNotFound:
+            return NSLocalizedString(@"Policy Not Found", nil);
+        case errSecInvalidTrustSetting:
+            return NSLocalizedString(@"Invalid Trust Setting", nil);
+        case errSecNoAccessForItem:
+            return NSLocalizedString(@"No Access Control For Item", nil);
+        case errSecInvalidOwnerEdit:
+            return NSLocalizedString(@"Invalid Owner Edit Attempt", nil);
+#endif
     }
     return NSLocalizedString(@"Keychain Error", nil);
 }
@@ -1431,7 +1547,7 @@
             return mr_stringize_error_code(SKErrorPaymentInvalid);
         case SKErrorPaymentNotAllowed:
             return mr_stringize_error_code(SKErrorPaymentNotAllowed);
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         case SKErrorStoreProductNotAvailable:
             return mr_stringize_error_code(SKErrorStoreProductNotAvailable);
 #endif
@@ -1452,7 +1568,7 @@
             return NSLocalizedString(@"Invalid Payment", nil);
         case SKErrorPaymentNotAllowed:
             return NSLocalizedString(@"Payment Not Allowed", nil);
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         case SKErrorStoreProductNotAvailable:
             return NSLocalizedString(@"Product Not Available", nil);
 #endif
