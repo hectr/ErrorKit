@@ -44,6 +44,9 @@
 #ifdef SK_EXTERN
 #import "MRErrorFormatter_StoreKit.h"
 #endif
+#ifdef TransitionKit_TransitionKit_h
+#import "MRErrorFormatter_TransitionKit.h"
+#endif
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -192,6 +195,11 @@
         return [MRErrorFormatter debugStringWithStoreKitCode:code];
     }
 #endif
+#ifdef TransitionKit_TransitionKit_h
+    else if ([domain isEqualToString:TKErrorDomain]) {
+        return [MRErrorFormatter debugStringWithTransitionKitCode:code];
+    }
+#endif
     return @(code).stringValue;
 }
 
@@ -245,6 +253,11 @@
 #ifdef SK_EXTERN
     else if ([domain isEqualToString:SKErrorDomain]) {
         return [MRErrorFormatter stringWithStoreKitCode:code];
+    }
+#endif
+#ifdef TransitionKit_TransitionKit_h
+    else if ([domain isEqualToString:TKErrorDomain]) {
+        return [MRErrorFormatter stringWithTransitionKitCode:code];
     }
 #endif
     return nil;

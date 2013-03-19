@@ -1578,4 +1578,32 @@
 
 #endif
 
+#pragma mark -
+
+#ifdef TransitionKit_TransitionKit_h
+
++ (NSString *)debugStringWithTransitionKitCode:(NSInteger)code
+{
+    switch (code) {
+        case TKInvalidTransitionError:
+            return mr_stringize_error_code(TKInvalidTransitionError);
+        case TKTransitionDeclinedError:
+            return mr_stringize_error_code(TKTransitionDeclinedError);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringWithTransitionKitCode:(NSInteger)code
+{
+    switch (code) {
+        case TKInvalidTransitionError:
+            return NSLocalizedString(@"Transition Invalid", nil);
+        case TKTransitionDeclinedError:
+            return NSLocalizedString(@"Transition Declined", nil);
+    }
+    return NSLocalizedString(@"State Machine Error", nil);
+}
+
+#endif
+
 @end

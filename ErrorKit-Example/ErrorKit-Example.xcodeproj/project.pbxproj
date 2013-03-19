@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8418DF6C16F9047C00A4B580 /* MRErrorFormatter_TransitionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_TransitionKit.h; path = ../../ErrorKit/MRErrorFormatter_TransitionKit.h; sourceTree = "<group>"; };
 		844575F816F1154A0057CC62 /* MRErrorFormatter_StoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_StoreKit.h; path = ../../ErrorKit/MRErrorFormatter_StoreKit.h; sourceTree = "<group>"; };
 		844575FC16F119190057CC62 /* MRErrorFormatter_MapKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_MapKit.h; path = ../../ErrorKit/MRErrorFormatter_MapKit.h; sourceTree = "<group>"; };
 		84671A0216F66E9F0033F83E /* MRErrorFormatter_iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_iAD.h; path = ../../ErrorKit/MRErrorFormatter_iAD.h; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 				84671A0316F674120033F83E /* MRErrorFormatter_MessageUI.h */,
 				846F6B7516EFABD20005B913 /* MRErrorFormatter_Security.h */,
 				844575F816F1154A0057CC62 /* MRErrorFormatter_StoreKit.h */,
+				8418DF6C16F9047C00A4B580 /* MRErrorFormatter_TransitionKit.h */,
 			);
 			name = format;
 			sourceTree = "<group>";
