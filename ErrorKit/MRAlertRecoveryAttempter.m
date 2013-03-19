@@ -191,4 +191,42 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
     }
 }
 
+- (NSString *)description
+{
+    NSString *delegateString;
+    if (self.delegate) {
+        delegateString = [NSString stringWithFormat:@"delegate %p"
+                                                    , self.delegate];
+    } else {
+        delegateString = @"";
+    }
+    NSMutableArray *blocksComponents = [NSMutableArray arrayWithCapacity:2];
+    if (self.recoveryHandler) {
+        [blocksComponents addObject:@"recovery block"];
+    }
+    if (self.delegateHandler) {
+        [blocksComponents addObject:@"delegate block"];
+    }
+    NSString *blocksString = [blocksComponents componentsJoinedByString:@" and "];
+    if (blocksComponents.count > 0){
+        blocksString = [NSString stringWithFormat:@"with %@%@"
+                                                  , blocksString
+                                                  , (self.delegate ? @", " : @"")];
+    }
+    NSString *associatedString;
+    if (self.associatedObject) {
+        associatedString = [NSString stringWithFormat:( @", associated with %p%@")
+                            , self.associatedObject
+                            , (self.delegate || self.recoveryHandler || self.delegateHandler ? @", " : @"")];
+    } else {
+        associatedString = (self.delegate || self.recoveryHandler || self.delegateHandler ? @", " : @"");
+    }
+    return [NSString stringWithFormat:@"<%@: %p%@%@%@>"
+            , NSStringFromClass(self.class)
+            , self
+            , associatedString
+            , blocksString
+            , delegateString];
+}
+
 @end

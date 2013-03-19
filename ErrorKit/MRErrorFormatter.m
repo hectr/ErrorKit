@@ -291,7 +291,9 @@
 - (NSString *)description
 {
     if (self.shortenStrings) {
-        return [NSString stringWithFormat:@"<MRErrorFormatter: %p shortenStrings=1>", self];
+        return [NSString stringWithFormat:@"<%@: %p shortenStrings=1>"
+                                          , NSStringFromClass(self.class)
+                                          , self];
     }
     return [super description];
 }

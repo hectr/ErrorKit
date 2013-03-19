@@ -54,4 +54,14 @@
     return self.recoveryHandler(error, recoveryOptionIndex);
 }
 
+#pragma mark - NSObject
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@: %p%@>"
+            , NSStringFromClass(self.class)
+            , self
+            , (self.recoveryHandler ? @" with recovery block" : @"")];
+}
+
 @end
