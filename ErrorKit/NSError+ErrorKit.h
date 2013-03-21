@@ -71,7 +71,7 @@
  */
 @interface NSError (ErrorKit_Helper)
 
-/// Returns YES if the error code corresponds to a cancelled operation in `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, `kCLErrorDomain` or `SKErrorDomain`.
+/// Returns YES if the error code corresponds to a cancelled operation in `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
 - (BOOL)isCancelledError;
 
 /// Returns YES if the error code corresponds to a validation error in `NSCocoaErrorDomain`.

@@ -31,6 +31,9 @@
 #ifdef __CORELOCATION__
 #import "MRErrorFormatter_CoreLocation.h"
 #endif
+#ifdef FB_SESSIONSTATETERMINALBIT
+#import "MRErrorFormatter_FacebookSDK.h"
+#endif
 #ifdef ERROR_KIT_IAD
 #import "MRErrorFormatter_iAD.h"
 #endif
@@ -112,7 +115,7 @@
         }
     }
 #endif
-    return NSLocalizedString(@"Error", nil);
+    return [self stringWithDomain:error.domain code:error.code];
 }
 
 + (NSString *)stringForMessageFromError:(NSError *)error
@@ -170,6 +173,11 @@
 #ifdef __CORELOCATION__
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter debugStringWithCoreLocationCode:code];
+    }
+#endif
+#ifdef FB_SESSIONSTATETERMINALBIT
+    else if ([domain isEqualToString:FacebookSDKDomain]) {
+        return [MRErrorFormatter debugStringWithFacebookCode:code];
     }
 #endif
 #ifdef ERROR_KIT_IAD
@@ -230,6 +238,11 @@
 #ifdef __CORELOCATION__
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter stringWithCoreLocationCode:code];
+    }
+#endif
+#ifdef FB_SESSIONSTATETERMINALBIT
+    else if ([domain isEqualToString:FacebookSDKDomain]) {
+        return [MRErrorFormatter stringWithFacebookCode:code];
     }
 #endif
 #ifdef ERROR_KIT_IAD

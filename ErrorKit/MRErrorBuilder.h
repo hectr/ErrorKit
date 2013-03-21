@@ -70,7 +70,7 @@
 @property (nonatomic) NSStringEncoding stringEncodingError;
 
 /// Accessors for `NSUnderlyingErrorKey` user info value.
-@property (nonatomic, copy) NSError *underlyingError;
+@property (nonatomic, strong) NSError *underlyingError;
 
 /// Accessors for `NSURLErrorKey` user info value.
 @property (nonatomic, copy) NSURL *urlError;

@@ -37,6 +37,9 @@
 		84671A0216F66E9F0033F83E /* MRErrorFormatter_iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_iAD.h; path = ../../ErrorKit/MRErrorFormatter_iAD.h; sourceTree = "<group>"; };
 		84671A0316F674120033F83E /* MRErrorFormatter_MessageUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_MessageUI.h; path = ../../ErrorKit/MRErrorFormatter_MessageUI.h; sourceTree = "<group>"; };
 		846F6B7516EFABD20005B913 /* MRErrorFormatter_Security.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_Security.h; path = ../../ErrorKit/MRErrorFormatter_Security.h; sourceTree = "<group>"; };
+		8495EE0016FA805500F591B8 /* MRErrorFormatter_FacebookSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_FacebookSDK.h; path = ../../ErrorKit/MRErrorFormatter_FacebookSDK.h; sourceTree = "<group>"; };
+		8495EE0116FA87F100F591B8 /* NSError_FacebookSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSError_FacebookSDK.h; path = ../../ErrorKit/NSError_FacebookSDK.h; sourceTree = "<group>"; };
+		8495EE0216FA8A7800F591B8 /* MRErrorBuilder_FacebookSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_FacebookSDK.h; path = ../../ErrorKit/MRErrorBuilder_FacebookSDK.h; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB843016C802F3000BF23E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DB843216C802F3000BF23E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -185,6 +188,7 @@
 				84DCF7C516EC0CFE00F50750 /* MRErrorFormatter_Accounts.h */,
 				84DD938116EFCBAC002F63A1 /* MRErrorFormatter_Admob.h */,
 				84DCF7C616EC0CFF00F50750 /* MRErrorFormatter_CoreLocation.h */,
+				8495EE0016FA805500F591B8 /* MRErrorFormatter_FacebookSDK.h */,
 				84FC301116F29710006DF5BC /* MRErrorFormatter_HTTP.h */,
 				84671A0216F66E9F0033F83E /* MRErrorFormatter_iAD.h */,
 				84ECCA0D16EE8E22002228AE /* MRErrorFormatter_JSONKit.h */,
@@ -205,6 +209,7 @@
 				84DB846216C8048E000BF23E /* MRErrorBuilder_AFNetworking.h */,
 				84DB846316C8048E000BF23E /* MRErrorBuilder_CoreData.h */,
 				84DCF7C416EC0CE600F50750 /* MRErrorBuilder_CoreLocation.h */,
+				8495EE0216FA8A7800F591B8 /* MRErrorBuilder_FacebookSDK.h */,
 				84ECCA0C16EE8E09002228AE /* MRErrorBuilder_JSONKit.h */,
 			);
 			name = build;
@@ -242,6 +247,7 @@
 				84DB846816C8048E000BF23E /* NSError_AFNetworking.h */,
 				84DB846916C8048E000BF23E /* NSError_CoreData.h */,
 				84ECCA0A16EE8DFA002228AE /* NSError_CoreLocation.h */,
+				8495EE0116FA87F100F591B8 /* NSError_FacebookSDK.h */,
 				84ECCA0B16EE8DFA002228AE /* NSError_JSONKit.h */,
 			);
 			name = access;

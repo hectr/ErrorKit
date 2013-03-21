@@ -267,7 +267,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 - (void)setUnderlyingError:(NSError *)underlyingError
 {
-    [self setUserInfoValue:underlyingError.copy forKey:NSUnderlyingErrorKey];
+    [self setUserInfoValue:underlyingError forKey:NSUnderlyingErrorKey];
 }
 
 - (NSException *)underlyingException
@@ -416,6 +416,82 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 {
     // FIXME
     [self setUserInfoValue:alternateRegion.copy forKey:kCLErrorUserInfoAlternateRegionKey];
+}
+
+#endif
+
+#pragma mark -
+
+#ifdef FB_SESSIONSTATETERMINALBIT
+
+- (NSError *)innerError
+{
+    return [self.userInfo objectForKey:FBErrorInnerErrorKey];
+}
+
+- (void)setInnerError:(NSError *)innerError
+{
+    [self setUserInfoValue:innerError forKey:FBErrorInnerErrorKey];
+}
+
+- (id)parsedJSONResponse
+{
+    return [self.userInfo objectForKey:FBErrorParsedJSONResponseKey];
+}
+
+- (void)setParsedJSONResponse:(id)parsedJSONResponse
+{
+    [self setUserInfoValue:parsedJSONResponse forKey:FBErrorParsedJSONResponseKey];
+}
+
+- (NSInteger)HTTPStatusCode
+{
+    return [[self.userInfo objectForKey:FBErrorHTTPStatusCodeKey] integerValue];
+}
+
+- (void)setHTTPStatusCode:(NSInteger)HTTPStatusCode
+{
+    [self setUserInfoValue:@(HTTPStatusCode) forKey:FBErrorHTTPStatusCodeKey];
+}
+
+- (FBSession *)session
+{
+    return [self.userInfo objectForKey:FBErrorSessionKey];
+}
+
+- (void)setSession:(FBSession *)session
+{
+    [self setUserInfoValue:session forKey:FBErrorSessionKey];
+}
+
+- (NSString *)loginFailedReason
+{
+    return [self.userInfo objectForKey:FBErrorLoginFailedReason];
+}
+
+- (void)setLoginFailedReason:(NSString *)loginFailedReason
+{
+    [self setUserInfoValue:loginFailedReason.copy forKey:FBErrorLoginFailedReason];
+}
+
+- (NSString *)nativeDialogReason
+{
+    return [self.userInfo objectForKey:FBErrorNativeDialogReasonKey];
+}
+
+- (void)setNativeDialogReason:(NSString *)nativeDialogReason
+{
+    [self setUserInfoValue:nativeDialogReason.copy forKey:FBErrorNativeDialogReasonKey];
+}
+
+- (NSString *)insightsReason
+{
+    return [self.userInfo objectForKey:FBErrorInsightsReasonKey];
+}
+
+- (void)setInsightsReason:(NSString *)insightsReason
+{
+    [self setUserInfoValue:insightsReason.copy forKey:FBErrorInsightsReasonKey];
 }
 
 #endif

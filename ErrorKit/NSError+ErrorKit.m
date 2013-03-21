@@ -153,6 +153,47 @@
 
 #pragma mark -
 
+#ifdef FB_SESSIONSTATETERMINALBIT
+
+- (NSError *)innerError
+{
+    return [self.userInfo objectForKey:FBErrorInnerErrorKey];
+}
+
+- (id)parsedJSONResponse
+{
+    return [self.userInfo objectForKey:FBErrorParsedJSONResponseKey];
+}
+
+- (NSInteger)HTTPStatusCode
+{
+    return [[self.userInfo objectForKey:FBErrorHTTPStatusCodeKey] integerValue];
+}
+
+- (FBSession *)session
+{
+    return [self.userInfo objectForKey:FBErrorSessionKey];
+}
+
+- (NSString *)loginFailedReason
+{
+    return [self.userInfo objectForKey:FBErrorLoginFailedReason];
+}
+
+- (NSString *)nativeDialogReason
+{
+    return [self.userInfo objectForKey:FBErrorNativeDialogReasonKey];
+}
+
+- (NSString *)insightsReason
+{
+    return [self.userInfo objectForKey:FBErrorInsightsReasonKey];
+}
+
+#endif
+
+#pragma mark -
+
 - (unsigned long)atIndex
 {
     return [[self.userInfo objectForKey:@"JKAtIndexKey"] unsignedLongValue];
@@ -188,6 +229,11 @@
         return (self.code == kCLErrorGeocodeCanceled ||
                 self.code == kCLErrorDeferredCanceled);
 #endif
+    }
+#endif
+#ifdef FB_SESSIONSTATETERMINALBIT
+    if ([domain isEqualToString:FacebookSDKDomain]) {
+        return (self.code == FBErrorOperationCancelled);
     }
 #endif
 #ifdef SK_EXTERN

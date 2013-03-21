@@ -1165,6 +1165,58 @@
 
 #pragma mark -
 
+#ifdef FB_SESSIONSTATETERMINALBIT
+
++ (NSString *)debugStringWithFacebookCode:(NSInteger)code
+{
+    switch (code) {
+        case FBErrorInvalid:
+            return mr_stringize_error_code(FBErrorInvalid);
+        case FBErrorOperationCancelled:
+            return mr_stringize_error_code(FBErrorOperationCancelled);
+        case FBErrorLoginFailedOrCancelled:
+            return mr_stringize_error_code(FBErrorLoginFailedOrCancelled);
+        case FBErrorRequestConnectionApi:
+            return mr_stringize_error_code(FBErrorRequestConnectionApi);
+        case FBErrorProtocolMismatch:
+            return mr_stringize_error_code(FBErrorProtocolMismatch);
+        case FBErrorHTTPError:
+            return mr_stringize_error_code(FBErrorHTTPError);
+        case FBErrorNonTextMimeTypeReturned:
+            return mr_stringize_error_code(FBErrorNonTextMimeTypeReturned);
+        case FBErrorNativeDialog:
+            return mr_stringize_error_code(FBErrorNativeDialog);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringWithFacebookCode:(NSInteger)errorCode
+{
+    switch (code) {
+        case FBErrorInvalid:
+            return NSlocalizedString(@"Invalid Error", nil);
+        case FBErrorOperationCancelled:
+            return NSlocalizedString(@"Operation Cancelled", nil);
+        case FBErrorLoginFailedOrCancelled:
+            return NSlocalizedString(@"Login Failed Or Cancelled", nil);
+        case FBErrorRequestConnectionApi:
+            return NSlocalizedString(@"Graph Error", nil);
+        case FBErrorProtocolMismatch:
+            return NSlocalizedString(@"Protocol Mismatch", nil);
+        case FBErrorHTTPError:
+            return NSlocalizedString(@"HTTP Error", nil);
+        case FBErrorNonTextMimeTypeReturned:
+            return NSlocalizedString(@"Invalid Response", nil);
+        case FBErrorNativeDialog:
+            return NSlocalizedString(@"Native Dialog Error", nil);
+    }
+    return NSLocalizedString(@"Facebook Error", nil);
+}
+
+#endif
+
+#pragma mark -
+
 + (NSString *)stringWithHTTPCode:(NSInteger)statusCode
 {
     return [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
