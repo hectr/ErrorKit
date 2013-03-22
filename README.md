@@ -25,9 +25,10 @@ Examples
 **Access error values**
 
 	NSString *helpAnchor = error.helpAnchor;
-    NSArray *errors = error.detailedErrors;
     NSURLRequest *request = error.failingURLRequest;
+    NSArray *errors = error.detailedErrors;
     // and so on...
+    // (supports most AFNetworking, Core Data, Facebook SDK and JSONKit keys)
 
 **Present error to the user**
 
@@ -44,6 +45,12 @@ Examples
 	        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
 	        [[UIAlertView alertWithTitle:nil error:builder.error] show];
 	    }
+
+***Stringize* error codes**
+
+    NSString *debugString = [MRErrorFormatter debugStringWithDomain:error.domain code:error.code]; // e.g. NSURLErrorNetworkConnectionLost
+    NSString *localizedString = [MRErrorFormatter stringWithDomain:error.domain code:error.code]; // e.g. Connection Lost
+    // (supports most Accounts, Admob, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Security, Store Kit and TransitionKit codes)
 
 See *ErrorKit-Example* project or browse online [documentation](http://hectr.github.com/ErrorKit/) for further reference.
 
