@@ -1,13 +1,31 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: ca
-// Date: Tue Mar 12 22:33:55 2013
+// Date: Sat Apr 6 03:39:10 2013
+
+/* No comment provided by engineer. */
+"'<' Required"="'<' requerit";
+
+/* No comment provided by engineer. */
+"'<' Used In Attribute Error"="Error causat per un '<' en un atribut";
+
+/* No comment provided by engineer. */
+"'</' Required"="'</' requerido";
+
+/* No comment provided by engineer. */
+"'=' Expected"="S'esperava un '='";
+
+/* No comment provided by engineer. */
+"'>' Required"="'>' requerido";
 
 /* No comment provided by engineer. */
 "Access Information Invalid"="Informació d'accés invàlida";
 
 /* No comment provided by engineer. */
 "Account Already Exists"="El compte ja existeix";
+
+/* No comment provided by engineer. */
+"Account Authentication Failed"="L'autenticació del compte ha fallat";
 
 /* No comment provided by engineer. */
 "Account Error"="Error de compte";
@@ -25,6 +43,30 @@
 "Admob Error"="Error d'Admob";
 
 /* No comment provided by engineer. */
+"Application Inactive Error"="Error d'aplicació inactiva";
+
+/* No comment provided by engineer. */
+"Attribute Has No Value"="Atribut sense un valor";
+
+/* No comment provided by engineer. */
+"Attribute List Not Finished"="Llista d'atributs no finalitzada";
+
+/* No comment provided by engineer. */
+"Attribute List Not Started"="Llista d'atributs no començada";
+
+/* No comment provided by engineer. */
+"Attribute Non Existent"="Atribut inexistent";
+
+/* No comment provided by engineer. */
+"Attribute Not Finished"="Atribut no finalitzat";
+
+/* No comment provided by engineer. */
+"Attribute Not Started"="Atribut no començat";
+
+/* No comment provided by engineer. */
+"Attribute Redefined"="Atribut redefinit";
+
+/* No comment provided by engineer. */
 "Authorization/Authentication Failed"="Error d'autorització/autenticació";
 
 /* No comment provided by engineer. */
@@ -32,6 +74,18 @@
 
 /* No comment provided by engineer. */
 "Bad URL"="URL invàlida";
+
+/* No comment provided by engineer. */
+"Banner Visible Without Content"="Visible anunci sense contingut";
+
+/* No comment provided by engineer. */
+"Buffer Too Small"="Buffer massa petit";
+
+/* No comment provided by engineer. */
+"CDATA Not Finished"="CDATA no finalitzada";
+
+/* No comment provided by engineer. */
+"CDATA Required"="CDATA requerida";
 
 /* No comment provided by engineer. */
 "Call Is Active"="Trucada activa";
@@ -91,6 +145,21 @@
 "Client Certificate Required"="Necessari certificat de client";
 
 /* No comment provided by engineer. */
+"Comment Contains Double Hyphen"="El comentari conté un guió doble";
+
+/* No comment provided by engineer. */
+"Comment Not Finished"="Comentari no finalitzat";
+
+/* No comment provided by engineer. */
+"Conditional Section Not Finished"="Secció condicional no finalitzada";
+
+/* No comment provided by engineer. */
+"Conditional Section Not Started"="Secció condicional no començada";
+
+/* No comment provided by engineer. */
+"Configuration Error"="Error de configuració";
+
+/* No comment provided by engineer. */
 "Connect"="Connectar";
 
 /* No comment provided by engineer. */
@@ -112,6 +181,9 @@
 "DNS Lookup Failed"="Consulta de DNS fallida";
 
 /* No comment provided by engineer. */
+"DOCTYPE Declaration Not Finished"="Declaració de DOCTYPE no finalitzada";
+
+/* No comment provided by engineer. */
 "Data Base Error"="Error a la Base de Dades";
 
 /* No comment provided by engineer. */
@@ -124,10 +196,22 @@
 "Data Not Allowed"="No s'admeten les dades";
 
 /* No comment provided by engineer. */
+"Data Not Available"="Dades no disponibles";
+
+/* No comment provided by engineer. */
+"Data Not Modifiable"="Les dades no són modificables";
+
+/* No comment provided by engineer. */
+"Data Too Large"="Masses dades";
+
+/* No comment provided by engineer. */
 "Date Too Late"="Data massa tard";
 
 /* No comment provided by engineer. */
 "Date Too Soon"="Data massa aviat";
+
+/* No comment provided by engineer. */
+"Default Keychain Non Existent"="No hi ha clauer predeterminat";
 
 /* No comment provided by engineer. */
 "Deferred Accuracy Too Low"="Precisió de diferit massa baixa";
@@ -142,6 +226,9 @@
 "Deferred Update Failed"="Actualització diferida fallida";
 
 /* No comment provided by engineer. */
+"Delegate Aborted Parse"="El delegat ha suspès l'anàlisi gramatical";
+
+/* No comment provided by engineer. */
 "Delete Denied"="Supressió denegada";
 
 /* No comment provided by engineer. */
@@ -151,13 +238,46 @@
 "Destination Store Error"="Error al magatzem de destí";
 
 /* No comment provided by engineer. */
+"Document Start Error"="Error d'inici de document";
+
+/* No comment provided by engineer. */
 "Download Decoding Failed"="La descodificació ha fallat durant la descarregar";
 
 /* No comment provided by engineer. */
 "Download Decoding Failed To Complete"="La descodificació de la descàrrega no s'ha pogut completar";
 
 /* No comment provided by engineer. */
+"Duplicate Keychain"="Clauer duplicat";
+
+/* No comment provided by engineer. */
+"Element Content Declaration Not Finished"="Declaració del contingut de l'element no finalitzada";
+
+/* No comment provided by engineer. */
+"Element Content Declaration Not Started"="Declaració de contingut d'element no començada";
+
+/* No comment provided by engineer. */
+"Empty Document"="Document buit";
+
+/* No comment provided by engineer. */
+"Encoding Not Supported"="Codificació no admesa";
+
+/* No comment provided by engineer. */
+"Entity Boundary Error"="Error de límit d'entitat";
+
+/* No comment provided by engineer. */
+"Entity Is Parameter Error"="Error, la entitat és un parámetro";
+
+/* No comment provided by engineer. */
 "Entity Migration Policy Error"="Error de la política de migració de l'entitat";
+
+/* No comment provided by engineer. */
+"Entity Not Finished"="Entitat no finalitzada";
+
+/* No comment provided by engineer. */
+"Entity Not Started"="Entitat no començada";
+
+/* No comment provided by engineer. */
+"Entity Value Required"="L'entitat necessita un valor";
 
 /* No comment provided by engineer. */
 "Error"="Error";
@@ -185,6 +305,15 @@
 
 /* No comment provided by engineer. */
 "External Relationship Error"="Error de relació externa";
+
+/* No comment provided by engineer. */
+"External Subset Not Finished"="Subconjunt extern no finalitzat";
+
+/* No comment provided by engineer. */
+"Extra Content Error"="Error al contingut";
+
+/* No comment provided by engineer. */
+"Facebook Error"="Error de Facebook";
 
 /* No comment provided by engineer. */
 "Feature Unsupported"="Característica no suportada";
@@ -253,6 +382,9 @@
 "Interaction Not Allowed"="Interacció no permesa";
 
 /* No comment provided by engineer. */
+"Internal Error"="Error intern";
+
+/* No comment provided by engineer. */
 "International Roaming Off"="Roaming internacional desactivat";
 
 /* No comment provided by engineer. */
@@ -262,13 +394,40 @@
 "Invalid Ad Size"="Mida d'anunci no vàlida";
 
 /* No comment provided by engineer. */
+"Invalid Character"="Caràcter no vàlid";
+
+/* No comment provided by engineer. */
+"Invalid Client"="Client no vàlid";
+
+/* No comment provided by engineer. */
+"Invalid Conditional Section"="Secció condicional no vàlida";
+
+/* No comment provided by engineer. */
 "Invalid Date"="Data invàlida";
+
+/* No comment provided by engineer. */
+"Invalid Encoding"="Codificació no vàlida";
+
+/* No comment provided by engineer. */
+"Invalid Encoding Name"="Codificació de nom no vàlida";
 
 /* No comment provided by engineer. */
 "Invalid File Name"="Nom de fitxer no vàlid";
 
 /* No comment provided by engineer. */
+"Invalid Item Reference"="Referència no vàlida";
+
+/* No comment provided by engineer. */
+"Invalid Keychain"="Clauer no vàlid";
+
+/* No comment provided by engineer. */
+"Invalid Owner Edit Attempt"="Intent de canvi de propietari no vàlid";
+
+/* No comment provided by engineer. */
 "Invalid Parameter"="Paràmetre no vàlid";
+
+/* No comment provided by engineer. */
+"Invalid Payment"="Pagament no vàlid";
 
 /* No comment provided by engineer. */
 "Invalid Request"="Sol·licitud no vàlida";
@@ -277,7 +436,19 @@
 "Invalid Response"="Resposta invàlida";
 
 /* No comment provided by engineer. */
+"Invalid Search Reference"="Referència de cerca no vàlida";
+
+/* No comment provided by engineer. */
+"Invalid Trust Setting"="Configuració de credencial no vàlida";
+
+/* No comment provided by engineer. */
 "Invalid Type"="Tipus no vàlid";
+
+/* No comment provided by engineer. */
+"Invalid URI"="URI no vàlida";
+
+/* No comment provided by engineer. */
+"Inventory Unavailable"="Inventari no disponible";
 
 /* No comment provided by engineer. */
 "Item Already Exists"="L'eElement ja existeix";
@@ -289,7 +460,25 @@
 "JSON Error"="Error a document JSON";
 
 /* No comment provided by engineer. */
+"Key Size Not Allowed"="Tamany de clau no permès";
+
+/* No comment provided by engineer. */
+"Keychain Class Non Existent"="Clauer d'un tipus que no existeix";
+
+/* No comment provided by engineer. */
 "Keychain Error"="Error del Gestor de claus";
+
+/* No comment provided by engineer. */
+"Keychain Non Existent"="El clauer no existeix";
+
+/* No comment provided by engineer. */
+"Literal Not Finished"="Literal no finalitzat";
+
+/* No comment provided by engineer. */
+"Literal Not Started"="Literal no començat";
+
+/* No comment provided by engineer. */
+"Loading Throttled"="Velocitat de càrrega limitada";
 
 /* No comment provided by engineer. */
 "Location Error"="Error d'ubicació";
@@ -301,6 +490,30 @@
 "Locking Error"="Error de bloqueig";
 
 /* No comment provided by engineer. */
+"Mail Cancelled"="Correu cancel·lat";
+
+/* No comment provided by engineer. */
+"Mail Error"="Error de correu";
+
+/* No comment provided by engineer. */
+"Mail Failed"="El correu ha fallat";
+
+/* No comment provided by engineer. */
+"Mail Save Failed"="Desat de correu fallit";
+
+/* No comment provided by engineer. */
+"Mail Saved"="Correu desat";
+
+/* No comment provided by engineer. */
+"Mail Send Failed"="L'enviament del correu ha fallat";
+
+/* No comment provided by engineer. */
+"Mail Sent"="Correu enviat";
+
+/* No comment provided by engineer. */
+"Map Error"="Error del mapa";
+
+/* No comment provided by engineer. */
 "Mediation Adapter Error"="Error a l'adaptador de mediació";
 
 /* No comment provided by engineer. */
@@ -310,10 +523,25 @@
 "Merge Error"="Error de combinació";
 
 /* No comment provided by engineer. */
+"Message Cancelled"="Missatge cancel·lat";
+
+/* No comment provided by engineer. */
+"Message Failed"="El missatge ha fallat";
+
+/* No comment provided by engineer. */
+"Message Sent"="Missatge enviat";
+
+/* No comment provided by engineer. */
 "Migration Cancelled"="Migració cancel·lada";
 
 /* No comment provided by engineer. */
 "Migration Error"="Error de migració";
+
+/* No comment provided by engineer. */
+"Misplaced XML Declaration"="Declaració XML fora de lloc";
+
+/* No comment provided by engineer. */
+"Missing DTD"="Falta DTD";
 
 /* No comment provided by engineer. */
 "Missing Mandatory Property"="Falta propietat obligatori";
@@ -328,10 +556,16 @@
 "Multiple Validation Errors"="Múltiples errors de validació";
 
 /* No comment provided by engineer. */
+"NAME Required"="NAME requerit";
+
+/* No comment provided by engineer. */
 "Network Error"="Error de xarxa";
 
 /* No comment provided by engineer. */
 "No Ad Error"="Anunci no disponible";
+
+/* No comment provided by engineer. */
+"No Certificate Module Available"="Mòdul de certificat no disponible";
 
 /* No comment provided by engineer. */
 "No Error"="Cap error";
@@ -341,6 +575,9 @@
 
 /* No comment provided by engineer. */
 "No Read Permission"="Necessita permís de lectura";
+
+/* No comment provided by engineer. */
+"No Storage Module"="No hi ha mòdul d'enmagatzament";
 
 /* No comment provided by engineer. */
 "No Such File"="No hi ha arxiu";
@@ -358,6 +595,15 @@
 "Not Connected To Internet"="No connectat a Internet";
 
 /* No comment provided by engineer. */
+"Not Well Balanced"="No equilibrat";
+
+/* No comment provided by engineer. */
+"Notation Not Finished"="Notació no finalitzada";
+
+/* No comment provided by engineer. */
+"Notation Not Started"="Notació no començada";
+
+/* No comment provided by engineer. */
 "Number Too Large"="Número massa gran";
 
 /* No comment provided by engineer. */
@@ -373,10 +619,19 @@
 "Operation Error"="Error a l'operació";
 
 /* No comment provided by engineer. */
+"Out Of Memory"="Sense memòria";
+
+/* No comment provided by engineer. */
 "Out Of Space"="Sense espai";
 
 /* No comment provided by engineer. */
 "Pattern Matching Error"="Error de no coincidència amb patró";
+
+/* No comment provided by engineer. */
+"Payment Cancelled"="Pagament cancel·lat";
+
+/* No comment provided by engineer. */
+"Payment Not Allowed"="Pagament no permès";
 
 /* No comment provided by engineer. */
 "Permission Denied"="Permís denegat";
@@ -385,7 +640,19 @@
 "Persistent Store Open Error"="Error d'obertura al magatzem persistent";
 
 /* No comment provided by engineer. */
+"Placemark Not Found"="Marca de posició no trobada";
+
+/* No comment provided by engineer. */
 "Please check your internet connection and try again."="Si us plau, comprova la connexió a internet i torna-ho a provar.";
+
+/* No comment provided by engineer. */
+"Premature Document End"="Final de documento prematuro";
+
+/* No comment provided by engineer. */
+"Processing Instruction Not Finished"="Instrucció de procès no finalitzada";
+
+/* No comment provided by engineer. */
+"Product Not Available"="Producte no disponible";
 
 /* No comment provided by engineer. */
 "Property List Corrupt"="Llista de propietats corrupte";
@@ -398,6 +665,15 @@
 
 /* No comment provided by engineer. */
 "Property List Unknown Version"="Versió desconeguda de llista de propietats";
+
+/* No comment provided by engineer. */
+"Public Identifier Required"="Requerit identificador públic";
+
+/* No comment provided by engineer. */
+"Read Only Attribute"="Atribut de només lectura";
+
+/* No comment provided by engineer. */
+"Read Only Error"="Error de només lectura";
 
 /* No comment provided by engineer. */
 "Read Only Volume"="Volum només de lectura";
@@ -448,6 +724,9 @@
 "Secure Connection Failed"="La connexió segura ha fallat";
 
 /* No comment provided by engineer. */
+"Separator Required"="Separador requerit";
+
+/* No comment provided by engineer. */
 "Server Certificate Has Bad Date"="El certificat del servidor té malament la data";
 
 /* No comment provided by engineer. */
@@ -463,7 +742,19 @@
 "Server Error"="Error de servidor";
 
 /* No comment provided by engineer. */
+"Server Failure"="El servidor ha fallat";
+
+/* No comment provided by engineer. */
 "Source Store Error"="Error al magatzem d'origen";
+
+/* No comment provided by engineer. */
+"Space Required"="Es requereix un espai";
+
+/* No comment provided by engineer. */
+"State Machine Error"="Error de la màquina d'estats";
+
+/* No comment provided by engineer. */
+"Store Error"="Error de botiga";
 
 /* No comment provided by engineer. */
 "String Too Long"="Text massa llarg";
@@ -472,13 +763,34 @@
 "String Too Short"="Text massa curt";
 
 /* No comment provided by engineer. */
+"Tag Name Mismatch"="El nom de l'etiqueta no coincideix";
+
+/* No comment provided by engineer. */
 "Timed Out"="Temps superat";
+
+/* No comment provided by engineer. */
+"Transition Declined"="Transició rebutjada";
+
+/* No comment provided by engineer. */
+"Transition Invalid"="Transició no vàlida";
 
 /* No comment provided by engineer. */
 "Type Mismatch"="Els tipus no coincideixen";
 
 /* No comment provided by engineer. */
+"URI Fragment Error"="Error de fragmento de URI";
+
+/* No comment provided by engineer. */
+"URI Required"="URI requerida";
+
+/* No comment provided by engineer. */
 "URL Error"="Error d'URL";
+
+/* No comment provided by engineer. */
+"Undeclared Entity"="Entitat no declarada";
+
+/* No comment provided by engineer. */
+"Unfinished Tag"="Etiqueta no finalitzada";
 
 /* No comment provided by engineer. */
 "Unimplemented"="No implementat";
@@ -488,6 +800,9 @@
 
 /* No comment provided by engineer. */
 "Unknown Error"="Error desconegut";
+
+/* No comment provided by engineer. */
+"Unknown Result"="Resultat desconegut";
 
 /* No comment provided by engineer. */
 "Unsupported Request Type"="Tipus de sol·licitud no admès";
@@ -505,7 +820,22 @@
 "User Cancelled Authentication"="L'usuari ha cancel·lat l'autenticació";
 
 /* No comment provided by engineer. */
+"User Interaction Required"="Es requereix la interacció de l'usuari";
+
+/* No comment provided by engineer. */
 "Validation Error"="Error de validació";
+
+/* No comment provided by engineer. */
+"Wrong Version"="Versió errònia";
+
+/* No comment provided by engineer. */
+"XML Declaration Not Finished"="Declaració XML no finalitzada";
+
+/* No comment provided by engineer. */
+"XML Declaration Not Started"="Declaració XML no començada";
+
+/* No comment provided by engineer. */
+"XML Error"="Error a document XML";
 
 /* No comment provided by engineer. */
 "XPC Connection Error"="Error de connexió XPC";
@@ -527,4 +857,7 @@
 
 /* No comment provided by engineer. */
 "Zero Byte Resource"="Recurs de zero bytes";
+
+/* No comment provided by engineer. */
+"iAd Error"="Error d'iAd";
 

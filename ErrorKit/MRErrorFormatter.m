@@ -140,9 +140,9 @@
 + (NSString *)stringForCancelButtonFromError:(NSError *)error
 {
     if (error.recoveryAttempter) {
-        return NSLocalizedString(@"Cancel", nil);
+        return MRErrorKitString(@"Cancel", nil);
     } else {
-        return NSLocalizedString(@"OK", nil);
+        return MRErrorKitString(@"OK", nil);
     }
 }
 
@@ -312,3 +312,9 @@
 }
 
 @end
+
+
+NSString *MRErrorKitString(NSString *key, NSString *comment)
+{
+    return NSLocalizedStringFromTable(key, @"ErrorKit", comment);
+}

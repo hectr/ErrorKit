@@ -261,7 +261,14 @@
             [self.domain isEqualToString:NSCocoaErrorDomain]);
 }
 
+@end
+
+
 #pragma mark -
+#pragma mark -
+
+
+@implementation NSError (ErrorKit_CoreData_Helper)
 
 #ifdef _COREDATADEFINES_H
 
@@ -273,10 +280,11 @@
     MRErrorBuilder *builder;
     if (self.code == NSValidationMultipleErrorsError) {
         builder = [MRErrorBuilder builderWithError:self];
-        builder.detailedErrors = ([builder.detailedErrors arrayByAddingObject:errorOrNil] ?: @[ errorOrNil ]);
+        builder.detailedErrors = ([builder.detailedErrors arrayByAddingObject:errorOrNil]
+                                  ?: @[ (errorOrNil.detailedErrors ?: errorOrNil) ]);
     } else {
         builder = [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain code:NSValidationMultipleErrorsError];
-        builder.detailedErrors = @[ self, errorOrNil ];
+        builder.detailedErrors = @[ self, (errorOrNil.detailedErrors ?: errorOrNil) ];
     }
     return builder.error;
 }

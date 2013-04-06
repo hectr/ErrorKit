@@ -1,13 +1,31 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: es
-// Date: Tue Mar 12 22:33:55 2013
+// Date: Sat Apr 6 03:39:09 2013
+
+/* No comment provided by engineer. */
+"'<' Required"="'<' requerido";
+
+/* No comment provided by engineer. */
+"'<' Used In Attribute Error"="Error causado por un '<' en un atributo";
+
+/* No comment provided by engineer. */
+"'</' Required"="'</' requerido";
+
+/* No comment provided by engineer. */
+"'=' Expected"="Se esperaba un '='";
+
+/* No comment provided by engineer. */
+"'>' Required"="'>' requerido";
 
 /* No comment provided by engineer. */
 "Access Information Invalid"="Información de acceso inválida";
 
 /* No comment provided by engineer. */
 "Account Already Exists"="La cuenta ya existe";
+
+/* No comment provided by engineer. */
+"Account Authentication Failed"="La autentificación de la cuenta ha fallado";
 
 /* No comment provided by engineer. */
 "Account Error"="Error de cuenta";
@@ -25,6 +43,30 @@
 "Admob Error"="Error de Admob";
 
 /* No comment provided by engineer. */
+"Application Inactive Error"="Error de aplicación inactiva";
+
+/* No comment provided by engineer. */
+"Attribute Has No Value"="Atributo sin un valor";
+
+/* No comment provided by engineer. */
+"Attribute List Not Finished"="Lista de atributos no finalizada";
+
+/* No comment provided by engineer. */
+"Attribute List Not Started"="Lista de atributos no empezada";
+
+/* No comment provided by engineer. */
+"Attribute Non Existent"="Atributo inexistente";
+
+/* No comment provided by engineer. */
+"Attribute Not Finished"="Atributo no finalizado";
+
+/* No comment provided by engineer. */
+"Attribute Not Started"="Atributo no empezado";
+
+/* No comment provided by engineer. */
+"Attribute Redefined"="Atributo redefinido";
+
+/* No comment provided by engineer. */
 "Authorization/Authentication Failed"="Fallo de autorización/autenticación";
 
 /* No comment provided by engineer. */
@@ -32,6 +74,18 @@
 
 /* No comment provided by engineer. */
 "Bad URL"="URL inválida";
+
+/* No comment provided by engineer. */
+"Banner Visible Without Content"="Visible anuncio sin contenido";
+
+/* No comment provided by engineer. */
+"Buffer Too Small"="Buffer demasiado pequeño";
+
+/* No comment provided by engineer. */
+"CDATA Not Finished"="CDATA no finalizada";
+
+/* No comment provided by engineer. */
+"CDATA Required"="CDATA requerida";
 
 /* No comment provided by engineer. */
 "Call Is Active"="Llamada activa";
@@ -91,6 +145,21 @@
 "Client Certificate Required"="Necesario certificado de cliente";
 
 /* No comment provided by engineer. */
+"Comment Contains Double Hyphen"="El comentario contiene un guión doble";
+
+/* No comment provided by engineer. */
+"Comment Not Finished"="Comentario no finalizado";
+
+/* No comment provided by engineer. */
+"Conditional Section Not Finished"="Sección condicional no finalizada";
+
+/* No comment provided by engineer. */
+"Conditional Section Not Started"="Sección condicional no empezada";
+
+/* No comment provided by engineer. */
+"Configuration Error"="Error de configuración";
+
+/* No comment provided by engineer. */
 "Connect"="Conectar";
 
 /* No comment provided by engineer. */
@@ -112,6 +181,9 @@
 "DNS Lookup Failed"="Búsqueda DNS fallida";
 
 /* No comment provided by engineer. */
+"DOCTYPE Declaration Not Finished"="Declaración de DOCTYPE no finalizada";
+
+/* No comment provided by engineer. */
 "Data Base Error"="Error de Base de Datos";
 
 /* No comment provided by engineer. */
@@ -124,10 +196,22 @@
 "Data Not Allowed"="Datos no permitidos";
 
 /* No comment provided by engineer. */
+"Data Not Available"="Datos no disponibles";
+
+/* No comment provided by engineer. */
+"Data Not Modifiable"="Los datos no son modificables";
+
+/* No comment provided by engineer. */
+"Data Too Large"="Demasiados datos";
+
+/* No comment provided by engineer. */
 "Date Too Late"="Fecha demasiado tarde";
 
 /* No comment provided by engineer. */
 "Date Too Soon"="Fecha demasiado pronto";
+
+/* No comment provided by engineer. */
+"Default Keychain Non Existent"="No hay llavero predeterminado";
 
 /* No comment provided by engineer. */
 "Deferred Accuracy Too Low"="Precisión de diferido demasiado baja";
@@ -142,6 +226,9 @@
 "Deferred Update Failed"="Actualización diferida fallida";
 
 /* No comment provided by engineer. */
+"Delegate Aborted Parse"="El delegado ha abortado el análisis gramatical";
+
+/* No comment provided by engineer. */
 "Delete Denied"="Eliminación denegada";
 
 /* No comment provided by engineer. */
@@ -151,13 +238,46 @@
 "Destination Store Error"="Error en el almacén de destino";
 
 /* No comment provided by engineer. */
+"Document Start Error"="Error de inicio de documento";
+
+/* No comment provided by engineer. */
 "Download Decoding Failed"="La descodificación ha fallado durante la descarga";
 
 /* No comment provided by engineer. */
 "Download Decoding Failed To Complete"="El descodificación de la descarga no se ha podido completar";
 
 /* No comment provided by engineer. */
+"Duplicate Keychain"="Llavero duplicado";
+
+/* No comment provided by engineer. */
+"Element Content Declaration Not Finished"="Declaración del contenido del elemento no finalizada";
+
+/* No comment provided by engineer. */
+"Element Content Declaration Not Started"="Declaración de contenido de elemento no empezada";
+
+/* No comment provided by engineer. */
+"Empty Document"="Documento vacío";
+
+/* No comment provided by engineer. */
+"Encoding Not Supported"="Codificación no admitida";
+
+/* No comment provided by engineer. */
+"Entity Boundary Error"="Error de límite de entidad";
+
+/* No comment provided by engineer. */
+"Entity Is Parameter Error"="Error, la entidad es un parámetro";
+
+/* No comment provided by engineer. */
 "Entity Migration Policy Error"="Error de política de migración de entidad";
+
+/* No comment provided by engineer. */
+"Entity Not Finished"="Entidad no finalizada";
+
+/* No comment provided by engineer. */
+"Entity Not Started"="Entidad no empezada";
+
+/* No comment provided by engineer. */
+"Entity Value Required"="La entidad necesita un valor";
 
 /* No comment provided by engineer. */
 "Error"="Error";
@@ -185,6 +305,15 @@
 
 /* No comment provided by engineer. */
 "External Relationship Error"="Error en relación externa";
+
+/* No comment provided by engineer. */
+"External Subset Not Finished"="Subconjunto externo no finalizado";
+
+/* No comment provided by engineer. */
+"Extra Content Error"="Error en el contenido";
+
+/* No comment provided by engineer. */
+"Facebook Error"="Error de Facebook";
 
 /* No comment provided by engineer. */
 "Feature Unsupported"="Característica no soportada";
@@ -253,6 +382,9 @@
 "Interaction Not Allowed"="Interacción no permitido";
 
 /* No comment provided by engineer. */
+"Internal Error"="Error interno";
+
+/* No comment provided by engineer. */
 "International Roaming Off"="Roaming internacional desactivado";
 
 /* No comment provided by engineer. */
@@ -262,13 +394,40 @@
 "Invalid Ad Size"="Tamaño de anuncio no válido";
 
 /* No comment provided by engineer. */
+"Invalid Character"="Carácter no válido";
+
+/* No comment provided by engineer. */
+"Invalid Client"="Cliente no válido";
+
+/* No comment provided by engineer. */
+"Invalid Conditional Section"="Sección condicional no válida";
+
+/* No comment provided by engineer. */
 "Invalid Date"="Fecha inválida";
+
+/* No comment provided by engineer. */
+"Invalid Encoding"="Codificación no válida";
+
+/* No comment provided by engineer. */
+"Invalid Encoding Name"="Codificación de nombre no válida";
 
 /* No comment provided by engineer. */
 "Invalid File Name"="Nombre de archivo no válido";
 
 /* No comment provided by engineer. */
+"Invalid Item Reference"="Referencia no válida";
+
+/* No comment provided by engineer. */
+"Invalid Keychain"="Llavero no válido";
+
+/* No comment provided by engineer. */
+"Invalid Owner Edit Attempt"="Intento de cambio de propietario no válido";
+
+/* No comment provided by engineer. */
 "Invalid Parameter"="Parámetro no válido";
+
+/* No comment provided by engineer. */
+"Invalid Payment"="Pago no válido";
 
 /* No comment provided by engineer. */
 "Invalid Request"="Petición no válida";
@@ -277,7 +436,19 @@
 "Invalid Response"="Respuesta inválida";
 
 /* No comment provided by engineer. */
+"Invalid Search Reference"="Referencia de búsqueda no válida";
+
+/* No comment provided by engineer. */
+"Invalid Trust Setting"="Configuración de credencial no válido";
+
+/* No comment provided by engineer. */
 "Invalid Type"="Tipo no válido";
+
+/* No comment provided by engineer. */
+"Invalid URI"="URI no válida";
+
+/* No comment provided by engineer. */
+"Inventory Unavailable"="Inventario no disponible";
 
 /* No comment provided by engineer. */
 "Item Already Exists"="El elemento ya existe";
@@ -289,7 +460,25 @@
 "JSON Error"="Error en documento JSON";
 
 /* No comment provided by engineer. */
+"Key Size Not Allowed"="Tamaño de clave no permitido";
+
+/* No comment provided by engineer. */
+"Keychain Class Non Existent"="Llavero de un tipo que no existe";
+
+/* No comment provided by engineer. */
 "Keychain Error"="Error del Gestor de claves";
+
+/* No comment provided by engineer. */
+"Keychain Non Existent"="El llavero no existe";
+
+/* No comment provided by engineer. */
+"Literal Not Finished"="Literal no finalizado";
+
+/* No comment provided by engineer. */
+"Literal Not Started"="Literal no empezado";
+
+/* No comment provided by engineer. */
+"Loading Throttled"="Velocidad de carga limitada";
 
 /* No comment provided by engineer. */
 "Location Error"="Error de ubicación";
@@ -301,6 +490,30 @@
 "Locking Error"="Error de bloqueo";
 
 /* No comment provided by engineer. */
+"Mail Cancelled"="Correo cancelado";
+
+/* No comment provided by engineer. */
+"Mail Error"="Error de correo";
+
+/* No comment provided by engineer. */
+"Mail Failed"="El correo  ha fallado";
+
+/* No comment provided by engineer. */
+"Mail Save Failed"="Fallo salvando correo";
+
+/* No comment provided by engineer. */
+"Mail Saved"="Correo guardado";
+
+/* No comment provided by engineer. */
+"Mail Send Failed"="Envío de correo fallido";
+
+/* No comment provided by engineer. */
+"Mail Sent"="Correo enviado";
+
+/* No comment provided by engineer. */
+"Map Error"="Error del mapa";
+
+/* No comment provided by engineer. */
 "Mediation Adapter Error"="Error en el adaptador de mediación";
 
 /* No comment provided by engineer. */
@@ -310,10 +523,25 @@
 "Merge Error"="Combinación fallida";
 
 /* No comment provided by engineer. */
+"Message Cancelled"="Mensaje cancelado";
+
+/* No comment provided by engineer. */
+"Message Failed"="El mensaje ha fallado";
+
+/* No comment provided by engineer. */
+"Message Sent"="Mensaje enviado";
+
+/* No comment provided by engineer. */
 "Migration Cancelled"="Migración cancelada";
 
 /* No comment provided by engineer. */
 "Migration Error"="Error de migración";
+
+/* No comment provided by engineer. */
+"Misplaced XML Declaration"="Declaración XML fuera de sitio";
+
+/* No comment provided by engineer. */
+"Missing DTD"="Falta DTD";
 
 /* No comment provided by engineer. */
 "Missing Mandatory Property"="Falta propiedad obligatoria";
@@ -328,10 +556,16 @@
 "Multiple Validation Errors"="Varios errores de validación";
 
 /* No comment provided by engineer. */
+"NAME Required"="NAME requerido";
+
+/* No comment provided by engineer. */
 "Network Error"="Error de red";
 
 /* No comment provided by engineer. */
 "No Ad Error"="Anuncio no disponible";
+
+/* No comment provided by engineer. */
+"No Certificate Module Available"="Módulo de certificado no disponible";
 
 /* No comment provided by engineer. */
 "No Error"="Ningún error";
@@ -341,6 +575,9 @@
 
 /* No comment provided by engineer. */
 "No Read Permission"="No tiene permiso de lectura";
+
+/* No comment provided by engineer. */
+"No Storage Module"="No hay módulo de almacenage";
 
 /* No comment provided by engineer. */
 "No Such File"="No hay tal archivo";
@@ -358,6 +595,15 @@
 "Not Connected To Internet"="No conectado a Internet";
 
 /* No comment provided by engineer. */
+"Not Well Balanced"="No equilibrado";
+
+/* No comment provided by engineer. */
+"Notation Not Finished"="Notación no finalizada";
+
+/* No comment provided by engineer. */
+"Notation Not Started"="Notación no empezada";
+
+/* No comment provided by engineer. */
 "Number Too Large"="Número demasiado grande";
 
 /* No comment provided by engineer. */
@@ -373,10 +619,19 @@
 "Operation Error"="Error en la operación";
 
 /* No comment provided by engineer. */
+"Out Of Memory"="Sin memoria";
+
+/* No comment provided by engineer. */
 "Out Of Space"="Sin espacio";
 
 /* No comment provided by engineer. */
 "Pattern Matching Error"="Error de no coincidencia con patrón";
+
+/* No comment provided by engineer. */
+"Payment Cancelled"="Pago cancelado";
+
+/* No comment provided by engineer. */
+"Payment Not Allowed"="Pago no permitido";
 
 /* No comment provided by engineer. */
 "Permission Denied"="Permiso denegado";
@@ -385,7 +640,19 @@
 "Persistent Store Open Error"="Error de apertura en almacenamiento persistente";
 
 /* No comment provided by engineer. */
+"Placemark Not Found"="Marca de posición no encontrada";
+
+/* No comment provided by engineer. */
 "Please check your internet connection and try again."="Por favor, compruebe su conexión a internet e inténtelo de nuevo.";
+
+/* No comment provided by engineer. */
+"Premature Document End"="Fin de documento prematuro";
+
+/* No comment provided by engineer. */
+"Processing Instruction Not Finished"="Instrucción de procesamiento no finalizada";
+
+/* No comment provided by engineer. */
+"Product Not Available"="Producto no disponible";
 
 /* No comment provided by engineer. */
 "Property List Corrupt"="Lista de propiedades corrupta";
@@ -398,6 +665,15 @@
 
 /* No comment provided by engineer. */
 "Property List Unknown Version"="Versión desconocida de lista de propiedades";
+
+/* No comment provided by engineer. */
+"Public Identifier Required"="Requerido identificador público";
+
+/* No comment provided by engineer. */
+"Read Only Attribute"="Atributo de solo lectura";
+
+/* No comment provided by engineer. */
+"Read Only Error"="Error de solo lectura";
 
 /* No comment provided by engineer. */
 "Read Only Volume"="Volumen solo de lectura";
@@ -448,6 +724,9 @@
 "Secure Connection Failed"="Fallo en la conexión segura";
 
 /* No comment provided by engineer. */
+"Separator Required"="Separador requerido";
+
+/* No comment provided by engineer. */
 "Server Certificate Has Bad Date"="El certificado del servidor tiene mal la fecha";
 
 /* No comment provided by engineer. */
@@ -463,7 +742,19 @@
 "Server Error"="Error de servidor";
 
 /* No comment provided by engineer. */
+"Server Failure"="Fallo del servidor";
+
+/* No comment provided by engineer. */
 "Source Store Error"="Error en el almacén de origen";
+
+/* No comment provided by engineer. */
+"Space Required"="Se requiere un espacio";
+
+/* No comment provided by engineer. */
+"State Machine Error"="Error de la máquina de estados";
+
+/* No comment provided by engineer. */
+"Store Error"="Error de tienda";
 
 /* No comment provided by engineer. */
 "String Too Long"="Texto demasiado largo";
@@ -472,13 +763,34 @@
 "String Too Short"="Texto demasiado corto";
 
 /* No comment provided by engineer. */
+"Tag Name Mismatch"="El nombre de la etiqueta no coincide";
+
+/* No comment provided by engineer. */
 "Timed Out"="Tiempo agotado";
+
+/* No comment provided by engineer. */
+"Transition Declined"="Transición rechazada";
+
+/* No comment provided by engineer. */
+"Transition Invalid"="Transición no válida";
 
 /* No comment provided by engineer. */
 "Type Mismatch"="Los tipos no coinciden";
 
 /* No comment provided by engineer. */
+"URI Fragment Error"="Error de fragmento de URI";
+
+/* No comment provided by engineer. */
+"URI Required"="URI requerida";
+
+/* No comment provided by engineer. */
 "URL Error"="Error de URL";
+
+/* No comment provided by engineer. */
+"Undeclared Entity"="Entidad no declarada";
+
+/* No comment provided by engineer. */
+"Unfinished Tag"="Etiqueta no finalizada";
 
 /* No comment provided by engineer. */
 "Unimplemented"="No implementado";
@@ -488,6 +800,9 @@
 
 /* No comment provided by engineer. */
 "Unknown Error"="Error desconocido";
+
+/* No comment provided by engineer. */
+"Unknown Result"="Resultado desconocido";
 
 /* No comment provided by engineer. */
 "Unsupported Request Type"="Tipo de petición no soportado";
@@ -505,7 +820,22 @@
 "User Cancelled Authentication"="Autenticación cancelada por el usuario";
 
 /* No comment provided by engineer. */
+"User Interaction Required"="Se requiere la interacción del usuario";
+
+/* No comment provided by engineer. */
 "Validation Error"="Error de validación";
+
+/* No comment provided by engineer. */
+"Wrong Version"="Versión errónea";
+
+/* No comment provided by engineer. */
+"XML Declaration Not Finished"="Declaración XML no finalizada";
+
+/* No comment provided by engineer. */
+"XML Declaration Not Started"="Declaración XML no empezada";
+
+/* No comment provided by engineer. */
+"XML Error"="Error en documento XML";
 
 /* No comment provided by engineer. */
 "XPC Connection Error"="Error de conexión XPC";
@@ -527,4 +857,7 @@
 
 /* No comment provided by engineer. */
 "Zero Byte Resource"="Recurso de cero bytes";
+
+/* No comment provided by engineer. */
+"iAd Error"="Error de iAd";
 

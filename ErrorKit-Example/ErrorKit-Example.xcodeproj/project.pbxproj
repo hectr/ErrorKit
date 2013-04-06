@@ -22,12 +22,12 @@
 		84DB846F16C8048E000BF23E /* MRErrorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846716C8048E000BF23E /* MRErrorFormatter.m */; };
 		84DB847016C8048E000BF23E /* NSError+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */; };
 		84DB847116C8048E000BF23E /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */; };
-		84DB848016C82D2D000BF23E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DB847E16C82D2D000BF23E /* Localizable.strings */; };
 		84DCF7C916EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DCF7C816EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m */; };
 		84EB27E316EAD98700F98BD0 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */; };
 		84EB27E416EAD98700F98BD0 /* MRBlockRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27DE16EAD98700F98BD0 /* MRBlockRecoveryAttempter.m */; };
 		84EB27E516EAD98700F98BD0 /* MRRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27E016EAD98700F98BD0 /* MRRecoveryAttempter.m */; };
 		84EB27E616EAD98700F98BD0 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27E216EAD98700F98BD0 /* UIResponder+ErrorKit.m */; };
+		84FA2665170FB483008A9DAA /* ErrorKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84FA2663170FB483008A9DAA /* ErrorKit.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,9 +71,6 @@
 		84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+ErrorKit.m"; path = "../../ErrorKit/UIAlertView+ErrorKit.m"; sourceTree = "<group>"; };
 		84DB847516C8242E000BF23E /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84DB847616C82432000BF23E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		84DB847F16C82D2D000BF23E /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
-		84DB848116C82D36000BF23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		84DB848216C82D42000BF23E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84DCF7C416EC0CE600F50750 /* MRErrorBuilder_CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_CoreLocation.h; path = ../../ErrorKit/MRErrorBuilder_CoreLocation.h; sourceTree = "<group>"; };
 		84DCF7C516EC0CFE00F50750 /* MRErrorFormatter_Accounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_Accounts.h; path = ../../ErrorKit/MRErrorFormatter_Accounts.h; sourceTree = "<group>"; };
 		84DCF7C616EC0CFF00F50750 /* MRErrorFormatter_CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_CoreLocation.h; path = ../../ErrorKit/MRErrorFormatter_CoreLocation.h; sourceTree = "<group>"; };
@@ -92,6 +89,9 @@
 		84ECCA0B16EE8DFA002228AE /* NSError_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSError_JSONKit.h; path = ../../ErrorKit/NSError_JSONKit.h; sourceTree = "<group>"; };
 		84ECCA0C16EE8E09002228AE /* MRErrorBuilder_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_JSONKit.h; path = ../../ErrorKit/MRErrorBuilder_JSONKit.h; sourceTree = "<group>"; };
 		84ECCA0D16EE8E22002228AE /* MRErrorFormatter_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_JSONKit.h; path = ../../ErrorKit/MRErrorFormatter_JSONKit.h; sourceTree = "<group>"; };
+		84FA2664170FB483008A9DAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ErrorKit.strings; sourceTree = "<group>"; };
+		84FA2666170FB48D008A9DAA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ErrorKit.strings; sourceTree = "<group>"; };
+		84FA2667170FB495008A9DAA /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/ErrorKit.strings; sourceTree = "<group>"; };
 		84FC301116F29710006DF5BC /* MRErrorFormatter_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_HTTP.h; path = ../../ErrorKit/MRErrorFormatter_HTTP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +151,7 @@
 		84DB843716C802F3000BF23E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84DB847E16C82D2D000BF23E /* Localizable.strings */,
+				84FA2663170FB483008A9DAA /* ErrorKit.strings */,
 				84DB843816C802F3000BF23E /* ErrorKit-Example-Info.plist */,
 				84DB843916C802F3000BF23E /* InfoPlist.strings */,
 				84DB843C16C802F3000BF23E /* main.m */,
@@ -312,7 +312,7 @@
 				84DB844716C802F4000BF23E /* Default-568h@2x.png in Resources */,
 				84DB845516C80380000BF23E /* MRViewController.xib in Resources */,
 				84DB845616C80380000BF23E /* ErrorKitExample-Application.xib in Resources */,
-				84DB848016C82D2D000BF23E /* Localizable.strings in Resources */,
+				84FA2665170FB483008A9DAA /* ErrorKit.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,14 +351,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		84DB847E16C82D2D000BF23E /* Localizable.strings */ = {
+		84FA2663170FB483008A9DAA /* ErrorKit.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				84DB847F16C82D2D000BF23E /* ca */,
-				84DB848116C82D36000BF23E /* en */,
-				84DB848216C82D42000BF23E /* es */,
+				84FA2664170FB483008A9DAA /* en */,
+				84FA2666170FB48D008A9DAA /* es */,
+				84FA2667170FB495008A9DAA /* ca */,
 			);
-			name = Localizable.strings;
+			name = ErrorKit.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

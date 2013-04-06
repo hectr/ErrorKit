@@ -94,7 +94,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 {
     MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
     builder.localizedDescription = ([MRErrorFormatter stringWithDomain:domain code:code]
-                                    ?: NSLocalizedString(@"No error description provided", nil));
+                                    ?: MRErrorKitString(@"No error description provided", nil));
     return builder;
 }
 

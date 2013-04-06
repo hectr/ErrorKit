@@ -79,3 +79,7 @@
 + (NSString *)stringForCancelButtonFromError:(NSError *)error;
 
 @end
+
+
+/// Returns a localized version of a string.
+NSString *MRErrorKitString(NSString *key, NSString *comment);

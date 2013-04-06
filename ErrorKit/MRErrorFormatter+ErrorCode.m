@@ -212,176 +212,176 @@
 {
     switch (code) {
         case NSFileNoSuchFileError:
-            return NSLocalizedString(@"No Such File", nil);
+            return MRErrorKitString(@"No Such File", nil);
         case NSFileLockingError:
-            return NSLocalizedString(@"File Locking Error", nil);
+            return MRErrorKitString(@"File Locking Error", nil);
         case NSFileReadUnknownError:
-            return NSLocalizedString(@"File Read Error", nil);
+            return MRErrorKitString(@"File Read Error", nil);
         case NSFileReadNoPermissionError:
-            return NSLocalizedString(@"No Read Permission", nil);
+            return MRErrorKitString(@"No Read Permission", nil);
         case NSFileReadInvalidFileNameError:
         case NSFileWriteInvalidFileNameError:
-            return NSLocalizedString(@"Invalid File Name", nil);
+            return MRErrorKitString(@"Invalid File Name", nil);
         case NSFileReadCorruptFileError:
-            return NSLocalizedString(@"Corrupt File", nil);
+            return MRErrorKitString(@"Corrupt File", nil);
         case NSFileReadNoSuchFileError:
-            return NSLocalizedString(@"No Such File", nil);
+            return MRErrorKitString(@"No Such File", nil);
         case NSFileReadInapplicableStringEncodingError:
         case NSFileWriteInapplicableStringEncodingError:
-            return NSLocalizedString(@"Inapplicable Encoding", nil);
+            return MRErrorKitString(@"Inapplicable Encoding", nil);
         case NSFileReadUnsupportedSchemeError:
         case NSFileWriteUnsupportedSchemeError:
-            return NSLocalizedString(@"Unsupported Scheme", nil);
+            return MRErrorKitString(@"Unsupported Scheme", nil);
         case NSFileReadTooLargeError:
-            return NSLocalizedString(@"File Too Large", nil);
+            return MRErrorKitString(@"File Too Large", nil);
         case NSFileReadUnknownStringEncodingError:
-            return NSLocalizedString(@"Unknown Encoding", nil);
+            return MRErrorKitString(@"Unknown Encoding", nil);
         case NSFileWriteUnknownError:
-            return NSLocalizedString(@"File Write Error", nil);
+            return MRErrorKitString(@"File Write Error", nil);
         case NSFileWriteNoPermissionError:
-            return NSLocalizedString(@"No Write Permission", nil);
+            return MRErrorKitString(@"No Write Permission", nil);
         case NSFileWriteFileExistsError:
-            return NSLocalizedString(@"File Already Exists", nil);
+            return MRErrorKitString(@"File Already Exists", nil);
         case NSFileWriteOutOfSpaceError:
-            return NSLocalizedString(@"Out Of Space", nil);
+            return MRErrorKitString(@"Out Of Space", nil);
         case NSFileWriteVolumeReadOnlyError:
-            return NSLocalizedString(@"Read Only Volume", nil);
+            return MRErrorKitString(@"Read Only Volume", nil);
         case NSKeyValueValidationError:
-            return NSLocalizedString(@"Validation Error", nil);
+            return MRErrorKitString(@"Validation Error", nil);
         case NSFormattingError:
-            return NSLocalizedString(@"Formatting Error", nil);
+            return MRErrorKitString(@"Formatting Error", nil);
         case NSUserCancelledError:
-            return NSLocalizedString(@"Cancelled", nil);
+            return MRErrorKitString(@"Cancelled", nil);
         case NSFeatureUnsupportedError:
-            return NSLocalizedString(@"Feature Unsupported", nil);
+            return MRErrorKitString(@"Feature Unsupported", nil);
         case NSExecutableNotLoadableError:
-            return NSLocalizedString(@"Executable Not Loadable", nil);
+            return MRErrorKitString(@"Executable Not Loadable", nil);
         case NSExecutableArchitectureMismatchError:
-            return NSLocalizedString(@"Executable Architecture Mismatch", nil);
+            return MRErrorKitString(@"Executable Architecture Mismatch", nil);
         case NSExecutableRuntimeMismatchError:
-            return NSLocalizedString(@"Executable Runtime Mismatch", nil);
+            return MRErrorKitString(@"Executable Runtime Mismatch", nil);
         case NSExecutableLoadError:
-            return NSLocalizedString(@"Executable Load Error", nil);
+            return MRErrorKitString(@"Executable Load Error", nil);
         case NSExecutableLinkError:
-            return NSLocalizedString(@"Executable Link Error", nil);
+            return MRErrorKitString(@"Executable Link Error", nil);
         case NSPropertyListReadCorruptError:
-            return NSLocalizedString(@"Property List Corrupt", nil);
+            return MRErrorKitString(@"Property List Corrupt", nil);
         case NSPropertyListReadUnknownVersionError:
-            return NSLocalizedString(@"Property List Unknown Version", nil);
+            return MRErrorKitString(@"Property List Unknown Version", nil);
         case NSPropertyListReadStreamError:
         case NSPropertyListWriteStreamError:
-            return NSLocalizedString(@"Property List Stream Error", nil);
+            return MRErrorKitString(@"Property List Stream Error", nil);
         case NSXPCConnectionInterrupted:
-            return NSLocalizedString(@"XPC Connection Interrupted", nil);
+            return MRErrorKitString(@"XPC Connection Interrupted", nil);
         case NSXPCConnectionInvalid:
-            return NSLocalizedString(@"XPC Connection Invalid", nil);
+            return MRErrorKitString(@"XPC Connection Invalid", nil);
         case NSXPCConnectionReplyInvalid:
-            return NSLocalizedString(@"XPC Connection Reply Invalid", nil);
+            return MRErrorKitString(@"XPC Connection Reply Invalid", nil);
 #ifdef _COREDATADEFINES_H
         case NSManagedObjectValidationError:
-            return NSLocalizedString(@"Validation Error", nil);
+            return MRErrorKitString(@"Validation Error", nil);
         case NSValidationMultipleErrorsError:
-            return NSLocalizedString(@"Multiple Validation Errors", nil);
+            return MRErrorKitString(@"Multiple Validation Errors", nil);
         case NSValidationMissingMandatoryPropertyError:
-            return NSLocalizedString(@"Missing Mandatory Property", nil);
+            return MRErrorKitString(@"Missing Mandatory Property", nil);
         case NSValidationRelationshipLacksMinimumCountError:
-            return NSLocalizedString(@"Relationship Lacks Minimum Count", nil);
+            return MRErrorKitString(@"Relationship Lacks Minimum Count", nil);
         case NSValidationRelationshipExceedsMaximumCountError:
-            return NSLocalizedString(@"Relationship Exceeds Maximum Count", nil);
+            return MRErrorKitString(@"Relationship Exceeds Maximum Count", nil);
         case NSValidationRelationshipDeniedDeleteError:
-            return NSLocalizedString(@"Delete Denied", nil);
+            return MRErrorKitString(@"Delete Denied", nil);
         case NSValidationNumberTooLargeError:
-            return NSLocalizedString(@"Number Too Large", nil);
+            return MRErrorKitString(@"Number Too Large", nil);
         case NSValidationNumberTooSmallError:
-            return NSLocalizedString(@"Number Too Small", nil);
+            return MRErrorKitString(@"Number Too Small", nil);
         case NSValidationDateTooLateError:
-            return NSLocalizedString(@"Date Too Late", nil);
+            return MRErrorKitString(@"Date Too Late", nil);
         case NSValidationDateTooSoonError:
-            return NSLocalizedString(@"Date Too Soon", nil);
+            return MRErrorKitString(@"Date Too Soon", nil);
         case NSValidationInvalidDateError:
-            return NSLocalizedString(@"Invalid Date", nil);
+            return MRErrorKitString(@"Invalid Date", nil);
         case NSValidationStringTooLongError:
-            return NSLocalizedString(@"String Too Long", nil);
+            return MRErrorKitString(@"String Too Long", nil);
         case NSValidationStringTooShortError:
-            return NSLocalizedString(@"String Too Short", nil);
+            return MRErrorKitString(@"String Too Short", nil);
         case NSValidationStringPatternMatchingError:
-            return NSLocalizedString(@"Pattern Matching Error", nil);
+            return MRErrorKitString(@"Pattern Matching Error", nil);
         case NSManagedObjectContextLockingError:
         case NSPersistentStoreCoordinatorLockingError:
-            return NSLocalizedString(@"Locking Error", nil);
+            return MRErrorKitString(@"Locking Error", nil);
         case NSManagedObjectReferentialIntegrityError:
-            return NSLocalizedString(@"Referential Integrity Error", nil);
+            return MRErrorKitString(@"Referential Integrity Error", nil);
         case NSManagedObjectExternalRelationshipError:
-            return NSLocalizedString(@"External Relationship Error", nil);
+            return MRErrorKitString(@"External Relationship Error", nil);
         case NSManagedObjectMergeError:
-            return NSLocalizedString(@"Merge Error", nil);
+            return MRErrorKitString(@"Merge Error", nil);
         case NSPersistentStoreInvalidTypeError:
-            return NSLocalizedString(@"Invalid Type", nil);
+            return MRErrorKitString(@"Invalid Type", nil);
         case NSPersistentStoreTypeMismatchError:
-            return NSLocalizedString(@"Type Mismatch", nil);
+            return MRErrorKitString(@"Type Mismatch", nil);
         case NSPersistentStoreIncompatibleSchemaError:
-            return NSLocalizedString(@"Incompatible Schema", nil);
+            return MRErrorKitString(@"Incompatible Schema", nil);
         case NSPersistentStoreSaveError:
-            return NSLocalizedString(@"Save Error", nil);
+            return MRErrorKitString(@"Save Error", nil);
         case NSPersistentStoreIncompleteSaveError:
-            return NSLocalizedString(@"Incomplete Save", nil);
+            return MRErrorKitString(@"Incomplete Save", nil);
         case NSPersistentStoreSaveConflictsError:
-            return NSLocalizedString(@"Save Conflicts", nil);
+            return MRErrorKitString(@"Save Conflicts", nil);
         case NSCoreDataError:
-            return NSLocalizedString(@"Data Error", nil);
+            return MRErrorKitString(@"Data Error", nil);
         case NSPersistentStoreOperationError:
-            return NSLocalizedString(@"Operation Error", nil);
+            return MRErrorKitString(@"Operation Error", nil);
         case NSPersistentStoreOpenError:
-            return NSLocalizedString(@"Persistent Store Open Error", nil);
+            return MRErrorKitString(@"Persistent Store Open Error", nil);
         case NSPersistentStoreTimeoutError:
-            return NSLocalizedString(@"Timed Out", nil);
+            return MRErrorKitString(@"Timed Out", nil);
         case NSPersistentStoreUnsupportedRequestTypeError:
-            return NSLocalizedString(@"Unsupported Request Type", nil);
+            return MRErrorKitString(@"Unsupported Request Type", nil);
         case NSPersistentStoreIncompatibleVersionHashError:
-            return NSLocalizedString(@"Incompatible Version Hash", nil);
+            return MRErrorKitString(@"Incompatible Version Hash", nil);
         case NSMigrationError:
-            return NSLocalizedString(@"Migration Error", nil);
+            return MRErrorKitString(@"Migration Error", nil);
         case NSMigrationCancelledError:
-            return NSLocalizedString(@"Migration Cancelled", nil);
+            return MRErrorKitString(@"Migration Cancelled", nil);
         case NSMigrationMissingSourceModelError:
-            return NSLocalizedString(@"Missing Source Model", nil);
+            return MRErrorKitString(@"Missing Source Model", nil);
         case NSMigrationMissingMappingModelError:
-            return NSLocalizedString(@"Missing Mapping Model", nil);
+            return MRErrorKitString(@"Missing Mapping Model", nil);
         case NSMigrationManagerSourceStoreError:
-            return NSLocalizedString(@"Source Store Error", nil);
+            return MRErrorKitString(@"Source Store Error", nil);
         case NSMigrationManagerDestinationStoreError:
-            return NSLocalizedString(@"Destination Store Error", nil);
+            return MRErrorKitString(@"Destination Store Error", nil);
         case NSEntityMigrationPolicyError:
-            return NSLocalizedString(@"Entity Migration Policy Error", nil);
+            return MRErrorKitString(@"Entity Migration Policy Error", nil);
         case NSSQLiteError:
-            return NSLocalizedString(@"Data Base Error", nil);
+            return MRErrorKitString(@"Data Base Error", nil);
         case NSInferredMappingModelError:
-            return NSLocalizedString(@"Inferred Mapping Model Error", nil);
+            return MRErrorKitString(@"Inferred Mapping Model Error", nil);
         case NSExternalRecordImportError:
-            return NSLocalizedString(@"External Record Import Error", nil);
+            return MRErrorKitString(@"External Record Import Error", nil);
 #endif
         default:
             if (NSFileErrorMinimum >= code
                 && code <= NSFileErrorMaximum) {
-                return NSLocalizedString(@"File Error", nil);
+                return MRErrorKitString(@"File Error", nil);
             } else if (NSValidationErrorMinimum >= code
                        && NSValidationErrorMaximum <= code) {
-                return NSLocalizedString(@"Validation Error", nil);
+                return MRErrorKitString(@"Validation Error", nil);
             } else if (NSExecutableErrorMinimum >= code
                        && NSExecutableErrorMaximum <= code) {
-                return NSLocalizedString(@"Executable Error", nil);
+                return MRErrorKitString(@"Executable Error", nil);
             } else if (NSFormattingErrorMinimum >= code
                        && NSFormattingErrorMaximum <= code) {
-                return NSLocalizedString(@"Formatting Error", nil);
+                return MRErrorKitString(@"Formatting Error", nil);
             } else if (NSPropertyListErrorMinimum >= code
                        && NSPropertyListErrorMaximum <= code) {
-                return NSLocalizedString(@"Property List Error", nil);
+                return MRErrorKitString(@"Property List Error", nil);
             } else if (NSXPCConnectionErrorMinimum >= code
                        && NSXPCConnectionErrorMaximum <= code) {
-                return NSLocalizedString(@"XPC Connection Error", nil);
+                return MRErrorKitString(@"XPC Connection Error", nil);
             }
     }
-    return NSLocalizedString(@"Unknown Error", nil);
+    return MRErrorKitString(@"Unknown Error", nil);
 }
 
 + (NSString *)debugStringWithURLCode:(NSInteger)code
@@ -483,95 +483,95 @@
 {
     switch (code) {
         case NSURLErrorUnknown:
-            return NSLocalizedString(@"Unknown Error", nil);
+            return MRErrorKitString(@"Unknown Error", nil);
         case NSURLErrorCancelled:
-            return NSLocalizedString(@"Cancelled", nil);
+            return MRErrorKitString(@"Cancelled", nil);
         case NSURLErrorBadURL:
-            return NSLocalizedString(@"Bad URL", nil);
+            return MRErrorKitString(@"Bad URL", nil);
         case NSURLErrorTimedOut:
-            return NSLocalizedString(@"Timed Out", nil);
+            return MRErrorKitString(@"Timed Out", nil);
         case NSURLErrorUnsupportedURL:
-            return NSLocalizedString(@"Unsupported URL", nil);
+            return MRErrorKitString(@"Unsupported URL", nil);
         case NSURLErrorCannotFindHost:
-            return NSLocalizedString(@"Cannot Find Host", nil);
+            return MRErrorKitString(@"Cannot Find Host", nil);
         case NSURLErrorCannotConnectToHost:
-            return NSLocalizedString(@"Cannot Connect To Host", nil);
+            return MRErrorKitString(@"Cannot Connect To Host", nil);
         case NSURLErrorNetworkConnectionLost:
-            return NSLocalizedString(@"Connection Lost", nil);
+            return MRErrorKitString(@"Connection Lost", nil);
         case NSURLErrorDNSLookupFailed:
-            return NSLocalizedString(@"DNS Lookup Failed", nil);
+            return MRErrorKitString(@"DNS Lookup Failed", nil);
         case NSURLErrorHTTPTooManyRedirects:
-            return NSLocalizedString(@"HTTP Too Many Redirects", nil);
+            return MRErrorKitString(@"HTTP Too Many Redirects", nil);
         case NSURLErrorResourceUnavailable:
-            return NSLocalizedString(@"Resource Unavailable", nil);
+            return MRErrorKitString(@"Resource Unavailable", nil);
         case NSURLErrorNotConnectedToInternet:
-            return NSLocalizedString(@"Not Connected To Internet", nil);
+            return MRErrorKitString(@"Not Connected To Internet", nil);
         case NSURLErrorRedirectToNonExistentLocation:
-            return NSLocalizedString(@"Redirect To Non Existent Location", nil);
+            return MRErrorKitString(@"Redirect To Non Existent Location", nil);
         case NSURLErrorBadServerResponse:
-            return NSLocalizedString(@"Bad Server Response", nil);
+            return MRErrorKitString(@"Bad Server Response", nil);
         case NSURLErrorUserCancelledAuthentication:
-            return NSLocalizedString(@"User Cancelled Authentication", nil);
+            return MRErrorKitString(@"User Cancelled Authentication", nil);
         case NSURLErrorUserAuthenticationRequired:
-            return NSLocalizedString(@"User Authentication Required", nil);
+            return MRErrorKitString(@"User Authentication Required", nil);
         case NSURLErrorZeroByteResource:
-            return NSLocalizedString(@"Zero Byte Resource", nil);
+            return MRErrorKitString(@"Zero Byte Resource", nil);
         case NSURLErrorCannotDecodeRawData:
-            return NSLocalizedString(@"Cannot Decode Raw Data", nil);
+            return MRErrorKitString(@"Cannot Decode Raw Data", nil);
         case NSURLErrorCannotDecodeContentData:
-            return NSLocalizedString(@"Cannot Decode Content Data", nil);
+            return MRErrorKitString(@"Cannot Decode Content Data", nil);
         case NSURLErrorCannotParseResponse:
-            return NSLocalizedString(@"Cannot Parse Response", nil);
+            return MRErrorKitString(@"Cannot Parse Response", nil);
         case NSURLErrorFileDoesNotExist:
-            return NSLocalizedString(@"File Does Not Exist", nil);
+            return MRErrorKitString(@"File Does Not Exist", nil);
         case NSURLErrorFileIsDirectory:
-            return NSLocalizedString(@"File Is Directory", nil);
+            return MRErrorKitString(@"File Is Directory", nil);
         case NSURLErrorNoPermissionsToReadFile:
-            return NSLocalizedString(@"No Permissions To Read File", nil);
+            return MRErrorKitString(@"No Permissions To Read File", nil);
         case NSURLErrorDataLengthExceedsMaximum:
-            return NSLocalizedString(@"Data Length Exceeds Maximum", nil);
+            return MRErrorKitString(@"Data Length Exceeds Maximum", nil);
         case NSURLErrorSecureConnectionFailed:
-            return NSLocalizedString(@"Secure Connection Failed", nil);
+            return MRErrorKitString(@"Secure Connection Failed", nil);
         case NSURLErrorServerCertificateHasBadDate:
-            return NSLocalizedString(@"Server Certificate Has Bad Date", nil);
+            return MRErrorKitString(@"Server Certificate Has Bad Date", nil);
         case NSURLErrorServerCertificateUntrusted:
-            return NSLocalizedString(@"Server Certificate Untrusted", nil);
+            return MRErrorKitString(@"Server Certificate Untrusted", nil);
         case NSURLErrorServerCertificateHasUnknownRoot:
-            return NSLocalizedString(@"Server Certificate Has Unknown Root", nil);
+            return MRErrorKitString(@"Server Certificate Has Unknown Root", nil);
         case NSURLErrorServerCertificateNotYetValid:
-            return NSLocalizedString(@"Server Certificate Not Yet Valid", nil);
+            return MRErrorKitString(@"Server Certificate Not Yet Valid", nil);
         case NSURLErrorClientCertificateRejected:
-            return NSLocalizedString(@"Client Certificate Rejected", nil);
+            return MRErrorKitString(@"Client Certificate Rejected", nil);
         case NSURLErrorClientCertificateRequired:
-            return NSLocalizedString(@"Client Certificate Required", nil);
+            return MRErrorKitString(@"Client Certificate Required", nil);
         case NSURLErrorCannotLoadFromNetwork:
-            return NSLocalizedString(@"Cannot Load From Network", nil);
+            return MRErrorKitString(@"Cannot Load From Network", nil);
         case NSURLErrorCannotCreateFile:
-            return NSLocalizedString(@"Cannot Create File", nil);
+            return MRErrorKitString(@"Cannot Create File", nil);
         case NSURLErrorCannotOpenFile:
-            return NSLocalizedString(@"Cannot Open File", nil);
+            return MRErrorKitString(@"Cannot Open File", nil);
         case NSURLErrorCannotCloseFile:
-            return NSLocalizedString(@"Cannot Close File", nil);
+            return MRErrorKitString(@"Cannot Close File", nil);
         case NSURLErrorCannotWriteToFile:
-            return NSLocalizedString(@"Cannot Write To File", nil);
+            return MRErrorKitString(@"Cannot Write To File", nil);
         case NSURLErrorCannotRemoveFile:
-            return NSLocalizedString(@"Cannot Remove File", nil);
+            return MRErrorKitString(@"Cannot Remove File", nil);
         case NSURLErrorCannotMoveFile:
-            return NSLocalizedString(@"Cannot Move File", nil);
+            return MRErrorKitString(@"Cannot Move File", nil);
         case NSURLErrorDownloadDecodingFailedMidStream:
-            return NSLocalizedString(@"Download Decoding Failed", nil);
+            return MRErrorKitString(@"Download Decoding Failed", nil);
         case NSURLErrorDownloadDecodingFailedToComplete:
-            return NSLocalizedString(@"Download Decoding Failed To Complete", nil);
+            return MRErrorKitString(@"Download Decoding Failed To Complete", nil);
         case NSURLErrorInternationalRoamingOff:
-            return NSLocalizedString(@"International Roaming Off", nil);
+            return MRErrorKitString(@"International Roaming Off", nil);
         case NSURLErrorCallIsActive:
-            return NSLocalizedString(@"Call Is Active", nil);
+            return MRErrorKitString(@"Call Is Active", nil);
         case NSURLErrorDataNotAllowed:
-            return NSLocalizedString(@"Data Not Allowed", nil);
+            return MRErrorKitString(@"Data Not Allowed", nil);
         case NSURLErrorRequestBodyStreamExhausted:
-            return NSLocalizedString(@"Request Body Stream Exhausted", nil);
+            return MRErrorKitString(@"Request Body Stream Exhausted", nil);
     }
-    return NSLocalizedString(@"URL Error", nil);
+    return MRErrorKitString(@"URL Error", nil);
 }
 
 + (NSString *)debugStringWithXMLParserCode:(NSInteger)code
@@ -771,193 +771,193 @@
 {
     switch (code) {
         case NSXMLParserInternalError:
-            return NSLocalizedString(@"Internal Error", nil);
+            return MRErrorKitString(@"Internal Error", nil);
         case NSXMLParserOutOfMemoryError:
-            return NSLocalizedString(@"Out Of Memory", nil);
+            return MRErrorKitString(@"Out Of Memory", nil);
         case NSXMLParserDocumentStartError:
-            return NSLocalizedString(@"Document Start Error", nil);
+            return MRErrorKitString(@"Document Start Error", nil);
         case NSXMLParserEmptyDocumentError:
-            return NSLocalizedString(@"Empty Document", nil);
+            return MRErrorKitString(@"Empty Document", nil);
         case NSXMLParserPrematureDocumentEndError:
-            return NSLocalizedString(@"Premature Document End", nil);
+            return MRErrorKitString(@"Premature Document End", nil);
         case NSXMLParserInvalidHexCharacterRefError:
-            return NSLocalizedString(@"Invalid Hex Character Reference", nil);
+            return MRErrorKitString(@"Invalid Hex Character Reference", nil);
         case NSXMLParserInvalidDecimalCharacterRefError:
-            return NSLocalizedString(@"Invalid Decimal Character Reference", nil);
+            return MRErrorKitString(@"Invalid Decimal Character Reference", nil);
         case NSXMLParserInvalidCharacterRefError:
-            return NSLocalizedString(@"Invalid Character", nil);
+            return MRErrorKitString(@"Invalid Character", nil);
         case NSXMLParserInvalidCharacterError:
-            return NSLocalizedString(@"Invalid Character", nil);
+            return MRErrorKitString(@"Invalid Character", nil);
         case NSXMLParserCharacterRefAtEOFError:
-            return NSLocalizedString(@"Character Reference Target Not Found", nil);
+            return MRErrorKitString(@"Character Reference Target Not Found", nil);
         case NSXMLParserCharacterRefInPrologError:
-            return NSLocalizedString(@"Invalid Character Reference In Prolog", nil);
+            return MRErrorKitString(@"Invalid Character Reference In Prolog", nil);
         case NSXMLParserCharacterRefInEpilogError:
-            return NSLocalizedString(@"Invalid Character Reference In Epilog", nil);
+            return MRErrorKitString(@"Invalid Character Reference In Epilog", nil);
         case NSXMLParserCharacterRefInDTDError:
-            return NSLocalizedString(@"Invalid Character Reference In DTD", nil);
+            return MRErrorKitString(@"Invalid Character Reference In DTD", nil);
         case NSXMLParserEntityRefAtEOFError:
-            return NSLocalizedString(@"Entity Reference Target Not Found", nil);
+            return MRErrorKitString(@"Entity Reference Target Not Found", nil);
         case NSXMLParserEntityRefInPrologError:
-            return NSLocalizedString(@"Invalid Entity Reference In Prolog", nil);
+            return MRErrorKitString(@"Invalid Entity Reference In Prolog", nil);
         case NSXMLParserEntityRefInEpilogError:
-            return NSLocalizedString(@"Invalid Entity Reference In Epilog", nil);
+            return MRErrorKitString(@"Invalid Entity Reference In Epilog", nil);
         case NSXMLParserEntityRefInDTDError:
-            return NSLocalizedString(@"Invalid Entity Reference In DTD", nil);
+            return MRErrorKitString(@"Invalid Entity Reference In DTD", nil);
         case NSXMLParserParsedEntityRefAtEOFError:
-            return NSLocalizedString(@"Entity Reference Target Not Found", nil);
+            return MRErrorKitString(@"Entity Reference Target Not Found", nil);
         case NSXMLParserParsedEntityRefInPrologError:
-            return NSLocalizedString(@"Entity Reference Target Not Found In Prolog", nil);
+            return MRErrorKitString(@"Entity Reference Target Not Found In Prolog", nil);
         case NSXMLParserParsedEntityRefInEpilogError:
-            return NSLocalizedString(@"Entity Reference Target Not Found In Epilog", nil);
+            return MRErrorKitString(@"Entity Reference Target Not Found In Epilog", nil);
         case NSXMLParserParsedEntityRefInInternalSubsetError:
-            return NSLocalizedString(@"Entity Reference Target Not Found In Internal Subset", nil);
+            return MRErrorKitString(@"Entity Reference Target Not Found In Internal Subset", nil);
         case NSXMLParserEntityReferenceWithoutNameError:
-            return NSLocalizedString(@"Entity Reference Without Name", nil);
+            return MRErrorKitString(@"Entity Reference Without Name", nil);
         case NSXMLParserEntityReferenceMissingSemiError:
-            return NSLocalizedString(@"Entity Reference Missing Semicolon", nil);
+            return MRErrorKitString(@"Entity Reference Missing Semicolon", nil);
         case NSXMLParserParsedEntityRefNoNameError:
-            return NSLocalizedString(@"Parsed Entity Reference Without Name", nil);
+            return MRErrorKitString(@"Parsed Entity Reference Without Name", nil);
         case NSXMLParserParsedEntityRefMissingSemiError:
-            return NSLocalizedString(@"Parsed Entity Reference Missing Semicolon", nil);
+            return MRErrorKitString(@"Parsed Entity Reference Missing Semicolon", nil);
         case NSXMLParserUndeclaredEntityError:
-            return NSLocalizedString(@"Undeclared Entity", nil);
+            return MRErrorKitString(@"Undeclared Entity", nil);
         case NSXMLParserUnparsedEntityError:
-            return NSLocalizedString(@"Cannot Parse Entity", nil);
+            return MRErrorKitString(@"Cannot Parse Entity", nil);
         case NSXMLParserEntityIsExternalError:
-            return NSLocalizedString(@"Cannot Parse External Entity", nil);
+            return MRErrorKitString(@"Cannot Parse External Entity", nil);
         case NSXMLParserEntityIsParameterError:
-            return NSLocalizedString(@"Entity Is Parameter Error", nil);
+            return MRErrorKitString(@"Entity Is Parameter Error", nil);
         case NSXMLParserUnknownEncodingError:
-            return NSLocalizedString(@"Unknown Encoding", nil);
+            return MRErrorKitString(@"Unknown Encoding", nil);
         case NSXMLParserEncodingNotSupportedError:
-            return NSLocalizedString(@"Encoding Not Supported", nil);
+            return MRErrorKitString(@"Encoding Not Supported", nil);
         case NSXMLParserStringNotStartedError:
-            return NSLocalizedString(@"String Not Started", nil);
+            return MRErrorKitString(@"String Not Started", nil);
         case NSXMLParserStringNotClosedError:
-            return NSLocalizedString(@"String Not Closed", nil);
+            return MRErrorKitString(@"String Not Closed", nil);
         case NSXMLParserNamespaceDeclarationError:
-            return NSLocalizedString(@"Invalid Namespace Declaration", nil);
+            return MRErrorKitString(@"Invalid Namespace Declaration", nil);
         case NSXMLParserEntityNotStartedError:
-            return NSLocalizedString(@"Entity Not Started", nil);
+            return MRErrorKitString(@"Entity Not Started", nil);
         case NSXMLParserEntityNotFinishedError:
-            return NSLocalizedString(@"Entity Not Finished", nil);
+            return MRErrorKitString(@"Entity Not Finished", nil);
         case NSXMLParserLessThanSymbolInAttributeError:
-            return NSLocalizedString(@"'<' Used In Attribute Error", nil);
+            return MRErrorKitString(@"'<' Used In Attribute Error", nil);
         case NSXMLParserAttributeNotStartedError:
-            return NSLocalizedString(@"Attribute Not Started", nil);
+            return MRErrorKitString(@"Attribute Not Started", nil);
         case NSXMLParserAttributeNotFinishedError:
-            return NSLocalizedString(@"Attribute Not Finished", nil);
+            return MRErrorKitString(@"Attribute Not Finished", nil);
         case NSXMLParserAttributeHasNoValueError:
-            return NSLocalizedString(@"Attribute Has No Value", nil);
+            return MRErrorKitString(@"Attribute Has No Value", nil);
         case NSXMLParserAttributeRedefinedError:
-            return NSLocalizedString(@"Attribute Redefined", nil);
+            return MRErrorKitString(@"Attribute Redefined", nil);
         case NSXMLParserLiteralNotStartedError:
-            return NSLocalizedString(@"Literal Not Started", nil);
+            return MRErrorKitString(@"Literal Not Started", nil);
         case NSXMLParserLiteralNotFinishedError:
-            return NSLocalizedString(@"Literal Not Finished", nil);
+            return MRErrorKitString(@"Literal Not Finished", nil);
         case NSXMLParserCommentNotFinishedError:
-            return NSLocalizedString(@"Comment Not Finished", nil);
+            return MRErrorKitString(@"Comment Not Finished", nil);
         case NSXMLParserProcessingInstructionNotStartedError:
-            return NSLocalizedString(@"Processing Instruction Not Started", nil);
+            return MRErrorKitString(@"Processing Instruction Not Started", nil);
         case NSXMLParserProcessingInstructionNotFinishedError:
-            return NSLocalizedString(@"Processing Instruction Not Finished", nil);
+            return MRErrorKitString(@"Processing Instruction Not Finished", nil);
         case NSXMLParserNotationNotStartedError:
-            return NSLocalizedString(@"Notation Not Started", nil);
+            return MRErrorKitString(@"Notation Not Started", nil);
         case NSXMLParserNotationNotFinishedError:
-            return NSLocalizedString(@"Notation Not Finished", nil);
+            return MRErrorKitString(@"Notation Not Finished", nil);
         case NSXMLParserAttributeListNotStartedError:
-            return NSLocalizedString(@"Attribute List Not Started", nil);
+            return MRErrorKitString(@"Attribute List Not Started", nil);
         case NSXMLParserAttributeListNotFinishedError:
-            return NSLocalizedString(@"Attribute List Not Finished", nil);
+            return MRErrorKitString(@"Attribute List Not Finished", nil);
         case NSXMLParserMixedContentDeclNotStartedError:
-            return NSLocalizedString(@"Mixed Content Declaration Not Started", nil);
+            return MRErrorKitString(@"Mixed Content Declaration Not Started", nil);
         case NSXMLParserMixedContentDeclNotFinishedError:
-            return NSLocalizedString(@"Mixed Content Declaration Not Finished", nil);
+            return MRErrorKitString(@"Mixed Content Declaration Not Finished", nil);
         case NSXMLParserElementContentDeclNotStartedError:
-            return NSLocalizedString(@"Element Content Declaration Not Started", nil);
+            return MRErrorKitString(@"Element Content Declaration Not Started", nil);
         case NSXMLParserElementContentDeclNotFinishedError:
-            return NSLocalizedString(@"Element Content Declaration Not Finished", nil);
+            return MRErrorKitString(@"Element Content Declaration Not Finished", nil);
         case NSXMLParserXMLDeclNotStartedError:
-            return NSLocalizedString(@"XML Declaration Not Started", nil);
+            return MRErrorKitString(@"XML Declaration Not Started", nil);
         case NSXMLParserXMLDeclNotFinishedError:
-            return NSLocalizedString(@"XML Declaration Not Finished", nil);
+            return MRErrorKitString(@"XML Declaration Not Finished", nil);
         case NSXMLParserConditionalSectionNotStartedError:
-            return NSLocalizedString(@"Conditional Section Not Started", nil);
+            return MRErrorKitString(@"Conditional Section Not Started", nil);
         case NSXMLParserConditionalSectionNotFinishedError:
-            return NSLocalizedString(@"Conditional Section Not Finished", nil);
+            return MRErrorKitString(@"Conditional Section Not Finished", nil);
         case NSXMLParserExternalSubsetNotFinishedError:
-            return NSLocalizedString(@"External Subset Not Finished", nil);
+            return MRErrorKitString(@"External Subset Not Finished", nil);
         case NSXMLParserDOCTYPEDeclNotFinishedError:
-            return NSLocalizedString(@"DOCTYPE Declaration Not Finished", nil);
+            return MRErrorKitString(@"DOCTYPE Declaration Not Finished", nil);
         case NSXMLParserMisplacedCDATAEndStringError:
-            return NSLocalizedString(@"Misplaced CDATA End String", nil);
+            return MRErrorKitString(@"Misplaced CDATA End String", nil);
         case NSXMLParserCDATANotFinishedError:
-            return NSLocalizedString(@"CDATA Not Finished", nil);
+            return MRErrorKitString(@"CDATA Not Finished", nil);
         case NSXMLParserMisplacedXMLDeclarationError:
-            return NSLocalizedString(@"Misplaced XML Declaration", nil);
+            return MRErrorKitString(@"Misplaced XML Declaration", nil);
         case NSXMLParserSpaceRequiredError:
-            return NSLocalizedString(@"Space Required", nil);
+            return MRErrorKitString(@"Space Required", nil);
         case NSXMLParserSeparatorRequiredError:
-            return NSLocalizedString(@"Separator Required", nil);
+            return MRErrorKitString(@"Separator Required", nil);
         case NSXMLParserNMTOKENRequiredError:
-            return NSLocalizedString(@"NAME Token Required", nil);
+            return MRErrorKitString(@"NAME Token Required", nil);
         case NSXMLParserNAMERequiredError:
-            return NSLocalizedString(@"NAME Required", nil);
+            return MRErrorKitString(@"NAME Required", nil);
         case NSXMLParserPCDATARequiredError:
-            return NSLocalizedString(@"CDATA Required", nil);
+            return MRErrorKitString(@"CDATA Required", nil);
         case NSXMLParserURIRequiredError:
-            return NSLocalizedString(@"URI Required", nil);
+            return MRErrorKitString(@"URI Required", nil);
         case NSXMLParserPublicIdentifierRequiredError:
-            return NSLocalizedString(@"Public Identifier Required", nil);
+            return MRErrorKitString(@"Public Identifier Required", nil);
         case NSXMLParserLTRequiredError:
-            return NSLocalizedString(@"'<' Required", nil);
+            return MRErrorKitString(@"'<' Required", nil);
         case NSXMLParserGTRequiredError:
-            return NSLocalizedString(@"'>' Required", nil);
+            return MRErrorKitString(@"'>' Required", nil);
         case NSXMLParserLTSlashRequiredError:
-            return NSLocalizedString(@"'</' Required", nil);
+            return MRErrorKitString(@"'</' Required", nil);
         case NSXMLParserEqualExpectedError:
-            return NSLocalizedString(@"'=' Expected", nil);
+            return MRErrorKitString(@"'=' Expected", nil);
         case NSXMLParserTagNameMismatchError:
-            return NSLocalizedString(@"Tag Name Mismatch", nil);
+            return MRErrorKitString(@"Tag Name Mismatch", nil);
         case NSXMLParserUnfinishedTagError:
-            return NSLocalizedString(@"Unfinished Tag", nil);
+            return MRErrorKitString(@"Unfinished Tag", nil);
         case NSXMLParserStandaloneValueError:
-            return NSLocalizedString(@"Standalone Value Error", nil);
+            return MRErrorKitString(@"Standalone Value Error", nil);
         case NSXMLParserInvalidEncodingNameError:
-            return NSLocalizedString(@"Invalid Encoding Name", nil);
+            return MRErrorKitString(@"Invalid Encoding Name", nil);
         case NSXMLParserCommentContainsDoubleHyphenError:
-            return NSLocalizedString(@"Comment Contains Double Hyphen", nil);
+            return MRErrorKitString(@"Comment Contains Double Hyphen", nil);
         case NSXMLParserInvalidEncodingError:
-            return NSLocalizedString(@"Invalid Encoding", nil);
+            return MRErrorKitString(@"Invalid Encoding", nil);
         case NSXMLParserExternalStandaloneEntityError:
-            return NSLocalizedString(@"External Standalone Entity Error", nil);
+            return MRErrorKitString(@"External Standalone Entity Error", nil);
         case NSXMLParserInvalidConditionalSectionError:
-            return NSLocalizedString(@"Invalid Conditional Section", nil);
+            return MRErrorKitString(@"Invalid Conditional Section", nil);
         case NSXMLParserEntityValueRequiredError:
-            return NSLocalizedString(@"Entity Value Required", nil);
+            return MRErrorKitString(@"Entity Value Required", nil);
         case NSXMLParserNotWellBalancedError:
-            return NSLocalizedString(@"Not Well Balanced", nil);
+            return MRErrorKitString(@"Not Well Balanced", nil);
         case NSXMLParserExtraContentError:
-            return NSLocalizedString(@"Extra Content Error", nil);
+            return MRErrorKitString(@"Extra Content Error", nil);
         case NSXMLParserInvalidCharacterInEntityError:
-            return NSLocalizedString(@"Invalid Character In Entity", nil);
+            return MRErrorKitString(@"Invalid Character In Entity", nil);
         case NSXMLParserParsedEntityRefInInternalError:
-            return NSLocalizedString(@"Internal Error In Parsed Entity Reference", nil);
+            return MRErrorKitString(@"Internal Error In Parsed Entity Reference", nil);
         case NSXMLParserEntityRefLoopError:
-            return NSLocalizedString(@"Entity Reference Loop Error", nil);
+            return MRErrorKitString(@"Entity Reference Loop Error", nil);
         case NSXMLParserEntityBoundaryError:
-            return NSLocalizedString(@"Entity Boundary Error", nil);
+            return MRErrorKitString(@"Entity Boundary Error", nil);
         case NSXMLParserInvalidURIError:
-            return NSLocalizedString(@"Invalid URI", nil);
+            return MRErrorKitString(@"Invalid URI", nil);
         case NSXMLParserURIFragmentError:
-            return NSLocalizedString(@"URI Fragment Error", nil);
+            return MRErrorKitString(@"URI Fragment Error", nil);
         case NSXMLParserNoDTDError:
-            return NSLocalizedString(@"Missing DTD", nil);
+            return MRErrorKitString(@"Missing DTD", nil);
         case NSXMLParserDelegateAbortedParseError:
-            return NSLocalizedString(@"Delegate Aborted Parse", nil);
+            return MRErrorKitString(@"Delegate Aborted Parse", nil);
     }
-    return NSLocalizedString(@"XML Error", nil);
+    return MRErrorKitString(@"XML Error", nil);
 }
 
 #pragma mark -
@@ -991,23 +991,23 @@
 {
     switch (code) {
         case ACErrorUnknown:
-            return NSLocalizedString(@"Unknown Error", nil);
+            return MRErrorKitString(@"Unknown Error", nil);
         case ACErrorAccountMissingRequiredProperty:
-            return NSLocalizedString(@"Account Missing Required Property", nil);
+            return MRErrorKitString(@"Account Missing Required Property", nil);
         case ACErrorAccountAuthenticationFailed:
-            return NSLocalizedString(@"Account Authentication Failed", nil);
+            return MRErrorKitString(@"Account Authentication Failed", nil);
         case ACErrorAccountTypeInvalid:
-            return NSLocalizedString(@"Account Type Invalid", nil);
+            return MRErrorKitString(@"Account Type Invalid", nil);
         case ACErrorAccountAlreadyExists:
-            return NSLocalizedString(@"Account Already Exists", nil);
+            return MRErrorKitString(@"Account Already Exists", nil);
         case ACErrorAccountNotFound:
-            return NSLocalizedString(@"Account Not Found", nil);
+            return MRErrorKitString(@"Account Not Found", nil);
         case ACErrorPermissionDenied:
-            return NSLocalizedString(@"Permission Denied", nil);
+            return MRErrorKitString(@"Permission Denied", nil);
         case ACErrorAccessInfoInvalid:
-            return NSLocalizedString(@"Access Information Invalid", nil);
+            return MRErrorKitString(@"Access Information Invalid", nil);
     }
-    return NSLocalizedString(@"Account Error", nil);
+    return MRErrorKitString(@"Account Error", nil);
 }
 
 #endif
@@ -1049,28 +1049,28 @@
 {
     switch (code) {
         case kGADErrorInvalidRequest:
-            return NSLocalizedString(@"Invalid Request", nil);
+            return MRErrorKitString(@"Invalid Request", nil);
         case kGADErrorNoFill:
         case kGADErrorMediationNoFill:
-            return NSLocalizedString(@"No Ad Error", nil);
+            return MRErrorKitString(@"No Ad Error", nil);
         case kGADErrorNetworkError:
-            return NSLocalizedString(@"Network Error", nil);
+            return MRErrorKitString(@"Network Error", nil);
         case kGADErrorServerError:
-            return NSLocalizedString(@"Server Error", nil);
+            return MRErrorKitString(@"Server Error", nil);
         case kGADErrorOSVersionTooLow:
-            return NSLocalizedString(@"OS Version Too Low", nil);
+            return MRErrorKitString(@"OS Version Too Low", nil);
         case kGADErrorTimeout:
-            return NSLocalizedString(@"Timed Out", nil);
+            return MRErrorKitString(@"Timed Out", nil);
         case kGADErrorInterstitialAlreadyUsed:
-            return NSLocalizedString(@"Interstitial Already Used", nil);
+            return MRErrorKitString(@"Interstitial Already Used", nil);
         case kGADErrorMediationDataError:
-            return NSLocalizedString(@"Invalid Response", nil);
+            return MRErrorKitString(@"Invalid Response", nil);
         case kGADErrorMediationAdapterError:
-            return NSLocalizedString(@"Mediation Adapter Error", nil);
+            return MRErrorKitString(@"Mediation Adapter Error", nil);
         case kGADErrorMediationInvalidAdSize:
-            return NSLocalizedString(@"Invalid Ad Size", nil);
+            return MRErrorKitString(@"Invalid Ad Size", nil);
     }
-    return NSLocalizedString(@"Admob Error", nil);
+    return MRErrorKitString(@"Admob Error", nil);
 }
 
 #endif
@@ -1124,41 +1124,41 @@
 {
     switch (code) {
         case kCLErrorLocationUnknown:
-            return NSLocalizedString(@"Location Unknown", nil);
+            return MRErrorKitString(@"Location Unknown", nil);
         case kCLErrorDenied:
-            return NSLocalizedString(@"Denied", nil);
+            return MRErrorKitString(@"Denied", nil);
         case kCLErrorNetwork:
-            return NSLocalizedString(@"Network Error", nil);
+            return MRErrorKitString(@"Network Error", nil);
         case kCLErrorHeadingFailure:
-            return NSLocalizedString(@"Heading Failure", nil);
+            return MRErrorKitString(@"Heading Failure", nil);
         case kCLErrorRegionMonitoringDenied:
-            return NSLocalizedString(@"Region Monitoring Denied", nil);
+            return MRErrorKitString(@"Region Monitoring Denied", nil);
         case kCLErrorRegionMonitoringFailure:
-            return NSLocalizedString(@"Region Monitoring Failure", nil);
+            return MRErrorKitString(@"Region Monitoring Failure", nil);
         case kCLErrorRegionMonitoringSetupDelayed:
-            return NSLocalizedString(@"Region Monitoring Setup Delayed", nil);
+            return MRErrorKitString(@"Region Monitoring Setup Delayed", nil);
         case kCLErrorRegionMonitoringResponseDelayed:
-            return NSLocalizedString(@"Region Monitoring Response Delayed", nil);
+            return MRErrorKitString(@"Region Monitoring Response Delayed", nil);
         case kCLErrorGeocodeFoundNoResult:
-            return NSLocalizedString(@"Geocode Found No Result", nil);
+            return MRErrorKitString(@"Geocode Found No Result", nil);
         case kCLErrorGeocodeFoundPartialResult:
-            return NSLocalizedString(@"Geocode Found Partial Result", nil);
+            return MRErrorKitString(@"Geocode Found Partial Result", nil);
         case kCLErrorGeocodeCanceled:
-            return NSLocalizedString(@"Geocode Canceled", nil);
+            return MRErrorKitString(@"Geocode Canceled", nil);
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         case kCLErrorDeferredFailed:
-            return NSLocalizedString(@"Deferred Update Failed", nil);
+            return MRErrorKitString(@"Deferred Update Failed", nil);
         case kCLErrorDeferredNotUpdatingLocation:
-            return NSLocalizedString(@"Deferred Not Updating Location", nil);
+            return MRErrorKitString(@"Deferred Not Updating Location", nil);
         case kCLErrorDeferredAccuracyTooLow:
-            return NSLocalizedString(@"Deferred Accuracy Too Low", nil);
+            return MRErrorKitString(@"Deferred Accuracy Too Low", nil);
         case kCLErrorDeferredDistanceFiltered:
-            return NSLocalizedString(@"Cannot Filter Deferred Distance", nil);
+            return MRErrorKitString(@"Cannot Filter Deferred Distance", nil);
         case kCLErrorDeferredCanceled:
-            return NSLocalizedString(@"Deferred Update Canceled", nil);
+            return MRErrorKitString(@"Deferred Update Canceled", nil);
 #endif
     }
-    return NSLocalizedString(@"Location Error", nil);
+    return MRErrorKitString(@"Location Error", nil);
 }
 
 #endif
@@ -1194,23 +1194,23 @@
 {
     switch (code) {
         case FBErrorInvalid:
-            return NSlocalizedString(@"Invalid Error", nil);
+            return MRErrorKitString(@"Invalid Error", nil);
         case FBErrorOperationCancelled:
-            return NSlocalizedString(@"Operation Cancelled", nil);
+            return MRErrorKitString(@"Operation Cancelled", nil);
         case FBErrorLoginFailedOrCancelled:
-            return NSlocalizedString(@"Login Failed Or Cancelled", nil);
+            return MRErrorKitString(@"Login Failed Or Cancelled", nil);
         case FBErrorRequestConnectionApi:
-            return NSlocalizedString(@"Graph Error", nil);
+            return MRErrorKitString(@"Graph Error", nil);
         case FBErrorProtocolMismatch:
-            return NSlocalizedString(@"Protocol Mismatch", nil);
+            return MRErrorKitString(@"Protocol Mismatch", nil);
         case FBErrorHTTPError:
-            return NSlocalizedString(@"HTTP Error", nil);
+            return MRErrorKitString(@"HTTP Error", nil);
         case FBErrorNonTextMimeTypeReturned:
-            return NSlocalizedString(@"Invalid Response", nil);
+            return MRErrorKitString(@"Invalid Response", nil);
         case FBErrorNativeDialog:
-            return NSlocalizedString(@"Native Dialog Error", nil);
+            return MRErrorKitString(@"Native Dialog Error", nil);
     }
-    return NSLocalizedString(@"Facebook Error", nil);
+    return MRErrorKitString(@"Facebook Error", nil);
 }
 
 #endif
@@ -1255,25 +1255,25 @@
 {
     switch (code) {
         case ADErrorUnknown:
-            return NSLocalizedString(@"Unknown Error", nil);
+            return MRErrorKitString(@"Unknown Error", nil);
         case ADErrorServerFailure:
-            return NSLocalizedString(@"Server Failure", nil);
+            return MRErrorKitString(@"Server Failure", nil);
         case ADErrorLoadingThrottled:
-            return NSLocalizedString(@"Loading Throttled", nil);
+            return MRErrorKitString(@"Loading Throttled", nil);
         case ADErrorInventoryUnavailable:
-            return NSLocalizedString(@"Inventory Unavailable", nil);
+            return MRErrorKitString(@"Inventory Unavailable", nil);
         case ADErrorConfigurationError:
-            return NSLocalizedString(@"Configuration Error", nil);
+            return MRErrorKitString(@"Configuration Error", nil);
         case ADErrorBannerVisibleWithoutContent:
-            return NSLocalizedString(@"Banner Visible Without Content", nil);
+            return MRErrorKitString(@"Banner Visible Without Content", nil);
         case ADErrorApplicationInactive:
-            return NSLocalizedString(@"Application Inactive Error", nil);
+            return MRErrorKitString(@"Application Inactive Error", nil);
 #if __IPHONE_6_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
         case ADErrorAdUnloaded:
-            return NSLocalizedString(@"Ad Unloaded Error", nil);
+            return MRErrorKitString(@"Ad Unloaded Error", nil);
 #endif
     }
-    return NSLocalizedString(@"iAd Error", nil);
+    return MRErrorKitString(@"iAd Error", nil);
 }
 
 #endif
@@ -1287,7 +1287,7 @@
 
 + (NSString *)stringWithJSONKitCode:(NSInteger)code
 {
-    return NSLocalizedString(@"JSON Error", nil);
+    return MRErrorKitString(@"JSON Error", nil);
 }
 
 #pragma mark -
@@ -1313,15 +1313,15 @@
 {
     switch (code) {
         case MKErrorUnknown:
-            return NSLocalizedString(@"Unknown Error", nil);
+            return MRErrorKitString(@"Unknown Error", nil);
         case MKErrorServerFailure:
-            return NSLocalizedString(@"Server Error", nil);
+            return MRErrorKitString(@"Server Error", nil);
         case MKErrorLoadingThrottled:
-            return NSLocalizedString(@"Loading Throttled Error", nil);
+            return MRErrorKitString(@"Loading Throttled", nil);
         case MKErrorPlacemarkNotFound:
-            return NSLocalizedString(@"Placemark Not Found", nil);
+            return MRErrorKitString(@"Placemark Not Found", nil);
     }
-    return NSLocalizedString(@"Map Error", nil);
+    return MRErrorKitString(@"Map Error", nil);
 }
 
 #endif
@@ -1373,39 +1373,39 @@
 {
     switch (code) {
         case MFMailComposeErrorCodeSaveFailed:
-            return NSLocalizedString(@"Mail Save Failed", nil);
+            return MRErrorKitString(@"Mail Save Failed", nil);
         case MFMailComposeErrorCodeSendFailed:
-            return NSLocalizedString(@"Mail Send Failed", nil);
+            return MRErrorKitString(@"Mail Send Failed", nil);
     }
-    return NSLocalizedString(@"Mail Error", nil);
+    return MRErrorKitString(@"Mail Error", nil);
 }
 
 + (NSString *)stringWithMailComposeResult:(NSInteger)code
 {
     switch (code) {
         case MFMailComposeResultCancelled:
-            return NSLocalizedString(@"Mail Cancelled", nil);
+            return MRErrorKitString(@"Mail Cancelled", nil);
         case MFMailComposeResultSaved:
-            return NSLocalizedString(@"Mail Saved", nil);
+            return MRErrorKitString(@"Mail Saved", nil);
         case MFMailComposeResultSent:
-            return NSLocalizedString(@"Mail Sent", nil);
+            return MRErrorKitString(@"Mail Sent", nil);
         case MFMailComposeResultFailed:
-            return NSLocalizedString(@"Mail Failed", nil);
+            return MRErrorKitString(@"Mail Failed", nil);
     }
-    return NSLocalizedString(@"Unknown Result", nil);
+    return MRErrorKitString(@"Unknown Result", nil);
 }
 
 + (NSString *)stringWithMessageComposeResult:(NSInteger)code
 {
     switch (code) {
         case MessageComposeResultCancelled:
-            return NSLocalizedString(@"Message Cancelled", nil);
+            return MRErrorKitString(@"Message Cancelled", nil);
         case MessageComposeResultSent:
-            return NSLocalizedString(@"Message Sent", nil);
+            return MRErrorKitString(@"Message Sent", nil);
         case MessageComposeResultFailed:
-            return NSLocalizedString(@"Message Failed", nil);
+            return MRErrorKitString(@"Message Failed", nil);
     }
-    return NSLocalizedString(@"Unknown Result", nil);
+    return MRErrorKitString(@"Unknown Result", nil);
 }
 
 #endif
@@ -1501,83 +1501,83 @@
 {
     switch (code) {
         case errSecSuccess:
-            return NSLocalizedString(@"No Error", nil);
+            return MRErrorKitString(@"No Error", nil);
         case errSecUnimplemented:
-            return NSLocalizedString(@"Unimplemented", nil);
+            return MRErrorKitString(@"Unimplemented", nil);
         case errSecParam:
-            return NSLocalizedString(@"Invalid Parameter", nil);
+            return MRErrorKitString(@"Invalid Parameter", nil);
         case errSecAllocate:
-            return NSLocalizedString(@"Memory Allocation Error", nil);
+            return MRErrorKitString(@"Memory Allocation Error", nil);
         case errSecNotAvailable:
-            return NSLocalizedString(@"No Trust Results Available", nil);
+            return MRErrorKitString(@"No Trust Results Available", nil);
         case errSecAuthFailed:
-            return NSLocalizedString(@"Authorization/Authentication Failed", nil);
+            return MRErrorKitString(@"Authorization/Authentication Failed", nil);
         case errSecDuplicateItem:
-            return NSLocalizedString(@"Item Already Exists", nil);
+            return MRErrorKitString(@"Item Already Exists", nil);
         case errSecItemNotFound:
-            return NSLocalizedString(@"Item Not Found", nil);
+            return MRErrorKitString(@"Item Not Found", nil);
         case errSecInteractionNotAllowed:
-            return NSLocalizedString(@"Interaction Not Allowed", nil);
+            return MRErrorKitString(@"Interaction Not Allowed", nil);
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         case errSecReadOnly:
-            return NSLocalizedString(@"Read Only Error", nil);
+            return MRErrorKitString(@"Read Only Error", nil);
         case errSecNoSuchKeychain:
-            return NSLocalizedString(@"Keychain Non Existent", nil);
+            return MRErrorKitString(@"Keychain Non Existent", nil);
         case errSecInvalidKeychain:
-            return NSLocalizedString(@"Invalid Keychain", nil);
+            return MRErrorKitString(@"Invalid Keychain", nil);
         case errSecDuplicateKeychain:
-            return NSLocalizedString(@"Duplicate Keychain", nil);
+            return MRErrorKitString(@"Duplicate Keychain", nil);
         case errSecDuplicateCallback:
-            return NSLocalizedString(@"Duplicate Callback", nil);
+            return MRErrorKitString(@"Duplicate Callback", nil);
         case errSecInvalidCallback:
-            return NSLocalizedString(@"Invalid Callback", nil);
+            return MRErrorKitString(@"Invalid Callback", nil);
         case errSecBufferTooSmall:
-            return NSLocalizedString(@"Buffer Too Small", nil);
+            return MRErrorKitString(@"Buffer Too Small", nil);
         case errSecDataTooLarge:
-            return NSLocalizedString(@"Data Too Large", nil);
+            return MRErrorKitString(@"Data Too Large", nil);
         case errSecNoSuchAttr:
-            return NSLocalizedString(@"Attribute Non Existent", nil);
+            return MRErrorKitString(@"Attribute Non Existent", nil);
         case errSecInvalidItemRef:
-            return NSLocalizedString(@"Invalid Item Reference", nil);
+            return MRErrorKitString(@"Invalid Item Reference", nil);
         case errSecInvalidSearchRef:
-            return NSLocalizedString(@"Invalid Search Reference", nil);
+            return MRErrorKitString(@"Invalid Search Reference", nil);
         case errSecNoSuchClass:
-            return NSLocalizedString(@"Keychain Class Non Existent", nil);
+            return MRErrorKitString(@"Keychain Class Non Existent", nil);
         case errSecNoDefaultKeychain:
-            return NSLocalizedString(@"Default Keychain Non Existent", nil);
+            return MRErrorKitString(@"Default Keychain Non Existent", nil);
         case errSecReadOnlyAttr:
-            return NSLocalizedString(@"Read Only Attribute", nil);
+            return MRErrorKitString(@"Read Only Attribute", nil);
         case errSecWrongSecVersion:
-            return NSLocalizedString(@"Wrong Version", nil);
+            return MRErrorKitString(@"Wrong Version", nil);
         case errSecKeySizeNotAllowed:
-            return NSLocalizedString(@"Key Size Not Allowed", nil);
+            return MRErrorKitString(@"Key Size Not Allowed", nil);
         case errSecNoStorageModule:
-            return NSLocalizedString(@"No Storage Module", nil);
+            return MRErrorKitString(@"No Storage Module", nil);
         case errSecNoCertificateModule:
-            return NSLocalizedString(@"No Certificate Module Available", nil);
+            return MRErrorKitString(@"No Certificate Module Available", nil);
         case errSecNoPolicyModule:
-            return NSLocalizedString(@"No Policy Module Available", nil);
+            return MRErrorKitString(@"No Policy Module Available", nil);
         case errSecInteractionRequired:
-            return NSLocalizedString(@"User Interaction Required", nil);
+            return MRErrorKitString(@"User Interaction Required", nil);
         case errSecDataNotAvailable:
-            return NSLocalizedString(@"Data Not Available", nil);
+            return MRErrorKitString(@"Data Not Available", nil);
         case errSecDataNotModifiable:
-            return NSLocalizedString(@"Data Not Modifiable", nil);
+            return MRErrorKitString(@"Data Not Modifiable", nil);
         case errSecCreateChainFailed:
-            return NSLocalizedString(@"Certificate chain Creation Failed", nil);
+            return MRErrorKitString(@"Certificate Chain Creation Failed", nil);
         case errSecACLNotSimple:
-            return NSLocalizedString(@"Access Control List Not In Standard Simple Form", nil);
+            return MRErrorKitString(@"Access Control List Not In Standard Simple Form", nil);
         case errSecPolicyNotFound:
-            return NSLocalizedString(@"Policy Not Found", nil);
+            return MRErrorKitString(@"Policy Not Found", nil);
         case errSecInvalidTrustSetting:
-            return NSLocalizedString(@"Invalid Trust Setting", nil);
+            return MRErrorKitString(@"Invalid Trust Setting", nil);
         case errSecNoAccessForItem:
-            return NSLocalizedString(@"No Access Control For Item", nil);
+            return MRErrorKitString(@"No Access Control For Item", nil);
         case errSecInvalidOwnerEdit:
-            return NSLocalizedString(@"Invalid Owner Edit Attempt", nil);
+            return MRErrorKitString(@"Invalid Owner Edit Attempt", nil);
 #endif
     }
-    return NSLocalizedString(@"Keychain Error", nil);
+    return MRErrorKitString(@"Keychain Error", nil);
 }
 
 #endif
@@ -1611,21 +1611,21 @@
 {
     switch (code) {
         case SKErrorUnknown:
-            return NSLocalizedString(@"Unknown Error", nil);
+            return MRErrorKitString(@"Unknown Error", nil);
         case SKErrorClientInvalid:
-            return NSLocalizedString(@"Invalid Client", nil);
+            return MRErrorKitString(@"Invalid Client", nil);
         case SKErrorPaymentCancelled:
-            return NSLocalizedString(@"Payment Cancelled", nil);
+            return MRErrorKitString(@"Payment Cancelled", nil);
         case SKErrorPaymentInvalid:
-            return NSLocalizedString(@"Invalid Payment", nil);
+            return MRErrorKitString(@"Invalid Payment", nil);
         case SKErrorPaymentNotAllowed:
-            return NSLocalizedString(@"Payment Not Allowed", nil);
+            return MRErrorKitString(@"Payment Not Allowed", nil);
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         case SKErrorStoreProductNotAvailable:
-            return NSLocalizedString(@"Product Not Available", nil);
+            return MRErrorKitString(@"Product Not Available", nil);
 #endif
     }
-    return NSLocalizedString(@"Store Error", nil);
+    return MRErrorKitString(@"Store Error", nil);
 }
 
 #endif
@@ -1649,11 +1649,11 @@
 {
     switch (code) {
         case TKInvalidTransitionError:
-            return NSLocalizedString(@"Transition Invalid", nil);
+            return MRErrorKitString(@"Transition Invalid", nil);
         case TKTransitionDeclinedError:
-            return NSLocalizedString(@"Transition Declined", nil);
+            return MRErrorKitString(@"Transition Declined", nil);
     }
-    return NSLocalizedString(@"State Machine Error", nil);
+    return MRErrorKitString(@"State Machine Error", nil);
 }
 
 #endif
