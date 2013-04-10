@@ -12,12 +12,17 @@ Pod::Spec.new do |s|
   s.author       = "Héctor Marqués Ranea"
   s.source       = { :git => "https://github.com/hectr/ErrorKit.git", :commit => '3e2be01e8bdbd0f10f60fca3549ddb206d470b6f' }
   s.platform     = :ios, '5.0'
-  s.source_files = 'ErrorKit'
   s.requires_arc = true
+  
+  s.preferred_dependency = 'Core'
+  
+  s.subspec 'Core' do |c|
+    c.source_files = 'ErrorKit'
+  end
   
   s.subspec 'AFNetworking' do |af|
     af.source_files = 'ErrorKit/AFNetworking'
-    af.dependency   'AFNetworking', '1.2.0'
+    af.dependency   'AFNetworking', '~> 1.1.0'
   end
   
   s.subspec 'Accounts' do |ac|
