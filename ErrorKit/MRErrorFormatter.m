@@ -22,32 +22,47 @@
 
 #import "MRErrorFormatter.h"
 #import "MRErrorFormatter+ErrorCode.h"
-#ifdef ACCOUNTS_EXTERN
+#ifdef ERROR_KIT_ACCOUNTS
+#import <Accounts/Accounts.h>
 #import "MRErrorFormatter_Accounts.h"
 #endif
-#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+#ifdef ERROR_KIT_ADMOB
+#import <AdMob/GADRequestError.h>
 #import "MRErrorFormatter_Admob.h"
 #endif
-#ifdef __CORELOCATION__
+#ifdef ERROR_KIT_AFNETWORKING
+#import "NSError_AFNetworking.h"
+#import <AFNetworking/AFURLConnectionOperation.h>
+#endif
+#ifdef ERROR_KIT_CORE_LOCATION
+#import <CoreLocation/CoreLocation.h>
 #import "MRErrorFormatter_CoreLocation.h"
 #endif
-#ifdef FB_SESSIONSTATETERMINALBIT
+#ifdef ERROR_KIT_FACEBOOK
+#import <FacebookSDK/FacebookSDK.h>
 #import "MRErrorFormatter_FacebookSDK.h"
 #endif
 #ifdef ERROR_KIT_IAD
+#import <iAd/iAd.h>
 #import "MRErrorFormatter_iAD.h"
 #endif
+#ifdef ERROR_KIT_JSON_KIT
 #import "MRErrorFormatter_JSONKit.h"
-#ifdef MK_EXTERN
+#endif
+#ifdef ERROR_KIT_MAP_KIT
+#import <MapKit/MapKit.h>
 #import "MRErrorFormatter_MapKit.h"
 #endif
 #ifdef ERROR_KIT_MESSAGE_UI
+#import <MessageUI/MessageUI.h>
 #import "MRErrorFormatter_MessageUI.h"
 #endif
-#ifdef SK_EXTERN
+#ifdef ERROR_KIT_STORE_KIT
+#import <StoreKit/StoreKit.h>
 #import "MRErrorFormatter_StoreKit.h"
 #endif
-#ifdef TransitionKit_TransitionKit_h
+#ifdef ERROR_KIT_TRANSITION_KIT
+#import <TransitionKit/TransitionKit.h>
 #import "MRErrorFormatter_TransitionKit.h"
 #endif
 
@@ -107,7 +122,7 @@
     if (error.localizedDescription) {
         return error.localizedDescription;
     }
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
     if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
         if (error.failingURLResponse) {
             NSInteger code = error.failingURLResponse.statusCode;
@@ -121,7 +136,7 @@
 + (NSString *)stringForMessageFromError:(NSError *)error
 {
     NSMutableArray *stringComponents = [NSMutableArray arrayWithCapacity:3];
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
     if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
         if (error.failingURLResponse && error.localizedDescription) {
             [stringComponents addObject:error.localizedDescription];
@@ -155,27 +170,27 @@
     } else if ([domain isEqualToString:NSXMLParserErrorDomain]) {
         return [MRErrorFormatter debugStringWithXMLParserCode:code];
     }
-#ifdef ACCOUNTS_EXTERN
+#ifdef ERROR_KIT_ACCOUNTS
     else if ([domain isEqualToString:ACErrorDomain]) {
         return [MRErrorFormatter debugStringWithAccountsCode:code];
     }
 #endif
-#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+#ifdef ERROR_KIT_ADMOB
     else if ([domain isEqualToString:kGADErrorDomain]) {
         return [MRErrorFormatter debugStringWithAdmobCode:code];
     }
 #endif
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
     else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
         return [MRErrorFormatter debugStringWithURLCode:code];
     }
 #endif
-#ifdef __CORELOCATION__
+#ifdef ERROR_KIT_CORE_LOCATION
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter debugStringWithCoreLocationCode:code];
     }
 #endif
-#ifdef FB_SESSIONSTATETERMINALBIT
+#ifdef ERROR_KIT_FACEBOOK
     else if ([domain isEqualToString:FacebookSDKDomain]) {
         return [MRErrorFormatter debugStringWithFacebookCode:code];
     }
@@ -185,10 +200,12 @@
         return [MRErrorFormatter debugStringWithIADCode:code];
     }
 #endif
+#ifdef ERROR_KIT_JSON_KIT
     else if ([domain isEqualToString:@"JKErrorDomain"]) {
         return [MRErrorFormatter debugStringWithJSONKitCode:code];
     }
-#ifdef MK_EXTERN
+#endif
+#ifdef ERROR_KIT_MAP_KIT
     else if ([domain isEqualToString:MKErrorDomain]) {
         return [MRErrorFormatter debugStringWithMapKitCode:code];
     }
@@ -198,12 +215,12 @@
         return [MRErrorFormatter debugStringWithMailComposeCode:code];
     }
 #endif
-#ifdef SK_EXTERN
+#ifdef ERROR_KIT_STORE_KIT
     else if ([domain isEqualToString:SKErrorDomain]) {
         return [MRErrorFormatter debugStringWithStoreKitCode:code];
     }
 #endif
-#ifdef TransitionKit_TransitionKit_h
+#ifdef ERROR_KIT_TRANSITION_KIT
     else if ([domain isEqualToString:TKErrorDomain]) {
         return [MRErrorFormatter debugStringWithTransitionKitCode:code];
     }
@@ -220,27 +237,27 @@
     } else if ([domain isEqualToString:NSXMLParserErrorDomain]) {
         return [MRErrorFormatter stringWithXMLParserCode:code];
     }
-#ifdef ACCOUNTS_EXTERN
+#ifdef ERROR_KIT_ACCOUNTS
     else if ([domain isEqualToString:ACErrorDomain]) {
         return [MRErrorFormatter stringWithAccountsCode:code];
     }
 #endif
-#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+#ifdef ERROR_KIT_ADMOB
     else if ([domain isEqualToString:kGADErrorDomain]) {
         return [MRErrorFormatter stringWithAdmobCode:code];
     }
 #endif
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
     else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
         return [MRErrorFormatter stringWithURLCode:code];
     }
 #endif
-#ifdef __CORELOCATION__
+#ifdef ERROR_KIT_CORE_LOCATION
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter stringWithCoreLocationCode:code];
     }
 #endif
-#ifdef FB_SESSIONSTATETERMINALBIT
+#ifdef ERROR_KIT_FACEBOOK
     else if ([domain isEqualToString:FacebookSDKDomain]) {
         return [MRErrorFormatter stringWithFacebookCode:code];
     }
@@ -250,10 +267,12 @@
         return [MRErrorFormatter stringWithIADCode:code];
     }
 #endif
+#ifdef ERROR_KIT_JSON_KIT
     else if ([domain isEqualToString:@"JKErrorDomain"]) {
         return [MRErrorFormatter stringWithJSONKitCode:code];
     }
-#ifdef MK_EXTERN
+#endif
+#ifdef ERROR_KIT_MAP_KIT
     else if ([domain isEqualToString:MKErrorDomain]) {
         return [MRErrorFormatter stringWithMapKitCode:code];
     }
@@ -263,12 +282,12 @@
         return [MRErrorFormatter stringWithMailComposeCode:code];
     }
 #endif
-#ifdef SK_EXTERN
+#ifdef ERROR_KIT_STORE_KIT
     else if ([domain isEqualToString:SKErrorDomain]) {
         return [MRErrorFormatter stringWithStoreKitCode:code];
     }
 #endif
-#ifdef TransitionKit_TransitionKit_h
+#ifdef ERROR_KIT_TRANSITION_KIT
     else if ([domain isEqualToString:TKErrorDomain]) {
         return [MRErrorFormatter stringWithTransitionKitCode:code];
     }

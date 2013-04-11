@@ -22,12 +22,8 @@
 
 #import "MRErrorBuilder.h"
 
-#ifndef __CORELOCATION__
-#warning This extension requires the Core Location framework.
-#endif
 
-
-#ifdef ERROR_KIT_CORE_LOCATION
+@class CLRegion;
 
 #warning MRErrorBuilder (ErrorKit_CoreLocation) is unsupported!
 
@@ -42,5 +38,3 @@
 @property (nonatomic, copy) CLRegion *alternateRegion;
 
 @end
-
-#endif

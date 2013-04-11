@@ -23,8 +23,6 @@
 #import "MRErrorFormatter+ErrorCode.h"
 
 
-#ifdef ERROR_KIT_MESSAGE_UI
-
 /**
  Adds methods for *stringizing* `MFMailComposeErrorDomain` error codes.
  
@@ -55,5 +53,3 @@
 + (NSString *)stringWithMessageComposeResult:(NSInteger)resultCode;
 
 @end
-
-#endif

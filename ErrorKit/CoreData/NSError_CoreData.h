@@ -22,10 +22,6 @@
 
 #import "NSError+ErrorKit.h"
 
-#ifndef _COREDATADEFINES_H
-#warning This extension requires the Core Data framework.
-#endif
-
 
 /**
  Adds getters for Core Data's error `userInfo` values.

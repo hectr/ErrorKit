@@ -20,10 +20,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef _SECURITY_SECITEM_H_
-#warning This extension requires the Security framework.
-#endif
-
 
 /**
  Adds methods for *stringizing* the most common result codes returned by Keychain Services.

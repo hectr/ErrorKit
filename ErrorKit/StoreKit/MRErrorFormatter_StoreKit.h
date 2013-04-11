@@ -22,10 +22,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef SK_EXTERN
-#warning This extension requires the Store Kit framework.
-#endif
-
 
 /**
  Adds methods for *stringizing* `SKErrorDomain` error codes.

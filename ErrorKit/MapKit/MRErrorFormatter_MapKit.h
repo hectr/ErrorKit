@@ -22,10 +22,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef MK_EXTERN
-#warning This extension requires the Ma Kit framework.
-#endif
-
 
 /**
  Adds methods for *stringizing* `MKErrorDomain` error codes.

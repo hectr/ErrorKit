@@ -22,6 +22,37 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
+#ifdef ERROR_KIT_ACCOUNTS
+#import <Accounts/Accounts.h>
+#endif
+#ifdef ERROR_KIT_ADMOB
+#import <AdMob/GADRequestError.h>
+#endif
+#ifdef ERROR_KIT_CORE_DATA
+#import <CoreData/CoreDataErrors.h>
+#endif
+#ifdef ERROR_KIT_CORE_LOCATION
+#import <CoreLocation/CoreLocation.h>
+#endif
+#ifdef ERROR_KIT_FACEBOOK
+#import <FacebookSDK/FacebookSDK.h>
+#endif
+#ifdef ERROR_KIT_IAD
+#import <iAd/iAd.h>
+#endif
+#ifdef ERROR_KIT_MAP_KIT
+#import <MapKit/MapKit.h>
+#endif
+#ifdef ERROR_KIT_MESSAGE_UI
+#import <MessageUI/MessageUI.h>
+#endif
+#ifdef ERROR_KIT_STORE_KIT
+#import <StoreKit/StoreKit.h>
+#endif
+#ifdef ERROR_KIT_TRANSITION_KIT
+#import <TransitionKit/TransitionKit.h>
+#endif
+
 #define mr_stringize_error_code(arg) [NSString stringWithUTF8String:#arg]
 
 
@@ -100,7 +131,7 @@
             return mr_stringize_error_code(NSXPCConnectionInvalid);
         case NSXPCConnectionReplyInvalid:
             return mr_stringize_error_code(NSXPCConnectionReplyInvalid);
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
         case NSManagedObjectValidationError:
             return mr_stringize_error_code(NSManagedObjectValidationError);
         case NSValidationMultipleErrorsError:
@@ -277,7 +308,7 @@
             return MRErrorKitString(@"XPC Connection Invalid", nil);
         case NSXPCConnectionReplyInvalid:
             return MRErrorKitString(@"XPC Connection Reply Invalid", nil);
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
         case NSManagedObjectValidationError:
             return MRErrorKitString(@"Validation Error", nil);
         case NSValidationMultipleErrorsError:
@@ -962,7 +993,7 @@
 
 #pragma mark -
 
-#ifdef ACCOUNTS_EXTERN
+#ifdef ERROR_KIT_ACCOUNTS
 
 + (NSString *)debugStringWithAccountsCode:(NSInteger)code
 {
@@ -1014,7 +1045,7 @@
 
 #pragma mark -
 
-#if defined(GAD_SIMULATOR_ID) || defined(GAD_SIZE_320x50)
+#ifdef ERROR_KIT_ADMOB
 
 + (NSString *)debugStringWithAdmobCode:(NSInteger)code
 {
@@ -1077,7 +1108,7 @@
 
 #pragma mark -
 
-#ifdef __CORELOCATION__
+#ifdef ERROR_KIT_CORE_LOCATION
 
 + (NSString *)debugStringWithCoreLocationCode:(NSInteger)code
 {
@@ -1165,7 +1196,7 @@
 
 #pragma mark -
 
-#ifdef FB_SESSIONSTATETERMINALBIT
+#ifdef ERROR_KIT_FACEBOOK
 
 + (NSString *)debugStringWithFacebookCode:(NSInteger)code
 {
@@ -1190,7 +1221,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithFacebookCode:(NSInteger)errorCode
++ (NSString *)stringWithFacebookCode:(NSInteger)code
 {
     switch (code) {
         case FBErrorInvalid:
@@ -1292,7 +1323,7 @@
 
 #pragma mark -
 
-#ifdef MK_EXTERN
+#ifdef ERROR_KIT_MAP_KIT
 
 + (NSString *)debugStringWithMapKitCode:(NSInteger)code
 {
@@ -1412,7 +1443,7 @@
 
 #pragma mark -
 
-#ifdef _SECURITY_SECITEM_H_
+#ifdef ERROR_KIT_SECURITY
 
 + (NSString *)debugStringWithKeychainServiceCode:(NSInteger)code
 {
@@ -1584,7 +1615,7 @@
 
 #pragma mark -
 
-#ifdef SK_EXTERN
+#ifdef ERROR_KIT_STORE_KIT
 
 + (NSString *)debugStringWithStoreKitCode:(NSInteger)code
 {
@@ -1632,7 +1663,7 @@
 
 #pragma mark -
 
-#ifdef TransitionKit_TransitionKit_h
+#ifdef ERROR_KIT_TRANSITION_KIT
 
 + (NSString *)debugStringWithTransitionKitCode:(NSInteger)code
 {

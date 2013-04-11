@@ -24,8 +24,6 @@
 #import "MRErrorFormatter+ErrorCode.h"
 
 
-#ifdef ERROR_KIT_IAD
-
 /**
  Adds methods for *stringizing* `ADErrorDomain` error codes.
  
@@ -44,5 +42,3 @@
 + (NSString *)stringWithIADCode:(NSInteger)errorCode;
 
 @end
-
-#endif

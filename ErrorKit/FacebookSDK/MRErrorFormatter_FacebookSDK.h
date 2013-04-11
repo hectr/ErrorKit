@@ -22,10 +22,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef FB_SESSIONSTATETERMINALBIT
-#warning This extension requires the Facebook SDK framework.
-#endif
-
 
 /**
  Adds methods for *stringizing* `FacebookSDKDomain` error codes.

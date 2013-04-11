@@ -20,10 +20,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef TransitionKit_TransitionKit_h
-#warning This extension requires the TransitionKit library.
-#endif
-
 
 /**
  Adds methods for *stringizing* `TKErrorDomain` error codes.

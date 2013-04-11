@@ -20,10 +20,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#if !defined(GAD_SIMULATOR_ID) && !defined(GAD_SIZE_320x50)
-#warning This extension requires the Admob library.
-#endif
-
 
 /**
  Adds methods for *stringizing* `kGADErrorDomain` error codes.

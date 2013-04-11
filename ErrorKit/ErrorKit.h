@@ -26,10 +26,7 @@
 #import "NSError+ErrorKit.h"
 
 #import "MRErrorBuilder.h"
-
 #import "MRErrorFormatter.h"
-#import "MRErrorFormatter_HTTP.h"
-
 #import "MRBlockRecoveryAttempter.h"
 
 #ifdef UIKIT_STATIC_INLINE
@@ -38,22 +35,26 @@
 #import "MRAlertRecoveryAttempter.h"
 #endif
 
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
 #import "NSError_AFNetworking.h"
 #import "MRErrorBuilder_AFNetworking.h"
 #endif
 
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
 #import "NSError_CoreData.h"
 #import "MRErrorBuilder_CoreData.h"
 #endif
 
-#ifdef __CORELOCATION__
+#ifdef ERROR_KIT_CORE_LOCATION
 #import "NSError_CoreLocation.h"
 #import "MRErrorBuilder_CoreLocation.h"
 #endif
 
-#ifdef _JSONKIT_H_
+#ifdef ERROR_KIT_HTTP
+#import "MRErrorFormatter_HTTP.h"
+#endif
+
+#ifdef ERROR_KIT_JSON_KIT
 #import "NSError_JSONKit.h"
 #import "MRErrorBuilder_JSONKit.h"
 #endif
@@ -62,7 +63,7 @@
 #import "MRErrorFormatter_MessageUI.h"
 #endif
 
-#ifdef _SECURITY_SECITEM_H_
+#ifdef ERROR_KIT_SECURITY
 #import "MRErrorFormatter_Security.h"
 #endif
 
@@ -100,14 +101,5 @@
 #define MRNotErrorAssert(error)
 #endif
 #endif
-
-// Enables iAd error codes stringizing methods.
-//#define ERROR_KIT_IAD
-
-// Enables MessageUI error codes stringizing methods.
-//#define ERROR_KIT_MESSAGE_UI
-
-// Enables unsupported Core Location accessors.
-//#define ERROR_KIT_CORE_LOCATION
 
 #endif

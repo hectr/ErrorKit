@@ -22,10 +22,6 @@
 
 #import "NSError+ErrorKit.h"
 
-#ifndef _AFNETWORKING_
-#warning This extension requires the AFNetworking library.
-#endif
-
 
 /**
  Adds getters for `AFNetworkingOperationFailingURLRequestErrorKey` and `AFNetworkingOperationFailingURLResponseErrorKey` user info values.

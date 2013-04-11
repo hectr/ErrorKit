@@ -23,16 +23,24 @@
 #import "MRErrorBuilder.h"
 #import "NSError+ErrorKit.h"
 #import "MRErrorFormatter.h"
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
+#import <AFNetworking/AFURLConnectionOperation.h>
 #import "NSError_AFNetworking.h"
 #endif
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
+#import <CoreData/CoreDataErrors.h>
 #import "NSError_CoreData.h"
 #endif
-#ifdef __CORELOCATION__
+#ifdef ERROR_KIT_CORE_LOCATION
+#import <CoreLocation/CoreLocation.h>
 #import "NSError_CoreLocation.h"
 #endif
+#ifdef ERROR_KIT_FACEBOOK
+#import <FacebookSDK/FacebookSDK.h>
+#endif
+#ifdef ERROR_KIT_JSON_KIT
 #import "NSError_JSONKit.h"
+#endif
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -68,11 +76,11 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.underlyingError = error.underlyingError;
     builder.underlyingException = error.underlyingException;
     builder.urlError = error.urlError;
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
     builder.failingURLRequest = error.failingURLRequest;
     builder.failingURLResponse = error.failingURLResponse;
 #endif
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
     builder.affectedObjects = error.affectedObjects;
     builder.affectedStores = error.affectedStores;
     builder.detailedErrors = error.detailedErrors;
@@ -82,11 +90,13 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.validationPredicate = error.validationPredicate;
     builder.validationValue = error.validationValue;
 #endif
-#if defined(__CORELOCATION__) && defined(ERROR_KIT_CORE_LOCATION)
+#ifdef ERROR_KIT_CORE_LOCATION
     builder.alternateRegion = error.alternateRegion;
 #endif
+#ifdef ERROR_KIT_JSON_KIT
     builder.atIndex = error.atIndex;
     builder.lineNumber = error.lineNumber;
+#endif
     return builder;
 }
 
@@ -290,9 +300,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     [self setUserInfoValue:urlError.copy forKey:NSURLErrorKey];
 }
 
-#pragma mark -
+#pragma mark - AFNetwokring
 
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
 
 - (NSURLRequest *)failingURLRequest
 {
@@ -316,9 +326,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #endif
 
-#pragma mark -
+#pragma mark - CoreData
 
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
 
 - (NSArray *)affectedObjects
 {
@@ -402,9 +412,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #endif
 
-#pragma mark -
+#pragma mark - CoreLocation
 
-#if defined(__CORELOCATION__) && defined(ERROR_KIT_CORE_LOCATION)
+#ifdef ERROR_KIT_CORE_LOCATION
 
 - (CLRegion *)alternateRegion
 {
@@ -420,9 +430,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #endif
 
-#pragma mark -
+#pragma mark - Facebook
 
-#ifdef FB_SESSIONSTATETERMINALBIT
+#ifdef ERROR_KIT_FACEBOOK
 
 - (NSError *)innerError
 {
@@ -496,7 +506,9 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #endif
 
-#pragma mark -
+#pragma mark - JSONKit
+
+#ifdef ERROR_KIT_JSON_KIT
 
 - (unsigned long)atIndex
 {
@@ -517,6 +529,8 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 {
     [self setUserInfoValue:@(lineNumber) forKey:@"JKLineNumberKey"];
 }
+
+#endif
 
 #pragma mark - NSCopying
 

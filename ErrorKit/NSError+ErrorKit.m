@@ -21,8 +21,21 @@
 // THE SOFTWARE.
 
 #import "NSError+ErrorKit.h"
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_AFNETWORKING
+#import <AFNetworking/AFURLConnectionOperation.h>
+#endif
+#ifdef ERROR_KIT_CORE_DATA
+#import <CoreData/CoreDataErrors.h>
 #import "MRErrorBuilder_CoreData.h"
+#endif
+#ifdef ERROR_KIT_CORE_LOCATION
+#import <CoreLocation/CoreLocation.h>
+#endif
+#ifdef ERROR_KIT_FACEBOOK
+#import <FacebookSDK/FacebookSDK.h>
+#endif
+#ifdef ERROR_KIT_STORE_KIT
+#import <StoreKit/StoreKit.h>
 #endif
 
 #if  ! __has_feature(objc_arc)
@@ -79,7 +92,7 @@
 
 #pragma mark -
 
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
 
 - (NSURLRequest *)failingURLRequest
 {
@@ -95,7 +108,7 @@
 
 #pragma mark -
 
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
 
 - (NSArray *)affectedObjects
 {
@@ -141,7 +154,7 @@
 
 #pragma mark -
 
-#if defined(__CORELOCATION__) && defined(ERROR_KIT_CORE_LOCATION)
+#ifdef ERROR_KIT_CORE_LOCATION
 
 - (CLRegion *)alternateRegion
 {
@@ -153,7 +166,7 @@
 
 #pragma mark -
 
-#ifdef FB_SESSIONSTATETERMINALBIT
+#ifdef ERROR_KIT_FACEBOOK
 
 - (NSError *)innerError
 {
@@ -215,13 +228,13 @@
 
 - (BOOL)isCancelledError
 {
-#ifdef _AFNETWORKING_
+#ifdef ERROR_KIT_AFNETWORKING
     if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
         return (self.code == NSURLErrorUserCancelledAuthentication ||
                 self.code == NSURLErrorCancelled);
     }
 #endif
-#ifdef __CORELOCATION__
+#ifdef ERROR_KIT_CORE_LOCATION
     if ([self.domain isEqualToString:kCLErrorDomain]) {
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         return (self.code == kCLErrorGeocodeCanceled);
@@ -231,12 +244,12 @@
 #endif
     }
 #endif
-#ifdef FB_SESSIONSTATETERMINALBIT
-    if ([domain isEqualToString:FacebookSDKDomain]) {
+#ifdef ERROR_KIT_FACEBOOK
+    if ([self.domain isEqualToString:FacebookSDKDomain]) {
         return (self.code == FBErrorOperationCancelled);
     }
 #endif
-#ifdef SK_EXTERN
+#ifdef ERROR_KIT_STORE_KIT
     if ([self.domain isEqualToString:SKErrorDomain]) {
         return (self.code == SKErrorPaymentCancelled);
     }
@@ -245,7 +258,7 @@
         return (self.code == NSURLErrorUserCancelledAuthentication ||
                 self.code == NSURLErrorCancelled);
     }
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
     return ((self.code == NSUserCancelledError || self.code == NSMigrationCancelledError) &&
             [self.domain isEqualToString:NSCocoaErrorDomain]);
 #else
@@ -270,7 +283,7 @@
 
 @implementation NSError (ErrorKit_CoreData_Helper)
 
-#ifdef _COREDATADEFINES_H
+#ifdef ERROR_KIT_CORE_DATA
 
 - (NSError *)errorByCombiningWithError:(NSError *)errorOrNil
 {

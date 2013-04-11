@@ -22,10 +22,6 @@
 
 #import "MRErrorBuilder.h"
 
-#ifndef FB_SESSIONSTATETERMINALBIT
-#warning This extension requires the Facebook SDK framework.
-#endif
-
 
 /**
  Adds accessors for FBError `userInfo` values.
