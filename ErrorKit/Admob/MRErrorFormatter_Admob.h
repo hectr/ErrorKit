@@ -24,7 +24,7 @@
 /**
  Adds methods for *stringizing* `kGADErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the Admob library. Add a `GADBannerView.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Admob library. Add a `GADBannerView.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_Admob)
 

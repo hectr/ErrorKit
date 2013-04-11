@@ -26,7 +26,7 @@
 /**
  Adds methods for *stringizing* `FacebookSDKDomain` error codes.
  
- @discussion **Warning:** This extension requires the Facebook SDK library. Add a `FacebookSDK.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Facebook SDK library. Add a `FacebookSDK.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_FacebookSDK)
 

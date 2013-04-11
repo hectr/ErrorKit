@@ -26,7 +26,7 @@
 /**
  Adds methods for *stringizing* `kCLErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_CoreLocation)
 

@@ -26,7 +26,7 @@
 /**
  Instances of `MRAlertRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: and attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block.
  
- @discussion This attempter conforms to `UIAlertViewDelegate` and `UIActionSheetDelegate` protocols. The index of the button index clicked is passed as parameter to the delegate block.
+ This attempter conforms to `UIAlertViewDelegate` and `UIActionSheetDelegate` protocols. The index of the button index clicked is passed as parameter to the delegate block.
 */
 @interface MRAlertRecoveryAttempter : MRRecoveryAttempter <UIAlertViewDelegate, UIActionSheetDelegate>
 
@@ -45,7 +45,7 @@
 /**
  Associates the given object with the receiver.
 
- @discussion The association grants that the attempter will not be deallocated until the associated object is deallocated itself.
+ The association grants that the attempter will not be deallocated until the associated object is deallocated itself.
  
  If an attempter has not been associated with any object, it will be automatically associated to the alert / action sheet that is about to be displayed when `willPresentAlertView:` or `willPresentActionSheet:` are received.
  */

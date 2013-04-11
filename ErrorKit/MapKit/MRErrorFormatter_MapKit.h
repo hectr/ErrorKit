@@ -26,7 +26,7 @@
 /**
  Adds methods for *stringizing* `MKErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the Store Kit framework. Add a `MapKitKit/MapKit.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Store Kit framework. Add a `MapKitKit/MapKit.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_MapKit)
 

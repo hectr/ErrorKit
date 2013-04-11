@@ -24,7 +24,7 @@
 /**
  Adds methods for *stringizing* `TKErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the TransitionKit library. Add a `TransitionKit.h` import to the header prefix of the project.
+ **Warning:** This extension requires the TransitionKit library. Add a `TransitionKit.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_TransitionKit)
 

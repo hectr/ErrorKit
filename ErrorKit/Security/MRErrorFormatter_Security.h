@@ -24,7 +24,7 @@
 /**
  Adds methods for *stringizing* the most common result codes returned by Keychain Services.
  
- @discussion **Warning:** This extension requires the Security framework. Add a `Security/Security.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Security framework. Add a `Security/Security.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_Security)
 

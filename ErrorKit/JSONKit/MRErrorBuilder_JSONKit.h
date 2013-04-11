@@ -26,7 +26,7 @@
 /**
  Adds accessors for `@"JKAtIndexKey"` and `@"JKLineNumberKey"` user info values.
  
- @discussion **Warning:** This extension requires the JSONKit library. Add an `JSONKit.h` import to the header prefix of the project.
+ **Warning:** This extension requires the JSONKit library. Add an `JSONKit.h` import to the header prefix of the project.
  */
 @interface MRErrorBuilder (ErrorKit_JSONKit)
 

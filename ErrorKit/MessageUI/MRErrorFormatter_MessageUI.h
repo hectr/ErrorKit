@@ -26,7 +26,7 @@
 /**
  Adds methods for *stringizing* `MFMailComposeErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the MessageUI framework.
+ **Warning:** This extension requires the MessageUI framework.
  */
 @interface MRErrorFormatter (ErrorKit_MessageUI)
 

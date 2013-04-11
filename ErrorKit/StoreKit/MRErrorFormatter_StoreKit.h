@@ -26,7 +26,7 @@
 /**
  Adds methods for *stringizing* `SKErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the Store Kit framework. Add a `StoreKit/StoreKit.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Store Kit framework. Add a `StoreKit/StoreKit.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_StoreKit)
 

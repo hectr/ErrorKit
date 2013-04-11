@@ -31,7 +31,7 @@
 /**
  Returns a string representation of the given HTTP status code.
  
- @discussion This method is a wrapper for `[NSHTTPURLResponse localizedStringForStatusCode:statusCode]`.
+ This method is a wrapper for `[NSHTTPURLResponse localizedStringForStatusCode:statusCode]`.
  */
 + (NSString *)stringWithHTTPCode:(NSInteger)statusCode;
 

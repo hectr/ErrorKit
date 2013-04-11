@@ -27,7 +27,7 @@
 /**
  Adds methods for *stringizing* `ADErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the iAD framework.
+ **Warning:** This extension requires the iAD framework.
  */
 @interface MRErrorFormatter (ErrorKit_iAD)
 

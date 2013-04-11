@@ -26,7 +26,7 @@
 /**
  Adds methods for *stringizing* `ACErrorDomain` error codes.
  
- @discussion **Warning:** This extension requires the Accounts framework. Add a `Accounts/Accounts.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Accounts framework. Add a `Accounts/Accounts.h` import to the header prefix of the project.
  */
 @interface MRErrorFormatter (ErrorKit_Accounts)
 

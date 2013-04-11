@@ -35,14 +35,14 @@
 /**
  Returns a string that represents the given error.
  
- @discussion If `shortenStrings` is set you can expect the string to be shorter than the one returned by [NSError description].
+ If `shortenStrings` is set you can expect the string to be shorter than the one returned by [NSError description].
  */
 - (NSString *)debugStringFromError:(NSError *)error;
 
 /**
  Returns a string that contains the key-value pairs of the given dictionary.
 
- @discussion If `shortenStrings` is not set, `NSLocalizedDescriptionKey` is the first pair of the returned string, otherwise it is not included.
+ If `shortenStrings` is not set, `NSLocalizedDescriptionKey` is the first pair of the returned string, otherwise it is not included.
  */
 - (NSString *)stringWithErrorDetail:(NSDictionary *)userInfo;
 
@@ -54,7 +54,7 @@
 /**
  Returns a localized string representation for the given domain and error code combination.
 
- @discussion This method may return `nil` if the given domain is not known.
+ This method may return `nil` if the given domain is not known.
  */
 + (NSString *)stringWithDomain:(NSString *)domain code:(NSInteger)errorCode;
 
@@ -64,14 +64,14 @@
 /**
  Returns a suitable title for presenting a given error.
 
- @discussion Use this method in convination with `stringForMessageFromError:`.
+ Use this method in convination with `stringForMessageFromError:`.
  */
 + (NSString *)stringForTitleFromError:(NSError *)error;
 
 /**
  Returns a suitable message for presenting a given error.
  
- @discussion Use this method in convination with `stringForTitleFromError:`.
+ Use this method in convination with `stringForTitleFromError:`.
  */
 + (NSString *)stringForMessageFromError:(NSError *)error;
 
