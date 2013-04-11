@@ -26,10 +26,7 @@
 #import "NSError+ErrorKit.h"
 
 #import "MRErrorBuilder.h"
-
 #import "MRErrorFormatter.h"
-#import "MRErrorFormatter_HTTP.h"
-
 #import "MRBlockRecoveryAttempter.h"
 
 #ifdef UIKIT_STATIC_INLINE
@@ -51,6 +48,10 @@
 #ifdef ERROR_KIT_CORE_LOCATION
 #import "NSError_CoreLocation.h"
 #import "MRErrorBuilder_CoreLocation.h"
+#endif
+
+#ifdef ERROR_KIT_HTTP
+#import "MRErrorFormatter_HTTP.h"
 #endif
 
 #ifdef ERROR_KIT_JSON_KIT
