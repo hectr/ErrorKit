@@ -32,7 +32,7 @@
 #import "NSError_CoreData.h"
 #endif
 #ifdef ERROR_KIT_CORE_LOCATION
-#import <CoreLocation/CLError.h>
+#import <CoreLocation/CoreLocation.h>
 #import "NSError_CoreLocation.h"
 #endif
 #ifdef ERROR_KIT_FACEBOOK

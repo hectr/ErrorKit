@@ -25,7 +25,7 @@
 
 #warning NSError (ErrorKit_CoreLocation) is unsupported!
 
-@class CLRegion
+@class CLRegion;
 
 /**
  Adds getters for Core Location's error `userInfo` values.
