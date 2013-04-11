@@ -22,10 +22,6 @@
 
 #import "MRErrorBuilder.h"
 
-#ifndef _COREDATADEFINES_H
-#warning This extension requires the Core Data framework.
-#endif
-
 
 /**
  Adds accessors for Core Data's error `userInfo` values.

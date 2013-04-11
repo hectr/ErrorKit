@@ -22,10 +22,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef __CORELOCATION__
-#warning This extension requires the Core Location framework.
-#endif
-
 
 /**
  Adds methods for *stringizing* `kCLErrorDomain` error codes.

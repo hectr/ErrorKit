@@ -22,10 +22,6 @@
 
 #import "NSError+ErrorKit.h"
 
-#ifndef FB_SESSIONSTATETERMINALBIT
-#warning This extension requires the Facebook SDK framework.
-#endif
-
 
 /**
  Adds getters for FBError `userInfo` values.

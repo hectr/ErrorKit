@@ -22,10 +22,6 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef ACCOUNTS_EXTERN
-#warning This extension requires the Accounts framework.
-#endif
-
 
 /**
  Adds methods for *stringizing* `ACErrorDomain` error codes.

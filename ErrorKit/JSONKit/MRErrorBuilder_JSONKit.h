@@ -20,12 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 #import "MRErrorBuilder.h"
-
-#ifndef _JSONKIT_H_
-#warning This extension requires the JSONKit library.
-#endif
 
 
 /**

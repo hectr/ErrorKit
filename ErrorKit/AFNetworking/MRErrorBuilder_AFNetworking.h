@@ -22,10 +22,6 @@
 
 #import "MRErrorBuilder.h"
 
-#ifndef _AFNETWORKING_
-#warning This extension requires the AFNetworking library.
-#endif
-
 
 /**
  Adds accessors for `AFNetworkingOperationFailingURLRequestErrorKey` and `AFNetworkingOperationFailingURLResponseErrorKey` user info values.
