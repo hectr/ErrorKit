@@ -52,7 +52,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 @implementation MRErrorBuilder
 
-+ (id)builderWithError:(NSError *)error
++ (instancetype)builderWithError:(NSError *)error
 {
     if (error == nil) {
         return nil;
@@ -100,7 +100,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     return builder;
 }
 
-+ (id)builderWithDomain:(NSString *)domain code:(NSInteger)code
++ (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code
 {
     MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
     builder.localizedDescription = ([MRErrorFormatter stringWithDomain:domain code:code]
@@ -108,7 +108,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     return builder;
 }
 
-+ (id)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription
++ (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription
 {
     MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
     builder.localizedDescription = localizedDescription;
