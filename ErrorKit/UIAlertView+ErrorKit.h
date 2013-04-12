@@ -37,8 +37,8 @@
  @param error The error used to initialize the alert.
  @return Newly initialized alert view prepared for presenting error data.
  */
-+ (UIAlertView *)alertWithTitle:(NSString *)titleOrNil
-                          error:(NSError *)error;
++ (instancetype)alertWithTitle:(NSString *)titleOrNil
+                         error:(NSError *)error;
 
 /**
  Convenience method for initializing an alert view with data from an error object.
@@ -50,10 +50,10 @@
  @param contextInfo Arbitrary data to be passed to delegate in didRecoverSelector.
  @return Newly initialized alert view prepared for presenting error data.
  */
-+ (UIAlertView *)alertWithTitle:(NSString *)titleOrNil
-                          error:(NSError *)error
-                       delegate:(id)delegate
-             didRecoverSelector:(SEL)selector
-                    contextInfo:(void *)context;
++ (instancetype)alertWithTitle:(NSString *)titleOrNil
+                         error:(NSError *)error
+                      delegate:(id)delegate
+            didRecoverSelector:(SEL)selector
+                   contextInfo:(void *)context;
 
 @end

@@ -148,13 +148,13 @@ static char kMRAlertViewDelegateObjectKey;
 
 @implementation UIAlertView (ErrorKit_Helper)
 
-+ (UIAlertView *)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error
++ (instancetype)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error
 {
     UIAlertView *alert = [self alertWithTitle:titleOrNil error:error delegate:nil didRecoverSelector:0x00 contextInfo:0x00];
     return alert;
 }
 
-+ (UIAlertView *)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error delegate:(id)recoveryDelegate didRecoverSelector:(SEL)selector contextInfo:(void *)context
++ (instancetype)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error delegate:(id)recoveryDelegate didRecoverSelector:(SEL)selector contextInfo:(void *)context
 {
     // Compose texts
     NSString *alertTitle;

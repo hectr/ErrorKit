@@ -58,6 +58,8 @@
 
 @implementation MRErrorFormatter (ErrorCode)
 
+#pragma mark - Cocoa
+
 + (NSString *)debugStringWithCocoaCode:(NSInteger)code
 {
     switch (code) {
@@ -415,6 +417,8 @@
     return MRErrorKitString(@"Unknown Error", nil);
 }
 
+#pragma mark - URL
+
 + (NSString *)debugStringWithURLCode:(NSInteger)code
 {
     switch (code) {
@@ -604,6 +608,8 @@
     }
     return MRErrorKitString(@"URL Error", nil);
 }
+
+#pragma mark - XML Parser
 
 + (NSString *)debugStringWithXMLParserCode:(NSInteger)code
 {
@@ -991,7 +997,7 @@
     return MRErrorKitString(@"XML Error", nil);
 }
 
-#pragma mark -
+#pragma mark - Accounts
 
 #ifdef ERROR_KIT_ACCOUNTS
 
@@ -1043,7 +1049,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - AdMob
 
 #ifdef ERROR_KIT_ADMOB
 
@@ -1106,7 +1112,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - CoreLocation
 
 #ifdef ERROR_KIT_CORE_LOCATION
 
@@ -1194,7 +1200,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - Facebook
 
 #ifdef ERROR_KIT_FACEBOOK
 
@@ -1246,14 +1252,14 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - HTTP
 
 + (NSString *)stringWithHTTPCode:(NSInteger)statusCode
 {
     return [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
 }
 
-#pragma mark -
+#pragma mark - iAD
 
 #ifdef ERROR_KIT_IAD
 
@@ -1309,7 +1315,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - JSONKit
 
 + (NSString *)debugStringWithJSONKitCode:(NSInteger)code
 {
@@ -1321,7 +1327,7 @@
     return MRErrorKitString(@"JSON Error", nil);
 }
 
-#pragma mark -
+#pragma mark - MapKit
 
 #ifdef ERROR_KIT_MAP_KIT
 
@@ -1357,7 +1363,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - MessageUI
 
 #ifdef ERROR_KIT_MESSAGE_UI
 
@@ -1441,7 +1447,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - Security
 
 #ifdef ERROR_KIT_SECURITY
 
@@ -1613,7 +1619,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - StoreKit
 
 #ifdef ERROR_KIT_STORE_KIT
 
@@ -1661,7 +1667,7 @@
 
 #endif
 
-#pragma mark -
+#pragma mark - TransitionKit
 
 #ifdef ERROR_KIT_TRANSITION_KIT
 
