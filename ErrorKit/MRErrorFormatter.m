@@ -335,5 +335,15 @@
 
 NSString *MRErrorKitString(NSString *key, NSString *comment)
 {
-    return NSLocalizedStringFromTable(key, @"ErrorKit", comment);
+    static NSBundle *bundle = nil;
+    static NSString *table = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"ErrorKit" ofType:@"bundle"];
+        bundle = ([NSBundle bundleWithPath:path] ?: [NSBundle mainBundle]);
+        if ([bundle pathForResource:@"ErrorKit" ofType:@"strings"]) {
+            table = @"ErrorKit";
+        }
+    });
+    return [bundle localizedStringForKey:key value:key table:table];
 }

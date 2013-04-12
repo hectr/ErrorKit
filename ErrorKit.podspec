@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Core' do |c|
     c.source_files = 'ErrorKit'
+    c.resources  = 'ErrorKit/ErrorKit.bundle'
     c.prefix_header_contents = '#define ERROR_KIT 1'
   end
   
