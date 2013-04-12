@@ -45,6 +45,8 @@
 
 @implementation NSError (ErrorKit)
 
+#pragma mark - Common
+
 - (NSString *)debugDescription
 {
     return [self.userInfo objectForKey:@"NSDebugDescription"];
@@ -90,7 +92,8 @@
     return [self.userInfo objectForKey:NSURLErrorKey];
 }
 
-#pragma mark -
+
+#pragma mark - AFNetworking
 
 #ifdef ERROR_KIT_AFNETWORKING
 
@@ -106,7 +109,8 @@
 
 #endif
 
-#pragma mark -
+
+#pragma mark - CoreData
 
 #ifdef ERROR_KIT_CORE_DATA
 
@@ -152,7 +156,8 @@
 
 #endif
 
-#pragma mark -
+
+#pragma mark - CoreLocation
 
 #ifdef ERROR_KIT_CORE_LOCATION
 
@@ -164,7 +169,8 @@
 
 #endif
 
-#pragma mark -
+
+#pragma mark - Facebook
 
 #ifdef ERROR_KIT_FACEBOOK
 
@@ -205,7 +211,8 @@
 
 #endif
 
-#pragma mark -
+
+#pragma mark - JSONKit
 
 - (unsigned long)atIndex
 {
