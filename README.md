@@ -35,15 +35,20 @@ Examples
         if (!error.isCancelledError) {
 	        [[UIAlertView alertWithTitle:nil error:error] show];
 	    }
+        // or you can rely on responder chain and do:
+        // [self presentError:error];
 
 **Attempt to recover from error**
 
         if (error.code == NSURLErrorNotConnectedToInternet) {
 	        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
-	        builder.recoveryAttempter = _attempter;
+	        builder.recoveryAttempter =
+	            [[MRBlockRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
+                    [[HTTPClient sharedClient] sendRequest];
+                }];
 	        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection.", nil);
 	        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
-	        [[UIAlertView alertWithTitle:nil error:builder.error] show];
+	        [self presentError:error];
 	    }
 
 ***Stringize* error codes**
