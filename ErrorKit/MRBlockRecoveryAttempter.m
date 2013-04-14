@@ -39,26 +39,17 @@
     return self;
 }
 
-#pragma mark - MRRecoveryAttempter
-
-- (void)invokeRecoverSelector:(SEL)selector withDelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo
-{
-    if (selector && delegate) {
-        [super invokeRecoverSelector:selector
-                        withDelegate:delegate
-                             success:success
-                         contextInfo:contextInfo];
-    }
-}
-
 #pragma mark - NSErrorRecoveryAttempting
 
 - (void)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex delegate:(id)delegate didRecoverSelector:(SEL)didRecoverSelector contextInfo:(void *)contextInfo
 {
-    [self invokeRecoverSelector:didRecoverSelector
-                   withDelegate:delegate
-                        success:self.recoveryHandler(error, recoveryOptionIndex)
-                    contextInfo:contextInfo];
+    BOOL success = self.recoveryHandler(error, recoveryOptionIndex);
+    if (didRecoverSelector && delegate) {
+        [self invokeRecoverSelector:didRecoverSelector
+                       withDelegate:delegate
+                            success:success
+                        contextInfo:contextInfo];
+    }
 }
 
 - (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex

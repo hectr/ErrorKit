@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRRecoveryAttempter.h"
+#import "MRAbstractRecoveryAttempter.h"
 #import <UIKit/UIKit.h>
 
 /**
@@ -28,7 +28,7 @@
  
  This attempter conforms to `UIAlertViewDelegate` and `UIActionSheetDelegate` protocols. The index of the button index clicked is passed as parameter to the delegate block.
 */
-@interface MRAlertRecoveryAttempter : MRRecoveryAttempter <UIAlertViewDelegate, UIActionSheetDelegate>
+@interface MRAlertRecoveryAttempter : MRAbstractRecoveryAttempter <UIAlertViewDelegate, UIActionSheetDelegate>
 
 /// Recovery handler block.
 @property (nonatomic, copy) BOOL (^recoveryHandler)(NSError *error, NSUInteger recoveryOption, BOOL *finished);

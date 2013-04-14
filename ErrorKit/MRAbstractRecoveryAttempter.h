@@ -1,4 +1,4 @@
-// MRRecoveryAttempter.m
+// MRAbstractRecoveryAttempter.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,23 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRRecoveryAttempter.h"
-
-#if  ! __has_feature(objc_arc)
-#error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
-#endif
+#import <Foundation/Foundation.h>
 
 
-@implementation MRRecoveryAttempter
+/**
+ `MRAbstractRecoveryAttempter` is used as base class for implementing various recovery attempters.
+*/
+@interface MRAbstractRecoveryAttempter : NSObject
 
-- (void)invokeRecoverSelector:(SEL)selector withDelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo
-{
-    NSMethodSignature *signature = [delegate methodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    [invocation setSelector:selector];
-    [invocation setArgument:(void *)&success atIndex:2];
-    [invocation setArgument:&contextInfo atIndex:3];
-    [invocation invokeWithTarget:delegate];
-}
+/// Helper method used by subclasses for invoking didRecoverSelector.
+- (void)invokeRecoverSelector:(SEL)selector withDelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo;
 
 @end

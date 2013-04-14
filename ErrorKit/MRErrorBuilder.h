@@ -99,33 +99,61 @@
 /**
  Creates and initializes an `MRErrorBuilder` object with data from another object.
  
- If no error parameter is passed, no buider is created and the return is nil.
-*/
+ If no error parameter is passed, no buider is created and the return is `nil`.
+ 
+ @param error Source error object or `nil`.
+ @return Builder object initialized with all data gathered from the given error.
+ */
 + (instancetype)builderWithError:(NSError *)error;
 
 /**
  Creates and initializes an `MRErrorBuilder` object for a given domain and code.
  
  The builder is given a predefined localized description, according its domain and code; but this string may not be adequate for being presented to the user.
+ 
+ @param domain The error domain.
+ @param code The error code for the error.
+ @return Builder object initialized for domain with the specified error code and some predefined localized description.
  */
 + (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code;
 
-/// Creates and initializes an `MRErrorBuilder` object for a given domain and code with a given localized description.
+/**
+ Creates and initializes an `MRErrorBuilder` object for a given domain and code with a given localized description.
+ 
+ @param domain The error domain.
+ @param code The error code for the error.
+ param userInfo The userInfo dictionary for the builder. `userInfo` may be `nil`.
+ @return Builder object initialized for domain with the specified error code and localized description.
+ */
 + (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription;
 
 /**
  Designated initializer.
  
  Returns a `MRErrorBuilder` object initialized for a given domain and code with a given userInfo dictionary.
+ 
+ @param domain The error domain.
+ @param code The error code for the error.
+ param userInfo The userInfo dictionary for the builder. `userInfo` may be `nil`.
+ @return Builder object initialized for domain with the specified error code and the dictionary of arbitrary data userInfo.
  */
 - (id)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
 
-/// Adds a given key-value pair to the user info dictionary. If given value is nil, removes the given key and its associated value from the dictionary.
+/**
+ Adds a given key-value pair to the user info dictionary. If given value is `nil`, removes the given key and its associated value from the dictionary.
+ 
+ @param value The value for key or `nil`.
+ @param key The key for value or the key to remove.
+ */
 - (void)setUserInfoValue:(id)value forKey:(NSString *)key;
 
 /// @name Creating error
 
-/// Creates and initializes an `NSError` object with the builder's domain, code and user info.
+/**
+ Creates and initializes an `NSError` object with the builder's domain, code and user info.
+ 
+ @return An `NSError` object for builder's domain and error code and userInfo dictionary.
+ */
 - (NSError *)error;
 
 @end

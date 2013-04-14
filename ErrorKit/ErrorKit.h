@@ -23,6 +23,10 @@
 #ifndef _ERRORKIT_H
 #define _ERRORKIT_H
 
+#ifndef ERROR_KIT
+#import "ErrorKitDefines.h"
+#endif
+
 #import "NSError+ErrorKit.h"
 
 #import "MRErrorBuilder.h"
