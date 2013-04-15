@@ -36,7 +36,7 @@
 #define ERROR_KIT_CORE_DATA 1
 #endif
 
-#ifdef __CORELOCATION__
+#if defined(__CORELOCATION__) && defined(ERRORKIT_UNSUPPORTED)
 #define ERROR_KIT_CORE_LOCATION 1
 #endif
 
