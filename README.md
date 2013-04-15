@@ -48,7 +48,7 @@ Examples
                 }];
 	        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection.", nil);
 	        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
-	        [self presentError:error];
+	        [self presentError:builder.error];
 	    }
 
 ***Stringize* error codes**
