@@ -28,13 +28,18 @@
  */
 @interface UIResponder (ErrorKit)
 
-/// Sends `willPresentError:` to self before forwarding the `presentError:delegate:didPresentSelector:contextInfo: message to the next object in the chain.
-- (void)presentError:(NSError *)error
+/// Sends `willPresentError:` to self before forwarding the `presentError:delegate:didPresentSelector:contextInfo:` message to the next object in the chain.
+- (BOOL)presentError:(NSError *)error
             delegate:(id)delegate
   didPresentSelector:(SEL)didPresentSelector
          contextInfo:(void *)contextInfo;
 
-/// Sends `willPresentError:` to self before forwarding the `presentError: message to the next object in the chain.
+/**
+ Sends `willPresentError:` to self before forwarding the `presentError:` message to the next object in the chain.
+
+ @param error An object containing information about an error.
+ @return `YES` if the error has been presented, `NO` otherwise.
+ */
 - (BOOL)presentError:(NSError *)error;
 
 /// Subclasses can implement this method to inspect the passed-in `NSError` object and return a customized object.
@@ -49,12 +54,17 @@
 @interface UIApplication (ErrorKit)
 
 /// Sends `application:willPresentError:` to app delegate before displaying the error.
-- (void)presentError:(NSError *)error
+- (BOOL)presentError:(NSError *)error
             delegate:(id)delegate
   didPresentSelector:(SEL)didPresentSelector
          contextInfo:(void *)contextInfo;
 
-/// Sends `application:willPresentError:` to app delegate before displaying the error.
+/**
+ Sends `application:willPresentError:` to app delegate before displaying the error.
+  
+ @param error An object containing information about an error.
+ @return `YES` if the error has been presented, `NO` otherwise.
+*/
 - (BOOL)presentError:(NSError *)error;
 
 @end

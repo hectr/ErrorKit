@@ -30,18 +30,19 @@
 
 @implementation UIResponder (ErrorKit)
 
-- (void)presentError:(NSError *)error
+- (BOOL)presentError:(NSError *)error
             delegate:(id)delegate
   didPresentSelector:(SEL)didPresentSelector
          contextInfo:(void *)contextInfo
 {
     NSError *customizedError = [self willPresentError:error];
     if (customizedError && self.nextResponder) {
-        [self.nextResponder presentError:customizedError
+        return [self.nextResponder presentError:customizedError
                                 delegate:delegate
                       didPresentSelector:didPresentSelector
                              contextInfo:contextInfo];
     }
+    return NO;
 }
 
 - (BOOL)presentError:(NSError *)error
@@ -76,31 +77,9 @@
 #pragma mark -
 
 
-static CFRunLoopRef __runLoop = nil;
-static CFRunLoopSourceRef __runLoopSource = nil;
-static UIAlertView *__errorAlertView = nil;
-static BOOL __didRecover = NO;
-
-
 @implementation UIApplication (ErrorKit)
 
-- (void)mr_didPresentErrorWithRecovery:(BOOL)didRecover contextInfo:(void *)contextInfo;
-{
-    __didRecover = didRecover;
-    __errorAlertView = nil;
-    if (__runLoopSource) {
-        CFRunLoopSourceSignal(__runLoopSource);
-        CFRelease(__runLoopSource);
-        __runLoopSource = nil;
-    }
-    if (__runLoop) {
-        CFRunLoopWakeUp(__runLoop);
-        CFRelease(__runLoop);
-        __runLoop = nil;
-    }
-}
-
-- (void)presentError:(NSError *)error
+- (BOOL)presentError:(NSError *)error
             delegate:(id)delegate
   didPresentSelector:(SEL)didPresentSelector
          contextInfo:(void *)contextInfo
@@ -112,32 +91,17 @@ static BOOL __didRecover = NO;
                             delegate:delegate
                   didRecoverSelector:didPresentSelector
                          contextInfo:contextInfo] show];
+        return YES;
     }
+    return NO;
 }
 
 - (BOOL)presentError:(NSError *)error
 {
-    NSAssert(__errorAlertView == nil, nil);
-    if (__errorAlertView) {
-        return NO;
-    }
     NSError *customizedError = [self willPresentError:error];
-    if (customizedError && __errorAlertView == nil) {
-        __errorAlertView = [UIAlertView alertWithTitle:nil
-                                                 error:customizedError
-                                              delegate:self
-                                    didRecoverSelector:@selector(mr_didPresentErrorWithRecovery:contextInfo:)
-                                           contextInfo:0x00];
-        [__errorAlertView show];
-        CFRunLoopSourceContext context = {0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
-        __runLoopSource = CFRunLoopSourceCreate(kCFAllocatorDefault, 0, &context);
-        __runLoop = CFRunLoopGetCurrent();
-        CFRetain(__runLoop);
-        CFRunLoopAddSource(__runLoop, __runLoopSource, kCFRunLoopCommonModes );
-        while (__errorAlertView) {
-            CFRunLoopRunInMode(kCFRunLoopDefaultMode, 3, YES);
-        }
-        return __didRecover;
+    if (customizedError) {
+        [[UIAlertView alertWithTitle:nil error:customizedError] show];
+        return YES;
     }
     return NO;
 }
