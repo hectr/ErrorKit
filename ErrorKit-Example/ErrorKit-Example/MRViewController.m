@@ -99,7 +99,7 @@
 
 - (NSError *)willPresentError:(NSError *)error
 {
-    if (error.code == NSURLErrorCannotFindHost) {
+    if (error.code == NSURLErrorCannotFindHost && [error.domain isEqualToString:NSURLErrorDomain]) {
         MRAlertRecoveryAttempter *attempter = [[MRAlertRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption, BOOL *finished) {
             if (recoveryOption == 0) {
                 if (error.code == NSURLErrorCannotFindHost) {
@@ -132,7 +132,7 @@
         MRBlockRecoveryAttempter *attempter = [[MRBlockRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
             if (recoveryOption == 0) {
                 NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
-                if (error.code == NSURLErrorServerCertificateUntrusted) {
+                if (error.code == NSURLErrorServerCertificateUntrusted && [error.domain isEqualToString:NSURLErrorDomain]) {
                     [self.trustedDomains addObject:failingURL.host];
                 }
                 [self connectAction:nil];
@@ -140,12 +140,12 @@
             }
             return NO;
         }];
-        if (error.code == NSURLErrorServerCertificateUntrusted) {
+        if (error.code == NSURLErrorServerCertificateUntrusted && [error.domain isEqualToString:NSURLErrorDomain]) {
             MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
             builder.recoveryAttempter = attempter;
             builder.localizedRecoveryOptions = @[ MRErrorKitString(@"YES", nil) ];
             return builder.error;
-        } else if (error.code == NSURLErrorNotConnectedToInternet) {
+        } else if (error.code == NSURLErrorNotConnectedToInternet && [error.domain isEqualToString:NSURLErrorDomain]) {
             MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
             builder.recoveryAttempter = attempter;
             builder.localizedRecoverySuggestion = MRErrorKitString(@"Please check your internet connection and try again.", nil);

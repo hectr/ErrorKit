@@ -1,4 +1,4 @@
-// NSError_CoreLocation.h
+// NSError_AVFoundation.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,23 +20,37 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSError+ErrorKit.h"
+#import <Foundation/Foundation.h>
 
-
-#warning NSError (ErrorKit_CoreLocation) is unsupported!
-
-@class CLRegion;
 
 /**
- Adds getters for Core Location's error `userInfo` values.
+ Adds getters for AVError `userInfo` values.
  
- @warning This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
+ @warning This extension requires the AVFoundation framework. Add a `AVFoundation/AVFoundation.h` import to the header prefix of the project.
  */
-@interface NSError (ErrorKit_CoreLocation)
+@interface NSError (ErrorKit_AVFoundation)
 
-/// @name CoreLocation userInfo values
+/// @name AVFoundationErrorDomain userInfo values
 
-/// Getter for `kCLErrorUserInfoAlternateRegionKey` user info value.
-@property (nonatomic, readonly) CLRegion *alternateRegion;
+/// Getter for `AVErrorDeviceKey` user info value.
+@property (nonatomic, readonly) NSString *deviceName;
+
+/// Getter for `AVErrorTimeKey` user info value.
+@property (nonatomic, readonly) CMTime time;
+
+/// Getter for `AVErrorFileSizeKey` user info value.
+@property (nonatomic, readonly) NSNumber *fileSize;
+
+/// Getter for `AVErrorPIDKey` user info value.
+@property (nonatomic, readonly) NSNumber *processID;
+
+/// Getter for `AVErrorRecordingSuccessfullyFinishedKey` user info value.
+@property (nonatomic, readonly) BOOL recordingSuccessfullyFinished;
+
+/// Getter for `AVErrorMediaTypeKey` user info value.
+@property (nonatomic, readonly) NSString *mediaType;
+
+/// Getter for `AVErrorMediaSubTypeKey` user info value.
+@property (nonatomic, readonly) NSNumber *mediaSubType;
 
 @end

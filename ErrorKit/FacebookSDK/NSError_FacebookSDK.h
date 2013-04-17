@@ -30,6 +30,8 @@
  */
 @interface NSError (ErrorKit_FacebookSDK)
 
+/// @name FacebookSDK error userInfo values
+
 /// Getter for `FBErrorInnerErrorKey` user info value.
 @property (nonatomic, readonly) NSError *innerError;
 

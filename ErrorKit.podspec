@@ -28,6 +28,12 @@ Pod::Spec.new do |s|
     af.prefix_header_contents = '#define ERROR_KIT_AFNETWORKING 1'
   end
   
+  s.subspec 'AVFoundation' do |av|
+    av.source_files = 'ErrorKit/AVFoundation'
+    av.ios.frameworks = 'AVFoundation'
+    av.prefix_header_contents = '#define ERROR_KIT_AVFOUNDATION 1'
+  end
+
   s.subspec 'Accounts' do |ac|
     ac.source_files = 'ErrorKit/Accounts'
     ac.ios.frameworks = 'Accounts'

@@ -24,6 +24,9 @@
 #ifdef ERROR_KIT_AFNETWORKING
 #import <AFNetworking/AFURLConnectionOperation.h>
 #endif
+#ifdef ERROR_KIT_AVFOUNDATION
+#import <AVFoundation/AVError.h>
+#endif
 #ifdef ERROR_KIT_CORE_DATA
 #import <CoreData/CoreDataErrors.h>
 #import "MRErrorBuilder_CoreData.h"
@@ -92,7 +95,6 @@
     return [self.userInfo objectForKey:NSURLErrorKey];
 }
 
-
 #pragma mark - AFNetworking
 
 #ifdef ERROR_KIT_AFNETWORKING
@@ -109,6 +111,50 @@
 
 #endif
 
+#pragma mark - AVFoundation
+
+#ifdef ERROR_KIT_AVFOUNDATION
+
+- (NSString *)deviceName
+{
+    return [self.userInfo objectForKey:AVErrorDeviceKey];
+}
+
+- (CMTime)time
+{
+    CMTime time;
+    NSValue *value = [self.userInfo objectForKey:AVErrorTimeKey];
+    [value getValue:&time];
+    return time;
+}
+
+- (NSNumber *)fileSize
+{
+    return [self.userInfo objectForKey:AVErrorFileSizeKey];
+}
+
+- (NSNumber *)processID
+{
+    return [self.userInfo objectForKey:AVErrorPIDKey];
+}
+
+- (BOOL)recordingSuccessfullyFinished
+{
+    NSNumber *value = [self.userInfo objectForKey:AVErrorRecordingSuccessfullyFinishedKey];
+    return value.boolValue;
+}
+
+- (NSString *)mediaType
+{
+    return [self.userInfo objectForKey:AVErrorMediaTypeKey];
+}
+
+- (NSNumber *)mediaSubType
+{
+    return [self.userInfo objectForKey:AVErrorMediaSubTypeKey];
+}
+
+#endif
 
 #pragma mark - CoreData
 
@@ -156,20 +202,6 @@
 
 #endif
 
-
-#pragma mark - CoreLocation
-
-#ifdef ERROR_KIT_CORE_LOCATION
-
-- (CLRegion *)alternateRegion
-{
-    // FIXME
-    return [self.userInfo objectForKey:kCLErrorUserInfoAlternateRegionKey];
-}
-
-#endif
-
-
 #pragma mark - Facebook
 
 #ifdef ERROR_KIT_FACEBOOK
@@ -210,7 +242,6 @@
 }
 
 #endif
-
 
 #pragma mark - JSONKit
 

@@ -26,29 +26,31 @@
 /**
  Adds accessors for FBError `userInfo` values.
  
- @warning This extension requires the Facebook SDK framework. Add a `FacebookSDK.h` import to the header prefix of the project.
+ **Warning:** This extension requires the Facebook SDK framework. Add a `FacebookSDK.h` import to the header prefix of the project.
  */
 @interface MRErrorBuilder (ErrorKit_FacebookSDK)
 
-/// Getter for `FBErrorInnerErrorKey` user info value.
+/// @name FacebookSDK error userInfo values
+
+/// Accessors for `FBErrorInnerErrorKey` user info value.
 @property (nonatomic, strong) NSError *innerError;
 
-/// Getter for `FBErrorParsedJSONResponseKey` user info value.
+/// Accessors for `FBErrorParsedJSONResponseKey` user info value.
 @property (nonatomic, strong) id parsedJSONResponse;
 
-/// Getter for `FBErrorHTTPStatusCodeKey` user info value.
-@property (nonatomic, copy) NSInteger HTTPStatusCode;
+/// Accessors for `FBErrorHTTPStatusCodeKey` user info value.
+@property (nonatomic, assign) NSInteger HTTPStatusCode;
 
-/// Getter for `FBErrorSessionKey` user info value.
+/// Accessors for `FBErrorSessionKey` user info value.
 @property (nonatomic, strong) FBSession *session;
 
-/// Getter for `FBErrorLoginFailedReason` user info value.
+/// Accessors for `FBErrorLoginFailedReason` user info value.
 @property (nonatomic, copy) NSString *loginFailedReason;
 
-/// Getter for `FBErrorNativeDialogReasonKey` user info value.
+/// Accessors for `FBErrorNativeDialogReasonKey` user info value.
 @property (nonatomic, copy) NSString *nativeDialogReason;
 
-/// Getter for `FBErrorInsightsReasonKey` user info value.
+/// Accessors for `FBErrorInsightsReasonKey` user info value.
 @property (nonatomic, copy) NSString *insightsReason;
 
 @end

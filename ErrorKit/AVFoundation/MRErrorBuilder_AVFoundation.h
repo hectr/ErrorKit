@@ -1,4 +1,4 @@
-// MRErrorBuilder_CoreLocation.h
+// MRErrorBuilder_AVFoundation.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -23,18 +23,34 @@
 #import "MRErrorBuilder.h"
 
 
-@class CLRegion;
-
-#warning MRErrorBuilder (ErrorKit_CoreLocation) is unsupported!
-
 /**
- Adds accessors for `kCLErrorUserInfoAlternateRegionKey` user info value.
+ Adds accessors for AVError `userInfo` values.
  
- **Warning:** This extension requires the Core Location framework. Add a `CoreLocation/CoreLocation.h` import to the header prefix of the project.
+ **Warning:** This extension requires the AVFoundation framework. Add a `AVFoundation/AVFoundation.h` import to the header prefix of the project.
  */
-@interface MRErrorBuilder (ErrorKit_CoreLocation)
+@interface MRErrorBuilder (ErrorKit_AVFoundation)
 
-/// Accessors for `kCLErrorUserInfoAlternateRegionKey` user info value.
-@property (nonatomic, copy) CLRegion *alternateRegion;
+/// @name AVFoundationErrorDomain userInfo values
+
+/// Accessors for `AVErrorDeviceKey` user info value.
+@property (nonatomic, copy) NSString *deviceName;
+
+/// Accessors for `AVErrorTimeKey` user info value.
+@property (nonatomic, assign) CMTime time;
+
+/// Accessors for `AVErrorFileSizeKey` user info value.
+@property (nonatomic, copy) NSNumber *fileSize;
+
+/// Accessors for `AVErrorPIDKey` user info value.
+@property (nonatomic, copy) NSNumber *processID;
+
+/// Accessors for `AVErrorRecordingSuccessfullyFinishedKey` user info value.
+@property (nonatomic, assign) BOOL recordingSuccessfullyFinished;
+
+/// Accessors for `AVErrorMediaTypeKey` user info value.
+@property (nonatomic, copy) NSString *mediaType;
+
+/// Accessors for `AVErrorMediaSubTypeKey` user info value.
+@property (nonatomic, copy) NSNumber *mediaSubType;
 
 @end

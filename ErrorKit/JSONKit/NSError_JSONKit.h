@@ -28,7 +28,7 @@
  */
 @interface NSError (ErrorKit_JSONKit)
 
-/// @name CoreLocation userInfo values
+/// @name JSONKit error userInfo values
 
 /// Getter for `@"JKAtIndexKey"` user info value.
 @property (nonatomic, readonly) unsigned long atIndex;

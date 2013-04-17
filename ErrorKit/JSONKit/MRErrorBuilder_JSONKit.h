@@ -30,7 +30,7 @@
  */
 @interface MRErrorBuilder (ErrorKit_JSONKit)
 
-/// @name CoreLocation userInfo values
+/// @name JSONKit error userInfo values
 
 /// Accessors for `@"JKAtIndexKey"` user info value.
 @property (nonatomic, readonly) unsigned long atIndex;

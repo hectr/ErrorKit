@@ -32,11 +32,15 @@
 #define ERROR_KIT_AFNETWORKING 1
 #endif
 
+#ifdef AVF_EXPORT
+#define ERROR_KIT_AVFOUNDATION 1
+#endif
+
 #ifdef _COREDATADEFINES_H
 #define ERROR_KIT_CORE_DATA 1
 #endif
 
-#if defined(__CORELOCATION__) && defined(ERRORKIT_UNSUPPORTED)
+#ifdef __CORELOCATION__
 #define ERROR_KIT_CORE_LOCATION 1
 #endif
 

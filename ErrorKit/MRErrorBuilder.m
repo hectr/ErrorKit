@@ -27,6 +27,10 @@
 #import <AFNetworking/AFURLConnectionOperation.h>
 #import "NSError_AFNetworking.h"
 #endif
+#ifdef ERROR_KIT_AVFOUNDATION
+#import <AVFoundation/AVError.h>
+#import "NSError_AVFoundation.h"
+#endif
 #ifdef ERROR_KIT_CORE_DATA
 #import <CoreData/CoreDataErrors.h>
 #import "NSError_CoreData.h"
@@ -45,9 +49,6 @@
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
 #endif
-
-
-NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 
 @implementation MRErrorBuilder
@@ -80,6 +81,15 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.failingURLRequest = error.failingURLRequest;
     builder.failingURLResponse = error.failingURLResponse;
 #endif
+#ifdef ERROR_KIT_AVFOUNDATION
+    builder.deviceName = error.deviceName;
+    builder.time = error.time;
+    builder.fileSize = error.fileSize;
+    builder.processID = error.processID;
+    builder.recordingSuccessfullyFinished = error.recordingSuccessfullyFinished;
+    builder.mediaType = error.mediaType;
+    builder.mediaSubType = error.mediaSubType;
+#endif
 #ifdef ERROR_KIT_CORE_DATA
     builder.affectedObjects = error.affectedObjects;
     builder.affectedStores = error.affectedStores;
@@ -90,9 +100,6 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
     builder.validationPredicate = error.validationPredicate;
     builder.validationValue = error.validationValue;
 #endif
-#ifdef ERROR_KIT_CORE_LOCATION
-    builder.alternateRegion = error.alternateRegion;
-#endif
 #ifdef ERROR_KIT_JSON_KIT
     builder.atIndex = error.atIndex;
     builder.lineNumber = error.lineNumber;
@@ -102,7 +109,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 + (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code
 {
-    MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
+    MRErrorBuilder *builder = [[self alloc] initWithDomain:domain code:code userInfo:nil];
     builder.localizedDescription = ([MRErrorFormatter stringWithDomain:domain code:code]
                                     ?: MRErrorKitString(@"No error description provided", nil));
     return builder;
@@ -110,7 +117,7 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 + (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription
 {
-    MRErrorBuilder *builder = [[self alloc] initWithDomain:ErrorKitDomain code:code userInfo:nil];
+    MRErrorBuilder *builder = [[self alloc] initWithDomain:domain code:code userInfo:nil];
     builder.localizedDescription = localizedDescription;
     return builder;
 }
@@ -326,6 +333,85 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 
 #endif
 
+#pragma mark - AVFoundation
+
+#ifdef ERROR_KIT_AVFOUNDATION
+
+- (NSString *)deviceName
+{
+    return [self.userInfo objectForKey:AVErrorDeviceKey];
+}
+
+- (void)setDeviceName:(NSString *)deviceName
+{
+    [self setUserInfoValue:deviceName.copy forKey:AVErrorDeviceKey];
+}
+
+- (CMTime)time
+{
+    NSValue *value = [self.userInfo objectForKey:AVErrorTimeKey];
+    return value.CMTimeValue;
+}
+
+- (void)setTime:(CMTime)time
+{
+    NSValue *value = [NSValue valueWithCMTime:time];
+    [self setUserInfoValue:value forKey:AVErrorTimeKey];
+}
+
+- (NSNumber *)fileSize
+{
+    return [self.userInfo objectForKey:AVErrorFileSizeKey];
+}
+
+- (void)setFileSize:(NSNumber *)fileSize
+{
+    [self setUserInfoValue:fileSize.copy forKey:AVErrorFileSizeKey];
+}
+
+- (NSNumber *)processID
+{
+    return [self.userInfo objectForKey:AVErrorPIDKey];
+}
+
+- (void)setProcessID:(NSNumber *)processID
+{
+    [self setUserInfoValue:processID.copy forKey:AVErrorPIDKey];
+}
+
+- (BOOL)recordingSuccessfullyFinished
+{
+    NSNumber *value = [self.userInfo objectForKey:AVErrorRecordingSuccessfullyFinishedKey];
+    return value.boolValue;
+}
+
+- (void)setRecordingSuccessfullyFinished:(BOOL)recordingSuccessfullyFinished
+{
+    [self setUserInfoValue:@(recordingSuccessfullyFinished) forKey:AVErrorRecordingSuccessfullyFinishedKey];
+}
+
+- (NSString *)mediaType
+{
+    return [self.userInfo objectForKey:AVErrorMediaTypeKey];
+}
+
+- (void)setMediaType:(NSString *)mediaType
+{
+    [self setUserInfoValue:mediaType.copy forKey:AVErrorMediaTypeKey];
+}
+
+- (NSNumber *)mediaSubType
+{
+    return [self.userInfo objectForKey:AVErrorMediaSubTypeKey];
+}
+
+- (void)setMediaSubType:(NSNumber *)mediaSubType
+{
+    [self setUserInfoValue:mediaSubType.copy forKey:AVErrorMediaSubTypeKey];
+}
+
+#endif
+
 #pragma mark - CoreData
 
 #ifdef ERROR_KIT_CORE_DATA
@@ -408,24 +494,6 @@ NSString *const ErrorKitDomain = @"ErrorKitDomain";
 - (void)setValidationValue:(id)validationValue
 {
     [self setUserInfoValue:validationValue forKey:NSValidationValueErrorKey];
-}
-
-#endif
-
-#pragma mark - CoreLocation
-
-#ifdef ERROR_KIT_CORE_LOCATION
-
-- (CLRegion *)alternateRegion
-{
-    // FIXME
-    return [self.userInfo objectForKey:kCLErrorUserInfoAlternateRegionKey];
-}
-
-- (void)setAlternateRegion:(CLRegion *)alternateRegion
-{
-    // FIXME
-    [self setUserInfoValue:alternateRegion.copy forKey:kCLErrorUserInfoAlternateRegionKey];
 }
 
 #endif

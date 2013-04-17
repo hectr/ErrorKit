@@ -44,6 +44,10 @@
 #import "MRErrorBuilder_AFNetworking.h"
 #endif
 
+#ifdef ERROR_KIT_AVFOUNDATION
+#import "MRErrorBuilder_AVFoundation.h"
+#endif
+
 #ifdef ERROR_KIT_CORE_DATA
 #import "NSError_CoreData.h"
 #import "MRErrorBuilder_CoreData.h"
