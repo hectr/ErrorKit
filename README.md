@@ -28,7 +28,7 @@ Examples
     NSURLRequest *request = error.failingURLRequest;
     NSArray *errors = error.detailedErrors;
     // and so on...
-    // (supports most AFNetworking, Core Data, Facebook SDK and JSONKit keys)
+    // (supports most AFNetworking, AVFoundation, Core Data, Facebook SDK and JSONKit keys)
 
 **Present error to the user**
 
