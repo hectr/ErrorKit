@@ -34,6 +34,10 @@
 #import "NSError_AFNetworking.h"
 #import <AFNetworking/AFURLConnectionOperation.h>
 #endif
+#ifdef ERROR_KIT_AVFOUNDATION
+#import <AVFoundation/AVError.h>
+#import "MRErrorFormatter_AVFoundation.h"
+#endif
 #ifdef ERROR_KIT_CORE_LOCATION
 #import <CoreLocation/CoreLocation.h>
 #import "MRErrorFormatter_CoreLocation.h"
@@ -185,6 +189,11 @@
         return [MRErrorFormatter debugStringWithURLCode:code];
     }
 #endif
+#ifdef ERROR_KIT_AVFOUNDATION
+    else if ([domain isEqualToString:AVFoundationErrorDomain]) {
+        return [MRErrorFormatter debugStringWithAVCode:code];
+    }
+#endif
 #ifdef ERROR_KIT_CORE_LOCATION
     else if ([domain isEqualToString:kCLErrorDomain]) {
         return [MRErrorFormatter debugStringWithCoreLocationCode:code];
@@ -250,6 +259,11 @@
 #ifdef ERROR_KIT_AFNETWORKING
     else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
         return [MRErrorFormatter stringWithURLCode:code];
+    }
+#endif
+#ifdef ERROR_KIT_AVFOUNDATION
+    else if ([domain isEqualToString:AVFoundationErrorDomain]) {
+        return [MRErrorFormatter stringWithAVCode:code];
     }
 #endif
 #ifdef ERROR_KIT_CORE_LOCATION

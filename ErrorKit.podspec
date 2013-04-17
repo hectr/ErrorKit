@@ -21,18 +21,6 @@ Pod::Spec.new do |s|
     c.resources  = 'ErrorKit/ErrorKit.bundle'
     c.prefix_header_contents = '#define ERROR_KIT 1'
   end
-  
-  s.subspec 'AFNetworking' do |af|
-    af.source_files = 'ErrorKit/AFNetworking'
-    af.dependency 'AFNetworking', '1.1.0'
-    af.prefix_header_contents = '#define ERROR_KIT_AFNETWORKING 1'
-  end
-  
-  s.subspec 'AVFoundation' do |av|
-    av.source_files = 'ErrorKit/AVFoundation'
-    av.ios.frameworks = 'AVFoundation'
-    av.prefix_header_contents = '#define ERROR_KIT_AVFOUNDATION 1'
-  end
 
   s.subspec 'Accounts' do |ac|
     ac.source_files = 'ErrorKit/Accounts'
@@ -44,6 +32,18 @@ Pod::Spec.new do |s|
     ad.source_files = 'ErrorKit/AdMob'
     ad.dependency 'AdMob', '6.4.0'
     ad.prefix_header_contents = '#define ERROR_KIT_ADMOB 1'
+  end
+  
+  s.subspec 'AFNetworking' do |af|
+    af.source_files = 'ErrorKit/AFNetworking'
+    af.dependency 'AFNetworking', '1.1.0'
+    af.prefix_header_contents = '#define ERROR_KIT_AFNETWORKING 1'
+  end
+  
+  s.subspec 'AVFoundation' do |av|
+    av.source_files = 'ErrorKit/AVFoundation'
+    av.ios.frameworks = 'AVFoundation'
+    av.prefix_header_contents = '#define ERROR_KIT_AVFOUNDATION 1'
   end
   
   s.subspec 'CoreData' do |cd|

@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		8419D1F2171B539500143B54 /* ErrorKitDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ErrorKitDefines.h; path = ../../ErrorKit/ErrorKitDefines.h; sourceTree = "<group>"; };
+		84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_AVFoundation.h; path = ../../ErrorKit/AVFoundation/MRErrorFormatter_AVFoundation.h; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB843016C802F3000BF23E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DB843216C802F3000BF23E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -189,6 +190,7 @@
 				84DCF7C816EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m */,
 				84F8AEB91715FFE3001E1FD4 /* MRErrorFormatter_Accounts.h */,
 				84F8AEBA1715FFF5001E1FD4 /* MRErrorFormatter_Admob.h */,
+				84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */,
 				84F8AEBB1715FFFF001E1FD4 /* MRErrorFormatter_CoreLocation.h */,
 				84F8AEBC17160008001E1FD4 /* MRErrorFormatter_FacebookSDK.h */,
 				84F8AEBD17160019001E1FD4 /* MRErrorFormatter_HTTP.h */,
