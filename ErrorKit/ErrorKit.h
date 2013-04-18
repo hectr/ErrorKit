@@ -53,11 +53,6 @@
 #import "MRErrorBuilder_CoreData.h"
 #endif
 
-#ifdef ERROR_KIT_CORE_LOCATION
-#import "NSError_CoreLocation.h"
-#import "MRErrorBuilder_CoreLocation.h"
-#endif
-
 #ifdef ERROR_KIT_HTTP
 #import "MRErrorFormatter_HTTP.h"
 #endif
