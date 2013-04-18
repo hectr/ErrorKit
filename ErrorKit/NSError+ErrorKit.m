@@ -32,7 +32,8 @@
 #import "MRErrorBuilder_CoreData.h"
 #endif
 #ifdef ERROR_KIT_CORE_LOCATION
-#import <CoreLocation/CoreLocation.h>
+#import <CoreLocation/CLError.h>
+#import <CoreLocation/CLErrorDomain.h>
 #endif
 #ifdef ERROR_KIT_FACEBOOK
 #import <FacebookSDK/FacebookSDK.h>

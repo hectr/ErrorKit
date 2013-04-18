@@ -39,7 +39,8 @@
 #import "MRErrorFormatter_AVFoundation.h"
 #endif
 #ifdef ERROR_KIT_CORE_LOCATION
-#import <CoreLocation/CoreLocation.h>
+#import <CoreLocation/CLError.h>
+#import <CoreLocation/CLErrorDomain.h>
 #import "MRErrorFormatter_CoreLocation.h"
 #endif
 #ifdef ERROR_KIT_FACEBOOK
