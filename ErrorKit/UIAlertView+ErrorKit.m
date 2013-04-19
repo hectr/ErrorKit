@@ -37,7 +37,7 @@ static char kMRAlertViewDelegateObjectKey;
 @property (nonatomic, weak) id delegate;
 @property (nonatomic, assign) SEL selector;
 @property (nonatomic, assign) void *contextInfo;
-@property (nonatomic, strong) UIAlertView *onDismissAlert;
+@property (nonatomic, strong) UIAlertView *onWillDismissAlert;
 @end
 
 
@@ -61,13 +61,13 @@ static char kMRAlertViewDelegateObjectKey;
     if (helpIndex == buttonIndex) {
         // Show help
         MRAlertViewRecoveryDelegate *delegate = [[self.class alloc] init];
-        delegate.onDismissAlert = alertView;
-        self.onDismissAlert = [[UIAlertView alloc] initWithTitle:MRErrorKitString(@"Help", nil)
-                                                         message:self.error.helpAnchor
-                                                        delegate:delegate
-                                               cancelButtonTitle:MRErrorKitString(@"OK", nil)
-                                               otherButtonTitles:nil];
-        objc_setAssociatedObject(self.onDismissAlert, &kMRAlertViewDelegateObjectKey, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        delegate.onWillDismissAlert = alertView;
+        self.onWillDismissAlert = [[UIAlertView alloc] initWithTitle:MRErrorKitString(@"Help", nil)
+                                                             message:self.error.helpAnchor
+                                                            delegate:delegate
+                                                   cancelButtonTitle:MRErrorKitString(@"OK", nil)
+                                                   otherButtonTitles:nil];
+        objc_setAssociatedObject(self.onWillDismissAlert, &kMRAlertViewDelegateObjectKey, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     } else if (alertView.cancelButtonIndex != buttonIndex) {
         NSString *recoveryOption = [alertView buttonTitleAtIndex:buttonIndex];
         NSUInteger recoveryOptionIndex = [self.error.localizedRecoveryOptions indexOfObject:recoveryOption];
@@ -93,10 +93,6 @@ static char kMRAlertViewDelegateObjectKey;
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (self.onDismissAlert) {
-        [self.onDismissAlert show];
-        self.onDismissAlert = nil;
-    }
     if ([self.delegate respondsToSelector:@selector(alertView:didDismissWithButtonIndex:)]) {
         [self.delegate alertView:alertView didDismissWithButtonIndex:buttonIndex];
     }
@@ -126,6 +122,10 @@ static char kMRAlertViewDelegateObjectKey;
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    if (self.onWillDismissAlert) {
+      [self.onWillDismissAlert show];
+      self.onWillDismissAlert = nil;
+    }
     if ([self.delegate respondsToSelector:@selector(alertView:willDismissWithButtonIndex:)]) {
         [self.delegate alertView:alertView willDismissWithButtonIndex:buttonIndex];
     }
