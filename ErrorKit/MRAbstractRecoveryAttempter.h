@@ -28,7 +28,14 @@
 */
 @interface MRAbstractRecoveryAttempter : NSObject
 
-/// Helper method used by subclasses for invoking didRecoverSelector.
+/**
+ Helper method used by subclasses for invoking `didRecoverSelector`.
+ 
+ @param selector A selector identifying the method implemented by the recovery delegate.
+ @param delegate The recovery delegate.
+ @param success The recovery attempt result.
+ @param contextInfo Arbitrary data associated with the attempt at error recovery, to be passed to delegate in didRecoverSelector.
+*/
 - (void)invokeRecoverSelector:(SEL)selector withDelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo;
 
 @end

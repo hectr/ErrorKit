@@ -92,7 +92,7 @@
 @property (nonatomic, copy) NSString *debugDescription;
 
 /// Accessors for `@"NSUnderlyingException"` user info value.
-@property (nonatomic, copy) NSException *underlyingException;
+@property (nonatomic, strong) NSException *underlyingException;
 
 /// @name Creating and initializing Builder
 
@@ -102,7 +102,7 @@
  If no error parameter is passed, no buider is created and the return is `nil`.
  
  @param error Source error object or `nil`.
- @return Builder object initialized with all data gathered from the given error.
+ @return Builder object initialized with all data gathered from the given error or `nil`.
  */
 + (instancetype)builderWithError:(NSError *)error;
 

@@ -1,4 +1,4 @@
-// MRBlockRecoveryAttempter.h
+// MRErrorBuilder+NSException.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,21 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRAbstractRecoveryAttempter.h"
+#import "MRErrorBuilder.h"
 
 
 /**
- Instances of `MRBlockRecoveryAttempter` implement attemptRecoveryFromError:optionIndex: and attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo: (see `NSErrorRecoveryAttempting` informal protocol) by invoking their `recoveryHandler` block.
-*/
-@interface MRBlockRecoveryAttempter : MRAbstractRecoveryAttempter
+ Adds a convenience constructor that takes an exception as parameter.
+ */
+@interface MRErrorBuilder (NSException)
 
-/// Recovery handler block.
-@property (nonatomic, copy) BOOL (^recoveryHandler)(NSError *error, NSUInteger recoveryOption);
-
-/// Convenience constructor.
-+ (instancetype)attempterWithBlock:(void (^)(NSError *error, NSUInteger recoveryOption, BOOL *didRecover))handler;
-
-/// Designated initializer.
-- (id)initWithBlock:(BOOL (^)(NSError *error, NSUInteger recoveryOption))handler;
+/**
+ Creates and initializes an `MRErrorBuilder` object for a given domain and code.
+ 
+ The builder is given a predefined localized description, according the given exception or its domain and code; but this string may not be adequate for being presented to the user.
+  
+ @param domain The error domain.
+ @param code The error code for the error.
+ @param code The underlying exception.
+ @return Builder object initialized for domain with the specified error code and underlying exception and some predefined localized description.
+ */
++ (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code exception:(NSException *)exception;
 
 @end
