@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/hectr/ErrorKit"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = "Héctor Marqués Ranea"
-  s.source       = { :git => "https://github.com/hectr/ErrorKit.git", :commit => '3e2be01e8bdbd0f10f60fca3549ddb206d470b6f' }
+  s.source       = { :git => "https://github.com/hectr/ErrorKit.git", :tag => s.version.to_s }
   s.platform     = :ios, '5.0'
   s.requires_arc = true
   
