@@ -32,8 +32,6 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 
 @interface MRAlertRecoveryAttempter ()
-@property (nonatomic, assign) CFRunLoopRef runLoop;
-@property (nonatomic, assign) CFRunLoopSourceRef runLoopSource;
 @property (nonatomic, assign) BOOL didRecover;
 @property (nonatomic, assign) BOOL invokeDidRecoverSelector;
 @property (nonatomic, weak, readwrite) id associatedObject;
@@ -45,6 +43,20 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 
 @implementation MRAlertRecoveryAttempter
+
++ (instancetype)attempterWithBlock:(UIAlertView *(^)(NSError *error, NSUInteger recoveryOption, BOOL *didRecover))handler
+{
+    return [[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption, BOOL *finished) {
+        BOOL didRecover = NO;
+        UIAlertView *alert = handler(error, recoveryOption, &didRecover);
+        *finished = (alert == nil);
+        if (alert.delegate != error.recoveryAttempter && [error.recoveryAttempter associatedObject] == nil) {
+            [error.recoveryAttempter associateWithObject:alert];
+        }
+        [alert show];
+        return didRecover;
+    }];
+}
 
 - (id)initWithBlock:(BOOL (^)(NSError *, NSUInteger, BOOL *))handler
 {
@@ -71,20 +83,6 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
     self.associatedObject = object;
 }
 
-- (void)mr_didRecovery
-{
-    if (self.runLoopSource) {
-        CFRunLoopSourceSignal(self.runLoopSource);
-        CFRelease(self.runLoopSource);
-        self.runLoopSource = nil;
-    }
-    if (self.runLoop) {
-        CFRunLoopWakeUp(self.runLoop);
-        CFRelease(self.runLoop);
-        self.runLoop = nil;
-    }
-}
-
 #pragma mark - UIAlertViewDelegate
 
 - (void)willPresentAlertView:(UIAlertView *)alertView
@@ -94,13 +92,11 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     self.didRecover = self.delegateHandler(alertView, buttonIndex, &_invokeDidRecoverSelector);
     if (self.invokeDidRecoverSelector) {
-        if (self.runLoop) {
-            [self mr_didRecovery];
-        } else if (self.selector && self.delegate) {
+        if (self.selector && self.delegate) {
             [self invokeRecoverSelector:self.selector
                            withDelegate:self.delegate
                                 success:self.didRecover
@@ -123,9 +119,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 {
     self.didRecover = self.delegateHandler(actionSheet, buttonIndex, &_invokeDidRecoverSelector);
     if (self.invokeDidRecoverSelector) {
-        if (self.runLoop) {
-            [self mr_didRecovery];
-        } else if (self.selector && self.delegate) {
+        if (self.selector && self.delegate) {
             [self invokeRecoverSelector:self.selector
                            withDelegate:self.delegate
                                 success:self.didRecover
@@ -144,9 +138,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
     self.contextInfo = contextInfo;
     self.didRecover = self.recoveryHandler(error, recoveryOptionIndex, &_invokeDidRecoverSelector);
     if (self.invokeDidRecoverSelector) {
-        if (self.runLoop) {
-            [self mr_didRecovery];
-        } else if (self.selector && self.delegate) {
+        if (self.selector && self.delegate) {
             [self invokeRecoverSelector:self.selector
                            withDelegate:self.delegate
                                 success:self.didRecover
@@ -158,18 +150,9 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 - (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex
 {
-    NSAssert(self.runLoop == nil, nil);
-    if (self.runLoop) {
-        return NO;
-    }
     self.didRecover = self.recoveryHandler(error, recoveryOptionIndex, &_invokeDidRecoverSelector);
-    CFRunLoopSourceContext context = {0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
-    self.runLoopSource = CFRunLoopSourceCreate(kCFAllocatorDefault, 0, &context);
-    self.runLoop = CFRunLoopGetCurrent();
-    CFRetain(self.runLoop);
-    CFRunLoopAddSource(self.runLoop, self.runLoopSource, kCFRunLoopCommonModes );
-    while (!_invokeDidRecoverSelector) {
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 3, YES);
+    if (self.invokeDidRecoverSelector) {
+        [self invokeRecoverSelector:self.selector withDelegate:self.delegate success:self.didRecover contextInfo:self.contextInfo];
     }
     return self.didRecover;
 }
@@ -180,9 +163,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 - (void)dealloc
 {
     if (!self.invokeDidRecoverSelector) {
-        if (self.runLoop) {
-            [self mr_didRecovery];
-        } else if (self.selector && self.delegate) {
+        if (self.selector && self.delegate) {
             [self invokeRecoverSelector:self.selector
                            withDelegate:self.delegate
                                 success:self.didRecover

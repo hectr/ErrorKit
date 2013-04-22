@@ -29,7 +29,10 @@
 @interface MRBlockRecoveryAttempter : MRAbstractRecoveryAttempter
 
 /// Recovery handler block.
-@property (nonatomic, copy) BOOL (^recoveryHandler)(NSError *, NSUInteger);
+@property (nonatomic, copy) BOOL (^recoveryHandler)(NSError *error, NSUInteger recoveryOption);
+
+/// Convenience constructor.
++ (instancetype)attempterWithBlock:(void (^)(NSError *error, NSUInteger recoveryOption, BOOL *didRecover))handler;
 
 /// Designated initializer.
 - (id)initWithBlock:(BOOL (^)(NSError *error, NSUInteger recoveryOption))handler;

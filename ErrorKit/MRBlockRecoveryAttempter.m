@@ -29,6 +29,15 @@
 
 @implementation MRBlockRecoveryAttempter
 
++ (instancetype)attempterWithBlock:(void (^)(NSError *error, NSUInteger recoveryOption, BOOL *didRecover))handler
+{
+    return [[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
+        BOOL didRecover = NO;
+        handler(error, recoveryOption, &didRecover);
+        return didRecover;
+    }];
+}
+
 - (id)initWithBlock:(BOOL (^)(NSError *, NSUInteger))handler
 {
     NSParameterAssert(handler);

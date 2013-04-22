@@ -100,21 +100,22 @@
 - (NSError *)willPresentError:(NSError *)error
 {
     if (error.code == NSURLErrorCannotFindHost && [error.domain isEqualToString:NSURLErrorDomain]) {
-        MRAlertRecoveryAttempter *attempter = [[MRAlertRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption, BOOL *finished) {
-            if (recoveryOption == 0) {
-                if (error.code == NSURLErrorCannotFindHost) {
-                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:MRErrorKitString(@"Connect to", nil)
-                                                                   message:nil
-                                                                  delegate:error.recoveryAttempter
-                                                         cancelButtonTitle:MRErrorKitString(@"Cancel", nil)
-                                                         otherButtonTitles:MRErrorKitString(@"Retry", nil), nil];
-                    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-                    [alert textFieldAtIndex:0].text = self.urlTextField.text;
-                    [alert show];
+        MRAlertRecoveryAttempter *attempter =
+            [MRAlertRecoveryAttempter attempterWithBlock:^UIAlertView *(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
+                if (recoveryOption == 0) {
+                    if (error.code == NSURLErrorCannotFindHost && [error.domain isEqualToString:NSURLErrorDomain]) {
+                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:MRErrorKitString(@"Connect to", nil)
+                                                                       message:nil
+                                                                      delegate:error.recoveryAttempter
+                                                             cancelButtonTitle:MRErrorKitString(@"Cancel", nil)
+                                                             otherButtonTitles:MRErrorKitString(@"Retry", nil), nil];
+                        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+                        [alert textFieldAtIndex:0].text = self.urlTextField.text;
+                        return alert;
+                    }
                 }
-            }
-            return NO;
-        }];
+                return nil;
+            }];
         attempter.delegateHandler = ^BOOL(UIAlertView *alertView, NSInteger buttonIndex, BOOL *finished) {
             *finished = YES;
             if (buttonIndex != alertView.cancelButtonIndex) {
@@ -129,16 +130,16 @@
         builder.localizedRecoveryOptions = @[ MRErrorKitString(@"Change URL", nil) ];
         return builder.error;
     } else {
-        MRBlockRecoveryAttempter *attempter = [[MRBlockRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
+        MRBlockRecoveryAttempter *attempter =
+            [MRBlockRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
             if (recoveryOption == 0) {
                 NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
                 if (error.code == NSURLErrorServerCertificateUntrusted && [error.domain isEqualToString:NSURLErrorDomain]) {
                     [self.trustedDomains addObject:failingURL.host];
                 }
                 [self connectAction:nil];
-                return YES;
+                *didRecover = YES;
             }
-            return NO;
         }];
         if (error.code == NSURLErrorServerCertificateUntrusted && [error.domain isEqualToString:NSURLErrorDomain]) {
             MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
