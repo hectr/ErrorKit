@@ -26,7 +26,10 @@
 #import "NSError+ErrorKit.h"
 
 #import "MRErrorBuilder.h"
+#import "MRErrorBuilder+NSException.h"
+
 #import "MRErrorFormatter.h"
+
 #import "MRBlockRecoveryAttempter.h"
 
 #ifdef UIKIT_STATIC_INLINE
