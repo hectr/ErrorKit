@@ -22,6 +22,10 @@
 
 #import "MRErrorBuilder.h"
 
+#ifdef ERROR_KIT_AVFOUNDATION
+#import <AVFoundation/AVTime.h>
+#endif
+
 
 /**
  Adds accessors for AVError `userInfo` values.

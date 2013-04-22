@@ -37,6 +37,7 @@
 #endif
 #ifdef ERROR_KIT_FACEBOOK
 #import <FacebookSDK/FacebookSDK.h>
+#import "NSError_FacebookSDK.h"
 #endif
 #ifdef ERROR_KIT_JSON_KIT
 #import "NSError_JSONKit.h"

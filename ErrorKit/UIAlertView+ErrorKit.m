@@ -146,7 +146,7 @@ static char kMRAlertViewDelegateObjectKey;
 #pragma mark -
 
 
-@implementation UIAlertView (ErrorKit_Helper)
+@implementation UIAlertView (ErrorKit)
 
 + (instancetype)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error
 {

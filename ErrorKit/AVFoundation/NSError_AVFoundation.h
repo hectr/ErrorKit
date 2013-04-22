@@ -20,7 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "NSError+ErrorKit.h"
+
+#ifdef ERROR_KIT_AVFOUNDATION
+#import <AVFoundation/AVTime.h>
+#endif
 
 
 /**
