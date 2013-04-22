@@ -39,9 +39,6 @@
 /// Associated object.
 @property (nonatomic, weak, readonly) id associatedObject;
 
-/// Convenience constructor.
-+ (instancetype)attempterWithBlock:(UIAlertView *(^)(NSError *error, NSUInteger recoveryOption, BOOL *didRecover))handler;
-
 /// Designated initializer.
 - (id)initWithBlock:(BOOL (^)(NSError *error, NSUInteger recoveryOption, BOOL *finished))handler;
 

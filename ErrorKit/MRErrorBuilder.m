@@ -68,9 +68,7 @@
     builder.localizedFailureReason = error.localizedFailureReason;
     builder.localizedRecoveryOptions = error.localizedRecoveryOptions;
     builder.localizedRecoverySuggestion = error.localizedRecoverySuggestion;
-    if ([error.userInfo objectForKey:NSStringEncodingErrorKey]) {
-        builder.stringEncodingError = error.stringEncodingError;
-    }
+    builder.stringEncodingError = error.stringEncodingError;
     builder.recoveryAttempter = error.recoveryAttempter;
     builder.underlyingError = error.underlyingError;
     builder.underlyingException = error.underlyingException;
@@ -81,14 +79,10 @@
 #endif
 #ifdef ERROR_KIT_AVFOUNDATION
     builder.deviceName = error.deviceName;
-    if ([error.userInfo objectForKey:AVErrorTimeKey]) {
-        builder.time = error.time;
-    }
+    builder.time = error.time;
     builder.fileSize = error.fileSize;
     builder.processID = error.processID;
-    if ([error.userInfo objectForKey:AVErrorRecordingSuccessfullyFinishedKey]) {
-        builder.recordingSuccessfullyFinished = error.recordingSuccessfullyFinished;
-    }
+    builder.recordingSuccessfullyFinished = error.recordingSuccessfullyFinished;
     builder.mediaType = error.mediaType;
     builder.mediaSubType = error.mediaSubType;
 #endif
@@ -102,24 +96,9 @@
     builder.validationPredicate = error.validationPredicate;
     builder.validationValue = error.validationValue;
 #endif
-#ifdef ERROR_KIT_FACEBOOK
-    builder.innerError = error.innerError;
-    builder.parsedJSONResponse = error.parsedJSONResponse;
-    if ([error.userInfo objectForKey:FBErrorHTTPStatusCodeKey]) {
-        builder.HTTPStatusCode = error.HTTPStatusCode;
-    }
-    builder.session = error.session;
-    builder.loginFailedReason = error.loginFailedReason;
-    builder.nativeDialogReason = error.nativeDialogReason;
-    builder.insightsReason = error.insightsReason;
-#endif
 #ifdef ERROR_KIT_JSON_KIT
-    if ([error.userInfo objectForKey:@"JKAtIndexKey"]) {
-        builder.atIndex = error.atIndex;
-    }
-    if ([error.userInfo objectForKey:@"JKLineNumberKey"]) {
-        builder.lineNumber = error.lineNumber;
-    }
+    builder.atIndex = error.atIndex;
+    builder.lineNumber = error.lineNumber;
 #endif
     return builder;
 }
@@ -311,7 +290,7 @@
 
 - (void)setUnderlyingException:(NSException *)underlyingException
 {
-    [self setUserInfoValue:underlyingException forKey:@"NSUnderlyingException"];
+    [self setUserInfoValue:underlyingException.copy forKey:@"NSUnderlyingException"];
 }
 
 - (NSURL *)urlError
