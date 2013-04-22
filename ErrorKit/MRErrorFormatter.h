@@ -81,5 +81,11 @@
 @end
 
 
-/// Returns a localized version of a string.
+/**
+ Returns a localized version of a string.
+ 
+ @param key The key for a string.
+ @param comment Engineer comment (used by `genstrings` utility).
+ @return A localized version of a string.
+ */
 NSString *MRErrorKitString(NSString *key, NSString *comment);

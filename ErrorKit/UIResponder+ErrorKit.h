@@ -42,7 +42,12 @@
  */
 - (BOOL)presentError:(NSError *)error;
 
-/// Subclasses can implement this method to inspect the passed-in `NSError` object and return a customized object.
+/**
+ Subclasses can implement this method to inspect the passed-in `NSError` object and return a customized object.
+ 
+ @parameter error The error object.
+ @return The customized error object or `nil` if the error has already been handled and there is no need to present it.
+ */
 - (NSError *)willPresentError:(NSError *)error;
 
 @end
