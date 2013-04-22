@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>NSError(ErrorKit_CoreLocation) Category Reference</title>
+		<title>MRAbstractRecoveryAttempter Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -13,11 +13,11 @@
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
 				<h1><a id="libraryTitle" href="../index.html">ErrorKit </a></h1>
-				<a id="developerHome" href="../index.html">Héctor Marqués</a>
+				<a id="developerHome" href="../index.html">Héctor MArqués</a>
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">NSError(ErrorKit_CoreLocation) Category Reference</h1>
+				<h1 class="hideInXcode">MRAbstractRecoveryAttempter Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -38,13 +38,13 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/alternateRegion">&nbsp;&nbsp;&nbsp;&nbsp;alternateRegion</option>
 	
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- invokeRecoverSelector:withDelegate:success:contextInfo:</option>
 	
 	
 	
@@ -62,30 +62,28 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreLocation userInfo values">CoreLocation userInfo values</a></span></li>
-	
 </ul></li>
 
 
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/alternateRegion">alternateRegion</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:">invokeRecoverSelector:withDelegate:success:contextInfo:</a></span></li>
 	
 </ul></li>
-
-
-
-
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="NSError(ErrorKit_CoreLocation) Category Reference" name="top"></a>
+				<a title="MRAbstractRecoveryAttempter Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -94,15 +92,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">NSError(ErrorKit_CoreLocation) Category Reference</h1>
+						<h1 class="title title-header">MRAbstractRecoveryAttempter Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">NSError_CoreLocation.h</td>
+	<td class="specification-value">MRAbstractRecoveryAttempter.h<br />MRAbstractRecoveryAttempter.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,7 +113,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Adds getters for Core Location&rsquo;s error <code>userInfo</code> values.</p><div class="warning"><p><strong>Warning:</strong> This extension requires the Core Location framework. Add a <code>CoreLocation/CoreLocation.h</code> import to the header prefix of the project.</p></div>
+						<p><code>MRAbstractRecoveryAttempter</code> is used as base class for implementing various recovery attempters.</p>
 					</div>
 					
 					
@@ -124,16 +125,16 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="CoreLocation userInfo values" name="task_CoreLocation userInfo values"></a>
 						
-<h3 class="subsubtitle task-title">CoreLocation userInfo values</h3>
+						
+
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/alternateRegion">&nbsp;&nbsp;alternateRegion</a></code>
-		<span class="tooltip"><p>Getter for <code>kCLErrorUserInfoAlternateRegionKey</code> user info value.</p></span>
+		<code><a href="#//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:">&ndash;&nbsp;invokeRecoverSelector:withDelegate:success:contextInfo:</a></code>
+		<span class="tooltip"><p>Helper method used by subclasses for invoking <code>didRecoverSelector</code>.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li>
 						</ul>
@@ -144,25 +145,54 @@
 					
 					
 					
+					
+					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/alternateRegion" title="alternateRegion"></a>
-	<h3 class="subsubtitle method-title">alternateRegion</h3>
+	<a name="//api/name/invokeRecoverSelector:withDelegate:success:contextInfo:" title="invokeRecoverSelector:withDelegate:success:contextInfo:"></a>
+	<h3 class="subsubtitle method-title">invokeRecoverSelector:withDelegate:success:contextInfo:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Getter for <code>kCLErrorUserInfoAlternateRegionKey</code> user info value.</p>
+		<p>Helper method used by subclasses for invoking <code>didRecoverSelector</code>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CLRegion *alternateRegion</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)invokeRecoverSelector:(SEL)<em>selector</em> withDelegate:(id)<em>delegate</em> success:(BOOL)<em>success</em> contextInfo:(void *)<em>contextInfo</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd><p>A selector identifying the method implemented by the recovery delegate.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>The recovery delegate.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>The recovery attempt result.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>contextInfo</em></dt>
+			<dd><p>Arbitrary data associated with the attempt at error recovery, to be passed to delegate in didRecoverSelector.</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -172,7 +202,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Getter for <code>kCLErrorUserInfoAlternateRegionKey</code> user info value.</p>
+		<p>Helper method used by subclasses for invoking <code>didRecoverSelector</code>.</p>
 	</div>
 	
 	
@@ -183,17 +213,13 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSError_CoreLocation.h</code><br />
+		<code class="declared-in-ref">MRAbstractRecoveryAttempter.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
-					
-					
 					
 					
 				</div>
@@ -206,7 +232,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-03-15)</span><br />
+						<p><span class="copyright">&copy; 2013 Héctor MArqués. All rights reserved. (Last updated: 2013-04-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

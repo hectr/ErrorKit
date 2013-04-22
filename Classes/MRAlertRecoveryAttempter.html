@@ -13,7 +13,7 @@
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
 				<h1><a id="libraryTitle" href="../index.html">ErrorKit </a></h1>
-				<a id="developerHome" href="../index.html">Héctor Marqués</a>
+				<a id="developerHome" href="../index.html">Héctor MArqués</a>
 			</div>
 			
 			<div id="title" role="banner">
@@ -47,6 +47,11 @@
 	<option value="//api/name/recoveryHandler">&nbsp;&nbsp;&nbsp;&nbsp;recoveryHandler</option>
 	
 	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/attempterWithBlock:">&nbsp;&nbsp;&nbsp;&nbsp;+ attempterWithBlock:</option>
 	
 	
 	
@@ -91,6 +96,12 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attempterWithBlock:">attempterWithBlock:</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
@@ -123,7 +134,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/MRRecoveryAttempter.html">MRRecoveryAttempter</a> : NSObject</td>
+	<td class="specification-value"><a href="../Classes/MRAbstractRecoveryAttempter.html">MRAbstractRecoveryAttempter</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Conforms to</td>
 	<td class="specification-value">UIActionSheetDelegate<br />UIAlertViewDelegate</td>
@@ -139,7 +150,9 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Instances of <code>MRAlertRecoveryAttempter</code> implement attemptRecoveryFromError:optionIndex: and attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo: (see <code>NSErrorRecoveryAttempting</code> informal protocol) by invoking their <a href="#//api/name/recoveryHandler"><code>recoveryHandler</code></a> block.</p><p>This attempter conforms to <code>UIAlertViewDelegate</code> and <code>UIActionSheetDelegate</code> protocols. The index of the button index clicked is passed as parameter to the delegate block.</p>
+						<p>Instances of <code>MRAlertRecoveryAttempter</code> implement attemptRecoveryFromError:optionIndex: and attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo: (see <code>NSErrorRecoveryAttempting</code> informal protocol) by invoking their <a href="#//api/name/recoveryHandler"><code>recoveryHandler</code></a> block.</p>
+
+<p>This attempter conforms to <code>UIAlertViewDelegate</code> and <code>UIActionSheetDelegate</code> protocols. The index of the button index clicked is passed as parameter to the delegate block.</p>
 					</div>
 					
 					
@@ -175,6 +188,13 @@
 		<span class="tooltip"><p>Associated object.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attempterWithBlock:">+&nbsp;attempterWithBlock:</a></code>
+		<span class="tooltip"><p>Convenience constructor.</p></span>
+	</span>
+	
 	
 </li><li>
 	<span class="tooltip">
@@ -330,6 +350,53 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/attempterWithBlock:" title="attempterWithBlock:"></a>
+	<h3 class="subsubtitle method-title">attempterWithBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convenience constructor.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)attempterWithBlock:(UIAlertView *( ^ ) ( NSError *error , NSUInteger recoveryOption , BOOL *didRecover ))<em>handler</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convenience constructor.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MRAlertRecoveryAttempter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					<div class="section section-methods">
@@ -360,7 +427,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Associates the given object with the receiver.</p><p>The association grants that the attempter will not be deallocated until the associated object is deallocated itself.</p>
+		<p>Associates the given object with the receiver.</p>
+
+<p>The association grants that the attempter will not be deallocated until the associated object is deallocated itself.</p>
 
 <p>If an attempter has not been associated with any object, it will be automatically associated to the alert / action sheet that is about to be displayed when <a href="#//api/name/willPresentAlertView:"><code>willPresentAlertView:</code></a> or <a href="#//api/name/willPresentActionSheet:"><code>willPresentActionSheet:</code></a> are received.</p>
 	</div>
@@ -433,7 +502,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-03-15)</span><br />
+						<p><span class="copyright">&copy; 2013 Héctor MArqués. All rights reserved. (Last updated: 2013-04-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
