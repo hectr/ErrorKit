@@ -52,10 +52,6 @@
 #define ERROR_KIT_JSON_KIT 1
 #endif
 
-#ifdef ERROR_KIT_MESSAGE_UI
-#define ERROR_KIT_MESSAGE_UI 1
-#endif
-
 #ifdef MK_EXTERN
 #define ERROR_KIT_MAP_KIT 1
 #endif

@@ -26,6 +26,7 @@
 #endif
 #ifdef ERROR_KIT_AVFOUNDATION
 #import <AVFoundation/AVError.h>
+#import <AVFoundation/AVTime.h>
 #endif
 #ifdef ERROR_KIT_CORE_DATA
 #import <CoreData/CoreDataErrors.h>

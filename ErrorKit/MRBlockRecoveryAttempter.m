@@ -31,7 +31,7 @@
 
 + (instancetype)attempterWithBlock:(void (^)(NSError *error, NSUInteger recoveryOption, BOOL *didRecover))handler
 {
-    return [[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
+    return [(MRBlockRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
         BOOL didRecover = NO;
         handler(error, recoveryOption, &didRecover);
         return didRecover;

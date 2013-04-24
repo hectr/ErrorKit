@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ErrorKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Error Kit is a handy iOS library for making NSError handling easier."
   s.description  = <<-DESC
   Error Kit is a handy iOS library for making NSError handling easier.
@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Security' do |sec|
     sec.source_files = 'ErrorKit/Security'
-    sec.ios.frameworks = 'Secruity'
+    sec.ios.frameworks = 'Security'
     sec.prefix_header_contents = '#define ERROR_SECURITY 1'
   end
   
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'iAD' do |iad|
-    iad.source_files = 'ErrorKit/iAD.h'
+    iad.source_files = 'ErrorKit/iAD'
     iad.ios.frameworks = 'iAD'
     iad.prefix_header_contents = '#define ERROR_KIT_IAD 1'
   end
