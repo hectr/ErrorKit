@@ -23,6 +23,7 @@
 #import "MRErrorBuilder.h"
 #import "NSError+ErrorKit.h"
 #import "MRErrorFormatter.h"
+#import "MRChainedRecoveryAttempter.h"
 #ifdef ERROR_KIT_AFNETWORKING
 #import <AFNetworking/AFURLConnectionOperation.h>
 #import "NSError_AFNetworking.h"
@@ -163,6 +164,49 @@
     } else {
         [_userInfo removeObjectForKey:key];
     }
+}
+
+- (void)addRecoveryOption:(NSString *)localizedRecoveryOption withBlock:(void(^)(NSError *))recoveryOptionAttempter
+{
+    NSParameterAssert(localizedRecoveryOption);
+    NSParameterAssert(recoveryOptionAttempter);
+    NSUInteger option = self.localizedRecoveryOptions.count;
+    MRChainedRecoveryAttempter *attempter =
+        [MRChainedRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
+            if (recoveryOption == option) {
+                recoveryOptionAttempter(error);
+                *didRecover = YES;
+            }
+        }];
+    attempter.nextAttempter = self.recoveryAttempter;
+    self.recoveryAttempter = attempter;
+    if (!self.localizedRecoveryOptions) {
+        self.localizedRecoveryOptions = @[ ];
+    }
+    self.localizedRecoveryOptions =
+        [self.localizedRecoveryOptions arrayByAddingObject:localizedRecoveryOption];
+}
+
+- (void)addRecoveryOptions:(NSArray *)localizedRecoveryOptions withBlock:(void(^)(NSError *, NSUInteger))recoveryOptionsAttempter
+{
+    NSParameterAssert(localizedRecoveryOptions);
+    NSParameterAssert(recoveryOptionsAttempter);
+    NSUInteger option = self.localizedRecoveryOptions.count;
+    MRChainedRecoveryAttempter *attempter =
+    [MRChainedRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
+        if (recoveryOption >= option
+            && recoveryOption < option + localizedRecoveryOptions.count) {
+            recoveryOptionsAttempter(error, recoveryOption);
+            *didRecover = YES;
+        }
+    }];
+    attempter.nextAttempter = self.recoveryAttempter;
+    self.recoveryAttempter = attempter;
+    if (!self.localizedRecoveryOptions) {
+        self.localizedRecoveryOptions = @[ ];
+    }
+    self.localizedRecoveryOptions =
+    [self.localizedRecoveryOptions arrayByAddingObjectsFromArray:localizedRecoveryOptions];
 }
 
 - (NSError *)error

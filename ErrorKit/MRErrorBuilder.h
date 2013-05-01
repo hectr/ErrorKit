@@ -147,6 +147,12 @@
  */
 - (void)setUserInfoValue:(id)value forKey:(NSString *)key;
 
+/// Adds a recovery option and its recovery attempter block to the receiver.
+- (void)addRecoveryOption:(NSString *)localizedRecoveryOption withBlock:(void(^)(NSError *error))recoveryOptionAttempter;
+
+/// Adds an array of recovery options and their recovery attempter block to the receiver.
+- (void)addRecoveryOptions:(NSArray *)localizedRecoveryOptions withBlock:(void(^)(NSError *error, NSUInteger recoveryOption))recoveryOptionsAttempter;
+
 /// @name Creating error
 
 /**

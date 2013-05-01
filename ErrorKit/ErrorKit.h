@@ -30,7 +30,7 @@
 
 #import "MRErrorFormatter.h"
 
-#import "MRBlockRecoveryAttempter.h"
+#import "MRChainedRecoveryAttempter.h"
 
 #ifdef UIKIT_STATIC_INLINE
 #import "UIAlertView+ErrorKit.h"

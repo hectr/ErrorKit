@@ -44,7 +44,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 @implementation MRAlertRecoveryAttempter
 
-+ (instancetype)attempterWithBlock:(UIAlertView *(^)(NSError *error, NSUInteger recoveryOption, BOOL *didRecover))handler
++ (instancetype)attempterWithBlock:(UIAlertView *(^)(NSError *, NSUInteger, BOOL *))handler
 {
     return [(MRAlertRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption, BOOL *finished) {
         BOOL didRecover = NO;

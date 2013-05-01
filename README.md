@@ -5,12 +5,6 @@ ErrorKit
 
 It covers error object creation, inspection, presentation and recovery.
 
-Usage
------
-
-1. To use **Error Kit** you simply need to drag and drop the *ErrorKit* folder to your project.
-2. And that's it, there is no step 2.
-
 Examples
 --------
 
@@ -42,12 +36,11 @@ Examples
 
         if (error.code == NSURLErrorNotConnectedToInternet) {
 	        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
-	        builder.recoveryAttempter =
-	            [[MRBlockRecoveryAttempter alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
-                    [[HTTPClient sharedClient] sendRequest];
-                }];
 	        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection.", nil);
-	        builder.localizedRecoveryOptions = @[ NSLocalizedString(@"Retry", nil) ];
+	       [builder addRecoveryOption:NSLocalizedString(@"Retry", nil)
+	                        withBlock:^(NSError *error) {
+                [[HTTPClient sharedClient] resendRequest];
+            }];
 	        [self presentError:builder.error];
 	    }
 
@@ -58,6 +51,14 @@ Examples
     // (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Security, Store Kit and TransitionKit codes)
 
 See *ErrorKit-Example* project or browse online [documentation](http://hectr.github.com/ErrorKit/) for further reference.
+
+Usage
+-----
+
+1. Drag and drop the *ErrorKit* folder to your project.
+2. Add `#import "ErrorKit.h"` somewhere (e.g. in your *-Prefix.pch* file).
+3. Add `#import "ErrorKitDefines.h"` or customize enabled features by defining the following contants:
+`ERROR_KIT_ACCOUNTS`, `ERROR_KIT_ADMOB`, `ERROR_KIT_AFNETWORKING`, `ERROR_KIT_AVFOUNDATION`, `ERROR_KIT_CORE_DATA`, `ERROR_KIT_CORE_LOCATION`, `ERROR_KIT_FACEBOOK`, `ERROR_KIT_JSON_KIT`, `ERROR_KIT_MAP_KIT`, `ERROR_KIT_MESSAGE_UI`, `ERROR_SECURITY`, `ERROR_KIT_STORE_KIT`, `ERROR_KIT_TRANSITION_KIT` and/or `ERROR_KIT_IAD`.
 
 License
 -------

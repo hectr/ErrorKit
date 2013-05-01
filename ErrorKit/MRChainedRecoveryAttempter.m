@@ -1,4 +1,4 @@
-// MRBlockRecoveryAttempter.m
+// MRChainedRecoveryAttempter.m
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,40 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MRBlockRecoveryAttempter.h"
+#import "MRChainedRecoveryAttempter.h"
+#import "MRErrorBuilder.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
 #endif
 
 
-@implementation MRBlockRecoveryAttempter
-
-+ (instancetype)attempterWithBlock:(void (^)(NSError *, NSUInteger, BOOL *))handler
-{
-    return [(MRBlockRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
-        BOOL didRecover = NO;
-        handler(error, recoveryOption, &didRecover);
-        return didRecover;
-    }];
-}
-
-- (id)initWithBlock:(BOOL (^)(NSError *, NSUInteger))handler
-{
-    NSParameterAssert(handler);
-    self = [super init];
-    if (self) {
-        self.recoveryHandler = handler;
-    }
-    return self;
-}
+@implementation MRChainedRecoveryAttempter
 
 #pragma mark - NSErrorRecoveryAttempting
 
 - (void)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex delegate:(id)delegate didRecoverSelector:(SEL)didRecoverSelector contextInfo:(void *)contextInfo
 {
     BOOL success = self.recoveryHandler(error, recoveryOptionIndex);
-    if (didRecoverSelector && delegate) {
+    if (!success && self.nextAttempter) {
+        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        builder.recoveryAttempter = self.nextAttempter;
+        [self.nextAttempter attemptRecoveryFromError:builder.error
+                                         optionIndex:recoveryOptionIndex
+                                            delegate:delegate
+                                  didRecoverSelector:didRecoverSelector
+                                         contextInfo:contextInfo];
+    } else if (didRecoverSelector && delegate) {
         [self invokeRecoverSelector:didRecoverSelector
                        withDelegate:delegate
                             success:success
@@ -63,17 +53,49 @@
 
 - (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex
 {
-    return self.recoveryHandler(error, recoveryOptionIndex);
+    BOOL success = self.recoveryHandler(error, recoveryOptionIndex);
+    if (!success) {
+        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        builder.recoveryAttempter = self.nextAttempter;
+        success = [self.nextAttempter attemptRecoveryFromError:builder.error optionIndex:recoveryOptionIndex];
+    }
+    return success;
 }
 
 #pragma mark - NSObject
 
+//- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
+//{
+//    NSMethodSignature *signature = [super methodSignatureForSelector:selector];
+//    if (signature == nil) {
+//        signature = [self.nextAttempter methodSignatureForSelector:selector];
+//    }
+//    return signature;
+//}
+//
+//- (void)forwardInvocation:(NSInvocation *)anInvocation
+//{
+//    if ([self.nextAttempter respondsToSelector:anInvocation.selector]) {
+//        [anInvocation invokeWithTarget:self.nextAttempter];
+//    } else {
+//        [super forwardInvocation:anInvocation];
+//    }
+//}
+//
+//- (BOOL)respondsToSelector:(SEL)aSelector
+//{
+//    if ([super respondsToSelector:aSelector]) {
+//        return YES;
+//    }
+//    return [self.nextAttempter respondsToSelector:aSelector];
+//}
+
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@: %p, recovery block %p>"
+    return [NSString stringWithFormat:@"<%@: %p, next attempter %p>"
             , NSStringFromClass(self.class)
             , self
-            , self.recoveryHandler];
+            , self.nextAttempter];
 }
 
 @end
