@@ -345,3 +345,22 @@
 #endif
 
 @end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation NSError (ErrorKit_HTTP)
+
+- (BOOL)isHTTPError
+{
+#ifdef ERROR_KIT_AFNETWORKING
+    if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
+        return YES;
+    }
+#endif
+    return [self.domain isEqualToString:NSURLErrorDomain];
+}
+
+@end

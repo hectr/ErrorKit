@@ -34,7 +34,7 @@ Examples
 
 **Attempt to recover from error**
 
-        if (error.code == NSURLErrorNotConnectedToInternet) {
+        if (error.code == NSURLErrorNotConnectedToInternet && error.isHTTPError) {
 	        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
 	        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection.", nil);
 	       [builder addRecoveryOption:NSLocalizedString(@"Retry", nil)

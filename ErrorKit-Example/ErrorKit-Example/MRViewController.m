@@ -99,11 +99,11 @@
 
 - (NSError *)willPresentError:(NSError *)error
 {
-    if (error.code == NSURLErrorCannotFindHost && [error.domain isEqualToString:NSURLErrorDomain]) {
+    if (error.code == NSURLErrorCannotFindHost && error.isHTTPError) {
         MRAlertRecoveryAttempter *attempter =
             [MRAlertRecoveryAttempter attempterWithBlock:^UIAlertView *(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
                 if (recoveryOption == 0) {
-                    if (error.code == NSURLErrorCannotFindHost && [error.domain isEqualToString:NSURLErrorDomain]) {
+                    if (error.code == NSURLErrorCannotFindHost && error.isHTTPError) {
                         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:MRErrorKitString(@"Connect to", nil)
                                                                        message:nil
                                                                       delegate:error.recoveryAttempter
@@ -134,19 +134,19 @@
             [MRBlockRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
             if (recoveryOption == 0) {
                 NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
-                if (error.code == NSURLErrorServerCertificateUntrusted && [error.domain isEqualToString:NSURLErrorDomain]) {
+                if (error.code == NSURLErrorServerCertificateUntrusted && error.isHTTPError) {
                     [self.trustedDomains addObject:failingURL.host];
                 }
                 [self connectAction:nil];
                 *didRecover = YES;
             }
         }];
-        if (error.code == NSURLErrorServerCertificateUntrusted && [error.domain isEqualToString:NSURLErrorDomain]) {
+        if (error.code == NSURLErrorServerCertificateUntrusted && error.isHTTPError) {
             MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
             builder.recoveryAttempter = attempter;
             builder.localizedRecoveryOptions = @[ MRErrorKitString(@"YES", nil) ];
             return builder.error;
-        } else if (error.code == NSURLErrorNotConnectedToInternet && [error.domain isEqualToString:NSURLErrorDomain]) {
+        } else if (error.code == NSURLErrorNotConnectedToInternet && error.isHTTPError) {
             MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
             builder.recoveryAttempter = attempter;
             builder.localizedRecoverySuggestion = MRErrorKitString(@"Please check your internet connection and try again.", nil);

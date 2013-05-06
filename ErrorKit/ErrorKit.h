@@ -54,6 +54,7 @@
 
 #ifdef ERROR_KIT_HTTP
 #import "MRErrorFormatter_HTTP.h"
+#import "NSError_HTTP.h"
 #endif
 
 #ifdef ERROR_KIT_JSON_KIT

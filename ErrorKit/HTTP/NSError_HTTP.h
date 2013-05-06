@@ -1,4 +1,4 @@
-// ErrorKitDefines.h
+//  NSError_HTTP.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,58 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
 
-#ifndef _ERRORKITDEFINES_H
-#define _ERRORKITDEFINES_H
 
-#ifdef ACCOUNTS_EXTERN
-#define ERROR_KIT_ACCOUNTS 1
-#endif
+@interface NSError (ErrorKit_HTTP)
 
-#ifdef _AFNETWORKING_
-#define ERROR_KIT_AFNETWORKING 1
-#endif
+/// Returns YES if the domain of the receiver is `NSURLErrorDomain` (or `AFNetworkingErrorDomain`).
+- (BOOL)isHTTPError;
 
-#ifdef AVF_EXPORT
-#define ERROR_KIT_AVFOUNDATION 1
-#endif
-
-#ifdef _COREDATADEFINES_H
-#define ERROR_KIT_CORE_DATA 1
-#endif
-
-#ifdef __CORELOCATION__
-#define ERROR_KIT_CORE_LOCATION 1
-#endif
-
-#ifdef FB_SESSIONSTATETERMINALBIT
-#define ERROR_KIT_FACEBOOK 1
-#endif
-
-#define ERROR_KIT_HTTP 1
-
-#ifdef _JSONKIT_H_
-#define ERROR_KIT_JSON_KIT 1
-#endif
-
-#ifdef MK_EXTERN
-#define ERROR_KIT_MAP_KIT 1
-#endif
-
-#ifdef _SECURITY_SECITEM_H_
-#define ERROR_KIT_SECURITY 1
-#endif
-
-#ifdef SK_EXTERN
-#define ERROR_KIT_STORE_KIT 1
-#endif
-
-#ifdef TransitionKit_TransitionKit_h
-#define ERROR_KIT_TRANSITION_KIT 1
-#endif
-
-#ifdef UIKIT_STATIC_INLINE
-#define ERROR_KIT_UIKIT 1
-#endif
-
-#endif
+@end

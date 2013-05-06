@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84040EF6173826EF00548BE6 /* NSError_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSError_HTTP.h; path = ../../ErrorKit/HTTP/NSError_HTTP.h; sourceTree = "<group>"; };
 		8419D1F2171B539500143B54 /* ErrorKitDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ErrorKitDefines.h; path = ../../ErrorKit/ErrorKitDefines.h; sourceTree = "<group>"; };
 		84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_AVFoundation.h; path = ../../ErrorKit/AVFoundation/MRErrorFormatter_AVFoundation.h; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +263,7 @@
 				84F691DF171F3542002C8F4F /* NSError_AVFoundation.h */,
 				84F8AEB01715FF35001E1FD4 /* NSError_CoreData.h */,
 				84F8AEB21715FF4E001E1FD4 /* NSError_FacebookSDK.h */,
+				84040EF6173826EF00548BE6 /* NSError_HTTP.h */,
 				84F8AEB31715FF5B001E1FD4 /* NSError_JSONKit.h */,
 			);
 			name = access;
