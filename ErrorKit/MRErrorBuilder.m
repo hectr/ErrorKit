@@ -43,6 +43,9 @@
 #ifdef ERROR_KIT_JSON_KIT
 #import "NSError_JSONKit.h"
 #endif
+#ifdef ERROR_KIT_STORE_KIT
+#import <StoreKit/StoreKit.h>
+#endif
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -703,6 +706,112 @@
                                       , self.code
                                       , self.userInfo
                                       , [__formatter stringWithErrorDetail:self.userInfo]];
+}
+
+@end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation MRErrorBuilder (ErrorKit_Helper)
+
+- (BOOL)isCancelledError
+{
+#ifdef ERROR_KIT_AFNETWORKING
+    if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
+        return (self.code == NSURLErrorUserCancelledAuthentication ||
+                self.code == NSURLErrorCancelled);
+    }
+#endif
+#ifdef ERROR_KIT_CORE_LOCATION
+    if ([self.domain isEqualToString:kCLErrorDomain]) {
+#if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+        return (self.code == kCLErrorGeocodeCanceled);
+#else
+        return (self.code == kCLErrorGeocodeCanceled ||
+                self.code == kCLErrorDeferredCanceled);
+#endif
+    }
+#endif
+#ifdef ERROR_KIT_FACEBOOK
+    if ([self.domain isEqualToString:FacebookSDKDomain]) {
+        return (self.code == FBErrorOperationCancelled);
+    }
+#endif
+#ifdef ERROR_KIT_STORE_KIT
+    if ([self.domain isEqualToString:SKErrorDomain]) {
+        return (self.code == SKErrorPaymentCancelled);
+    }
+#endif
+    if ([self.domain isEqualToString:NSURLErrorDomain]) {
+        return (self.code == NSURLErrorUserCancelledAuthentication ||
+                self.code == NSURLErrorCancelled);
+    }
+#ifdef ERROR_KIT_CORE_DATA
+    return ((self.code == NSUserCancelledError || self.code == NSMigrationCancelledError) &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+#else
+    return (self.code == NSUserCancelledError &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+#endif
+}
+
+- (BOOL)isValidationError
+{
+    return (self.code >= NSValidationErrorMinimum &&
+            self.code <= NSValidationErrorMaximum &&
+            [self.domain isEqualToString:NSCocoaErrorDomain]);
+}
+
+@end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation MRErrorBuilder (ErrorKit_CoreData_Helper)
+
+#ifdef ERROR_KIT_CORE_DATA
+
+- (NSError *)errorByCombiningWithError:(NSError *)errorOrNil
+{
+    if (errorOrNil == nil) {
+        return self.error;
+    }
+    MRErrorBuilder *builder;
+    if (self.code == NSValidationMultipleErrorsError) {
+        builder = self;
+        builder.detailedErrors = ([builder.detailedErrors arrayByAddingObject:errorOrNil]
+                                  ?: @[ (errorOrNil.detailedErrors ?: errorOrNil) ]);
+    } else {
+        builder = [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain code:NSValidationMultipleErrorsError];
+        builder.detailedErrors = @[ self.error, (errorOrNil.detailedErrors ?: errorOrNil) ];
+    }
+    return builder.error;
+}
+
+#endif
+
+@end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation MRErrorBuilder (ErrorKit_HTTP)
+
+- (BOOL)isHTTPError
+{
+#ifdef ERROR_KIT_AFNETWORKING
+    if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
+        return YES;
+    }
+#endif
+    return [self.domain isEqualToString:NSURLErrorDomain];
 }
 
 @end

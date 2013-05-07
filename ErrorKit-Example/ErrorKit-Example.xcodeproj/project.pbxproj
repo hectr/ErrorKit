@@ -102,6 +102,7 @@
 		84FA2664170FB483008A9DAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ErrorKit.strings; sourceTree = "<group>"; };
 		84FA2666170FB48D008A9DAA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ErrorKit.strings; sourceTree = "<group>"; };
 		84FA2667170FB495008A9DAA /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/ErrorKit.strings; sourceTree = "<group>"; };
+		84FCBBF41739700C00EB7E29 /* MRErrorBuilder_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_HTTP.h; path = ../../ErrorKit/HTTP/MRErrorBuilder_HTTP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +224,7 @@
 				84F691DE171F2B50002C8F4F /* MRErrorBuilder_AVFoundation.h */,
 				84F8AEB51715FF8C001E1FD4 /* MRErrorBuilder_CoreData.h */,
 				84F8AEB71715FFA9001E1FD4 /* MRErrorBuilder_FacebookSDK.h */,
+				84FCBBF41739700C00EB7E29 /* MRErrorBuilder_HTTP.h */,
 				84F8AEB81715FFB9001E1FD4 /* MRErrorBuilder_JSONKit.h */,
 			);
 			name = build;

@@ -163,3 +163,17 @@
 - (NSError *)error;
 
 @end
+
+
+/**
+ This category adds methods that may help you decide whether or not to display an error dialog.
+ */
+@interface MRErrorBuilder (ErrorKit_Helper)
+
+/// Returns YES if the error code corresponds to a cancelled operation in `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
+- (BOOL)isCancelledError;
+
+/// Returns YES if the error code corresponds to a validation error in `NSCocoaErrorDomain`.
+- (BOOL)isValidationError;
+
+@end
