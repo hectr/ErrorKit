@@ -187,7 +187,7 @@
     return [self.userInfo objectForKey:NSValidationKeyErrorKey];
 }
 
-- (NSManagedObject *)validationObject
+- (id)validationObject
 {
     return [self.userInfo objectForKey:NSValidationObjectErrorKey];
 }

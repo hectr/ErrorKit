@@ -169,7 +169,7 @@ static char kMRAlertViewDelegateObjectKey;
     NSString *cancelButton = [MRErrorFormatter stringForCancelButtonFromError:error];
     // Instantiate alert delegate
     MRAlertViewRecoveryDelegate *alertDelegate;
-    if (error.recoveryAttempter) {
+    if (error.recoveryAttempter || error.helpAnchor) {
         alertDelegate = [[MRAlertViewRecoveryDelegate alloc] init];
         alertDelegate.error = error;
         alertDelegate.delegate = recoveryDelegate;
@@ -196,6 +196,7 @@ static char kMRAlertViewDelegateObjectKey;
     // Add help button
     if (error.helpAnchor) {
         [alert addButtonWithTitle:MRErrorKitString(@"Help", nil)];
+        objc_setAssociatedObject(alert, &kMRAlertViewDelegateObjectKey, alertDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return alert;
 }

@@ -49,8 +49,9 @@
          , NSPortReceiveException               : MRErrorKitString(@"Port error occurred on receive", nil)
          , NSOldStyleException                  : MRErrorKitString(@"Exception caught", nil) };
     });
-    NSString *description = ([__localizedDescriptions objectForKey:exception.name] ?: MRErrorKitString(@"Exception caught", nil));
+    NSString *description = [MRErrorFormatter stringWithDomain:domain code:code];
     MRErrorBuilder *builder = [self builderWithDomain:domain code:code description:description];
+    builder.localizedFailureReason = ([__localizedDescriptions objectForKey:exception.name] ?: MRErrorKitString(@"Exception caught", nil));
     builder.underlyingException = exception;
     return builder;
 }

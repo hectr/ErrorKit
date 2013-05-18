@@ -48,7 +48,7 @@
 @property (nonatomic, copy) NSString *validationKey;
 
 /// Accessors for `NSValidationObjectErrorKey` user info value.
-@property (nonatomic, strong) NSManagedObject *validationObject;
+@property (nonatomic, strong) id /*NSManagedObject */validationObject;
 
 /// Accessors for `NSValidationPredicateErrorKey` user info value.
 @property (nonatomic, copy) NSPredicate *validationPredicate;

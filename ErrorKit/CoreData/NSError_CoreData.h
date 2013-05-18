@@ -48,7 +48,7 @@
 @property (nonatomic, readonly) NSString *validationKey;
 
 /// Getter for `NSValidationObjectErrorKey` user info value.
-@property (nonatomic, readonly) NSManagedObject *validationObject;
+@property (nonatomic, readonly) id /* NSManagedObject */validationObject;
 
 /// Getter for `NSValidationPredicateErrorKey` user info value.
 @property (nonatomic, readonly) NSPredicate *validationPredicate;

@@ -38,6 +38,9 @@
 #import <AVFoundation/AVError.h>
 #import "MRErrorFormatter_AVFoundation.h"
 #endif
+#ifdef ERROR_KIT_CORE_DATA
+#import "NSError_CoreData.h"
+#endif
 #ifdef ERROR_KIT_CORE_LOCATION
 #import <CoreLocation/CLError.h>
 #import <CoreLocation/CLErrorDomain.h>
@@ -154,6 +157,12 @@
     if (error.recoveryAttempter && error.localizedRecoverySuggestion) {
         [stringComponents addObject:error.localizedRecoverySuggestion];
     }
+#ifdef ERROR_KIT_CORE_DATA
+    if (stringComponents.count == 0 && error.isValidationError && error.detailedErrors.count > 1) {
+        [stringComponents addObject:[NSString stringWithFormat:MRErrorKitString(@"There were %@ validation errors", nil)
+                                     , @(error.detailedErrors.count)]];
+    }
+#endif
     return [stringComponents componentsJoinedByString:@"\n"];
 }
 

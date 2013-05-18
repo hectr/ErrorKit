@@ -531,12 +531,12 @@
     [self setUserInfoValue:validationKey.copy forKey:NSValidationKeyErrorKey];
 }
 
-- (NSManagedObject *)validationObject
+- (id)validationObject
 {
     return [self.userInfo objectForKey:NSValidationObjectErrorKey];
 }
 
-- (void)setValidationObject:(NSManagedObject *)validationObject
+- (void)setValidationObject:(id)validationObject
 {
     [self setUserInfoValue:validationObject forKey:NSValidationObjectErrorKey];
 }
