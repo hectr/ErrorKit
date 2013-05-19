@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ErrorKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Error Kit is a handy iOS library for making NSError handling easier."
   s.description  = <<-DESC
   Error Kit is a handy iOS library for making NSError handling easier.
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'AdMob' do |ad|
     ad.source_files = 'ErrorKit/AdMob'
-    ad.dependency 'AdMob', '6.4.0'
+    ad.dependency 'AdMob', '6.4.1'
     ad.prefix_header_contents = '#define ERROR_KIT_ADMOB 1'
   end
   
