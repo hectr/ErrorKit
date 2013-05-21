@@ -22,6 +22,8 @@
 
 #import "NSError+ErrorKit.h"
 
+@class FBSession;
+
 
 /**
  Adds getters for FBError `userInfo` values.

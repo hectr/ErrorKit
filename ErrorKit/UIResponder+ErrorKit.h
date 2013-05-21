@@ -28,7 +28,15 @@
  */
 @interface UIResponder (ErrorKit)
 
-/// Sends `willPresentError:` to self before forwarding the `presentError:delegate:didPresentSelector:contextInfo:` message to the next object in the chain.
+/**
+ Sends `willPresentError:` to self before forwarding the `presentError:delegate:didPresentSelector:contextInfo:` message to the next object in the chain.
+ 
+ @param error An object containing information about an error.
+ @param delegate An object that is the delegate.
+ @param didPresentSelector A selector identifying the method implemented by the delegate.
+ @param contextInfo Arbitrary data associated with the attempt at error recovery, to be passed to `delegate` in `didRecoverSelector`.
+ @return `YES` if the error has been presented, `NO` otherwise.
+ */
 - (BOOL)presentError:(NSError *)error
             delegate:(id)delegate
   didPresentSelector:(SEL)didPresentSelector
@@ -58,7 +66,15 @@
  */
 @interface UIApplication (ErrorKit)
 
-/// Sends `application:willPresentError:` to app delegate before displaying the error.
+/**
+ Sends `application:willPresentError:` to app delegate before displaying the error.
+ 
+ @param error An object containing information about an error.
+ @param delegate An object that is the delegate.
+ @param didPresentSelector A selector identifying the method implemented by the delegate.
+ @param contextInfo Arbitrary data associated with the attempt at error recovery, to be passed to `delegate` in `didRecoverSelector`.
+ @return `YES` if the error has been presented, `NO` otherwise.
+ */
 - (BOOL)presentError:(NSError *)error
             delegate:(id)delegate
   didPresentSelector:(SEL)didPresentSelector

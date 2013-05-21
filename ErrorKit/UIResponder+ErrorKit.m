@@ -22,6 +22,14 @@
 
 #import "UIResponder+ErrorKit.h"
 #import "UIAlertView+ErrorKit.h"
+#ifdef ERROR_KIT_FACEBOOK
+#import <FacebookSDK/NSError+FBError.h>
+#import <FacebookSDK/FBError.h>
+#import <FacebookSDK/FBErrorUtility.h>
+#import "NSError_FacebookSDK.h"
+#import "MRErrorBuilder_FacebookSDK.h"
+#import "MRErrorFormatter_FacebookSDK.h"
+#endif
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -58,6 +66,109 @@
 {
     return error;
 }
+
+#pragma mark - Facebook handlers
+
+#ifdef ERROR_KIT_FACEBOOK
+
+- (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock
+{
+    MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+    if (error.fberrorCategory == FBErrorCategoryUserCancelled) {
+        if (error.innerError) {
+            builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+            builder.localizedFailureReason = [MRErrorFormatter stringWithDomain:error.innerError.domain code:error.innerError.code];
+        } else {
+            builder = nil;
+        }
+    } else if (error.fberrorShouldNotifyUser) {
+        if ([error.loginFailedReason isEqualToString:FBErrorLoginFailedReasonSystemDisallowedWithoutErrorValue]) {
+            builder.localizedDescription = MRErrorKitString(@"App Disabled", nil);
+            NSString *localizedFormat = MRErrorKitString(@"Go to Settings > Facebook and turn ON %@.", nil);
+            NSString *localizedName = [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleNameKey];
+            builder.localizedFailureReason = [NSString stringWithFormat:localizedFormat, localizedName];
+        } else {
+            //builder.localizedDescription = MRErrorKitString(@"Something Went Wrong", nil);
+            builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+            builder.localizedFailureReason = error.fberrorUserMessage;
+        }
+    } else if (error.fberrorCategory == FBErrorCategoryAuthenticationReopenSession) {
+        builder.localizedDescription = MRErrorKitString(@"Session Error", nil);
+        NSInteger underlyingSubCode = [error.parsedJSONResponse [@"body"]
+                                       [@"error"]
+                                       [@"error_subcode"] integerValue];
+        if (underlyingSubCode == FBAuthSubcodeAppNotInstalled) {
+            builder.localizedFailureReason = MRErrorKitString(@"The app was removed. Please log in again.", nil);
+        } else {
+            builder.localizedFailureReason = MRErrorKitString(@"Your current session is no longer valid. Please log in again.", nil);
+        }
+        if (loginBlock) {
+            [builder addRecoveryOption:MRErrorKitString(@"Log in", nil) withBlock:loginBlock];
+        }
+    } else {
+        //builder.localizedDescription  = MRErrorKitString(@"Unknown Error", nil);
+        builder.localizedDescription  = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = MRErrorKitString(@"Error. Please try again later.", nil);
+    }
+    return [self presentError:builder.error];
+}
+
+- (BOOL)handleFacebookRequestPermissionError:(NSError *)error
+{
+    MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+    if (error.fberrorCategory == FBErrorCategoryUserCancelled){
+        if (error.innerError) {
+            builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+            builder.localizedFailureReason = [MRErrorFormatter stringWithDomain:error.innerError.domain code:error.innerError.code];
+        } else {
+            builder = nil;
+        }
+    } else if (error.fberrorShouldNotifyUser) {
+        //builder.localizedDescription = MRErrorKitString(@"Something Went Wrong", nil);
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = error.fberrorUserMessage;
+    } else {
+        builder.localizedDescription = MRErrorKitString(@"Permission Error", nil);
+        builder.localizedFailureReason = MRErrorKitString(@"Unable to request permissions", nil);
+    }
+    return [self presentError:builder.error];
+}
+
+- (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock
+{
+    MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+    if (error.fberrorCategory == FBErrorCategoryRetry ||
+        error.fberrorCategory == FBErrorCategoryThrottling) {
+        builder.localizedDescription = MRErrorKitString(@"Facebook Error", nil);
+        if (retryBlock) {
+            [builder addRecoveryOption:MRErrorKitString(@"Retry", nil) withBlock:retryBlock];
+        }
+    }
+    if (error.fberrorCategory == FBErrorCategoryUserCancelled){
+        if (error.innerError) {
+            builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+            builder.localizedFailureReason = [MRErrorFormatter stringWithDomain:error.innerError.domain code:error.innerError.code];
+        } else {
+            builder = nil;
+        }
+    } else if (error.fberrorShouldNotifyUser) {
+        //builder.localizedDescription = MRErrorKitString(@"Something Went Wrong", nil);
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = error.fberrorUserMessage;
+    } else if (error.fberrorCategory == FBErrorCategoryPermissions) {
+        builder.localizedDescription = MRErrorKitString(@"Permission Error", nil);
+        if (permissionBlock) {
+            [builder addRecoveryOption:MRErrorKitString(@"Grant permission", nil) withBlock:permissionBlock];
+        }
+    } else  {
+        //builder.localizedDescription = MRErrorKitString(@"Unknown error", nil);
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = MRErrorKitString(@"Unable to post to open graph. Please try again later.", nil);
+    }
+    [self presentError:error];
+}
+
+#endif
 
 @end
 

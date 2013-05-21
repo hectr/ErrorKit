@@ -22,6 +22,8 @@
 
 #import "MRErrorBuilder.h"
 
+@class FBSession;
+
 
 /**
  Adds accessors for FBError `userInfo` values.

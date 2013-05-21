@@ -30,6 +30,7 @@
 
 #import "MRErrorFormatter.h"
 
+#import "MRBlockRecoveryAttempter.h"
 #import "MRChainedRecoveryAttempter.h"
 
 #ifdef UIKIT_STATIC_INLINE
@@ -52,9 +53,15 @@
 #import "MRErrorBuilder_CoreData.h"
 #endif
 
+#ifdef ERROR_KIT_FACEBOOK
+#import "UIResponder_FacebookSDK.h"
+#import "NSError_FacebookSDK.h"
+#import "MRErrorBuilder_FacebookSDK.h"
+#endif
+
 #ifdef ERROR_KIT_HTTP
-#import "MRErrorFormatter_HTTP.h"
 #import "NSError_HTTP.h"
+#import "MRErrorFormatter_HTTP.h"
 #endif
 
 #ifdef ERROR_KIT_JSON_KIT
