@@ -22,39 +22,43 @@
 
 #import "MRErrorFormatter+ErrorCode.h"
 
-#ifdef ERROR_KIT_ACCOUNTS
+#if defined(ERROR_KIT_ACCOUNTS) & !defined(_ERRORKITDEFINES_H)
 #import <Accounts/Accounts.h>
 #endif
-#ifdef ERROR_KIT_ADMOB
+#if defined(ERROR_KIT_ADMOB) & !defined(_ERRORKITDEFINES_H)
 #import <AdMob/GADRequestError.h>
 #endif
-#ifdef ERROR_KIT_AVFOUNDATION
+#if defined(ERROR_KIT_AVFOUNDATION) & !defined(_ERRORKITDEFINES_H)
 #import <AVFoundation/AVError.h>
 #endif
-#ifdef ERROR_KIT_CORE_DATA
+#if defined(ERROR_KIT_CORE_DATA) & !defined(_ERRORKITDEFINES_H)
 #import <CoreData/CoreDataErrors.h>
 #endif
-#ifdef ERROR_KIT_CORE_LOCATION
+#if defined(ERROR_KIT_CORE_LOCATION) & !defined(_ERRORKITDEFINES_H)
 #import <CoreLocation/CLError.h>
 #import <CoreLocation/CLErrorDomain.h>
 #endif
-#ifdef ERROR_KIT_FACEBOOK
+#if defined(ERROR_KIT_FACEBOOK) & !defined(_ERRORKITDEFINES_H)
 #import <FacebookSDK/FacebookSDK.h>
 #endif
-#ifdef ERROR_KIT_IAD
+#if defined(ERROR_KIT_IAD) & !defined(_ERRORKITDEFINES_H)
 #import <iAd/iAd.h>
 #endif
-#ifdef ERROR_KIT_MAP_KIT
+#if defined(ERROR_KIT_MAP_KIT) & !defined(_ERRORKITDEFINES_H)
 #import <MapKit/MapKit.h>
 #endif
-#ifdef ERROR_KIT_MESSAGE_UI
+#if defined(ERROR_KIT_MESSAGE_UI) & !defined(_ERRORKITDEFINES_H)
 #import <MessageUI/MessageUI.h>
 #endif
-#ifdef ERROR_KIT_STORE_KIT
+#if defined(ERROR_KIT_STORE_KIT) & !defined(_ERRORKITDEFINES_H)
 #import <StoreKit/StoreKit.h>
 #endif
-#ifdef ERROR_KIT_TRANSITION_KIT
+#if defined(ERROR_KIT_TRANSITION_KIT) & !defined(_ERRORKITDEFINES_H)
 #import <TransitionKit/TransitionKit.h>
+#endif
+
+#if  ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
 #endif
 
 #define mr_stringize_error_code(arg) [NSString stringWithUTF8String:#arg]

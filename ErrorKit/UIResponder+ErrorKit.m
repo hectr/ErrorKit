@@ -23,9 +23,11 @@
 #import "UIResponder+ErrorKit.h"
 #import "UIAlertView+ErrorKit.h"
 #ifdef ERROR_KIT_FACEBOOK
+#ifndef _ERRORKITDEFINES_H
 #import <FacebookSDK/NSError+FBError.h>
 #import <FacebookSDK/FBError.h>
 #import <FacebookSDK/FBErrorUtility.h>
+#endif
 #import "NSError_FacebookSDK.h"
 #import "MRErrorBuilder_FacebookSDK.h"
 #import "MRErrorFormatter_FacebookSDK.h"
@@ -88,7 +90,6 @@
             NSString *localizedName = [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleNameKey];
             builder.localizedFailureReason = [NSString stringWithFormat:localizedFormat, localizedName];
         } else {
-            //builder.localizedDescription = MRErrorKitString(@"Something Went Wrong", nil);
             builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
             builder.localizedFailureReason = error.fberrorUserMessage;
         }
@@ -106,7 +107,6 @@
             [builder addRecoveryOption:MRErrorKitString(@"Log in", nil) withBlock:loginBlock];
         }
     } else {
-        //builder.localizedDescription  = MRErrorKitString(@"Unknown Error", nil);
         builder.localizedDescription  = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
         builder.localizedFailureReason = MRErrorKitString(@"Error. Please try again later.", nil);
     }
@@ -124,7 +124,6 @@
             builder = nil;
         }
     } else if (error.fberrorShouldNotifyUser) {
-        //builder.localizedDescription = MRErrorKitString(@"Something Went Wrong", nil);
         builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
         builder.localizedFailureReason = error.fberrorUserMessage;
     } else {
@@ -165,7 +164,7 @@
         builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
         builder.localizedFailureReason = MRErrorKitString(@"Unable to post to open graph. Please try again later.", nil);
     }
-    [self presentError:error];
+    [self presentError:builder.error];
 }
 
 #endif

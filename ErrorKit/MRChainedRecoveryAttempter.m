@@ -64,32 +64,6 @@
 
 #pragma mark - NSObject
 
-//- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
-//{
-//    NSMethodSignature *signature = [super methodSignatureForSelector:selector];
-//    if (signature == nil) {
-//        signature = [self.nextAttempter methodSignatureForSelector:selector];
-//    }
-//    return signature;
-//}
-//
-//- (void)forwardInvocation:(NSInvocation *)anInvocation
-//{
-//    if ([self.nextAttempter respondsToSelector:anInvocation.selector]) {
-//        [anInvocation invokeWithTarget:self.nextAttempter];
-//    } else {
-//        [super forwardInvocation:anInvocation];
-//    }
-//}
-//
-//- (BOOL)respondsToSelector:(SEL)aSelector
-//{
-//    if ([super respondsToSelector:aSelector]) {
-//        return YES;
-//    }
-//    return [self.nextAttempter respondsToSelector:aSelector];
-//}
-
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@: %p, next attempter %p>"

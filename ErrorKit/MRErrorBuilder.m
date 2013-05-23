@@ -25,25 +25,33 @@
 #import "MRErrorFormatter.h"
 #import "MRChainedRecoveryAttempter.h"
 #ifdef ERROR_KIT_AFNETWORKING
+#ifndef _ERRORKITDEFINES_H
 #import <AFNetworking/AFURLConnectionOperation.h>
+#endif
 #import "NSError_AFNetworking.h"
 #endif
 #ifdef ERROR_KIT_AVFOUNDATION
+#ifndef _ERRORKITDEFINES_H
 #import <AVFoundation/AVError.h>
+#endif
 #import "NSError_AVFoundation.h"
 #endif
 #ifdef ERROR_KIT_CORE_DATA
+#ifndef _ERRORKITDEFINES_H
 #import <CoreData/CoreDataErrors.h>
+#endif
 #import "NSError_CoreData.h"
 #endif
 #ifdef ERROR_KIT_FACEBOOK
+#ifndef _ERRORKITDEFINES_H
 #import <FacebookSDK/FacebookSDK.h>
+#endif
 #import "NSError_FacebookSDK.h"
 #endif
 #ifdef ERROR_KIT_JSON_KIT
 #import "NSError_JSONKit.h"
 #endif
-#ifdef ERROR_KIT_STORE_KIT
+#if defined(ERROR_KIT_STORE_KIT) & !defined(_ERRORKITDEFINES_H)
 #import <StoreKit/StoreKit.h>
 #endif
 

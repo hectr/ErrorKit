@@ -22,25 +22,27 @@
 
 #import "NSError+ErrorKit.h"
 #import "MRErrorFormatter+ErrorCode.h"
-#ifdef ERROR_KIT_AFNETWORKING
+#if defined(ERROR_KIT_AFNETWORKING) & !defined(_ERRORKITDEFINES_H)
 #import <AFNetworking/AFURLConnectionOperation.h>
 #endif
-#ifdef ERROR_KIT_AVFOUNDATION
+#if defined(ERROR_KIT_AVFOUNDATION) & !defined(_ERRORKITDEFINES_H)
 #import <AVFoundation/AVError.h>
 #import <AVFoundation/AVTime.h>
 #endif
 #ifdef ERROR_KIT_CORE_DATA
+#ifndef _ERRORKITDEFINES_H
 #import <CoreData/CoreDataErrors.h>
+#endif
 #import "MRErrorBuilder_CoreData.h"
 #endif
-#ifdef ERROR_KIT_CORE_LOCATION
+#if defined(ERROR_KIT_CORE_LOCATION) & !defined(_ERRORKITDEFINES_H)
 #import <CoreLocation/CLError.h>
 #import <CoreLocation/CLErrorDomain.h>
 #endif
-#ifdef ERROR_KIT_FACEBOOK
+#if defined(ERROR_KIT_FACEBOOK) & !defined(_ERRORKITDEFINES_H)
 #import <FacebookSDK/FacebookSDK.h>
 #endif
-#ifdef ERROR_KIT_STORE_KIT
+#if defined(ERROR_KIT_STORE_KIT) & !defined(_ERRORKITDEFINES_H)
 #import <StoreKit/StoreKit.h>
 #endif
 
