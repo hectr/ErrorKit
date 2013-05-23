@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "NSError+ErrorKit.h"
+#import "MRErrorFormatter+ErrorCode.h"
 #ifdef ERROR_KIT_AFNETWORKING
 #import <AFNetworking/AFURLConnectionOperation.h>
 #endif
@@ -265,6 +266,11 @@
 
 
 @implementation NSError (ErrorKit_Helper)
+
+- (NSString *)debugString
+{
+    return [MRErrorFormatter debugStringWithDomain:self.domain code:self.code];
+}
 
 - (BOOL)isCancelledError
 {

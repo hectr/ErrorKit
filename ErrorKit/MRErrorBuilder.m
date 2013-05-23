@@ -717,6 +717,11 @@
 
 @implementation MRErrorBuilder (ErrorKit_Helper)
 
+- (NSString *)debugString
+{
+    return [MRErrorFormatter debugStringWithDomain:self.domain code:self.code];
+}
+
 - (BOOL)isCancelledError
 {
 #ifdef ERROR_KIT_AFNETWORKING

@@ -71,6 +71,9 @@
  */
 @interface NSError (ErrorKit_Helper)
 
+/// Wrapper for `[MRErrorFormatter debugStringWithDomain:self.domain code:self.code]`.
+- (NSString *)debugString;
+
 /// Returns YES if the error code corresponds to a cancelled operation in `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
 - (BOOL)isCancelledError;
 
