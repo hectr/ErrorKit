@@ -89,7 +89,7 @@
 /// @name Other userInfo values
 
 /// Accessors for `@"NSDebugDescription"` user info value.
-@property (nonatomic, copy) NSString *debugDescription;
+@property (nonatomic, copy) NSString *debugDescriptionValue;
 
 /// Accessors for `@"NSUnderlyingException"` user info value.
 @property (nonatomic, strong) NSException *underlyingException;

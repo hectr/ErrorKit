@@ -63,7 +63,7 @@
         [[self alloc] initWithDomain:error.domain
                                 code:error.code
                             userInfo:error.userInfo];
-    builder.debugDescription = error.debugDescription;
+    builder.debugDescriptionValue = error.debugDescriptionValue;
     builder.failingURL = error.failingURL;
     builder.failingURLPeerTrust = error.failingURLPeerTrust;
     builder.failingURLString = error.failingURLString;
@@ -221,12 +221,12 @@
 
 #pragma mark Accessor methods
 
-- (NSString *)debugDescription
+- (NSString *)debugDescriptionValue
 {
     return [self.userInfo objectForKey:@"NSDebugDescription"];
 }
 
-- (void)setDebugDescription:(NSString *)debugDescription
+- (void)setDebugDescriptionValue:(NSString *)debugDescription
 {
     [self setUserInfoValue:debugDescription.copy forKey:@"NSDebugDescription"];
 }

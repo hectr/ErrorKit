@@ -52,7 +52,7 @@
 
 #pragma mark - Common
 
-- (NSString *)debugDescription
+- (NSString *)debugDescriptionValue
 {
     return [self.userInfo objectForKey:@"NSDebugDescription"];
 }

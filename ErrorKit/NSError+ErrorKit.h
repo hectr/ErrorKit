@@ -58,7 +58,7 @@
 /// @name Other userInfo values
 
 /// Getter for `@"NSDebugDescription"` user info value.
-@property (nonatomic, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) NSString *debugDescriptionValue;
 
 /// Getter for `@"NSUnderlyingException"` user info value.
 @property (nonatomic, readonly) NSException *underlyingException;
