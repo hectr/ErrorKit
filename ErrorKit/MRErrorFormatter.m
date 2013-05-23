@@ -23,54 +23,80 @@
 #import "MRErrorFormatter.h"
 #import "MRErrorFormatter+ErrorCode.h"
 #ifdef ERROR_KIT_ACCOUNTS
+#ifndef _ERRORKITDEFINES_H
 #import <Accounts/Accounts.h>
+#endif
 #import "MRErrorFormatter_Accounts.h"
 #endif
 #ifdef ERROR_KIT_ADMOB
+#ifndef _ERRORKITDEFINES_H
 #import <AdMob/GADRequestError.h>
+#endif
 #import "MRErrorFormatter_Admob.h"
 #endif
 #ifdef ERROR_KIT_AFNETWORKING
 #import "NSError_AFNetworking.h"
+#ifndef _ERRORKITDEFINES_H
 #import <AFNetworking/AFURLConnectionOperation.h>
 #endif
+#endif
 #ifdef ERROR_KIT_AVFOUNDATION
+#ifndef _ERRORKITDEFINES_H
 #import <AVFoundation/AVError.h>
+#endif
 #import "MRErrorFormatter_AVFoundation.h"
 #endif
 #ifdef ERROR_KIT_CORE_DATA
+#ifndef _ERRORKITDEFINES_H
+#import <CoreData/CoreDataErrors.h>
+#endif
 #import "NSError_CoreData.h"
+#import "MRErrorFormatter_CoreData.h"
 #endif
 #ifdef ERROR_KIT_CORE_LOCATION
+#ifndef _ERRORKITDEFINES_H
 #import <CoreLocation/CLError.h>
 #import <CoreLocation/CLErrorDomain.h>
+#endif
 #import "MRErrorFormatter_CoreLocation.h"
 #endif
 #ifdef ERROR_KIT_FACEBOOK
+#ifndef _ERRORKITDEFINES_H
 #import <FacebookSDK/FacebookSDK.h>
+#endif
 #import "MRErrorFormatter_FacebookSDK.h"
 #endif
 #ifdef ERROR_KIT_IAD
+#ifndef _ERRORKITDEFINES_H
 #import <iAd/iAd.h>
+#endif
 #import "MRErrorFormatter_iAD.h"
 #endif
 #ifdef ERROR_KIT_JSON_KIT
 #import "MRErrorFormatter_JSONKit.h"
 #endif
 #ifdef ERROR_KIT_MAP_KIT
+#ifndef _ERRORKITDEFINES_H
 #import <MapKit/MapKit.h>
+#endif
 #import "MRErrorFormatter_MapKit.h"
 #endif
 #ifdef ERROR_KIT_MESSAGE_UI
+#ifndef _ERRORKITDEFINES_H
 #import <MessageUI/MessageUI.h>
+#endif
 #import "MRErrorFormatter_MessageUI.h"
 #endif
 #ifdef ERROR_KIT_STORE_KIT
+#ifndef _ERRORKITDEFINES_H
 #import <StoreKit/StoreKit.h>
+#endif
 #import "MRErrorFormatter_StoreKit.h"
 #endif
 #ifdef ERROR_KIT_TRANSITION_KIT
+#ifndef _ERRORKITDEFINES_H
 #import <TransitionKit/TransitionKit.h>
+#endif
 #import "MRErrorFormatter_TransitionKit.h"
 #endif
 
@@ -158,9 +184,8 @@
         [stringComponents addObject:error.localizedRecoverySuggestion];
     }
 #ifdef ERROR_KIT_CORE_DATA
-    if (stringComponents.count == 0 && error.isValidationError && error.detailedErrors.count > 1) {
-        [stringComponents addObject:[NSString stringWithFormat:MRErrorKitString(@"There were %@ validation errors", nil)
-                                     , @(error.detailedErrors.count)]];
+    if (stringComponents.count == 0 && error.isValidationError && error.code == NSValidationMultipleErrorsError) {
+        [stringComponents addObject:[self stringWithValidationError:error]];
     }
 #endif
     return [stringComponents componentsJoinedByString:@"\n"];
@@ -355,6 +380,59 @@
 }
 
 @end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation MRErrorFormatter (ErrorKit_CoreData_Helper)
+
+#ifdef ERROR_KIT_CORE_DATA
+
++ (NSString *)stringWithValidationError:(NSError *)error
+{
+    switch (error.code) {
+        case NSManagedObjectValidationError:
+            return MRErrorKitString(@"Generic validation error.", nil);
+        case NSValidationMultipleErrorsError:
+            return [NSString stringWithFormat:MRErrorKitString(@"There were %@ validation errors.", nil), @(error.detailedErrors.count)];
+        case NSValidationMissingMandatoryPropertyError:
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' mustn't be empty.", nil), error.validationKey];
+        case NSValidationRelationshipLacksMinimumCountError:
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' doesn't have enough entries.", nil), error.validationKey];
+        case NSValidationRelationshipExceedsMaximumCountError:
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' has too many entries.", nil), error.validationKey];
+        case NSValidationRelationshipDeniedDeleteError:
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is not empty.", nil), error.validationKey];
+        case NSValidationNumberTooLargeError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The number of '%@' is too large.", nil), error.validationKey];
+        case NSValidationNumberTooSmallError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The number of '%@' is too small.", nil), error.validationKey];
+        case NSValidationDateTooLateError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The date of '%@' is too late.", nil), error.validationKey];
+        case NSValidationDateTooSoonError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The date of '%@' is too soon.", nil), error.validationKey];
+        case NSValidationInvalidDateError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The date of '%@' is invalid.", nil), error.validationKey];
+        case NSValidationStringTooLongError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The text of '%@' is too long.", nil), error.validationKey];
+        case NSValidationStringTooShortError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The text of '%@' is too short.", nil), error.validationKey];
+        case NSValidationStringPatternMatchingError:
+            return [NSString stringWithFormat:MRErrorKitString(@"The text of '%@' doesn't match the required pattern.", nil), error.validationKey];
+        default:
+            return nil;
+    }
+}
+
+#endif
+
+@end
+
+
+#pragma mark -
+#pragma mark -
 
 
 NSString *MRErrorKitString(NSString *key, NSString *comment)

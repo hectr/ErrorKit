@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		84040EF6173826EF00548BE6 /* NSError_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSError_HTTP.h; path = ../../ErrorKit/HTTP/NSError_HTTP.h; sourceTree = "<group>"; };
 		8419D1F2171B539500143B54 /* ErrorKitDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ErrorKitDefines.h; path = ../../ErrorKit/ErrorKitDefines.h; sourceTree = "<group>"; };
+		8458E357174ECD38003DB731 /* MRErrorFormatter_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_CoreData.h; path = ../../ErrorKit/CoreData/MRErrorFormatter_CoreData.h; sourceTree = "<group>"; };
 		84B2B394174AB5AF004E8ED3 /* UIResponder_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIResponder_FacebookSDK.h; path = ../../ErrorKit/FacebookSDK/UIResponder_FacebookSDK.h; sourceTree = "<group>"; };
 		84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_AVFoundation.h; path = ../../ErrorKit/AVFoundation/MRErrorFormatter_AVFoundation.h; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +201,7 @@
 				84F8AEB91715FFE3001E1FD4 /* MRErrorFormatter_Accounts.h */,
 				84F8AEBA1715FFF5001E1FD4 /* MRErrorFormatter_Admob.h */,
 				84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */,
+				8458E357174ECD38003DB731 /* MRErrorFormatter_CoreData.h */,
 				84F8AEBB1715FFFF001E1FD4 /* MRErrorFormatter_CoreLocation.h */,
 				84F8AEBC17160008001E1FD4 /* MRErrorFormatter_FacebookSDK.h */,
 				84F8AEBD17160019001E1FD4 /* MRErrorFormatter_HTTP.h */,
