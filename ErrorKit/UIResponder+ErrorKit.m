@@ -21,17 +21,7 @@
 // THE SOFTWARE.
 
 #import "UIResponder+ErrorKit.h"
-#import "UIAlertView+ErrorKit.h"
-#ifdef ERROR_KIT_FACEBOOK
-#ifndef _ERRORKITDEFINES_H
-#import <FacebookSDK/NSError+FBError.h>
-#import <FacebookSDK/FBError.h>
-#import <FacebookSDK/FBErrorUtility.h>
-#endif
-#import "NSError_FacebookSDK.h"
-#import "MRErrorBuilder_FacebookSDK.h"
-#import "MRErrorFormatter_FacebookSDK.h"
-#endif
+#import "ErrorKitImports.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag

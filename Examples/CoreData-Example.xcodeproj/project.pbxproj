@@ -37,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841676491753EC6400DB89F6 /* ErrorKitImports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ErrorKitImports.h; path = ../ErrorKit/ErrorKitImports.h; sourceTree = "<group>"; };
 		84257FDA173ACDDB00AA1990 /* CoreData-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreData-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84257FDD173ACDDB00AA1990 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84257FDF173ACDDB00AA1990 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -192,6 +193,7 @@
 			children = (
 				84258000173AD3D200AA1990 /* ErrorKit.h */,
 				84258001173AD3D200AA1990 /* ErrorKitDefines.h */,
+				841676491753EC6400DB89F6 /* ErrorKitImports.h */,
 				84258031173AD3DF00AA1990 /* access */,
 				84258032173AD3E800AA1990 /* build */,
 				84258033173AD3EE00AA1990 /* format */,

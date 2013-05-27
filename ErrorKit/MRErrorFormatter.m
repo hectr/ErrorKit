@@ -21,84 +21,7 @@
 // THE SOFTWARE.
 
 #import "MRErrorFormatter.h"
-#import "MRErrorFormatter+ErrorCode.h"
-#ifdef ERROR_KIT_ACCOUNTS
-#ifndef _ERRORKITDEFINES_H
-#import <Accounts/Accounts.h>
-#endif
-#import "MRErrorFormatter_Accounts.h"
-#endif
-#ifdef ERROR_KIT_ADMOB
-#ifndef _ERRORKITDEFINES_H
-#import <AdMob/GADRequestError.h>
-#endif
-#import "MRErrorFormatter_Admob.h"
-#endif
-#ifdef ERROR_KIT_AFNETWORKING
-#import "NSError_AFNetworking.h"
-#ifndef _ERRORKITDEFINES_H
-#import <AFNetworking/AFURLConnectionOperation.h>
-#endif
-#endif
-#ifdef ERROR_KIT_AVFOUNDATION
-#ifndef _ERRORKITDEFINES_H
-#import <AVFoundation/AVError.h>
-#endif
-#import "MRErrorFormatter_AVFoundation.h"
-#endif
-#ifdef ERROR_KIT_CORE_DATA
-#ifndef _ERRORKITDEFINES_H
-#import <CoreData/CoreDataErrors.h>
-#endif
-#import "NSError_CoreData.h"
-#import "MRErrorFormatter_CoreData.h"
-#endif
-#ifdef ERROR_KIT_CORE_LOCATION
-#ifndef _ERRORKITDEFINES_H
-#import <CoreLocation/CLError.h>
-#import <CoreLocation/CLErrorDomain.h>
-#endif
-#import "MRErrorFormatter_CoreLocation.h"
-#endif
-#ifdef ERROR_KIT_FACEBOOK
-#ifndef _ERRORKITDEFINES_H
-#import <FacebookSDK/FacebookSDK.h>
-#endif
-#import "MRErrorFormatter_FacebookSDK.h"
-#endif
-#ifdef ERROR_KIT_IAD
-#ifndef _ERRORKITDEFINES_H
-#import <iAd/iAd.h>
-#endif
-#import "MRErrorFormatter_iAD.h"
-#endif
-#ifdef ERROR_KIT_JSON_KIT
-#import "MRErrorFormatter_JSONKit.h"
-#endif
-#ifdef ERROR_KIT_MAP_KIT
-#ifndef _ERRORKITDEFINES_H
-#import <MapKit/MapKit.h>
-#endif
-#import "MRErrorFormatter_MapKit.h"
-#endif
-#ifdef ERROR_KIT_MESSAGE_UI
-#ifndef _ERRORKITDEFINES_H
-#import <MessageUI/MessageUI.h>
-#endif
-#import "MRErrorFormatter_MessageUI.h"
-#endif
-#ifdef ERROR_KIT_STORE_KIT
-#ifndef _ERRORKITDEFINES_H
-#import <StoreKit/StoreKit.h>
-#endif
-#import "MRErrorFormatter_StoreKit.h"
-#endif
-#ifdef ERROR_KIT_TRANSITION_KIT
-#ifndef _ERRORKITDEFINES_H
-#import <TransitionKit/TransitionKit.h>
-#endif
-#import "MRErrorFormatter_TransitionKit.h"
-#endif
+#import "ErrorKitImports.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
@@ -184,8 +107,14 @@
         [stringComponents addObject:error.localizedRecoverySuggestion];
     }
 #ifdef ERROR_KIT_CORE_DATA
-    if (stringComponents.count == 0 && error.isValidationError && error.code == NSValidationMultipleErrorsError) {
-        [stringComponents addObject:[self stringWithValidationError:error]];
+    if (stringComponents.count == 0 && error.isValidationError) {
+        if (error.code == NSValidationMultipleErrorsError
+        || (error.validationObject == nil && error.validationKey)) {
+            NSString *component = [self stringWithValidationError:error];
+            if (component) {
+                [stringComponents addObject:component];
+            }
+        }
     }
 #endif
     return [stringComponents componentsJoinedByString:@"\n"];

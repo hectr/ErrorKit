@@ -21,39 +21,7 @@
 // THE SOFTWARE.
 
 #import "MRErrorBuilder.h"
-#import "NSError+ErrorKit.h"
-#import "MRErrorFormatter.h"
-#import "MRChainedRecoveryAttempter.h"
-#ifdef ERROR_KIT_AFNETWORKING
-#ifndef _ERRORKITDEFINES_H
-#import <AFNetworking/AFURLConnectionOperation.h>
-#endif
-#import "NSError_AFNetworking.h"
-#endif
-#ifdef ERROR_KIT_AVFOUNDATION
-#ifndef _ERRORKITDEFINES_H
-#import <AVFoundation/AVError.h>
-#endif
-#import "NSError_AVFoundation.h"
-#endif
-#ifdef ERROR_KIT_CORE_DATA
-#ifndef _ERRORKITDEFINES_H
-#import <CoreData/CoreDataErrors.h>
-#endif
-#import "NSError_CoreData.h"
-#endif
-#ifdef ERROR_KIT_FACEBOOK
-#ifndef _ERRORKITDEFINES_H
-#import <FacebookSDK/FacebookSDK.h>
-#endif
-#import "NSError_FacebookSDK.h"
-#endif
-#ifdef ERROR_KIT_JSON_KIT
-#import "NSError_JSONKit.h"
-#endif
-#if defined(ERROR_KIT_STORE_KIT) & !defined(_ERRORKITDEFINES_H)
-#import <StoreKit/StoreKit.h>
-#endif
+#import "ErrorKitImports.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag

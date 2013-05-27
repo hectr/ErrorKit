@@ -21,41 +21,7 @@
 // THE SOFTWARE.
 
 #import "MRErrorFormatter+ErrorCode.h"
-
-#if defined(ERROR_KIT_ACCOUNTS) & !defined(_ERRORKITDEFINES_H)
-#import <Accounts/Accounts.h>
-#endif
-#if defined(ERROR_KIT_ADMOB) & !defined(_ERRORKITDEFINES_H)
-#import <AdMob/GADRequestError.h>
-#endif
-#if defined(ERROR_KIT_AVFOUNDATION) & !defined(_ERRORKITDEFINES_H)
-#import <AVFoundation/AVError.h>
-#endif
-#if defined(ERROR_KIT_CORE_DATA) & !defined(_ERRORKITDEFINES_H)
-#import <CoreData/CoreDataErrors.h>
-#endif
-#if defined(ERROR_KIT_CORE_LOCATION) & !defined(_ERRORKITDEFINES_H)
-#import <CoreLocation/CLError.h>
-#import <CoreLocation/CLErrorDomain.h>
-#endif
-#if defined(ERROR_KIT_FACEBOOK) & !defined(_ERRORKITDEFINES_H)
-#import <FacebookSDK/FacebookSDK.h>
-#endif
-#if defined(ERROR_KIT_IAD) & !defined(_ERRORKITDEFINES_H)
-#import <iAd/iAd.h>
-#endif
-#if defined(ERROR_KIT_MAP_KIT) & !defined(_ERRORKITDEFINES_H)
-#import <MapKit/MapKit.h>
-#endif
-#if defined(ERROR_KIT_MESSAGE_UI) & !defined(_ERRORKITDEFINES_H)
-#import <MessageUI/MessageUI.h>
-#endif
-#if defined(ERROR_KIT_STORE_KIT) & !defined(_ERRORKITDEFINES_H)
-#import <StoreKit/StoreKit.h>
-#endif
-#if defined(ERROR_KIT_TRANSITION_KIT) & !defined(_ERRORKITDEFINES_H)
-#import <TransitionKit/TransitionKit.h>
-#endif
+#import "ErrorKitImports.h"
 
 #if  ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
