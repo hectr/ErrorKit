@@ -166,7 +166,7 @@
     __block NSError *error = nil;
     __block NSManagedObject *dest = nil;
     NSManagedObjectContext *moc = [self managedObjectContextWithError:errorPtr];
-    dest = [mapping objectForKey:src.objectID];
+    dest = mapping[src.objectID];
     if (dest == nil && moc && src.isFault == NO) {
         dest = [NSEntityDescription insertNewObjectForEntityForName:src.entity.name
                                                               inManagedObjectContext:moc];

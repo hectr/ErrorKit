@@ -34,47 +34,47 @@
 
 - (NSString *)debugDescriptionValue
 {
-    return [self.userInfo objectForKey:@"NSDebugDescription"];
+    return self.userInfo[@"NSDebugDescription"];
 }
 
 - (NSURL *)failingURL
 {
-    return [self.userInfo objectForKey:NSURLErrorFailingURLErrorKey];
+    return self.userInfo[NSURLErrorFailingURLErrorKey];
 }
 
 - (SecTrustRef)failingURLPeerTrust
 {
-    return (__bridge SecTrustRef)([self.userInfo objectForKey:NSURLErrorFailingURLPeerTrustErrorKey]);
+    return (__bridge SecTrustRef)(self.userInfo[NSURLErrorFailingURLPeerTrustErrorKey]);
 }
 
 - (NSString *)failingURLString
 {
-    return [self.userInfo objectForKey:NSURLErrorFailingURLStringErrorKey];
+    return self.userInfo[NSURLErrorFailingURLStringErrorKey];
 }
 
 - (NSString *)filePathError
 {
-    return [self.userInfo objectForKey:NSFilePathErrorKey];
+    return self.userInfo[NSFilePathErrorKey];
 }
 
 - (NSStringEncoding)stringEncodingError
 {
-    return [(NSNumber *)[self.userInfo objectForKey:NSStringEncodingErrorKey] unsignedIntegerValue];
+    return [(NSNumber *)self.userInfo[NSStringEncodingErrorKey] unsignedIntegerValue];
 }
 
 - (NSError *)underlyingError
 {
-    return [self.userInfo objectForKey:NSUnderlyingErrorKey];
+    return self.userInfo[NSUnderlyingErrorKey];
 }
 
 - (NSException *)underlyingException
 {
-    return [self.userInfo objectForKey:@"NSUnderlyingException"];
+    return self.userInfo[@"NSUnderlyingException"];
 }
 
 - (NSURL *)urlError
 {
-    return [self.userInfo objectForKey:NSURLErrorKey];
+    return self.userInfo[NSURLErrorKey];
 }
 
 #pragma mark - AFNetworking
@@ -83,12 +83,12 @@
 
 - (NSURLRequest *)failingURLRequest
 {
-    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLRequestErrorKey];
+    return self.userInfo[AFNetworkingOperationFailingURLRequestErrorKey];
 }
 
 - (NSHTTPURLResponse *)failingURLResponse
 {
-    return [self.userInfo objectForKey:AFNetworkingOperationFailingURLResponseErrorKey];
+    return self.userInfo[AFNetworkingOperationFailingURLResponseErrorKey];
 }
 
 #endif
@@ -99,41 +99,41 @@
 
 - (NSString *)deviceName
 {
-    return [self.userInfo objectForKey:AVErrorDeviceKey];
+    return self.userInfo[AVErrorDeviceKey];
 }
 
 - (CMTime)time
 {
     CMTime time;
-    NSValue *value = [self.userInfo objectForKey:AVErrorTimeKey];
+    NSValue *value = self.userInfo[AVErrorTimeKey];
     [value getValue:&time];
     return time;
 }
 
 - (NSNumber *)fileSize
 {
-    return [self.userInfo objectForKey:AVErrorFileSizeKey];
+    return self.userInfo[AVErrorFileSizeKey];
 }
 
 - (NSNumber *)processID
 {
-    return [self.userInfo objectForKey:AVErrorPIDKey];
+    return self.userInfo[AVErrorPIDKey];
 }
 
 - (BOOL)recordingSuccessfullyFinished
 {
-    NSNumber *value = [self.userInfo objectForKey:AVErrorRecordingSuccessfullyFinishedKey];
+    NSNumber *value = self.userInfo[AVErrorRecordingSuccessfullyFinishedKey];
     return value.boolValue;
 }
 
 - (NSString *)mediaType
 {
-    return [self.userInfo objectForKey:AVErrorMediaTypeKey];
+    return self.userInfo[AVErrorMediaTypeKey];
 }
 
 - (NSNumber *)mediaSubType
 {
-    return [self.userInfo objectForKey:AVErrorMediaSubTypeKey];
+    return self.userInfo[AVErrorMediaSubTypeKey];
 }
 
 #endif
@@ -144,42 +144,42 @@
 
 - (NSArray *)affectedObjects
 {
-    return [self.userInfo objectForKey:NSAffectedObjectsErrorKey];
+    return self.userInfo[NSAffectedObjectsErrorKey];
 }
 
 - (NSArray *)affectedStores
 {
-    return [self.userInfo objectForKey:NSAffectedStoresErrorKey];
+    return self.userInfo[NSAffectedStoresErrorKey];
 }
 
 - (NSArray *)detailedErrors
 {
-    return [self.userInfo objectForKey:NSDetailedErrorsKey];
+    return self.userInfo[NSDetailedErrorsKey];
 }
 
 - (NSArray *)persistentStoreSaveConflicts
 {
-    return [self.userInfo objectForKey:NSPersistentStoreSaveConflictsErrorKey];
+    return self.userInfo[NSPersistentStoreSaveConflictsErrorKey];
 }
 
 - (NSString *)validationKey
 {
-    return [self.userInfo objectForKey:NSValidationKeyErrorKey];
+    return self.userInfo[NSValidationKeyErrorKey];
 }
 
 - (id)validationObject
 {
-    return [self.userInfo objectForKey:NSValidationObjectErrorKey];
+    return self.userInfo[NSValidationObjectErrorKey];
 }
 
 - (NSPredicate *)validationPredicate
 {
-    return [self.userInfo objectForKey:NSValidationPredicateErrorKey];
+    return self.userInfo[NSValidationPredicateErrorKey];
 }
 
 - (id)validationValue
 {
-    return [self.userInfo objectForKey:NSValidationValueErrorKey];
+    return self.userInfo[NSValidationValueErrorKey];
 }
 
 #endif
@@ -190,37 +190,37 @@
 
 - (NSError *)innerError
 {
-    return [self.userInfo objectForKey:FBErrorInnerErrorKey];
+    return self.userInfo[FBErrorInnerErrorKey];
 }
 
 - (id)parsedJSONResponse
 {
-    return [self.userInfo objectForKey:FBErrorParsedJSONResponseKey];
+    return self.userInfo[FBErrorParsedJSONResponseKey];
 }
 
 - (NSInteger)HTTPStatusCode
 {
-    return [[self.userInfo objectForKey:FBErrorHTTPStatusCodeKey] integerValue];
+    return [self.userInfo[FBErrorHTTPStatusCodeKey] integerValue];
 }
 
 - (FBSession *)session
 {
-    return [self.userInfo objectForKey:FBErrorSessionKey];
+    return self.userInfo[FBErrorSessionKey];
 }
 
 - (NSString *)loginFailedReason
 {
-    return [self.userInfo objectForKey:FBErrorLoginFailedReason];
+    return self.userInfo[FBErrorLoginFailedReason];
 }
 
 - (NSString *)nativeDialogReason
 {
-    return [self.userInfo objectForKey:FBErrorNativeDialogReasonKey];
+    return self.userInfo[FBErrorNativeDialogReasonKey];
 }
 
 - (NSString *)insightsReason
 {
-    return [self.userInfo objectForKey:FBErrorInsightsReasonKey];
+    return self.userInfo[FBErrorInsightsReasonKey];
 }
 
 #endif
@@ -229,12 +229,12 @@
 
 - (unsigned long)atIndex
 {
-    return [[self.userInfo objectForKey:@"JKAtIndexKey"] unsignedLongValue];
+    return [self.userInfo[@"JKAtIndexKey"] unsignedLongValue];
 }
 
 - (unsigned long)lineNumber
 {
-    return [[self.userInfo objectForKey:@"JKLineNumberKey"] unsignedLongValue];
+    return [self.userInfo[@"JKLineNumberKey"] unsignedLongValue];
 }
 
 @end

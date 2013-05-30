@@ -55,7 +55,7 @@
     });
     NSString *description = [MRErrorFormatter stringWithDomain:domain code:code];
     MRErrorBuilder *builder = [self builderWithDomain:domain code:code description:description];
-    builder.localizedFailureReason = ([__localizedDescriptions objectForKey:exception.name] ?: MRErrorKitString(@"Exception caught", nil));
+    builder.localizedFailureReason = (__localizedDescriptions[exception.name] ?: MRErrorKitString(@"Exception caught", nil));
     builder.underlyingException = exception;
     return builder;
 }
