@@ -1897,4 +1897,28 @@
 
 #endif
 
+#pragma mark - VeriJSON
+
+#ifdef ERROR_KIT_VERI_JSON
+
++ (NSString *)debugStringWithVeriJSONCode:(NSInteger)code
+{
+    switch (code) {
+        case VeriJSONErrorCodeInvalidPattern:
+            return mr_stringize_error_code(VeriJSONErrorCodeInvalidPattern);
+    }
+    return @(code).stringValue;
+}
+
++ (NSString *)stringWithVeriJSONCode:(NSInteger)code
+{
+    switch (code) {
+        case VeriJSONErrorCodeInvalidPattern:
+            return MRErrorKitString(@"Invalid JSON Pattern", nil);
+    }
+    return MRErrorKitString(@"JSON Error", nil);
+}
+
+#endif
+
 @end

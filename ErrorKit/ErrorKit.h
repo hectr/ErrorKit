@@ -77,6 +77,10 @@
 #import "MRErrorFormatter_Security.h"
 #endif
 
+#ifdef ERROR_KIT_VERI_JSON
+#import "MRErrorFormatter_VeriJSON.h"
+#endif
+
 // Logger
 #ifndef MRLogError
 #define MRLogError(error)                                                \

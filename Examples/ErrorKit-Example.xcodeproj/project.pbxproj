@@ -36,6 +36,7 @@
 		84040EF6173826EF00548BE6 /* NSError_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSError_HTTP.h; path = ../../ErrorKit/HTTP/NSError_HTTP.h; sourceTree = "<group>"; };
 		8416764A1753FFAF00DB89F6 /* ErrorKitImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitImports.h; path = ../../ErrorKit/ErrorKitImports.h; sourceTree = "<group>"; };
 		8419D1F2171B539500143B54 /* ErrorKitDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ErrorKitDefines.h; path = ../../ErrorKit/ErrorKitDefines.h; sourceTree = "<group>"; };
+		84448C28175B9ECE00E6D256 /* MRErrorFormatter_VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_VeriJSON.h; path = ../../ErrorKit/VeriJSON/MRErrorFormatter_VeriJSON.h; sourceTree = "<group>"; };
 		8458E357174ECD38003DB731 /* MRErrorFormatter_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_CoreData.h; path = ../../ErrorKit/CoreData/MRErrorFormatter_CoreData.h; sourceTree = "<group>"; };
 		84B2B394174AB5AF004E8ED3 /* UIResponder_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIResponder_FacebookSDK.h; path = ../../ErrorKit/FacebookSDK/UIResponder_FacebookSDK.h; sourceTree = "<group>"; };
 		84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_AVFoundation.h; path = ../../ErrorKit/AVFoundation/MRErrorFormatter_AVFoundation.h; sourceTree = "<group>"; };
@@ -214,6 +215,7 @@
 				84F8AEC217160056001E1FD4 /* MRErrorFormatter_Security.h */,
 				84F8AEC317160063001E1FD4 /* MRErrorFormatter_StoreKit.h */,
 				84F8AEC41716006D001E1FD4 /* MRErrorFormatter_TransitionKit.h */,
+				84448C28175B9ECE00E6D256 /* MRErrorFormatter_VeriJSON.h */,
 			);
 			name = format;
 			sourceTree = "<group>";

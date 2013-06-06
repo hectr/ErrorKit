@@ -108,6 +108,7 @@
 		84258039173AD50300AA1990 /* MRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRViewController.xib; sourceTree = "<group>"; };
 		8425980C1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v01.sqlite"; sourceTree = "<group>"; };
 		8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v02.sqlite"; sourceTree = "<group>"; };
+		84448C29175B9F6000E6D256 /* MRErrorFormatter_VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_VeriJSON.h; path = ../ErrorKit/VeriJSON/MRErrorFormatter_VeriJSON.h; sourceTree = "<group>"; };
 		845E7D6A174EC73100FEB6E5 /* MRErrorFormatter_CoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_CoreData.h; path = ../ErrorKit/CoreData/MRErrorFormatter_CoreData.h; sourceTree = "<group>"; };
 		84B2B393174AB588004E8ED3 /* UIResponder_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIResponder_FacebookSDK.h; path = ../ErrorKit/FacebookSDK/UIResponder_FacebookSDK.h; sourceTree = "<group>"; };
 		84F8054D173D75DD0094C835 /* CoreData_Example_v02.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData_Example_v02.xcdatamodel; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 				84258022173AD3D200AA1990 /* MRErrorFormatter_Security.h */,
 				84258023173AD3D200AA1990 /* MRErrorFormatter_StoreKit.h */,
 				84258024173AD3D200AA1990 /* MRErrorFormatter_TransitionKit.h */,
+				84448C29175B9F6000E6D256 /* MRErrorFormatter_VeriJSON.h */,
 			);
 			name = format;
 			sourceTree = "<group>";

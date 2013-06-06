@@ -48,17 +48,62 @@ Examples
 
     NSString *debugString = [MRErrorFormatter debugStringWithDomain:error.domain code:error.code]; // e.g. NSURLErrorNetworkConnectionLost
     NSString *localizedString = [MRErrorFormatter stringWithDomain:error.domain code:error.code]; // e.g. Connection Lost
-    // (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Security, Store Kit and TransitionKit codes)
+    // (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Security, Store Kit, TransitionKit and VeriJSON codes)
 
 See *ErrorKit-Example* project or browse online [documentation](http://hectr.github.com/ErrorKit/) for further reference.
 
-Usage
------
+**Handle Facebook errors**
+
+    // ErrorKit provides handlers for Facebook authentication, request permission and API calls errors.
+    - (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock;
+    - (BOOL)handleFacebookRequestPermissionError:(NSError *)error;
+    - (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock;
+    
+Installation
+------------
 
 1. Drag and drop the *ErrorKit* folder to your project.
-2. Add `#import "ErrorKit.h"` somewhere (e.g. in your *-Prefix.pch* file).
-3. Add `#import "ErrorKitDefines.h"` or customize enabled features by defining the following contants:
-`ERROR_KIT_ACCOUNTS`, `ERROR_KIT_ADMOB`, `ERROR_KIT_AFNETWORKING`, `ERROR_KIT_AVFOUNDATION`, `ERROR_KIT_CORE_DATA`, `ERROR_KIT_CORE_LOCATION`, `ERROR_KIT_FACEBOOK`, `ERROR_KIT_JSON_KIT`, `ERROR_KIT_MAP_KIT`, `ERROR_KIT_MESSAGE_UI`, `ERROR_SECURITY`, `ERROR_KIT_STORE_KIT`, `ERROR_KIT_TRANSITION_KIT` and/or `ERROR_KIT_IAD`.
+2. Add `#import "ErrorKitDefines.h"` or customize enabled features by defining the following contants:
+`ERROR_KIT_ACCOUNTS`, `ERROR_KIT_ADMOB`, `ERROR_KIT_AFNETWORKING`, `ERROR_KIT_AVFOUNDATION`, `ERROR_KIT_CORE_DATA`, `ERROR_KIT_CORE_LOCATION`, `ERROR_KIT_FACEBOOK`, `ERROR_KIT_JSON_KIT`, `ERROR_KIT_MAP_KIT`, `ERROR_KIT_MESSAGE_UI`, `ERROR_SECURITY`, `ERROR_KIT_STORE_KIT`, `ERROR_KIT_TRANSITION_KIT`, `ERROR_KIT_IAD` and/or `ERROR_KIT_VERI_JSON`.
+3. Finally add `#import "ErrorKit.h"` somewhere (e.g. in your *-Prefix.pch* file).
+
+### CocoaPods
+
+The *ErrorKit* specification provides the following subspecs:
+
+* `pod 'ErrorKit/Core'`
+  * ErrorKit.h
+* `pod 'ErrorKit/Accounts'`
+* `pod 'ErrorKit/AdMob'`
+* `pod 'ErrorKit/AFNetworking'` 
+  * NSError_AFNetworking.h
+  * MRErrorBuilder_AFNetworking.h
+* `pod 'ErrorKit/AVFoundation'`
+  * MRErrorBuilder_AVFoundation.h
+* `pod 'ErrorKit/CoreData'`
+  * NSError_CoreData.h
+  * MRErrorBuilder_CoreData.h
+* `pod 'ErrorKit/CoreLocation'`
+* `pod 'ErrorKit/FacebookSDK'`
+  * NSError_FacebookSDK.h
+  * MRErrorBuilder_FacebookSDK.h
+  * UIResponder_FacebookSDK.h
+* `pod 'ErrorKit/HTTP'`
+  * NSError_HTTP.h
+  * MRErrorFormatter_HTTP.h  
+* `pod 'ErrorKit/JSONKit'`
+  * NSError_JSONKit.h
+  * MRErrorBuilder_JSONKit.h
+* `pod 'ErrorKit/MapKit'`
+* `pod 'ErrorKit/MessageUI'`
+  * MRErrorFormatter_MessageUI.h
+* `pod 'ErrorKit/Security'`
+  * MRErrorFormatter_Security.h
+* `pod 'ErrorKit/StoreKit'`
+* `pod 'ErrorKit/TransitionKit'`
+* `pod 'ErrorKit/iAD'`
+* `pod 'ErrorKit/VeriJSON'`
+  * MRErrorFormatter_VeriJSON.h
 
 License
 -------

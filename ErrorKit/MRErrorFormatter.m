@@ -198,6 +198,11 @@
         return [MRErrorFormatter debugStringWithTransitionKitCode:code];
     }
 #endif
+#ifdef ERROR_KIT_VERI_JSON
+    else if ([domain isEqualToString:VeriJSONErrorDomain]) {
+        return [MRErrorFormatter debugStringWithVeriJSONCode:code];
+    }
+#endif
     return @(code).stringValue;
 }
 
@@ -268,6 +273,11 @@
 #ifdef ERROR_KIT_TRANSITION_KIT
     else if ([domain isEqualToString:TKErrorDomain]) {
         return [MRErrorFormatter stringWithTransitionKitCode:code];
+    }
+#endif
+#ifdef ERROR_KIT_VERI_JSON
+    else if ([domain isEqualToString:VeriJSONErrorDomain]) {
+        return [MRErrorFormatter stringWithVeriJSONCode:code];
     }
 #endif
     return nil;

@@ -97,6 +97,10 @@
 #import "UIAlertView+ErrorKit.h"
 #endif
 
+#ifdef ERROR_KIT_VERI_JSON
+#import "MRErrorFormatter_VeriJSON.h"
+#endif
+
 #ifndef _ERRORKITDEFINES_H
 
 #ifdef ERROR_KIT_ACCOUNTS
@@ -150,6 +154,10 @@
 
 #ifdef ERROR_KIT_TRANSITION_KIT
 #import <TransitionKit/TransitionKit.h>
+#endif
+
+#ifdef ERROR_KIT_VERI_JSON
+#import <VeriJSON/VeriJSON.h>
 #endif
 
 #endif
