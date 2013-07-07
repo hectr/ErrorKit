@@ -26,9 +26,18 @@
 /**
  Adds methods for *stringizing* error codes.
  
- @warning The strings supplied by these methods are not suitable for using in production environments.
+ @warning The strings supplied by these methods are not suitable for using in 
+ production environments.
  */
 @interface MRErrorFormatter (ErrorCode)
+
+/**
+ Returns an array that may contain one or more of the following strings for the given error code: localized description, localized failure reason and localized recovery suggestion. The returned strings are gotten from *FoundationErrors* string table and do not contain any format arguments.
+ 
+ @param errorCode One of the `NSError` codes defined in `FoundationErrors.h`.
+ @return An array with the localized strings or nil if there weren't any matches for the given `errorCode` (e.g. NSExecutableArchitectureMismatchError, NSExecutableRuntimeMismatchError, NSExecutableLoadError and NSExecutableLinkError).
+ */
++ (NSArray *)stringsForFoundationErrorCode:(NSInteger)errorCode;
 
 /// @name Strings for debugging
 

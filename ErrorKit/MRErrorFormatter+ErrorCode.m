@@ -34,6 +34,25 @@
 
 #pragma mark - Cocoa
 
++ (NSArray *)stringsForFoundationErrorCode:(NSInteger)code
+{
+    NSMutableArray *strings = [NSMutableArray arrayWithCapacity:3];
+    NSBundle *foundationBundle = [NSBundle bundleWithIdentifier:@"com.apple.Foundation"];
+    NSString *description = [foundationBundle localizedStringForKey:[NSString stringWithFormat:@"Err%d", code] value:nil table:@"FoundationErrors"];
+    if (description.length > 0) {
+        [strings addObject:description];
+    }
+    NSString *cause = [foundationBundle localizedStringForKey:[NSString stringWithFormat:@"Err%d-C", code] value:nil table:@"FoundationErrors"];
+    if (cause.length > 0) {
+        [strings addObject:cause];
+    }
+    NSString *recovery = [foundationBundle localizedStringForKey:[NSString stringWithFormat:@"Err%d-R", code] value:nil table:@"FoundationErrors"];
+    if (recovery.length > 0) {
+        [strings addObject:recovery];
+    }
+    return (strings.count > 0? strings : nil);
+}
+
 + (NSString *)debugStringWithCocoaCode:(NSInteger)code
 {
     switch (code) {
