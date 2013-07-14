@@ -65,6 +65,83 @@
 
 - (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock
 {
+    return [self.nextResponder handleFacebookAuthError:error withLoginBlock:loginBlock];
+}
+
+- (BOOL)handleFacebookRequestPermissionError:(NSError *)error
+{
+    return [self.nextResponder handleFacebookRequestPermissionError:error];
+}
+
+- (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock
+{
+    return [self.nextResponder handleFacebookAPICallError:error withPermissionBlock:permissionBlock andRetryBlock:retryBlock];
+}
+
+#endif
+
+@end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@interface UIResponder (ErrorKit_UIApplicationDelegate)
+
+- (NSError *)application:(UIApplication *)application willPresentError:(NSError *)error;
+
+@end
+
+
+#pragma mark -
+#pragma mark -
+
+
+@implementation UIApplication (ErrorKit)
+
+- (BOOL)presentError:(NSError *)error
+            delegate:(id)delegate
+  didPresentSelector:(SEL)didPresentSelector
+         contextInfo:(void *)contextInfo
+{
+    NSError *customizedError = [self willPresentError:error];
+    if (customizedError) {
+        [[UIAlertView alertWithTitle:nil
+                               error:customizedError
+                            delegate:delegate
+                  didRecoverSelector:didPresentSelector
+                         contextInfo:contextInfo] show];
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)presentError:(NSError *)error
+{
+    NSError *customizedError = [self willPresentError:error];
+    if (customizedError) {
+        [[UIAlertView alertWithTitle:nil error:customizedError] show];
+        return YES;
+    }
+    return NO;
+}
+
+- (NSError *)willPresentError:(NSError *)error
+{
+    if ([self.delegate respondsToSelector:@selector(application:willPresentError:)]) {
+        return [(id)self.delegate application:self willPresentError:error];
+    } else {
+        return error;
+    }
+}
+
+#pragma mark - Facebook handlers
+
+#ifdef ERROR_KIT_FACEBOOK
+
+- (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock
+{
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
     if (error.fberrorShouldNotifyUser) {
         if ([error.loginFailedReason isEqualToString:FBErrorLoginFailedReasonSystemDisallowedWithoutErrorValue]) {
@@ -172,61 +249,5 @@
 }
 
 #endif
-
-@end
-
-
-#pragma mark -
-#pragma mark -
-
-
-@interface UIResponder (ErrorKit_UIApplicationDelegate)
-
-- (NSError *)application:(UIApplication *)application willPresentError:(NSError *)error;
-
-@end
-
-
-#pragma mark -
-#pragma mark -
-
-
-@implementation UIApplication (ErrorKit)
-
-- (BOOL)presentError:(NSError *)error
-            delegate:(id)delegate
-  didPresentSelector:(SEL)didPresentSelector
-         contextInfo:(void *)contextInfo
-{
-    NSError *customizedError = [self willPresentError:error];
-    if (customizedError) {
-        [[UIAlertView alertWithTitle:nil
-                               error:customizedError
-                            delegate:delegate
-                  didRecoverSelector:didPresentSelector
-                         contextInfo:contextInfo] show];
-        return YES;
-    }
-    return NO;
-}
-
-- (BOOL)presentError:(NSError *)error
-{
-    NSError *customizedError = [self willPresentError:error];
-    if (customizedError) {
-        [[UIAlertView alertWithTitle:nil error:customizedError] show];
-        return YES;
-    }
-    return NO;
-}
-
-- (NSError *)willPresentError:(NSError *)error
-{
-    if ([self.delegate respondsToSelector:@selector(application:willPresentError:)]) {
-        return [(id)self.delegate application:self willPresentError:error];
-    } else {
-        return error;
-    }
-}
 
 @end
