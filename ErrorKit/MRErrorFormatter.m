@@ -76,9 +76,6 @@
 
 + (NSString *)stringForTitleFromError:(NSError *)error;
 {
-    if (error.localizedDescription) {
-        return error.localizedDescription;
-    }
 #ifdef ERROR_KIT_AFNETWORKING
     if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
         if (error.failingURLResponse) {
@@ -87,6 +84,9 @@
         }
     }
 #endif
+    if (error.localizedDescription) {
+        return error.localizedDescription;
+    }
     return [self stringWithDomain:error.domain code:error.code];
 }
 
