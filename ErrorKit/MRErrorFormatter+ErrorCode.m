@@ -38,16 +38,19 @@
 {
     NSMutableArray *strings = [NSMutableArray arrayWithCapacity:3];
     NSBundle *foundationBundle = [NSBundle bundleWithIdentifier:@"com.apple.Foundation"];
-    NSString *description = [foundationBundle localizedStringForKey:[NSString stringWithFormat:@"Err%d", code] value:nil table:@"FoundationErrors"];
-    if (description.length > 0) {
+    NSString *descriptionKey = [NSString stringWithFormat:@"Err%d", code];
+    NSString *description = [foundationBundle localizedStringForKey:descriptionKey value:nil table:@"FoundationErrors"];
+    if (description.length > 0 && ![description isEqualToString:descriptionKey]) {
         [strings addObject:description];
     }
-    NSString *cause = [foundationBundle localizedStringForKey:[NSString stringWithFormat:@"Err%d-C", code] value:nil table:@"FoundationErrors"];
-    if (cause.length > 0) {
+    NSString *causeKey = [NSString stringWithFormat:@"Err%d-C", code];
+    NSString *cause = [foundationBundle localizedStringForKey:causeKey value:nil table:@"FoundationErrors"];
+    if (cause.length > 0 && ![cause isEqualToString:causeKey]) {
         [strings addObject:cause];
     }
-    NSString *recovery = [foundationBundle localizedStringForKey:[NSString stringWithFormat:@"Err%d-R", code] value:nil table:@"FoundationErrors"];
-    if (recovery.length > 0) {
+    NSString *recoveryKey = [NSString stringWithFormat:@"Err%d-R", code];
+    NSString *recovery = [foundationBundle localizedStringForKey:recoveryKey value:nil table:@"FoundationErrors"];
+    if (recovery.length > 0 && ![recovery isEqualToString:recoveryKey]) {
         [strings addObject:recovery];
     }
     return (strings.count > 0? strings : nil);

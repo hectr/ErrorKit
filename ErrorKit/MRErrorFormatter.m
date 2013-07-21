@@ -80,7 +80,8 @@
     if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
         if (error.failingURLResponse) {
             NSInteger code = error.failingURLResponse.statusCode;
-            return [NSHTTPURLResponse localizedStringForStatusCode:code];
+            NSString *localizedString = [NSHTTPURLResponse localizedStringForStatusCode:code];
+            return localizedString.capitalizedString;
         }
     }
 #endif
