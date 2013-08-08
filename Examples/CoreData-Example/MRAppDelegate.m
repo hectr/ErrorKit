@@ -151,9 +151,11 @@
         }
     }
     @catch (NSException *exception) {
-        *errorPtr = [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
-                                                 code:NSPersistentStoreOpenError
-                                            exception:exception].error;
+        if (errorPtr) {
+            *errorPtr = [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
+                                                     code:NSPersistentStoreOpenError
+                                                exception:exception].error;
+        }
         self.storeURL = nil;
         _persistentStoreCoordinator = nil;
     }
