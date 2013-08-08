@@ -375,6 +375,54 @@
 #pragma mark -
 
 
+@implementation MRErrorFormatter (ErrorKit_VeriJSON_Helper)
+
+#ifdef ERROR_KIT_VERI_JSON
+
++ (NSString *)stringWithJSONPattern:(id)pattern forKey:(NSString *)key
+{
+    NSString *format;
+    NSString *type;
+    if ([pattern isKindOfClass:NSArray.class]) {
+        type = MRErrorKitString(@"an array", nil);
+    } else if ([pattern isKindOfClass:NSDictionary.class]) {
+        type = MRErrorKitString(@"an associative array", nil);
+    } else if ([pattern isKindOfClass:NSString.class]) {
+        if ([pattern isEqualToString:@"number"]) {
+            type = MRErrorKitString(@"a number", nil);
+        } else if ([pattern isEqualToString:@"bool"]) {
+            type = MRErrorKitString(@"a boolean value", nil);
+        } else if ([pattern isEqualToString:@"url"]) {
+            type = MRErrorKitString(@"a URL", nil);
+        } else if ([pattern isEqualToString:@"url:http"]) {
+            type = MRErrorKitString(@"an HTTP URL", nil);
+        } else if ([pattern isEqualToString:@"string"]) {
+            type = MRErrorKitString(@"a character string", nil);
+        } else if ([pattern rangeOfString:@"string:"].location != NSNotFound) {
+            type = MRErrorKitString(@"a valid a character string", nil);
+        }
+    } else {
+        return MRErrorKitString(@"Invalid pattern.", nil);
+    }
+    NSUInteger lastIndex = [key length] - 1;
+    if ([key rangeOfString:@"?"].location == lastIndex) {
+        format = MRErrorKitString(@"'%@' must be %@.", nil);
+        key = [key substringToIndex:lastIndex];
+    } else {
+        format = MRErrorKitString(@"'%@' is not optional and must be %@.", nil);
+    }
+    return [NSString stringWithFormat:format, key, type];
+}
+
+#endif
+
+@end
+
+
+#pragma mark -
+#pragma mark -
+
+
 NSString *MRErrorKitString(NSString *key, NSString *comment)
 {
     static NSBundle *bundle = nil;

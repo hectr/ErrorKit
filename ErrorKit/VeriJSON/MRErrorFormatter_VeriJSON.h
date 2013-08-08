@@ -38,4 +38,7 @@
 /// Returns a string representation of the given `VeriJSONErrorDomain` error code.
 + (NSString *)stringWithVeriJSONCode:(NSInteger)errorCode;
 
+/// Returns a string representation of the given pattern for the given key.
++ (NSString *)stringWithJSONPattern:(id)pattern forKey:(NSString *)key;
+
 @end
