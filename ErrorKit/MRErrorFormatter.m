@@ -400,6 +400,8 @@
             type = MRErrorKitString(@"a character string", nil);
         } else if ([pattern rangeOfString:@"string:"].location != NSNotFound) {
             type = MRErrorKitString(@"a valid a character string", nil);
+        } else {
+            return MRErrorKitString(@"Invalid pattern.", nil);
         }
     } else {
         return MRErrorKitString(@"Invalid pattern.", nil);
