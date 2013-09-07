@@ -1280,14 +1280,6 @@
   <translation text="" lang="ca"/>
   <occurrence>UIResponder+ErrorKit.m (158)</occurrence>
  </entry>
- <entry key="Feature Unsupported" comment="No comment provided by engineer.">
-  <translation text="" lang="de"/>
-  <translation text="" lang="nb"/>
-  <translation text="Feature Unsupported" lang="en"/>
-  <translation text="Característica no soportada" lang="es"/>
-  <translation text="Característica no suportada" lang="ca"/>
-  <occurrence>MRErrorFormatter+ErrorCode.m (285)</occurrence>
- </entry>
  <entry key="File Already Exists" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -2008,8 +2000,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Login Failed Or Cancelled" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Login interrumpido" lang="es"/>
+  <translation text="Login interromput" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (1462)</occurrence>
  </entry>
  <entry key="Mail Cancelled" comment="No comment provided by engineer.">
@@ -3482,6 +3474,14 @@
   <translation text="Unset persistent store URL" lang="en"/>
   <translation text="" lang="es"/>
   <translation text="" lang="ca"/>
+ </entry>
+ <entry key="Unsupported Feature" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Feature Unsupported" lang="en"/>
+  <translation text="Característica no soportada" lang="es"/>
+  <translation text="Característica no suportada" lang="ca"/>
+  <occurrence>MRErrorFormatter+ErrorCode.m (285)</occurrence>
  </entry>
  <entry key="Unsupported Request Type" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>

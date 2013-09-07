@@ -56,7 +56,7 @@
             [components addObject:[NSString stringWithFormat:@"%@=%@", key, object]];
         }
     }];
-    return [components componentsJoinedByString:@", "];
+    return (components.count > 0 ? [components componentsJoinedByString:@", "] : nil);
 }
 
 + (NSString *)stringFromError:(NSError *)error
@@ -71,7 +71,7 @@
     if (error.recoveryAttempter && error.localizedRecoverySuggestion) {
         [stringComponents addObject:error.localizedRecoverySuggestion];
     }
-    return [stringComponents componentsJoinedByString:@"\n"];
+    return (stringComponents.count > 0 ? [stringComponents componentsJoinedByString:@"\n"] : nil);
 }
 
 + (NSString *)stringForTitleFromError:(NSError *)error;
@@ -118,7 +118,7 @@
         }
     }
 #endif
-    return [stringComponents componentsJoinedByString:@"\n"];
+    return (stringComponents.count > 0 ? [stringComponents componentsJoinedByString:@"\n"] : nil);
 }
 
 + (NSString *)stringForCancelButtonFromError:(NSError *)error

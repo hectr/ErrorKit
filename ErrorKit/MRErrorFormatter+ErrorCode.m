@@ -282,7 +282,7 @@
         case NSUserCancelledError:
             return MRErrorKitString(@"Cancelled", nil);
         case NSFeatureUnsupportedError:
-            return MRErrorKitString(@"Feature Unsupported", nil);
+            return MRErrorKitString(@"Unsupported Feature", nil);
         case NSExecutableNotLoadableError:
             return MRErrorKitString(@"Executable Not Loadable", nil);
         case NSExecutableArchitectureMismatchError:

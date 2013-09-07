@@ -677,11 +677,12 @@
     dispatch_once(&onceToken, ^{
         __formatter = [[MRErrorFormatter alloc] init];
     });
-    return [NSString stringWithFormat:@"ErrorBuilder Domain=%@ Code=%d UserInfo=%p {%@}"
-                                      , self.domain
-                                      , self.code
-                                      , self.userInfo
-                                      , [__formatter stringWithErrorDetail:self.userInfo]];
+    return
+    [NSString stringWithFormat:@"ErrorBuilder Domain=%@ Code=%d UserInfo=%p {%@}"
+                              , self.domain
+                              , self.code
+                              , self.userInfo
+                              , ([__formatter stringWithErrorDetail:self.userInfo] ?: @" ")];
 }
 
 @end

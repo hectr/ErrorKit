@@ -174,6 +174,8 @@ static char kMRAlertViewDelegateObjectKey;
         alertDelegate.delegate = recoveryDelegate;
         alertDelegate.selector = selector;
         alertDelegate.contextInfo = context;
+    } else {
+        alertDelegate = nil;
     }
     // Instantiate alert
 	UIAlertView *alert = [[self alloc] initWithTitle:alertTitle
