@@ -1,4 +1,4 @@
-// ErrorKitDefines.h
+// UIApplication+ErrorKit.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,65 +20,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <UIKit/UIKit.h>
 
-#ifndef _ERRORKITDEFINES_H
-#define _ERRORKITDEFINES_H
 
-#ifdef ACCOUNTS_EXTERN
-#define ERROR_KIT_ACCOUNTS 1
-#endif
+/**
+ Overrides **Error-Responder Chain** methods for error presentation.
+ */
+@interface UIApplication (ErrorKit)
 
-#ifdef _AFNETWORKING_
-#define ERROR_KIT_AFNETWORKING 1
-#endif
+/**
+ Sends `application:willPresentError:` to app delegate before displaying the error.
+ 
+ @param error An object containing information about an error.
+ @param delegate An object that is the delegate.
+ @param didPresentSelector A selector identifying the method implemented by the delegate.
+ @param contextInfo Arbitrary data associated with the attempt at error recovery, to be passed to `delegate` in `didRecoverSelector`.
+ @return `YES` if the error has been presented, `NO` otherwise.
+ */
+- (BOOL)presentError:(NSError *)error
+            delegate:(id)delegate
+  didPresentSelector:(SEL)didPresentSelector
+         contextInfo:(void *)contextInfo;
 
-#ifdef AVF_EXPORT
-#define ERROR_KIT_AVFOUNDATION 1
-#endif
+/**
+ Sends `application:willPresentError:` to app delegate before displaying the error.
+  
+ @param error An object containing information about an error.
+ @return `YES` if the error has been presented, `NO` otherwise.
+*/
+- (BOOL)presentError:(NSError *)error;
 
-#define ERROR_KIT_CORE 1
-
-#ifdef _COREDATADEFINES_H
-#define ERROR_KIT_CORE_DATA 1
-#endif
-
-#ifdef __CORELOCATION__
-#define ERROR_KIT_CORE_LOCATION 1
-#endif
-
-#ifdef FB_IOS_SDK_VERSION_STRING
-#define ERROR_KIT_FACEBOOK_SDK 1
-#endif
-
-#define ERROR_KIT_HTTP 1
-
-#ifdef _JSONKIT_H_
-#define ERROR_KIT_JSON_KIT 1
-#endif
-
-#define ERROR_KIT_JSON_VALUES 1
-
-#ifdef MK_EXTERN
-#define ERROR_KIT_MAP_KIT 1
-#endif
-
-#define ERROR_KIT_NSEXCEPTION 1
-
-#ifdef _SECURITY_SECITEM_H_
-#define ERROR_KIT_SECURITY 1
-#endif
-
-#ifdef SK_EXTERN
-#define ERROR_KIT_STORE_KIT 1
-#endif
-
-#ifdef TransitionKit_TransitionKit_h
-#define ERROR_KIT_TRANSITION_KIT 1
-#endif
-
-#ifdef UIKIT_STATIC_INLINE
-#define ERROR_KIT_UI_KIT 1
-#define ERROR_KIT_DEFAULT 1
-#endif
-
-#endif
+@end

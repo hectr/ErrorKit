@@ -1,4 +1,4 @@
-// ErrorKitDefines.h
+// MRErrorFormatter+HTTP.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,65 +20,29 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "MRErrorFormatter+ErrorCode.h"
 
-#ifndef _ERRORKITDEFINES_H
-#define _ERRORKITDEFINES_H
 
-#ifdef ACCOUNTS_EXTERN
-#define ERROR_KIT_ACCOUNTS 1
-#endif
+/**
+ Adds a method for *stringizing* HTTP status codes.
+*/
+@interface MRErrorFormatter (ErrorKit_HTTP)
 
-#ifdef _AFNETWORKING_
-#define ERROR_KIT_AFNETWORKING 1
-#endif
+/// @name Strings for debugging
 
-#ifdef AVF_EXPORT
-#define ERROR_KIT_AVFOUNDATION 1
-#endif
+/// Returns a string representation of the given `NSURLErrorDomain` error code.
++ (NSString *)debugStringWithURLCode:(NSInteger)errorCode;
 
-#define ERROR_KIT_CORE 1
+/// @name Strings for presentation
 
-#ifdef _COREDATADEFINES_H
-#define ERROR_KIT_CORE_DATA 1
-#endif
+/// Returns a string representation of the given `NSURLErrorDomain` error code.
++ (NSString *)stringWithURLCode:(NSInteger)errorCode;
 
-#ifdef __CORELOCATION__
-#define ERROR_KIT_CORE_LOCATION 1
-#endif
+/**
+ Returns a string representation of the given HTTP status code.
+ 
+ This method is a wrapper for `[NSHTTPURLResponse localizedStringForStatusCode:statusCode]`.
+ */
++ (NSString *)stringWithHTTPCode:(NSInteger)statusCode;
 
-#ifdef FB_IOS_SDK_VERSION_STRING
-#define ERROR_KIT_FACEBOOK_SDK 1
-#endif
-
-#define ERROR_KIT_HTTP 1
-
-#ifdef _JSONKIT_H_
-#define ERROR_KIT_JSON_KIT 1
-#endif
-
-#define ERROR_KIT_JSON_VALUES 1
-
-#ifdef MK_EXTERN
-#define ERROR_KIT_MAP_KIT 1
-#endif
-
-#define ERROR_KIT_NSEXCEPTION 1
-
-#ifdef _SECURITY_SECITEM_H_
-#define ERROR_KIT_SECURITY 1
-#endif
-
-#ifdef SK_EXTERN
-#define ERROR_KIT_STORE_KIT 1
-#endif
-
-#ifdef TransitionKit_TransitionKit_h
-#define ERROR_KIT_TRANSITION_KIT 1
-#endif
-
-#ifdef UIKIT_STATIC_INLINE
-#define ERROR_KIT_UI_KIT 1
-#define ERROR_KIT_DEFAULT 1
-#endif
-
-#endif
+@end

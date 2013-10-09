@@ -7,6 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840B600F180371A60090A142 /* MRErrorFormatter+Accounts.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B600E180371A60090A142 /* MRErrorFormatter+Accounts.m */; };
+		840B60111803729D0090A142 /* MRErrorFormatter+Admob.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B60101803729D0090A142 /* MRErrorFormatter+Admob.m */; };
+		840B60131803732A0090A142 /* MRErrorFormatter+AVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B60121803732A0090A142 /* MRErrorFormatter+AVFoundation.m */; };
+		840B6015180373D50090A142 /* MRErrorFormatter+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6014180373D50090A142 /* MRErrorFormatter+CoreData.m */; };
+		840B60171803748A0090A142 /* MRErrorFormatter+CoreLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6016180374890090A142 /* MRErrorFormatter+CoreLocation.m */; };
+		840B6019180375BD0090A142 /* MRErrorFormatter+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6018180375BC0090A142 /* MRErrorFormatter+FacebookSDK.m */; };
+		840B601B1803761E0090A142 /* MRErrorFormatter+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B601A1803761E0090A142 /* MRErrorFormatter+HTTP.m */; };
+		840B601D180376FF0090A142 /* MRErrorFormatter+iAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B601C180376FE0090A142 /* MRErrorFormatter+iAD.m */; };
+		840B601F180377540090A142 /* MRErrorFormatter+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B601E180377530090A142 /* MRErrorFormatter+JSONKit.m */; };
+		840B60211803785B0090A142 /* MRErrorFormatter+MapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B60201803785A0090A142 /* MRErrorFormatter+MapKit.m */; };
+		840B6023180378F90090A142 /* MRErrorFormatter+MessageUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6022180378F90090A142 /* MRErrorFormatter+MessageUI.m */; };
+		840B6025180379750090A142 /* MRErrorFormatter+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6024180379750090A142 /* MRErrorFormatter+Security.m */; };
+		840B6027180379EE0090A142 /* MRErrorFormatter+StoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6026180379ED0090A142 /* MRErrorFormatter+StoreKit.m */; };
+		840B602918037A360090A142 /* MRErrorFormatter+TransitionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B602818037A360090A142 /* MRErrorFormatter+TransitionKit.m */; };
+		840B602B18037AF20090A142 /* MRErrorFormatter+VeriJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B602A18037AF10090A142 /* MRErrorFormatter+VeriJSON.m */; };
+		841438CE1802160F00EF0704 /* MRAbstractRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 841438C01802160900EF0704 /* MRAbstractRecoveryAttempter.m */; };
+		841438CF1802160F00EF0704 /* MRBlockRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 841438C21802160A00EF0704 /* MRBlockRecoveryAttempter.m */; };
+		841438D01802160F00EF0704 /* MRChainedRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 841438C41802160B00EF0704 /* MRChainedRecoveryAttempter.m */; };
+		841438D11802160F00EF0704 /* MRErrorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 841438C61802160C00EF0704 /* MRErrorBuilder.m */; };
+		841438D21802160F00EF0704 /* MRErrorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 841438C81802160E00EF0704 /* MRErrorFormatter.m */; };
+		841438D31802160F00EF0704 /* MRErrorFormatter+ErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 841438CA1802160E00EF0704 /* MRErrorFormatter+ErrorCode.m */; };
+		841438D41802160F00EF0704 /* NSError+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 841438CC1802160F00EF0704 /* NSError+ErrorKit.m */; };
+		84220DD817FE02400009C919 /* NSError+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DD717FE02400009C919 /* NSError+AFNetworking.m */; };
+		84220DDA17FE04180009C919 /* NSError+AVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DD917FE04170009C919 /* NSError+AVFoundation.m */; };
+		84220DDC17FE04B50009C919 /* NSError+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DDB17FE04B50009C919 /* NSError+CoreData.m */; };
+		84220DDE17FE05880009C919 /* NSError+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DDD17FE05880009C919 /* NSError+FacebookSDK.m */; };
+		84220DE017FE06F60009C919 /* NSError+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DDF17FE06F60009C919 /* NSError+JSONKit.m */; };
+		84220DE217FE09100009C919 /* NSError+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DE117FE09100009C919 /* NSError+HTTP.m */; };
+		84220DE417FE0AEF0009C919 /* UIResponder+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DE317FE0AEE0009C919 /* UIResponder+FacebookSDK.m */; };
+		84220DE917FE1DE50009C919 /* MRErrorBuilder+NSException.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DE617FE1DE50009C919 /* MRErrorBuilder+NSException.m */; };
+		84220DEA17FE1DE50009C919 /* MRErrorFormatter+NSException.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DE817FE1DE50009C919 /* MRErrorFormatter+NSException.m */; };
+		84220DEC17FE22610009C919 /* MRErrorBuilder+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DEB17FE22600009C919 /* MRErrorBuilder+AFNetworking.m */; };
+		84220DEE17FE23410009C919 /* MRErrorBuilder+AVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DED17FE23410009C919 /* MRErrorBuilder+AVFoundation.m */; };
+		84220DF017FE23E60009C919 /* MRErrorBuilder+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DEF17FE23E50009C919 /* MRErrorBuilder+CoreData.m */; };
+		84220DF217FE246A0009C919 /* MRErrorBuilder+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DF117FE246A0009C919 /* MRErrorBuilder+FacebookSDK.m */; };
+		84220DF417FE24FD0009C919 /* MRErrorBuilder+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DF317FE24FD0009C919 /* MRErrorBuilder+HTTP.m */; };
+		84220DF617FE277F0009C919 /* MRErrorBuilder+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DF517FE277F0009C919 /* MRErrorBuilder+JSONKit.m */; };
+		84220DF917FE2EA40009C919 /* UIApplication+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DF817FE2EA30009C919 /* UIApplication+ErrorKit.m */; };
+		84220DFF17FE30DC0009C919 /* UIApplication+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 84220DFE17FE30DC0009C919 /* UIApplication+FacebookSDK.m */; };
+		845990F417FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990EB17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.m */; };
+		845990F517FA4F65008ADCD2 /* NSArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990ED17FA4F65008ADCD2 /* NSArray+JSONValues.m */; };
+		845990F617FA4F65008ADCD2 /* NSDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990EF17FA4F65008ADCD2 /* NSDictionary+JSONValues.m */; };
+		845990F717FA4F65008ADCD2 /* NSMutableArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */; };
+		845990F817FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */; };
+		84C7473C17F8E056007DF279 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473717F8E056007DF279 /* MRAlertRecoveryAttempter.m */; };
+		84C7473D17F8E056007DF279 /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473917F8E056007DF279 /* UIAlertView+ErrorKit.m */; };
+		84C7473E17F8E056007DF279 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473B17F8E056007DF279 /* UIResponder+ErrorKit.m */; };
 		84DB843116C802F3000BF23E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DB843016C802F3000BF23E /* UIKit.framework */; };
 		84DB843316C802F3000BF23E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DB843216C802F3000BF23E /* Foundation.framework */; };
 		84DB843B16C802F3000BF23E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DB843916C802F3000BF23E /* InfoPlist.strings */; };
@@ -18,28 +65,104 @@
 		84DB844A16C802F4000BF23E /* MRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB844916C802F4000BF23E /* MRViewController.m */; };
 		84DB845516C80380000BF23E /* MRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DB845316C80380000BF23E /* MRViewController.xib */; };
 		84DB845616C80380000BF23E /* ErrorKitExample-Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DB845416C80380000BF23E /* ErrorKitExample-Application.xib */; };
-		84DB846E16C8048E000BF23E /* MRErrorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846516C8048E000BF23E /* MRErrorBuilder.m */; };
-		84DB846F16C8048E000BF23E /* MRErrorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846716C8048E000BF23E /* MRErrorFormatter.m */; };
-		84DB847016C8048E000BF23E /* NSError+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */; };
-		84DB847116C8048E000BF23E /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */; };
-		84DCF7C916EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DCF7C816EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m */; };
-		84EB27E316EAD98700F98BD0 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */; };
-		84EB27E416EAD98700F98BD0 /* MRBlockRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27DE16EAD98700F98BD0 /* MRBlockRecoveryAttempter.m */; };
-		84EB27E516EAD98700F98BD0 /* MRAbstractRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27E016EAD98700F98BD0 /* MRAbstractRecoveryAttempter.m */; };
-		84EB27E616EAD98700F98BD0 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB27E216EAD98700F98BD0 /* UIResponder+ErrorKit.m */; };
-		84EB6BA2173176C5002AECC2 /* MRChainedRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6BA1173176C5002AECC2 /* MRChainedRecoveryAttempter.m */; };
-		84F2FFA41724A9E30030D957 /* MRErrorBuilder+NSException.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F2FFA31724A9E30030D957 /* MRErrorBuilder+NSException.m */; };
 		84FA2665170FB483008A9DAA /* ErrorKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84FA2663170FB483008A9DAA /* ErrorKit.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		84040EF6173826EF00548BE6 /* NSError_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSError_HTTP.h; path = ../../ErrorKit/HTTP/NSError_HTTP.h; sourceTree = "<group>"; };
-		8416764A1753FFAF00DB89F6 /* ErrorKitImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitImports.h; path = ../../ErrorKit/ErrorKitImports.h; sourceTree = "<group>"; };
+		84040EF6173826EF00548BE6 /* NSError+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSError+HTTP.h"; path = "../../ErrorKit/HTTP/NSError+HTTP.h"; sourceTree = "<group>"; };
+		840B600E180371A60090A142 /* MRErrorFormatter+Accounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+Accounts.m"; path = "../../ErrorKit/Accounts/MRErrorFormatter+Accounts.m"; sourceTree = "<group>"; };
+		840B60101803729D0090A142 /* MRErrorFormatter+Admob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+Admob.m"; path = "../../ErrorKit/Admob/MRErrorFormatter+Admob.m"; sourceTree = "<group>"; };
+		840B60121803732A0090A142 /* MRErrorFormatter+AVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+AVFoundation.m"; path = "../../ErrorKit/AVFoundation/MRErrorFormatter+AVFoundation.m"; sourceTree = "<group>"; };
+		840B6014180373D50090A142 /* MRErrorFormatter+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+CoreData.m"; path = "../../ErrorKit/CoreData/MRErrorFormatter+CoreData.m"; sourceTree = "<group>"; };
+		840B6016180374890090A142 /* MRErrorFormatter+CoreLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+CoreLocation.m"; path = "../../ErrorKit/CoreLocation/MRErrorFormatter+CoreLocation.m"; sourceTree = "<group>"; };
+		840B6018180375BC0090A142 /* MRErrorFormatter+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+FacebookSDK.m"; path = "../../ErrorKit/FacebookSDK/MRErrorFormatter+FacebookSDK.m"; sourceTree = "<group>"; };
+		840B601A1803761E0090A142 /* MRErrorFormatter+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+HTTP.m"; path = "../../ErrorKit/HTTP/MRErrorFormatter+HTTP.m"; sourceTree = "<group>"; };
+		840B601C180376FE0090A142 /* MRErrorFormatter+iAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+iAD.m"; path = "../../ErrorKit/iAD/MRErrorFormatter+iAD.m"; sourceTree = "<group>"; };
+		840B601E180377530090A142 /* MRErrorFormatter+JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+JSONKit.m"; path = "../../ErrorKit/JSONKit/MRErrorFormatter+JSONKit.m"; sourceTree = "<group>"; };
+		840B60201803785A0090A142 /* MRErrorFormatter+MapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+MapKit.m"; path = "../../ErrorKit/MapKit/MRErrorFormatter+MapKit.m"; sourceTree = "<group>"; };
+		840B6022180378F90090A142 /* MRErrorFormatter+MessageUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+MessageUI.m"; path = "../../ErrorKit/MessageUI/MRErrorFormatter+MessageUI.m"; sourceTree = "<group>"; };
+		840B6024180379750090A142 /* MRErrorFormatter+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+Security.m"; path = "../../ErrorKit/Security/MRErrorFormatter+Security.m"; sourceTree = "<group>"; };
+		840B6026180379ED0090A142 /* MRErrorFormatter+StoreKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+StoreKit.m"; path = "../../ErrorKit/StoreKit/MRErrorFormatter+StoreKit.m"; sourceTree = "<group>"; };
+		840B602818037A360090A142 /* MRErrorFormatter+TransitionKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+TransitionKit.m"; path = "../../ErrorKit/TransitionKit/MRErrorFormatter+TransitionKit.m"; sourceTree = "<group>"; };
+		840B602A18037AF10090A142 /* MRErrorFormatter+VeriJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+VeriJSON.m"; path = "../../ErrorKit/VeriJSON/MRErrorFormatter+VeriJSON.m"; sourceTree = "<group>"; };
+		841438BF1802160900EF0704 /* MRAbstractRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAbstractRecoveryAttempter.h; path = ../../ErrorKit/Core/MRAbstractRecoveryAttempter.h; sourceTree = "<group>"; };
+		841438C01802160900EF0704 /* MRAbstractRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAbstractRecoveryAttempter.m; path = ../../ErrorKit/Core/MRAbstractRecoveryAttempter.m; sourceTree = "<group>"; };
+		841438C11802160A00EF0704 /* MRBlockRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRBlockRecoveryAttempter.h; path = ../../ErrorKit/Core/MRBlockRecoveryAttempter.h; sourceTree = "<group>"; };
+		841438C21802160A00EF0704 /* MRBlockRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRBlockRecoveryAttempter.m; path = ../../ErrorKit/Core/MRBlockRecoveryAttempter.m; sourceTree = "<group>"; };
+		841438C31802160B00EF0704 /* MRChainedRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRChainedRecoveryAttempter.h; path = ../../ErrorKit/Core/MRChainedRecoveryAttempter.h; sourceTree = "<group>"; };
+		841438C41802160B00EF0704 /* MRChainedRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRChainedRecoveryAttempter.m; path = ../../ErrorKit/Core/MRChainedRecoveryAttempter.m; sourceTree = "<group>"; };
+		841438C51802160C00EF0704 /* MRErrorBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder.h; path = ../../ErrorKit/Core/MRErrorBuilder.h; sourceTree = "<group>"; };
+		841438C61802160C00EF0704 /* MRErrorBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRErrorBuilder.m; path = ../../ErrorKit/Core/MRErrorBuilder.m; sourceTree = "<group>"; };
+		841438C71802160C00EF0704 /* MRErrorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter.h; path = ../../ErrorKit/Core/MRErrorFormatter.h; sourceTree = "<group>"; };
+		841438C81802160E00EF0704 /* MRErrorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRErrorFormatter.m; path = ../../ErrorKit/Core/MRErrorFormatter.m; sourceTree = "<group>"; };
+		841438C91802160E00EF0704 /* MRErrorFormatter+ErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+ErrorCode.h"; path = "../../ErrorKit/Core/MRErrorFormatter+ErrorCode.h"; sourceTree = "<group>"; };
+		841438CA1802160E00EF0704 /* MRErrorFormatter+ErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+ErrorCode.m"; path = "../../ErrorKit/Core/MRErrorFormatter+ErrorCode.m"; sourceTree = "<group>"; };
+		841438CB1802160F00EF0704 /* NSError+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+ErrorKit.h"; path = "../../ErrorKit/Core/NSError+ErrorKit.h"; sourceTree = "<group>"; };
+		841438CC1802160F00EF0704 /* NSError+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+ErrorKit.m"; path = "../../ErrorKit/Core/NSError+ErrorKit.m"; sourceTree = "<group>"; };
+		841438D51802170B00EF0704 /* ErrorKit_Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Core.h; path = ../../ErrorKit/Core/ErrorKit_Core.h; sourceTree = "<group>"; };
+		841438D6180218DA00EF0704 /* ErrorKit_Default.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Default.h; path = ../../ErrorKit/Default/ErrorKit_Default.h; sourceTree = "<group>"; };
+		841438D718021B4300EF0704 /* ErrorKitImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitImports.h; path = ../../ErrorKit/Core/ErrorKitImports.h; sourceTree = "<group>"; };
 		8419D1F2171B539500143B54 /* ErrorKitDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ErrorKitDefines.h; path = ../../ErrorKit/ErrorKitDefines.h; sourceTree = "<group>"; };
-		84448C28175B9ECE00E6D256 /* MRErrorFormatter_VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_VeriJSON.h; path = ../../ErrorKit/VeriJSON/MRErrorFormatter_VeriJSON.h; sourceTree = "<group>"; };
-		8458E357174ECD38003DB731 /* MRErrorFormatter_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_CoreData.h; path = ../../ErrorKit/CoreData/MRErrorFormatter_CoreData.h; sourceTree = "<group>"; };
-		84B2B394174AB5AF004E8ED3 /* UIResponder_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIResponder_FacebookSDK.h; path = ../../ErrorKit/FacebookSDK/UIResponder_FacebookSDK.h; sourceTree = "<group>"; };
-		84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_AVFoundation.h; path = ../../ErrorKit/AVFoundation/MRErrorFormatter_AVFoundation.h; sourceTree = "<group>"; };
+		841A09CB17FF93CF00DC3848 /* ErrorKit_Accounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Accounts.h; path = ../../ErrorKit/Accounts/ErrorKit_Accounts.h; sourceTree = "<group>"; };
+		841A09CC17FF952800DC3848 /* ErrorKit_Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Admob.h; path = ../../ErrorKit/Admob/ErrorKit_Admob.h; sourceTree = "<group>"; };
+		841A09CD17FF952800DC3848 /* ErrorKit_AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_AFNetworking.h; path = ../../ErrorKit/AFNetworking/ErrorKit_AFNetworking.h; sourceTree = "<group>"; };
+		841A09CE17FF952800DC3848 /* ErrorKit_AVFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_AVFoundation.h; path = ../../ErrorKit/AVFoundation/ErrorKit_AVFoundation.h; sourceTree = "<group>"; };
+		841A09CF17FF96E300DC3848 /* ErrorKit_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_CoreData.h; path = ../../ErrorKit/CoreData/ErrorKit_CoreData.h; sourceTree = "<group>"; };
+		841A09D017FF96E300DC3848 /* ErrorKit_CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_CoreLocation.h; path = ../../ErrorKit/CoreLocation/ErrorKit_CoreLocation.h; sourceTree = "<group>"; };
+		841A09D217FF980C00DC3848 /* ErrorKit_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_FacebookSDK.h; path = ../../ErrorKit/FacebookSDK/ErrorKit_FacebookSDK.h; sourceTree = "<group>"; };
+		841A09D317FF980C00DC3848 /* ErrorKit_HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_HTTP.h; path = ../../ErrorKit/HTTP/ErrorKit_HTTP.h; sourceTree = "<group>"; };
+		841A09D417FF998E00DC3848 /* ErrorKit_iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_iAD.h; path = ../../ErrorKit/iAD/ErrorKit_iAD.h; sourceTree = "<group>"; };
+		841A09D517FF998E00DC3848 /* ErrorKit_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_JSONKit.h; path = ../../ErrorKit/JSONKit/ErrorKit_JSONKit.h; sourceTree = "<group>"; };
+		841A09D617FF998E00DC3848 /* ErrorKit_JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_JSONValues.h; path = ../../ErrorKit/JSONValues/ErrorKit_JSONValues.h; sourceTree = "<group>"; };
+		841A09D717FF998E00DC3848 /* ErrorKit_MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_MapKit.h; path = ../../ErrorKit/MapKit/ErrorKit_MapKit.h; sourceTree = "<group>"; };
+		841A09D817FF998E00DC3848 /* ErrorKit_MessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_MessageUI.h; path = ../../ErrorKit/MessageUI/ErrorKit_MessageUI.h; sourceTree = "<group>"; };
+		841A09D917FF9A4C00DC3848 /* ErrorKit_NSException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_NSException.h; path = ../../ErrorKit/NSException/ErrorKit_NSException.h; sourceTree = "<group>"; };
+		841A09DA17FF9C3200DC3848 /* ErrorKit_Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Security.h; path = ../../ErrorKit/Security/ErrorKit_Security.h; sourceTree = "<group>"; };
+		841A09DB17FF9C3200DC3848 /* ErrorKit_StoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_StoreKit.h; path = ../../ErrorKit/StoreKit/ErrorKit_StoreKit.h; sourceTree = "<group>"; };
+		841A09DC17FF9C3200DC3848 /* ErrorKit_TransitionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_TransitionKit.h; path = ../../ErrorKit/TransitionKit/ErrorKit_TransitionKit.h; sourceTree = "<group>"; };
+		841A09DD17FF9C3200DC3848 /* ErrorKit_UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_UIKit.h; path = ../../ErrorKit/UIKit/ErrorKit_UIKit.h; sourceTree = "<group>"; };
+		841A09DE17FF9C3300DC3848 /* ErrorKit_VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_VeriJSON.h; path = ../../ErrorKit/VeriJSON/ErrorKit_VeriJSON.h; sourceTree = "<group>"; };
+		84220DD717FE02400009C919 /* NSError+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+AFNetworking.m"; path = "../../ErrorKit/AFNetworking/NSError+AFNetworking.m"; sourceTree = "<group>"; };
+		84220DD917FE04170009C919 /* NSError+AVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+AVFoundation.m"; path = "../../ErrorKit/AVFoundation/NSError+AVFoundation.m"; sourceTree = "<group>"; };
+		84220DDB17FE04B50009C919 /* NSError+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CoreData.m"; path = "../../ErrorKit/CoreData/NSError+CoreData.m"; sourceTree = "<group>"; };
+		84220DDD17FE05880009C919 /* NSError+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+FacebookSDK.m"; path = "../../ErrorKit/FacebookSDK/NSError+FacebookSDK.m"; sourceTree = "<group>"; };
+		84220DDF17FE06F60009C919 /* NSError+JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+JSONKit.m"; path = "../../ErrorKit/JSONKit/NSError+JSONKit.m"; sourceTree = "<group>"; };
+		84220DE117FE09100009C919 /* NSError+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+HTTP.m"; path = "../../ErrorKit/HTTP/NSError+HTTP.m"; sourceTree = "<group>"; };
+		84220DE317FE0AEE0009C919 /* UIResponder+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+FacebookSDK.m"; path = "../../ErrorKit/FacebookSDK/UIResponder+FacebookSDK.m"; sourceTree = "<group>"; };
+		84220DE517FE1DE50009C919 /* MRErrorBuilder+NSException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+NSException.h"; path = "../../ErrorKit/NSException/MRErrorBuilder+NSException.h"; sourceTree = "<group>"; };
+		84220DE617FE1DE50009C919 /* MRErrorBuilder+NSException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+NSException.m"; path = "../../ErrorKit/NSException/MRErrorBuilder+NSException.m"; sourceTree = "<group>"; };
+		84220DE717FE1DE50009C919 /* MRErrorFormatter+NSException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+NSException.h"; path = "../../ErrorKit/NSException/MRErrorFormatter+NSException.h"; sourceTree = "<group>"; };
+		84220DE817FE1DE50009C919 /* MRErrorFormatter+NSException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+NSException.m"; path = "../../ErrorKit/NSException/MRErrorFormatter+NSException.m"; sourceTree = "<group>"; };
+		84220DEB17FE22600009C919 /* MRErrorBuilder+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+AFNetworking.m"; path = "../../ErrorKit/AFNetworking/MRErrorBuilder+AFNetworking.m"; sourceTree = "<group>"; };
+		84220DED17FE23410009C919 /* MRErrorBuilder+AVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+AVFoundation.m"; path = "../../ErrorKit/AVFoundation/MRErrorBuilder+AVFoundation.m"; sourceTree = "<group>"; };
+		84220DEF17FE23E50009C919 /* MRErrorBuilder+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+CoreData.m"; path = "../../ErrorKit/CoreData/MRErrorBuilder+CoreData.m"; sourceTree = "<group>"; };
+		84220DF117FE246A0009C919 /* MRErrorBuilder+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+FacebookSDK.m"; path = "../../ErrorKit/FacebookSDK/MRErrorBuilder+FacebookSDK.m"; sourceTree = "<group>"; };
+		84220DF317FE24FD0009C919 /* MRErrorBuilder+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+HTTP.m"; path = "../../ErrorKit/HTTP/MRErrorBuilder+HTTP.m"; sourceTree = "<group>"; };
+		84220DF517FE277F0009C919 /* MRErrorBuilder+JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+JSONKit.m"; path = "../../ErrorKit/JSONKit/MRErrorBuilder+JSONKit.m"; sourceTree = "<group>"; };
+		84220DF717FE2EA30009C919 /* UIApplication+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+ErrorKit.h"; path = "../../ErrorKit/UIKit/UIApplication+ErrorKit.h"; sourceTree = "<group>"; };
+		84220DF817FE2EA30009C919 /* UIApplication+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ErrorKit.m"; path = "../../ErrorKit/UIKit/UIApplication+ErrorKit.m"; sourceTree = "<group>"; };
+		84220DFD17FE30DB0009C919 /* UIApplication+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/UIApplication+FacebookSDK.h"; sourceTree = "<group>"; };
+		84220DFE17FE30DC0009C919 /* UIApplication+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+FacebookSDK.m"; path = "../../ErrorKit/FacebookSDK/UIApplication+FacebookSDK.m"; sourceTree = "<group>"; };
+		84448C28175B9ECE00E6D256 /* MRErrorFormatter+VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+VeriJSON.h"; path = "../../ErrorKit/VeriJSON/MRErrorFormatter+VeriJSON.h"; sourceTree = "<group>"; };
+		8458E357174ECD38003DB731 /* MRErrorFormatter+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+CoreData.h"; path = "../../ErrorKit/CoreData/MRErrorFormatter+CoreData.h"; sourceTree = "<group>"; };
+		845990EA17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+JSONValues.h"; path = "../../ErrorKit/JSONValues/MRErrorFormatter+JSONValues.h"; sourceTree = "<group>"; };
+		845990EB17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+JSONValues.m"; path = "../../ErrorKit/JSONValues/MRErrorFormatter+JSONValues.m"; sourceTree = "<group>"; };
+		845990EC17FA4F65008ADCD2 /* NSArray+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSArray+JSONValues.h"; sourceTree = "<group>"; };
+		845990ED17FA4F65008ADCD2 /* NSArray+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSArray+JSONValues.m"; sourceTree = "<group>"; };
+		845990EE17FA4F65008ADCD2 /* NSDictionary+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSDictionary+JSONValues.h"; sourceTree = "<group>"; };
+		845990EF17FA4F65008ADCD2 /* NSDictionary+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSDictionary+JSONValues.m"; sourceTree = "<group>"; };
+		845990F017FA4F65008ADCD2 /* NSMutableArray+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSMutableArray+JSONValues.h"; sourceTree = "<group>"; };
+		845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSMutableArray+JSONValues.m"; sourceTree = "<group>"; };
+		845990F217FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSMutableDictionary+JSONValues.h"; sourceTree = "<group>"; };
+		845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSMutableDictionary+JSONValues.m"; sourceTree = "<group>"; };
+		84B2B394174AB5AF004E8ED3 /* UIResponder+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/UIResponder+FacebookSDK.h"; sourceTree = "<group>"; };
+		84C7473617F8E056007DF279 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAlertRecoveryAttempter.h; path = ../../ErrorKit/UIKit/MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
+		84C7473717F8E056007DF279 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAlertRecoveryAttempter.m; path = ../../ErrorKit/UIKit/MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
+		84C7473817F8E056007DF279 /* UIAlertView+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+ErrorKit.h"; path = "../../ErrorKit/UIKit/UIAlertView+ErrorKit.h"; sourceTree = "<group>"; };
+		84C7473917F8E056007DF279 /* UIAlertView+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+ErrorKit.m"; path = "../../ErrorKit/UIKit/UIAlertView+ErrorKit.m"; sourceTree = "<group>"; };
+		84C7473A17F8E056007DF279 /* UIResponder+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+ErrorKit.h"; path = "../../ErrorKit/UIKit/UIResponder+ErrorKit.h"; sourceTree = "<group>"; };
+		84C7473B17F8E056007DF279 /* UIResponder+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+ErrorKit.m"; path = "../../ErrorKit/UIKit/UIResponder+ErrorKit.m"; sourceTree = "<group>"; };
+		84D84C22171F485D00EBA843 /* MRErrorFormatter+AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+AVFoundation.h"; path = "../../ErrorKit/AVFoundation/MRErrorFormatter+AVFoundation.h"; sourceTree = "<group>"; };
 		84DB842D16C802F3000BF23E /* ErrorKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ErrorKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB843016C802F3000BF23E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DB843216C802F3000BF23E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,56 +180,34 @@
 		84DB845316C80380000BF23E /* MRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRViewController.xib; sourceTree = "<group>"; };
 		84DB845416C80380000BF23E /* ErrorKitExample-Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ErrorKitExample-Application.xib"; sourceTree = "<group>"; };
 		84DB846116C8048E000BF23E /* ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit.h; path = ../../ErrorKit/ErrorKit.h; sourceTree = "<group>"; };
-		84DB846416C8048E000BF23E /* MRErrorBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder.h; path = ../../ErrorKit/MRErrorBuilder.h; sourceTree = "<group>"; };
-		84DB846516C8048E000BF23E /* MRErrorBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRErrorBuilder.m; path = ../../ErrorKit/MRErrorBuilder.m; sourceTree = "<group>"; };
-		84DB846616C8048E000BF23E /* MRErrorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter.h; path = ../../ErrorKit/MRErrorFormatter.h; sourceTree = "<group>"; };
-		84DB846716C8048E000BF23E /* MRErrorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRErrorFormatter.m; path = ../../ErrorKit/MRErrorFormatter.m; sourceTree = "<group>"; };
-		84DB846A16C8048E000BF23E /* NSError+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+ErrorKit.h"; path = "../../ErrorKit/NSError+ErrorKit.h"; sourceTree = "<group>"; };
-		84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+ErrorKit.m"; path = "../../ErrorKit/NSError+ErrorKit.m"; sourceTree = "<group>"; };
-		84DB846C16C8048E000BF23E /* UIAlertView+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+ErrorKit.h"; path = "../../ErrorKit/UIAlertView+ErrorKit.h"; sourceTree = "<group>"; };
-		84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+ErrorKit.m"; path = "../../ErrorKit/UIAlertView+ErrorKit.m"; sourceTree = "<group>"; };
 		84DB847516C8242E000BF23E /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84DB847616C82432000BF23E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		84DCF7C716EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+ErrorCode.h"; path = "../../ErrorKit/MRErrorFormatter+ErrorCode.h"; sourceTree = "<group>"; };
-		84DCF7C816EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+ErrorCode.m"; path = "../../ErrorKit/MRErrorFormatter+ErrorCode.m"; sourceTree = "<group>"; };
-		84EB27DB16EAD98600F98BD0 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAlertRecoveryAttempter.h; path = ../../ErrorKit/MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
-		84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAlertRecoveryAttempter.m; path = ../../ErrorKit/MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
-		84EB27DD16EAD98700F98BD0 /* MRBlockRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRBlockRecoveryAttempter.h; path = ../../ErrorKit/MRBlockRecoveryAttempter.h; sourceTree = "<group>"; };
-		84EB27DE16EAD98700F98BD0 /* MRBlockRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRBlockRecoveryAttempter.m; path = ../../ErrorKit/MRBlockRecoveryAttempter.m; sourceTree = "<group>"; };
-		84EB27DF16EAD98700F98BD0 /* MRAbstractRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAbstractRecoveryAttempter.h; path = ../../ErrorKit/MRAbstractRecoveryAttempter.h; sourceTree = "<group>"; };
-		84EB27E016EAD98700F98BD0 /* MRAbstractRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAbstractRecoveryAttempter.m; path = ../../ErrorKit/MRAbstractRecoveryAttempter.m; sourceTree = "<group>"; };
-		84EB27E116EAD98700F98BD0 /* UIResponder+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+ErrorKit.h"; path = "../../ErrorKit/UIResponder+ErrorKit.h"; sourceTree = "<group>"; };
-		84EB27E216EAD98700F98BD0 /* UIResponder+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+ErrorKit.m"; path = "../../ErrorKit/UIResponder+ErrorKit.m"; sourceTree = "<group>"; };
-		84EB6BA0173176C5002AECC2 /* MRChainedRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRChainedRecoveryAttempter.h; path = ../../ErrorKit/MRChainedRecoveryAttempter.h; sourceTree = "<group>"; };
-		84EB6BA1173176C5002AECC2 /* MRChainedRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRChainedRecoveryAttempter.m; path = ../../ErrorKit/MRChainedRecoveryAttempter.m; sourceTree = "<group>"; };
-		84F2FFA21724A9AF0030D957 /* MRErrorBuilder+NSException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+NSException.h"; path = "../../ErrorKit/MRErrorBuilder+NSException.h"; sourceTree = "<group>"; };
-		84F2FFA31724A9E30030D957 /* MRErrorBuilder+NSException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+NSException.m"; path = "../../ErrorKit/MRErrorBuilder+NSException.m"; sourceTree = "<group>"; };
-		84F691DE171F2B50002C8F4F /* MRErrorBuilder_AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_AVFoundation.h; path = ../../ErrorKit/AVFoundation/MRErrorBuilder_AVFoundation.h; sourceTree = "<group>"; };
-		84F691DF171F3542002C8F4F /* NSError_AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSError_AVFoundation.h; path = ../../ErrorKit/AVFoundation/NSError_AVFoundation.h; sourceTree = "<group>"; };
-		84F8AEAF1715FF0D001E1FD4 /* NSError_AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSError_AFNetworking.h; path = ../../ErrorKit/AFNetworking/NSError_AFNetworking.h; sourceTree = "<group>"; };
-		84F8AEB01715FF35001E1FD4 /* NSError_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSError_CoreData.h; path = ../../ErrorKit/CoreData/NSError_CoreData.h; sourceTree = "<group>"; };
-		84F8AEB21715FF4E001E1FD4 /* NSError_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSError_FacebookSDK.h; path = ../../ErrorKit/FacebookSDK/NSError_FacebookSDK.h; sourceTree = "<group>"; };
-		84F8AEB31715FF5B001E1FD4 /* NSError_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSError_JSONKit.h; path = ../../ErrorKit/JSONKit/NSError_JSONKit.h; sourceTree = "<group>"; };
-		84F8AEB41715FF77001E1FD4 /* MRErrorBuilder_AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_AFNetworking.h; path = ../../ErrorKit/AFNetworking/MRErrorBuilder_AFNetworking.h; sourceTree = "<group>"; };
-		84F8AEB51715FF8C001E1FD4 /* MRErrorBuilder_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_CoreData.h; path = ../../ErrorKit/CoreData/MRErrorBuilder_CoreData.h; sourceTree = "<group>"; };
-		84F8AEB71715FFA9001E1FD4 /* MRErrorBuilder_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_FacebookSDK.h; path = ../../ErrorKit/FacebookSDK/MRErrorBuilder_FacebookSDK.h; sourceTree = "<group>"; };
-		84F8AEB81715FFB9001E1FD4 /* MRErrorBuilder_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_JSONKit.h; path = ../../ErrorKit/JSONKit/MRErrorBuilder_JSONKit.h; sourceTree = "<group>"; };
-		84F8AEB91715FFE3001E1FD4 /* MRErrorFormatter_Accounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_Accounts.h; path = ../../ErrorKit/Accounts/MRErrorFormatter_Accounts.h; sourceTree = "<group>"; };
-		84F8AEBA1715FFF5001E1FD4 /* MRErrorFormatter_Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_Admob.h; path = ../../ErrorKit/Admob/MRErrorFormatter_Admob.h; sourceTree = "<group>"; };
-		84F8AEBB1715FFFF001E1FD4 /* MRErrorFormatter_CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_CoreLocation.h; path = ../../ErrorKit/CoreLocation/MRErrorFormatter_CoreLocation.h; sourceTree = "<group>"; };
-		84F8AEBC17160008001E1FD4 /* MRErrorFormatter_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_FacebookSDK.h; path = ../../ErrorKit/FacebookSDK/MRErrorFormatter_FacebookSDK.h; sourceTree = "<group>"; };
-		84F8AEBD17160019001E1FD4 /* MRErrorFormatter_HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_HTTP.h; path = ../../ErrorKit/HTTP/MRErrorFormatter_HTTP.h; sourceTree = "<group>"; };
-		84F8AEBE17160023001E1FD4 /* MRErrorFormatter_iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_iAD.h; path = ../../ErrorKit/iAD/MRErrorFormatter_iAD.h; sourceTree = "<group>"; };
-		84F8AEBF17160031001E1FD4 /* MRErrorFormatter_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_JSONKit.h; path = ../../ErrorKit/JSONKit/MRErrorFormatter_JSONKit.h; sourceTree = "<group>"; };
-		84F8AEC01716003F001E1FD4 /* MRErrorFormatter_MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_MapKit.h; path = ../../ErrorKit/MapKit/MRErrorFormatter_MapKit.h; sourceTree = "<group>"; };
-		84F8AEC117160048001E1FD4 /* MRErrorFormatter_MessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_MessageUI.h; path = ../../ErrorKit/MessageUI/MRErrorFormatter_MessageUI.h; sourceTree = "<group>"; };
-		84F8AEC217160056001E1FD4 /* MRErrorFormatter_Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_Security.h; path = ../../ErrorKit/Security/MRErrorFormatter_Security.h; sourceTree = "<group>"; };
-		84F8AEC317160063001E1FD4 /* MRErrorFormatter_StoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_StoreKit.h; path = ../../ErrorKit/StoreKit/MRErrorFormatter_StoreKit.h; sourceTree = "<group>"; };
-		84F8AEC41716006D001E1FD4 /* MRErrorFormatter_TransitionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRErrorFormatter_TransitionKit.h; path = ../../ErrorKit/TransitionKit/MRErrorFormatter_TransitionKit.h; sourceTree = "<group>"; };
+		84F691DE171F2B50002C8F4F /* MRErrorBuilder+AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+AVFoundation.h"; path = "../../ErrorKit/AVFoundation/MRErrorBuilder+AVFoundation.h"; sourceTree = "<group>"; };
+		84F691DF171F3542002C8F4F /* NSError+AVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSError+AVFoundation.h"; path = "../../ErrorKit/AVFoundation/NSError+AVFoundation.h"; sourceTree = "<group>"; };
+		84F8AEAF1715FF0D001E1FD4 /* NSError+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+AFNetworking.h"; path = "../../ErrorKit/AFNetworking/NSError+AFNetworking.h"; sourceTree = "<group>"; };
+		84F8AEB01715FF35001E1FD4 /* NSError+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CoreData.h"; path = "../../ErrorKit/CoreData/NSError+CoreData.h"; sourceTree = "<group>"; };
+		84F8AEB21715FF4E001E1FD4 /* NSError+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/NSError+FacebookSDK.h"; sourceTree = "<group>"; };
+		84F8AEB31715FF5B001E1FD4 /* NSError+JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+JSONKit.h"; path = "../../ErrorKit/JSONKit/NSError+JSONKit.h"; sourceTree = "<group>"; };
+		84F8AEB41715FF77001E1FD4 /* MRErrorBuilder+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+AFNetworking.h"; path = "../../ErrorKit/AFNetworking/MRErrorBuilder+AFNetworking.h"; sourceTree = "<group>"; };
+		84F8AEB51715FF8C001E1FD4 /* MRErrorBuilder+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+CoreData.h"; path = "../../ErrorKit/CoreData/MRErrorBuilder+CoreData.h"; sourceTree = "<group>"; };
+		84F8AEB71715FFA9001E1FD4 /* MRErrorBuilder+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/MRErrorBuilder+FacebookSDK.h"; sourceTree = "<group>"; };
+		84F8AEB81715FFB9001E1FD4 /* MRErrorBuilder+JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+JSONKit.h"; path = "../../ErrorKit/JSONKit/MRErrorBuilder+JSONKit.h"; sourceTree = "<group>"; };
+		84F8AEB91715FFE3001E1FD4 /* MRErrorFormatter+Accounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+Accounts.h"; path = "../../ErrorKit/Accounts/MRErrorFormatter+Accounts.h"; sourceTree = "<group>"; };
+		84F8AEBA1715FFF5001E1FD4 /* MRErrorFormatter+Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+Admob.h"; path = "../../ErrorKit/Admob/MRErrorFormatter+Admob.h"; sourceTree = "<group>"; };
+		84F8AEBB1715FFFF001E1FD4 /* MRErrorFormatter+CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+CoreLocation.h"; path = "../../ErrorKit/CoreLocation/MRErrorFormatter+CoreLocation.h"; sourceTree = "<group>"; };
+		84F8AEBC17160008001E1FD4 /* MRErrorFormatter+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/MRErrorFormatter+FacebookSDK.h"; sourceTree = "<group>"; };
+		84F8AEBD17160019001E1FD4 /* MRErrorFormatter+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+HTTP.h"; path = "../../ErrorKit/HTTP/MRErrorFormatter+HTTP.h"; sourceTree = "<group>"; };
+		84F8AEBE17160023001E1FD4 /* MRErrorFormatter+iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+iAD.h"; path = "../../ErrorKit/iAD/MRErrorFormatter+iAD.h"; sourceTree = "<group>"; };
+		84F8AEBF17160031001E1FD4 /* MRErrorFormatter+JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+JSONKit.h"; path = "../../ErrorKit/JSONKit/MRErrorFormatter+JSONKit.h"; sourceTree = "<group>"; };
+		84F8AEC01716003F001E1FD4 /* MRErrorFormatter+MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+MapKit.h"; path = "../../ErrorKit/MapKit/MRErrorFormatter+MapKit.h"; sourceTree = "<group>"; };
+		84F8AEC117160048001E1FD4 /* MRErrorFormatter+MessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+MessageUI.h"; path = "../../ErrorKit/MessageUI/MRErrorFormatter+MessageUI.h"; sourceTree = "<group>"; };
+		84F8AEC217160056001E1FD4 /* MRErrorFormatter+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+Security.h"; path = "../../ErrorKit/Security/MRErrorFormatter+Security.h"; sourceTree = "<group>"; };
+		84F8AEC317160063001E1FD4 /* MRErrorFormatter+StoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+StoreKit.h"; path = "../../ErrorKit/StoreKit/MRErrorFormatter+StoreKit.h"; sourceTree = "<group>"; };
+		84F8AEC41716006D001E1FD4 /* MRErrorFormatter+TransitionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+TransitionKit.h"; path = "../../ErrorKit/TransitionKit/MRErrorFormatter+TransitionKit.h"; sourceTree = "<group>"; };
 		84FA2664170FB483008A9DAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ErrorKit.strings; sourceTree = "<group>"; };
 		84FA2666170FB48D008A9DAA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ErrorKit.strings; sourceTree = "<group>"; };
 		84FA2667170FB495008A9DAA /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/ErrorKit.strings; sourceTree = "<group>"; };
-		84FCBBF41739700C00EB7E29 /* MRErrorBuilder_HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRErrorBuilder_HTTP.h; path = ../../ErrorKit/HTTP/MRErrorBuilder_HTTP.h; sourceTree = "<group>"; };
+		84FCBBF41739700C00EB7E29 /* MRErrorBuilder+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+HTTP.h"; path = "../../ErrorKit/HTTP/MRErrorBuilder+HTTP.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +223,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841A09D117FF970100DC3848 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				841438D718021B4300EF0704 /* ErrorKitImports.h */,
+				841A09CB17FF93CF00DC3848 /* ErrorKit_Accounts.h */,
+				841A09CC17FF952800DC3848 /* ErrorKit_Admob.h */,
+				841A09CD17FF952800DC3848 /* ErrorKit_AFNetworking.h */,
+				841A09CE17FF952800DC3848 /* ErrorKit_AVFoundation.h */,
+				841438D51802170B00EF0704 /* ErrorKit_Core.h */,
+				841A09CF17FF96E300DC3848 /* ErrorKit_CoreData.h */,
+				841A09D017FF96E300DC3848 /* ErrorKit_CoreLocation.h */,
+				841438D6180218DA00EF0704 /* ErrorKit_Default.h */,
+				841A09D217FF980C00DC3848 /* ErrorKit_FacebookSDK.h */,
+				841A09D317FF980C00DC3848 /* ErrorKit_HTTP.h */,
+				841A09D417FF998E00DC3848 /* ErrorKit_iAD.h */,
+				841A09D517FF998E00DC3848 /* ErrorKit_JSONKit.h */,
+				841A09D617FF998E00DC3848 /* ErrorKit_JSONValues.h */,
+				841A09D717FF998E00DC3848 /* ErrorKit_MapKit.h */,
+				841A09D817FF998E00DC3848 /* ErrorKit_MessageUI.h */,
+				841A09D917FF9A4C00DC3848 /* ErrorKit_NSException.h */,
+				841A09DA17FF9C3200DC3848 /* ErrorKit_Security.h */,
+				841A09DB17FF9C3200DC3848 /* ErrorKit_StoreKit.h */,
+				841A09DC17FF9C3200DC3848 /* ErrorKit_TransitionKit.h */,
+				841A09DD17FF9C3200DC3848 /* ErrorKit_UIKit.h */,
+				841A09DE17FF9C3300DC3848 /* ErrorKit_VeriJSON.h */,
+			);
+			name = headers;
+			sourceTree = "<group>";
+		};
+		845990E917FA4F3E008ADCD2 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				845990EC17FA4F65008ADCD2 /* NSArray+JSONValues.h */,
+				845990ED17FA4F65008ADCD2 /* NSArray+JSONValues.m */,
+				845990EE17FA4F65008ADCD2 /* NSDictionary+JSONValues.h */,
+				845990EF17FA4F65008ADCD2 /* NSDictionary+JSONValues.m */,
+				845990F017FA4F65008ADCD2 /* NSMutableArray+JSONValues.h */,
+				845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */,
+				845990F217FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.h */,
+				845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
 		84DB842416C802F3000BF23E = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +328,8 @@
 			children = (
 				84DB846116C8048E000BF23E /* ErrorKit.h */,
 				8419D1F2171B539500143B54 /* ErrorKitDefines.h */,
-				8416764A1753FFAF00DB89F6 /* ErrorKitImports.h */,
+				841A09D117FF970100DC3848 /* headers */,
+				845990E917FA4F3E008ADCD2 /* helpers */,
 				84EB27EA16EADA9400F98BD0 /* access */,
 				84EB27E716EAD9E300F98BD0 /* build */,
 				84DCF7CA16EC0D4F00F50750 /* format */,
@@ -197,25 +343,44 @@
 		84DCF7CA16EC0D4F00F50750 /* format */ = {
 			isa = PBXGroup;
 			children = (
-				84DB846616C8048E000BF23E /* MRErrorFormatter.h */,
-				84DB846716C8048E000BF23E /* MRErrorFormatter.m */,
-				84DCF7C716EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.h */,
-				84DCF7C816EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m */,
-				84F8AEB91715FFE3001E1FD4 /* MRErrorFormatter_Accounts.h */,
-				84F8AEBA1715FFF5001E1FD4 /* MRErrorFormatter_Admob.h */,
-				84D84C22171F485D00EBA843 /* MRErrorFormatter_AVFoundation.h */,
-				8458E357174ECD38003DB731 /* MRErrorFormatter_CoreData.h */,
-				84F8AEBB1715FFFF001E1FD4 /* MRErrorFormatter_CoreLocation.h */,
-				84F8AEBC17160008001E1FD4 /* MRErrorFormatter_FacebookSDK.h */,
-				84F8AEBD17160019001E1FD4 /* MRErrorFormatter_HTTP.h */,
-				84F8AEBE17160023001E1FD4 /* MRErrorFormatter_iAD.h */,
-				84F8AEBF17160031001E1FD4 /* MRErrorFormatter_JSONKit.h */,
-				84F8AEC01716003F001E1FD4 /* MRErrorFormatter_MapKit.h */,
-				84F8AEC117160048001E1FD4 /* MRErrorFormatter_MessageUI.h */,
-				84F8AEC217160056001E1FD4 /* MRErrorFormatter_Security.h */,
-				84F8AEC317160063001E1FD4 /* MRErrorFormatter_StoreKit.h */,
-				84F8AEC41716006D001E1FD4 /* MRErrorFormatter_TransitionKit.h */,
-				84448C28175B9ECE00E6D256 /* MRErrorFormatter_VeriJSON.h */,
+				841438C71802160C00EF0704 /* MRErrorFormatter.h */,
+				841438C81802160E00EF0704 /* MRErrorFormatter.m */,
+				841438C91802160E00EF0704 /* MRErrorFormatter+ErrorCode.h */,
+				841438CA1802160E00EF0704 /* MRErrorFormatter+ErrorCode.m */,
+				84F8AEB91715FFE3001E1FD4 /* MRErrorFormatter+Accounts.h */,
+				840B600E180371A60090A142 /* MRErrorFormatter+Accounts.m */,
+				84F8AEBA1715FFF5001E1FD4 /* MRErrorFormatter+Admob.h */,
+				840B60101803729D0090A142 /* MRErrorFormatter+Admob.m */,
+				84D84C22171F485D00EBA843 /* MRErrorFormatter+AVFoundation.h */,
+				840B60121803732A0090A142 /* MRErrorFormatter+AVFoundation.m */,
+				8458E357174ECD38003DB731 /* MRErrorFormatter+CoreData.h */,
+				840B6014180373D50090A142 /* MRErrorFormatter+CoreData.m */,
+				84F8AEBB1715FFFF001E1FD4 /* MRErrorFormatter+CoreLocation.h */,
+				840B6016180374890090A142 /* MRErrorFormatter+CoreLocation.m */,
+				84F8AEBC17160008001E1FD4 /* MRErrorFormatter+FacebookSDK.h */,
+				840B6018180375BC0090A142 /* MRErrorFormatter+FacebookSDK.m */,
+				84F8AEBD17160019001E1FD4 /* MRErrorFormatter+HTTP.h */,
+				840B601A1803761E0090A142 /* MRErrorFormatter+HTTP.m */,
+				84F8AEBE17160023001E1FD4 /* MRErrorFormatter+iAD.h */,
+				840B601C180376FE0090A142 /* MRErrorFormatter+iAD.m */,
+				84F8AEBF17160031001E1FD4 /* MRErrorFormatter+JSONKit.h */,
+				840B601E180377530090A142 /* MRErrorFormatter+JSONKit.m */,
+				845990EA17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.h */,
+				845990EB17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.m */,
+				84F8AEC01716003F001E1FD4 /* MRErrorFormatter+MapKit.h */,
+				840B60201803785A0090A142 /* MRErrorFormatter+MapKit.m */,
+				84F8AEC117160048001E1FD4 /* MRErrorFormatter+MessageUI.h */,
+				840B6022180378F90090A142 /* MRErrorFormatter+MessageUI.m */,
+				84220DE717FE1DE50009C919 /* MRErrorFormatter+NSException.h */,
+				84220DE817FE1DE50009C919 /* MRErrorFormatter+NSException.m */,
+				84F8AEC217160056001E1FD4 /* MRErrorFormatter+Security.h */,
+				840B6024180379750090A142 /* MRErrorFormatter+Security.m */,
+				84F8AEC317160063001E1FD4 /* MRErrorFormatter+StoreKit.h */,
+				840B6026180379ED0090A142 /* MRErrorFormatter+StoreKit.m */,
+				84F8AEC41716006D001E1FD4 /* MRErrorFormatter+TransitionKit.h */,
+				840B602818037A360090A142 /* MRErrorFormatter+TransitionKit.m */,
+				84448C28175B9ECE00E6D256 /* MRErrorFormatter+VeriJSON.h */,
+				840B602A18037AF10090A142 /* MRErrorFormatter+VeriJSON.m */,
 			);
 			name = format;
 			sourceTree = "<group>";
@@ -223,16 +388,22 @@
 		84EB27E716EAD9E300F98BD0 /* build */ = {
 			isa = PBXGroup;
 			children = (
-				84DB846416C8048E000BF23E /* MRErrorBuilder.h */,
-				84DB846516C8048E000BF23E /* MRErrorBuilder.m */,
-				84F2FFA21724A9AF0030D957 /* MRErrorBuilder+NSException.h */,
-				84F2FFA31724A9E30030D957 /* MRErrorBuilder+NSException.m */,
-				84F8AEB41715FF77001E1FD4 /* MRErrorBuilder_AFNetworking.h */,
-				84F691DE171F2B50002C8F4F /* MRErrorBuilder_AVFoundation.h */,
-				84F8AEB51715FF8C001E1FD4 /* MRErrorBuilder_CoreData.h */,
-				84F8AEB71715FFA9001E1FD4 /* MRErrorBuilder_FacebookSDK.h */,
-				84FCBBF41739700C00EB7E29 /* MRErrorBuilder_HTTP.h */,
-				84F8AEB81715FFB9001E1FD4 /* MRErrorBuilder_JSONKit.h */,
+				841438C51802160C00EF0704 /* MRErrorBuilder.h */,
+				841438C61802160C00EF0704 /* MRErrorBuilder.m */,
+				84220DE517FE1DE50009C919 /* MRErrorBuilder+NSException.h */,
+				84220DE617FE1DE50009C919 /* MRErrorBuilder+NSException.m */,
+				84F8AEB41715FF77001E1FD4 /* MRErrorBuilder+AFNetworking.h */,
+				84220DEB17FE22600009C919 /* MRErrorBuilder+AFNetworking.m */,
+				84F691DE171F2B50002C8F4F /* MRErrorBuilder+AVFoundation.h */,
+				84220DED17FE23410009C919 /* MRErrorBuilder+AVFoundation.m */,
+				84F8AEB51715FF8C001E1FD4 /* MRErrorBuilder+CoreData.h */,
+				84220DEF17FE23E50009C919 /* MRErrorBuilder+CoreData.m */,
+				84F8AEB71715FFA9001E1FD4 /* MRErrorBuilder+FacebookSDK.h */,
+				84220DF117FE246A0009C919 /* MRErrorBuilder+FacebookSDK.m */,
+				84FCBBF41739700C00EB7E29 /* MRErrorBuilder+HTTP.h */,
+				84220DF317FE24FD0009C919 /* MRErrorBuilder+HTTP.m */,
+				84F8AEB81715FFB9001E1FD4 /* MRErrorBuilder+JSONKit.h */,
+				84220DF517FE277F0009C919 /* MRErrorBuilder+JSONKit.m */,
 			);
 			name = build;
 			sourceTree = "<group>";
@@ -240,11 +411,16 @@
 		84EB27E816EAD9F000F98BD0 /* present */ = {
 			isa = PBXGroup;
 			children = (
-				84DB846C16C8048E000BF23E /* UIAlertView+ErrorKit.h */,
-				84DB846D16C8048E000BF23E /* UIAlertView+ErrorKit.m */,
-				84EB27E116EAD98700F98BD0 /* UIResponder+ErrorKit.h */,
-				84EB27E216EAD98700F98BD0 /* UIResponder+ErrorKit.m */,
-				84B2B394174AB5AF004E8ED3 /* UIResponder_FacebookSDK.h */,
+				84C7473817F8E056007DF279 /* UIAlertView+ErrorKit.h */,
+				84C7473917F8E056007DF279 /* UIAlertView+ErrorKit.m */,
+				84220DF717FE2EA30009C919 /* UIApplication+ErrorKit.h */,
+				84220DF817FE2EA30009C919 /* UIApplication+ErrorKit.m */,
+				84220DFD17FE30DB0009C919 /* UIApplication+FacebookSDK.h */,
+				84220DFE17FE30DC0009C919 /* UIApplication+FacebookSDK.m */,
+				84C7473A17F8E056007DF279 /* UIResponder+ErrorKit.h */,
+				84C7473B17F8E056007DF279 /* UIResponder+ErrorKit.m */,
+				84B2B394174AB5AF004E8ED3 /* UIResponder+FacebookSDK.h */,
+				84220DE317FE0AEE0009C919 /* UIResponder+FacebookSDK.m */,
 			);
 			name = present;
 			sourceTree = "<group>";
@@ -252,14 +428,14 @@
 		84EB27E916EADA3600F98BD0 /* recover */ = {
 			isa = PBXGroup;
 			children = (
-				84EB27DF16EAD98700F98BD0 /* MRAbstractRecoveryAttempter.h */,
-				84EB27E016EAD98700F98BD0 /* MRAbstractRecoveryAttempter.m */,
-				84EB27DD16EAD98700F98BD0 /* MRBlockRecoveryAttempter.h */,
-				84EB27DE16EAD98700F98BD0 /* MRBlockRecoveryAttempter.m */,
-				84EB27DB16EAD98600F98BD0 /* MRAlertRecoveryAttempter.h */,
-				84EB27DC16EAD98600F98BD0 /* MRAlertRecoveryAttempter.m */,
-				84EB6BA0173176C5002AECC2 /* MRChainedRecoveryAttempter.h */,
-				84EB6BA1173176C5002AECC2 /* MRChainedRecoveryAttempter.m */,
+				841438BF1802160900EF0704 /* MRAbstractRecoveryAttempter.h */,
+				841438C01802160900EF0704 /* MRAbstractRecoveryAttempter.m */,
+				841438C11802160A00EF0704 /* MRBlockRecoveryAttempter.h */,
+				841438C21802160A00EF0704 /* MRBlockRecoveryAttempter.m */,
+				84C7473617F8E056007DF279 /* MRAlertRecoveryAttempter.h */,
+				84C7473717F8E056007DF279 /* MRAlertRecoveryAttempter.m */,
+				841438C31802160B00EF0704 /* MRChainedRecoveryAttempter.h */,
+				841438C41802160B00EF0704 /* MRChainedRecoveryAttempter.m */,
 			);
 			name = recover;
 			sourceTree = "<group>";
@@ -267,14 +443,20 @@
 		84EB27EA16EADA9400F98BD0 /* access */ = {
 			isa = PBXGroup;
 			children = (
-				84DB846A16C8048E000BF23E /* NSError+ErrorKit.h */,
-				84DB846B16C8048E000BF23E /* NSError+ErrorKit.m */,
-				84F8AEAF1715FF0D001E1FD4 /* NSError_AFNetworking.h */,
-				84F691DF171F3542002C8F4F /* NSError_AVFoundation.h */,
-				84F8AEB01715FF35001E1FD4 /* NSError_CoreData.h */,
-				84F8AEB21715FF4E001E1FD4 /* NSError_FacebookSDK.h */,
-				84040EF6173826EF00548BE6 /* NSError_HTTP.h */,
-				84F8AEB31715FF5B001E1FD4 /* NSError_JSONKit.h */,
+				841438CB1802160F00EF0704 /* NSError+ErrorKit.h */,
+				841438CC1802160F00EF0704 /* NSError+ErrorKit.m */,
+				84F8AEAF1715FF0D001E1FD4 /* NSError+AFNetworking.h */,
+				84220DD717FE02400009C919 /* NSError+AFNetworking.m */,
+				84F691DF171F3542002C8F4F /* NSError+AVFoundation.h */,
+				84220DD917FE04170009C919 /* NSError+AVFoundation.m */,
+				84F8AEB01715FF35001E1FD4 /* NSError+CoreData.h */,
+				84220DDB17FE04B50009C919 /* NSError+CoreData.m */,
+				84F8AEB21715FF4E001E1FD4 /* NSError+FacebookSDK.h */,
+				84220DDD17FE05880009C919 /* NSError+FacebookSDK.m */,
+				84040EF6173826EF00548BE6 /* NSError+HTTP.h */,
+				84220DE117FE09100009C919 /* NSError+HTTP.m */,
+				84F8AEB31715FF5B001E1FD4 /* NSError+JSONKit.h */,
+				84220DDF17FE06F60009C919 /* NSError+JSONKit.m */,
 			);
 			name = access;
 			sourceTree = "<group>";
@@ -352,17 +534,53 @@
 				84DB843D16C802F3000BF23E /* main.m in Sources */,
 				84DB844116C802F4000BF23E /* MRAppDelegate.m in Sources */,
 				84DB844A16C802F4000BF23E /* MRViewController.m in Sources */,
-				84DB846E16C8048E000BF23E /* MRErrorBuilder.m in Sources */,
-				84DB846F16C8048E000BF23E /* MRErrorFormatter.m in Sources */,
-				84DB847016C8048E000BF23E /* NSError+ErrorKit.m in Sources */,
-				84DB847116C8048E000BF23E /* UIAlertView+ErrorKit.m in Sources */,
-				84EB27E316EAD98700F98BD0 /* MRAlertRecoveryAttempter.m in Sources */,
-				84EB27E416EAD98700F98BD0 /* MRBlockRecoveryAttempter.m in Sources */,
-				84EB27E516EAD98700F98BD0 /* MRAbstractRecoveryAttempter.m in Sources */,
-				84EB27E616EAD98700F98BD0 /* UIResponder+ErrorKit.m in Sources */,
-				84DCF7C916EC0CFF00F50750 /* MRErrorFormatter+ErrorCode.m in Sources */,
-				84F2FFA41724A9E30030D957 /* MRErrorBuilder+NSException.m in Sources */,
-				84EB6BA2173176C5002AECC2 /* MRChainedRecoveryAttempter.m in Sources */,
+				84C7473C17F8E056007DF279 /* MRAlertRecoveryAttempter.m in Sources */,
+				84C7473D17F8E056007DF279 /* UIAlertView+ErrorKit.m in Sources */,
+				84C7473E17F8E056007DF279 /* UIResponder+ErrorKit.m in Sources */,
+				845990F417FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.m in Sources */,
+				845990F517FA4F65008ADCD2 /* NSArray+JSONValues.m in Sources */,
+				845990F617FA4F65008ADCD2 /* NSDictionary+JSONValues.m in Sources */,
+				845990F717FA4F65008ADCD2 /* NSMutableArray+JSONValues.m in Sources */,
+				845990F817FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m in Sources */,
+				84220DD817FE02400009C919 /* NSError+AFNetworking.m in Sources */,
+				84220DDA17FE04180009C919 /* NSError+AVFoundation.m in Sources */,
+				84220DDC17FE04B50009C919 /* NSError+CoreData.m in Sources */,
+				84220DDE17FE05880009C919 /* NSError+FacebookSDK.m in Sources */,
+				84220DE017FE06F60009C919 /* NSError+JSONKit.m in Sources */,
+				84220DE217FE09100009C919 /* NSError+HTTP.m in Sources */,
+				84220DE417FE0AEF0009C919 /* UIResponder+FacebookSDK.m in Sources */,
+				84220DE917FE1DE50009C919 /* MRErrorBuilder+NSException.m in Sources */,
+				84220DEA17FE1DE50009C919 /* MRErrorFormatter+NSException.m in Sources */,
+				84220DEC17FE22610009C919 /* MRErrorBuilder+AFNetworking.m in Sources */,
+				84220DEE17FE23410009C919 /* MRErrorBuilder+AVFoundation.m in Sources */,
+				84220DF017FE23E60009C919 /* MRErrorBuilder+CoreData.m in Sources */,
+				84220DF217FE246A0009C919 /* MRErrorBuilder+FacebookSDK.m in Sources */,
+				84220DF417FE24FD0009C919 /* MRErrorBuilder+HTTP.m in Sources */,
+				84220DF617FE277F0009C919 /* MRErrorBuilder+JSONKit.m in Sources */,
+				84220DF917FE2EA40009C919 /* UIApplication+ErrorKit.m in Sources */,
+				84220DFF17FE30DC0009C919 /* UIApplication+FacebookSDK.m in Sources */,
+				841438CE1802160F00EF0704 /* MRAbstractRecoveryAttempter.m in Sources */,
+				841438CF1802160F00EF0704 /* MRBlockRecoveryAttempter.m in Sources */,
+				841438D01802160F00EF0704 /* MRChainedRecoveryAttempter.m in Sources */,
+				841438D11802160F00EF0704 /* MRErrorBuilder.m in Sources */,
+				841438D21802160F00EF0704 /* MRErrorFormatter.m in Sources */,
+				841438D31802160F00EF0704 /* MRErrorFormatter+ErrorCode.m in Sources */,
+				841438D41802160F00EF0704 /* NSError+ErrorKit.m in Sources */,
+				840B600F180371A60090A142 /* MRErrorFormatter+Accounts.m in Sources */,
+				840B60111803729D0090A142 /* MRErrorFormatter+Admob.m in Sources */,
+				840B60131803732A0090A142 /* MRErrorFormatter+AVFoundation.m in Sources */,
+				840B6015180373D50090A142 /* MRErrorFormatter+CoreData.m in Sources */,
+				840B60171803748A0090A142 /* MRErrorFormatter+CoreLocation.m in Sources */,
+				840B6019180375BD0090A142 /* MRErrorFormatter+FacebookSDK.m in Sources */,
+				840B601B1803761E0090A142 /* MRErrorFormatter+HTTP.m in Sources */,
+				840B601D180376FF0090A142 /* MRErrorFormatter+iAD.m in Sources */,
+				840B601F180377540090A142 /* MRErrorFormatter+JSONKit.m in Sources */,
+				840B60211803785B0090A142 /* MRErrorFormatter+MapKit.m in Sources */,
+				840B6023180378F90090A142 /* MRErrorFormatter+MessageUI.m in Sources */,
+				840B6025180379750090A142 /* MRErrorFormatter+Security.m in Sources */,
+				840B6027180379EE0090A142 /* MRErrorFormatter+StoreKit.m in Sources */,
+				840B602918037A360090A142 /* MRErrorFormatter+TransitionKit.m in Sources */,
+				840B602B18037AF20090A142 /* MRErrorFormatter+VeriJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

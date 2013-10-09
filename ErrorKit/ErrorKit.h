@@ -23,63 +23,7 @@
 #ifndef _ERRORKIT_H
 #define _ERRORKIT_H
 
-#import "NSError+ErrorKit.h"
-
-#import "MRErrorBuilder.h"
-#import "MRErrorBuilder+NSException.h"
-
-#import "MRErrorFormatter.h"
-
-#import "MRBlockRecoveryAttempter.h"
-#import "MRChainedRecoveryAttempter.h"
-
-#ifdef UIKIT_STATIC_INLINE
-#import "UIAlertView+ErrorKit.h"
-#import "UIResponder+ErrorKit.h"
-#import "MRAlertRecoveryAttempter.h"
-#endif
-
-#ifdef ERROR_KIT_AFNETWORKING
-#import "NSError_AFNetworking.h"
-#import "MRErrorBuilder_AFNetworking.h"
-#endif
-
-#ifdef ERROR_KIT_AVFOUNDATION
-#import "MRErrorBuilder_AVFoundation.h"
-#endif
-
-#ifdef ERROR_KIT_CORE_DATA
-#import "NSError_CoreData.h"
-#import "MRErrorBuilder_CoreData.h"
-#endif
-
-#ifdef ERROR_KIT_FACEBOOK
-#import "UIResponder_FacebookSDK.h"
-#import "NSError_FacebookSDK.h"
-#import "MRErrorBuilder_FacebookSDK.h"
-#endif
-
-#ifdef ERROR_KIT_HTTP
-#import "NSError_HTTP.h"
-#import "MRErrorFormatter_HTTP.h"
-#endif
-
-#ifdef ERROR_KIT_JSON_KIT
-#import "NSError_JSONKit.h"
-#import "MRErrorBuilder_JSONKit.h"
-#endif
-
-#ifdef ERROR_KIT_MESSAGE_UI
-#import "MRErrorFormatter_MessageUI.h"
-#endif
-
-#ifdef ERROR_KIT_SECURITY
-#import "MRErrorFormatter_Security.h"
-#endif
-
-#ifdef ERROR_KIT_VERI_JSON
-#import "MRErrorFormatter_VeriJSON.h"
-#endif
+#import "ErrorKitImports.h"
 
 // Logger
 #ifndef MRLogError

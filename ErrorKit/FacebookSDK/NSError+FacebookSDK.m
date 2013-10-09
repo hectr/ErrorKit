@@ -1,4 +1,4 @@
-// ErrorKitDefines.h
+// NSError+FacebookSDK.m
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,65 +20,58 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "NSError+FacebookSDK.h"
+#import "ErrorKitImports.h"
 
-#ifndef _ERRORKITDEFINES_H
-#define _ERRORKITDEFINES_H
-
-#ifdef ACCOUNTS_EXTERN
-#define ERROR_KIT_ACCOUNTS 1
+#if  ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag
 #endif
 
-#ifdef _AFNETWORKING_
-#define ERROR_KIT_AFNETWORKING 1
-#endif
 
-#ifdef AVF_EXPORT
-#define ERROR_KIT_AVFOUNDATION 1
-#endif
+#ifdef ERROR_KIT_FACEBOOK_SDK
 
-#define ERROR_KIT_CORE 1
+@implementation NSError (ErrorKit_FacebookSDK)
 
-#ifdef _COREDATADEFINES_H
-#define ERROR_KIT_CORE_DATA 1
-#endif
+- (NSError *)innerError
+{
+    return self.userInfo[FBErrorInnerErrorKey];
+}
 
-#ifdef __CORELOCATION__
-#define ERROR_KIT_CORE_LOCATION 1
-#endif
+- (id)parsedJSONResponse
+{
+    return self.userInfo[FBErrorParsedJSONResponseKey];
+}
 
-#ifdef FB_IOS_SDK_VERSION_STRING
-#define ERROR_KIT_FACEBOOK_SDK 1
-#endif
+- (NSInteger)HTTPStatusCode
+{
+    return [self.userInfo[FBErrorHTTPStatusCodeKey] integerValue];
+}
 
-#define ERROR_KIT_HTTP 1
+- (FBSession *)session
+{
+    return self.userInfo[FBErrorSessionKey];
+}
 
-#ifdef _JSONKIT_H_
-#define ERROR_KIT_JSON_KIT 1
-#endif
+- (NSURL *)unprocessedURL
+{
+    return self.userInfo[FBErrorUnprocessedURLKey];
+}
 
-#define ERROR_KIT_JSON_VALUES 1
+- (NSString *)loginFailedReason
+{
+    return self.userInfo[FBErrorLoginFailedReason];
+}
 
-#ifdef MK_EXTERN
-#define ERROR_KIT_MAP_KIT 1
-#endif
+- (NSString *)nativeDialogReason
+{
+    return self.userInfo[FBErrorDialogReasonKey];
+}
 
-#define ERROR_KIT_NSEXCEPTION 1
+- (NSString *)insightsReason
+{
+    return self.userInfo[@"com.facebook.sdk:InsightsReasonKey"];
+}
 
-#ifdef _SECURITY_SECITEM_H_
-#define ERROR_KIT_SECURITY 1
-#endif
-
-#ifdef SK_EXTERN
-#define ERROR_KIT_STORE_KIT 1
-#endif
-
-#ifdef TransitionKit_TransitionKit_h
-#define ERROR_KIT_TRANSITION_KIT 1
-#endif
-
-#ifdef UIKIT_STATIC_INLINE
-#define ERROR_KIT_UI_KIT 1
-#define ERROR_KIT_DEFAULT 1
-#endif
+@end
 
 #endif
