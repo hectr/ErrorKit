@@ -142,7 +142,7 @@
 - (void)setUserInfoValue:(id)value forKey:(NSString *)key
 {
     if (value) {
-        [_userInfo setObject:value forKey:key];
+        _userInfo[key] = value;
     } else {
         [_userInfo removeObjectForKey:key];
     }
