@@ -24,11 +24,11 @@
 
 
 /**
- TODO: document.
+ Adds a method that returns a localized message given an exception name.
  */
 @interface MRErrorFormatter (NSError_NSException)
 
-/// TODO: document.
+/// Returns a generic message string for the given exception name.
 + (NSString *)stringWithExceptionName:(NSString *)name;
 
 @end
