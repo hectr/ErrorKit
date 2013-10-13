@@ -32,7 +32,7 @@
 
 @interface NSDictionary ()
 
-+ (NSError *)mr_validationErrorWithKey:(id)aKey JSONPattern:(id)pattern object:(id)object value:(id)value isArgument:(BOOL)isArgument;
++ (NSError *)mr_validationErrorWithKey:(id)aKey JSONPattern:(id)pattern object:(id)object value:(id)value;
 
 @end
 
@@ -41,60 +41,56 @@
 
 - (BOOL)setNumber:(NSNumber *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
 {
-    if ([candidate isKindOfClass:NSNumber.class]) {
-        [self setObject:candidate forKey:aKey];
+    if (aKey && [candidate isKindOfClass:NSNumber.class]) {
+        self[aKey] = candidate;
         return YES;
     } else if (errorPtr) {
         *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                               JSONPattern:@"number"
-                                                   object:self
-                                                    value:candidate
-                                               isArgument:YES];
+                                                   object:nil
+                                                    value:candidate];
     }
     return NO;
 }
 
 - (BOOL)setString:(NSString *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
 {
-    if ([candidate isKindOfClass:NSString.class]) {
-        [self setObject:candidate forKey:aKey];
+    if (aKey && [candidate isKindOfClass:NSString.class]) {
+        self[aKey] = candidate;
         return YES;
     } else if (errorPtr) {
         *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                               JSONPattern:@"string"
-                                                   object:self
-                                                    value:candidate
-                                               isArgument:YES];
+                                                   object:nil
+                                                    value:candidate];
     }
     return NO;
 }
 
 - (BOOL)setArray:(NSArray *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
 {
-    if ([candidate isKindOfClass:NSArray.class]) {
-        [self setObject:candidate forKey:aKey];
+    if (aKey && [candidate isKindOfClass:NSArray.class]) {
+        self[aKey] = candidate;
         return YES;
     } else if (errorPtr) {
         *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                               JSONPattern:@[ ]
-                                                   object:self
-                                                    value:candidate
-                                               isArgument:YES];
+                                                   object:nil
+                                                    value:candidate];
     }
     return NO;
 }
 
-- (BOOL)setDictionary:(NSString *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
+- (BOOL)setDictionary:(NSDictionary *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
 {
-    if ([candidate isKindOfClass:NSDictionary.class]) {
-        [self setObject:candidate forKey:aKey];
+    if (aKey && [candidate isKindOfClass:NSDictionary.class]) {
+        self[aKey] = candidate;
         return YES;
     } else if (errorPtr) {
         *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                               JSONPattern:@{ }
-                                                   object:self
-                                                    value:candidate
-                                               isArgument:YES];
+                                                   object:nil
+                                                    value:candidate];
     }
     return NO;
 }

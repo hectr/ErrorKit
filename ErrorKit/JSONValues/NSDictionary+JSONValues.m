@@ -32,28 +32,49 @@
 
 @implementation NSDictionary (ErrorKit_JSONValues)
 
-+ (NSError *)mr_validationErrorWithKey:(id)aKey JSONPattern:(id)pattern object:(id)object value:(id)value isArgument:(BOOL)isArgument
++ (NSError *)mr_validationErrorWithKey:(id)aKey JSONPattern:(id)pattern object:(id)object value:(id)value
 {
     MRErrorBuilder *builder =
     [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
                                  code:NSKeyValueValidationError];
-    if ([(id<NSObject>)aKey isKindOfClass:NSString.class]) {
-        NSString *key = (NSString *)aKey;
-        NSString *optionalKey = [key stringByAppendingString:@"?"];
-        builder.localizedFailureReason =
-        [MRErrorFormatter stringWithJSONPattern:pattern
-                                         forKey:optionalKey];
+    if (object) {
+        if ([(id<NSObject>)aKey isKindOfClass:NSString.class]) {
+            NSString *key = (NSString *)aKey;
+            NSString *optionalKey = [key stringByAppendingString:@"?"];
+            builder.localizedFailureReason =
+            [MRErrorFormatter stringWithJSONPattern:pattern
+                                             forKey:optionalKey];
 #ifdef ERROR_KIT_CORE_DATA
-        builder.validationKey = aKey;
+            builder.validationKey = aKey;
 #endif
-    } else if (isArgument) {
+        }
+#ifdef ERROR_KIT_CORE_DATA
+        builder.validationValue = value;
+        builder.validationObject = object;
+#endif
+    } else if (aKey == nil) {
         builder.localizedFailureReason =
         [MRErrorFormatter stringWithExceptionName:NSInvalidArgumentException];
-    }
 #ifdef ERROR_KIT_CORE_DATA
-    builder.validationObject = object;
-    builder.validationValue = (value ?: NSNull.null);
+        builder.validationKey = @"key";
+        builder.validationValue = NSNull.null;
 #endif
+    } else {
+        if ([(id<NSObject>)aKey isKindOfClass:NSString.class]) {
+            NSString *key = (NSString *)aKey;
+            NSString *optionalKey = [key stringByAppendingString:@"?"];
+            builder.localizedFailureReason =
+            [MRErrorFormatter stringWithJSONPattern:pattern
+                                             forKey:optionalKey];
+        } else {
+            builder.localizedFailureReason =
+            [MRErrorFormatter stringWithExceptionName:NSInvalidArgumentException];
+        }
+#ifdef ERROR_KIT_CORE_DATA
+        builder.validationKey = @"value";
+        builder.validationValue = value;
+#endif
+    }
     return builder.error;
 }
 
@@ -65,8 +86,7 @@
             *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                                   JSONPattern:@"number"
                                                        object:self
-                                                        value:candidate
-                                                   isArgument:NO];
+                                                        value:candidate];
         }
         candidate = nil;
     }
@@ -81,8 +101,7 @@
             *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                                   JSONPattern:@"string"
                                                        object:self
-                                                        value:candidate
-                                                   isArgument:NO];
+                                                        value:candidate];
         }
         candidate = nil;
     }
@@ -97,8 +116,7 @@
             *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                                   JSONPattern:@[ ]
                                                        object:self
-                                                        value:candidate
-                                                   isArgument:NO];
+                                                        value:candidate];
         }
         candidate = nil;
     }
@@ -113,8 +131,7 @@
             *errorPtr = [self.class mr_validationErrorWithKey:aKey
                                                   JSONPattern:@{ }
                                                        object:self
-                                                        value:candidate
-                                                   isArgument:NO];
+                                                        value:candidate];
         }
         candidate = nil;
     }

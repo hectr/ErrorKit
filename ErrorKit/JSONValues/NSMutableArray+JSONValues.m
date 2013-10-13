@@ -48,8 +48,8 @@
     [MRErrorFormatter stringWithExceptionName:NSInvalidArgumentException];
 #ifdef ERROR_KIT_CORE_DATA
     builder.validationKey = @"object";
-    builder.validationValue = (value ?: NSNull.null);
-    builder.validationObject = self;
+    builder.validationValue = value;
+    builder.validationObject = object;
 #endif
     return builder.error;
 }
@@ -73,7 +73,7 @@
         }
     } else if (anObject == nil) {
         if (errorPtr) {
-            *errorPtr = [self.class mr_argumentErrorWithObject:self value:nil];
+            *errorPtr = [self.class mr_argumentErrorWithObject:nil value:nil];
         }
     } else {
         [self insertObject:anObject atIndex:index];
@@ -97,8 +97,8 @@
 
 - (BOOL)removeObjectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr
 {
-    NSUInteger end = self.count + 1;
-    if (index > end) {
+    NSUInteger count = self.count;
+    if (count == 0 || index > (count - 1)) {
         if (errorPtr) {
             *errorPtr = [self.class mr_rangeErrorWithIndex:index object:self];
         }
@@ -111,14 +111,14 @@
 
 - (BOOL)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject error:(NSError **)errorPtr
 {
-    NSUInteger end = self.count + 1;
-    if (index > end) {
+    NSUInteger count = self.count;
+    if (count == 0 || index > (count - 1)) {
         if (errorPtr) {
             *errorPtr = [self.class mr_rangeErrorWithIndex:index object:self];
         }
     } else if (anObject == nil) {
         if (errorPtr) {
-            *errorPtr = [self.class mr_argumentErrorWithObject:self value:nil];
+            *errorPtr = [self.class mr_argumentErrorWithObject:nil value:nil];
         }
     } else {
         [self replaceObjectAtIndex:index withObject:anObject];
