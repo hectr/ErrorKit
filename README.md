@@ -8,15 +8,15 @@ It covers error object creation, inspection, presentation and recovery.
 Examples
 --------
 
-**Log error (if any)**
+### Log error (if any)
 
     MRLogError(error);
 
-**Assert**
+### Assert
 
     MRNotErrorAssert(error);
     
-**Access error values**
+### Access error values
 
 	NSString *helpAnchor = error.helpAnchor;
     NSURLRequest *request = error.failingURLRequest;
@@ -24,7 +24,7 @@ Examples
     // and so on...
     // (supports most AFNetworking, AVFoundation, Core Data, Facebook SDK and JSONKit keys)
 
-**Present error to the user**
+### Present error to the user
 
         if (!error.isCancelledError) {
 	        [[UIAlertView alertWithTitle:nil error:error] show];
@@ -32,7 +32,7 @@ Examples
         // or you can rely on responder chain and do:
         // [self presentError:error];
 
-**Attempt to recover from error**
+### Attempt to recover from error
 
         if (error.code == NSURLErrorNotConnectedToInternet && error.isHTTPError) {
 	        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
@@ -44,21 +44,32 @@ Examples
 	        [self presentError:builder.error];
 	    }
 
-***Stringize* error codes**
+### *Stringize* error code
 
     NSString *debugString = [MRErrorFormatter debugStringWithDomain:error.domain code:error.code]; // e.g. NSURLErrorNetworkConnectionLost
     NSString *localizedString = [MRErrorFormatter stringWithDomain:error.domain code:error.code]; // e.g. Connection Lost
     // (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Security, Store Kit, TransitionKit and VeriJSON codes)
 
-See *ErrorKit-Example* project or browse online [documentation](http://hectr.github.com/ErrorKit/) for further reference.
+### Other examples
 
-**Handle Facebook errors**
+#### Handle Facebook errors
 
     // ErrorKit provides handlers for Facebook authentication, request permission and API calls errors.
     - (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock;
     - (BOOL)handleFacebookRequestPermissionError:(NSError *)error;
     - (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock;
-    
+
+#### Access JSON values
+
+    // ErrorKit also provides methods for safely retrieving values from dictionaries and arrays:
+    - (NSNumber *)numberForKey:(id)aKey withError:(NSError **)errorPtr;
+    - (NSString *)stringForKey:(id)aKey withError:(NSError **)errorPtr;
+    - (NSArray *)arrayForKey:(id)aKey withError:(NSError **)errorPtr;
+    - (NSDictionary *)dictionaryForKey:(id)aKey withError:(NSError **)errorPtr;
+    // etc.
+
+> See *ErrorKit-Example* project or browse online [documentation](http://hectr.github.com/ErrorKit/) for further reference.
+
 Installation
 ------------
 
@@ -69,41 +80,29 @@ Installation
 
 ### CocoaPods
 
-The *ErrorKit* specification provides the following subspecs:
+The **ErrorKit** specification provides the following subspecs:
 
-* `pod 'ErrorKit/Core'`
-  * ErrorKit.h
-* `pod 'ErrorKit/Accounts'`
-* `pod 'ErrorKit/AdMob'`
-* `pod 'ErrorKit/AFNetworking'` 
-  * NSError_AFNetworking.h
-  * MRErrorBuilder_AFNetworking.h
-* `pod 'ErrorKit/AVFoundation'`
-  * MRErrorBuilder_AVFoundation.h
-* `pod 'ErrorKit/CoreData'`
-  * NSError_CoreData.h
-  * MRErrorBuilder_CoreData.h
-* `pod 'ErrorKit/CoreLocation'`
-* `pod 'ErrorKit/FacebookSDK'`
-  * NSError_FacebookSDK.h
-  * MRErrorBuilder_FacebookSDK.h
-  * UIResponder_FacebookSDK.h
-* `pod 'ErrorKit/HTTP'`
-  * NSError_HTTP.h
-  * MRErrorFormatter_HTTP.h  
-* `pod 'ErrorKit/JSONKit'`
-  * NSError_JSONKit.h
-  * MRErrorBuilder_JSONKit.h
-* `pod 'ErrorKit/MapKit'`
-* `pod 'ErrorKit/MessageUI'`
-  * MRErrorFormatter_MessageUI.h
-* `pod 'ErrorKit/Security'`
-  * MRErrorFormatter_Security.h
-* `pod 'ErrorKit/StoreKit'`
-* `pod 'ErrorKit/TransitionKit'`
-* `pod 'ErrorKit/iAD'`
-* `pod 'ErrorKit/VeriJSON'`
-  * MRErrorFormatter_VeriJSON.h
+* **pod 'ErrorKit/Default'**: `#import <ErrorKit/ErrorKit_Default.h>`
+* **pod 'ErrorKit/Accounts'**: `#import <ErrorKit/ErrorKit_Accounts.h>`
+* **pod 'ErrorKit/AdMob'**: `#import <ErrorKit/ErrorKit_Admob.h>`
+* **pod 'ErrorKit/AFNetworking'**: `#import <ErrorKit/ErrorKit_AFNetworking.h>`
+* **pod 'ErrorKit/AVFoundation'**: `#import <ErrorKit/ErrorKit_AVFoundation.h>`
+* **pod 'ErrorKit/Core'**: `#import <ErrorKit/ErrorKit_Core.h>`
+* **pod 'ErrorKit/CoreData'**: `#import <ErrorKit/ErrorKit_CoreData.h>`
+* **pod 'ErrorKit/CoreLocation'**: `#import <ErrorKit/ErrorKit_CoreLocation.h>`
+* **pod 'ErrorKit/FacebookSDK'**: `#import <ErrorKit/ErrorKit_FacebookSDK.h>`
+* **pod 'ErrorKit/HTTP'**: `#import <ErrorKit/ErrorKit_HTTP.h>`
+* **pod 'ErrorKit/JSONKit'**: `#import <ErrorKit/ErrorKit_JSONKit.h>`
+* **pod 'ErrorKit/JSONValues'**: `#import <ErrorKit/ErrorKit_JSONValues.h>`
+* **pod 'ErrorKit/MapKit'**: `#import <ErrorKit/ErrorKit_MapKit.h>`
+* **pod 'ErrorKit/MessageUI'**: `#import <ErrorKit/ErrorKit_MessageUI.h>`
+* **pod 'ErrorKit/NSException'**: `#import <ErrorKit/ErrorKit_NSException.h>`
+* **pod 'ErrorKit/Security'**: `#import <ErrorKit/ErrorKit_Security.h>`
+* **pod 'ErrorKit/StoreKit'**: `#import <ErrorKit/ErrorKit_StoreKit.h>`
+* **pod 'ErrorKit/TransitionKit'**: `#import <ErrorKit/ErrorKit_TransitionKit.h>`
+* **pod 'ErrorKit/iAD'**: `#import <ErrorKit/ErrorKit_iAD.h>`
+* **pod 'ErrorKit/UIKit'**: `#import <ErrorKit/ErrorKit_UIKit.h>`
+* **pod 'ErrorKit/VeriJSON'**: `#import <ErrorKit/ErrorKit_VeriJSON.h>`
 
 License
 -------
