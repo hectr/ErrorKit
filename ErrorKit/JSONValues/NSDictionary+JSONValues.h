@@ -23,16 +23,66 @@
 #import <Foundation/Foundation.h>
 
 
+/**
+ Adds methods for safely retrieving values from a dictionary.
+ */
 @interface NSDictionary (ErrorKit_JSONValues)
 
+/**
+ Returns the `NSNumber` object associated with a given key.
+ 
+ If there is a value associated with 'aKey', but it is not an `NSNumber` object,
+ the value is not returned and `errorPtr` will contain an `NSError` object.
+ 
+ @praram aKey The key for which to return the corresponding value.
+ @param errorPtr A pointer to an `NSError` object or NULL. You do not need to 
+                 create an `NSError` object.
+ @return The value associated with `aKey`, or nil if the value associated with 
+         `aKey` is not an `NSNumber`.
+ */
 - (NSNumber *)numberForKey:(id)aKey withError:(NSError **)errorPtr;
 
+/**
+ Returns the `NSString` object associated with a given key.
+ 
+ If there is a value associated with 'aKey', but it is not an `NSString` object,
+ the value is not returned and `errorPtr` will contain an `NSError` object.
+ 
+ @praram aKey The key for which to return the corresponding value.
+ @param errorPtr A pointer to an `NSError` object or NULL. You do not need to 
+                 create an `NSError` object.
+ @return The value associated with `aKey`, or nil if the value associated with 
+         `aKey` is not an `NSString`.
+ */
 - (NSString *)stringForKey:(id)aKey withError:(NSError **)errorPtr;
 
-/// TODO: document.
+/**
+ Returns the `NSArray` object associated with a given key.
+ 
+ If there is a value associated with 'aKey', but it is not an `NSArray` object,
+ the value is not returned and `errorPtr` will contain an `NSError` object.
+
+ @praram aKey The key for which to return the corresponding value.
+ @param errorPtr A pointer to an `NSError` object or NULL. You do not need to 
+                 create an `NSError` object.
+ @return The value associated with `aKey`, or nil if the value associated with 
+         `aKey` is not an `NSArray`.
+ */
 - (NSArray *)arrayForKey:(id)aKey withError:(NSError **)errorPtr;
 
-/// TODO: document.
+/**
+ Returns the `NSDictionary` object associated with a given key.
+ 
+ If there is a value associated with 'aKey', but it is not an `NSDictionary` 
+ object, the value is not returned and `errorPtr` will contain an `NSError`
+ object.
+
+ @praram aKey The key for which to return the corresponding value.
+ @param errorPtr A pointer to an `NSError` object or NULL. You do not need to 
+                 create an `NSError` object.
+ @return The value associated with `aKey`, or nil if the value associated with 
+         `aKey` is not an `NSDictionary`.
+ */
 - (NSDictionary *)dictionaryForKey:(id)aKey withError:(NSError **)errorPtr;
 
 @end

@@ -23,8 +23,23 @@
 #import <Foundation/Foundation.h>
 
 
+/**
+ Adds a method for safely retrieving objects from an array.
+ */
 @interface NSArray (ErrorKit_JSONValues)
 
+/**
+ Returns the object located at index.
+ 
+ If `index is beyond the end of the array (that is, if `index` is greater than 
+ or equal to the value returned by count), no` NSRangeException` is raised, but 
+ `errorPtr` will contain an `NSError` object.
+ 
+ @param index An index within the bounds of the array.
+ @param errorPtr A pointer to an `NSError` object or NULL. You do not need to 
+                 create an `NSError` object.
+ @return The object located at `index`.
+ */
 - (id)objectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;
 
 @end
