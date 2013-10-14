@@ -212,6 +212,7 @@
 		84258039173AD50300AA1990 /* MRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRViewController.xib; sourceTree = "<group>"; };
 		8425980C1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v01.sqlite"; sourceTree = "<group>"; };
 		8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v02.sqlite"; sourceTree = "<group>"; };
+		842DA4F4180C6CAF00BC9545 /* ErrorKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitMacros.h; path = ../ErrorKit/Core/ErrorKitMacros.h; sourceTree = "<group>"; };
 		84F8054D173D75DD0094C835 /* CoreData_Example_v02.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData_Example_v02.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				840B608C18037E4E0090A142 /* ErrorKitImports.h */,
+				842DA4F4180C6CAF00BC9545 /* ErrorKitMacros.h */,
 				840B608D18037E4E0090A142 /* ErrorKit_Accounts.h */,
 				840B608E18037E4E0090A142 /* ErrorKit_Admob.h */,
 				840B608F18037E4E0090A142 /* ErrorKit_AFNetworking.h */,

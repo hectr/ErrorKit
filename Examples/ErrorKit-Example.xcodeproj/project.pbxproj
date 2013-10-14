@@ -143,6 +143,7 @@
 		84220DF817FE2EA30009C919 /* UIApplication+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ErrorKit.m"; path = "../../ErrorKit/UIKit/UIApplication+ErrorKit.m"; sourceTree = "<group>"; };
 		84220DFD17FE30DB0009C919 /* UIApplication+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/UIApplication+FacebookSDK.h"; sourceTree = "<group>"; };
 		84220DFE17FE30DC0009C919 /* UIApplication+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+FacebookSDK.m"; path = "../../ErrorKit/FacebookSDK/UIApplication+FacebookSDK.m"; sourceTree = "<group>"; };
+		842DA4F3180C6BFF00BC9545 /* ErrorKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitMacros.h; path = ../../ErrorKit/Core/ErrorKitMacros.h; sourceTree = "<group>"; };
 		84448C28175B9ECE00E6D256 /* MRErrorFormatter+VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+VeriJSON.h"; path = "../../ErrorKit/VeriJSON/MRErrorFormatter+VeriJSON.h"; sourceTree = "<group>"; };
 		8458E357174ECD38003DB731 /* MRErrorFormatter+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+CoreData.h"; path = "../../ErrorKit/CoreData/MRErrorFormatter+CoreData.h"; sourceTree = "<group>"; };
 		845990EA17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+JSONValues.h"; path = "../../ErrorKit/JSONValues/MRErrorFormatter+JSONValues.h"; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				841438D718021B4300EF0704 /* ErrorKitImports.h */,
+				842DA4F3180C6BFF00BC9545 /* ErrorKitMacros.h */,
 				841A09CB17FF93CF00DC3848 /* ErrorKit_Accounts.h */,
 				841A09CC17FF952800DC3848 /* ErrorKit_Admob.h */,
 				841A09CD17FF952800DC3848 /* ErrorKit_AFNetworking.h */,

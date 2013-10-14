@@ -23,41 +23,8 @@
 #ifndef _ERRORKIT_H
 #define _ERRORKIT_H
 
+#import "ErrorKitMacros.h"
+
 #import "ErrorKitImports.h"
-
-// Logger
-#ifndef MRLogError
-#define MRLogError(error)                                                \
-    do {                                                                 \
-        NSError *mr_error_ = error;                                      \
-        NSString *errorCode =                                            \
-            [MRErrorFormatter debugStringWithDomain:[mr_error_ domain]   \
-                                               code:[mr_error_ code]];   \
-        if ([mr_error_ isKindOfClass:NSError.class]) {                   \
-            NSLog(@"%s [Line %d]: %@ (code=%@, domain=%@)"              \
-                                      , __PRETTY_FUNCTION__              \
-                                      , __LINE__                         \
-                                      , [mr_error_ localizedDescription] \
-                                      , errorCode                        \
-                                      , [mr_error_ domain]);             \
-        }                                                                \
-    } while(0)
-#endif
-
-// Assertion
-#ifndef MRNotErrorAssert
-#ifndef NS_BLOCK_ASSERTIONS
-#define MRNotErrorAssert(error)                         \
-    do {                                                \
-        NSAssert(![(error) isKindOfClass:NSError.class] \
-                , @"%@ (code: %d, domain:%@)"           \
-                , [error localizedDescription]          \
-                , [error code]                          \
-                , [error domain]);                      \
-    } while(0)
-#else
-#define MRNotErrorAssert(error)
-#endif
-#endif
 
 #endif
