@@ -36,7 +36,7 @@
  @param loginBlock 'Log in' recovery option.
  @return `YES` if the error has been presented, `NO` otherwise.
  */
-- (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock;
+- (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *error))loginBlock;
 
 /**
  Helper method to handle errors during permissions request.
@@ -54,6 +54,6 @@
  @param retryBlock 'Grant permission' recovery option.
  @return `YES` if the error has been presented, `NO` otherwise.
 */
-- (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock;
+- (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *error))permissionBlock andRetryBlock:(void(^)(NSError *error))retryBlock;
 
 @end

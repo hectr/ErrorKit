@@ -30,7 +30,7 @@
 
 #ifdef ERROR_KIT_FACEBOOK_SDK
 
-@implementation UIResponder (ErrorKit)
+@implementation UIResponder (ErrorKit_FacebookSDK)
 
 - (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock
 {

@@ -30,8 +30,9 @@
 
 #ifdef ERROR_KIT_FACEBOOK_SDK
 
-@implementation UIApplication (ErrorKit)
+@implementation UIApplication (ErrorKit_FacebookSDK)
 
+// TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
 - (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
@@ -86,6 +87,7 @@
     return [self presentError:builder.error];
 }
 
+// TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
 - (BOOL)handleFacebookRequestPermissionError:(NSError *)error
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
@@ -106,6 +108,7 @@
     return [self presentError:builder.error];
 }
 
+// TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
 - (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
@@ -125,7 +128,7 @@
         if (permissionBlock) {
             [builder addRecoveryOption:MRErrorKitString(@"Grant permission", nil) withBlock:permissionBlock];
         }
-    } else if (error.fberrorCategory == FBErrorCategoryUserCancelled){
+    } else if (error.fberrorCategory == FBErrorCategoryUserCancelled) {
         if (error.innerError) {
             builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
             builder.localizedFailureReason = [MRErrorFormatter stringWithDomain:error.innerError.domain code:error.innerError.code];
@@ -133,9 +136,30 @@
             builder = nil;
         }
     } else {
-        //builder.localizedDescription = MRErrorKitString(@"Unknown error", nil);
-        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
-        builder.localizedFailureReason = MRErrorKitString(@"Unable to post to open graph. Please try again later.", nil);
+        NSNumber *code = nil;
+        NSNumber *subcode = nil;
+        NSDictionary *JSON = error.parsedJSONResponse;
+        if ([JSON isKindOfClass:NSDictionary.class]) {
+            NSDictionary *body = JSON[@"body"];
+            if ([body isKindOfClass:NSDictionary.class]) {
+                NSDictionary *dict = body[@"error"];
+                if ([dict isKindOfClass:NSDictionary.class]) {
+                    code = dict[@"code"];
+                    subcode = dict[@"error_subcode"];
+                }
+            }
+        }
+        if ([code isKindOfClass:NSNumber.class] && code.integerValue == 2500) {
+            builder.localizedDescription = MRErrorKitString(@"Permission Error", nil);
+            builder.localizedFailureReason = MRErrorKitString(@"Not logged in.", nil);
+            if (permissionBlock) {
+                [builder addRecoveryOption:MRErrorKitString(@"Log in", nil) withBlock:permissionBlock];
+            }
+        } else {
+            //builder.localizedDescription = MRErrorKitString(@"Unknown error", nil);
+            builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+            builder.localizedFailureReason = MRErrorKitString(@"Unable to fullfill request. Please try again later.", nil);
+        }
     }
     return [self presentError:builder.error];
 }
