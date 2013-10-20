@@ -144,11 +144,14 @@
 {
     if ([domain isEqualToString:NSCocoaErrorDomain]) {
         return [MRErrorFormatter debugStringWithCocoaCode:code];
-    } else if ([domain isEqualToString:NSURLErrorDomain]) {
-        return [MRErrorFormatter debugStringWithURLCode:code];
     } else if ([domain isEqualToString:NSXMLParserErrorDomain]) {
         return [MRErrorFormatter debugStringWithXMLParserCode:code];
     }
+#ifdef ERROR_KIT_HTTP
+    else if ([domain isEqualToString:NSURLErrorDomain]) {
+      return [MRErrorFormatter debugStringWithURLCode:code];
+    }
+#endif
 #ifdef ERROR_KIT_ACCOUNTS
     else if ([domain isEqualToString:ACErrorDomain]) {
         return [MRErrorFormatter debugStringWithAccountsCode:code];
@@ -221,11 +224,14 @@
 {
     if ([domain isEqualToString:NSCocoaErrorDomain]) {
         return [MRErrorFormatter stringWithCocoaCode:code];
-    } else if ([domain isEqualToString:NSURLErrorDomain]) {
-        return [MRErrorFormatter stringWithURLCode:code];
     } else if ([domain isEqualToString:NSXMLParserErrorDomain]) {
         return [MRErrorFormatter stringWithXMLParserCode:code];
     }
+#ifdef ERROR_KIT_HTTP
+    else if ([domain isEqualToString:NSURLErrorDomain]) {
+      return [MRErrorFormatter stringWithURLCode:code];
+    }
+#endif
 #ifdef ERROR_KIT_ACCOUNTS
     else if ([domain isEqualToString:ACErrorDomain]) {
         return [MRErrorFormatter stringWithAccountsCode:code];
