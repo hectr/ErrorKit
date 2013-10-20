@@ -35,7 +35,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 @property (nonatomic, assign) BOOL didRecover;
 @property (nonatomic, assign) BOOL invokeDidRecoverSelector;
 @property (nonatomic, weak, readwrite) id associatedObject;
-@property (nonatomic, copy) NSError *error;
+@property (nonatomic, strong) NSError *error;
 @property (nonatomic, weak) id delegate;
 @property (nonatomic, assign) SEL selector;
 @property (nonatomic, assign) void *contextInfo;

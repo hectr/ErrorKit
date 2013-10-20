@@ -34,7 +34,7 @@ static char kMRAlertViewDelegateObjectKey;
 
 
 @interface MRAlertViewRecoveryDelegate : NSObject <UIAlertViewDelegate>
-@property (nonatomic, copy) NSError *error;
+@property (nonatomic, strong) NSError *error;
 @property (nonatomic, weak) id delegate;
 @property (nonatomic, assign) SEL selector;
 @property (nonatomic, assign) void *contextInfo;
