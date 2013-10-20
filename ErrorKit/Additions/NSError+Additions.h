@@ -1,4 +1,4 @@
-// ErrorKitDefines.h
+// NSError+Additions.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,67 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "NSError+ErrorKit.h"
 
-#ifndef _ERRORKITDEFINES_H
-#define _ERRORKITDEFINES_H
+/// On cancel block user info key.
+extern NSString *const MRErrorKitOnCancelledBlockKey;
 
-#ifdef ACCOUNTS_EXTERN
-#define ERROR_KIT_ACCOUNTS 1
-#endif
+/// 'Cancel' button title user info key.
+extern NSString *const MRErrorKitLocalizedCancelButtonTitleKey;
 
-#define ERROR_KIT_ADDITIONS
+/// 'OK' button title user info key.
+extern NSString *const MRErrorKitLocalizedDismissButtonTitleKey;
 
-#ifdef _AFNETWORKING_
-#define ERROR_KIT_AFNETWORKING 1
-#endif
 
-#ifdef AVF_EXPORT
-#define ERROR_KIT_AVFOUNDATION 1
-#endif
+/**
+ Adds getters for non-standard, ErrorKit specific, user info values.
+ */
+@interface NSError (ErrorKit_Additions)
 
-#define ERROR_KIT_CORE 1
+/// Block to be executed when a presented error is dismissed touching the cancel button or cancelled.
+@property (nonatomic, readonly) void(^onCancelledBlock)(NSError *error);
 
-#ifdef _COREDATADEFINES_H
-#define ERROR_KIT_CORE_DATA 1
-#endif
+/// Title to be used as 'Cancel' button when presenting the error.
+@property (nonatomic, readonly) NSString *localizedCancelButtonTitle;
 
-#ifdef __CORELOCATION__
-#define ERROR_KIT_CORE_LOCATION 1
-#endif
+/// Title to be used as 'OK' button when presenting the error.
+@property (nonatomic, readonly) NSString *localizedDismissButtonTitle;
 
-#ifdef FB_IOS_SDK_VERSION_STRING
-#define ERROR_KIT_FACEBOOK_SDK 1
-#endif
-
-#define ERROR_KIT_HTTP 1
-
-#ifdef _JSONKIT_H_
-#define ERROR_KIT_JSON_KIT 1
-#endif
-
-#define ERROR_KIT_JSON_VALUES 1
-
-#ifdef MK_EXTERN
-#define ERROR_KIT_MAP_KIT 1
-#endif
-
-#define ERROR_KIT_NSEXCEPTION 1
-
-#ifdef _SECURITY_SECITEM_H_
-#define ERROR_KIT_SECURITY 1
-#endif
-
-#ifdef SK_EXTERN
-#define ERROR_KIT_STORE_KIT 1
-#endif
-
-#ifdef TransitionKit_TransitionKit_h
-#define ERROR_KIT_TRANSITION_KIT 1
-#endif
-
-#ifdef UIKIT_STATIC_INLINE
-#define ERROR_KIT_UI_KIT 1
-#define ERROR_KIT_DEFAULT 1
-#endif
-
-#endif
+@end

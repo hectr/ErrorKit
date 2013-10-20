@@ -58,6 +58,11 @@
     builder.failingURLPeerTrust = error.failingURLPeerTrust;
     builder.failingURLString = error.failingURLString;
 #endif
+#ifdef ERROR_KIT_ADDITIONS
+    builder.onCancelledBlock = error.onCancelledBlock;
+    builder.localizedCancelButtonTitle = error.localizedCancelButtonTitle;
+    builder.localizedDismissButtonTitle = error.localizedDismissButtonTitle;
+#endif
 #ifdef ERROR_KIT_AFNETWORKING
     builder.failingURLRequest = error.failingURLRequest;
     builder.failingURLResponse = error.failingURLResponse;

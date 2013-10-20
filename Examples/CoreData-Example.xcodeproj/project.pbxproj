@@ -70,6 +70,8 @@
 		8425803C173AD50300AA1990 /* MRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84258039173AD50300AA1990 /* MRViewController.xib */; };
 		8425980D1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8425980C1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite */; };
 		8425980F1747F9E900D3EA64 /* CoreData-Example_v02.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */; };
+		84FEF6AA1813E1B90092FB26 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEF6A91813E1B90092FB26 /* NSError+Additions.m */; };
+		84FEF6AE1813E1E90092FB26 /* MRErrorBuilder+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEF6AD1813E1E90092FB26 /* MRErrorBuilder+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -214,6 +216,11 @@
 		8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v02.sqlite"; sourceTree = "<group>"; };
 		842DA4F4180C6CAF00BC9545 /* ErrorKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitMacros.h; path = ../ErrorKit/Core/ErrorKitMacros.h; sourceTree = "<group>"; };
 		84F8054D173D75DD0094C835 /* CoreData_Example_v02.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData_Example_v02.xcdatamodel; sourceTree = "<group>"; };
+		84FEF6A81813E1B90092FB26 /* NSError+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Additions.h"; path = "../ErrorKit/Additions/NSError+Additions.h"; sourceTree = "<group>"; };
+		84FEF6A91813E1B90092FB26 /* NSError+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Additions.m"; path = "../ErrorKit/Additions/NSError+Additions.m"; sourceTree = "<group>"; };
+		84FEF6AB1813E1C90092FB26 /* ErrorKit_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Additions.h; path = ../ErrorKit/Additions/ErrorKit_Additions.h; sourceTree = "<group>"; };
+		84FEF6AC1813E1E90092FB26 /* MRErrorBuilder+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+Additions.h"; path = "../ErrorKit/Additions/MRErrorBuilder+Additions.h"; sourceTree = "<group>"; };
+		84FEF6AD1813E1E90092FB26 /* MRErrorBuilder+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+Additions.m"; path = "../ErrorKit/Additions/MRErrorBuilder+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +259,7 @@
 				840B608C18037E4E0090A142 /* ErrorKitImports.h */,
 				842DA4F4180C6CAF00BC9545 /* ErrorKitMacros.h */,
 				840B608D18037E4E0090A142 /* ErrorKit_Accounts.h */,
+				84FEF6AB1813E1C90092FB26 /* ErrorKit_Additions.h */,
 				840B608E18037E4E0090A142 /* ErrorKit_Admob.h */,
 				840B608F18037E4E0090A142 /* ErrorKit_AFNetworking.h */,
 				840B609018037E4E0090A142 /* ErrorKit_AVFoundation.h */,
@@ -357,6 +365,8 @@
 			children = (
 				840B607418037E150090A142 /* NSError+ErrorKit.h */,
 				840B607518037E150090A142 /* NSError+ErrorKit.m */,
+				84FEF6A81813E1B90092FB26 /* NSError+Additions.h */,
+				84FEF6A91813E1B90092FB26 /* NSError+Additions.m */,
 				840B607618037E150090A142 /* NSError+AFNetworking.h */,
 				840B607718037E150090A142 /* NSError+AFNetworking.m */,
 				840B607818037E150090A142 /* NSError+AVFoundation.h */,
@@ -380,6 +390,8 @@
 				840B606518037E040090A142 /* MRErrorBuilder.m */,
 				840B606618037E040090A142 /* MRErrorBuilder+NSException.h */,
 				840B606718037E040090A142 /* MRErrorBuilder+NSException.m */,
+				84FEF6AC1813E1E90092FB26 /* MRErrorBuilder+Additions.h */,
+				84FEF6AD1813E1E90092FB26 /* MRErrorBuilder+Additions.m */,
 				840B606818037E040090A142 /* MRErrorBuilder+AFNetworking.h */,
 				840B606918037E040090A142 /* MRErrorBuilder+AFNetworking.m */,
 				840B606A18037E040090A142 /* MRErrorBuilder+AVFoundation.h */,
@@ -593,6 +605,8 @@
 				840B60CE180380520090A142 /* MRAlertRecoveryAttempter.m in Sources */,
 				840B60CF180380520090A142 /* MRChainedRecoveryAttempter.m in Sources */,
 				840B60D0180380590090A142 /* NSArray+JSONValues.m in Sources */,
+				84FEF6AA1813E1B90092FB26 /* NSError+Additions.m in Sources */,
+				84FEF6AE1813E1E90092FB26 /* MRErrorBuilder+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

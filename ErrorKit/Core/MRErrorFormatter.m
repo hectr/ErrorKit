@@ -124,8 +124,18 @@
 + (NSString *)stringForCancelButtonFromError:(NSError *)error
 {
     if (error.recoveryAttempter) {
+#ifdef ERROR_KIT_ADDITIONS
+        if (error.localizedCancelButtonTitle) {
+            return error.localizedCancelButtonTitle;
+        }
+#endif
         return MRErrorKitString(@"Cancel", nil);
     } else {
+#ifdef ERROR_KIT_ADDITIONS
+        if (error.localizedCancelButtonTitle) {
+            return error.localizedDismissButtonTitle;
+        }
+#endif
         return MRErrorKitString(@"OK", nil);
     }
 }

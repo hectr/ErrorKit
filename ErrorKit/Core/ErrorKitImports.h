@@ -30,6 +30,10 @@
 #import "ErrorKit_Accounts.h"
 #endif
 
+#ifdef ERROR_KIT_ADDITIONS
+#import "ErrorKit_Additions.h"
+#endif
+
 #ifdef ERROR_KIT_ADMOB
 #import "ErrorKit_Admob.h"
 #endif

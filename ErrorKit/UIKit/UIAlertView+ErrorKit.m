@@ -85,6 +85,11 @@ static char kMRAlertViewDelegateObjectKey;
         }
     } else {
         // Cancel
+#ifdef ERROR_KIT_ADDITIONS
+        if (self.error.onCancelledBlock) {
+            self.error.onCancelledBlock(self.error);
+        }
+#endif
         [self invokeRecoverSelectorWithSuccess:NO];
     }
     if ([self.delegate respondsToSelector:@selector(alertView:clickedButtonAtIndex:)]) {
@@ -101,6 +106,11 @@ static char kMRAlertViewDelegateObjectKey;
 
 - (void)alertViewCancel:(UIAlertView *)alertView
 {
+#ifdef ERROR_KIT_ADDITIONS
+    if (self.error.onCancelledBlock) {
+        self.error.onCancelledBlock(self.error);
+    }
+#endif
     [self invokeRecoverSelectorWithSuccess:NO];
     if ([self.delegate respondsToSelector:@selector(alertViewCancel:)]) {
         [self.delegate alertViewCancel:alertView];
@@ -170,7 +180,11 @@ static char kMRAlertViewDelegateObjectKey;
     NSString *cancelButton = [MRErrorFormatter stringForCancelButtonFromError:error];
     // Instantiate alert delegate
     MRAlertViewRecoveryDelegate *alertDelegate;
+#ifdef ERROR_KIT_ADDITIONS
+    if (error.recoveryAttempter || error.helpAnchor || error.onCancelledBlock) {
+#else
     if (error.recoveryAttempter || error.helpAnchor) {
+#endif
         alertDelegate = [[MRAlertViewRecoveryDelegate alloc] init];
         alertDelegate.error = error;
         alertDelegate.delegate = recoveryDelegate;
@@ -189,7 +203,6 @@ static char kMRAlertViewDelegateObjectKey;
     NSArray *otherButtons;
     if (error.recoveryAttempter) {
         otherButtons = error.localizedRecoveryOptions;
-        objc_setAssociatedObject(alert, &kMRAlertViewDelegateObjectKey, alertDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     } else {
         otherButtons = nil;
     }
@@ -199,6 +212,9 @@ static char kMRAlertViewDelegateObjectKey;
     // Add help button
     if (error.helpAnchor) {
         [alert addButtonWithTitle:MRErrorKitString(@"Help", nil)];
+    }
+    // Retain alert delegate
+    if (alertDelegate) {
         objc_setAssociatedObject(alert, &kMRAlertViewDelegateObjectKey, alertDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return alert;
