@@ -26,6 +26,8 @@
 
 #import "NSArray+JSONValues.h"
 
+#import "NSJSONSerialization+JSONValues.h"
+
 #import "NSDictionary+JSONValues.h"
 
 #import "NSMutableArray+JSONValues.h"
