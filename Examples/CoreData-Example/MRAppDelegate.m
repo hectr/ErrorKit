@@ -55,12 +55,12 @@
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
     if (error.code == NSPersistentStoreSaveError) {
         builder.localizedDescription = (builder.localizedFailureReason ?: builder.localizedDescription);
-        builder.localizedFailureReason = NSLocalizedString(@"Attempt to save application data failed.", nil);
+        builder.localizedFailureReason = MRErrorKitString(@"Attempt to save application data failed.", nil);
     } else if (error.code == NSMigrationMissingSourceModelError) {
-        builder.localizedFailureReason = NSLocalizedString(@"Automatic migration failed.", nil);
-        builder.helpAnchor = NSLocalizedString(@"Please contact support.", nil);
+        builder.localizedFailureReason = MRErrorKitString(@"Automatic migration failed.", nil);
+        builder.helpAnchor = MRErrorKitString(@"Please contact support.", nil);
     } else if (error.code == NSPersistentStoreIncompatibleVersionHashError) {
-        builder.localizedFailureReason = NSLocalizedString(@"Attempting to access data created with a different version of the application.", nil);
+        builder.localizedFailureReason = MRErrorKitString(@"Attempting to access data created with a different version of the application.", nil);
     }
     return builder.error;
 }

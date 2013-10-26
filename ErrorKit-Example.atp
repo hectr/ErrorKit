@@ -222,6 +222,7 @@
   <translation text="Attempt to save application data failed." lang="en"/>
   <translation text="" lang="es"/>
   <translation text="" lang="ca"/>
+  <occurrence>MRAppDelegate.m (58)</occurrence>
  </entry>
  <entry key="Attempted access outside data bounds" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -237,6 +238,7 @@
   <translation text="Attempting to access data created with a different version of the application." lang="en"/>
   <translation text="" lang="es"/>
   <translation text="" lang="ca"/>
+  <occurrence>MRAppDelegate.m (63)</occurrence>
  </entry>
  <entry key="Attribute Has No Value" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -308,6 +310,7 @@
   <translation text="Automatic migration failed." lang="en"/>
   <translation text="La migración automática ha fallado." lang="es"/>
   <translation text="" lang="ca"/>
+  <occurrence>MRAppDelegate.m (60)</occurrence>
  </entry>
  <entry key="Background Capture Not Available" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -387,9 +390,6 @@
   <translation text="Cancel" lang="en"/>
   <translation text="Cancelar" lang="es"/>
   <translation text="Cancel·lar" lang="ca"/>
-  <occurrence>MRErrorFormatter+ErrorCode.m (281)</occurrence>
-  <occurrence>MRErrorFormatter.m (127)</occurrence>
-  <occurrence>MRErrorFormatter+HTTP.m (136)</occurrence>
  </entry>
  <entry key="Cancelled" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -621,7 +621,7 @@
   <translation text="Connect" lang="en"/>
   <translation text="Conectar" lang="es"/>
   <translation text="Connectar" lang="ca"/>
-  <occurrence>MRErrorFormatter+ErrorCode.m (531)</occurrence>
+  <occurrence>MRErrorFormatter+HTTP.m (148)</occurrence>
   <occurrence>MRViewController.m (50)</occurrence>
   <occurrence>MRViewController.m (64)</occurrence>
   <occurrence>MRViewController.m (95)</occurrence>
@@ -1457,7 +1457,7 @@
   <translation text="Ayuda" lang="es"/>
   <translation text="Ajuda" lang="ca"/>
   <occurrence>UIAlertView+ErrorKit.m (66)</occurrence>
-  <occurrence>UIAlertView+ErrorKit.m (201)</occurrence>
+  <occurrence>UIAlertView+ErrorKit.m (214)</occurrence>
  </entry>
  <entry key="Inapplicable Encoding" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1931,6 +1931,15 @@
   <translation text="Error a document JSON" lang="ca"/>
   <occurrence>MRErrorFormatter+JSONKit.m (42)</occurrence>
   <occurrence>MRErrorFormatter+VeriJSON.m (50)</occurrence>
+ </entry>
+ <entry key="JSON value" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="JSON value" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>NSJSONSerialization+JSONValues.m (49)</occurrence>
+  <occurrence>NSJSONSerialization+JSONValues.m (67)</occurrence>
  </entry>
  <entry key="Key Size Not Allowed" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2446,7 +2455,7 @@
   <translation text="No error description provided" lang="en"/>
   <translation text="No se ha proporcionado ninguna descripción del error" lang="es"/>
   <translation text="No s'ha proporcionat cap descripció de l'error" lang="ca"/>
-  <occurrence>MRErrorBuilder.m (115)</occurrence>
+  <occurrence>MRErrorBuilder.m (120)</occurrence>
  </entry>
  <entry key="Not Connected To Internet" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2517,7 +2526,7 @@
   <translation text="OK" lang="en"/>
   <translation text="OK" lang="es"/>
   <translation text="OK" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (129)</occurrence>
+  <occurrence>MRErrorFormatter.m (139)</occurrence>
   <occurrence>UIAlertView+ErrorKit.m (69)</occurrence>
  </entry>
  <entry key="OS Version Too Low" comment="No comment provided by engineer.">
@@ -2687,6 +2696,7 @@
   <translation text="Please contact support." lang="en"/>
   <translation text="Por favor, póngase en contacto con soporte." lang="es"/>
   <translation text="" lang="ca"/>
+  <occurrence>MRAppDelegate.m (61)</occurrence>
  </entry>
  <entry key="Policy Not Found" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2942,6 +2952,9 @@
   <translation text="Reintentar" lang="es"/>
   <translation text="Tornar a provar" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (119)</occurrence>
+  <occurrence>MRViewController.m (52)</occurrence>
+  <occurrence>MRViewController.m (111)</occurrence>
+  <occurrence>MRViewController.m (154)</occurrence>
  </entry>
  <entry key="Retrying..." comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -3761,7 +3774,7 @@
   <translation text="a valid character string" lang="en"/>
   <translation text="una cadena de caracteres válida" lang="es"/>
   <translation text="una cadena de caracters vàlida" lang="ca"/>
-  <occurrence>MRErrorFormatter.m (402)</occurrence>
+  <occurrence>MRErrorFormatter+JSONValues.m (55)</occurrence>
  </entry>
  <entry key="an HTTP URL" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
