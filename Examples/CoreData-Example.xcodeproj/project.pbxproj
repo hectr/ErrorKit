@@ -70,6 +70,7 @@
 		8425803C173AD50300AA1990 /* MRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84258039173AD50300AA1990 /* MRViewController.xib */; };
 		8425980D1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8425980C1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite */; };
 		8425980F1747F9E900D3EA64 /* CoreData-Example_v02.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */; };
+		845F6DD8181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F6DD7181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m */; };
 		84FEF6AA1813E1B90092FB26 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEF6A91813E1B90092FB26 /* NSError+Additions.m */; };
 		84FEF6AE1813E1E90092FB26 /* MRErrorBuilder+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEF6AD1813E1E90092FB26 /* MRErrorBuilder+Additions.m */; };
 /* End PBXBuildFile section */
@@ -215,6 +216,8 @@
 		8425980C1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v01.sqlite"; sourceTree = "<group>"; };
 		8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v02.sqlite"; sourceTree = "<group>"; };
 		842DA4F4180C6CAF00BC9545 /* ErrorKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitMacros.h; path = ../ErrorKit/Core/ErrorKitMacros.h; sourceTree = "<group>"; };
+		845F6DD6181B0C8300D33BDC /* NSJSONSerialization+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSJSONSerialization+JSONValues.h"; path = "../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.h"; sourceTree = "<group>"; };
+		845F6DD7181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSJSONSerialization+JSONValues.m"; path = "../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.m"; sourceTree = "<group>"; };
 		84F8054D173D75DD0094C835 /* CoreData_Example_v02.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData_Example_v02.xcdatamodel; sourceTree = "<group>"; };
 		84FEF6A81813E1B90092FB26 /* NSError+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Additions.h"; path = "../ErrorKit/Additions/NSError+Additions.h"; sourceTree = "<group>"; };
 		84FEF6A91813E1B90092FB26 /* NSError+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Additions.m"; path = "../ErrorKit/Additions/NSError+Additions.m"; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				840B608518037E420090A142 /* NSArray+JSONValues.m */,
 				840B608618037E420090A142 /* NSDictionary+JSONValues.h */,
 				840B608718037E420090A142 /* NSDictionary+JSONValues.m */,
+				845F6DD6181B0C8300D33BDC /* NSJSONSerialization+JSONValues.h */,
+				845F6DD7181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m */,
 				840B608818037E420090A142 /* NSMutableArray+JSONValues.h */,
 				840B608918037E420090A142 /* NSMutableArray+JSONValues.m */,
 				840B608A18037E420090A142 /* NSMutableDictionary+JSONValues.h */,
@@ -572,6 +577,7 @@
 				840B60AD180380520090A142 /* MRErrorBuilder+NSException.m in Sources */,
 				840B60AE180380520090A142 /* MRErrorBuilder+AFNetworking.m in Sources */,
 				840B60AF180380520090A142 /* MRErrorBuilder+AVFoundation.m in Sources */,
+				845F6DD8181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m in Sources */,
 				840B60B0180380520090A142 /* MRErrorBuilder+CoreData.m in Sources */,
 				840B60B1180380520090A142 /* MRErrorBuilder+FacebookSDK.m in Sources */,
 				840B60B2180380520090A142 /* MRErrorBuilder+HTTP.m in Sources */,

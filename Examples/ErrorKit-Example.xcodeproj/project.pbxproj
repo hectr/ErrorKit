@@ -53,6 +53,7 @@
 		845990F617FA4F65008ADCD2 /* NSDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990EF17FA4F65008ADCD2 /* NSDictionary+JSONValues.m */; };
 		845990F717FA4F65008ADCD2 /* NSMutableArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */; };
 		845990F817FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */; };
+		845F6DD5181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F6DD4181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m */; };
 		84C7473C17F8E056007DF279 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473717F8E056007DF279 /* MRAlertRecoveryAttempter.m */; };
 		84C7473D17F8E056007DF279 /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473917F8E056007DF279 /* UIAlertView+ErrorKit.m */; };
 		84C7473E17F8E056007DF279 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473B17F8E056007DF279 /* UIResponder+ErrorKit.m */; };
@@ -163,6 +164,8 @@
 		845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSMutableArray+JSONValues.m"; sourceTree = "<group>"; };
 		845990F217FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSMutableDictionary+JSONValues.h"; sourceTree = "<group>"; };
 		845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSMutableDictionary+JSONValues.m"; sourceTree = "<group>"; };
+		845F6DD3181B0B1300D33BDC /* NSJSONSerialization+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSJSONSerialization+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.h"; sourceTree = "<group>"; };
+		845F6DD4181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSJSONSerialization+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.m"; sourceTree = "<group>"; };
 		84B2B394174AB5AF004E8ED3 /* UIResponder+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/UIResponder+FacebookSDK.h"; sourceTree = "<group>"; };
 		84C7473617F8E056007DF279 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAlertRecoveryAttempter.h; path = ../../ErrorKit/UIKit/MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
 		84C7473717F8E056007DF279 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAlertRecoveryAttempter.m; path = ../../ErrorKit/UIKit/MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				845990ED17FA4F65008ADCD2 /* NSArray+JSONValues.m */,
 				845990EE17FA4F65008ADCD2 /* NSDictionary+JSONValues.h */,
 				845990EF17FA4F65008ADCD2 /* NSDictionary+JSONValues.m */,
+				845F6DD3181B0B1300D33BDC /* NSJSONSerialization+JSONValues.h */,
+				845F6DD4181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m */,
 				845990F017FA4F65008ADCD2 /* NSMutableArray+JSONValues.h */,
 				845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */,
 				845990F217FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.h */,
@@ -552,6 +557,7 @@
 				84C7473D17F8E056007DF279 /* UIAlertView+ErrorKit.m in Sources */,
 				84C7473E17F8E056007DF279 /* UIResponder+ErrorKit.m in Sources */,
 				845990F417FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.m in Sources */,
+				845F6DD5181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m in Sources */,
 				845990F517FA4F65008ADCD2 /* NSArray+JSONValues.m in Sources */,
 				845990F617FA4F65008ADCD2 /* NSDictionary+JSONValues.m in Sources */,
 				845990F717FA4F65008ADCD2 /* NSMutableArray+JSONValues.m in Sources */,
