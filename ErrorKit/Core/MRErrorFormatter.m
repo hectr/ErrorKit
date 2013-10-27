@@ -202,6 +202,11 @@
         return [MRErrorFormatter debugStringWithMailComposeCode:code];
     }
 #endif
+#ifdef ERROR_KIT_PARSE
+    else if ([domain isEqualToString:@"Parse"]) {
+        return [MRErrorFormatter debugStringWithParseCode:code];
+    }
+#endif
 #ifdef ERROR_KIT_STORE_KIT
     else if ([domain isEqualToString:SKErrorDomain]) {
         return [MRErrorFormatter debugStringWithStoreKitCode:code];
@@ -280,6 +285,11 @@
 #ifdef ERROR_KIT_MESSAGE_UI
     else if ([domain isEqualToString:MFMailComposeErrorDomain]) {
         return [MRErrorFormatter stringWithMailComposeCode:code];
+    }
+#endif
+#ifdef ERROR_KIT_PARSE
+    else if ([domain isEqualToString:@"Parse"]) {
+        return [MRErrorFormatter stringWithParseCode:code];
     }
 #endif
 #ifdef ERROR_KIT_STORE_KIT

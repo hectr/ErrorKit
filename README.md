@@ -22,7 +22,7 @@ Examples
     NSURLRequest *request = error.failingURLRequest;
     NSArray *errors = error.detailedErrors;
     // and so on...
-    // (supports most AFNetworking, AVFoundation, Core Data, Facebook SDK and JSONKit keys)
+    // (supports most AFNetworking, AVFoundation, Core Data, Facebook SDK, JSONKit and Parse keys)
 
 ### Present error to the user
 
@@ -48,7 +48,7 @@ Examples
 
     NSString *debugString = [MRErrorFormatter debugStringWithDomain:error.domain code:error.code]; // e.g. NSURLErrorNetworkConnectionLost
     NSString *localizedString = [MRErrorFormatter stringWithDomain:error.domain code:error.code]; // e.g. Connection Lost
-    // (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Security, Store Kit, TransitionKit and VeriJSON codes)
+    // (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Parse, Security, Store Kit, TransitionKit and VeriJSON codes)
 
 ### Other examples
 
@@ -75,7 +75,7 @@ Installation
 
 1. Drag and drop the *ErrorKit* folder to your project.
 2. Add `#import "ErrorKitDefines.h"` or customize enabled features by defining `ERROR_KIT_CORE` and some of the following contants somewhere (e.g. in your *-Prefix.pch* file):
-`ERROR_KIT_ACCOUNTS`, `ERROR_KIT_ADDITIONS`, `ERROR_KIT_ADMOB`, `ERROR_KIT_AFNETWORKING`, `ERROR_KIT_AVFOUNDATION`, `ERROR_KIT_CORE_DATA`, `ERROR_KIT_CORE_LOCATION`, `ERROR_KIT_FACEBOOK`, `ERROR_KIT_HTTP`, `ERROR_KIT_JSON_KIT`, `ERROR_KIT_JSON_VALUES`, `ERROR_KIT_MAP_KIT`, `ERROR_KIT_MESSAGE_UI`, `ERROR_KIT_NSEXCEPTION`, `ERROR_SECURITY`, `ERROR_KIT_STORE_KIT`, `ERROR_KIT_TRANSITION_KIT`, `ERROR_KIT_IAD`, `ERROR_KIT_UI_KIT` and/or `ERROR_KIT_VERI_JSON`.
+`ERROR_KIT_ACCOUNTS`, `ERROR_KIT_ADDITIONS`, `ERROR_KIT_ADMOB`, `ERROR_KIT_AFNETWORKING`, `ERROR_KIT_AVFOUNDATION`, `ERROR_KIT_CORE_DATA`, `ERROR_KIT_CORE_LOCATION`, `ERROR_KIT_FACEBOOK`, `ERROR_KIT_HTTP`, `ERROR_KIT_JSON_KIT`, `ERROR_KIT_JSON_VALUES`, `ERROR_KIT_MAP_KIT`, `ERROR_KIT_MESSAGE_UI`, `ERROR_KIT_NSEXCEPTION`, `ERROR_KIT_PARSE`, `ERROR_SECURITY`, `ERROR_KIT_STORE_KIT`, `ERROR_KIT_TRANSITION_KIT`, `ERROR_KIT_IAD`, `ERROR_KIT_UI_KIT` and/or `ERROR_KIT_VERI_JSON`.
 3. Finally add `#import "ErrorKit.h"`.
 
 ### CocoaPods
@@ -97,6 +97,7 @@ The **ErrorKit** specification provides the following subspecs:
 * **pod 'ErrorKit/MapKit'**: `#import <ErrorKit/ErrorKit_MapKit.h>`
 * **pod 'ErrorKit/MessageUI'**: `#import <ErrorKit/ErrorKit_MessageUI.h>`
 * **pod 'ErrorKit/NSException'**: `#import <ErrorKit/ErrorKit_NSException.h>`
+* ~~**pod 'ErrorKit/Parse'**: `#import <ErrorKit/ErrorKit_Parse.h>`~~
 * **pod 'ErrorKit/Security'**: `#import <ErrorKit/ErrorKit_Security.h>`
 * **pod 'ErrorKit/StoreKit'**: `#import <ErrorKit/ErrorKit_StoreKit.h>`
 * **pod 'ErrorKit/TransitionKit'**: `#import <ErrorKit/ErrorKit_TransitionKit.h>`

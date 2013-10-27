@@ -94,6 +94,10 @@
 #import "ErrorKit_NSException.h"
 #endif
 
+#ifdef ERROR_KIT_PARSE
+#import "ErrorKit_Parse.h"
+#endif
+
 #ifdef ERROR_KIT_SECURITY
 #import "ErrorKit_Security.h"
 #endif

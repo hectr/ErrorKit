@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   s.subspec 'FacebookSDK' do |fb|
     fb.source_files = 'ErrorKit/FacebookSDK'
     fb.dependency 'ErrorKit/UIKit'
-    fb.dependency 'Facebook-iOS-SDK', '< 3.9'
+    fb.dependency 'Facebook-iOS-SDK', '< 3.10'
     fb.prefix_header_contents = '#define ERROR_KIT_FACEBOOK_SDK 1'
   end
   
@@ -114,7 +114,7 @@ Pod::Spec.new do |s|
     se.source_files = 'ErrorKit/Security'
     se.dependency 'ErrorKit/Core'
     se.ios.frameworks = 'Security'
-    se.prefix_header_contents = '#define ERROR_SECURITY 1'
+    se.prefix_header_contents = '#define ERROR_KIT_SECURITY 1'
   end
   
   s.subspec 'StoreKit' do |sk|

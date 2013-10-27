@@ -110,6 +110,12 @@
         builder.lineNumber = error.lineNumber;
     }
 #endif
+#ifdef ERROR_KIT_PARSE
+    if (error.userInfo[@"code"]) {
+        builder.parseCode = error.parseCode;
+    }
+    builder.parseErrorMessage = error.parseErrorMessage;
+#endif
     return builder;
 }
 

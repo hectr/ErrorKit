@@ -54,6 +54,9 @@
 		845990F717FA4F65008ADCD2 /* NSMutableArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */; };
 		845990F817FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */; };
 		845F6DD5181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F6DD4181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m */; };
+		84AF451F181D836E00EFC96A /* MRErrorBuilder+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF451A181D836E00EFC96A /* MRErrorBuilder+Parse.m */; };
+		84AF4520181D836E00EFC96A /* MRErrorFormatter+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF451C181D836E00EFC96A /* MRErrorFormatter+Parse.m */; };
+		84AF4521181D836E00EFC96A /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF451E181D836E00EFC96A /* NSError+Parse.m */; };
 		84C7473C17F8E056007DF279 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473717F8E056007DF279 /* MRAlertRecoveryAttempter.m */; };
 		84C7473D17F8E056007DF279 /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473917F8E056007DF279 /* UIAlertView+ErrorKit.m */; };
 		84C7473E17F8E056007DF279 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7473B17F8E056007DF279 /* UIResponder+ErrorKit.m */; };
@@ -166,6 +169,13 @@
 		845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSMutableDictionary+JSONValues.m"; sourceTree = "<group>"; };
 		845F6DD3181B0B1300D33BDC /* NSJSONSerialization+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSJSONSerialization+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.h"; sourceTree = "<group>"; };
 		845F6DD4181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSJSONSerialization+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.m"; sourceTree = "<group>"; };
+		84AF4518181D836E00EFC96A /* ErrorKit_Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Parse.h; path = ../../ErrorKit/Parse/ErrorKit_Parse.h; sourceTree = "<group>"; };
+		84AF4519181D836E00EFC96A /* MRErrorBuilder+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+Parse.h"; path = "../../ErrorKit/Parse/MRErrorBuilder+Parse.h"; sourceTree = "<group>"; };
+		84AF451A181D836E00EFC96A /* MRErrorBuilder+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+Parse.m"; path = "../../ErrorKit/Parse/MRErrorBuilder+Parse.m"; sourceTree = "<group>"; };
+		84AF451B181D836E00EFC96A /* MRErrorFormatter+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+Parse.h"; path = "../../ErrorKit/Parse/MRErrorFormatter+Parse.h"; sourceTree = "<group>"; };
+		84AF451C181D836E00EFC96A /* MRErrorFormatter+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+Parse.m"; path = "../../ErrorKit/Parse/MRErrorFormatter+Parse.m"; sourceTree = "<group>"; };
+		84AF451D181D836E00EFC96A /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Parse.h"; path = "../../ErrorKit/Parse/NSError+Parse.h"; sourceTree = "<group>"; };
+		84AF451E181D836E00EFC96A /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Parse.m"; path = "../../ErrorKit/Parse/NSError+Parse.m"; sourceTree = "<group>"; };
 		84B2B394174AB5AF004E8ED3 /* UIResponder+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/UIResponder+FacebookSDK.h"; sourceTree = "<group>"; };
 		84C7473617F8E056007DF279 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAlertRecoveryAttempter.h; path = ../../ErrorKit/UIKit/MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
 		84C7473717F8E056007DF279 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRAlertRecoveryAttempter.m; path = ../../ErrorKit/UIKit/MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
@@ -256,6 +266,7 @@
 				841A09D717FF998E00DC3848 /* ErrorKit_MapKit.h */,
 				841A09D817FF998E00DC3848 /* ErrorKit_MessageUI.h */,
 				841A09D917FF9A4C00DC3848 /* ErrorKit_NSException.h */,
+				84AF4518181D836E00EFC96A /* ErrorKit_Parse.h */,
 				841A09DA17FF9C3200DC3848 /* ErrorKit_Security.h */,
 				841A09DB17FF9C3200DC3848 /* ErrorKit_StoreKit.h */,
 				841A09DC17FF9C3200DC3848 /* ErrorKit_TransitionKit.h */,
@@ -388,6 +399,8 @@
 				840B6022180378F90090A142 /* MRErrorFormatter+MessageUI.m */,
 				84220DE717FE1DE50009C919 /* MRErrorFormatter+NSException.h */,
 				84220DE817FE1DE50009C919 /* MRErrorFormatter+NSException.m */,
+				84AF451B181D836E00EFC96A /* MRErrorFormatter+Parse.h */,
+				84AF451C181D836E00EFC96A /* MRErrorFormatter+Parse.m */,
 				84F8AEC217160056001E1FD4 /* MRErrorFormatter+Security.h */,
 				840B6024180379750090A142 /* MRErrorFormatter+Security.m */,
 				84F8AEC317160063001E1FD4 /* MRErrorFormatter+StoreKit.h */,
@@ -421,6 +434,8 @@
 				84220DF317FE24FD0009C919 /* MRErrorBuilder+HTTP.m */,
 				84F8AEB81715FFB9001E1FD4 /* MRErrorBuilder+JSONKit.h */,
 				84220DF517FE277F0009C919 /* MRErrorBuilder+JSONKit.m */,
+				84AF4519181D836E00EFC96A /* MRErrorBuilder+Parse.h */,
+				84AF451A181D836E00EFC96A /* MRErrorBuilder+Parse.m */,
 			);
 			name = build;
 			sourceTree = "<group>";
@@ -476,6 +491,8 @@
 				84220DE117FE09100009C919 /* NSError+HTTP.m */,
 				84F8AEB31715FF5B001E1FD4 /* NSError+JSONKit.h */,
 				84220DDF17FE06F60009C919 /* NSError+JSONKit.m */,
+				84AF451D181D836E00EFC96A /* NSError+Parse.h */,
+				84AF451E181D836E00EFC96A /* NSError+Parse.m */,
 			);
 			name = access;
 			sourceTree = "<group>";
@@ -585,6 +602,7 @@
 				841438D11802160F00EF0704 /* MRErrorBuilder.m in Sources */,
 				841438D21802160F00EF0704 /* MRErrorFormatter.m in Sources */,
 				841438D31802160F00EF0704 /* MRErrorFormatter+ErrorCode.m in Sources */,
+				84AF4521181D836E00EFC96A /* NSError+Parse.m in Sources */,
 				841438D41802160F00EF0704 /* NSError+ErrorKit.m in Sources */,
 				840B600F180371A60090A142 /* MRErrorFormatter+Accounts.m in Sources */,
 				840B60111803729D0090A142 /* MRErrorFormatter+Admob.m in Sources */,
@@ -595,6 +613,7 @@
 				840B601B1803761E0090A142 /* MRErrorFormatter+HTTP.m in Sources */,
 				840B601D180376FF0090A142 /* MRErrorFormatter+iAD.m in Sources */,
 				840B601F180377540090A142 /* MRErrorFormatter+JSONKit.m in Sources */,
+				84AF451F181D836E00EFC96A /* MRErrorBuilder+Parse.m in Sources */,
 				840B60211803785B0090A142 /* MRErrorFormatter+MapKit.m in Sources */,
 				840B6023180378F90090A142 /* MRErrorFormatter+MessageUI.m in Sources */,
 				840B6025180379750090A142 /* MRErrorFormatter+Security.m in Sources */,
@@ -602,6 +621,7 @@
 				840B602918037A360090A142 /* MRErrorFormatter+TransitionKit.m in Sources */,
 				840B602B18037AF20090A142 /* MRErrorFormatter+VeriJSON.m in Sources */,
 				8402077A1813DB5200C9A166 /* MRErrorBuilder+Additions.m in Sources */,
+				84AF4520181D836E00EFC96A /* MRErrorFormatter+Parse.m in Sources */,
 				8402077D1813DB6C00C9A166 /* NSError+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
