@@ -22,10 +22,15 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+ Adds `isHTTPError` method to `NSError` instances.
+ */
 @interface NSError (ErrorKit_HTTP)
 
-/// Returns YES if the domain of the receiver is `NSURLErrorDomain` (or `AFNetworkingErrorDomain`).
+/**
+ Returns YES if the domain of the receiver is `NSURLErrorDomain`
+ (or `AFNetworkingErrorDomain`).
+ */
 - (BOOL)isHTTPError;
 
 @end

@@ -37,27 +37,43 @@
 @interface MRErrorFormatter (ErrorCode)
 
 /**
- Returns an array that may contain one or more of the following strings for the given error code: localized description, localized failure reason and localized recovery suggestion. The returned strings are gotten from *FoundationErrors* string table and do not contain any format arguments.
+ Returns an array that may contain one or more of the following strings for the 
+ given error code: localized description, localized failure reason and localized
+ recovery suggestion. The returned strings are gotten from *FoundationErrors* 
+ string table and do not contain any format arguments.
  
  @param errorCode One of the `NSError` codes defined in `FoundationErrors.h`.
- @return An array with the localized strings or nil if there weren't any matches for the given `errorCode` (e.g. NSExecutableArchitectureMismatchError, NSExecutableRuntimeMismatchError, NSExecutableLoadError and NSExecutableLinkError).
+ @return An array with the localized strings or nil if there weren't any matches
+ for the given `errorCode` (e.g. NSExecutableArchitectureMismatchError, 
+ NSExecutableRuntimeMismatchError, NSExecutableLoadError and
+ NSExecutableLinkError).
  */
 + (NSArray *)stringsForFoundationErrorCode:(NSInteger)errorCode;
 
 /// @name Strings for debugging
 
-/// Returns a string representation of the given `NSCocoaErrorDomain` error code.
+/**
+ Returns a string representation of the given `NSCocoaErrorDomain` error code.
+ */
 + (NSString *)debugStringWithCocoaCode:(NSInteger)errorCode;
 
-/// Returns a string representation of the given `NSXMLParserErrorDomain` error code.
+/**
+ Returns a string representation of the given `NSXMLParserErrorDomain` error 
+ code.
+ */
 + (NSString *)debugStringWithXMLParserCode:(NSInteger)errorCode;
 
 /// @name Strings for presentation
 
-/// Returns a string representation of the given `NSCocoaErrorDomain` error code.
+/**
+ Returns a string representation of the given `NSCocoaErrorDomain` error code.
+ */
 + (NSString *)stringWithCocoaCode:(NSInteger)errorCode;
 
-/// Returns a string representation of the given `NSXMLParserErrorDomain` error code.
+/**
+ Returns a string representation of the given `NSXMLParserErrorDomain` error 
+ code.
+ */
 + (NSString *)stringWithXMLParserCode:(NSInteger)errorCode;
 
 @end
