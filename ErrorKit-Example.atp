@@ -6,7 +6,7 @@
   <translation text="" lang="nb"/>
   <translation text="'%@' doesn't have enough entries." lang="en"/>
   <translation text="'%@' no tiene suficientes entradas." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="' %@' no té prou entrades." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (45)</occurrence>
  </entry>
  <entry key="'%@' has too many entries." comment="No comment provided by engineer.">
@@ -14,7 +14,7 @@
   <translation text="" lang="nb"/>
   <translation text="'%@' has too many entries." lang="en"/>
   <translation text="'%@' tiene demasiadas entradas." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="'%@' té masses entrades." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (47)</occurrence>
  </entry>
  <entry key="'%@' is not empty." comment="No comment provided by engineer.">
@@ -22,7 +22,7 @@
   <translation text="" lang="nb"/>
   <translation text="'%@' is not empty." lang="en"/>
   <translation text="'%@' no está vacía." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="'%@' no és buida." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (49)</occurrence>
  </entry>
  <entry key="'%@' is not optional and must be %@." comment="No comment provided by engineer.">
@@ -121,6 +121,14 @@
   <translation text="El compte ja existeix" lang="ca"/>
   <occurrence>MRErrorFormatter+Accounts.m (70)</occurrence>
  </entry>
+ <entry key="Account Already Linked" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Account Already Linked" lang="en"/>
+  <translation text="Cuenta ya vinculado" lang="es"/>
+  <translation text="Compte ja enllaçat" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (244)</occurrence>
+ </entry>
  <entry key="Account Authentication Failed" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -190,7 +198,7 @@
   <translation text="" lang="nb"/>
   <translation text="App Disabled" lang="en"/>
   <translation text="Aplicación deshabilitada" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Aplicació deshabilitada" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (41)</occurrence>
  </entry>
  <entry key="Application Inactive Error" comment="No comment provided by engineer.">
@@ -206,7 +214,7 @@
   <translation text="" lang="nb"/>
   <translation text="Application Not Authorized" lang="en"/>
   <translation text="Aplicación no autorizada" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Aplicació no autoritzada" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (220)</occurrence>
  </entry>
  <entry key="Application data error occurred." comment="No comment provided by engineer.">
@@ -220,8 +228,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Attempt to save application data failed." lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="El almacenamiento de los datos ha fallado." lang="es"/>
+  <translation text="L'emmagatzament de les dades ha fallat." lang="ca"/>
   <occurrence>MRAppDelegate.m (58)</occurrence>
  </entry>
  <entry key="Attempted access outside data bounds" comment="No comment provided by engineer.">
@@ -236,8 +244,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Attempting to access data created with a different version of the application." lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Intento de acceso a datos creados con una versión diferente de la aplicación." lang="es"/>
+  <translation text="Intent d'accedir a dades creades amb una versió diferent de l'aplicació." lang="ca"/>
   <occurrence>MRAppDelegate.m (63)</occurrence>
  </entry>
  <entry key="Attribute Has No Value" comment="No comment provided by engineer.">
@@ -309,7 +317,7 @@
   <translation text="" lang="nb"/>
   <translation text="Automatic migration failed." lang="en"/>
   <translation text="La migración automática ha fallado." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Ha fallat la migració automàtica." lang="ca"/>
   <occurrence>MRAppDelegate.m (60)</occurrence>
  </entry>
  <entry key="Background Capture Not Available" comment="No comment provided by engineer.">
@@ -376,6 +384,14 @@
   <translation text="CDATA requerida" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (747)</occurrence>
  </entry>
+ <entry key="Cache Miss" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Cache Miss" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (186)</occurrence>
+ </entry>
  <entry key="Call Is Active" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -390,6 +406,10 @@
   <translation text="Cancel" lang="en"/>
   <translation text="Cancelar" lang="es"/>
   <translation text="Cancel·lar" lang="ca"/>
+  <occurrence>MRErrorFormatter+ErrorCode.m (281)</occurrence>
+  <occurrence>MRErrorFormatter.m (132)</occurrence>
+  <occurrence>MRErrorFormatter+HTTP.m (136)</occurrence>
+  <occurrence>MRViewController.m (110)</occurrence>
  </entry>
  <entry key="Cancelled" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -528,14 +548,6 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+Security.m (185)</occurrence>
  </entry>
- <entry key="Certificate chain Creation Failed" comment="No comment provided by engineer.">
-  <translation text="" lang="de"/>
-  <translation text="" lang="nb"/>
-  <translation text="Certificate chain Creation Failed" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
-  <occurrence>MRErrorFormatter+ErrorCode.m (1567)</occurrence>
- </entry>
  <entry key="Change URL" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -567,6 +579,14 @@
   <translation text="Necesario certificado de cliente" lang="es"/>
   <translation text="Necessari certificat de client" lang="ca"/>
   <occurrence>MRErrorFormatter+HTTP.m (194)</occurrence>
+ </entry>
+ <entry key="Command Unavailable" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Command Unavailable" lang="en"/>
+  <translation text="Comando no disponible" lang="es"/>
+  <translation text="Ordre no disponible" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (170)</occurrence>
  </entry>
  <entry key="Comment Contains Double Hyphen" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -622,6 +642,7 @@
   <translation text="Conectar" lang="es"/>
   <translation text="Connectar" lang="ca"/>
   <occurrence>MRErrorFormatter+HTTP.m (148)</occurrence>
+  <occurrence>MRErrorFormatter+Parse.m (154)</occurrence>
   <occurrence>MRViewController.m (50)</occurrence>
   <occurrence>MRViewController.m (64)</occurrence>
   <occurrence>MRViewController.m (95)</occurrence>
@@ -642,6 +663,14 @@
   <translation text="Conectando..." lang="es"/>
   <translation text="Connectant..." lang="ca"/>
   <occurrence>MRViewController.m (50)</occurrence>
+ </entry>
+ <entry key="Connection Failed" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Connection Failed" lang="en"/>
+  <translation text="Fallo en la conexión" lang="es"/>
+  <translation text="La connexió ha fallat" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (154)</occurrence>
  </entry>
  <entry key="Connection Lost" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -664,7 +693,7 @@
   <translation text="" lang="nb"/>
   <translation text="Content Is Protected" lang="en"/>
   <translation text="El contenido está protegido" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Contingut protegit" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (210)</occurrence>
  </entry>
  <entry key="Content Not Authorized" comment="No comment provided by engineer.">
@@ -672,7 +701,7 @@
   <translation text="" lang="nb"/>
   <translation text="Content Not Authorized" lang="en"/>
   <translation text="Contenido no autorizado" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Contingut no autoritzat" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (218)</occurrence>
  </entry>
  <entry key="Corrupt File" comment="No comment provided by engineer.">
@@ -796,8 +825,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Decode Failed" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Decodificación fallida" lang="es"/>
+  <translation text="Descodificació fallida" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (190)</occurrence>
  </entry>
  <entry key="Decoder Not Found" comment="No comment provided by engineer.">
@@ -805,7 +834,7 @@
   <translation text="" lang="nb"/>
   <translation text="Decoder Not Found" lang="en"/>
   <translation text="Decodificador no encontrado" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Descodificador no trobat" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (214)</occurrence>
  </entry>
  <entry key="Decoder Temporarily Unavailable" comment="No comment provided by engineer.">
@@ -919,7 +948,7 @@
   <translation text="" lang="nb"/>
   <translation text="Disk Full" lang="en"/>
   <translation text="Disco lleno" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Disc ple" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (162)</occurrence>
  </entry>
  <entry key="Disk I/O error occurred!" comment="No comment provided by engineer.">
@@ -978,6 +1007,14 @@
   <translation text="Clauer duplicat" lang="ca"/>
   <occurrence>MRErrorFormatter+Security.m (147)</occurrence>
  </entry>
+ <entry key="Duplicate Value" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Duplicate Value" lang="en"/>
+  <translation text="Valor duplicado" lang="es"/>
+  <translation text="Valor duplicat" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (198)</occurrence>
+ </entry>
  <entry key="Element Content Declaration Not Finished" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -994,6 +1031,30 @@
   <translation text="Declaració de contingut d'element no començada" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (717)</occurrence>
  </entry>
+ <entry key="Email Missing" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Email Missing" lang="en"/>
+  <translation text="Falta el email" lang="es"/>
+  <translation text="Falta l'email" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (236)</occurrence>
+ </entry>
+ <entry key="Email Not Found" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Email Not Found" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (238)</occurrence>
+ </entry>
+ <entry key="Email Taken" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Email Taken" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (234)</occurrence>
+ </entry>
  <entry key="Empty Document" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1007,7 +1068,7 @@
   <translation text="" lang="nb"/>
   <translation text="Encoder Not Found" lang="en"/>
   <translation text="Codificador no encontrado" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Codificador no trobat" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (216)</occurrence>
  </entry>
  <entry key="Encoder Temporarily Unavailable" comment="No comment provided by engineer.">
@@ -1162,8 +1223,16 @@
   <translation text="" lang="nb"/>
   <translation text="Error. Please try again later." lang="en"/>
   <translation text="Error. Inténtalo de nuevo más tarde." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Error. Si us plau prova-ho una altra vegada més tard." lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (85)</occurrence>
+ </entry>
+ <entry key="Exceeded Quota" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Exceeded Quota" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (202)</occurrence>
  </entry>
  <entry key="Exception caught" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1292,8 +1361,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Facebook session does not match with the current user. Please log in again." lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La sesión de Facebook no coincide con el usuario actual. Por favor inicie sesión de nuevo." lang="es"/>
+  <translation text="La sessió de Facebook no coincideix amb l'usuari actual. Si us plau connectar una altra vegada." lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (51)</occurrence>
  </entry>
  <entry key="File Already Exists" comment="No comment provided by engineer.">
@@ -1304,6 +1373,14 @@
   <translation text="El fitxer ja existeix" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (194)</occurrence>
   <occurrence>MRErrorFormatter+ErrorCode.m (271)</occurrence>
+ </entry>
+ <entry key="File Delete Failure" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="File Delete Failure" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (226)</occurrence>
  </entry>
  <entry key="File Does Not Exist" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1407,7 +1484,7 @@
   <translation text="" lang="nb"/>
   <translation text="Go to Settings > Facebook and turn ON %@." lang="en"/>
   <translation text="Ves a ajustes > Facebook y activa el interruptor de %@." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Ves a configuració > Facebook i activa l 'interruptor de %@." lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (42)</occurrence>
  </entry>
  <entry key="Grant permission" comment="No comment provided by engineer.">
@@ -1415,22 +1492,22 @@
   <translation text="" lang="nb"/>
   <translation text="Grant permission" lang="en"/>
   <translation text="Conceder permiso" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Concedir permís" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (129)</occurrence>
  </entry>
  <entry key="Graph Error" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Graph Error" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Error de Graph" lang="es"/>
+  <translation text="Error de Graph" lang="ca"/>
   <occurrence>MRErrorFormatter+FacebookSDK.m (82)</occurrence>
  </entry>
  <entry key="HTTP Error" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="HTTP Error" lang="en"/>
-  <translation text="" lang="es"/>
+  <translation text="Error de HTTP" lang="es"/>
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+FacebookSDK.m (86)</occurrence>
  </entry>
@@ -1506,6 +1583,14 @@
   <translation text="Desat incomplet" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (354)</occurrence>
  </entry>
+ <entry key="Incorrect Type" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Incorrect Type" lang="en"/>
+  <translation text="Tipo incorrecto" lang="es"/>
+  <translation text="Tipus incorrecte" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (174)</occurrence>
+ </entry>
  <entry key="Inferred Mapping Model Error" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1539,6 +1624,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (785)</occurrence>
  </entry>
+ <entry key="Internal Server Error" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Internal Server Error" lang="en"/>
+  <translation text="Error interno del servidor" lang="es"/>
+  <translation text="Error intern del servidor" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (152)</occurrence>
+ </entry>
  <entry key="International Roaming Off" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1555,6 +1648,14 @@
   <translation text="Interstitial ja utilitzat" lang="ca"/>
   <occurrence>MRErrorFormatter+Admob.m (81)</occurrence>
  </entry>
+ <entry key="Invalid ACL" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid ACL" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (192)</occurrence>
+ </entry>
  <entry key="Invalid Ad Size" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1570,6 +1671,14 @@
   <translation text="" lang="es"/>
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+Security.m (151)</occurrence>
+ </entry>
+ <entry key="Invalid Channel Name" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Channel Name" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (176)</occurrence>
  </entry>
  <entry key="Invalid Character" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1616,6 +1725,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (633)</occurrence>
  </entry>
+ <entry key="Invalid Class Name" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Class Name" lang="en"/>
+  <translation text="Nombre de clase no válido" lang="es"/>
+  <translation text="Nom de classe no vàlid" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (160)</occurrence>
+ </entry>
  <entry key="Invalid Client" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1652,9 +1769,25 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid Destination Duration" lang="en"/>
+  <translation text="Duración de medio de destino no válida" lang="es"/>
+  <translation text="Durada de mitjà de destí no vàlida" lang="ca"/>
+  <occurrence>MRErrorFormatter+AVFoundation.m (198)</occurrence>
+ </entry>
+ <entry key="Invalid Device Token" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Device Token" lang="en"/>
   <translation text="" lang="es"/>
   <translation text="" lang="ca"/>
-  <occurrence>MRErrorFormatter+AVFoundation.m (198)</occurrence>
+  <occurrence>MRErrorFormatter+Parse.m (178)</occurrence>
+ </entry>
+ <entry key="Invalid Email Address" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Email Address" lang="en"/>
+  <translation text="Dirección de correo electrónico no válida" lang="es"/>
+  <translation text="Adreça electrònica no vàlida" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (196)</occurrence>
  </entry>
  <entry key="Invalid Encoding" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1701,8 +1834,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid Error" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Error inválido" lang="es"/>
+  <translation text="Error invàlid" lang="ca"/>
   <occurrence>MRErrorFormatter+FacebookSDK.m (76)</occurrence>
  </entry>
  <entry key="Invalid File Name" comment="No comment provided by engineer.">
@@ -1712,6 +1845,7 @@
   <translation text="Nombre de archivo no válido" lang="es"/>
   <translation text="Nom de fitxer no vàlid" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (251)</occurrence>
+  <occurrence>MRErrorFormatter+Parse.m (190)</occurrence>
  </entry>
  <entry key="Invalid Hex Character Reference" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1721,6 +1855,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (623)</occurrence>
  </entry>
+ <entry key="Invalid ImageData" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid ImageData" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (222)</occurrence>
+ </entry>
  <entry key="Invalid Item Reference" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1728,6 +1870,15 @@
   <translation text="Referencia no válida" lang="es"/>
   <translation text="Referència no vàlida" lang="ca"/>
   <occurrence>MRErrorFormatter+Security.m (159)</occurrence>
+ </entry>
+ <entry key="Invalid JSON" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid JSON" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (168)</occurrence>
+  <occurrence>MRErrorFormatter+VeriJSON.m (48)</occurrence>
  </entry>
  <entry key="Invalid JSON Pattern" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1737,6 +1888,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+VeriJSON.m (48)</occurrence>
  </entry>
+ <entry key="Invalid Key Name" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Key Name" lang="en"/>
+  <translation text="Nombre de clave inválido" lang="es"/>
+  <translation text="Nom de clau invàlid" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (164)</occurrence>
+ </entry>
  <entry key="Invalid Keychain" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1745,6 +1904,14 @@
   <translation text="Clauer no vàlid" lang="ca"/>
   <occurrence>MRErrorFormatter+Security.m (145)</occurrence>
  </entry>
+ <entry key="Invalid Linked Session" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Linked Session" lang="en"/>
+  <translation text="Sesión vinculada no válida" lang="es"/>
+  <translation text="Sessió enllaçada no vàlida" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (250)</occurrence>
+ </entry>
  <entry key="Invalid Namespace Declaration" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1752,6 +1919,14 @@
   <translation text="" lang="es"/>
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (679)</occurrence>
+ </entry>
+ <entry key="Invalid Nested Key" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Nested Key" lang="en"/>
+  <translation text="Clave anidada inválida" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (188)</occurrence>
  </entry>
  <entry key="Invalid Owner Edit Attempt" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -1777,6 +1952,38 @@
   <translation text="Pagament no vàlid" lang="ca"/>
   <occurrence>MRErrorFormatter+StoreKit.m (66)</occurrence>
  </entry>
+ <entry key="Invalid Pointer" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Pointer" lang="en"/>
+  <translation text="Puntero  inválido" lang="es"/>
+  <translation text="Punter invàlid" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (166)</occurrence>
+ </entry>
+ <entry key="Invalid Product Identifier" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Product Identifier" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (214)</occurrence>
+ </entry>
+ <entry key="Invalid Purchase Receipt" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Purchase Receipt" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (210)</occurrence>
+ </entry>
+ <entry key="Invalid Query" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Query" lang="en"/>
+  <translation text="Consulta no válida" lang="es"/>
+  <translation text="Consulta no vàlida" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (158)</occurrence>
+ </entry>
  <entry key="Invalid Request" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1794,6 +2001,14 @@
   <occurrence>MRErrorFormatter+Admob.m (83)</occurrence>
   <occurrence>MRErrorFormatter+FacebookSDK.m (88)</occurrence>
  </entry>
+ <entry key="Invalid Role Name" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Role Name" lang="en"/>
+  <translation text="Nombre de rol no válido" lang="es"/>
+  <translation text="Nom de rol no vàlid" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (200)</occurrence>
+ </entry>
  <entry key="Invalid Search Reference" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -1802,19 +2017,27 @@
   <translation text="Referència de cerca no vàlida" lang="ca"/>
   <occurrence>MRErrorFormatter+Security.m (161)</occurrence>
  </entry>
+ <entry key="Invalid Server Response" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Invalid Server Response" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (218)</occurrence>
+ </entry>
  <entry key="Invalid Source Duration" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid Source Duration" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Duración ded medio de origen no válida" lang="es"/>
+  <translation text="Durada del mitjà d'origen no vàlida" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (202)</occurrence>
  </entry>
  <entry key="Invalid Source Media" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid Source Media" lang="en"/>
-  <translation text="" lang="es"/>
+  <translation text="Medio de origen no válido" lang="es"/>
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (192)</occurrence>
  </entry>
@@ -1854,8 +2077,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid Video Composition" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Composición de vídeo no válida" lang="es"/>
+  <translation text="Composició de vídeo no vàlida" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (232)</occurrence>
  </entry>
  <entry key="Invalid access to remote object" comment="No comment provided by engineer.">
@@ -1870,8 +2093,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid argument" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Argumento no válido" lang="es"/>
+  <translation text="Argument no vàlid" lang="ca"/>
   <occurrence>MRErrorFormatter+NSException.m (45)</occurrence>
  </entry>
  <entry key="Invalid data supplied!" comment="No comment provided by engineer.">
@@ -1885,8 +2108,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid operation" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Operación no válida" lang="es"/>
+  <translation text="Operació no vàlida" lang="ca"/>
   <occurrence>MRErrorFormatter+NSException.m (58)</occurrence>
   <occurrence>MRErrorFormatter+NSException.m (61)</occurrence>
  </entry>
@@ -1894,8 +2117,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Invalid pattern." lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Patrón no válido." lang="es"/>
+  <translation text="Patró no vàlid." lang="ca"/>
   <occurrence>MRErrorFormatter+JSONValues.m (57)</occurrence>
   <occurrence>MRErrorFormatter+JSONValues.m (60)</occurrence>
  </entry>
@@ -2026,8 +2249,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Log in" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Iniciar sesión" lang="es"/>
+  <translation text="Iniciar sessió" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (53)</occurrence>
   <occurrence>UIApplication+FacebookSDK.m (74)</occurrence>
   <occurrence>UIApplication+FacebookSDK.m (156)</occurrence>
@@ -2100,8 +2323,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Malloc exception" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Excepción de Malloc" lang="es"/>
+  <translation text="Excepció de Malloc" lang="ca"/>
   <occurrence>MRErrorFormatter+NSException.m (47)</occurrence>
  </entry>
  <entry key="Map Error" comment="No comment provided by engineer.">
@@ -2124,8 +2347,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Maximum File Size Reached" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Se ha alcanzado el tamaño de archivo máximo" lang="es"/>
+  <translation text="Assolida mida màxima del fitxer" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (170)</occurrence>
  </entry>
  <entry key="Maximum Number Of Samples Reached" comment="No comment provided by engineer.">
@@ -2213,7 +2436,7 @@
   <translation text="" lang="nb"/>
   <translation text="Migrate data" lang="en"/>
   <translation text="Migrar datos" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Migrar dades" lang="ca"/>
  </entry>
  <entry key="Migration Cancelled" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2271,6 +2494,14 @@
   <translation text="Error de correspondència del model" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (376)</occurrence>
  </entry>
+ <entry key="Missing Object Id" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Missing Object Id" lang="en"/>
+  <translation text="Falta el Id del objeto" lang="es"/>
+  <translation text="Falta l'identificador de l'objecte" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (162)</occurrence>
+ </entry>
  <entry key="Missing Required Data" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -2311,6 +2542,14 @@
   <translation text="Múltiples errors de validació" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (311)</occurrence>
  </entry>
+ <entry key="Must Create User Through Signup" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Must Create User Through Signup" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (242)</occurrence>
+ </entry>
  <entry key="NAME Required" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -2331,7 +2570,7 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Native Dialog Error" lang="en"/>
-  <translation text="" lang="es"/>
+  <translation text="Error de diálogo nativo" lang="es"/>
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+FacebookSDK.m (90)</occurrence>
  </entry>
@@ -2372,8 +2611,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="No Data Captured" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="No se ha capturado ningún dato" lang="es"/>
+  <translation text="No s'ha capturat cap dada" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (158)</occurrence>
  </entry>
  <entry key="No Error" comment="No comment provided by engineer.">
@@ -2455,7 +2694,7 @@
   <translation text="No error description provided" lang="en"/>
   <translation text="No se ha proporcionado ninguna descripción del error" lang="es"/>
   <translation text="No s'ha proporcionat cap descripció de l'error" lang="ca"/>
-  <occurrence>MRErrorBuilder.m (120)</occurrence>
+  <occurrence>MRErrorBuilder.m (126)</occurrence>
  </entry>
  <entry key="Not Connected To Internet" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2464,6 +2703,14 @@
   <translation text="No conectado a Internet" lang="es"/>
   <translation text="No connectat a Internet" lang="ca"/>
   <occurrence>MRErrorFormatter+HTTP.m (156)</occurrence>
+ </entry>
+ <entry key="Not Initialized" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Not Initialized" lang="en"/>
+  <translation text="No inicializado" lang="es"/>
+  <translation text="No inicialitzat" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (172)</occurrence>
  </entry>
  <entry key="Not Well Balanced" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2537,12 +2784,28 @@
   <translation text="La versió del SO és massa baixa" lang="ca"/>
   <occurrence>MRErrorFormatter+Admob.m (77)</occurrence>
  </entry>
+ <entry key="Object Not Found" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Object Not Found" lang="en"/>
+  <translation text="Objeto no encontrado" lang="es"/>
+  <translation text="Objecte no trobat" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (156)</occurrence>
+ </entry>
+ <entry key="Object Too Large" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Object Too Large" lang="en"/>
+  <translation text="Objeto demasiado grande" lang="es"/>
+  <translation text="Objecte massa gran" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (182)</occurrence>
+ </entry>
  <entry key="Operation Cancelled" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Operation Cancelled" lang="en"/>
   <translation text="Operación cancelada" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Operació cancel·lada" lang="ca"/>
   <occurrence>MRErrorFormatter+FacebookSDK.m (78)</occurrence>
  </entry>
  <entry key="Operation Error" comment="No comment provided by engineer.">
@@ -2553,12 +2816,20 @@
   <translation text="Error a l'operació" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (360)</occurrence>
  </entry>
+ <entry key="Operation Forbidden" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Operation Forbidden" lang="en"/>
+  <translation text="Operación prohibida" lang="es"/>
+  <translation text="Operació prohibida" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (184)</occurrence>
+ </entry>
  <entry key="Operation Interrupted" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Operation Interrupted" lang="en"/>
   <translation text="Operación interrumpida" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Operació interrompuda" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (245)</occurrence>
  </entry>
  <entry key="Operation Not Supported" comment="No comment provided by engineer.">
@@ -2566,7 +2837,7 @@
   <translation text="" lang="nb"/>
   <translation text="Operation Not Supported" lang="en"/>
   <translation text="Operación no soportada" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Operació no suportada" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (226)</occurrence>
  </entry>
  <entry key="Operation cancelled!" comment="No comment provided by engineer.">
@@ -2593,12 +2864,20 @@
   <translation text="Sense espai" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (273)</occurrence>
  </entry>
+ <entry key="Parse Error" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Parse Error" lang="en"/>
+  <translation text="Error de Parse" lang="es"/>
+  <translation text="Error de Parse" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (254)</occurrence>
+ </entry>
  <entry key="Parse Failed" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Parse Failed" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Parse ha fallado" lang="es"/>
+  <translation text="Parse ha fallat" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (206)</occurrence>
  </entry>
  <entry key="Parsed Entity Reference Missing Semicolon" comment="No comment provided by engineer.">
@@ -2617,6 +2896,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (659)</occurrence>
  </entry>
+ <entry key="Password Missing" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Password Missing" lang="en"/>
+  <translation text="Falta contraseña" lang="es"/>
+  <translation text="Falta contrasenya" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (230)</occurrence>
+ </entry>
  <entry key="Pattern Matching Error" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -2632,6 +2919,14 @@
   <translation text="Pago cancelado" lang="es"/>
   <translation text="Pagament cancel·lat" lang="ca"/>
   <occurrence>MRErrorFormatter+StoreKit.m (64)</occurrence>
+ </entry>
+ <entry key="Payment Disabled" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Payment Disabled" lang="en"/>
+  <translation text="Pagos deshabilitados" lang="es"/>
+  <translation text="Pagaments deshabilitats" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (212)</occurrence>
  </entry>
  <entry key="Payment Not Allowed" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2654,7 +2949,7 @@
   <translation text="" lang="nb"/>
   <translation text="Permission Error" lang="en"/>
   <translation text="Error de permiso" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Error de permís" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (105)</occurrence>
   <occurrence>UIApplication+FacebookSDK.m (127)</occurrence>
   <occurrence>UIApplication+FacebookSDK.m (153)</occurrence>
@@ -2746,6 +3041,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (701)</occurrence>
  </entry>
+ <entry key="Product Download File System Failure" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Product Download File System Failure" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (220)</occurrence>
+ </entry>
  <entry key="Product Not Available" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -2753,6 +3056,14 @@
   <translation text="Producto no disponible" lang="es"/>
   <translation text="Producte no disponible" lang="ca"/>
   <occurrence>MRErrorFormatter+StoreKit.m (71)</occurrence>
+ </entry>
+ <entry key="Product Not Found In AppStore" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Product Not Found In AppStore" lang="en"/>
+  <translation text="Producto no encuentrado en la AppStore" lang="es"/>
+  <translation text="Producte no trobat a l'AppStore" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (216)</occurrence>
  </entry>
  <entry key="Property List Corrupt" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -2810,6 +3121,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+FacebookSDK.m (96)</occurrence>
  </entry>
+ <entry key="Push Misconfigured" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Push Misconfigured" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (180)</occurrence>
+ </entry>
  <entry key="Read Only Attribute" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -2834,11 +3153,19 @@
   <translation text="Volum només de lectura" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (275)</occurrence>
  </entry>
+ <entry key="Receipt Missing" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Receipt Missing" lang="en"/>
+  <translation text="Falta el recibo" lang="es"/>
+  <translation text="Falta el rebut" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (208)</occurrence>
+ </entry>
  <entry key="Receive port became invalid" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Receive port became invalid" lang="en"/>
-  <translation text="" lang="es"/>
+  <translation text="El puerto de recepción se ha invalidado" lang="es"/>
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+NSException.m (53)</occurrence>
  </entry>
@@ -2854,8 +3181,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Reference Not Allowed" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Referencia no permitida" lang="es"/>
+  <translation text="Referència no permesa" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (234)</occurrence>
  </entry>
  <entry key="Referential Integrity Error" comment="No comment provided by engineer.">
@@ -2988,6 +3315,14 @@
   <translation text="" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (238)</occurrence>
  </entry>
+ <entry key="Script Failed" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Script Failed" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (204)</occurrence>
+ </entry>
  <entry key="Secure Connection Failed" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -3014,8 +3349,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Send port became invalid" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Puerto de envío invalidado" lang="es"/>
+  <translation text="Port d'enviament invalidat" lang="ca"/>
   <occurrence>MRErrorFormatter+NSException.m (52)</occurrence>
  </entry>
  <entry key="Separator Required" comment="No comment provided by engineer.">
@@ -3079,8 +3414,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Server Incorrectly Configured" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Servidor configurado incorrectamente" lang="es"/>
+  <translation text="Servidor configurat incorrectament" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (252)</occurrence>
  </entry>
  <entry key="Session Busy" comment="No comment provided by engineer.">
@@ -3095,8 +3430,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Session Configuration Changed" lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La configuración de sesión ha cambiado" lang="es"/>
+  <translation text="La configuració de la sessió ha canviat" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (160)</occurrence>
  </entry>
  <entry key="Session Error" comment="No comment provided by engineer.">
@@ -3104,7 +3439,7 @@
   <translation text="" lang="nb"/>
   <translation text="Session Error" lang="en"/>
   <translation text="Error de sesión" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Error de sessió" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (64)</occurrence>
  </entry>
  <entry key="Session Interrupted" comment="No comment provided by engineer.">
@@ -3112,8 +3447,16 @@
   <translation text="" lang="nb"/>
   <translation text="Session Interrupted" lang="en"/>
   <translation text="Sesión interrumpida" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Sessió interrompuda" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (183)</occurrence>
+ </entry>
+ <entry key="Session Missing" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Session Missing" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (240)</occurrence>
  </entry>
  <entry key="Session Not Running" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -3128,7 +3471,7 @@
   <translation text="" lang="nb"/>
   <translation text="Something Went Wrong" lang="en"/>
   <translation text="Algo salió mal" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Alguna cosa ha sortit malament" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (123)</occurrence>
  </entry>
  <entry key="Source Media Contains Gaps" comment="No comment provided by engineer.">
@@ -3223,8 +3566,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="The Facebook server could not fulfill this access request. Please contact application support." lang="en"/>
-  <translation text="" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="El servidor de Facebook no ha podido satisfacer la solicitud de acceso. Póngase en contacto con soporte de aplicaciones." lang="es"/>
+  <translation text="El servidor de Facebook no ha pogut complir aquesta sol·licitud d'accés. Contacteu amb el suport d'aplicació." lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (58)</occurrence>
  </entry>
  <entry key="The app was removed. Please log in again." comment="No comment provided by engineer.">
@@ -3240,7 +3583,7 @@
   <translation text="" lang="nb"/>
   <translation text="The date of '%@' is invalid." lang="en"/>
   <translation text="La fecha de ' %@' no es válida." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La data de '%@' no és vàlida." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (59)</occurrence>
  </entry>
  <entry key="The date of '%@' is too late." comment="No comment provided by engineer.">
@@ -3248,7 +3591,7 @@
   <translation text="" lang="nb"/>
   <translation text="The date of '%@' is too late." lang="en"/>
   <translation text="La fecha de '%@' es demasiado tarde." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La data de '%@' és massa tard." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (55)</occurrence>
  </entry>
  <entry key="The date of '%@' is too soon." comment="No comment provided by engineer.">
@@ -3256,7 +3599,7 @@
   <translation text="" lang="nb"/>
   <translation text="The date of '%@' is too soon." lang="en"/>
   <translation text="La fecha de '%@' es demasiado pronto." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La data de '%@' és massa aviat." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (57)</occurrence>
  </entry>
  <entry key="The number of '%@' is too large." comment="No comment provided by engineer.">
@@ -3264,7 +3607,7 @@
   <translation text="" lang="nb"/>
   <translation text="The number of '%@' is too large." lang="en"/>
   <translation text="El número de '%@' es demasiado grande." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La quantitat de '%@' és massa gran." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (51)</occurrence>
  </entry>
  <entry key="The number of '%@' is too small." comment="No comment provided by engineer.">
@@ -3272,7 +3615,7 @@
   <translation text="" lang="nb"/>
   <translation text="The number of '%@' is too small." lang="en"/>
   <translation text="El número de '%@' es demasiado pequeño." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La quantitat de '%@' és massa petita." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (53)</occurrence>
  </entry>
  <entry key="The service encountered an error! Please try again later." comment="No comment provided by engineer.">
@@ -3287,7 +3630,7 @@
   <translation text="" lang="nb"/>
   <translation text="The text of '%@' doesn't match the required pattern." lang="en"/>
   <translation text="El texto de '%@' no coincide con el patrón requerido." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="El text de '%@' no coincideixen amb el patró necessari." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (65)</occurrence>
  </entry>
  <entry key="The text of '%@' is too long." comment="No comment provided by engineer.">
@@ -3295,7 +3638,7 @@
   <translation text="" lang="nb"/>
   <translation text="The text of '%@' is too long." lang="en"/>
   <translation text="El texto de '%@' es demasiado largo." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="El text de '%@' és massa llarg." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (61)</occurrence>
  </entry>
  <entry key="The text of '%@' is too short." comment="No comment provided by engineer.">
@@ -3303,7 +3646,7 @@
   <translation text="" lang="nb"/>
   <translation text="The text of '%@' is too short." lang="en"/>
   <translation text="El texto de '%@' es demasiado corto." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="El text de '%@' és massa curt." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (63)</occurrence>
  </entry>
  <entry key="There was an error while migrating data." comment="No comment provided by engineer.">
@@ -3317,8 +3660,8 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="There were %@ validation errors." lang="en"/>
-  <translation text="Hay %@ errores de validación." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Ha habido %@ errores de validación." lang="es"/>
+  <translation text="Hi ha hagut %@ errors de validació." lang="ca"/>
   <occurrence>MRErrorFormatter+CoreData.m (41)</occurrence>
  </entry>
  <entry key="Timed Out" comment="No comment provided by engineer.">
@@ -3330,6 +3673,15 @@
   <occurrence>MRErrorFormatter+Admob.m (79)</occurrence>
   <occurrence>MRErrorFormatter+ErrorCode.m (364)</occurrence>
   <occurrence>MRErrorFormatter+HTTP.m (140)</occurrence>
+ </entry>
+ <entry key="Timeout" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Timeout" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+NSException.m (51)</occurrence>
+  <occurrence>MRErrorFormatter+Parse.m (194)</occurrence>
  </entry>
  <entry key="Timeout expired during send or receive operation" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -3344,7 +3696,7 @@
   <translation text="" lang="nb"/>
   <translation text="Too Many Requests" lang="en"/>
   <translation text="Demasiadas peticiones" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Massa sol·licituds" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (208)</occurrence>
  </entry>
  <entry key="Torch Level Unavailable" comment="No comment provided by engineer.">
@@ -3431,7 +3783,7 @@
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
   <translation text="Unable to request permissions" lang="en"/>
-  <translation text="" lang="es"/>
+  <translation text="Incapaz de solicitar permisos" lang="es"/>
   <translation text="" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (106)</occurrence>
  </entry>
@@ -3448,7 +3800,7 @@
   <translation text="" lang="nb"/>
   <translation text="Unexpected condition" lang="en"/>
   <translation text="Condición inesperada" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Condició inesperada" lang="ca"/>
   <occurrence>MRErrorFormatter+NSException.m (46)</occurrence>
   <occurrence>MRErrorFormatter+NSException.m (50)</occurrence>
  </entry>
@@ -3504,6 +3856,7 @@
   <occurrence>MRErrorFormatter+HTTP.m (134)</occurrence>
   <occurrence>MRErrorFormatter+iAD.m (64)</occurrence>
   <occurrence>MRErrorFormatter+MapKit.m (54)</occurrence>
+  <occurrence>MRErrorFormatter+Parse.m (150)</occurrence>
   <occurrence>MRErrorFormatter+StoreKit.m (60)</occurrence>
  </entry>
  <entry key="Unknown Result" comment="No comment provided by engineer.">
@@ -3520,7 +3873,7 @@
   <translation text="" lang="nb"/>
   <translation text="Unknown error" lang="en"/>
   <translation text="Error desconocido" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Error desconegut" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (159)</occurrence>
  </entry>
  <entry key="Unknown error occurred!" comment="No comment provided by engineer.">
@@ -3537,6 +3890,14 @@
   <translation text="Formato de archivo no reconocido" lang="es"/>
   <translation text="Format de fitxer no reconegut" lang="ca"/>
   <occurrence>MRErrorFormatter+AVFoundation.m (204)</occurrence>
+ </entry>
+ <entry key="Unsaved File" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Unsaved File" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (224)</occurrence>
  </entry>
  <entry key="Unset persistent store URL" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -3568,6 +3929,14 @@
   <translation text="Esquema no suportat" lang="es"/>
   <translation text="Eesquema no suportat" lang="ca"/>
   <occurrence>MRErrorFormatter+ErrorCode.m (261)</occurrence>
+ </entry>
+ <entry key="Unsupported Service" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Unsupported Service" lang="en"/>
+  <translation text="Servicio no soportado" lang="es"/>
+  <translation text="Servei no suportat" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (252)</occurrence>
  </entry>
  <entry key="Unsupported URL" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -3608,6 +3977,14 @@
   <translation text="L'usuari ha cancel·lat l'autenticació" lang="ca"/>
   <occurrence>MRErrorFormatter+HTTP.m (162)</occurrence>
  </entry>
+ <entry key="User Id Mismatch" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="User Id Mismatch" lang="en"/>
+  <translation text="" lang="es"/>
+  <translation text="" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (246)</occurrence>
+ </entry>
  <entry key="User Interaction Required" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
   <translation text="" lang="nb"/>
@@ -3615,6 +3992,22 @@
   <translation text="Se requiere la interacción del usuario" lang="es"/>
   <translation text="Es requereix la interacció de l'usuari" lang="ca"/>
   <occurrence>MRErrorFormatter+Security.m (179)</occurrence>
+ </entry>
+ <entry key="Username Missing" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Username Missing" lang="en"/>
+  <translation text="Falta nombre de usuario" lang="es"/>
+  <translation text="Falta nom d'usuari" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (228)</occurrence>
+ </entry>
+ <entry key="Username Taken" comment="No comment provided by engineer.">
+  <translation text="" lang="de"/>
+  <translation text="" lang="nb"/>
+  <translation text="Username Taken" lang="en"/>
+  <translation text="Nombre de usuario cogido" lang="es"/>
+  <translation text="Nom d'usuari pres" lang="ca"/>
+  <occurrence>MRErrorFormatter+Parse.m (232)</occurrence>
  </entry>
  <entry key="Validation Error" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -3625,6 +4018,7 @@
   <occurrence>MRErrorFormatter+ErrorCode.m (277)</occurrence>
   <occurrence>MRErrorFormatter+ErrorCode.m (309)</occurrence>
   <occurrence>MRErrorFormatter+ErrorCode.m (396)</occurrence>
+  <occurrence>MRErrorFormatter+Parse.m (206)</occurrence>
  </entry>
  <entry key="Wrong Version" comment="No comment provided by engineer.">
   <translation text="" lang="de"/>
@@ -3639,7 +4033,7 @@
   <translation text="" lang="nb"/>
   <translation text="Wrong user" lang="en"/>
   <translation text="Usuario incorrecto" lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="Usuari incorrecte" lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (50)</occurrence>
  </entry>
  <entry key="XML Declaration Not Finished" comment="No comment provided by engineer.">
@@ -3725,7 +4119,7 @@
   <translation text="" lang="nb"/>
   <translation text="Your current session is no longer valid. Please log in again." lang="en"/>
   <translation text="La sesión actual ya no es válida. Por favor, inicie sesión otra vez." lang="es"/>
-  <translation text="" lang="ca"/>
+  <translation text="La sessió actual ja no és vàlid. Si us plau connecta una altra vegada." lang="ca"/>
   <occurrence>UIApplication+FacebookSDK.m (71)</occurrence>
  </entry>
  <entry key="Zero Byte Resource" comment="No comment provided by engineer.">
