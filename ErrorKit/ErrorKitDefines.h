@@ -64,9 +64,7 @@
 
 #define ERROR_KIT_NSEXCEPTION 1
 
-#ifdef PARSE_VERSION
 #define ERROR_KIT_PARSE 1
-#endif
 
 #ifdef _SECURITY_SECITEM_H_
 #define ERROR_KIT_SECURITY 1
