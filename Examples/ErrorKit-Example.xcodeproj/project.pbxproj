@@ -17,7 +17,6 @@
 		840B6019180375BD0090A142 /* MRErrorFormatter+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6018180375BC0090A142 /* MRErrorFormatter+FacebookSDK.m */; };
 		840B601B1803761E0090A142 /* MRErrorFormatter+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B601A1803761E0090A142 /* MRErrorFormatter+HTTP.m */; };
 		840B601D180376FF0090A142 /* MRErrorFormatter+iAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B601C180376FE0090A142 /* MRErrorFormatter+iAD.m */; };
-		840B601F180377540090A142 /* MRErrorFormatter+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B601E180377530090A142 /* MRErrorFormatter+JSONKit.m */; };
 		840B60211803785B0090A142 /* MRErrorFormatter+MapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B60201803785A0090A142 /* MRErrorFormatter+MapKit.m */; };
 		840B6023180378F90090A142 /* MRErrorFormatter+MessageUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6022180378F90090A142 /* MRErrorFormatter+MessageUI.m */; };
 		840B6025180379750090A142 /* MRErrorFormatter+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B6024180379750090A142 /* MRErrorFormatter+Security.m */; };
@@ -89,7 +88,6 @@
 		840B6018180375BC0090A142 /* MRErrorFormatter+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+FacebookSDK.m"; path = "../../ErrorKit/FacebookSDK/MRErrorFormatter+FacebookSDK.m"; sourceTree = "<group>"; };
 		840B601A1803761E0090A142 /* MRErrorFormatter+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+HTTP.m"; path = "../../ErrorKit/HTTP/MRErrorFormatter+HTTP.m"; sourceTree = "<group>"; };
 		840B601C180376FE0090A142 /* MRErrorFormatter+iAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+iAD.m"; path = "../../ErrorKit/iAD/MRErrorFormatter+iAD.m"; sourceTree = "<group>"; };
-		840B601E180377530090A142 /* MRErrorFormatter+JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+JSONKit.m"; path = "../../ErrorKit/JSONKit/MRErrorFormatter+JSONKit.m"; sourceTree = "<group>"; };
 		840B60201803785A0090A142 /* MRErrorFormatter+MapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+MapKit.m"; path = "../../ErrorKit/MapKit/MRErrorFormatter+MapKit.m"; sourceTree = "<group>"; };
 		840B6022180378F90090A142 /* MRErrorFormatter+MessageUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+MessageUI.m"; path = "../../ErrorKit/MessageUI/MRErrorFormatter+MessageUI.m"; sourceTree = "<group>"; };
 		840B6024180379750090A142 /* MRErrorFormatter+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+Security.m"; path = "../../ErrorKit/Security/MRErrorFormatter+Security.m"; sourceTree = "<group>"; };
@@ -219,7 +217,6 @@
 		84F8AEBC17160008001E1FD4 /* MRErrorFormatter+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+FacebookSDK.h"; path = "../../ErrorKit/FacebookSDK/MRErrorFormatter+FacebookSDK.h"; sourceTree = "<group>"; };
 		84F8AEBD17160019001E1FD4 /* MRErrorFormatter+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+HTTP.h"; path = "../../ErrorKit/HTTP/MRErrorFormatter+HTTP.h"; sourceTree = "<group>"; };
 		84F8AEBE17160023001E1FD4 /* MRErrorFormatter+iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+iAD.h"; path = "../../ErrorKit/iAD/MRErrorFormatter+iAD.h"; sourceTree = "<group>"; };
-		84F8AEBF17160031001E1FD4 /* MRErrorFormatter+JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+JSONKit.h"; path = "../../ErrorKit/JSONKit/MRErrorFormatter+JSONKit.h"; sourceTree = "<group>"; };
 		84F8AEC01716003F001E1FD4 /* MRErrorFormatter+MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+MapKit.h"; path = "../../ErrorKit/MapKit/MRErrorFormatter+MapKit.h"; sourceTree = "<group>"; };
 		84F8AEC117160048001E1FD4 /* MRErrorFormatter+MessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+MessageUI.h"; path = "../../ErrorKit/MessageUI/MRErrorFormatter+MessageUI.h"; sourceTree = "<group>"; };
 		84F8AEC217160056001E1FD4 /* MRErrorFormatter+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+Security.h"; path = "../../ErrorKit/Security/MRErrorFormatter+Security.h"; sourceTree = "<group>"; };
@@ -389,8 +386,6 @@
 				840B601A1803761E0090A142 /* MRErrorFormatter+HTTP.m */,
 				84F8AEBE17160023001E1FD4 /* MRErrorFormatter+iAD.h */,
 				840B601C180376FE0090A142 /* MRErrorFormatter+iAD.m */,
-				84F8AEBF17160031001E1FD4 /* MRErrorFormatter+JSONKit.h */,
-				840B601E180377530090A142 /* MRErrorFormatter+JSONKit.m */,
 				845990EA17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.h */,
 				845990EB17FA4F65008ADCD2 /* MRErrorFormatter+JSONValues.m */,
 				84F8AEC01716003F001E1FD4 /* MRErrorFormatter+MapKit.h */,
@@ -612,7 +607,6 @@
 				840B6019180375BD0090A142 /* MRErrorFormatter+FacebookSDK.m in Sources */,
 				840B601B1803761E0090A142 /* MRErrorFormatter+HTTP.m in Sources */,
 				840B601D180376FF0090A142 /* MRErrorFormatter+iAD.m in Sources */,
-				840B601F180377540090A142 /* MRErrorFormatter+JSONKit.m in Sources */,
 				84AF451F181D836E00EFC96A /* MRErrorBuilder+Parse.m in Sources */,
 				840B60211803785B0090A142 /* MRErrorFormatter+MapKit.m in Sources */,
 				840B6023180378F90090A142 /* MRErrorFormatter+MessageUI.m in Sources */,

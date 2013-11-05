@@ -187,11 +187,6 @@
         return [MRErrorFormatter debugStringWithIADCode:code];
     }
 #endif
-#ifdef ERROR_KIT_JSON_KIT
-    else if ([domain isEqualToString:@"JKErrorDomain"]) {
-        return [MRErrorFormatter debugStringWithJSONKitCode:code];
-    }
-#endif
 #ifdef ERROR_KIT_MAP_KIT
     else if ([domain isEqualToString:MKErrorDomain]) {
         return [MRErrorFormatter debugStringWithMapKitCode:code];
@@ -274,7 +269,7 @@
 #endif
 #ifdef ERROR_KIT_JSON_KIT
     else if ([domain isEqualToString:@"JKErrorDomain"]) {
-        return [MRErrorFormatter stringWithJSONKitCode:code];
+        return MRErrorKitString(@"JSON Error", nil);
     }
 #endif
 #ifdef ERROR_KIT_MAP_KIT

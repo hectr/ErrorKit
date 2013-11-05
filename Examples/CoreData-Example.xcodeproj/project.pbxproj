@@ -35,7 +35,6 @@
 		840B60BB180380520090A142 /* MRErrorFormatter+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B604D18037DEF0090A142 /* MRErrorFormatter+FacebookSDK.m */; };
 		840B60BC180380520090A142 /* MRErrorFormatter+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B604F18037DEF0090A142 /* MRErrorFormatter+HTTP.m */; };
 		840B60BD180380520090A142 /* MRErrorFormatter+iAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B605118037DEF0090A142 /* MRErrorFormatter+iAD.m */; };
-		840B60BE180380520090A142 /* MRErrorFormatter+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B605318037DEF0090A142 /* MRErrorFormatter+JSONKit.m */; };
 		840B60BF180380520090A142 /* MRErrorFormatter+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B605518037DEF0090A142 /* MRErrorFormatter+JSONValues.m */; };
 		840B60C0180380520090A142 /* MRErrorFormatter+MapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B605718037DEF0090A142 /* MRErrorFormatter+MapKit.m */; };
 		840B60C1180380520090A142 /* MRErrorFormatter+MessageUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B605918037DEF0090A142 /* MRErrorFormatter+MessageUI.m */; };
@@ -117,8 +116,6 @@
 		840B604F18037DEF0090A142 /* MRErrorFormatter+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+HTTP.m"; path = "../ErrorKit/HTTP/MRErrorFormatter+HTTP.m"; sourceTree = "<group>"; };
 		840B605018037DEF0090A142 /* MRErrorFormatter+iAD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+iAD.h"; path = "../ErrorKit/iAD/MRErrorFormatter+iAD.h"; sourceTree = "<group>"; };
 		840B605118037DEF0090A142 /* MRErrorFormatter+iAD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+iAD.m"; path = "../ErrorKit/iAD/MRErrorFormatter+iAD.m"; sourceTree = "<group>"; };
-		840B605218037DEF0090A142 /* MRErrorFormatter+JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+JSONKit.h"; path = "../ErrorKit/JSONKit/MRErrorFormatter+JSONKit.h"; sourceTree = "<group>"; };
-		840B605318037DEF0090A142 /* MRErrorFormatter+JSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+JSONKit.m"; path = "../ErrorKit/JSONKit/MRErrorFormatter+JSONKit.m"; sourceTree = "<group>"; };
 		840B605418037DEF0090A142 /* MRErrorFormatter+JSONValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+JSONValues.h"; path = "../ErrorKit/JSONValues/MRErrorFormatter+JSONValues.h"; sourceTree = "<group>"; };
 		840B605518037DEF0090A142 /* MRErrorFormatter+JSONValues.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MRErrorFormatter+JSONValues.m"; path = "../ErrorKit/JSONValues/MRErrorFormatter+JSONValues.m"; sourceTree = "<group>"; };
 		840B605618037DEF0090A142 /* MRErrorFormatter+MapKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+MapKit.h"; path = "../ErrorKit/MapKit/MRErrorFormatter+MapKit.h"; sourceTree = "<group>"; };
@@ -451,8 +448,6 @@
 				840B604F18037DEF0090A142 /* MRErrorFormatter+HTTP.m */,
 				840B605018037DEF0090A142 /* MRErrorFormatter+iAD.h */,
 				840B605118037DEF0090A142 /* MRErrorFormatter+iAD.m */,
-				840B605218037DEF0090A142 /* MRErrorFormatter+JSONKit.h */,
-				840B605318037DEF0090A142 /* MRErrorFormatter+JSONKit.m */,
 				840B605418037DEF0090A142 /* MRErrorFormatter+JSONValues.h */,
 				840B605518037DEF0090A142 /* MRErrorFormatter+JSONValues.m */,
 				840B605618037DEF0090A142 /* MRErrorFormatter+MapKit.h */,
@@ -609,7 +604,6 @@
 				840B60BB180380520090A142 /* MRErrorFormatter+FacebookSDK.m in Sources */,
 				840B60BC180380520090A142 /* MRErrorFormatter+HTTP.m in Sources */,
 				840B60BD180380520090A142 /* MRErrorFormatter+iAD.m in Sources */,
-				840B60BE180380520090A142 /* MRErrorFormatter+JSONKit.m in Sources */,
 				840B60BF180380520090A142 /* MRErrorFormatter+JSONValues.m in Sources */,
 				84AF4513181D7E5C00EFC96A /* NSError+Parse.m in Sources */,
 				840B60C0180380520090A142 /* MRErrorFormatter+MapKit.m in Sources */,

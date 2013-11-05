@@ -28,6 +28,4 @@
 
 #import "MRErrorBuilder+JSONKit.h"
 
-#import "MRErrorFormatter+JSONKit.h"
-
 #endif
