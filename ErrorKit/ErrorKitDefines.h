@@ -54,9 +54,7 @@
 
 #define ERROR_KIT_HTTP 1
 
-#ifdef _JSONKIT_H_
 #define ERROR_KIT_JSON_KIT 1
-#endif
 
 #define ERROR_KIT_JSON_VALUES 1
 
