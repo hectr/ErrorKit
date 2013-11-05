@@ -140,6 +140,33 @@
     }
 }
 
++ (NSString *)stringForHelpButtonFromError:(NSError *)error
+{
+    if (error.helpAnchor) {
+        return MRErrorKitString(@"Help", nil);
+    } else {
+        return nil;
+    }
+}
+
++ (NSString *)stringForHelpTitleFromError:(NSError *)error
+{
+    if (error.helpAnchor) {
+        return MRErrorKitString(@"Help", nil);
+    } else {
+        return nil;
+    }
+}
+
++ (NSString *)stringForHelpDismissButtonFromError:(NSError *)error
+{
+    if (error.helpAnchor) {
+        return MRErrorKitString(@"OK", nil);
+    } else {
+        return nil;
+    }
+}
+
 + (NSString *)debugStringWithDomain:(NSString *)domain code:(NSInteger)code
 {
     if ([domain isEqualToString:NSCocoaErrorDomain]) {

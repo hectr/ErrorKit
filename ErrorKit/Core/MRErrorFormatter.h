@@ -78,6 +78,24 @@
 /// Returns a suitable cancel button title for presenting a given error.
 + (NSString *)stringForCancelButtonFromError:(NSError *)error;
 
+/**
+ Returns a suitable help button title for the given error or `nil` if
+ it does not have `helpAnchor`.
+ */
++ (NSString *)stringForHelpButtonFromError:(NSError *)error;
+
+/**
+ Returns a suitable help title for the given error or `nil` if it does not have 
+ `helpAnchor`.
+ */
++ (NSString *)stringForHelpTitleFromError:(NSError *)error;
+
+/**
+ Returns a suitable help dismiss button title for the given error or `nil` if it
+ does not have `helpAnchor`.
+ */
++ (NSString *)stringForHelpDismissButtonFromError:(NSError *)error;
+
 @end
 
 

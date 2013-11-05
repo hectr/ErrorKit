@@ -63,11 +63,12 @@ static char kMRAlertViewDelegateObjectKey;
         // Show help
         MRAlertViewRecoveryDelegate *delegate = [[self.class alloc] init];
         delegate.onWillDismissAlert = alertView;
-        self.onWillDismissAlert = [[UIAlertView alloc] initWithTitle:MRErrorKitString(@"Help", nil)
-                                                             message:self.error.helpAnchor
-                                                            delegate:delegate
-                                                   cancelButtonTitle:MRErrorKitString(@"OK", nil)
-                                                   otherButtonTitles:nil];
+        self.onWillDismissAlert =
+        [[UIAlertView alloc] initWithTitle:[MRErrorFormatter stringForHelpTitleFromError:self.error]
+                                   message:self.error.helpAnchor
+                                  delegate:delegate
+                         cancelButtonTitle:[MRErrorFormatter stringForHelpDismissButtonFromError:self.error]
+                         otherButtonTitles:nil];
         objc_setAssociatedObject(self.onWillDismissAlert, &kMRAlertViewDelegateObjectKey, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     } else if (alertView.cancelButtonIndex != buttonIndex) {
         NSString *recoveryOption = [alertView buttonTitleAtIndex:buttonIndex];
@@ -211,7 +212,7 @@ static char kMRAlertViewDelegateObjectKey;
     }
     // Add help button
     if (error.helpAnchor) {
-        [alert addButtonWithTitle:MRErrorKitString(@"Help", nil)];
+        [alert addButtonWithTitle:[MRErrorFormatter stringForHelpButtonFromError:error]];
     }
     // Retain alert delegate
     if (alertDelegate) {
