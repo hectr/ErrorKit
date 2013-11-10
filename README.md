@@ -97,7 +97,7 @@ The **ErrorKit** specification provides the following subspecs:
 * **pod 'ErrorKit/MapKit'**: `#import <ErrorKit/ErrorKit_MapKit.h>`
 * **pod 'ErrorKit/MessageUI'**: `#import <ErrorKit/ErrorKit_MessageUI.h>`
 * **pod 'ErrorKit/NSException'**: `#import <ErrorKit/ErrorKit_NSException.h>`
-* ~~**pod 'ErrorKit/Parse'**: `#import <ErrorKit/ErrorKit_Parse.h>`~~
+* **pod 'ErrorKit/Parse'**: `#import <ErrorKit/ErrorKit_Parse.h>`
 * **pod 'ErrorKit/Security'**: `#import <ErrorKit/ErrorKit_Security.h>`
 * **pod 'ErrorKit/StoreKit'**: `#import <ErrorKit/ErrorKit_StoreKit.h>`
 * **pod 'ErrorKit/TransitionKit'**: `#import <ErrorKit/ErrorKit_TransitionKit.h>`
