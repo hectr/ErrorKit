@@ -55,6 +55,11 @@
     return self.userInfo[NSFilePathErrorKey];
 }
 
+- (NSString *)stackTrace
+{
+    return self.userInfo[@"NSStackTraceKey"];
+}
+
 - (NSStringEncoding)stringEncodingError
 {
     return [(NSNumber *)self.userInfo[NSStringEncodingErrorKey] unsignedIntegerValue];

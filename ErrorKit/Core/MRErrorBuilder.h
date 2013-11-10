@@ -83,53 +83,67 @@
 /// Accessors for `@"NSUnderlyingException"` user info value.
 @property (nonatomic, strong) NSException *underlyingException;
 
+/// Accessors for `@"NSStackTraceKey"` user info value.
+@property (nonatomic, strong) NSString *stackTrace;
+
 /// @name Creating and initializing Builder
 
 /**
- Creates and initializes an `MRErrorBuilder` object with data from another object.
+ Creates and initializes an `MRErrorBuilder` object with data from another
+ object.
  
  If no error parameter is passed, no buider is created and the return is `nil`.
  
  @param error Source error object or `nil`.
- @return Builder object initialized with all data gathered from the given error or `nil`.
+ @return Builder object initialized with all data gathered from the given error
+ or `nil`.
  */
 + (instancetype)builderWithError:(NSError *)error;
 
 /**
  Creates and initializes an `MRErrorBuilder` object for a given domain and code.
  
- The builder is given a predefined localized description, according its domain and code; but this string may not be adequate for being presented to the user.
+ The builder is given a predefined localized description, according its domain 
+ and code; but this string may not be adequate for being presented to the user.
  
  @param domain The error domain.
  @param code The error code for the error.
- @return Builder object initialized for domain with the specified error code and some predefined localized description.
+ @return Builder object initialized for domain with the specified error code and
+ some predefined localized description.
  */
 + (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code;
 
 /**
- Creates and initializes an `MRErrorBuilder` object for a given domain and code with a given localized description.
+ Creates and initializes an `MRErrorBuilder` object for a given domain and code 
+ with a given localized description.
  
  @param domain The error domain.
  @param code The error code for the error.
- param userInfo The userInfo dictionary for the builder. `userInfo` may be `nil`.
- @return Builder object initialized for domain with the specified error code and localized description.
+ param userInfo The userInfo dictionary for the builder. `userInfo` may be 
+ `nil`.
+ @return Builder object initialized for domain with the specified error code and
+ localized description.
  */
 + (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription;
 
 /**
  Designated initializer.
  
- Returns a `MRErrorBuilder` object initialized for a given domain and code with a given userInfo dictionary.
+ Returns a `MRErrorBuilder` object initialized for a given domain and code with 
+ a given userInfo dictionary.
  
  @param domain The error domain.
  @param code The error code for the error.
- param userInfo The userInfo dictionary for the builder. `userInfo` may be `nil`.
- @return Builder object initialized for domain with the specified error code and the dictionary of arbitrary data userInfo.
+ param userInfo The userInfo dictionary for the builder. `userInfo` may be 
+ `nil`.
+ @return Builder object initialized for domain with the specified error code and
+ the dictionary of arbitrary data userInfo.
  */
 - (id)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
 
 /**
- Adds a given key-value pair to the user info dictionary. If given value is `nil`, removes the given key and its associated value from the dictionary.
+ Adds a given key-value pair to the user info dictionary. If given value is 
+ `nil`, removes the given key and its associated value from the dictionary.
  
  @param value The value for key or `nil`.
  @param key The key for value or the key to remove.
@@ -139,15 +153,20 @@
 /// Adds a recovery option and its recovery attempter block to the receiver.
 - (void)addRecoveryOption:(NSString *)localizedRecoveryOption withBlock:(void(^)(NSError *error))recoveryOptionAttempter;
 
-/// Adds an array of recovery options and their recovery attempter block to the receiver.
+/**
+ Adds an array of recovery options and their recovery attempter block to the 
+ receiver.
+ */
 - (void)addRecoveryOptions:(NSArray *)localizedRecoveryOptions withBlock:(void(^)(NSError *error, NSUInteger recoveryOption))recoveryOptionsAttempter;
 
 /// @name Creating error
 
 /**
- Creates and initializes an `NSError` object with the builder's domain, code and user info.
+ Creates and initializes an `NSError` object with the builder's domain, code and
+ user info.
  
- @return An `NSError` object for builder's domain and error code and userInfo dictionary.
+ @return An `NSError` object for builder's domain and error code and userInfo 
+ dictionary.
  */
 - (NSError *)error;
 
@@ -155,17 +174,27 @@
 
 
 /**
- This category adds methods that may help you decide whether or not to display an error dialog.
+ This category adds methods that may help you decide whether or not to display
+ an error dialog.
  */
 @interface MRErrorBuilder (ErrorKit_Helper)
 
-/// Wrapper for `[MRErrorFormatter debugStringWithDomain:self.domain code:self.code]`.
+/**
+ Wrapper for 
+ `[MRErrorFormatter debugStringWithDomain:self.domain code:self.code]`.
+ */
 - (NSString *)debugString;
 
-/// Returns YES if the error code corresponds to a cancelled operation in `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
+/**
+ Returns YES if the error code corresponds to a cancelled operation in 
+ `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, 
+ `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
+ **/
 - (BOOL)isCancelledError;
 
-/// Returns YES if the error code corresponds to a validation error in `NSCocoaErrorDomain`.
+/** Returns YES if the error code corresponds to a validation error in 
+ `NSCocoaErrorDomain`.
+ */
 - (BOOL)isValidationError;
 
 @end

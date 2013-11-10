@@ -63,21 +63,35 @@
 /// Getter for `@"NSUnderlyingException"` user info value.
 @property (nonatomic, readonly) NSException *underlyingException;
 
+/// Getter for `@"NSStackTraceKey"` user info value.
+@property (nonatomic, readonly) NSString *stackTrace;
+
 @end
 
 
 /**
- This category adds methods that may help you decide whether or not to display an error dialog.
+ This category adds methods that may help you decide whether or not to display 
+ an error dialog.
  */
 @interface NSError (ErrorKit_Helper)
 
-/// Wrapper for `[MRErrorFormatter debugStringWithDomain:self.domain code:self.code]`.
+/**
+ Wrapper for 
+ `[MRErrorFormatter debugStringWithDomain:self.domain code:self.code]`.
+ */
 - (NSString *)debugString;
 
-/// Returns YES if the error code corresponds to a cancelled operation in `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
+/**
+ Returns YES if the error code corresponds to a cancelled operation in 
+ `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, 
+ `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
+ */
 - (BOOL)isCancelledError;
 
-/// Returns YES if the error code corresponds to a validation error in `NSCocoaErrorDomain`.
+/**
+ Returns YES if the error code corresponds to a validation error in 
+ `NSCocoaErrorDomain`.
+ */
 - (BOOL)isValidationError;
 
 @end

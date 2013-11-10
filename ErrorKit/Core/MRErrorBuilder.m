@@ -46,6 +46,7 @@
     builder.localizedFailureReason = error.localizedFailureReason;
     builder.localizedRecoveryOptions = error.localizedRecoveryOptions;
     builder.localizedRecoverySuggestion = error.localizedRecoverySuggestion;
+    builder.stackTrace = error.stackTrace;
     if (error.userInfo[NSStringEncodingErrorKey]) {
         builder.stringEncodingError = error.stringEncodingError;
     }
@@ -289,6 +290,16 @@
 - (void)setRecoveryAttempter:(NSArray *)recoveryAttempter
 {
     [self setUserInfoValue:recoveryAttempter forKey:NSRecoveryAttempterErrorKey];
+}
+
+- (NSString *)stackTrace
+{
+    return self.userInfo[@"NSStackTraceKey"];
+}
+
+- (void)setStackTrace:(NSString *)stackTrace
+{
+    [self setUserInfoValue:stackTrace forKey:@"NSStackTraceKey"];
 }
 
 - (NSStringEncoding)stringEncodingError
