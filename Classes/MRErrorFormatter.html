@@ -171,41 +171,41 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Strings for presentation">Strings for presentation</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_Admob Methods">ErrorKit_Admob Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_NSError_NSException Methods">NSError_NSException Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_CoreLocation Methods">ErrorKit_CoreLocation Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_Accounts Methods">ErrorKit_Accounts Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_Parse Methods">ErrorKit_Parse Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_TransitionKit Methods">ErrorKit_TransitionKit Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_HTTP Methods">ErrorKit_HTTP Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_CoreData Methods">ErrorKit_CoreData Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_iAD Methods">ErrorKit_iAD Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_MapKit Methods">ErrorKit_MapKit Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_MessageUI Methods">ErrorKit_MessageUI Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_StoreKit Methods">ErrorKit_StoreKit Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_Accounts Methods">ErrorKit_Accounts Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_AVFoundation Methods">ErrorKit_AVFoundation Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_FacebookSDK Methods">ErrorKit_FacebookSDK Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_CoreLocation Methods">ErrorKit_CoreLocation Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_NSError_JSONValues Methods">NSError_JSONValues Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_VeriJSON Methods">ErrorKit_VeriJSON Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_NSError_NSException Methods">NSError_NSException Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_FacebookSDK Methods">ErrorKit_FacebookSDK Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_HTTP Methods">ErrorKit_HTTP Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_TransitionKit Methods">ErrorKit_TransitionKit Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_Admob Methods">ErrorKit_Admob Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_StoreKit Methods">ErrorKit_StoreKit Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_Security Methods">ErrorKit_Security Methods</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_MapKit Methods">ErrorKit_MapKit Methods</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorCode Methods">ErrorCode Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_AVFoundation Methods">ErrorKit_AVFoundation Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ErrorKit_Parse Methods">ErrorKit_Parse Methods</a></span></li>
 	
 </ul></li>
 
@@ -369,22 +369,14 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p><code>MRErrorFormatter</code> creates localized string representations of <code>NSError</code> objects. There are also methods that aid in error presentation.</p>
 
-<p>Adds methods for <em>stringizing</em> <code>kGADErrorDomain</code> error codes.</p>
+<p>Adds a method that returns a localized message given an exception name.</p>
 
-<p><strong>Warning:</strong> This extension requires the Admob library. Add a <code>GADBannerView.h</code> import to the header prefix of the project.</p>
+<p>Adds methods for <em>stringizing</em> <code>ACErrorDomain</code> error codes.</p>
 
-<p>Adds methods for <em>stringizing</em> <code>kCLErrorDomain</code> error codes.</p>
+<p><strong>Warning:</strong> This extension requires the Accounts framework. Add a
+<code>Accounts/Accounts.h</code> import to the header prefix of the project.</p>
 
-<p><strong>Warning:</strong> This extension requires the Core Location framework. Add a <code>CoreLocation/CoreLocation.h</code> import to the header prefix of the project.</p>
-
-<p>Adds methods for <em>stringizing</em> Parse error codes.</p>
-
-<p><strong>Warning:</strong> This extension requires the Parse framework. Add a <code>Parse/Parse.h</code>
-import to the header prefix of the project.</p>
-
-<p>Adds methods for <em>stringizing</em> <code>TKErrorDomain</code> error codes.</p>
-
-<p><strong>Warning:</strong> This extension requires the TransitionKit library. Add a <code>TransitionKit.h</code> import to the header prefix of the project.</p>
+<p>Adds a method for <em>stringizing</em> HTTP status codes.</p>
 
 <p>Adds helper methods for displaying validation errors.</p>
 
@@ -395,30 +387,13 @@ import to the header prefix of the project.</p>
 
 <p><strong>Warning:</strong> This extension requires the iAD framework.</p>
 
-<p>Adds methods for <em>stringizing</em> <code>MKErrorDomain</code> error codes.</p>
-
-<p><strong>Warning:</strong> This extension requires the Store Kit framework. Add a <code>MapKitKit/MapKit.h</code> import to the header prefix of the project.</p>
-
 <p>Adds methods for <em>stringizing</em> <code>MFMailComposeErrorDomain</code> error codes.</p>
 
 <p><strong>Warning:</strong> This extension requires the MessageUI framework.</p>
 
-<p>Adds methods for <em>stringizing</em> <code>SKErrorDomain</code> error codes.</p>
+<p>Adds methods for <em>stringizing</em> <code>kCLErrorDomain</code> error codes.</p>
 
-<p><strong>Warning:</strong> This extension requires the Store Kit framework. Add a <code>StoreKit/StoreKit.h</code> import to the header prefix of the project.</p>
-
-<p>Adds methods for <em>stringizing</em> <code>ACErrorDomain</code> error codes.</p>
-
-<p><strong>Warning:</strong> This extension requires the Accounts framework. Add a
-<code>Accounts/Accounts.h</code> import to the header prefix of the project.</p>
-
-<p>Adds methods for <em>stringizing</em> <code>AVFoundationErrorDomain</code> error codes.</p>
-
-<p><strong>Warning:</strong> This extension requires the Store Kit framework. Add a <code>AVFoundation/AVFoundation.h</code> import to the header prefix of the project.</p>
-
-<p>Adds methods for <em>stringizing</em> <code>FacebookSDKDomain</code> error codes.</p>
-
-<p><strong>Warning:</strong> This extension requires the Facebook SDK library. Add a <code>FacebookSDK.h</code> import to the header prefix of the project.</p>
+<p><strong>Warning:</strong> This extension requires the Core Location framework. Add a <code>CoreLocation/CoreLocation.h</code> import to the header prefix of the project.</p>
 
 <p>Adds methods for <em>stringizing</em> JSON patterns.</p>
 
@@ -426,16 +401,41 @@ import to the header prefix of the project.</p>
 
 <p><strong>Warning:</strong> This extension requires the VeriJSON library. Add a <code>VeriJSON.h</code> import to the header prefix of the project.</p>
 
-<p>Adds a method that returns a localized message given an exception name.</p>
+<p>Adds methods for <em>stringizing</em> <code>FacebookSDKDomain</code> error codes.</p>
 
-<p>Adds a method for <em>stringizing</em> HTTP status codes.</p>
+<p><strong>Warning:</strong> This extension requires the Facebook SDK library. Add a <code>FacebookSDK.h</code> import to the header prefix of the project.</p>
+
+<p>Adds methods for <em>stringizing</em> <code>TKErrorDomain</code> error codes.</p>
+
+<p><strong>Warning:</strong> This extension requires the TransitionKit library. Add a <code>TransitionKit.h</code> import to the header prefix of the project.</p>
+
+<p>Adds methods for <em>stringizing</em> <code>kGADErrorDomain</code> error codes.</p>
+
+<p><strong>Warning:</strong> This extension requires the Admob library. Add a <code>GADBannerView.h</code> import to the header prefix of the project.</p>
+
+<p>Adds methods for <em>stringizing</em> <code>SKErrorDomain</code> error codes.</p>
+
+<p><strong>Warning:</strong> This extension requires the Store Kit framework. Add a <code>StoreKit/StoreKit.h</code> import to the header prefix of the project.</p>
 
 <p>Adds methods for <em>stringizing</em> the most common result codes returned by Keychain Services.</p>
 
 <p><strong>Warning:</strong> This extension requires the Security framework. Add a <code>Security/Security.h</code> import to the header prefix of the project.</p>
 
+<p>Adds methods for <em>stringizing</em> <code>MKErrorDomain</code> error codes.</p>
+
+<p><strong>Warning:</strong> This extension requires the Store Kit framework. Add a <code>MapKitKit/MapKit.h</code> import to the header prefix of the project.</p>
+
 <p>Adds methods for <em>stringizing</em> error codes.</p><div class="warning"><p><strong>Warning:</strong> The strings supplied by these methods are not suitable for using in
-production environments.</p></div>
+production environments.</p>
+
+<p>Adds methods for <em>stringizing</em> <code>AVFoundationErrorDomain</code> error codes.</p>
+
+<p><strong>Warning:</strong> This extension requires the Store Kit framework. Add a <code>AVFoundation/AVFoundation.h</code> import to the header prefix of the project.</p>
+
+<p>Adds methods for <em>stringizing</em> Parse error codes.</p>
+
+<p><strong>Warning:</strong> This extension requires the Parse framework. Add a <code>Parse/Parse.h</code>
+import to the header prefix of the project.</p></div>
 					</div>
 					
 					
@@ -543,21 +543,14 @@ does not have <code>helpAnchor</code>.</p></span>
 						</ul>
 						
 						
-						<a title="ErrorKit_Admob Methods" name="task_ErrorKit_Admob Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_Admob Methods</h3>
+						<a title="NSError_NSException Methods" name="task_NSError_NSException Methods"></a>
+						<h3 class="subsubtitle task-title">NSError_NSException Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithAdmobCode:">+&nbsp;debugStringWithAdmobCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>kGADErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/stringWithAdmobCode:">+&nbsp;stringWithAdmobCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>kGADErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/stringWithExceptionName:">+&nbsp;stringWithExceptionName:</a></code>
+		<span class="tooltip"><p>Returns a generic message string for the given exception name.</p></span>
 	</span>
 	
 	
@@ -565,21 +558,21 @@ does not have <code>helpAnchor</code>.</p></span>
 						</ul>
 						
 						
-						<a title="ErrorKit_CoreLocation Methods" name="task_ErrorKit_CoreLocation Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_CoreLocation Methods</h3>
+						<a title="ErrorKit_Accounts Methods" name="task_ErrorKit_Accounts Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_Accounts Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithCoreLocationCode:">+&nbsp;debugStringWithCoreLocationCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>kCLErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/debugStringWithAccountsCode:">+&nbsp;debugStringWithAccountsCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>ACErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringWithCoreLocationCode:">+&nbsp;stringWithCoreLocationCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>kCLErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/stringWithAccountsCode:">+&nbsp;stringWithAccountsCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>ACErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
@@ -587,43 +580,28 @@ does not have <code>helpAnchor</code>.</p></span>
 						</ul>
 						
 						
-						<a title="ErrorKit_Parse Methods" name="task_ErrorKit_Parse Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_Parse Methods</h3>
+						<a title="ErrorKit_HTTP Methods" name="task_ErrorKit_HTTP Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_HTTP Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithParseCode:">+&nbsp;debugStringWithParseCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given Parse error code.</p></span>
+		<code><a href="#//api/name/debugStringWithURLCode:">+&nbsp;debugStringWithURLCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>NSURLErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringWithParseCode:">+&nbsp;stringWithParseCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given Parse error code.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="ErrorKit_TransitionKit Methods" name="task_ErrorKit_TransitionKit Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_TransitionKit Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithTransitionKitCode:">+&nbsp;debugStringWithTransitionKitCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>TKErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/stringWithURLCode:">+&nbsp;stringWithURLCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>NSURLErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringWithTransitionKitCode:">+&nbsp;stringWithTransitionKitCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>TKErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/stringWithHTTPCode:">+&nbsp;stringWithHTTPCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given HTTP status code.</p></span>
 	</span>
 	
 	
@@ -661,28 +639,6 @@ does not have <code>helpAnchor</code>.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringWithIADCode:">+&nbsp;stringWithIADCode:</a></code>
 		<span class="tooltip"><p>Returns a string representation of the given <code>ADErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="ErrorKit_MapKit Methods" name="task_ErrorKit_MapKit Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_MapKit Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithMapKitCode:">+&nbsp;debugStringWithMapKitCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>MKErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/stringWithMapKitCode:">+&nbsp;stringWithMapKitCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>MKErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
@@ -740,87 +696,21 @@ does not have <code>helpAnchor</code>.</p></span>
 						</ul>
 						
 						
-						<a title="ErrorKit_StoreKit Methods" name="task_ErrorKit_StoreKit Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_StoreKit Methods</h3>
+						<a title="ErrorKit_CoreLocation Methods" name="task_ErrorKit_CoreLocation Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_CoreLocation Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithStoreKitCode:">+&nbsp;debugStringWithStoreKitCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>SKErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/debugStringWithCoreLocationCode:">+&nbsp;debugStringWithCoreLocationCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>kCLErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringWithStoreKitCode:">+&nbsp;stringWithStoreKitCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>SKErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="ErrorKit_Accounts Methods" name="task_ErrorKit_Accounts Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_Accounts Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithAccountsCode:">+&nbsp;debugStringWithAccountsCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>ACErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/stringWithAccountsCode:">+&nbsp;stringWithAccountsCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>ACErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="ErrorKit_AVFoundation Methods" name="task_ErrorKit_AVFoundation Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_AVFoundation Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithAVCode:">+&nbsp;debugStringWithAVCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>AVFoundationErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/stringWithAVCode:">+&nbsp;stringWithAVCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>AVFoundationErrorDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="ErrorKit_FacebookSDK Methods" name="task_ErrorKit_FacebookSDK Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_FacebookSDK Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithFacebookCode:">+&nbsp;debugStringWithFacebookCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>FacebookSDKDomain</code> error code.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/stringWithFacebookCode:">+&nbsp;stringWithFacebookCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>FacebookSDKDomain</code> error code.</p></span>
+		<code><a href="#//api/name/stringWithCoreLocationCode:">+&nbsp;stringWithCoreLocationCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>kCLErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
@@ -865,14 +755,21 @@ does not have <code>helpAnchor</code>.</p></span>
 						</ul>
 						
 						
-						<a title="NSError_NSException Methods" name="task_NSError_NSException Methods"></a>
-						<h3 class="subsubtitle task-title">NSError_NSException Methods</h3>
+						<a title="ErrorKit_FacebookSDK Methods" name="task_ErrorKit_FacebookSDK Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_FacebookSDK Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringWithExceptionName:">+&nbsp;stringWithExceptionName:</a></code>
-		<span class="tooltip"><p>Returns a generic message string for the given exception name.</p></span>
+		<code><a href="#//api/name/debugStringWithFacebookCode:">+&nbsp;debugStringWithFacebookCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>FacebookSDKDomain</code> error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringWithFacebookCode:">+&nbsp;stringWithFacebookCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>FacebookSDKDomain</code> error code.</p></span>
 	</span>
 	
 	
@@ -880,28 +777,65 @@ does not have <code>helpAnchor</code>.</p></span>
 						</ul>
 						
 						
-						<a title="ErrorKit_HTTP Methods" name="task_ErrorKit_HTTP Methods"></a>
-						<h3 class="subsubtitle task-title">ErrorKit_HTTP Methods</h3>
+						<a title="ErrorKit_TransitionKit Methods" name="task_ErrorKit_TransitionKit Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_TransitionKit Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/debugStringWithURLCode:">+&nbsp;debugStringWithURLCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>NSURLErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/debugStringWithTransitionKitCode:">+&nbsp;debugStringWithTransitionKitCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>TKErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringWithURLCode:">+&nbsp;stringWithURLCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given <code>NSURLErrorDomain</code> error code.</p></span>
+		<code><a href="#//api/name/stringWithTransitionKitCode:">+&nbsp;stringWithTransitionKitCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>TKErrorDomain</code> error code.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="ErrorKit_Admob Methods" name="task_ErrorKit_Admob Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_Admob Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringWithAdmobCode:">+&nbsp;debugStringWithAdmobCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>kGADErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringWithHTTPCode:">+&nbsp;stringWithHTTPCode:</a></code>
-		<span class="tooltip"><p>Returns a string representation of the given HTTP status code.</p></span>
+		<code><a href="#//api/name/stringWithAdmobCode:">+&nbsp;stringWithAdmobCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>kGADErrorDomain</code> error code.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="ErrorKit_StoreKit Methods" name="task_ErrorKit_StoreKit Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_StoreKit Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringWithStoreKitCode:">+&nbsp;debugStringWithStoreKitCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>SKErrorDomain</code> error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringWithStoreKitCode:">+&nbsp;stringWithStoreKitCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>SKErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
@@ -924,6 +858,28 @@ does not have <code>helpAnchor</code>.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringWithKeychainServiceCode:">+&nbsp;stringWithKeychainServiceCode:</a></code>
 		<span class="tooltip"><p>Returns a string representation of the given result code.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="ErrorKit_MapKit Methods" name="task_ErrorKit_MapKit Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_MapKit Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringWithMapKitCode:">+&nbsp;debugStringWithMapKitCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>MKErrorDomain</code> error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringWithMapKitCode:">+&nbsp;stringWithMapKitCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>MKErrorDomain</code> error code.</p></span>
 	</span>
 	
 	
@@ -972,6 +928,50 @@ code.</p></span>
 		<code><a href="#//api/name/stringWithXMLParserCode:">+&nbsp;stringWithXMLParserCode:</a></code>
 		<span class="tooltip"><p>Returns a string representation of the given <code>NSXMLParserErrorDomain</code> error
 code.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="ErrorKit_AVFoundation Methods" name="task_ErrorKit_AVFoundation Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_AVFoundation Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringWithAVCode:">+&nbsp;debugStringWithAVCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>AVFoundationErrorDomain</code> error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringWithAVCode:">+&nbsp;stringWithAVCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given <code>AVFoundationErrorDomain</code> error code.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="ErrorKit_Parse Methods" name="task_ErrorKit_Parse Methods"></a>
+						<h3 class="subsubtitle task-title">ErrorKit_Parse Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugStringWithParseCode:">+&nbsp;debugStringWithParseCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given Parse error code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringWithParseCode:">+&nbsp;stringWithParseCode:</a></code>
+		<span class="tooltip"><p>Returns a string representation of the given Parse error code.</p></span>
 	</span>
 	
 	
