@@ -48,7 +48,7 @@
            , NSObjectInaccessibleException        : MRErrorKitString(@"Invalid access to remote object", nil)
            , NSObjectNotAvailableException        : MRErrorKitString(@"Remote side refused to send message", nil)
            , NSDestinationInvalidException        : MRErrorKitString(@"Unexpected condition within distributed object", nil)
-           , NSPortTimeoutException               : MRErrorKitString(@"Timeout expired during send or receive operation", nil)
+           , NSPortTimeoutException               : MRErrorKitString(@"Timeout expired", nil)
            , NSInvalidSendPortException           : MRErrorKitString(@"Send port became invalid", nil)
            , NSInvalidReceivePortException        : MRErrorKitString(@"Receive port became invalid", nil)
            , NSPortSendException                  : MRErrorKitString(@"Port error occurred on send", nil)

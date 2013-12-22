@@ -1,19 +1,43 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: es
-// Date: Mon Oct 28 23:15:04 2013
+// Date: Sun Dec 22 15:38:47 2013
 
 /* No comment provided by engineer. */
 "'%@' doesn't have enough entries."="'%@' no tiene suficientes entradas.";
 
 /* No comment provided by engineer. */
+"'%@' doesn't match the required pattern."="'%@' no cumple con el patrón requerido.";
+
+/* No comment provided by engineer. */
 "'%@' has too many entries."="'%@' tiene demasiadas entradas.";
+
+/* No comment provided by engineer. */
+"'%@' is invalid."="'%@' no es válida.";
 
 /* No comment provided by engineer. */
 "'%@' is not empty."="'%@' no está vacía.";
 
 /* No comment provided by engineer. */
 "'%@' is not optional and must be %@."="'%1$@' no es opcional y debe ser %2$@.";
+
+/* No comment provided by engineer. */
+"'%@' is too large."="'%@' es demasiado grande.";
+
+/* No comment provided by engineer. */
+"'%@' is too late."="'%@' es demasiado tarde.";
+
+/* No comment provided by engineer. */
+"'%@' is too long."="'%@' es demasiado largo.";
+
+/* No comment provided by engineer. */
+"'%@' is too short."="'%@' es demasiado corto.";
+
+/* No comment provided by engineer. */
+"'%@' is too small."="'%@' es demasiado pequeño.";
+
+/* No comment provided by engineer. */
+"'%@' is too soon."="'%@' es demasiado pronto.";
 
 /* No comment provided by engineer. */
 "'%@' must be %@."="'%1$@' debe ser %2$@.";
@@ -40,7 +64,7 @@
 "AV Error"="Error de AV";
 
 /* No comment provided by engineer. */
-"Access Information Invalid"="Información de acceso inválida";
+"Access Information Invalid"="Información de acceso no válida";
 
 /* No comment provided by engineer. */
 "Account Already Exists"="La cuenta ya existe";
@@ -82,6 +106,9 @@
 "Attempt to save application data failed."="El almacenamiento de los datos ha fallado.";
 
 /* No comment provided by engineer. */
+"Attempted access outside data bounds"="Intento de acceso fuera de los límites de los datos";
+
+/* No comment provided by engineer. */
 "Attempting to access data created with a different version of the application."="Intento de acceso a datos creados con una versión diferente de la aplicación.";
 
 /* No comment provided by engineer. */
@@ -112,10 +139,13 @@
 "Automatic migration failed."="La migración automática ha fallado.";
 
 /* No comment provided by engineer. */
-"Bad Server Response"="Respuesta del servidor inválida";
+"Background Capture Not Available"="Captura en segundo plano no disponible";
 
 /* No comment provided by engineer. */
-"Bad URL"="URL inválida";
+"Bad Server Response"="Respuesta no válida del servidor";
+
+/* No comment provided by engineer. */
+"Bad URL"="URL no válida";
 
 /* No comment provided by engineer. */
 "Banner Visible Without Content"="Visible anuncio sin contenido";
@@ -286,6 +316,9 @@
 "Decoder Not Found"="Decodificador no encontrado";
 
 /* No comment provided by engineer. */
+"Decoder Temporarily Unavailable"="Decodificador temporalmente no disponible";
+
+/* No comment provided by engineer. */
 "Default Keychain Non Existent"="No hay llavero predeterminado";
 
 /* No comment provided by engineer. */
@@ -328,6 +361,9 @@
 "Disk I/O error occurred!"="Error de E/S de disco.";
 
 /* No comment provided by engineer. */
+"Display Inactive"="Pantalla inactiva";
+
+/* No comment provided by engineer. */
 "Document Start Error"="Error de inicio de documento";
 
 /* No comment provided by engineer. */
@@ -352,10 +388,19 @@
 "Email Missing"="Falta el email";
 
 /* No comment provided by engineer. */
+"Email Not Found"="Email no encontrado";
+
+/* No comment provided by engineer. */
+"Email Taken"="Email no disponible";
+
+/* No comment provided by engineer. */
 "Empty Document"="Documento vacío";
 
 /* No comment provided by engineer. */
 "Encoder Not Found"="Codificador no encontrado";
+
+/* No comment provided by engineer. */
+"Encoder Temporarily Unavailable"="Codificador temporalmente no disponible";
 
 /* No comment provided by engineer. */
 "Encoding Not Supported"="Codificación no admitida";
@@ -382,10 +427,13 @@
 "Error"="Error";
 
 /* No comment provided by engineer. */
-"Error creating archive"="Error al crear el archivo";
+"Error creating archive"="Error de creación del archivo";
 
 /* No comment provided by engineer. */
 "Error. Please try again later."="Error. Inténtalo de nuevo más tarde.";
+
+/* No comment provided by engineer. */
+"Exceeded Quota"="Cuota superada";
 
 /* No comment provided by engineer. */
 "Exception caught"="Se ha producido una excepción";
@@ -452,6 +500,9 @@
 
 /* No comment provided by engineer. */
 "Formatting Error"="Error de formato";
+
+/* No comment provided by engineer. */
+"Generic validation error."="Error genérico de validación.";
 
 /* No comment provided by engineer. */
 "Geocode Canceled"="Geocodificación cancelada";
@@ -535,7 +586,7 @@
 "Invalid Conditional Section"="Sección condicional no válida";
 
 /* No comment provided by engineer. */
-"Invalid Date"="Fecha inválida";
+"Invalid Date"="Fecha no válida";
 
 /* No comment provided by engineer. */
 "Invalid Destination Duration"="Duración de medio de destino no válida";
@@ -550,7 +601,7 @@
 "Invalid Encoding Name"="Codificación de nombre no válida";
 
 /* No comment provided by engineer. */
-"Invalid Error"="Error inválido";
+"Invalid Error"="Error no válido";
 
 /* No comment provided by engineer. */
 "Invalid File Name"="Nombre de archivo no válido";
@@ -559,7 +610,7 @@
 "Invalid Item Reference"="Referencia no válida";
 
 /* No comment provided by engineer. */
-"Invalid Key Name"="Nombre de clave inválido";
+"Invalid Key Name"="Nombre de clave no válido";
 
 /* No comment provided by engineer. */
 "Invalid Keychain"="Llavero no válido";
@@ -568,7 +619,7 @@
 "Invalid Linked Session"="Sesión vinculada no válida";
 
 /* No comment provided by engineer. */
-"Invalid Nested Key"="Clave anidada inválida";
+"Invalid Nested Key"="Clave anidada no válida";
 
 /* No comment provided by engineer. */
 "Invalid Owner Edit Attempt"="Intento de cambio de propietario no válido";
@@ -580,7 +631,7 @@
 "Invalid Payment"="Pago no válido";
 
 /* No comment provided by engineer. */
-"Invalid Pointer"="Puntero  inválido";
+"Invalid Pointer"="Puntero no válido";
 
 /* No comment provided by engineer. */
 "Invalid Query"="Consulta no válida";
@@ -589,7 +640,7 @@
 "Invalid Request"="Petición no válida";
 
 /* No comment provided by engineer. */
-"Invalid Response"="Respuesta inválida";
+"Invalid Response"="Respuesta no válida";
 
 /* No comment provided by engineer. */
 "Invalid Role Name"="Nombre de rol no válido";
@@ -604,6 +655,9 @@
 "Invalid Source Media"="Medio de origen no válido";
 
 /* No comment provided by engineer. */
+"Invalid Source Start Time"="Tiempo de inicio de origen no válido";
+
+/* No comment provided by engineer. */
 "Invalid Trust Setting"="Configuración de credencial no válido";
 
 /* No comment provided by engineer. */
@@ -614,6 +668,9 @@
 
 /* No comment provided by engineer. */
 "Invalid Video Composition"="Composición de vídeo no válida";
+
+/* No comment provided by engineer. */
+"Invalid access to remote object"="Acceso no válido a objeto remoto";
 
 /* No comment provided by engineer. */
 "Invalid argument"="Argumento no válido";
@@ -811,7 +868,7 @@
 "Notation Not Started"="Notación no empezada";
 
 /* No comment provided by engineer. */
-"Null value for key '%@'."="El valor de la clave ' %@'. es nulo.";
+"Null value for key '%@'."="El valor de la clave '%@'. es nulo.";
 
 /* No comment provided by engineer. */
 "Number Too Large"="Número demasiado grande";
@@ -892,10 +949,10 @@
 "Placemark Not Found"="Marca de posición no encontrada";
 
 /* No comment provided by engineer. */
-"Please check your internet connection and try again."="Por favor, compruebe su conexión a internet e inténtelo de nuevo.";
+"Please check your internet connection and try again."="Por favor, compruebe su conexión a Internet e inténtalo de nuevo.";
 
 /* No comment provided by engineer. */
-"Please contact support."="Por favor, póngase en contacto con soporte.";
+"Please contact support."="Por favor, póngase en contacto con el soporte.";
 
 /* No comment provided by engineer. */
 "Port error occurred on receive"="Ha ocurrido un error en el puerto de recepción";
@@ -926,6 +983,9 @@
 
 /* No comment provided by engineer. */
 "Property List Unknown Version"="Versión desconocida de lista de propiedades";
+
+/* No comment provided by engineer. */
+"Protocol Mismatch"="Discrepancia con el protocolo";
 
 /* No comment provided by engineer. */
 "Public Identifier Required"="Requerido identificador público";
@@ -994,6 +1054,12 @@
 "Save Error"="Error de guardado";
 
 /* No comment provided by engineer. */
+"Screen Capture Failed"="Captura de pantalla fallida";
+
+/* No comment provided by engineer. */
+"Script Failed"="Fallo en secuencia de comandos";
+
+/* No comment provided by engineer. */
 "Secure Connection Failed"="Fallo en la conexión segura";
 
 /* No comment provided by engineer. */
@@ -1054,6 +1120,12 @@
 "Store Error"="Error de tienda";
 
 /* No comment provided by engineer. */
+"String Not Closed"="Cadena de caracters no cerrada";
+
+/* No comment provided by engineer. */
+"String Not Started"="Cadena de caracteres no empezada";
+
+/* No comment provided by engineer. */
 "String Too Long"="Texto demasiado largo";
 
 /* No comment provided by engineer. */
@@ -1069,7 +1141,7 @@
 "The app was removed. Please log in again."="La aplicación fue eliminada. Inicie sesión otra vez.";
 
 /* No comment provided by engineer. */
-"The date of '%@' is invalid."="La fecha de ' %@' no es válida.";
+"The date of '%@' is invalid."="La fecha de '%@' no es válida.";
 
 /* No comment provided by engineer. */
 "The date of '%@' is too late."="La fecha de '%@' es demasiado tarde.";
@@ -1084,7 +1156,7 @@
 "The number of '%@' is too small."="El número de '%@' es demasiado pequeño.";
 
 /* No comment provided by engineer. */
-"The service encountered an error! Please try again later."="El servicio ha encontrado un error. Inténtelo más tarde.";
+"The service encountered an error! Please try again later."="El servicio ha encontrado un error. Por favor, inténtalo de nuevo más tarde.";
 
 /* No comment provided by engineer. */
 "The text of '%@' doesn't match the required pattern."="El texto de '%@' no coincide con el patrón requerido.";
@@ -1103,6 +1175,15 @@
 
 /* No comment provided by engineer. */
 "Timed Out"="Tiempo agotado";
+
+/* No comment provided by engineer. */
+"Timeout"="Tiempo de espera";
+
+/*  */
+"Timeout expired"="Tiempo de espera agotado";
+
+/* No comment provided by engineer. */
+"Timeout expired during send or receive operation"="Tiempo de espera agotado durante una operación de envío o de recepción";
 
 /* No comment provided by engineer. */
 "Too Many Requests"="Demasiadas peticiones";
@@ -1126,7 +1207,10 @@
 "URL Error"="Error de URL";
 
 /* No comment provided by engineer. */
-"Unable to fullfill request. Please try again later."="No ha sido posible cumplir la petición. Por favor inténtelo de nuevo más tarde.";
+"Unable to fullfill request. Please try again later."="No ha sido posible cumplir la petición. Por favor, inténtalo de nuevo más tarde.";
+
+/* No comment provided by engineer. */
+"Unable to post to open graph. Please try again later."="No ha sido posible publicar en Open Graph. Por favor, inténtalo de nuevo más tarde.";
 
 /* No comment provided by engineer. */
 "Unable to request permissions"="Incapaz de solicitar permisos";
@@ -1168,6 +1252,9 @@
 "Unrecognized File Format"="Formato de archivo no reconocido";
 
 /* No comment provided by engineer. */
+"Unsaved File"="Archivo no guardado";
+
+/* No comment provided by engineer. */
 "Unsupported Feature"="Característica no soportada";
 
 /* No comment provided by engineer. */
@@ -1184,6 +1271,9 @@
 
 /* No comment provided by engineer. */
 "Unsupported operation!"="Operación no soportda.";
+
+/* No comment provided by engineer. */
+"Untrusted URL"="La URL no es de confianza";
 
 /* No comment provided by engineer. */
 "User Authentication Required"="Necesaria autenticación de usuario";
@@ -1225,16 +1315,19 @@
 "XPC Connection Interrupted"="Conexión XPC interrumpida";
 
 /* No comment provided by engineer. */
-"XPC Connection Invalid"="Conexión XPC inválida";
+"XPC Connection Invalid"="Conexión XPC no válida";
 
 /* No comment provided by engineer. */
-"XPC Connection Reply Invalid"="Respuesta de conexión XPC inválida";
+"XPC Connection Reply Invalid"="Respuesta de conexión XPC no válida";
 
 /* No comment provided by engineer. */
 "YES"="SÍ";
 
 /* No comment provided by engineer. */
 "You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi"="Puedes ajustar la configuración de la red móvil de iPhone en Ajustes > General > Datos Móviles. En iPad la configuración se encuentra en Ajustes > Datos Móviles\n\nPara localizar redes Wi-Fi cercanas, pulsa Ajustes > Wi-Fi";
+
+/* No comment provided by engineer. */
+"You can attempt to migrate data to the current version scheme or you can create a new persistent store."="Puede intentar migrar los datos al esquema de la versión actual o puede crear un nuevo almacén de datos persistentes.";
 
 /* No comment provided by engineer. */
 "Your current session is no longer valid. Please log in again."="La sesión actual ya no es válida. Por favor, inicie sesión otra vez.";

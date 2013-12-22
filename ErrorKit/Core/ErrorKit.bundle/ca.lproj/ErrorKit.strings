@@ -1,19 +1,43 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: ca
-// Date: Mon Oct 28 23:15:04 2013
+// Date: Sun Dec 22 15:38:47 2013
 
 /* No comment provided by engineer. */
-"'%@' doesn't have enough entries."="' %@' no té prou entrades.";
+"'%@' doesn't have enough entries."="'%@' no té prou entrades.";
+
+/* No comment provided by engineer. */
+"'%@' doesn't match the required pattern."="'%@' no satisfà el patró requerit.";
 
 /* No comment provided by engineer. */
 "'%@' has too many entries."="'%@' té masses entrades.";
+
+/* No comment provided by engineer. */
+"'%@' is invalid."="'%@' no és vàlida.";
 
 /* No comment provided by engineer. */
 "'%@' is not empty."="'%@' no és buida.";
 
 /* No comment provided by engineer. */
 "'%@' is not optional and must be %@."="'%1$@' no és opcional i ha de ser %2$@.";
+
+/* No comment provided by engineer. */
+"'%@' is too large."="'%@' és massa gran.";
+
+/* No comment provided by engineer. */
+"'%@' is too late."="'%@' és massa tard.";
+
+/* No comment provided by engineer. */
+"'%@' is too long."="'%@' és massa llarg.";
+
+/* No comment provided by engineer. */
+"'%@' is too short."="'%@' és massa curt.";
+
+/* No comment provided by engineer. */
+"'%@' is too small."="'%@' és massa petita.";
+
+/* No comment provided by engineer. */
+"'%@' is too soon."="'%@' és massa aviat.";
 
 /* No comment provided by engineer. */
 "'%@' must be %@."="'%1$@' ha de ser %2$@.";
@@ -37,7 +61,10 @@
 "'>' Required"="'>' requerido";
 
 /* No comment provided by engineer. */
-"Access Information Invalid"="Informació d'accés invàlida";
+"AV Error"="Error d'AV";
+
+/* No comment provided by engineer. */
+"Access Information Invalid"="Informació d'accés no vàlida";
 
 /* No comment provided by engineer. */
 "Account Already Exists"="El compte ja existeix";
@@ -79,6 +106,9 @@
 "Attempt to save application data failed."="L'emmagatzament de les dades ha fallat.";
 
 /* No comment provided by engineer. */
+"Attempted access outside data bounds"="Intent d'accés fora dels límits de les dades";
+
+/* No comment provided by engineer. */
 "Attempting to access data created with a different version of the application."="Intent d'accedir a dades creades amb una versió diferent de l'aplicació.";
 
 /* No comment provided by engineer. */
@@ -109,16 +139,22 @@
 "Automatic migration failed."="Ha fallat la migració automàtica.";
 
 /* No comment provided by engineer. */
-"Bad Server Response"="Resposta de servidor invàlida";
+"Background Capture Not Available"="Captura en segon pla no disponible";
 
 /* No comment provided by engineer. */
-"Bad URL"="URL invàlida";
+"Bad Server Response"="Resposta no vàlida del servidor";
+
+/* No comment provided by engineer. */
+"Bad URL"="URL no vàlida";
 
 /* No comment provided by engineer. */
 "Banner Visible Without Content"="Visible anunci sense contingut";
 
 /* No comment provided by engineer. */
 "Buffer Too Small"="Buffer massa petit";
+
+/* No comment provided by engineer. */
+"By creating a new store you will lose all previously persited data."="Creant un nou magatzem es perdran totes les dades anteriors.";
 
 /* No comment provided by engineer. */
 "CDATA Not Finished"="CDATA no finalitzada";
@@ -193,6 +229,9 @@
 "Comment Not Finished"="Comentari no finalitzat";
 
 /* No comment provided by engineer. */
+"Compatible store"="Magatzem de dades compatible";
+
+/* No comment provided by engineer. */
 "Conditional Section Not Finished"="Secció condicional no finalitzada";
 
 /* No comment provided by engineer. */
@@ -229,7 +268,10 @@
 "Corrupt File"="Fitxer corrupte";
 
 /* No comment provided by engineer. */
-"Couldn't connect to server! Please check your Internet connection and try later"="No s'ha pogut connectar amb el servidor! Si us plau, comproveu la connexió i torneu a provar.";
+"Couldn't connect to server! Please check your Internet connection and try later"="No s'ha pogut connectar amb el servidor! Si us plau, comprova la connexió i torneu a provar.";
+
+/* No comment provided by engineer. */
+"Create new store"="Crear nou magatzem de datos";
 
 /* No comment provided by engineer. */
 "DNS Lookup Failed"="Consulta de DNS fallida";
@@ -274,6 +316,9 @@
 "Decoder Not Found"="Descodificador no trobat";
 
 /* No comment provided by engineer. */
+"Decoder Temporarily Unavailable"="Decodificador no disponible temporalment";
+
+/* No comment provided by engineer. */
 "Default Keychain Non Existent"="No hi ha clauer predeterminat";
 
 /* No comment provided by engineer. */
@@ -301,10 +346,22 @@
 "Destination Store Error"="Error al magatzem de destí";
 
 /* No comment provided by engineer. */
+"Device Busy"="Dispositiu ocupat";
+
+/* No comment provided by engineer. */
+"Device Disconnected"="Dispositiu desconectat";
+
+/* No comment provided by engineer. */
+"Device Not Connected"="Dispositiu no conectat";
+
+/* No comment provided by engineer. */
 "Disk Full"="Disc ple";
 
 /* No comment provided by engineer. */
 "Disk I/O error occurred!"="S'ha produït un error de disc!";
+
+/* No comment provided by engineer. */
+"Display Inactive"="Pantalla inactiva";
 
 /* No comment provided by engineer. */
 "Document Start Error"="Error d'inici de document";
@@ -331,10 +388,19 @@
 "Email Missing"="Falta l'email";
 
 /* No comment provided by engineer. */
+"Email Not Found"="Email no trobat";
+
+/* No comment provided by engineer. */
+"Email Taken"="Email no disponible";
+
+/* No comment provided by engineer. */
 "Empty Document"="Document buit";
 
 /* No comment provided by engineer. */
 "Encoder Not Found"="Codificador no trobat";
+
+/* No comment provided by engineer. */
+"Encoder Temporarily Unavailable"="Codificador no disponible temporalment";
 
 /* No comment provided by engineer. */
 "Encoding Not Supported"="Codificació no admesa";
@@ -361,7 +427,13 @@
 "Error"="Error";
 
 /* No comment provided by engineer. */
-"Error. Please try again later."="Error. Si us plau prova-ho una altra vegada més tard.";
+"Error creating archive"="Error de creació de l'arxiu";
+
+/* No comment provided by engineer. */
+"Error. Please try again later."="Error. Si us plau, prova-ho de nou més tard.";
+
+/* No comment provided by engineer. */
+"Exceeded Quota"="Quota superada";
 
 /* No comment provided by engineer. */
 "Exception caught"="S'ha produït una excepció";
@@ -430,6 +502,9 @@
 "Formatting Error"="Error de format";
 
 /* No comment provided by engineer. */
+"Generic validation error."="Error genèrico de validació.";
+
+/* No comment provided by engineer. */
 "Geocode Canceled"="Geocodificació cancel·lada";
 
 /* No comment provided by engineer. */
@@ -448,6 +523,9 @@
 "Graph Error"="Error de Graph";
 
 /* No comment provided by engineer. */
+"HTTP Error"="Error d'HTTP";
+
+/* No comment provided by engineer. */
 "HTTP Too Many Redirects"="Massa redireccions HTTP";
 
 /* No comment provided by engineer. */
@@ -464,6 +542,9 @@
 
 /* No comment provided by engineer. */
 "Incompatible Version Hash"="Versió de hash incompatible";
+
+/* No comment provided by engineer. */
+"Incompatible store"="Magatzem de dades incompatible";
 
 /* No comment provided by engineer. */
 "Incomplete Save"="Desat incomplet";
@@ -505,7 +586,7 @@
 "Invalid Conditional Section"="Secció condicional no vàlida";
 
 /* No comment provided by engineer. */
-"Invalid Date"="Data invàlida";
+"Invalid Date"="Data no vàlida";
 
 /* No comment provided by engineer. */
 "Invalid Destination Duration"="Durada de mitjà de destí no vàlida";
@@ -520,7 +601,7 @@
 "Invalid Encoding Name"="Codificació de nom no vàlida";
 
 /* No comment provided by engineer. */
-"Invalid Error"="Error invàlid";
+"Invalid Error"="Error no vàlid";
 
 /* No comment provided by engineer. */
 "Invalid File Name"="Nom de fitxer no vàlid";
@@ -529,13 +610,16 @@
 "Invalid Item Reference"="Referència no vàlida";
 
 /* No comment provided by engineer. */
-"Invalid Key Name"="Nom de clau invàlid";
+"Invalid Key Name"="Nom de clau no vàlid";
 
 /* No comment provided by engineer. */
 "Invalid Keychain"="Clauer no vàlid";
 
 /* No comment provided by engineer. */
 "Invalid Linked Session"="Sessió enllaçada no vàlida";
+
+/* No comment provided by engineer. */
+"Invalid Nested Key"="Clave aniuada no vàlida";
 
 /* No comment provided by engineer. */
 "Invalid Owner Edit Attempt"="Intent de canvi de propietari no vàlid";
@@ -547,7 +631,7 @@
 "Invalid Payment"="Pagament no vàlid";
 
 /* No comment provided by engineer. */
-"Invalid Pointer"="Punter invàlid";
+"Invalid Pointer"="Punter no vàlid";
 
 /* No comment provided by engineer. */
 "Invalid Query"="Consulta no vàlida";
@@ -556,7 +640,7 @@
 "Invalid Request"="Sol·licitud no vàlida";
 
 /* No comment provided by engineer. */
-"Invalid Response"="Resposta invàlida";
+"Invalid Response"="Resposta no vàlida";
 
 /* No comment provided by engineer. */
 "Invalid Role Name"="Nom de rol no vàlid";
@@ -566,6 +650,12 @@
 
 /* No comment provided by engineer. */
 "Invalid Source Duration"="Durada del mitjà d'origen no vàlida";
+
+/* No comment provided by engineer. */
+"Invalid Source Media"="Mitjà font no vàlid";
+
+/* No comment provided by engineer. */
+"Invalid Source Start Time"="Temps d'inici font no vàlid";
 
 /* No comment provided by engineer. */
 "Invalid Trust Setting"="Configuració de credencial no vàlida";
@@ -578,6 +668,9 @@
 
 /* No comment provided by engineer. */
 "Invalid Video Composition"="Composició de vídeo no vàlida";
+
+/* No comment provided by engineer. */
+"Invalid access to remote object"="Accès no vàlid a objecte remot";
 
 /* No comment provided by engineer. */
 "Invalid argument"="Argument no vàlid";
@@ -721,6 +814,9 @@
 "NAME Required"="NAME requerit";
 
 /* No comment provided by engineer. */
+"Native Dialog Error"="Error de diàleg natiu";
+
+/* No comment provided by engineer. */
 "Network Error"="Error de xarxa";
 
 /* No comment provided by engineer. */
@@ -772,7 +868,7 @@
 "Notation Not Started"="Notació no començada";
 
 /* No comment provided by engineer. */
-"Null value for key '%@'."="El valor per la clau ' %@' és nul.";
+"Null value for key '%@'."="El valor per la clau '%@' és nul.";
 
 /* No comment provided by engineer. */
 "Number Too Large"="Número massa gran";
@@ -853,7 +949,16 @@
 "Placemark Not Found"="Marca de posició no trobada";
 
 /* No comment provided by engineer. */
-"Please check your internet connection and try again."="Si us plau, comprova la connexió a internet i torna-ho a provar.";
+"Please check your internet connection and try again."="Si us plau, comprova la connexió a Internet i torna-ho a provar.";
+
+/* No comment provided by engineer. */
+"Please contact support."="Si us plau, posat en contacte amb el suport.";
+
+/* No comment provided by engineer. */
+"Port error occurred on receive"="S'ha produït un error al port de recepció";
+
+/* No comment provided by engineer. */
+"Port error occurred on send"="S'ha produït un error al port d'enviament";
 
 /* No comment provided by engineer. */
 "Premature Document End"="Final de documento prematuro";
@@ -880,6 +985,9 @@
 "Property List Unknown Version"="Versió desconeguda de llista de propietats";
 
 /* No comment provided by engineer. */
+"Protocol Mismatch"="Discrepància amb el protocol";
+
+/* No comment provided by engineer. */
 "Public Identifier Required"="Requerit identificador públic";
 
 /* No comment provided by engineer. */
@@ -893,6 +1001,9 @@
 
 /* No comment provided by engineer. */
 "Receipt Missing"="Falta el rebut";
+
+/* No comment provided by engineer. */
+"Receive port became invalid"="El port de recepció s'ha invalidat";
 
 /* No comment provided by engineer. */
 "Redirect To Non Existent Location"="Redirecció a una ubicació inexistent";
@@ -943,6 +1054,12 @@
 "Save Error"="Error de desat";
 
 /* No comment provided by engineer. */
+"Screen Capture Failed"="Captura de pantalla fallida";
+
+/* No comment provided by engineer. */
+"Script Failed"="Seqüència d'ordres fallida";
+
+/* No comment provided by engineer. */
 "Secure Connection Failed"="La connexió segura ha fallat";
 
 /* No comment provided by engineer. */
@@ -985,6 +1102,9 @@
 "Session Interrupted"="Sessió interrompuda";
 
 /* No comment provided by engineer. */
+"Session Not Running"="Sessió no iniciada";
+
+/* No comment provided by engineer. */
 "Something Went Wrong"="Alguna cosa ha sortit malament";
 
 /* No comment provided by engineer. */
@@ -1000,6 +1120,12 @@
 "Store Error"="Error de botiga";
 
 /* No comment provided by engineer. */
+"String Not Closed"="Cadena de caràcters no tancada";
+
+/* No comment provided by engineer. */
+"String Not Started"="Cadena de caràcters no començada";
+
+/* No comment provided by engineer. */
 "String Too Long"="Text massa llarg";
 
 /* No comment provided by engineer. */
@@ -1010,6 +1136,9 @@
 
 /* No comment provided by engineer. */
 "The Facebook server could not fulfill this access request. Please contact application support."="El servidor de Facebook no ha pogut complir aquesta sol·licitud d'accés. Contacteu amb el suport d'aplicació.";
+
+/* No comment provided by engineer. */
+"The app was removed. Please log in again."="L'Aplicació va ser eliminada. Si us plau, inicia sessió novament.";
 
 /* No comment provided by engineer. */
 "The date of '%@' is invalid."="La data de '%@' no és vàlida.";
@@ -1027,7 +1156,7 @@
 "The number of '%@' is too small."="La quantitat de '%@' és massa petita.";
 
 /* No comment provided by engineer. */
-"The service encountered an error! Please try again later."="El servei ha trobat un error! Si us plau provi una altra vegada més tard.";
+"The service encountered an error! Please try again later."="El servei ha trobat un error! Si us plau, prova-ho de nou més tard.";
 
 /* No comment provided by engineer. */
 "The text of '%@' doesn't match the required pattern."="El text de '%@' no coincideixen amb el patró necessari.";
@@ -1046,6 +1175,15 @@
 
 /* No comment provided by engineer. */
 "Timed Out"="Temps superat";
+
+/* No comment provided by engineer. */
+"Timeout"="Temps d'espera";
+
+/*  */
+"Timeout expired"="Temps d'espera esgotat";
+
+/* No comment provided by engineer. */
+"Timeout expired during send or receive operation"="Temps d'espera esgotat durant una operació d'enviament o de recepció";
 
 /* No comment provided by engineer. */
 "Too Many Requests"="Massa sol·licituds";
@@ -1069,13 +1207,22 @@
 "URL Error"="Error d'URL";
 
 /* No comment provided by engineer. */
-"Unable to fullfill request. Please try again later."="No s'ha pogut completar la petició. Si us plau prova una altra vegada més tard.";
+"Unable to fullfill request. Please try again later."="No s'ha pogut completar la petició. Si us plau, prova-ho de nou més tard.";
+
+/* No comment provided by engineer. */
+"Unable to post to open graph. Please try again later."="No ha sigut possible publicar a Open Graph. Si us plau, prova-ho de nou més tard.";
+
+/* No comment provided by engineer. */
+"Unable to request permissions"="Incapaç de sol·licitar permisos";
 
 /* No comment provided by engineer. */
 "Undeclared Entity"="Entitat no declarada";
 
 /* No comment provided by engineer. */
 "Unexpected condition"="Condició inesperada";
+
+/* No comment provided by engineer. */
+"Unexpected condition within distributed object"="Condició inesperada en objecte distribuït";
 
 /*  */
 "Unexpected error occurred!"="S'ha produït un error inesperat!";
@@ -1105,6 +1252,9 @@
 "Unrecognized File Format"="Format de fitxer no reconegut";
 
 /* No comment provided by engineer. */
+"Unsaved File"="Arxiu no desat";
+
+/* No comment provided by engineer. */
 "Unsupported Feature"="Característica no suportada";
 
 /* No comment provided by engineer. */
@@ -1121,6 +1271,9 @@
 
 /* No comment provided by engineer. */
 "Unsupported operation!"="Operació no suportada!";
+
+/* No comment provided by engineer. */
+"Untrusted URL"="La URL no és de confiança";
 
 /* No comment provided by engineer. */
 "User Authentication Required"="Autenticació d'usuari requerida";
@@ -1162,16 +1315,19 @@
 "XPC Connection Interrupted"="Connexió XPC interrompuda";
 
 /* No comment provided by engineer. */
-"XPC Connection Invalid"="Connexió XPC invàlida";
+"XPC Connection Invalid"="Connexió XPC no vàlida";
 
 /* No comment provided by engineer. */
-"XPC Connection Reply Invalid"="Resposta de connexió XPC invàlida";
+"XPC Connection Reply Invalid"="Resposta de connexió XPC no vàlida";
 
 /* No comment provided by engineer. */
 "YES"="SI";
 
 /* No comment provided by engineer. */
 "You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi"="A l'iPhone, pots ajustar la configuració de xarxa mòbil a Configuració > General > Dades Mòbils. A l'iPad es troba a Configuració > Dades Mòbils\n\nPer localitzar xarxes Wi-Fi properes, ves a Configuració > Wi-Fi";
+
+/* No comment provided by engineer. */
+"You can attempt to migrate data to the current version scheme or you can create a new persistent store."="Pots intentar la migració de les dades a l'esquema de la versió actual o crear un nou magatzem de dades persistents.";
 
 /* No comment provided by engineer. */
 "Your current session is no longer valid. Please log in again."="La sessió actual ja no és vàlid. Si us plau connecta una altra vegada.";

@@ -48,21 +48,21 @@
         case NSValidationRelationshipDeniedDeleteError:
             return [NSString stringWithFormat:MRErrorKitString(@"'%@' is not empty.", nil), error.validationKey];
         case NSValidationNumberTooLargeError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The number of '%@' is too large.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is too large.", nil), error.validationKey];
         case NSValidationNumberTooSmallError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The number of '%@' is too small.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is too small.", nil), error.validationKey];
         case NSValidationDateTooLateError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The date of '%@' is too late.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is too late.", nil), error.validationKey];
         case NSValidationDateTooSoonError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The date of '%@' is too soon.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is too soon.", nil), error.validationKey];
         case NSValidationInvalidDateError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The date of '%@' is invalid.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is invalid.", nil), error.validationKey];
         case NSValidationStringTooLongError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The text of '%@' is too long.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is too long.", nil), error.validationKey];
         case NSValidationStringTooShortError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The text of '%@' is too short.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' is too short.", nil), error.validationKey];
         case NSValidationStringPatternMatchingError:
-            return [NSString stringWithFormat:MRErrorKitString(@"The text of '%@' doesn't match the required pattern.", nil), error.validationKey];
+            return [NSString stringWithFormat:MRErrorKitString(@"'%@' doesn't match the required pattern.", nil), error.validationKey];
         default:
             return nil;
     }

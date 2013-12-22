@@ -1,19 +1,43 @@
 // Strings file generated with App Translator
 // Project: ErrorKit-Example
 // Language: en
-// Date: Mon Oct 28 23:15:04 2013
+// Date: Sun Dec 22 15:38:47 2013
 
 /* No comment provided by engineer. */
 "'%@' doesn't have enough entries."="'%@' doesn't have enough entries.";
 
 /* No comment provided by engineer. */
+"'%@' doesn't match the required pattern."="'%@' doesn't match the required pattern.";
+
+/* No comment provided by engineer. */
 "'%@' has too many entries."="'%@' has too many entries.";
+
+/* No comment provided by engineer. */
+"'%@' is invalid."="'%@' is invalid.";
 
 /* No comment provided by engineer. */
 "'%@' is not empty."="'%@' is not empty.";
 
 /* No comment provided by engineer. */
 "'%@' is not optional and must be %@."="'%1$@' is not optional and must be %2$@.";
+
+/* No comment provided by engineer. */
+"'%@' is too large."="'%@' is too large.";
+
+/* No comment provided by engineer. */
+"'%@' is too late."="'%@' is too late.";
+
+/* No comment provided by engineer. */
+"'%@' is too long."="'%@' is too long.";
+
+/* No comment provided by engineer. */
+"'%@' is too short."="'%@' is too short.";
+
+/* No comment provided by engineer. */
+"'%@' is too small."="'%@' is too small.";
+
+/* No comment provided by engineer. */
+"'%@' is too soon."="'%@' is too soon.";
 
 /* No comment provided by engineer. */
 "'%@' must be %@."="'%1$@' must be %2$@.";
@@ -817,6 +841,9 @@
 "Keychain Non Existent"="Keychain Non Existent";
 
 /* No comment provided by engineer. */
+"LinkedId Missing"="LinkedId Missing";
+
+/* No comment provided by engineer. */
 "Literal Not Finished"="Literal Not Finished";
 
 /* No comment provided by engineer. */
@@ -1370,6 +1397,9 @@
 
 /* No comment provided by engineer. */
 "Timeout"="Timeout";
+
+/*  */
+"Timeout expired"="Timeout expired";
 
 /* No comment provided by engineer. */
 "Timeout expired during send or receive operation"="Timeout expired during send or receive operation";
