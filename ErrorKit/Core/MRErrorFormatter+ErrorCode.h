@@ -43,6 +43,7 @@
  string table and do not contain any format arguments.
  
  @param errorCode One of the `NSError` codes defined in `FoundationErrors.h`.
+ 
  @return An array with the localized strings or nil if there weren't any matches
  for the given `errorCode` (e.g. NSExecutableArchitectureMismatchError, 
  NSExecutableRuntimeMismatchError, NSExecutableLoadError and

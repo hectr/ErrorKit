@@ -37,7 +37,8 @@
  
  @param index An index within the bounds of the array.
  @param errorPtr A pointer to an `NSError` object or NULL. You do not need to 
-                 create an `NSError` object.
+ create an `NSError` object.
+ 
  @return The object located at `index`.
  */
 - (id)objectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;

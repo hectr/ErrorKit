@@ -29,12 +29,16 @@
 @interface UIApplication (ErrorKit)
 
 /**
- Sends `application:willPresentError:` to app delegate before displaying the error.
+ Sends `application:willPresentError:` to app delegate before displaying the 
+ error.
  
  @param error An object containing information about an error.
  @param delegate An object that is the delegate.
- @param didPresentSelector A selector identifying the method implemented by the delegate.
- @param contextInfo Arbitrary data associated with the attempt at error recovery, to be passed to `delegate` in `didRecoverSelector`.
+ @param didPresentSelector A selector identifying the method implemented by the 
+ delegate.
+ @param contextInfo Arbitrary data associated with the attempt at error 
+ recovery, to be passed to `delegate` in `didRecoverSelector`.
+ 
  @return `YES` if the error has been presented, `NO` otherwise.
  */
 - (BOOL)presentError:(NSError *)error
@@ -43,9 +47,11 @@
          contextInfo:(void *)contextInfo;
 
 /**
- Sends `application:willPresentError:` to app delegate before displaying the error.
+ Sends `application:willPresentError:` to app delegate before displaying the
+ error.
   
  @param error An object containing information about an error.
+ 
  @return `YES` if the error has been presented, `NO` otherwise.
 */
 - (BOOL)presentError:(NSError *)error;

@@ -24,30 +24,42 @@
 
 
 /**
- Extracts the localized error description, failure reason and recovery suggestion and the recovery options from error and uses them as the alert’s message and button titles, respectively.
+ Extracts the localized error description, failure reason and recovery 
+ suggestion and the recovery options from error and uses them as the alert’s 
+ message and button titles, respectively.
  
- If the error's `localizedRecoveryOptions` is nil, a single localized "OK" button is shown. If `helpAnchor` is set, a localized "Help" button is also shown.
+ If the error's `localizedRecoveryOptions` is nil, a single localized "OK" 
+ button is shown. If `helpAnchor` is set, a localized "Help" button is also 
+ shown.
  */
 @interface UIAlertView (ErrorKit)
 
 /**
- Convenience method for initializing an alert view with data from an error object.
+ Convenience method for initializing an alert view with data from an error 
+ object.
  
- @param titleOrNil The string to be used as title or `nil` if `MRErrorFormatter` should be used for providing a suitable title.
+ @param titleOrNil The string to be used as title or `nil` if `MRErrorFormatter`
+ should be used for providing a suitable title.
  @param error The error used to initialize the alert.
+ 
  @return Newly initialized alert view prepared for presenting error data.
  */
 + (instancetype)alertWithTitle:(NSString *)titleOrNil
                          error:(NSError *)error;
 
 /**
- Convenience method for initializing an alert view with data from an error object.
+ Convenience method for initializing an alert view with data from an error 
+ object.
  
- @param titleOrNil The string to be used as title or `nil` if `MRErrorFormatter` should be used for providing a suitable title.
+ @param titleOrNil The string to be used as title or `nil` if `MRErrorFormatter`
+ should be used for providing a suitable title.
  @param error The error used to initialize the alert.
  @param delegate The alert's delegate. It is also used as recovery delegate.
- @param didRecoverSelector A selector identifying the method implemented by the delegate (see NSErrorRecoveryAttempting).
- @param contextInfo Arbitrary data to be passed to delegate in didRecoverSelector.
+ @param didRecoverSelector A selector identifying the method implemented by the 
+ delegate (see NSErrorRecoveryAttempting).
+ @param contextInfo Arbitrary data to be passed to delegate in 
+ didRecoverSelector.
+ 
  @return Newly initialized alert view prepared for presenting error data.
  */
 + (instancetype)alertWithTitle:(NSString *)titleOrNil

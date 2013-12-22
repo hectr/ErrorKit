@@ -31,12 +31,16 @@
 /**
  Creates and initializes an `MRErrorBuilder` object for a given domain and code.
  
- The builder is given a predefined localized description, according the given exception or its domain and code; but this string may not be adequate for being presented to the user.
+ The builder is given a predefined localized description, according the given 
+ exception or its domain and code; but this string may not be adequate for being
+ presented to the user.
   
  @param domain The error domain.
  @param code The error code for the error.
  @param code The underlying exception.
- @return Builder object initialized for domain with the specified error code and underlying exception and some predefined localized description.
+ 
+ @return Builder object initialized for domain with the specified error code and
+ underlying exception and some predefined localized description.
  */
 + (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code exception:(NSException *)exception;
 

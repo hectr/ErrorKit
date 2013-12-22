@@ -95,6 +95,7 @@
  If no error parameter is passed, no buider is created and the return is `nil`.
  
  @param error Source error object or `nil`.
+ 
  @return Builder object initialized with all data gathered from the given error
  or `nil`.
  */
@@ -108,6 +109,7 @@
  
  @param domain The error domain.
  @param code The error code for the error.
+ 
  @return Builder object initialized for domain with the specified error code and
  some predefined localized description.
  */
@@ -121,6 +123,7 @@
  @param code The error code for the error.
  param userInfo The userInfo dictionary for the builder. `userInfo` may be 
  `nil`.
+ 
  @return Builder object initialized for domain with the specified error code and
  localized description.
  */
@@ -136,6 +139,7 @@
  @param code The error code for the error.
  param userInfo The userInfo dictionary for the builder. `userInfo` may be 
  `nil`.
+ 
  @return Builder object initialized for domain with the specified error code and
  the dictionary of arbitrary data userInfo.
  */

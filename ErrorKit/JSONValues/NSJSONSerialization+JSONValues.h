@@ -36,6 +36,7 @@
  @param opt Options. See `NSJSONWritingOptions  for possible values.
  @param errorPtr If an error occurs, upon return contains an NSError object that
  describes the problem.
+ 
  @return JSON data for obj, or nil if an error occurs or obj was not an 
  `NSArray`.
  */
@@ -49,6 +50,7 @@
  @param opt Options. See `NSJSONWritingOptions  for possible values.
  @param errorPtr If an error occurs, upon return contains an `NSError` object
  that describes the problem.
+ 
  @return JSON data for `obj`, or `nil` if an error occurs or `obj` was not an
  `NSDictionary`.
  */
@@ -60,7 +62,9 @@
  
  @param data A data object containing JSON data.
  @param opt Options. For possible values, see `NSJSONReadingOptions`.
- @param errorPtr If an error occurs, upon return contains an `NSError` object that describes the problem.
+ @param errorPtr If an error occurs, upon return contains an `NSError` object 
+ that describes the problem.
+ 
  @return An array from given JSON data.
  */
 + (NSArray *)arrayWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError *__autoreleasing *)errorPtr;
@@ -73,6 +77,7 @@
  @param opt Options. For possible values, see `NSJSONReadingOptions`.
  @param errorPtr If an error occurs, upon return contains an `NSError` object
  that describes the problem.
+ 
  @return A dictionary from the given JSON data.
  */
 + (NSDictionary *)dictionaryWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError *__autoreleasing *)errorPtr;

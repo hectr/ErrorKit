@@ -29,12 +29,17 @@
 @interface UIResponder (ErrorKit)
 
 /**
- Sends `willPresentError:` to self before forwarding the `presentError:delegate:didPresentSelector:contextInfo:` message to the next object in the chain.
+ Sends `willPresentError:` to self before forwarding the 
+ `presentError:delegate:didPresentSelector:contextInfo:` message to the next 
+ object in the chain.
  
  @param error An object containing information about an error.
  @param delegate An object that is the delegate.
- @param didPresentSelector A selector identifying the method implemented by the delegate.
- @param contextInfo Arbitrary data associated with the attempt at error recovery, to be passed to `delegate` in `didRecoverSelector`.
+ @param didPresentSelector A selector identifying the method implemented by the 
+ delegate.
+ @param contextInfo Arbitrary data associated with the attempt at error 
+ recovery, to be passed to `delegate` in `didRecoverSelector`.
+ 
  @return `YES` if the error has been presented, `NO` otherwise.
  */
 - (BOOL)presentError:(NSError *)error
@@ -43,18 +48,23 @@
          contextInfo:(void *)contextInfo;
 
 /**
- Sends `willPresentError:` to self before forwarding the `presentError:` message to the next object in the chain.
+ Sends `willPresentError:` to self before forwarding the `presentError:` message
+ to the next object in the chain.
 
  @param error An object containing information about an error.
+ 
  @return `YES` if the error has been presented, `NO` otherwise.
  */
 - (BOOL)presentError:(NSError *)error;
 
 /**
- Subclasses can implement this method to inspect the passed-in `NSError` object and return a customized object.
+ Subclasses can implement this method to inspect the passed-in `NSError` object 
+ and return a customized object.
  
  @parameter error The error object.
- @return The customized error object or `nil` if the error has already been handled and there is no need to present it.
+ 
+ @return The customized error object or `nil` if the error has already been 
+ handled and there is no need to present it.
  */
 - (NSError *)willPresentError:(NSError *)error;
 

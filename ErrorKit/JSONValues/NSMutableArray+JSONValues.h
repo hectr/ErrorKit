@@ -35,9 +35,10 @@
  will contain an `NSError` object.
  
  @param anObject The object to add to the end of the array's content.
-                 This value may be nil.
+ This value may be nil.
  @param errorPtr A pointer to an `NSError` object or NULL. You do not need to
-                 create an `NSError` object.
+ create an `NSError` object.
+ 
  @return YES if the object was inserted, NO otherwise.
  */
 - (BOOL)addObject:(id)anObject withError:(NSError **)errorPtr;
@@ -52,12 +53,13 @@
  will contain an `NSError` object.
  
  @param anObject The object to add to the array's content. This value may be
-                 nil, but then the object will not be inserted in the array.
+ nil, but then the object will not be inserted in the array.
  @param index The index in the array at which to insert anObject. This value may
-              be greater than the count of elements in the array, but then the 
-              object will not be inserted in the array.
+ be greater than the count of elements in the array, but then the object will 
+ not be inserted in the array.
  @param errorPtr A pointer to an `NSError` object or NULL. You do not need to
-                 create an `NSError` object.
+ create an `NSError` object.
+ 
  @return YES if the object was inserted, NO otherwise.
  */
 - (BOOL)insertObject:(id)anObject atIndex:(NSUInteger)index withError:(NSError **)errorPtr;
@@ -69,7 +71,8 @@
  but `errorPtr` will contain an `NSError` object.
  
  @param errorPtr A pointer to an `NSError` object or NULL. You do not need to
-                 create an `NSError` object.
+ create an `NSError` object.
+ 
  @return YES if the object was removed, NO otherwise.
 */
 - (BOOL)removeLastObjectWithError:(NSError **)errorPtr;
@@ -81,10 +84,11 @@
  `errorPtr` will contain an `NSError` object.
  
  @param index The index from which to remove the object in the array. The value
-              may exceed the bounds of the array, but then the object will not
-              be removed from the array.
+ may exceed the bounds of the array, but then the object will not be removed 
+ from the array.
  @param errorPtr A pointer to an `NSError` object or NULL. You do not need to
-                 create an `NSError` object.
+ create an `NSError` object.
+ 
  @return YES if the object was removed, NO otherwise.
  */
 - (BOOL)removeObjectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;
@@ -99,12 +103,12 @@
  will contain an `NSError` object.
 
  @param index The index of the object to be replaced. This value may exceed the
-              bounds of the array, but then the object will not be replaced.
+ bounds of the array, but then the object will not be replaced.
  @param anObject The object with which to replace the object at index index in
-              the array. This value may be nil, but then the object will not be
-              replaced.
+ the array. This value may be nil, but then the object will not be replaced.
  @param errorPtr A pointer to an `NSError` object or NULL. You do not need to
-                 create an `NSError` object.
+ create an `NSError` object.
+ 
  @return YES if the object was replaced, NO otherwise.
  */
 - (BOOL)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject error:(NSError **)errorPtr;

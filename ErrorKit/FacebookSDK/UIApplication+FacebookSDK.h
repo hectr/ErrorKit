@@ -24,7 +24,9 @@
 
 
 /**
- Use the methods added by this category instead of `[UIApplication presentError:]` for easier handling of FacebookSDK errors.
+ Use the methods added by this category instead of 
+ `[UIApplication presentError:]` for easier handling of FacebookSDK errors.
+ 
  See <https://developers.facebook.com/docs/technical-guides/iossdk/errors/>.
  */
 @interface UIApplication (ErrorKit_FacebookSDK)
@@ -32,8 +34,10 @@
 /**
  Helper method to handle errors during authentication request.
  
- @param error An object containing information about an error in the `FacebookSDKDomain`.
+ @param error An object containing information about an error in the 
+ `FacebookSDKDomain`.
  @param loginBlock 'Log in' recovery option.
+ 
  @return `YES` if the error has been presented, `NO` otherwise.
  */
 - (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *error))loginBlock;
@@ -41,7 +45,8 @@
 /**
  Helper method to handle errors during permissions request.
  
- @param error An object containing information about an error in the `FacebookSDKDomain`.
+ @param error An object containing information about an error in the 
+ `FacebookSDKDomain`.
  @return `YES` if the error has been presented, `NO` otherwise.
  */
 - (BOOL)handleFacebookRequestPermissionError:(NSError *)error;
@@ -49,9 +54,11 @@
 /**
  Helper method to handle errors during API calls.
 
- @param error An object containing information about an error in the `FacebookSDKDomain`.
+ @param error An object containing information about an error in the 
+ `FacebookSDKDomain`.
  @param permissionBlock 'Grant permission' recovery option.
  @param retryBlock 'Grant permission' recovery option.
+ 
  @return `YES` if the error has been presented, `NO` otherwise.
 */
 - (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *error))permissionBlock andRetryBlock:(void(^)(NSError *error))retryBlock;
