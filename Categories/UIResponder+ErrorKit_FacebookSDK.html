@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UIResponder(ErrorKit) Category Reference</title>
+		<title>UIResponder(ErrorKit_FacebookSDK) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UIResponder(ErrorKit) Category Reference</h1>
+				<h1 class="hideInXcode">UIResponder(ErrorKit_FacebookSDK) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,11 +44,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/presentError:">&nbsp;&nbsp;&nbsp;&nbsp;- presentError:</option>
+	<option value="//api/name/handleFacebookAPICallError:withPermissionBlock:andRetryBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- handleFacebookAPICallError:withPermissionBlock:andRetryBlock:</option>
 	
-	<option value="//api/name/presentError:delegate:didPresentSelector:contextInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- presentError:delegate:didPresentSelector:contextInfo:</option>
+	<option value="//api/name/handleFacebookAuthError:withLoginBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- handleFacebookAuthError:withLoginBlock:</option>
 	
-	<option value="//api/name/willPresentError:">&nbsp;&nbsp;&nbsp;&nbsp;- willPresentError:</option>
+	<option value="//api/name/handleFacebookRequestPermissionError:">&nbsp;&nbsp;&nbsp;&nbsp;- handleFacebookRequestPermissionError:</option>
 	
 	
 	
@@ -78,11 +78,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentError:">presentError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleFacebookAPICallError:withPermissionBlock:andRetryBlock:">handleFacebookAPICallError:withPermissionBlock:andRetryBlock:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentError:delegate:didPresentSelector:contextInfo:">presentError:delegate:didPresentSelector:contextInfo:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleFacebookAuthError:withLoginBlock:">handleFacebookAuthError:withLoginBlock:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/willPresentError:">willPresentError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleFacebookRequestPermissionError:">handleFacebookRequestPermissionError:</a></span></li>
 	
 </ul></li>
 
@@ -91,7 +91,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UIResponder(ErrorKit) Category Reference" name="top"></a>
+				<a title="UIResponder(ErrorKit_FacebookSDK) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -100,7 +100,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UIResponder(ErrorKit) Category Reference</h1>
+						<h1 class="title title-header">UIResponder(ErrorKit_FacebookSDK) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -108,7 +108,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UIResponder+ErrorKit.h<br />UIResponder+ErrorKit.m</td>
+	<td class="specification-value">UIResponder+FacebookSDK.h<br />UIResponder+FacebookSDK.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,7 +118,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Adds <strong>Error-Responder Chain</strong> methods for error presentation.</p>
+						<p>Use the methods added by this category instead of <code>[UIResponder presentError:]</code> for easier handling of FacebookSDK errors.
+See <a href="https://developers.facebook.com/docs/technical-guides/iossdk/errors/">https://developers.facebook.com/docs/technical-guides/iossdk/errors/</a>.</p>
 					</div>
 					
 					
@@ -136,22 +137,22 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/presentError:delegate:didPresentSelector:contextInfo:">&ndash;&nbsp;presentError:delegate:didPresentSelector:contextInfo:</a></code>
-		<span class="tooltip"><p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:delegate:didPresentSelector:contextInfo:</code> message to the next object in the chain.</p></span>
+		<code><a href="#//api/name/handleFacebookAuthError:withLoginBlock:">&ndash;&nbsp;handleFacebookAuthError:withLoginBlock:</a></code>
+		<span class="tooltip"><p>Helper method to handle errors during authentication request.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/presentError:">&ndash;&nbsp;presentError:</a></code>
-		<span class="tooltip"><p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:</code> message to the next object in the chain.</p></span>
+		<code><a href="#//api/name/handleFacebookRequestPermissionError:">&ndash;&nbsp;handleFacebookRequestPermissionError:</a></code>
+		<span class="tooltip"><p>Helper method to handle errors during permissions request.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/willPresentError:">&ndash;&nbsp;willPresentError:</a></code>
-		<span class="tooltip"><p>Subclasses can implement this method to inspect the passed-in <code>NSError</code> object and return a customized object.</p></span>
+		<code><a href="#//api/name/handleFacebookAPICallError:withPermissionBlock:andRetryBlock:">&ndash;&nbsp;handleFacebookAPICallError:withPermissionBlock:andRetryBlock:</a></code>
+		<span class="tooltip"><p>Helper method to handle errors during API calls.</p></span>
 	</span>
 	
 	
@@ -173,18 +174,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/presentError:" title="presentError:"></a>
-	<h3 class="subsubtitle method-title">presentError:</h3>
+	<a name="//api/name/handleFacebookAPICallError:withPermissionBlock:andRetryBlock:" title="handleFacebookAPICallError:withPermissionBlock:andRetryBlock:"></a>
+	<h3 class="subsubtitle method-title">handleFacebookAPICallError:withPermissionBlock:andRetryBlock:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:</code> message to the next object in the chain.</p>
+		<p>Helper method to handle errors during API calls.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)presentError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)handleFacebookAPICallError:(NSError *)<em>error</em> withPermissionBlock:(void ( ^ ) ( NSError *error ))<em>permissionBlock</em> andRetryBlock:(void ( ^ ) ( NSError *error ))<em>retryBlock</em></code></div>
 
     
 	
@@ -193,7 +194,17 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>error</em></dt>
-			<dd><p>An object containing information about an error.</p></dd>
+			<dd><p>An object containing information about an error in the <code>FacebookSDKDomain</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>permissionBlock</em></dt>
+			<dd><p>&lsquo;Grant permission&rsquo; recovery option.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>retryBlock</em></dt>
+			<dd><p>&lsquo;Grant permission&rsquo; recovery option.</p></dd>
 		</dl>
 		
 	</div>
@@ -211,7 +222,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:</code> message to the next object in the chain.</p>
+		<p>Helper method to handle errors during API calls.</p>
 	</div>
 	
 	
@@ -222,25 +233,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIResponder+ErrorKit.h</code><br />
+		<code class="declared-in-ref">UIResponder+FacebookSDK.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/presentError:delegate:didPresentSelector:contextInfo:" title="presentError:delegate:didPresentSelector:contextInfo:"></a>
-	<h3 class="subsubtitle method-title">presentError:delegate:didPresentSelector:contextInfo:</h3>
+	<a name="//api/name/handleFacebookAuthError:withLoginBlock:" title="handleFacebookAuthError:withLoginBlock:"></a>
+	<h3 class="subsubtitle method-title">handleFacebookAuthError:withLoginBlock:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:delegate:didPresentSelector:contextInfo:</code> message to the next object in the chain.</p>
+		<p>Helper method to handle errors during authentication request.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)presentError:(NSError *)<em>error</em> delegate:(id)<em>delegate</em> didPresentSelector:(SEL)<em>didPresentSelector</em> contextInfo:(void *)<em>contextInfo</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)handleFacebookAuthError:(NSError *)<em>error</em> withLoginBlock:(void ( ^ ) ( NSError *error ))<em>loginBlock</em></code></div>
 
     
 	
@@ -249,22 +260,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>error</em></dt>
-			<dd><p>An object containing information about an error.</p></dd>
+			<dd><p>An object containing information about an error in the <code>FacebookSDKDomain</code>.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>delegate</em></dt>
-			<dd><p>An object that is the delegate.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>didPresentSelector</em></dt>
-			<dd><p>A selector identifying the method implemented by the delegate.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>contextInfo</em></dt>
-			<dd><p>Arbitrary data associated with the attempt at error recovery, to be passed to <code>delegate</code> in <code>didRecoverSelector</code>.</p></dd>
+			<dt><em>loginBlock</em></dt>
+			<dd><p>&lsquo;Log in&rsquo; recovery option.</p></dd>
 		</dl>
 		
 	</div>
@@ -282,7 +283,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:delegate:didPresentSelector:contextInfo:</code> message to the next object in the chain.</p>
+		<p>Helper method to handle errors during authentication request.</p>
 	</div>
 	
 	
@@ -293,33 +294,43 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIResponder+ErrorKit.h</code><br />
+		<code class="declared-in-ref">UIResponder+FacebookSDK.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/willPresentError:" title="willPresentError:"></a>
-	<h3 class="subsubtitle method-title">willPresentError:</h3>
+	<a name="//api/name/handleFacebookRequestPermissionError:" title="handleFacebookRequestPermissionError:"></a>
+	<h3 class="subsubtitle method-title">handleFacebookRequestPermissionError:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Subclasses can implement this method to inspect the passed-in <code>NSError</code> object and return a customized object.</p>
+		<p>Helper method to handle errors during permissions request.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSError *)willPresentError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)handleFacebookRequestPermissionError:(NSError *)<em>error</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An object containing information about an error in the <code>FacebookSDKDomain</code>.</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The customized error object or <code>nil</code> if the error has already been handled and there is no need to present it.</p>
+		<p><code>YES</code> if the error has been presented, <code>NO</code> otherwise.</p>
 	</div>
 	
 	
@@ -328,9 +339,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Subclasses can implement this method to inspect the passed-in <code>NSError</code> object and return a customized object.</p>
-
-<p>@parameter error The error object.</p>
+		<p>Helper method to handle errors during permissions request.</p>
 	</div>
 	
 	
@@ -341,7 +350,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIResponder+ErrorKit.h</code><br />
+		<code class="declared-in-ref">UIResponder+FacebookSDK.h</code><br />
 	</div>				
 	
 	

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UIResponder(ErrorKit) Category Reference</title>
+		<title>NSDictionary(ErrorKit_JSONValues) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UIResponder(ErrorKit) Category Reference</h1>
+				<h1 class="hideInXcode">NSDictionary(ErrorKit_JSONValues) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,11 +44,13 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/presentError:">&nbsp;&nbsp;&nbsp;&nbsp;- presentError:</option>
+	<option value="//api/name/arrayForKey:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- arrayForKey:withError:</option>
 	
-	<option value="//api/name/presentError:delegate:didPresentSelector:contextInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- presentError:delegate:didPresentSelector:contextInfo:</option>
+	<option value="//api/name/dictionaryForKey:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- dictionaryForKey:withError:</option>
 	
-	<option value="//api/name/willPresentError:">&nbsp;&nbsp;&nbsp;&nbsp;- willPresentError:</option>
+	<option value="//api/name/numberForKey:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- numberForKey:withError:</option>
+	
+	<option value="//api/name/stringForKey:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- stringForKey:withError:</option>
 	
 	
 	
@@ -78,11 +80,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentError:">presentError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/arrayForKey:withError:">arrayForKey:withError:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentError:delegate:didPresentSelector:contextInfo:">presentError:delegate:didPresentSelector:contextInfo:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dictionaryForKey:withError:">dictionaryForKey:withError:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/willPresentError:">willPresentError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberForKey:withError:">numberForKey:withError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringForKey:withError:">stringForKey:withError:</a></span></li>
 	
 </ul></li>
 
@@ -91,7 +95,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UIResponder(ErrorKit) Category Reference" name="top"></a>
+				<a title="NSDictionary(ErrorKit_JSONValues) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -100,7 +104,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UIResponder(ErrorKit) Category Reference</h1>
+						<h1 class="title title-header">NSDictionary(ErrorKit_JSONValues) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -108,7 +112,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UIResponder+ErrorKit.h<br />UIResponder+ErrorKit.m</td>
+	<td class="specification-value">NSDictionary+JSONValues.h<br />NSDictionary+JSONValues.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,7 +122,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Adds <strong>Error-Responder Chain</strong> methods for error presentation.</p>
+						<p>Adds methods for safely retrieving values from a dictionary.</p>
 					</div>
 					
 					
@@ -136,22 +140,29 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/presentError:delegate:didPresentSelector:contextInfo:">&ndash;&nbsp;presentError:delegate:didPresentSelector:contextInfo:</a></code>
-		<span class="tooltip"><p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:delegate:didPresentSelector:contextInfo:</code> message to the next object in the chain.</p></span>
+		<code><a href="#//api/name/numberForKey:withError:">&ndash;&nbsp;numberForKey:withError:</a></code>
+		<span class="tooltip"><p>Returns the <code>NSNumber</code> object associated with a given key.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/presentError:">&ndash;&nbsp;presentError:</a></code>
-		<span class="tooltip"><p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:</code> message to the next object in the chain.</p></span>
+		<code><a href="#//api/name/stringForKey:withError:">&ndash;&nbsp;stringForKey:withError:</a></code>
+		<span class="tooltip"><p>Returns the <code>NSString</code> object associated with a given key.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/willPresentError:">&ndash;&nbsp;willPresentError:</a></code>
-		<span class="tooltip"><p>Subclasses can implement this method to inspect the passed-in <code>NSError</code> object and return a customized object.</p></span>
+		<code><a href="#//api/name/arrayForKey:withError:">&ndash;&nbsp;arrayForKey:withError:</a></code>
+		<span class="tooltip"><p>Returns the <code>NSArray</code> object associated with a given key.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dictionaryForKey:withError:">&ndash;&nbsp;dictionaryForKey:withError:</a></code>
+		<span class="tooltip"><p>Returns the <code>NSDictionary</code> object associated with a given key.</p></span>
 	</span>
 	
 	
@@ -173,18 +184,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/presentError:" title="presentError:"></a>
-	<h3 class="subsubtitle method-title">presentError:</h3>
+	<a name="//api/name/arrayForKey:withError:" title="arrayForKey:withError:"></a>
+	<h3 class="subsubtitle method-title">arrayForKey:withError:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:</code> message to the next object in the chain.</p>
+		<p>Returns the <code>NSArray</code> object associated with a given key.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)presentError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)arrayForKey:(id)<em>aKey</em> withError:(NSError **)<em>errorPtr</em></code></div>
 
     
 	
@@ -192,8 +203,11 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>error</em></dt>
-			<dd><p>An object containing information about an error.</p></dd>
+			<dt><em>errorPtr</em></dt>
+			<dd><p>A pointer to an <code>NSError</code> object or NULL. You do not need to</p>
+
+<pre><code>             create an `NSError` object.
+</code></pre></dd>
 		</dl>
 		
 	</div>
@@ -202,7 +216,10 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p><code>YES</code> if the error has been presented, <code>NO</code> otherwise.</p>
+		<p>The value associated with <code>aKey</code>, or nil if the value associated with</p>
+
+<pre><code>     `aKey` is not an `NSArray`.
+</code></pre>
 	</div>
 	
 	
@@ -211,7 +228,12 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:</code> message to the next object in the chain.</p>
+		<p>Returns the <code>NSArray</code> object associated with a given key.</p>
+
+<p>If there is a value associated with &lsquo;aKey&rsquo;, but it is not an <code>NSArray</code> object,
+the value is not returned and <code>errorPtr</code> will contain an <code>NSError</code> object.</p>
+
+<p>@praram aKey The key for which to return the corresponding value.</p>
 	</div>
 	
 	
@@ -222,25 +244,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIResponder+ErrorKit.h</code><br />
+		<code class="declared-in-ref">NSDictionary+JSONValues.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/presentError:delegate:didPresentSelector:contextInfo:" title="presentError:delegate:didPresentSelector:contextInfo:"></a>
-	<h3 class="subsubtitle method-title">presentError:delegate:didPresentSelector:contextInfo:</h3>
+	<a name="//api/name/dictionaryForKey:withError:" title="dictionaryForKey:withError:"></a>
+	<h3 class="subsubtitle method-title">dictionaryForKey:withError:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:delegate:didPresentSelector:contextInfo:</code> message to the next object in the chain.</p>
+		<p>Returns the <code>NSDictionary</code> object associated with a given key.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)presentError:(NSError *)<em>error</em> delegate:(id)<em>delegate</em> didPresentSelector:(SEL)<em>didPresentSelector</em> contextInfo:(void *)<em>contextInfo</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)dictionaryForKey:(id)<em>aKey</em> withError:(NSError **)<em>errorPtr</em></code></div>
 
     
 	
@@ -248,23 +270,11 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>error</em></dt>
-			<dd><p>An object containing information about an error.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>delegate</em></dt>
-			<dd><p>An object that is the delegate.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>didPresentSelector</em></dt>
-			<dd><p>A selector identifying the method implemented by the delegate.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>contextInfo</em></dt>
-			<dd><p>Arbitrary data associated with the attempt at error recovery, to be passed to <code>delegate</code> in <code>didRecoverSelector</code>.</p></dd>
+			<dt><em>errorPtr</em></dt>
+			<dd><p>A pointer to an <code>NSError</code> object or NULL. You do not need to</p>
+
+<pre><code>             create an `NSError` object.
+</code></pre></dd>
 		</dl>
 		
 	</div>
@@ -273,7 +283,10 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p><code>YES</code> if the error has been presented, <code>NO</code> otherwise.</p>
+		<p>The value associated with <code>aKey</code>, or nil if the value associated with</p>
+
+<pre><code>     `aKey` is not an `NSDictionary`.
+</code></pre>
 	</div>
 	
 	
@@ -282,7 +295,13 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sends <a href="#//api/name/willPresentError:"><code>willPresentError:</code></a> to self before forwarding the <code>presentError:delegate:didPresentSelector:contextInfo:</code> message to the next object in the chain.</p>
+		<p>Returns the <code>NSDictionary</code> object associated with a given key.</p>
+
+<p>If there is a value associated with &lsquo;aKey&rsquo;, but it is not an <code>NSDictionary</code>
+object, the value is not returned and <code>errorPtr</code> will contain an <code>NSError</code>
+object.</p>
+
+<p>@praram aKey The key for which to return the corresponding value.</p>
 	</div>
 	
 	
@@ -293,33 +312,49 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIResponder+ErrorKit.h</code><br />
+		<code class="declared-in-ref">NSDictionary+JSONValues.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/willPresentError:" title="willPresentError:"></a>
-	<h3 class="subsubtitle method-title">willPresentError:</h3>
+	<a name="//api/name/numberForKey:withError:" title="numberForKey:withError:"></a>
+	<h3 class="subsubtitle method-title">numberForKey:withError:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Subclasses can implement this method to inspect the passed-in <code>NSError</code> object and return a customized object.</p>
+		<p>Returns the <code>NSNumber</code> object associated with a given key.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSError *)willPresentError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSNumber *)numberForKey:(id)<em>aKey</em> withError:(NSError **)<em>errorPtr</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>errorPtr</em></dt>
+			<dd><p>A pointer to an <code>NSError</code> object or NULL. You do not need to</p>
+
+<pre><code>             create an `NSError` object.
+</code></pre></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The customized error object or <code>nil</code> if the error has already been handled and there is no need to present it.</p>
+		<p>The value associated with <code>aKey</code>, or nil if the value associated with</p>
+
+<pre><code>     `aKey` is not an `NSNumber`.
+</code></pre>
 	</div>
 	
 	
@@ -328,9 +363,12 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Subclasses can implement this method to inspect the passed-in <code>NSError</code> object and return a customized object.</p>
+		<p>Returns the <code>NSNumber</code> object associated with a given key.</p>
 
-<p>@parameter error The error object.</p>
+<p>If there is a value associated with &lsquo;aKey&rsquo;, but it is not an <code>NSNumber</code> object,
+the value is not returned and <code>errorPtr</code> will contain an <code>NSError</code> object.</p>
+
+<p>@praram aKey The key for which to return the corresponding value.</p>
 	</div>
 	
 	
@@ -341,7 +379,74 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIResponder+ErrorKit.h</code><br />
+		<code class="declared-in-ref">NSDictionary+JSONValues.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringForKey:withError:" title="stringForKey:withError:"></a>
+	<h3 class="subsubtitle method-title">stringForKey:withError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <code>NSString</code> object associated with a given key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringForKey:(id)<em>aKey</em> withError:(NSError **)<em>errorPtr</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>errorPtr</em></dt>
+			<dd><p>A pointer to an <code>NSError</code> object or NULL. You do not need to</p>
+
+<pre><code>             create an `NSError` object.
+</code></pre></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The value associated with <code>aKey</code>, or nil if the value associated with</p>
+
+<pre><code>     `aKey` is not an `NSString`.
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the <code>NSString</code> object associated with a given key.</p>
+
+<p>If there is a value associated with &lsquo;aKey&rsquo;, but it is not an <code>NSString</code> object,
+the value is not returned and <code>errorPtr</code> will contain an <code>NSError</code> object.</p>
+
+<p>@praram aKey The key for which to return the corresponding value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+JSONValues.h</code><br />
 	</div>				
 	
 	

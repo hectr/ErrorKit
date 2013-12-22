@@ -13,7 +13,7 @@
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
 				<h1><a id="libraryTitle" href="../index.html">ErrorKit </a></h1>
-				<a id="developerHome" href="../index.html">Héctor MArqués</a>
+				<a id="developerHome" href="../index.html">Héctor Marqués</a>
 			</div>
 			
 			<div id="title" role="banner">
@@ -43,6 +43,8 @@
 	
 	
 	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/debugString">&nbsp;&nbsp;&nbsp;&nbsp;- debugString</option>
 	
 	<option value="//api/name/isCancelledError">&nbsp;&nbsp;&nbsp;&nbsp;- isCancelledError</option>
 	
@@ -75,6 +77,8 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/debugString">debugString</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isCancelledError">isCancelledError</a></span></li>
 	
@@ -114,7 +118,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>This category adds methods that may help you decide whether or not to display an error dialog.</p>
+						<p>This category adds methods that may help you decide whether or not to display
+an error dialog.</p>
 					</div>
 					
 					
@@ -132,15 +137,26 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/debugString">&ndash;&nbsp;debugString</a></code>
+		<span class="tooltip"><p>Wrapper for
+<code>[</code>MRErrorFormatter<code> debugStringWithDomain:self.domain code:self.code]</code>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/isCancelledError">&ndash;&nbsp;isCancelledError</a></code>
-		<span class="tooltip"><p>Returns YES if the error code corresponds to a cancelled operation in <code>NSURLErrorDomain</code> (or <code>AFNetworkingErrorDomain</code>), <code>NSCocoaErrorDomain</code>, <code>kCLErrorDomain</code>, <code>SKErrorDomain</code> or <code>FacebookSDKDomain</code>.</p></span>
+		<span class="tooltip"><p>Returns YES if the error code corresponds to a cancelled operation in
+<code>NSURLErrorDomain</code> (or <code>AFNetworkingErrorDomain</code>), <code>NSCocoaErrorDomain</code>,
+<code>kCLErrorDomain</code>, <code>SKErrorDomain</code> or <code>FacebookSDKDomain</code>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isValidationError">&ndash;&nbsp;isValidationError</a></code>
-		<span class="tooltip"><p>Returns YES if the error code corresponds to a validation error in <code>NSCocoaErrorDomain</code>.</p></span>
+		<span class="tooltip"><p>Returns YES if the error code corresponds to a validation error in
+<code>NSCocoaErrorDomain</code>.</p></span>
 	</span>
 	
 	
@@ -162,13 +178,58 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/debugString" title="debugString"></a>
+	<h3 class="subsubtitle method-title">debugString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Wrapper for
+<code>[</code>MRErrorFormatter<code> debugStringWithDomain:self.domain code:self.code]</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)debugString</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Wrapper for
+<code>[</code>MRErrorFormatter<code> debugStringWithDomain:self.domain code:self.code]</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSError+ErrorKit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/isCancelledError" title="isCancelledError"></a>
 	<h3 class="subsubtitle method-title">isCancelledError</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns YES if the error code corresponds to a cancelled operation in <code>NSURLErrorDomain</code> (or <code>AFNetworkingErrorDomain</code>), <code>NSCocoaErrorDomain</code>, <code>kCLErrorDomain</code>, <code>SKErrorDomain</code> or <code>FacebookSDKDomain</code>.</p>
+		<p>Returns YES if the error code corresponds to a cancelled operation in
+<code>NSURLErrorDomain</code> (or <code>AFNetworkingErrorDomain</code>), <code>NSCocoaErrorDomain</code>,
+<code>kCLErrorDomain</code>, <code>SKErrorDomain</code> or <code>FacebookSDKDomain</code>.</p>
 	</div>		
 	
     
@@ -185,7 +246,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns YES if the error code corresponds to a cancelled operation in <code>NSURLErrorDomain</code> (or <code>AFNetworkingErrorDomain</code>), <code>NSCocoaErrorDomain</code>, <code>kCLErrorDomain</code>, <code>SKErrorDomain</code> or <code>FacebookSDKDomain</code>.</p>
+		<p>Returns YES if the error code corresponds to a cancelled operation in
+<code>NSURLErrorDomain</code> (or <code>AFNetworkingErrorDomain</code>), <code>NSCocoaErrorDomain</code>,
+<code>kCLErrorDomain</code>, <code>SKErrorDomain</code> or <code>FacebookSDKDomain</code>.</p>
 	</div>
 	
 	
@@ -209,7 +272,8 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns YES if the error code corresponds to a validation error in <code>NSCocoaErrorDomain</code>.</p>
+		<p>Returns YES if the error code corresponds to a validation error in
+<code>NSCocoaErrorDomain</code>.</p>
 	</div>		
 	
     
@@ -226,7 +290,8 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns YES if the error code corresponds to a validation error in <code>NSCocoaErrorDomain</code>.</p>
+		<p>Returns YES if the error code corresponds to a validation error in
+<code>NSCocoaErrorDomain</code>.</p>
 	</div>
 	
 	
@@ -256,7 +321,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Héctor MArqués. All rights reserved. (Last updated: 2013-04-23)</span><br />
+						<p><span class="copyright">&copy; 2013 Héctor Marqués. All rights reserved. (Last updated: 2013-12-22)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
