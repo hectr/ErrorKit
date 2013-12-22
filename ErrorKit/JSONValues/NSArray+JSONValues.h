@@ -31,7 +31,7 @@
 /**
  Returns the object located at index.
  
- If `index is beyond the end of the array (that is, if `index` is greater than 
+ If `index` is beyond the end of the array (that is, if `index` is greater than
  or equal to the value returned by count), no` NSRangeException` is raised, but 
  `errorPtr` will contain an `NSError` object.
  
