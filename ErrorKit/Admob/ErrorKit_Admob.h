@@ -23,7 +23,7 @@
 
 #ifndef _ERRORKIT_ADMOB_H
 #define _ERRORKIT_ADMOB_H
+#endif
 
 #import "MRErrorFormatter+Admob.h"
 
-#endif

@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_TRANSITIONKIT_H
 #define _ERRORKIT_TRANSITIONKIT_H
+#endif
 
 #import "MRErrorFormatter+TransitionKit.h"
-
-#endif

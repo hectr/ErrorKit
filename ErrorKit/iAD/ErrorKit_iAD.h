@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_IAD_H
 #define _ERRORKIT_IAD_H
+#endif
 
 #import "MRErrorFormatter+iAD.h"
-
-#endif

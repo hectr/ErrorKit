@@ -37,7 +37,7 @@
     return self.userInfo[AFNetworkingOperationFailingURLRequestErrorKey];
 }
 
-- (void)setFailingURLRequest:(NSURLRequest *)failingURLRequest
+- (void)setFailingURLRequest:(NSURLRequest *const)failingURLRequest
 {
     [self setUserInfoValue:failingURLRequest.copy forKey:AFNetworkingOperationFailingURLRequestErrorKey];
 }
@@ -47,7 +47,7 @@
     return self.userInfo[AFNetworkingOperationFailingURLResponseErrorKey];
 }
 
-- (void)setFailingURLResponse:(NSHTTPURLResponse *)failingURLResponse
+- (void)setFailingURLResponse:(NSHTTPURLResponse *const)failingURLResponse
 {
     [self setUserInfoValue:failingURLResponse.copy forKey:AFNetworkingOperationFailingURLResponseErrorKey];
 }

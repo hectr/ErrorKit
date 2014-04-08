@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_AVFoundation)
 
-+ (NSString *)debugStringWithAVCode:(NSInteger)code
++ (NSString *)debugStringWithAVCode:(NSInteger const)code
 {
     switch (code) {
         case AVErrorUnknown:
@@ -143,7 +143,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithAVCode:(NSInteger)code
++ (NSString *)stringWithAVCode:(NSInteger const)code
 {
     switch (code) {
         case AVErrorUnknown:

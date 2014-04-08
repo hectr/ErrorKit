@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_Security)
 
-+ (NSString *)debugStringWithKeychainServiceCode:(NSInteger)code
++ (NSString *)debugStringWithKeychainServiceCode:(NSInteger const)code
 {
     switch (code) {
         case errSecSuccess:
@@ -115,7 +115,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithKeychainServiceCode:(NSInteger)code
++ (NSString *)stringWithKeychainServiceCode:(NSInteger const)code
 {
     switch (code) {
         case errSecSuccess:

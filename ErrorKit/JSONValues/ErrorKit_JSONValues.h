@@ -23,6 +23,7 @@
 
 #ifndef _ERRORKIT_JSONVALUES_H
 #define _ERRORKIT_JSONVALUES_H
+#endif
 
 #import "NSArray+JSONValues.h"
 
@@ -35,5 +36,3 @@
 #import "NSMutableDictionary+JSONValues.h"
 
 #import "MRErrorFormatter+JSONValues.h"
-
-#endif

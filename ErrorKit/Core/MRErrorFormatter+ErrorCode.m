@@ -32,29 +32,29 @@
 
 #pragma mark - Cocoa
 
-+ (NSArray *)stringsForFoundationErrorCode:(NSInteger)code
++ (NSArray *)stringsForFoundationErrorCode:(NSInteger const)code
 {
-    NSMutableArray *strings = [NSMutableArray arrayWithCapacity:3];
-    NSBundle *foundationBundle = [NSBundle bundleWithIdentifier:@"com.apple.Foundation"];
-    NSString *descriptionKey = [NSString stringWithFormat:@"Err%d", code];
-    NSString *description = [foundationBundle localizedStringForKey:descriptionKey value:nil table:@"FoundationErrors"];
+    NSMutableArray *const strings = [NSMutableArray arrayWithCapacity:3];
+    NSBundle *const foundationBundle = [NSBundle bundleWithIdentifier:@"com.apple.Foundation"];
+    NSString *const descriptionKey = [NSString stringWithFormat:@"Err%ld", (long)code];
+    NSString *const description = [foundationBundle localizedStringForKey:descriptionKey value:nil table:@"FoundationErrors"];
     if (description.length > 0 && ![description isEqualToString:descriptionKey]) {
         [strings addObject:description];
     }
-    NSString *causeKey = [NSString stringWithFormat:@"Err%d-C", code];
-    NSString *cause = [foundationBundle localizedStringForKey:causeKey value:nil table:@"FoundationErrors"];
+    NSString *const causeKey = [NSString stringWithFormat:@"Err%ld-C", (long)code];
+    NSString *const cause = [foundationBundle localizedStringForKey:causeKey value:nil table:@"FoundationErrors"];
     if (cause.length > 0 && ![cause isEqualToString:causeKey]) {
         [strings addObject:cause];
     }
-    NSString *recoveryKey = [NSString stringWithFormat:@"Err%d-R", code];
-    NSString *recovery = [foundationBundle localizedStringForKey:recoveryKey value:nil table:@"FoundationErrors"];
+    NSString *const recoveryKey = [NSString stringWithFormat:@"Err%ld-R", (long)code];
+    NSString *const recovery = [foundationBundle localizedStringForKey:recoveryKey value:nil table:@"FoundationErrors"];
     if (recovery.length > 0 && ![recovery isEqualToString:recoveryKey]) {
         [strings addObject:recovery];
     }
     return (strings.count > 0? strings : nil);
 }
 
-+ (NSString *)debugStringWithCocoaCode:(NSInteger)code
++ (NSString *)debugStringWithCocoaCode:(NSInteger const)code
 {
     switch (code) {
         case NSFileNoSuchFileError:
@@ -235,7 +235,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithCocoaCode:(NSInteger)code
++ (NSString *)stringWithCocoaCode:(NSInteger const)code
 {
     switch (code) {
         case NSFileNoSuchFileError:
@@ -413,7 +413,7 @@
 
 #pragma mark - XML Parser
 
-+ (NSString *)debugStringWithXMLParserCode:(NSInteger)code
++ (NSString *)debugStringWithXMLParserCode:(NSInteger const)code
 {
     switch (code) {
         case NSXMLParserInternalError:
@@ -606,7 +606,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithXMLParserCode:(NSInteger)code
++ (NSString *)stringWithXMLParserCode:(NSInteger const)code
 {
     switch (code) {
         case NSXMLParserInternalError:

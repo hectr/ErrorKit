@@ -30,10 +30,10 @@
 
 @implementation MRAbstractRecoveryAttempter
 
-- (void)invokeRecoverSelector:(SEL)selector withDelegate:(id)delegate success:(BOOL)success contextInfo:(void *)contextInfo
+- (void)invokeRecoverSelector:(SEL const)selector withDelegate:(id const)delegate success:(BOOL const)success contextInfo:(void *)contextInfo
 {
-    NSMethodSignature *signature = [delegate methodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    NSMethodSignature *const signature = [delegate methodSignatureForSelector:selector];
+    NSInvocation *const invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setSelector:selector];
     [invocation setArgument:(void *)&success atIndex:2];
     [invocation setArgument:&contextInfo atIndex:3];

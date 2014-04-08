@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_VERIJSON_H
 #define _ERRORKIT_VERIJSON_H
+#endif
 
 #import "MRErrorFormatter+VeriJSON.h"
-
-#endif

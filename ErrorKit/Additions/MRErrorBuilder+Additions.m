@@ -47,7 +47,7 @@
     return self.userInfo[MRErrorKitLocalizedCancelButtonTitleKey];
 }
 
-- (void)setLocalizedCancelButtonTitle:(NSString *)localizedCancelButtonTitle
+- (void)setLocalizedCancelButtonTitle:(NSString *const)localizedCancelButtonTitle
 {
     [self setUserInfoValue:localizedCancelButtonTitle.copy forKey:MRErrorKitLocalizedCancelButtonTitleKey];
 }
@@ -57,7 +57,7 @@
     return self.userInfo[MRErrorKitLocalizedDismissButtonTitleKey];
 }
 
-- (void)setLocalizedDismissButtonTitle:(NSString *)localizedDismissButtonTitle
+- (void)setLocalizedDismissButtonTitle:(NSString *const)localizedDismissButtonTitle
 {
     [self setUserInfoValue:localizedDismissButtonTitle.copy forKey:MRErrorKitLocalizedDismissButtonTitleKey];
 }

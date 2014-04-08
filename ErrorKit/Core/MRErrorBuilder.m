@@ -30,12 +30,12 @@
 
 @implementation MRErrorBuilder
 
-+ (instancetype)builderWithError:(NSError *)error
++ (instancetype)builderWithError:(NSError *const)error
 {
     if (error == nil) {
         return nil;
     }
-    MRErrorBuilder *builder =
+    MRErrorBuilder *const builder =
         [[self alloc] initWithDomain:error.domain
                                 code:error.code
                             userInfo:error.userInfo];
@@ -120,22 +120,23 @@
     return builder;
 }
 
-+ (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code
++ (instancetype)builderWithDomain:(NSString *const)domain code:(NSInteger const)code
 {
-    MRErrorBuilder *builder = [[self alloc] initWithDomain:domain code:code userInfo:nil];
+    MRErrorBuilder *const builder = [[self alloc] initWithDomain:domain code:code userInfo:nil];
     builder.localizedDescription = ([MRErrorFormatter stringWithDomain:domain code:code]
                                     ?: MRErrorKitString(@"No error description provided", nil));
     return builder;
 }
 
-+ (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code description:(NSString *)localizedDescription
++ (instancetype)builderWithDomain:(NSString *const)domain code:(NSInteger const)code description:(NSString *const)localizedDescription
 {
-    MRErrorBuilder *builder = [[self alloc] initWithDomain:domain code:code userInfo:nil];
+    MRErrorBuilder *const builder =
+    [[self alloc] initWithDomain:domain code:code userInfo:nil];
     builder.localizedDescription = localizedDescription;
     return builder;
 }
 
-- (id)initWithDomain:(NSString *)domain code:(NSInteger)code userInfo:(NSDictionary *)userInfo;
+- (id)initWithDomain:(NSString *const)domain code:(NSInteger const)code userInfo:(NSDictionary *const)userInfo;
 {
     NSParameterAssert(domain);
     self = [super init];
@@ -151,7 +152,7 @@
     return self;
 }
 
-- (void)setUserInfoValue:(id)value forKey:(NSString *)key
+- (void)setUserInfoValue:(id const)value forKey:(NSString *const)key
 {
     if (value) {
         _userInfo[key] = value;
@@ -160,18 +161,18 @@
     }
 }
 
-- (void)addRecoveryOption:(NSString *)localizedRecoveryOption withBlock:(void(^)(NSError *))recoveryOptionAttempter
+- (void)addRecoveryOption:(NSString *const)localizedRecoveryOption withBlock:(void(^)(NSError *))recoveryOptionAttempter
 {
     NSParameterAssert(localizedRecoveryOption);
     NSParameterAssert(recoveryOptionAttempter);
-    NSUInteger option = self.localizedRecoveryOptions.count;
-    MRChainedRecoveryAttempter *attempter =
-        [MRChainedRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
-            if (recoveryOption == option) {
-                recoveryOptionAttempter(error);
-                *didRecover = YES;
-            }
-        }];
+    NSUInteger const option = self.localizedRecoveryOptions.count;
+    MRChainedRecoveryAttempter *const attempter =
+    [MRChainedRecoveryAttempter attempterWithBlock:^(NSError *const error, NSUInteger const recoveryOption, BOOL *const didRecover) {
+        if (recoveryOption == option) {
+            recoveryOptionAttempter(error);
+            *didRecover = YES;
+        }
+    }];
     attempter.nextAttempter = self.recoveryAttempter;
     self.recoveryAttempter = attempter;
     if (!self.localizedRecoveryOptions) {
@@ -181,13 +182,13 @@
         [self.localizedRecoveryOptions arrayByAddingObject:localizedRecoveryOption];
 }
 
-- (void)addRecoveryOptions:(NSArray *)localizedRecoveryOptions withBlock:(void(^)(NSError *, NSUInteger))recoveryOptionsAttempter
+- (void)addRecoveryOptions:(NSArray *const)localizedRecoveryOptions withBlock:(void(^)(NSError *, NSUInteger))recoveryOptionsAttempter
 {
     NSParameterAssert(localizedRecoveryOptions);
     NSParameterAssert(recoveryOptionsAttempter);
-    NSUInteger option = self.localizedRecoveryOptions.count;
-    MRChainedRecoveryAttempter *attempter =
-    [MRChainedRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
+    NSUInteger const option = self.localizedRecoveryOptions.count;
+    MRChainedRecoveryAttempter *const attempter =
+    [MRChainedRecoveryAttempter attempterWithBlock:^(NSError *const error, NSUInteger const recoveryOption, BOOL *const didRecover) {
         if (recoveryOption >= option
             && recoveryOption < option + localizedRecoveryOptions.count) {
             recoveryOptionsAttempter(error, recoveryOption);
@@ -217,7 +218,7 @@
     return self.userInfo[@"NSDebugDescription"];
 }
 
-- (void)setDebugDescriptionValue:(NSString *)debugDescription
+- (void)setDebugDescriptionValue:(NSString *const)debugDescription
 {
     [self setUserInfoValue:debugDescription.copy forKey:@"NSDebugDescription"];
 }
@@ -227,7 +228,7 @@
     return self.userInfo[NSFilePathErrorKey];
 }
 
-- (void)setFilePathError:(NSString *)filePathError
+- (void)setFilePathError:(NSString *const)filePathError
 {
     [self setUserInfoValue:filePathError.copy forKey:NSFilePathErrorKey];
 }
@@ -237,7 +238,7 @@
     return self.userInfo[NSHelpAnchorErrorKey];
 }
 
-- (void)setHelpAnchor:(NSString *)helpAnchor
+- (void)setHelpAnchor:(NSString *const)helpAnchor
 {
     [self setUserInfoValue:helpAnchor.copy forKey:NSHelpAnchorErrorKey];
 }
@@ -247,7 +248,7 @@
     return self.userInfo[NSLocalizedDescriptionKey];
 }
 
-- (void)setLocalizedDescription:(NSString *)localizedDescription
+- (void)setLocalizedDescription:(NSString *const)localizedDescription
 {
     [self setUserInfoValue:localizedDescription.copy forKey:NSLocalizedDescriptionKey];
 }
@@ -257,7 +258,7 @@
     return self.userInfo[NSLocalizedFailureReasonErrorKey];
 }
 
-- (void)setLocalizedFailureReason:(NSString *)localizedFailureReason
+- (void)setLocalizedFailureReason:(NSString *const)localizedFailureReason
 {
     [self setUserInfoValue:localizedFailureReason.copy forKey:NSLocalizedFailureReasonErrorKey];
 }
@@ -267,7 +268,7 @@
     return self.userInfo[NSLocalizedRecoveryOptionsErrorKey];
 }
 
-- (void)setLocalizedRecoveryOptions:(NSArray *)localizedRecoveryOptions
+- (void)setLocalizedRecoveryOptions:(NSArray *const)localizedRecoveryOptions
 {
     [self setUserInfoValue:localizedRecoveryOptions.copy forKey:NSLocalizedRecoveryOptionsErrorKey];
 }
@@ -277,7 +278,7 @@
     return self.userInfo[NSLocalizedRecoverySuggestionErrorKey];
 }
 
-- (void)setLocalizedRecoverySuggestion:(NSString *)localizedRecoverySuggestion
+- (void)setLocalizedRecoverySuggestion:(NSString *const)localizedRecoverySuggestion
 {
     [self setUserInfoValue:localizedRecoverySuggestion.copy forKey:NSLocalizedRecoverySuggestionErrorKey];
 }
@@ -287,7 +288,7 @@
     return self.userInfo[NSRecoveryAttempterErrorKey];
 }
 
-- (void)setRecoveryAttempter:(NSArray *)recoveryAttempter
+- (void)setRecoveryAttempter:(NSArray *const)recoveryAttempter
 {
     [self setUserInfoValue:recoveryAttempter forKey:NSRecoveryAttempterErrorKey];
 }
@@ -297,7 +298,7 @@
     return self.userInfo[@"NSStackTraceKey"];
 }
 
-- (void)setStackTrace:(NSString *)stackTrace
+- (void)setStackTrace:(NSString *const)stackTrace
 {
     [self setUserInfoValue:stackTrace forKey:@"NSStackTraceKey"];
 }
@@ -307,7 +308,7 @@
     return [(NSNumber *)self.userInfo[NSStringEncodingErrorKey] unsignedIntegerValue];
 }
 
-- (void)setStringEncodingError:(NSStringEncoding)stringEncodingError
+- (void)setStringEncodingError:(NSStringEncoding const)stringEncodingError
 {
     [self setUserInfoValue:@(stringEncodingError) forKey:NSStringEncodingErrorKey];
 }
@@ -317,7 +318,7 @@
     return self.userInfo[NSUnderlyingErrorKey];
 }
 
-- (void)setUnderlyingError:(NSError *)underlyingError
+- (void)setUnderlyingError:(NSError *const)underlyingError
 {
     [self setUserInfoValue:underlyingError forKey:NSUnderlyingErrorKey];
 }
@@ -327,7 +328,7 @@
     return self.userInfo[@"NSUnderlyingException"];
 }
 
-- (void)setUnderlyingException:(NSException *)underlyingException
+- (void)setUnderlyingException:(NSException *const)underlyingException
 {
     [self setUserInfoValue:underlyingException forKey:@"NSUnderlyingException"];
 }
@@ -337,31 +338,32 @@
     return self.userInfo[NSURLErrorKey];
 }
 
-- (void)setUrlError:(NSURL *)urlError
+- (void)setUrlError:(NSURL *const)urlError
 {
     [self setUserInfoValue:urlError.copy forKey:NSURLErrorKey];
 }
 
 #pragma mark - NSCopying
 
-- (id)copyWithZone:(NSZone *)zone
+- (id)copyWithZone:(NSZone *const)zone
 {
-    MRErrorBuilder *builer = [[[self class] allocWithZone:zone] initWithDomain:self.domain
-                                                                          code:self.code
-                                                                      userInfo:self.userInfo];
+    MRErrorBuilder *const builer =
+    [[self.class allocWithZone:zone] initWithDomain:self.domain
+                                               code:self.code
+                                           userInfo:self.userInfo];
     return builer;
 }
 
 #pragma mark - NSCoding
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
+- (void)encodeWithCoder:(NSCoder *const)aCoder
 {
     [aCoder encodeInteger:self.code forKey:@"code"];
     [aCoder encodeObject:self.domain forKey:@"domain"];
     [aCoder encodeObject:self.userInfo forKey:@"userInfo"];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (id)initWithCoder:(NSCoder *const)aDecoder
 {
     self = [self initWithDomain:[aDecoder decodeObjectForKey:@"domain"]
                            code:[aDecoder decodeIntegerForKey:@"code"]
@@ -379,9 +381,9 @@
         __formatter = [[MRErrorFormatter alloc] init];
     });
     return
-    [NSString stringWithFormat:@"ErrorBuilder Domain=%@ Code=%d UserInfo=%p {%@}"
+    [NSString stringWithFormat:@"ErrorBuilder Domain=%@ Code=%ld UserInfo=%p {%@}"
                               , self.domain
-                              , self.code
+                              , (long)self.code
                               , self.userInfo
                               , ([__formatter stringWithErrorDetail:self.userInfo] ?: @" ")];
 }

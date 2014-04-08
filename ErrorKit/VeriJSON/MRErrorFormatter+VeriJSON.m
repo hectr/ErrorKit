@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_VeriJSON)
 
-+ (NSString *)debugStringWithVeriJSONCode:(NSInteger)code
++ (NSString *)debugStringWithVeriJSONCode:(NSInteger const)code
 {
     switch (code) {
         case VeriJSONErrorCodeInvalidPattern:
@@ -41,7 +41,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithVeriJSONCode:(NSInteger)code
++ (NSString *)stringWithVeriJSONCode:(NSInteger const)code
 {
     switch (code) {
         case VeriJSONErrorCodeInvalidPattern:

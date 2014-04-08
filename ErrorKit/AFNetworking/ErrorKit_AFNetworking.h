@@ -23,9 +23,9 @@
 
 #ifndef _ERRORKIT_AFNETWORKING_H
 #define _ERRORKIT_AFNETWORKING_H
+#endif
 
 #import "NSError+AFNetworking.h"
 
 #import "MRErrorBuilder+AFNetworking.h"
 
-#endif

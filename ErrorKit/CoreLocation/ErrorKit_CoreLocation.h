@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_CORELOCATION_H
 #define _ERRORKIT_CORELOCATION_H
+#endif
 
 #import "MRErrorFormatter+CoreLocation.h"
-
-#endif

@@ -43,7 +43,7 @@
 
 #pragma mark - IBAction methods
 
-- (IBAction)connectAction:(id)sender
+- (IBAction)connectAction:(id const)sender
 {
     [self.view endEditing:YES];
     if (sender) {
@@ -51,14 +51,14 @@
     } else {
         self.responseTextView.text = MRErrorKitString(@"Retrying...", nil);
     }
-    NSURL *url = [NSURL URLWithString:self.urlTextField.text];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURL *const url = [NSURL URLWithString:self.urlTextField.text];
+    NSURLRequest *const request = [NSURLRequest requestWithURL:url];
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 #pragma mark - NSURLConnectionDelegate
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+- (void)connection:(NSURLConnection *const)connection didFailWithError:(NSError *const)error
 {
     MRLogError(error);
     self.responseTextView.text = MRErrorKitString(@"Connection failed", nil);
@@ -67,9 +67,9 @@
 
 #pragma mark - NSURLConnectionDataDelegate
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+- (void)connection:(NSURLConnection *const)connection didReceiveData:(NSData *const)data
 {
-    NSString *responseUTF8String = [NSString stringWithUTF8String:data.bytes];
+    NSString *const responseUTF8String = [NSString stringWithUTF8String:data.bytes];
     if (responseUTF8String.length > 0) {
         self.responseTextView.text = responseUTF8String;
     } else {
@@ -77,10 +77,10 @@
     }
 }
 
-- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+- (void)connection:(NSURLConnection *const)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *const)challenge
 {
     if ([self.trustedDomains containsObject:challenge.protectionSpace.host]) {
-			NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+			NSURLCredential *const credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
 			[challenge.sender useCredential:credential forAuthenticationChallenge:challenge];
     } else {
         [challenge.sender performDefaultHandlingForAuthenticationChallenge:challenge];
@@ -97,57 +97,59 @@
 
 #pragma mark - UIResponder+ErrorKit methods
 
-- (NSError *)willPresentError:(NSError *)error
+- (NSError *)willPresentError:(NSError *const)error
 {
+    __weak typeof(self) weakSelf = self;
     if (error.code == NSURLErrorCannotFindHost && error.isHTTPError) {
-        MRAlertRecoveryAttempter *attempter =
-            [MRAlertRecoveryAttempter attempterWithBlock:^UIAlertView *(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
+        MRAlertRecoveryAttempter *const attempter =
+            [MRAlertRecoveryAttempter attempterWithBlock:^UIAlertView *(NSError *const error, NSUInteger const recoveryOption, BOOL *const didRecover) {
                 if (recoveryOption == 0) {
                     if (error.code == NSURLErrorCannotFindHost && error.isHTTPError) {
-                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:MRErrorKitString(@"Connect to", nil)
-                                                                       message:nil
-                                                                      delegate:error.recoveryAttempter
-                                                             cancelButtonTitle:MRErrorKitString(@"Cancel", nil)
-                                                             otherButtonTitles:MRErrorKitString(@"Retry", nil), nil];
+                        UIAlertView *const alert =
+                        [[UIAlertView alloc]initWithTitle:MRErrorKitString(@"Connect to", nil)
+                                                  message:nil
+                                                 delegate:error.recoveryAttempter
+                                        cancelButtonTitle:MRErrorKitString(@"Cancel", nil)
+                                        otherButtonTitles:MRErrorKitString(@"Retry", nil), nil];
                         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-                        [alert textFieldAtIndex:0].text = self.urlTextField.text;
+                        [alert textFieldAtIndex:0].text = weakSelf.urlTextField.text;
                         return alert;
                     }
                 }
                 return nil;
             }];
-        attempter.delegateHandler = ^BOOL(UIAlertView *alertView, NSInteger buttonIndex, BOOL *finished) {
+        attempter.delegateHandler = ^BOOL(UIAlertView *const alertView, NSInteger const buttonIndex, BOOL *const finished) {
             *finished = YES;
             if (buttonIndex != alertView.cancelButtonIndex) {
-                self.urlTextField.text = [alertView textFieldAtIndex:0].text;
-                [self connectAction:nil];
+                weakSelf.urlTextField.text = [alertView textFieldAtIndex:0].text;
+                [weakSelf connectAction:nil];
                 return YES;
             }
             return NO;
         };
-        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        MRErrorBuilder *const builder = [MRErrorBuilder builderWithError:error];
         builder.recoveryAttempter = attempter;
         builder.localizedRecoveryOptions = @[ MRErrorKitString(@"Change URL", nil) ];
         return builder.error;
     } else {
-        MRBlockRecoveryAttempter *attempter =
-            [MRBlockRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
+        MRBlockRecoveryAttempter *const attempter =
+            [MRBlockRecoveryAttempter attempterWithBlock:^(NSError *const error, NSUInteger const recoveryOption, BOOL *const didRecover) {
             if (recoveryOption == 0) {
-                NSURL *failingURL = [NSURL URLWithString:error.failingURLString];
+                NSURL *const failingURL = [NSURL URLWithString:error.failingURLString];
                 if (error.code == NSURLErrorServerCertificateUntrusted && error.isHTTPError) {
-                    [self.trustedDomains addObject:failingURL.host];
+                    [weakSelf.trustedDomains addObject:failingURL.host];
                 }
-                [self connectAction:nil];
+                [weakSelf connectAction:nil];
                 *didRecover = YES;
             }
         }];
         if (error.code == NSURLErrorServerCertificateUntrusted && error.isHTTPError) {
-            MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+            MRErrorBuilder *const builder = [MRErrorBuilder builderWithError:error];
             builder.recoveryAttempter = attempter;
             builder.localizedRecoveryOptions = @[ MRErrorKitString(@"YES", nil) ];
             return builder.error;
         } else if (error.code == NSURLErrorNotConnectedToInternet && error.isHTTPError) {
-            MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+            MRErrorBuilder *const builder = [MRErrorBuilder builderWithError:error];
             builder.recoveryAttempter = attempter;
             builder.localizedRecoverySuggestion = MRErrorKitString(@"Please check your internet connection and try again.", nil);
             builder.helpAnchor = MRErrorKitString(@"You can adjust cellular network settings on iPhone in Settings > General > Cellular. On iPad the settings are located in Settings > Cellular Data\n\nTo locate nearby Wi-Fi networks, tap Settings > Wi-Fi", nil);

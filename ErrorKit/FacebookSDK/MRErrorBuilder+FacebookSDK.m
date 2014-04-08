@@ -37,7 +37,7 @@
     return self.userInfo[FBErrorInnerErrorKey];
 }
 
-- (void)setInnerError:(NSError *)innerError
+- (void)setInnerError:(NSError *const)innerError
 {
     [self setUserInfoValue:innerError forKey:FBErrorInnerErrorKey];
 }
@@ -47,7 +47,7 @@
     return self.userInfo[FBErrorParsedJSONResponseKey];
 }
 
-- (void)setParsedJSONResponse:(id)parsedJSONResponse
+- (void)setParsedJSONResponse:(id const)parsedJSONResponse
 {
     [self setUserInfoValue:parsedJSONResponse forKey:FBErrorParsedJSONResponseKey];
 }
@@ -57,7 +57,7 @@
     return [self.userInfo[FBErrorHTTPStatusCodeKey] integerValue];
 }
 
-- (void)setHTTPStatusCode:(NSInteger)HTTPStatusCode
+- (void)setHTTPStatusCode:(NSInteger const)HTTPStatusCode
 {
     [self setUserInfoValue:@(HTTPStatusCode) forKey:FBErrorHTTPStatusCodeKey];
 }
@@ -67,7 +67,7 @@
     return self.userInfo[FBErrorSessionKey];
 }
 
-- (void)setSession:(FBSession *)session
+- (void)setSession:(FBSession *const)session
 {
     [self setUserInfoValue:session forKey:FBErrorSessionKey];
 }
@@ -77,7 +77,7 @@
     return self.userInfo[FBErrorUnprocessedURLKey];
 }
 
-- (void)setUnprocessedURL:(NSURL *)url
+- (void)setUnprocessedURL:(NSURL *const)url
 {
     [self setUserInfoValue:url.copy forKey:FBErrorUnprocessedURLKey];
 }
@@ -87,7 +87,7 @@
     return self.userInfo[FBErrorLoginFailedReason];
 }
 
-- (void)setLoginFailedReason:(NSString *)loginFailedReason
+- (void)setLoginFailedReason:(NSString *const)loginFailedReason
 {
     [self setUserInfoValue:loginFailedReason.copy forKey:FBErrorLoginFailedReason];
 }
@@ -97,7 +97,7 @@
     return self.userInfo[FBErrorDialogReasonKey];
 }
 
-- (void)setNativeDialogReason:(NSString *)nativeDialogReason
+- (void)setNativeDialogReason:(NSString *const)nativeDialogReason
 {
     [self setUserInfoValue:nativeDialogReason.copy forKey:FBErrorDialogReasonKey];
 }
@@ -107,7 +107,7 @@
     return self.userInfo[@"com.facebook.sdk:InsightsReasonKey"];
 }
 
-- (void)setInsightsReason:(NSString *)insightsReason
+- (void)setInsightsReason:(NSString *const)insightsReason
 {
     [self setUserInfoValue:insightsReason.copy forKey:@"com.facebook.sdk:InsightsReasonKey"];
 }

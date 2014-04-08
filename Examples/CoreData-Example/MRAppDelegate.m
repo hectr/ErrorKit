@@ -26,9 +26,10 @@
 @implementation MRAppDelegate
 
 // Saves changes in the application's managed object context before the application terminates.
-- (void)applicationWillTerminate:(UIApplication *)application
+- (void)applicationWillTerminate:(UIApplication *const)application
 {
-    [NSUserDefaults.standardUserDefaults synchronize];
+    NSUserDefaults *const standardUserDefaults = NSUserDefaults.standardUserDefaults;
+    [standardUserDefaults synchronize];
     [self saveContexAction:nil];
 }
 
@@ -37,12 +38,15 @@
 - (NSURL *)storeURL
 {
     if (_storeURL == nil) {
-        NSString *storeName = [NSUserDefaults.standardUserDefaults objectForKey:@"MRPersistentStoreName"];
+        NSUserDefaults *const standardUserDefaults = NSUserDefaults.standardUserDefaults;
+        NSString *storeName = [standardUserDefaults objectForKey:@"MRPersistentStoreName"];
         if (storeName == nil) {
-            NSString *bundleName = [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleName"];
+            NSBundle *const mainBundle = NSBundle.mainBundle;
+            NSString *const bundleName = [mainBundle objectForInfoDictionaryKey:@"CFBundleName"];
             storeName = [bundleName stringByAppendingPathExtension:@"sqlite"];
         }
-        _storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:storeName];
+        NSURL *const applicationDocumentsDirectory = self.applicationDocumentsDirectory;
+        _storeURL = [applicationDocumentsDirectory URLByAppendingPathComponent:storeName];
     }
     return _storeURL;
 }
@@ -50,9 +54,9 @@
 #pragma mark Error customization
 
 // This method exemplifies how to customize an error before its presentation.
-- (NSError *)application:(UIApplication *)application willPresentError:(NSError *)error
+- (NSError *)application:(UIApplication *const)application willPresentError:(NSError *const)error
 {
-    MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+    MRErrorBuilder *const builder = [MRErrorBuilder builderWithError:error];
     if (error.code == NSPersistentStoreSaveError) {
         builder.localizedDescription = (builder.localizedFailureReason ?: builder.localizedDescription);
         builder.localizedFailureReason = MRErrorKitString(@"Attempt to save application data failed.", nil);
@@ -67,11 +71,11 @@
 
 #pragma mark - IBAction methods
 
-- (IBAction)saveContexAction:(UIResponder *)sender
+- (IBAction)saveContexAction:(UIResponder *const)sender
 {
     BOOL saved = NO;
     NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContextWithError:&error];
+    NSManagedObjectContext *const managedObjectContext = [self managedObjectContextWithError:&error];
     if (managedObjectContext) {
         if ([managedObjectContext hasChanges]) {
             saved = [managedObjectContext save:&error];
@@ -86,15 +90,18 @@
 
 - (NSURL *)applicationDocumentsDirectory
 {
-    return [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].lastObject;
+    NSFileManager *const defaultManager = NSFileManager.defaultManager;
+    NSArray *const URLs = [defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    return URLs.lastObject;
 }
 
 #pragma mark - Core Data stack
 
 - (void)unsetPersistentStoreCoordinator
 {
-    NSDictionary *userInfo = @{ @"managedObjectContext": (_managedObjectContext ?: NSNull.null)
-                              , @"persistentStoreCoordinator": (_persistentStoreCoordinator ?: NSNull.null) };
+    NSDictionary *const userInfo =
+    @{ @"managedObjectContext": (_managedObjectContext ?: NSNull.null)
+     , @"persistentStoreCoordinator": (_persistentStoreCoordinator ?: NSNull.null) };
     _managedObjectContext = nil;
     _persistentStoreCoordinator = nil;
     _managedObjectModel = nil;
@@ -103,13 +110,13 @@
                                                     userInfo:userInfo];
 }
 
-- (NSManagedObjectContext *)managedObjectContextWithError:(NSError *__autoreleasing *)errorPtr
+- (NSManagedObjectContext *)managedObjectContextWithError:(NSError *__autoreleasing *const)errorPtr
 {
     if (_managedObjectContext) {
         return _managedObjectContext;
     }
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinatorWithError:errorPtr];
+    NSPersistentStoreCoordinator *const coordinator = [self persistentStoreCoordinatorWithError:errorPtr];
     if (coordinator) {
         _managedObjectContext = [[NSManagedObjectContext alloc] init];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
@@ -123,12 +130,14 @@
     if (_managedObjectModel) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:self.managedObjectModelName withExtension:@"momd"];
+    NSBundle *const mainBundle = NSBundle.mainBundle;
+    NSString *const managedObjectModelName = self.managedObjectModelName ;
+    NSURL *const modelURL = [mainBundle URLForResource:managedObjectModelName withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithError:(NSError *__autoreleasing *)errorPtr
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithError:(NSError *__autoreleasing *const)errorPtr
 {
     if (_persistentStoreCoordinator) {
         return _persistentStoreCoordinator;
@@ -140,11 +149,13 @@
                    , NSInferMappingModelAutomaticallyOption: @YES };
     }
     @try {
+        NSManagedObjectModel *const managedObjectModel = self.managedObjectModel;
+        NSURL *const storeURL = self.storeURL;
         _persistentStoreCoordinator =
-            [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+            [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
         if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                                        configuration:nil
-                                                                 URL:self.storeURL
+                                                                 URL:storeURL
                                                              options:options
                                                                error:errorPtr]) {
             _persistentStoreCoordinator = nil;
@@ -163,11 +174,11 @@
     return _persistentStoreCoordinator;
 }
 
-- (NSManagedObject *)managedObjectWithUnfaultedDataFromObject:(NSManagedObject *)src mapping:(NSMutableDictionary *)mapping withError:(NSError **)errorPtr
+- (NSManagedObject *)managedObjectWithUnfaultedDataFromObject:(NSManagedObject *const)src mapping:(NSMutableDictionary *)mapping withError:(NSError **const)errorPtr
 {
     __block NSError *error = nil;
     __block NSManagedObject *dest = nil;
-    NSManagedObjectContext *moc = [self managedObjectContextWithError:errorPtr];
+    NSManagedObjectContext *const moc = [self managedObjectContextWithError:errorPtr];
     dest = mapping[src.objectID];
     if (dest == nil && moc && src.isFault == NO) {
         dest = [NSEntityDescription insertNewObjectForEntityForName:src.entity.name
@@ -176,19 +187,20 @@
             mapping = NSMutableDictionary.dictionary;
         }
         [mapping setObject:dest forKey:src.objectID];
-        NSDictionary *attributes = [NSEntityDescription entityForName:src.entity.name
-                                               inManagedObjectContext:moc].attributesByName;
-        for (NSString *attr in attributes) {
+        NSEntityDescription *const entity = [NSEntityDescription entityForName:src.entity.name
+                                                        inManagedObjectContext:moc];
+        NSDictionary *const attributes = entity.attributesByName;
+        for (NSString *const attr in attributes) {
             [dest setValue:[src valueForKey:attr] forKey:attr];
         }
-        NSDictionary *relationships = [NSEntityDescription entityForName:src.entity.name
-                                                  inManagedObjectContext:moc].relationshipsByName;
-        [relationships enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSRelationshipDescription *rel, BOOL *stop) {
+        
+        NSDictionary *const relationships = entity.relationshipsByName;
+        [relationships enumerateKeysAndObjectsUsingBlock:^(NSString *const key, NSRelationshipDescription *const rel, BOOL *const stop) {
             if (rel.isToMany) {
-                NSSet *srcObjects = [src valueForKey:key];
-                NSMutableSet *destObjects = [NSMutableSet setWithCapacity:srcObjects.count];
-                for (NSManagedObject *srcObject in srcObjects) {
-                    NSManagedObject *destObject = [self managedObjectWithUnfaultedDataFromObject:srcObject mapping:mapping withError:&error];
+                NSSet *const srcObjects = [src valueForKey:key];
+                NSMutableSet *const destObjects = [NSMutableSet setWithCapacity:srcObjects.count];
+                for (NSManagedObject *const srcObject in srcObjects) {
+                    NSManagedObject *const destObject = [self managedObjectWithUnfaultedDataFromObject:srcObject mapping:mapping withError:&error];
                     if (destObject) {
                         [destObjects addObject:destObject];
                     } else if (error) {
@@ -197,8 +209,8 @@
                 }
                 [dest setValue:destObjects forKey:key];
             } else {
-                NSManagedObject *srcObject = [src valueForKey:key];
-                NSManagedObject *destObject = [self managedObjectWithUnfaultedDataFromObject:srcObject mapping:mapping withError:&error];
+                NSManagedObject *const srcObject = [src valueForKey:key];
+                NSManagedObject *const destObject = [self managedObjectWithUnfaultedDataFromObject:srcObject mapping:mapping withError:&error];
                 if (destObject) {
                     [dest setValue:destObject forKey:key];
                 } else if (error) {

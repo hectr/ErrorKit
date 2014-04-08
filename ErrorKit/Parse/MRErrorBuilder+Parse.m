@@ -37,7 +37,7 @@
     return [self.userInfo[@"code"] integerValue];
 }
 
-- (void)setParseCode:(NSInteger)parseCode
+- (void)setParseCode:(NSInteger const)parseCode
 {
     [self setUserInfoValue:@(parseCode) forKey:@"code"];
 }
@@ -47,7 +47,7 @@
     return self.userInfo[@"error"];
 }
 
-- (void)setParseErrorMessage:(NSString *)parseErrorMessage
+- (void)setParseErrorMessage:(NSString *const)parseErrorMessage
 {
     [self setUserInfoValue:parseErrorMessage forKey:@"error"];
 }

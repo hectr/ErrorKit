@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_TransitionKit)
 
-+ (NSString *)debugStringWithTransitionKitCode:(NSInteger)code
++ (NSString *)debugStringWithTransitionKitCode:(NSInteger const)code
 {
     switch (code) {
         case TKInvalidTransitionError:
@@ -43,7 +43,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithTransitionKitCode:(NSInteger)code
++ (NSString *)stringWithTransitionKitCode:(NSInteger const)code
 {
     switch (code) {
         case TKInvalidTransitionError:

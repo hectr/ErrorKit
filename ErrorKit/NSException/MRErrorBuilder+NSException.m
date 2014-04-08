@@ -32,10 +32,10 @@
 
 @implementation MRErrorBuilder (ErrorKit_NSException)
 
-+ (instancetype)builderWithDomain:(NSString *)domain code:(NSInteger)code exception:(NSException *)exception
++ (instancetype)builderWithDomain:(NSString *const)domain code:(NSInteger const)code exception:(NSException *const)exception
 {
-    NSString *description = [MRErrorFormatter stringWithDomain:domain code:code];
-    MRErrorBuilder *builder = [self builderWithDomain:domain code:code description:description];
+    NSString *const description = [MRErrorFormatter stringWithDomain:domain code:code];
+    MRErrorBuilder *const builder = [self builderWithDomain:domain code:code description:description];
     builder.localizedFailureReason = [MRErrorFormatter stringWithExceptionName:exception.name];
     builder.underlyingException = exception;
     return builder;

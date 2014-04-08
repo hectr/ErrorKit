@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_MESSAGEUI_H
 #define _ERRORKIT_MESSAGEUI_H
+#endif
 
 #import "MRErrorFormatter+MessageUI.h"
-
-#endif

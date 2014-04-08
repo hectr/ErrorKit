@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_MAPKIT_H
 #define _ERRORKIT_MAPKIT_H
+#endif
 
 #import "MRErrorFormatter+MapKit.h"
-
-#endif

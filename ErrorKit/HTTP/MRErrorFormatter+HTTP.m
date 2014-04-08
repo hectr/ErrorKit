@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_HTTP)
 
-+ (NSString *)debugStringWithURLCode:(NSInteger)code
++ (NSString *)debugStringWithURLCode:(NSInteger const)code
 {
     switch (code) {
         case NSURLErrorUnknown:
@@ -127,7 +127,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithURLCode:(NSInteger)code
++ (NSString *)stringWithURLCode:(NSInteger const)code
 {
     switch (code) {
         case NSURLErrorUnknown:
@@ -222,7 +222,7 @@
     return MRErrorKitString(@"URL Error", nil);
 }
 
-+ (NSString *)stringWithHTTPCode:(NSInteger)statusCode
++ (NSString *)stringWithHTTPCode:(NSInteger const)statusCode
 {
     return [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
 }

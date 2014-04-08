@@ -30,22 +30,22 @@
 
 @implementation MRErrorFormatter
 
-- (NSString *)debugStringFromError:(NSError *)error
+- (NSString *)debugStringFromError:(NSError *const)error
 {
     if (self.shortenStrings) {
-        return [NSString stringWithFormat:@"<NSError: %p Domain=%@ Code=%d UserInfo=%p>"
+        return [NSString stringWithFormat:@"<NSError: %p Domain=%@ Code=%ld UserInfo=%p>"
                                           , error
                                           , error.domain
-                                          , error.code
+                                          , (long)error.code
                                           , error.userInfo];
     }
     return error.description;
 }
 
-- (NSString *)stringWithErrorDetail:(NSDictionary *)userInfo
+- (NSString *)stringWithErrorDetail:(NSDictionary *const)userInfo
 {
-    NSMutableArray *components = [NSMutableArray array];
-    [userInfo enumerateKeysAndObjectsUsingBlock:^(NSString *key, id object, BOOL *stop) {
+    NSMutableArray *const components = [NSMutableArray array];
+    [userInfo enumerateKeysAndObjectsUsingBlock:^(NSString *const key, id const object, BOOL *const stop) {
         if ([key isEqualToString:NSLocalizedDescriptionKey]) {
             if (!self.shortenStrings) {
                 [components insertObject:[NSString stringWithFormat:@"%@=%@", key, object] atIndex:0];
@@ -59,9 +59,9 @@
     return (components.count > 0 ? [components componentsJoinedByString:@", "] : nil);
 }
 
-+ (NSString *)stringFromError:(NSError *)error
++ (NSString *)stringFromError:(NSError *const)error
 {
-    NSMutableArray *stringComponents = [NSMutableArray arrayWithCapacity:3];
+    NSMutableArray *const stringComponents = [NSMutableArray arrayWithCapacity:3];
     if (error.localizedDescription) {
         [stringComponents addObject:error.localizedDescription];
     }
@@ -74,13 +74,13 @@
     return (stringComponents.count > 0 ? [stringComponents componentsJoinedByString:@"\n"] : nil);
 }
 
-+ (NSString *)stringForTitleFromError:(NSError *)error;
++ (NSString *)stringForTitleFromError:(NSError *const)error;
 {
 #ifdef ERROR_KIT_AFNETWORKING
     if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
         if (error.failingURLResponse) {
-            NSInteger code = error.failingURLResponse.statusCode;
-            NSString *localizedString = [NSHTTPURLResponse localizedStringForStatusCode:code];
+            NSInteger const code = error.failingURLResponse.statusCode;
+            NSString *const localizedString = [NSHTTPURLResponse localizedStringForStatusCode:code];
             return localizedString.capitalizedString;
         }
     }
@@ -91,9 +91,9 @@
     return [self stringWithDomain:error.domain code:error.code];
 }
 
-+ (NSString *)stringForMessageFromError:(NSError *)error
++ (NSString *)stringForMessageFromError:(NSError *const )error
 {
-    NSMutableArray *stringComponents = [NSMutableArray arrayWithCapacity:3];
+    NSMutableArray *const stringComponents = [NSMutableArray arrayWithCapacity:3];
 #ifdef ERROR_KIT_AFNETWORKING
     if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
         if (error.failingURLResponse && error.localizedDescription) {
@@ -111,7 +111,7 @@
     if (stringComponents.count == 0 && error.isValidationError) {
         if (error.code == NSValidationMultipleErrorsError
         || (error.validationObject == nil && error.validationKey)) {
-            NSString *component = [self stringWithValidationError:error];
+            NSString *const component = [self stringWithValidationError:error];
             if (component) {
                 [stringComponents addObject:component];
             }
@@ -121,7 +121,7 @@
     return (stringComponents.count > 0 ? [stringComponents componentsJoinedByString:@"\n"] : nil);
 }
 
-+ (NSString *)stringForCancelButtonFromError:(NSError *)error
++ (NSString *)stringForCancelButtonFromError:(NSError *const)error
 {
     if (error.recoveryAttempter) {
 #ifdef ERROR_KIT_ADDITIONS
@@ -140,7 +140,7 @@
     }
 }
 
-+ (NSString *)stringForHelpButtonFromError:(NSError *)error
++ (NSString *)stringForHelpButtonFromError:(NSError *const)error
 {
     if (error.helpAnchor) {
         return MRErrorKitString(@"Help", nil);
@@ -149,7 +149,7 @@
     }
 }
 
-+ (NSString *)stringForHelpTitleFromError:(NSError *)error
++ (NSString *)stringForHelpTitleFromError:(NSError *const)error
 {
     if (error.helpAnchor) {
         return MRErrorKitString(@"Help", nil);
@@ -158,7 +158,7 @@
     }
 }
 
-+ (NSString *)stringForHelpDismissButtonFromError:(NSError *)error
++ (NSString *)stringForHelpDismissButtonFromError:(NSError *const)error
 {
     if (error.helpAnchor) {
         return MRErrorKitString(@"OK", nil);
@@ -167,7 +167,7 @@
     }
 }
 
-+ (NSString *)debugStringWithDomain:(NSString *)domain code:(NSInteger)code
++ (NSString *)debugStringWithDomain:(NSString *const)domain code:(NSInteger const)code
 {
     if ([domain isEqualToString:NSCocoaErrorDomain]) {
         return [MRErrorFormatter debugStringWithCocoaCode:code];
@@ -247,7 +247,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithDomain:(NSString *)domain code:(NSInteger)code
++ (NSString *)stringWithDomain:(NSString *const)domain code:(NSInteger const)code
 {
     if ([domain isEqualToString:NSCocoaErrorDomain]) {
         return [MRErrorFormatter stringWithCocoaCode:code];
@@ -334,21 +334,21 @@
 
 #pragma mark - NSCopying
 
-- (id)copyWithZone:(NSZone *)zone
+- (id)copyWithZone:(NSZone *const)zone
 {
-    MRErrorFormatter *formatter = [[[self class] allocWithZone:zone] init];
+    MRErrorFormatter *const formatter = [[self.class allocWithZone:zone] init];
     formatter.shortenStrings = self.shortenStrings;
     return formatter;
 }
 
 #pragma mark - NSCoding
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
+- (void)encodeWithCoder:(NSCoder *const)aCoder
 {
     [aCoder encodeBool:self.shortenStrings forKey:@"shortenStrings"];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (id)initWithCoder:(NSCoder *const)aDecoder
 {
     self = [self init];
     self.shortenStrings = [aDecoder decodeBoolForKey:@"shortenStrings"];
@@ -374,13 +374,13 @@
 #pragma mark -
 
 
-NSString *MRErrorKitString(NSString *key, NSString *comment)
+NSString *MRErrorKitString(NSString *const key, NSString *const comment)
 {
     static NSBundle *bundle = nil;
     static NSString *table = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"ErrorKit" ofType:@"bundle"];
+        NSString *const path = [[NSBundle mainBundle] pathForResource:@"ErrorKit" ofType:@"bundle"];
         bundle = ([NSBundle bundleWithPath:path] ?: [NSBundle mainBundle]);
         if ([bundle pathForResource:@"ErrorKit" ofType:@"strings"]) {
             table = @"ErrorKit";

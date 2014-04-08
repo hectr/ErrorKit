@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 #ifndef _ERRORKIT_H
 #define _ERRORKIT_H
+#endif
 
 #import "ErrorKitMacros.h"
 
 #import "ErrorKitImports.h"
-
-#endif

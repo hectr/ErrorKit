@@ -37,7 +37,7 @@
     return self.userInfo[NSAffectedObjectsErrorKey];
 }
 
-- (void)setAffectedObjects:(NSArray *)affectedObjects
+- (void)setAffectedObjects:(NSArray *const)affectedObjects
 {
     [self setUserInfoValue:affectedObjects.copy forKey:NSAffectedObjectsErrorKey];
 }
@@ -47,7 +47,7 @@
     return self.userInfo[NSAffectedStoresErrorKey];
 }
 
--(void)setAffectedStores:(NSArray *)affectedStores
+-(void)setAffectedStores:(NSArray *const)affectedStores
 {
     [self setUserInfoValue:affectedStores.copy forKey:NSAffectedStoresErrorKey];
 }
@@ -57,7 +57,7 @@
     return self.userInfo[NSDetailedErrorsKey];
 }
 
-- (void)setDetailedErrors:(NSArray *)detailedErrors
+- (void)setDetailedErrors:(NSArray *const)detailedErrors
 {
     [self setUserInfoValue:detailedErrors.copy forKey:NSDetailedErrorsKey];
 }
@@ -67,7 +67,7 @@
     return self.userInfo[NSPersistentStoreSaveConflictsErrorKey];
 }
 
-- (void)setPersistentStoreSaveConflicts:(NSArray *)persistentStoreSaveConflicts
+- (void)setPersistentStoreSaveConflicts:(NSArray *const)persistentStoreSaveConflicts
 {
     [self setUserInfoValue:persistentStoreSaveConflicts.copy forKey:NSPersistentStoreSaveConflictsErrorKey];
 }
@@ -77,7 +77,7 @@
     return self.userInfo[NSValidationKeyErrorKey];
 }
 
-- (void)setValidationKey:(NSString *)validationKey
+- (void)setValidationKey:(NSString *const)validationKey
 {
     [self setUserInfoValue:validationKey.copy forKey:NSValidationKeyErrorKey];
 }
@@ -87,7 +87,7 @@
     return self.userInfo[NSValidationObjectErrorKey];
 }
 
-- (void)setValidationObject:(id)validationObject
+- (void)setValidationObject:(id const)validationObject
 {
     [self setUserInfoValue:validationObject forKey:NSValidationObjectErrorKey];
 }
@@ -97,7 +97,7 @@
     return self.userInfo[NSValidationPredicateErrorKey];
 }
 
-- (void)setValidationPredicate:(NSPredicate *)validationPredicate
+- (void)setValidationPredicate:(NSPredicate *const)validationPredicate
 {
     [self setUserInfoValue:validationPredicate.copy forKey:NSValidationPredicateErrorKey];
 }
@@ -117,7 +117,7 @@
 
 @implementation MRErrorBuilder (ErrorKit_CoreData_Helper)
 
-- (NSError *)errorByCombiningWithError:(NSError *)errorOrNil
+- (NSError *)errorByCombiningWithError:(NSError *const)errorOrNil
 {
     if (errorOrNil == nil) {
         return self.error;

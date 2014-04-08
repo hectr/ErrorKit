@@ -23,6 +23,7 @@
 
 #ifndef _ERRORKIT_FACEBOOKSDK_H
 #define _ERRORKIT_FACEBOOKSDK_H
+#endif
 
 #import "NSError+FacebookSDK.h"
 
@@ -33,5 +34,3 @@
 #import "MRErrorBuilder+FacebookSDK.h"
 
 #import "MRErrorFormatter+FacebookSDK.h"
-
-#endif

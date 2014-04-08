@@ -22,6 +22,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 /// App delegate that implements itself a simple Core Data stack (no thread confinement).
 @interface MRAppDelegate : UIResponder <UIApplicationDelegate> {
     NSManagedObjectContext *_managedObjectContext;

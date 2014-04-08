@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_iAD)
 
-+ (NSString *)debugStringWithIADCode:(NSInteger)code
++ (NSString *)debugStringWithIADCode:(NSInteger const)code
 {
     switch (code) {
         case ADErrorUnknown:
@@ -57,7 +57,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithIADCode:(NSInteger)code
++ (NSString *)stringWithIADCode:(NSInteger const)code
 {
     switch (code) {
         case ADErrorUnknown:

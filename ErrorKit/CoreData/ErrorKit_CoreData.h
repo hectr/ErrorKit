@@ -23,11 +23,10 @@
 
 #ifndef _ERRORKIT_COREDATA_H
 #define _ERRORKIT_COREDATA_H
+#endif
 
 #import "NSError+CoreData.h"
 
 #import "MRErrorBuilder+CoreData.h"
 
 #import "MRErrorFormatter+CoreData.h"
-
-#endif

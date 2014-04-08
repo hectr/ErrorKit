@@ -23,6 +23,7 @@
 
 #ifndef _ERRORKITIMPORTS_H
 #define _ERRORKITIMPORTS_H
+#endif
 
 #import <objc/runtime.h>
 
@@ -126,7 +127,7 @@
 #endif
 
 #ifdef ERROR_KIT_ADMOB
-#import <AdMob/GADRequestError.h>
+#import <Google-AdMob-Ads-SDK/GADRequestError.h>
 #endif
 
 #ifdef ERROR_KIT_AFNETWORKING
@@ -181,8 +182,5 @@
 #ifdef ERROR_KIT_VERI_JSON
 #import <VeriJSON/VeriJSON.h>
 #endif
-
-#endif
-
 
 #endif

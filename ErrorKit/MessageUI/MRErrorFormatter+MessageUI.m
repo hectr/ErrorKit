@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_MessageUI)
 
-+ (NSString *)debugStringWithMailComposeCode:(NSInteger)code
++ (NSString *)debugStringWithMailComposeCode:(NSInteger const)code
 {
     switch (code) {
         case MFMailComposeErrorCodeSaveFailed:
@@ -43,7 +43,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)debugStringWithMailComposeResult:(NSInteger)code
++ (NSString *)debugStringWithMailComposeResult:(NSInteger const)code
 {
     switch (code) {
         case MFMailComposeResultCancelled:
@@ -58,7 +58,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)debugStringWithMessageComposeResult:(NSInteger)code
++ (NSString *)debugStringWithMessageComposeResult:(NSInteger const)code
 {
     switch (code) {
         case MessageComposeResultCancelled:
@@ -71,7 +71,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithMailComposeCode:(NSInteger)code
++ (NSString *)stringWithMailComposeCode:(NSInteger const)code
 {
     switch (code) {
         case MFMailComposeErrorCodeSaveFailed:
@@ -82,7 +82,7 @@
     return MRErrorKitString(@"Mail Error", nil);
 }
 
-+ (NSString *)stringWithMailComposeResult:(NSInteger)code
++ (NSString *)stringWithMailComposeResult:(NSInteger const)code
 {
     switch (code) {
         case MFMailComposeResultCancelled:
@@ -97,7 +97,7 @@
     return MRErrorKitString(@"Unknown Result", nil);
 }
 
-+ (NSString *)stringWithMessageComposeResult:(NSInteger)code
++ (NSString *)stringWithMessageComposeResult:(NSInteger const)code
 {
     switch (code) {
         case MessageComposeResultCancelled:

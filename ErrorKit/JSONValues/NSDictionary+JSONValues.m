@@ -32,15 +32,15 @@
 
 @implementation NSDictionary (ErrorKit_JSONValues)
 
-+ (NSError *)mr_validationErrorWithKey:(id)aKey JSONPattern:(id)pattern object:(id)object value:(id)value
++ (NSError *)mr_validationErrorWithKey:(id const)aKey JSONPattern:(id const)pattern object:(id const)object value:(id const)value
 {
-    MRErrorBuilder *builder =
+    MRErrorBuilder *const builder =
     [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
                                  code:NSKeyValueValidationError];
     if (object) {
         if ([(id<NSObject>)aKey isKindOfClass:NSString.class]) {
-            NSString *key = (NSString *)aKey;
-            NSString *optionalKey = [key stringByAppendingString:@"?"];
+            NSString *const key = (NSString *)aKey;
+            NSString *const optionalKey = [key stringByAppendingString:@"?"];
             builder.localizedFailureReason =
             [MRErrorFormatter stringWithJSONPattern:pattern
                                              forKey:optionalKey];
@@ -61,8 +61,8 @@
 #endif
     } else {
         if ([(id<NSObject>)aKey isKindOfClass:NSString.class]) {
-            NSString *key = (NSString *)aKey;
-            NSString *optionalKey = [key stringByAppendingString:@"?"];
+            NSString *const key = (NSString *)aKey;
+            NSString *const optionalKey = [key stringByAppendingString:@"?"];
             builder.localizedFailureReason =
             [MRErrorFormatter stringWithJSONPattern:pattern
                                              forKey:optionalKey];
@@ -78,7 +78,7 @@
     return builder.error;
 }
 
-- (NSNumber *)numberForKey:(id)aKey withError:(NSError **)errorPtr
+- (NSNumber *)numberForKey:(id const)aKey withError:(NSError **const)errorPtr
 {
     id candidate = self[aKey];
     if (candidate && ![candidate isKindOfClass:NSNumber.class]) {
@@ -93,7 +93,7 @@
     return candidate;
 }
 
-- (NSString *)stringForKey:(id)aKey withError:(NSError **)errorPtr
+- (NSString *)stringForKey:(id const)aKey withError:(NSError **const)errorPtr
 {
     id candidate = self[aKey];
     if (candidate && ![candidate isKindOfClass:NSString.class]) {
@@ -108,7 +108,7 @@
     return candidate;
 }
 
-- (NSArray *)arrayForKey:(id)aKey withError:(NSError **)errorPtr
+- (NSArray *)arrayForKey:(id const)aKey withError:(NSError **const)errorPtr
 {
     id candidate = self[aKey];
     if (candidate && ![candidate isKindOfClass:NSArray.class]) {
@@ -123,7 +123,7 @@
     return candidate;
 }
 
-- (NSDictionary *)dictionaryForKey:(id)aKey withError:(NSError **)errorPtr
+- (NSDictionary *)dictionaryForKey:(id const)aKey withError:(NSError **const)errorPtr
 {
     id candidate = self[aKey];
     if (candidate && ![candidate isKindOfClass:NSDictionary.class]) {

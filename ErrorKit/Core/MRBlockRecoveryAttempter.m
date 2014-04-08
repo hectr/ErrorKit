@@ -32,7 +32,7 @@
 
 + (instancetype)attempterWithBlock:(void (^)(NSError *, NSUInteger, BOOL *))handler
 {
-    return [(MRBlockRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption) {
+    return [(MRBlockRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *const error, NSUInteger const recoveryOption) {
         BOOL didRecover = NO;
         handler(error, recoveryOption, &didRecover);
         return didRecover;
@@ -51,9 +51,9 @@
 
 #pragma mark - NSErrorRecoveryAttempting
 
-- (void)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex delegate:(id)delegate didRecoverSelector:(SEL)didRecoverSelector contextInfo:(void *)contextInfo
+- (void)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex delegate:(id const)delegate didRecoverSelector:(SEL const)didRecoverSelector contextInfo:(void *const)contextInfo
 {
-    BOOL success = self.recoveryHandler(error, recoveryOptionIndex);
+    BOOL const success = self.recoveryHandler(error, recoveryOptionIndex);
     if (didRecoverSelector && delegate) {
         [self invokeRecoverSelector:didRecoverSelector
                        withDelegate:delegate
@@ -62,7 +62,7 @@
     }
 }
 
-- (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex
+- (BOOL)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex
 {
     return self.recoveryHandler(error, recoveryOptionIndex);
 }

@@ -28,22 +28,25 @@
 
 // http://www.lifesmith.com/comnames.html
 
-static NSString *__surnames[] = { @"Smith", @"Johnson", @"Williams", @"Jones", @"Brown"
-                                , @"Davis", @"Miller", @"Wilson", @"Moore", @"Taylor"
-                                , @"Anderson", @"Thomas", @"Jackson", @"White", @"Harris"
-                                , @"Martin", @"Thompson", @"Garcia", @"Martinez", @"Robinson" };
+static NSString *const __surnames[] =
+    { @"Smith",    @"Johnson",  @"Williams", @"Jones",    @"Brown"
+    , @"Davis",    @"Miller",   @"Wilson",   @"Moore",    @"Taylor"
+    , @"Anderson", @"Thomas",   @"Jackson",  @"White",    @"Harris"
+    , @"Martin",   @"Thompson", @"Garcia",   @"Martinez", @"Robinson" };
 
-static NSString *__names[] = { @"Mary", @"John", @"Robert", @"Patricia", @"Michael"
-                             , @"Linda", @"James", @"Barbara", @"William", @"Elisabeth"
-                             , @"David", @"Jennifer", @"Richard", @"Maria", @"Charles"
-                             , @"Joseph", @"Susan", @"Thomas", @"Margaret", @"Dorothy" };
+static NSString *const __names[] =
+    { @"Mary",   @"John",     @"Robert",  @"Patricia", @"Michael"
+    , @"Linda",  @"James",    @"Barbara", @"William",  @"Elisabeth"
+    , @"David",  @"Jennifer", @"Richard", @"Maria",    @"Charles"
+    , @"Joseph", @"Susan",    @"Thomas",  @"Margaret", @"Dorothy" };
 
-static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
-                              , @"F", @"G", @"H", @"I", @"J"
-                              , @"K", @"L", @"M", @"N", @"O"
-                              , @"P", @"Q", @"R", @"S", @"T"
-                              , @"U", @"V", @"W", @"X", @"Y"
-                              , @"Z" };
+static NSString *const __letters[] =
+    { @"A", @"B", @"C", @"D", @"E"
+    , @"F", @"G", @"H", @"I", @"J"
+    , @"K", @"L", @"M", @"N", @"O"
+    , @"P", @"Q", @"R", @"S", @"T"
+    , @"U", @"V", @"W", @"X", @"Y"
+    , @"Z" };
 
 // -----------------------------------------------------------------------------
 
@@ -57,7 +60,7 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
     if (_managedObjectContext == nil) {
         self.resultsController.delegate = nil;
         self.resultsController = nil;
-        MRAppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
+        MRAppDelegate *const appDelegate = UIApplication.sharedApplication.delegate;
         NSError *error = nil;
         _managedObjectContext = [appDelegate managedObjectContextWithError:&error];
         [self presentError:error];
@@ -69,8 +72,8 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 - (void)fillData
 {
     if (self.managedObjectContext) {
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
-        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
+        NSFetchRequest *const request = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
+        NSSortDescriptor *const descriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
         [request setSortDescriptors:@[ descriptor ]];
         self.resultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                      managedObjectContext:self.managedObjectContext
@@ -87,7 +90,7 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 #pragma mark Notifications
 
 // Notification received when the persistent store coordinator of the Core Data stack has been unset.
-- (void)didUnsetPersistentStoreCoordinator:(NSNotification *)n
+- (void)didUnsetPersistentStoreCoordinator:(NSNotification *const)n
 {
     _managedObjectContext = nil;
     [self fillData];
@@ -96,18 +99,20 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 #pragma mark - IBAction methods
 
 // Removes the persistent store in use by the Core Data stack.
-- (IBAction)removePersistentStoreAction:(id)sender
+- (IBAction)removePersistentStoreAction:(id const)sender
 {
-    MRAppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
+    MRAppDelegate *const appDelegate = UIApplication.sharedApplication.delegate;
     NSError *error = nil;
-    [[NSFileManager defaultManager] removeItemAtURL:appDelegate.storeURL error:&error];
+    NSFileManager *const defaultManager = NSFileManager.defaultManager;
+    NSURL *const storeURL = appDelegate.storeURL;
+    [defaultManager removeItemAtURL:storeURL error:&error];
     [self presentError:error];
 }
 
 // Shows the action sheet.
 - (IBAction)changeStoreAction:(id)sender
 {
-    UIActionSheet *actionSheet =
+    UIActionSheet *const actionSheet =
     [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Select which persistent store do you want to use:", nil)
                                 delegate:self
                        cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
@@ -119,28 +124,28 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 }
 
 // Adds a new Employee object. 
-- (IBAction)addEmployeeAction:(id)sender
+- (IBAction)addEmployeeAction:(id const)sender
 {
-    NSManagedObjectContext *moc = self.managedObjectContext;
+    NSManagedObjectContext *const moc = self.managedObjectContext;
     if (moc == nil) {
         NSLog(@"nil context");
         return;
     }
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Company" inManagedObjectContext:moc];
-    NSManagedObject *company = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
+    NSManagedObject *const company = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
     [company setValue:[NSString stringWithFormat:@"%@.%@."
                                                 , __letters[arc4random() % sizeof(__letters)/4]
                                                 , __letters[arc4random() % sizeof(__letters)/4]]
                                           forKey:@"name"];
     entity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:moc];
-    NSManagedObject *project = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
+    NSManagedObject *const project = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
     [project setValue:[NSString stringWithFormat:@"%@%d"
                                                 , __letters[arc4random() % sizeof(__letters)/4]
                                                 , arc4random()%10]
                                           forKey:@"name"];
     [project setValue:company forKey:@"company"];
     entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:moc];
-    NSManagedObject *employee = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
+    NSManagedObject *const employee = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
     [employee setValue:__names[arc4random()%sizeof(__names)/4] forKey:@"firstName"];
     [employee setValue:__surnames[arc4random()%sizeof(__surnames)/4] forKey:@"lastName"];
     [employee setValue:@(10000 + arc4random() % 490001) forKey:@"salary"];
@@ -148,9 +153,11 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
     [employee setValue:@(arc4random()%999) forKey:@"extension"];
 }
 
-- (IBAction)deleteSelectedObjectAction:(id)sender
+- (IBAction)deleteSelectedObjectAction:(id const)sender
 {
-    NSManagedObject *object = [self.resultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
+    UITableView *const tableView = self.tableView;
+    NSIndexPath *const indexPath = tableView.indexPathForSelectedRow;
+    NSManagedObject *const object = [self.resultsController objectAtIndexPath:indexPath];
     if (object) {
         [self.managedObjectContext deleteObject:object];
     } else {
@@ -164,7 +171,8 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 // Delegate method of the action sheet presented by the 'Change persistent store' button.
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    MRAppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
+    UIApplication *const sharedApplication = UIApplication.sharedApplication;
+    MRAppDelegate *const appDelegate = sharedApplication.delegate;
     if (actionSheet.cancelButtonIndex == buttonIndex) {
         return;
     } else if (actionSheet.destructiveButtonIndex == buttonIndex) {
@@ -172,20 +180,26 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
         [appDelegate unsetPersistentStoreCoordinator];
     } else if (actionSheet.destructiveButtonIndex + 1 == buttonIndex) {
         appDelegate.automaticStoreMigration = NO;
-        NSURL *src = [[NSBundle mainBundle] URLForResource:@"CoreData-Example_v02" withExtension:@"sqlite"];
-        [[NSFileManager defaultManager] removeItemAtURL:appDelegate.storeURL error:nil];
+        NSBundle *const mainBundle = NSBundle.mainBundle;
+        NSURL *const src = [mainBundle URLForResource:@"CoreData-Example_v02" withExtension:@"sqlite"];
+        NSFileManager *const defaultManager = NSFileManager.defaultManager;
+        NSURL *const storeURL = appDelegate.storeURL;
+        [defaultManager removeItemAtURL:storeURL error:nil];
         NSError *error = nil;
-        [[NSFileManager defaultManager] copyItemAtURL:src toURL:appDelegate.storeURL error:&error];
+        [defaultManager copyItemAtURL:src toURL:storeURL error:&error];
         if (error) {
             [self presentError:error];
         } else {
             [appDelegate unsetPersistentStoreCoordinator];
         }
     } else if (actionSheet.destructiveButtonIndex + 2 == buttonIndex) {
-        NSURL *src = [[NSBundle mainBundle] URLForResource:@"CoreData-Example_v01" withExtension:@"sqlite"];
-        [[NSFileManager defaultManager] removeItemAtURL:appDelegate.storeURL error:nil];
+        NSBundle *const mainBundle = NSBundle.mainBundle;
+        NSURL *const src = [mainBundle URLForResource:@"CoreData-Example_v01" withExtension:@"sqlite"];
+        NSFileManager *const defaultManager = NSFileManager.defaultManager;
+        NSURL *const storeURL = appDelegate.storeURL;
+        [defaultManager removeItemAtURL:storeURL error:nil];
         NSError *error = nil;
-        [[NSFileManager defaultManager] copyItemAtURL:src toURL:appDelegate.storeURL error:&error];
+        [defaultManager copyItemAtURL:src toURL:storeURL error:&error];
         if (error) {
             [self presentError:error];
         } else {
@@ -197,24 +211,26 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 #pragma mark - UITableViewDataSource methods
 
 // Returns the number of objects fetched by the results controller.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *const)tableView numberOfRowsInSection:(NSInteger const)section
 {
-    id sectionInfo = [self.resultsController.sections objectAtIndex:section];
+    NSFetchedResultsController *const resultsController = self.resultsController;
+    NSArray *const sections = resultsController.sections;
+    id const sectionInfo = [sections objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
 // Returns a cell for the given index path.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *const)tableView cellForRowAtIndexPath:(NSIndexPath *const)indexPath
 {
-    static NSString *cellIdentifier = @"UITableViewCell";
+    static NSString *const cellIdentifier = @"UITableViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    NSManagedObject *object = [self.resultsController objectAtIndexPath:indexPath];
-    NSString *firstName = [object valueForKey:@"firstName"];
-    NSString *lastName = [object valueForKey:@"lastName"];
-    NSString *fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+    NSManagedObject *const object = [self.resultsController objectAtIndexPath:indexPath];
+    NSString *const firstName = [object valueForKey:@"firstName"];
+    NSString *const lastName = [object valueForKey:@"lastName"];
+    NSString *const fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
     cell.textLabel.text = fullName;
     return cell;
 }
@@ -222,13 +238,14 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 #pragma mark - NSFetchedResultsControllerDelegate methods
 
 // Prepares the table view for the updates.
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+- (void)controllerWillChangeContent:(NSFetchedResultsController *const)controller
 {
-    [self.tableView beginUpdates];
+    UITableView *const tableView = self.tableView;
+    [tableView beginUpdates];
 }
 
 // Updates the table view content.
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+- (void)controller:(NSFetchedResultsController *const)controller didChangeObject:(id const)anObject atIndexPath:(NSIndexPath *const)indexPath forChangeType:(NSFetchedResultsChangeType const)type newIndexPath:(NSIndexPath *const)newIndexPath
 {
     switch(type) {
         case NSFetchedResultsChangeInsert:
@@ -238,11 +255,11 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
             [self.tableView deleteRowsAtIndexPaths:@[  indexPath ] withRowAnimation:UITableViewRowAnimationFade];
             break;
         case NSFetchedResultsChangeUpdate: {
-            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-            NSManagedObject *object = [self.resultsController objectAtIndexPath:indexPath];
-            NSString *firstName = [object valueForKey:@"firstName"];
-            NSString *lastName = [object valueForKey:@"lastName"];
-            NSString *fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+            UITableViewCell *const cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            NSManagedObject *const object = [self.resultsController objectAtIndexPath:indexPath];
+            NSString *const firstName = [object valueForKey:@"firstName"];
+            NSString *const lastName = [object valueForKey:@"lastName"];
+            NSString *const fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
             cell.textLabel.text = fullName;
         } break;
         case NSFetchedResultsChangeMove:
@@ -253,23 +270,25 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 }
 
 // Updates the table view content.
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+- (void)controller:(NSFetchedResultsController *const)controller didChangeSection:(id const)sectionInfo atIndex:(NSUInteger const)sectionIndex forChangeType:(NSFetchedResultsChangeType const)type
 {
     switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
+        case NSFetchedResultsChangeInsert: {
+            NSIndexSet *const indexSet = [NSIndexSet indexSetWithIndex:sectionIndex];
+            [self.tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+        } break;
+        case NSFetchedResultsChangeDelete: {
+            NSIndexSet *const indexSet = [NSIndexSet indexSetWithIndex:sectionIndex];
+            [self.tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+        } break;
     }
 }
 
 // Finishes the updates.
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+- (void)controllerDidChangeContent:(NSFetchedResultsController *const)controller
 {
-    [self.tableView endUpdates];
+    UITableView *const tableView = self.tableView;
+    [tableView endUpdates];
 }
 
 #pragma mark - UIViewController methods
@@ -299,20 +318,20 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 #pragma mark - UIResponder methods
 
 // If possible, adds a recovery attempter to the error.
-- (NSError *)willPresentError:(NSError *)error
+- (NSError *)willPresentError:(NSError *const)error
 {
     if (![error.domain isEqualToString:NSCocoaErrorDomain]) {
         return error;
     }
-    MRAppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
-    MRErrorBuilder *builder = [MRErrorBuilder builderWithDomain:error.domain code:error.code];
+    MRAppDelegate *const appDelegate = UIApplication.sharedApplication.delegate;
+    MRErrorBuilder *const builder = [MRErrorBuilder builderWithDomain:error.domain code:error.code];
     if (error.underlyingError) {
         builder.localizedFailureReason = [MRErrorFormatter stringWithDomain:error.underlyingError.domain code:error.underlyingError.code];
         builder.underlyingError = error.underlyingError;
     }
     if (error.code == NSPersistentStoreIncompatibleVersionHashError) {
         [builder addRecoveryOption:NSLocalizedString(@"Migrate data", nil)
-                         withBlock:^(NSError *error) {
+                         withBlock:^(NSError *const error) {
                              appDelegate.automaticStoreMigration = YES;
                              [self managedObjectContext];
                              [self fillData];
@@ -321,23 +340,29 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
     }
     if (error.code >= NSPersistentStoreInvalidTypeError && error.code <= NSEntityMigrationPolicyError) {
         [builder addRecoveryOption:NSLocalizedString(@"Create new store", nil)
-                         withBlock:^(NSError *error) {
-                             NSManagedObjectContext *previousContext = _managedObjectContext;
-                             NSString *bundleName = [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleName"];
-                             NSInteger date = [NSDate.date timeIntervalSinceReferenceDate];
-                             NSString *storeName = [[bundleName stringByAppendingString:@(date).stringValue] stringByAppendingPathExtension:@"sqlite"];
-                             appDelegate.storeURL = [[appDelegate applicationDocumentsDirectory] URLByAppendingPathComponent:storeName];
-                             [NSUserDefaults.standardUserDefaults setObject:storeName forKey:@"MRPersistentStoreName"];
+                         withBlock:^(NSError *const error) {
+                             NSBundle *const mainBundle = NSBundle.mainBundle;
+                             NSManagedObjectContext *const previousContext = _managedObjectContext;
+                             NSString *const bundleName = [mainBundle objectForInfoDictionaryKey:@"CFBundleName"];
+                             NSDate *const date = NSDate.date;
+                             NSInteger const interval = date.timeIntervalSinceReferenceDate;
+                             NSString *const storeName = [[bundleName stringByAppendingString:@(interval).stringValue] stringByAppendingPathExtension:@"sqlite"];
+                             NSURL *const applicationDocumentsDirectory = appDelegate.applicationDocumentsDirectory;
+                             appDelegate.storeURL = [applicationDocumentsDirectory URLByAppendingPathComponent:storeName];
+                             NSUserDefaults *const standardUserDefaults = NSUserDefaults.standardUserDefaults;
+                             [standardUserDefaults setObject:storeName forKey:@"MRPersistentStoreName"];
                              [appDelegate unsetPersistentStoreCoordinator];
-                             NSMutableDictionary *mapping = NSMutableDictionary.dictionary;
-                             [previousContext.insertedObjects enumerateObjectsUsingBlock:^(NSManagedObject *src, BOOL *stop) {
+                             NSMutableDictionary *const mapping = NSMutableDictionary.dictionary;
+                             NSSet *const insertedObjects = previousContext.insertedObjects;
+                             [insertedObjects enumerateObjectsUsingBlock:^(NSManagedObject *const src, BOOL *const stop) {
                                  NSError *error = nil;
                                  [appDelegate managedObjectWithUnfaultedDataFromObject:src mapping:mapping withError:&error];
                                  if (error) {
                                      *stop = YES;
                                  }
                              }];
-                             [previousContext.updatedObjects enumerateObjectsUsingBlock:^(NSManagedObject *src, BOOL *stop) {
+                             NSSet *const updatedObjects = previousContext.updatedObjects;
+                             [updatedObjects enumerateObjectsUsingBlock:^(NSManagedObject *const src, BOOL *const stop) {
                                  NSError *error = nil;
                                  [appDelegate managedObjectWithUnfaultedDataFromObject:src mapping:mapping withError:&error];
                                  if (error) {
@@ -356,9 +381,10 @@ static NSString *__letters[] = { @"A", @"B", @"C", @"D", @"E"
 // Cleanup.
 - (void)dealloc
 {
-    [NSNotificationCenter.defaultCenter removeObserver:self
-                                                  name:@"DidUnsetPersistentStoreCoordinator"
-                                                object:UIApplication.sharedApplication.delegate];
+    NSNotificationCenter *const defaultCenter = NSNotificationCenter.defaultCenter;
+    [defaultCenter removeObserver:self
+                             name:@"DidUnsetPersistentStoreCoordinator"
+                           object:UIApplication.sharedApplication.delegate];
 }
 
 @end

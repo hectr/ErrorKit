@@ -37,7 +37,7 @@
     return [self.userInfo[@"JKAtIndexKey"] unsignedLongValue];
 }
 
-- (void)setAtIndex:(unsigned long)atIndex
+- (void)setAtIndex:(unsigned long const)atIndex
 {
     [self setUserInfoValue:@(atIndex) forKey:@"JKAtIndexKey"];
 }
@@ -47,7 +47,7 @@
     return [self.userInfo[@"JKLineNumberKey"] unsignedLongValue];
 }
 
-- (void)setLineNumber:(unsigned long)lineNumber
+- (void)setLineNumber:(unsigned long const)lineNumber
 {
     [self setUserInfoValue:@(lineNumber) forKey:@"JKLineNumberKey"];
 }

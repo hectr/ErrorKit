@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_FacebookSDK)
 
-+ (NSString *)debugStringWithFacebookCode:(NSInteger)code
++ (NSString *)debugStringWithFacebookCode:(NSInteger const)code
 {
     switch (code) {
         case FBErrorInvalid:
@@ -69,7 +69,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithFacebookCode:(NSInteger)code
++ (NSString *)stringWithFacebookCode:(NSInteger const)code
 {
     switch (code) {
         case FBErrorInvalid:

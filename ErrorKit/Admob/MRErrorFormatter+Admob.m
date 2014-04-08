@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_Admob)
 
-+ (NSString *)debugStringWithAdmobCode:(NSInteger)code
++ (NSString *)debugStringWithAdmobCode:(NSInteger const)code
 {
     switch (code) {
         case kGADErrorInvalidRequest:
@@ -61,7 +61,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithAdmobCode:(NSInteger)code
++ (NSString *)stringWithAdmobCode:(NSInteger const)code
 {
     switch (code) {
         case kGADErrorInvalidRequest:

@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (NSError_JSONValues)
 
-+ (NSString *)stringWithJSONPattern:(id)pattern forKey:(NSString *)key
++ (NSString *)stringWithJSONPattern:(id const)pattern forKey:(NSString *)key
 {
     NSString *format;
     NSString *type;
@@ -59,7 +59,7 @@
     } else {
         return MRErrorKitString(@"Invalid pattern.", nil);
     }
-    NSUInteger lastIndex = [key length] - 1;
+    NSUInteger const lastIndex = [key length] - 1;
     if ([key rangeOfString:@"?"].location == lastIndex) {
         format = MRErrorKitString(@"'%@' must be %@.", nil);
         key = [key substringToIndex:lastIndex];

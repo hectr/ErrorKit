@@ -23,11 +23,10 @@
 
 #ifndef _ERRORKIT_AVFOUNDATION_H
 #define _ERRORKIT_AVFOUNDATION_H
+#endif
 
 #import "NSError+AVFoundation.h"
 
 #import "MRErrorBuilder+AVFoundation.h"
 
 #import "MRErrorFormatter+AVFoundation.h"
-
-#endif

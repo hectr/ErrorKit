@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_CoreLocation)
 
-+ (NSString *)debugStringWithCoreLocationCode:(NSInteger)code
++ (NSString *)debugStringWithCoreLocationCode:(NSInteger const)code
 {
     switch (code) {
         case kCLErrorLocationUnknown:
@@ -73,7 +73,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithCoreLocationCode:(NSInteger)code
++ (NSString *)stringWithCoreLocationCode:(NSInteger const)code
 {
     switch (code) {
         case kCLErrorLocationUnknown:

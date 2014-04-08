@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (NSError_NSException)
 
-+ (NSString *)stringWithExceptionName:(NSString *)name
++ (NSString *)stringWithExceptionName:(NSString *const)name
 {
     static NSDictionary *__localizedDescriptions;
     static dispatch_once_t onceToken;

@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_StoreKit)
 
-+ (NSString *)debugStringWithStoreKitCode:(NSInteger)code
++ (NSString *)debugStringWithStoreKitCode:(NSInteger const)code
 {
     switch (code) {
         case SKErrorUnknown:
@@ -53,7 +53,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithStoreKitCode:(NSInteger)code
++ (NSString *)stringWithStoreKitCode:(NSInteger const)code
 {
     switch (code) {
         case SKErrorUnknown:

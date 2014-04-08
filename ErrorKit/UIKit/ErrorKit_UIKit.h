@@ -23,6 +23,7 @@
 
 #ifndef _ERRORKIT_UIKIT_H
 #define _ERRORKIT_UIKIT_H
+#endif
 
 #import "UIAlertView+ErrorKit.h"
 
@@ -31,5 +32,3 @@
 #import "UIResponder+ErrorKit.h"
 
 #import "MRAlertRecoveryAttempter.h"
-
-#endif

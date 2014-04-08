@@ -39,9 +39,9 @@
 
 @implementation NSMutableArray (ErrorKit_JSONValues)
 
-+ (NSError *)mr_argumentErrorWithObject:(id)object value:(id)value
++ (NSError *)mr_argumentErrorWithObject:(id const)object value:(id const)value
 {
-    MRErrorBuilder *builder =
+    MRErrorBuilder *const builder =
     [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
                                  code:NSKeyValueValidationError];
     builder.localizedFailureReason =
@@ -54,7 +54,7 @@
     return builder.error;
 }
 
-- (BOOL)addObject:(id)anObject withError:(NSError **)errorPtr
+- (BOOL)addObject:(id const)anObject withError:(NSError **const)errorPtr
 {
     if (anObject == nil) {
         
@@ -65,7 +65,7 @@
     return NO;
 }
 
-- (BOOL)insertObject:(id)anObject atIndex:(NSUInteger)index withError:(NSError **)errorPtr
+- (BOOL)insertObject:(id)anObject atIndex:(NSUInteger const)index withError:(NSError **const)errorPtr
 {
     if (index > self.count) {
         if (errorPtr) {
@@ -82,7 +82,7 @@
     return NO;
 }
 
-- (BOOL)removeLastObjectWithError:(NSError **)errorPtr
+- (BOOL)removeLastObjectWithError:(NSError **const)errorPtr
 {
     if (self.count == 0) {
         if (errorPtr) {
@@ -95,9 +95,9 @@
     return NO;
 }
 
-- (BOOL)removeObjectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr
+- (BOOL)removeObjectAtIndex:(NSUInteger const)index withError:(NSError ** const)errorPtr
 {
-    NSUInteger count = self.count;
+    NSUInteger const count = self.count;
     if (count == 0 || index > (count - 1)) {
         if (errorPtr) {
             *errorPtr = [self.class mr_rangeErrorWithIndex:index object:self];
@@ -109,9 +109,9 @@
     return NO;
 }
 
-- (BOOL)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject error:(NSError **)errorPtr
+- (BOOL)replaceObjectAtIndex:(NSUInteger const)index withObject:(id const)anObject error:(NSError **const)errorPtr
 {
-    NSUInteger count = self.count;
+    NSUInteger const count = self.count;
     if (count == 0 || index > (count - 1)) {
         if (errorPtr) {
             *errorPtr = [self.class mr_rangeErrorWithIndex:index object:self];

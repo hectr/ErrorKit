@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_SECURITY_H
 #define _ERRORKIT_SECURITY_H
+#endif
 
 #import "MRErrorFormatter+Security.h"
-
-#endif

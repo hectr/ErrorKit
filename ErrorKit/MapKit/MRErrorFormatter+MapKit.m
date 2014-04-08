@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_MapKit)
 
-+ (NSString *)debugStringWithMapKitCode:(NSInteger)code
++ (NSString *)debugStringWithMapKitCode:(NSInteger const)code
 {
     switch (code) {
         case MKErrorUnknown:
@@ -47,7 +47,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithMapKitCode:(NSInteger)code
++ (NSString *)stringWithMapKitCode:(NSInteger const)code
 {
     switch (code) {
         case MKErrorUnknown:

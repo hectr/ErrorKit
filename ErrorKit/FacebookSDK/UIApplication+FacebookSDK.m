@@ -33,14 +33,14 @@
 @implementation UIApplication (ErrorKit_FacebookSDK)
 
 // TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
-- (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock
+- (BOOL)handleFacebookAuthError:(NSError *const)error withLoginBlock:(void(^)(NSError *))loginBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
     if (error.fberrorShouldNotifyUser) {
         if ([error.loginFailedReason isEqualToString:FBErrorLoginFailedReasonSystemDisallowedWithoutErrorValue]) {
             builder.localizedDescription = MRErrorKitString(@"App Disabled", nil);
-            NSString *localizedFormat = MRErrorKitString(@"Go to Settings > Facebook and turn ON %@.", nil);
-            NSString *localizedName = [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleNameKey];
+            NSString *const localizedFormat = MRErrorKitString(@"Go to Settings > Facebook and turn ON %@.", nil);
+            NSString *const localizedName = [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleNameKey];
             builder.localizedFailureReason = [NSString stringWithFormat:localizedFormat, localizedName];
         } else if ([error.loginFailedReason isEqualToString:FBErrorReauthorizeFailedReasonWrongUser]) {
             if (FBSession.activeSession.isOpen) {
@@ -88,7 +88,7 @@
 }
 
 // TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
-- (BOOL)handleFacebookRequestPermissionError:(NSError *)error
+- (BOOL)handleFacebookRequestPermissionError:(NSError *const)error
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
     if (error.fberrorShouldNotifyUser) {
@@ -109,7 +109,7 @@
 }
 
 // TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
-- (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock
+- (BOOL)handleFacebookAPICallError:(NSError *const)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
     if (error.fberrorCategory == FBErrorCategoryRetry ||
@@ -138,11 +138,11 @@
     } else {
         NSNumber *code = nil;
         NSNumber *subcode = nil;
-        NSDictionary *JSON = error.parsedJSONResponse;
+        NSDictionary *const JSON = error.parsedJSONResponse;
         if ([JSON isKindOfClass:NSDictionary.class]) {
-            NSDictionary *body = JSON[@"body"];
+            NSDictionary *const body = JSON[@"body"];
             if ([body isKindOfClass:NSDictionary.class]) {
-                NSDictionary *dict = body[@"error"];
+                NSDictionary *const dict = body[@"error"];
                 if ([dict isKindOfClass:NSDictionary.class]) {
                     code = dict[@"code"];
                     subcode = dict[@"error_subcode"];

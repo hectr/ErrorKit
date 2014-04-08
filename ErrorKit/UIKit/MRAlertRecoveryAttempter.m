@@ -46,9 +46,9 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 + (instancetype)attempterWithBlock:(UIAlertView *(^)(NSError *, NSUInteger, BOOL *))handler
 {
-    return [(MRAlertRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *error, NSUInteger recoveryOption, BOOL *finished) {
+    return [(MRAlertRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *const error, NSUInteger const recoveryOption, BOOL *const finished) {
         BOOL didRecover = NO;
-        UIAlertView *alert = handler(error, recoveryOption, &didRecover);
+        UIAlertView *const alert = handler(error, recoveryOption, &didRecover);
         *finished = (alert == nil);
         if (alert.delegate != error.recoveryAttempter && [error.recoveryAttempter associatedObject] == nil) {
             [error.recoveryAttempter associateWithObject:alert];
@@ -68,7 +68,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
     return self;
 }
 
-- (void)associateWithObject:(id)object
+- (void)associateWithObject:(id const)object
 {
     objc_setAssociatedObject(self.associatedObject
                              , &kMRDelegateRecoveryAttempterAssociationKey
@@ -85,14 +85,14 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 #pragma mark - UIAlertViewDelegate
 
-- (void)willPresentAlertView:(UIAlertView *)alertView
+- (void)willPresentAlertView:(UIAlertView *const)alertView
 {
     if (self.associatedObject == nil) {
         [self associateWithObject:alertView];
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *const)alertView willDismissWithButtonIndex:(NSInteger const)buttonIndex
 {
     self.didRecover = self.delegateHandler(alertView, buttonIndex, &_invokeDidRecoverSelector);
     if (self.invokeDidRecoverSelector) {
@@ -108,14 +108,14 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 #pragma mark - UIActionSheetDelegate
 
-- (void)willPresentActionSheet:(UIActionSheet *)actionSheet
+- (void)willPresentActionSheet:(UIActionSheet *const)actionSheet
 {
     if (self.associatedObject == nil) {
         [self associateWithObject:actionSheet];
     }
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)actionSheet:(UIActionSheet *const)actionSheet clickedButtonAtIndex:(NSInteger const)buttonIndex
 {
     self.didRecover = self.delegateHandler(actionSheet, buttonIndex, &_invokeDidRecoverSelector);
     if (self.invokeDidRecoverSelector) {
@@ -131,7 +131,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 #pragma mark - NSErrorRecoveryAttempting
 
-- (void)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex delegate:(id)delegate didRecoverSelector:(SEL)didRecoverSelector contextInfo:(void *)contextInfo
+- (void)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex delegate:(id const)delegate didRecoverSelector:(SEL const)didRecoverSelector contextInfo:(void *const)contextInfo
 {
     self.delegate = delegate;
     self.selector = didRecoverSelector;
@@ -148,7 +148,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
     }
 }
 
-- (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex
+- (BOOL)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex
 {
     self.didRecover = self.recoveryHandler(error, recoveryOptionIndex, &_invokeDidRecoverSelector);
     if (self.invokeDidRecoverSelector) {
@@ -181,7 +181,7 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
     } else {
         delegateString = @"";
     }
-    NSMutableArray *blocksComponents = [NSMutableArray arrayWithCapacity:2];
+    NSMutableArray *const blocksComponents = [NSMutableArray arrayWithCapacity:2];
     if (self.recoveryHandler) {
         [blocksComponents addObject:@"recovery block"];
     }

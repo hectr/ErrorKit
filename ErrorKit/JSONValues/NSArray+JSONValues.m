@@ -32,9 +32,9 @@
 
 @implementation NSArray (ErrorKit_JSONValues)
 
-+ (NSError *)mr_rangeErrorWithIndex:(NSUInteger)index object:(id)object
++ (NSError *)mr_rangeErrorWithIndex:(NSUInteger const)index object:(id const)object
 {
-    MRErrorBuilder *builder =
+    MRErrorBuilder *const builder =
     [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
                                  code:NSKeyValueValidationError];
     builder.localizedFailureReason =
@@ -47,7 +47,7 @@
     return builder.error;
 }
 
-- (id)objectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr
+- (id)objectAtIndex:(NSUInteger const)index withError:(NSError **const)errorPtr
 {
     id object;
     if (index >= self.count) {

@@ -39,7 +39,7 @@
 
 @implementation NSMutableDictionary (ErrorKit_JSONValues)
 
-- (BOOL)setNumber:(NSNumber *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
+- (BOOL)setNumber:(NSNumber *const)candidate forKey:(id<NSCopying> const)aKey withError:(NSError **const)errorPtr
 {
     if (aKey && [candidate isKindOfClass:NSNumber.class]) {
         self[aKey] = candidate;
@@ -53,7 +53,7 @@
     return NO;
 }
 
-- (BOOL)setString:(NSString *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
+- (BOOL)setString:(NSString *const)candidate forKey:(id<NSCopying> const)aKey withError:(NSError **const)errorPtr
 {
     if (aKey && [candidate isKindOfClass:NSString.class]) {
         self[aKey] = candidate;
@@ -67,7 +67,7 @@
     return NO;
 }
 
-- (BOOL)setArray:(NSArray *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
+- (BOOL)setArray:(NSArray *const)candidate forKey:(id<NSCopying> const)aKey withError:(NSError **const)errorPtr
 {
     if (aKey && [candidate isKindOfClass:NSArray.class]) {
         self[aKey] = candidate;
@@ -81,7 +81,7 @@
     return NO;
 }
 
-- (BOOL)setDictionary:(NSDictionary *)candidate forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr
+- (BOOL)setDictionary:(NSDictionary *const)candidate forKey:(id<NSCopying> const)aKey withError:(NSError **const)errorPtr
 {
     if (aKey && [candidate isKindOfClass:NSDictionary.class]) {
         self[aKey] = candidate;

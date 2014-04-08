@@ -23,6 +23,7 @@
 
 #ifndef _ERRORKIT_CORE_H
 #define _ERRORKIT_CORE_H
+#endif
 
 #import "NSError+ErrorKit.h"
 
@@ -33,5 +34,3 @@
 #import "MRErrorFormatter+ErrorCode.h"
 
 #import "MRChainedRecoveryAttempter.h"
-
-#endif

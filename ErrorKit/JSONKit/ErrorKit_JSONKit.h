@@ -23,9 +23,8 @@
 
 #ifndef _ERRORKIT_JSONKIT_H
 #define _ERRORKIT_JSONKIT_H
+#endif
 
 #import "NSError+JSONKit.h"
 
 #import "MRErrorBuilder+JSONKit.h"
-
-#endif

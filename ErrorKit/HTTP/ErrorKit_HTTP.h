@@ -23,11 +23,10 @@
 
 #ifndef _ERRORKIT_HTTP_H
 #define _ERRORKIT_HTTP_H
+#endif
 
 #import "NSError+HTTP.h"
 
 #import "MRErrorBuilder+HTTP.h"
 
 #import "MRErrorFormatter+HTTP.h"
-
-#endif

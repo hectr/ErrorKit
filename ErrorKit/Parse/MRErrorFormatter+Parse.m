@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_Parse)
 
-+ (NSString *)debugStringWithParseCode:(NSInteger)code
++ (NSString *)debugStringWithParseCode:(NSInteger const)code
 {
     switch (code) {
         case -1:
@@ -143,7 +143,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithParseCode:(NSInteger)code
++ (NSString *)stringWithParseCode:(NSInteger const)code
 {
     switch (code) {
         case -1:

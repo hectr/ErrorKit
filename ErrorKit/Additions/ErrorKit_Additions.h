@@ -23,9 +23,9 @@
 
 #ifndef _ERRORKIT_ADDITIONS_H
 #define _ERRORKIT_ADDITIONS_H
+#endif
 
 #import "NSError+Additions.h"
 
 #import "MRErrorBuilder+Additions.h"
 
-#endif

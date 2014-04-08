@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_Accounts)
 
-+ (NSString *)debugStringWithAccountsCode:(NSInteger)code
++ (NSString *)debugStringWithAccountsCode:(NSInteger const)code
 {
     switch (code) {
         case ACErrorUnknown:
@@ -55,7 +55,7 @@
     return @(code).stringValue;
 }
 
-+ (NSString *)stringWithAccountsCode:(NSInteger)code
++ (NSString *)stringWithAccountsCode:(NSInteger const)code
 {
     switch (code) {
         case ACErrorUnknown:

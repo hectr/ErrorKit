@@ -81,7 +81,7 @@
 
 @implementation NSError (ErrorKit_CoreData_Helper)
 
-- (NSError *)errorByCombiningWithError:(NSError *)errorOrNil
+- (NSError *)errorByCombiningWithError:(NSError *const)errorOrNil
 {
     if (errorOrNil == nil) {
         return self;

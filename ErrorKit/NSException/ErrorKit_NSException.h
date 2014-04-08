@@ -23,9 +23,8 @@
 
 #ifndef _ERRORKIT_NSEXCEPTION_H
 #define _ERRORKIT_NSEXCEPTION_H
+#endif
 
 #import "MRErrorBuilder+NSException.h"
 
 #import "MRErrorFormatter+NSException.h"
-
-#endif

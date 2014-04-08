@@ -37,7 +37,7 @@
     return self.userInfo[NSURLErrorFailingURLErrorKey];
 }
 
-- (void)setFailingURL:(NSURL *)failingURL
+- (void)setFailingURL:(NSURL *const)failingURL
 {
     [self setUserInfoValue:failingURL.copy forKey:NSURLErrorFailingURLErrorKey];
 }
@@ -47,7 +47,7 @@
     return (__bridge SecTrustRef)(self.userInfo[NSURLErrorFailingURLPeerTrustErrorKey]);
 }
 
-- (void)setFailingURLPeerTrust:(SecTrustRef)failingURLPeerTrust
+- (void)setFailingURLPeerTrust:(SecTrustRef const)failingURLPeerTrust
 {
     [self setUserInfoValue:(__bridge id)failingURLPeerTrust forKey:NSURLErrorFailingURLPeerTrustErrorKey];
 }
@@ -57,7 +57,7 @@
     return self.userInfo[NSURLErrorFailingURLStringErrorKey];
 }
 
-- (void)setFailingURLString:(NSString *)failingURLString
+- (void)setFailingURLString:(NSString *const)failingURLString
 {
     [self setUserInfoValue:failingURLString.copy forKey:NSURLErrorFailingURLStringErrorKey];
 }

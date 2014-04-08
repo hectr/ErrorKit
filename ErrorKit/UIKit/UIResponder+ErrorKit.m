@@ -32,12 +32,12 @@
 
 @implementation UIResponder (ErrorKit)
 
-- (BOOL)presentError:(NSError *)error
-            delegate:(id)delegate
-  didPresentSelector:(SEL)didPresentSelector
-         contextInfo:(void *)contextInfo
+- (BOOL)presentError:(NSError *const)error
+            delegate:(id const)delegate
+  didPresentSelector:(SEL const)didPresentSelector
+         contextInfo:(void *const)contextInfo
 {
-    NSError *customizedError = [self willPresentError:error];
+    NSError *const customizedError = [self willPresentError:error];
     if (customizedError && self.nextResponder) {
         return [self.nextResponder presentError:customizedError
                                        delegate:delegate
@@ -47,16 +47,16 @@
     return NO;
 }
 
-- (BOOL)presentError:(NSError *)error
+- (BOOL)presentError:(NSError *const)error
 {
-    NSError *customizedError = [self willPresentError:error];
+    NSError *const customizedError = [self willPresentError:error];
     if (customizedError && self.nextResponder) {
         return [self.nextResponder presentError:customizedError];
     }
     return NO;
 }
 
-- (NSError *)willPresentError:(NSError *)error
+- (NSError *)willPresentError:(NSError *const)error
 {
     return error;
 }

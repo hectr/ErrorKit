@@ -32,7 +32,7 @@
 
 @implementation MRErrorFormatter (ErrorKit_CoreData)
 
-+ (NSString *)stringWithValidationError:(NSError *)error
++ (NSString *)stringWithValidationError:(NSError *const)error
 {
     switch (error.code) {
         case NSManagedObjectValidationError:

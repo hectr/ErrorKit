@@ -32,11 +32,11 @@
 
 #pragma mark - NSErrorRecoveryAttempting
 
-- (void)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex delegate:(id)delegate didRecoverSelector:(SEL)didRecoverSelector contextInfo:(void *)contextInfo
+- (void)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex delegate:(id const)delegate didRecoverSelector:(SEL const)didRecoverSelector contextInfo:(void *const)contextInfo
 {
     BOOL success = self.recoveryHandler(error, recoveryOptionIndex);
     if (!success && self.nextAttempter) {
-        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        MRErrorBuilder *const builder = [MRErrorBuilder builderWithError:error];
         builder.recoveryAttempter = self.nextAttempter;
         [self.nextAttempter attemptRecoveryFromError:builder.error
                                          optionIndex:recoveryOptionIndex
@@ -51,11 +51,11 @@
     }
 }
 
-- (BOOL)attemptRecoveryFromError:(NSError *)error optionIndex:(NSUInteger)recoveryOptionIndex
+- (BOOL)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex
 {
     BOOL success = self.recoveryHandler(error, recoveryOptionIndex);
     if (!success) {
-        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+        MRErrorBuilder *const builder = [MRErrorBuilder builderWithError:error];
         builder.recoveryAttempter = self.nextAttempter;
         success = [self.nextAttempter attemptRecoveryFromError:builder.error optionIndex:recoveryOptionIndex];
     }

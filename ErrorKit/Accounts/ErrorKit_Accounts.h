@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_ACCOUNTS_H
 #define _ERRORKIT_ACCOUNTS_H
+#endif
 
 #import "MRErrorFormatter+Accounts.h"
-
-#endif

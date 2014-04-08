@@ -23,7 +23,6 @@
 
 #ifndef _ERRORKIT_STOREKIT_H
 #define _ERRORKIT_STOREKIT_H
+#endif
 
 #import "MRErrorFormatter+StoreKit.h"
-
-#endif

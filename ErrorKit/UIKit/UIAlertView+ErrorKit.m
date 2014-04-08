@@ -44,7 +44,7 @@ static char kMRAlertViewDelegateObjectKey;
 
 @implementation MRAlertViewRecoveryDelegate
 
-- (void)invokeRecoverSelectorWithSuccess:(BOOL)success
+- (void)invokeRecoverSelectorWithSuccess:(BOOL const)success
 {
     if ([self.delegate respondsToSelector:self.selector]) {
         NSMethodSignature *signature = [self.delegate methodSignatureForSelector:self.selector];
@@ -56,12 +56,12 @@ static char kMRAlertViewDelegateObjectKey;
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *const)alertView clickedButtonAtIndex:(NSInteger const)buttonIndex
 {
-    NSInteger helpIndex = (self.error.helpAnchor ? alertView.numberOfButtons - 1 : NSNotFound);
+    NSInteger const helpIndex = (self.error.helpAnchor ? alertView.numberOfButtons - 1 : NSNotFound);
     if (helpIndex == buttonIndex) {
         // Show help
-        MRAlertViewRecoveryDelegate *delegate = [[self.class alloc] init];
+        MRAlertViewRecoveryDelegate *const delegate = [[self.class alloc] init];
         delegate.onWillDismissAlert = alertView;
         self.onWillDismissAlert =
         [[UIAlertView alloc] initWithTitle:[MRErrorFormatter stringForHelpTitleFromError:self.error]
@@ -71,8 +71,8 @@ static char kMRAlertViewDelegateObjectKey;
                          otherButtonTitles:nil];
         objc_setAssociatedObject(self.onWillDismissAlert, &kMRAlertViewDelegateObjectKey, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     } else if (alertView.cancelButtonIndex != buttonIndex) {
-        NSString *recoveryOption = [alertView buttonTitleAtIndex:buttonIndex];
-        NSUInteger recoveryOptionIndex = [self.error.localizedRecoveryOptions indexOfObject:recoveryOption];
+        NSString *const recoveryOption = [alertView buttonTitleAtIndex:buttonIndex];
+        NSUInteger const recoveryOptionIndex = [self.error.localizedRecoveryOptions indexOfObject:recoveryOption];
         // Attempt recovery
         if ([self.error.recoveryAttempter respondsToSelector:@selector(attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:)]) {
             [self.error.recoveryAttempter attemptRecoveryFromError:self.error
@@ -98,14 +98,14 @@ static char kMRAlertViewDelegateObjectKey;
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *const)alertView didDismissWithButtonIndex:(NSInteger const)buttonIndex
 {
     if ([self.delegate respondsToSelector:@selector(alertView:didDismissWithButtonIndex:)]) {
         [self.delegate alertView:alertView didDismissWithButtonIndex:buttonIndex];
     }
 }
 
-- (void)alertViewCancel:(UIAlertView *)alertView
+- (void)alertViewCancel:(UIAlertView *const)alertView
 {
 #ifdef ERROR_KIT_ADDITIONS
     if (self.error.onCancelledBlock) {
@@ -118,21 +118,21 @@ static char kMRAlertViewDelegateObjectKey;
     }
 }
 
-- (void)willPresentAlertView:(UIAlertView *)alertView
+- (void)willPresentAlertView:(UIAlertView *const)alertView
 {
     if ([self.delegate respondsToSelector:@selector(willPresentAlertView:)]) {
         [self.delegate willPresentAlertView:alertView];
     }
 }
 
-- (void)didPresentAlertView:(UIAlertView *)alertView
+- (void)didPresentAlertView:(UIAlertView *const)alertView
 {
     if ([self.delegate respondsToSelector:@selector(didPresentAlertView:)]) {
         [self.delegate didPresentAlertView:alertView];
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *const)alertView willDismissWithButtonIndex:(NSInteger const)buttonIndex
 {
     if (self.onWillDismissAlert) {
       [self.onWillDismissAlert show];
@@ -143,7 +143,7 @@ static char kMRAlertViewDelegateObjectKey;
     }
 }
 
-- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *const)alertView
 {
     if ([self.delegate respondsToSelector:@selector(alertViewShouldEnableFirstOtherButton:)]) {
         [self.delegate alertViewShouldEnableFirstOtherButton:alertView];
@@ -160,13 +160,13 @@ static char kMRAlertViewDelegateObjectKey;
 
 @implementation UIAlertView (ErrorKit)
 
-+ (instancetype)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error
++ (instancetype)alertWithTitle:(NSString *const)titleOrNil error:(NSError *const)error
 {
-    UIAlertView *alert = [self alertWithTitle:titleOrNil error:error delegate:nil didRecoverSelector:0x00 contextInfo:0x00];
+    UIAlertView *const alert = [self alertWithTitle:titleOrNil error:error delegate:nil didRecoverSelector:0x00 contextInfo:0x00];
     return alert;
 }
 
-+ (instancetype)alertWithTitle:(NSString *)titleOrNil error:(NSError *)error delegate:(id)recoveryDelegate didRecoverSelector:(SEL)selector contextInfo:(void *)context
++ (instancetype)alertWithTitle:(NSString *const)titleOrNil error:(NSError *const)error delegate:(id const)recoveryDelegate didRecoverSelector:(SEL const)selector contextInfo:(void *const)context
 {
     // Compose texts
     NSString *alertTitle;
@@ -178,7 +178,7 @@ static char kMRAlertViewDelegateObjectKey;
         alertTitle = [MRErrorFormatter stringForTitleFromError:error];
         alertMessage = [MRErrorFormatter stringForMessageFromError:error];
     }
-    NSString *cancelButton = [MRErrorFormatter stringForCancelButtonFromError:error];
+    NSString *const cancelButton = [MRErrorFormatter stringForCancelButtonFromError:error];
     // Instantiate alert delegate
     MRAlertViewRecoveryDelegate *alertDelegate;
 #ifdef ERROR_KIT_ADDITIONS
@@ -195,7 +195,7 @@ static char kMRAlertViewDelegateObjectKey;
         alertDelegate = nil;
     }
     // Instantiate alert
-	UIAlertView *alert = [[self alloc] initWithTitle:alertTitle
+	UIAlertView *const alert = [[self alloc] initWithTitle:alertTitle
                                              message:alertMessage
                                             delegate:alertDelegate
                                    cancelButtonTitle:cancelButton
@@ -207,7 +207,7 @@ static char kMRAlertViewDelegateObjectKey;
     } else {
         otherButtons = nil;
     }
-    for (NSString *option in otherButtons) {
+    for (NSString *const option in otherButtons) {
         [alert addButtonWithTitle:option];
     }
     // Add help button

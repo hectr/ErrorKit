@@ -37,20 +37,20 @@
     return self.userInfo[AVErrorDeviceKey];
 }
 
-- (void)setDeviceName:(NSString *)deviceName
+- (void)setDeviceName:(NSString *const)deviceName
 {
     [self setUserInfoValue:deviceName.copy forKey:AVErrorDeviceKey];
 }
 
 - (CMTime)time
 {
-    NSValue *value = self.userInfo[AVErrorTimeKey];
+    NSValue *const value = self.userInfo[AVErrorTimeKey];
     return value.CMTimeValue;
 }
 
-- (void)setTime:(CMTime)time
+- (void)setTime:(CMTime const)time
 {
-    NSValue *value = [NSValue valueWithCMTime:time];
+    NSValue *const value = [NSValue valueWithCMTime:time];
     [self setUserInfoValue:value forKey:AVErrorTimeKey];
 }
 
@@ -59,7 +59,7 @@
     return self.userInfo[AVErrorFileSizeKey];
 }
 
-- (void)setFileSize:(NSNumber *)fileSize
+- (void)setFileSize:(NSNumber *const)fileSize
 {
     [self setUserInfoValue:fileSize.copy forKey:AVErrorFileSizeKey];
 }
@@ -69,18 +69,18 @@
     return self.userInfo[AVErrorPIDKey];
 }
 
-- (void)setProcessID:(NSNumber *)processID
+- (void)setProcessID:(NSNumber *const)processID
 {
     [self setUserInfoValue:processID.copy forKey:AVErrorPIDKey];
 }
 
 - (BOOL)recordingSuccessfullyFinished
 {
-    NSNumber *value = self.userInfo[AVErrorRecordingSuccessfullyFinishedKey];
+    NSNumber *const value = self.userInfo[AVErrorRecordingSuccessfullyFinishedKey];
     return value.boolValue;
 }
 
-- (void)setRecordingSuccessfullyFinished:(BOOL)recordingSuccessfullyFinished
+- (void)setRecordingSuccessfullyFinished:(BOOL const)recordingSuccessfullyFinished
 {
     [self setUserInfoValue:@(recordingSuccessfullyFinished) forKey:AVErrorRecordingSuccessfullyFinishedKey];
 }
@@ -90,7 +90,7 @@
     return self.userInfo[AVErrorMediaTypeKey];
 }
 
-- (void)setMediaType:(NSString *)mediaType
+- (void)setMediaType:(NSString *const)mediaType
 {
     [self setUserInfoValue:mediaType.copy forKey:AVErrorMediaTypeKey];
 }
@@ -100,7 +100,7 @@
     return self.userInfo[AVErrorMediaSubTypeKey];
 }
 
-- (void)setMediaSubType:(NSNumber *)mediaSubType
+- (void)setMediaSubType:(NSNumber *const)mediaSubType
 {
     [self setUserInfoValue:mediaSubType.copy forKey:AVErrorMediaSubTypeKey];
 }

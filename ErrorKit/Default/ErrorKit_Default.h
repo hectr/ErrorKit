@@ -23,6 +23,7 @@
 
 #ifndef _ERRORKIT_DEFAULT_H
 #define _ERRORKIT_DEFAULT_H
+#endif
 
 #import "ErrorKit_Core.h"
 
@@ -33,5 +34,3 @@
 #import "ErrorKit_JSONValues.h"
 
 #import "ErrorKit_UIKit.h"
-
-#endif

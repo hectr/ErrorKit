@@ -23,11 +23,10 @@
 
 #ifndef _ERRORKIT_PARSE_H
 #define _ERRORKIT_PARSE_H
+#endif
 
 #import "NSError+Parse.h"
 
 #import "MRErrorBuilder+Parse.h"
 
 #import "MRErrorFormatter+Parse.h"
-
-#endif

@@ -40,7 +40,7 @@
 - (CMTime)time
 {
     CMTime time;
-    NSValue *value = self.userInfo[AVErrorTimeKey];
+    NSValue *const value = self.userInfo[AVErrorTimeKey];
     [value getValue:&time];
     return time;
 }
@@ -57,7 +57,7 @@
 
 - (BOOL)recordingSuccessfullyFinished
 {
-    NSNumber *value = self.userInfo[AVErrorRecordingSuccessfullyFinishedKey];
+    NSNumber *const value = self.userInfo[AVErrorRecordingSuccessfullyFinishedKey];
     return value.boolValue;
 }
 

@@ -32,9 +32,9 @@
 
 @implementation NSJSONSerialization (ErrorKit_JSONValues)
 
-+ (NSError *)mr_validationErrorWithJSONData:(id)data pattern:(id)pattern value:(id)value
++ (NSError *)mr_validationErrorWithJSONData:(id const)data pattern:(id const)pattern value:(id const)value
 {
-    MRErrorBuilder *builder =
+    MRErrorBuilder *const builder =
     [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
                                  code:NSKeyValueValidationError];
     if (![data isKindOfClass:NSData.class]) {
@@ -59,13 +59,13 @@
     return builder.error;
 }
 
-+ (NSError *)mr_validationErrorWithJSONObject:(id)object pattern:(id)pattern
++ (NSError *)mr_validationErrorWithJSONObject:(id const)object pattern:(id const)pattern
 {
-    MRErrorBuilder *builder =
+    MRErrorBuilder *const builder =
     [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
                                  code:NSKeyValueValidationError];
-    NSString *key = MRErrorKitString(@"JSON value", nil);
-    NSString *optionalKey = [key stringByAppendingString:@"?"];
+    NSString *const key = MRErrorKitString(@"JSON value", nil);
+    NSString *const optionalKey = [key stringByAppendingString:@"?"];
     builder.localizedDescription =
     [MRErrorFormatter stringWithJSONPattern:pattern
                                      forKey:optionalKey];
@@ -79,7 +79,7 @@
     return builder.error;
 }
 
-+ (NSArray *)arrayWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError *__autoreleasing *)errorPtr
++ (NSArray *)arrayWithData:(NSData *const)data options:(NSJSONReadingOptions const)opt error:(NSError *__autoreleasing *const)errorPtr
 {
     NSArray *candidate;
     if ([data isKindOfClass:NSData.data]) {
@@ -98,7 +98,7 @@
     return nil;
 }
 
-+ (NSDictionary *)dictionaryWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError *__autoreleasing *)errorPtr
++ (NSDictionary *)dictionaryWithData:(NSData *const)data options:(NSJSONReadingOptions const)opt error:(NSError *__autoreleasing *const)errorPtr
 {
     NSDictionary *candidate;
     if ([data isKindOfClass:NSData.data]) {
@@ -117,7 +117,7 @@
     return nil;
 }
 
-+ (NSData *)dataWithArray:(NSArray *)obj options:(NSJSONWritingOptions)opt error:(NSError *__autoreleasing *)errorPtr
++ (NSData *)dataWithArray:(NSArray *const)obj options:(NSJSONWritingOptions const)opt error:(NSError *__autoreleasing *const)errorPtr
 {
     if ([obj isKindOfClass:NSArray.class]) {
         return [self dataWithJSONObject:obj options:opt error:errorPtr];
@@ -128,7 +128,7 @@
     return nil;
 }
 
-+ (NSData *)dataWithDictionary:(NSDictionary *)obj options:(NSJSONWritingOptions)opt error:(NSError *__autoreleasing *)errorPtr
++ (NSData *)dataWithDictionary:(NSDictionary *const)obj options:(NSJSONWritingOptions const)opt error:(NSError *__autoreleasing *const)errorPtr
 {
     if ([obj isKindOfClass:NSDictionary.class]) {
         return [self dataWithJSONObject:obj options:opt error:errorPtr];

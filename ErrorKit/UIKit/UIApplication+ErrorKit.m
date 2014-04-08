@@ -43,12 +43,12 @@
 
 @implementation UIApplication (ErrorKit)
 
-- (BOOL)presentError:(NSError *)error
-            delegate:(id)delegate
-  didPresentSelector:(SEL)didPresentSelector
-         contextInfo:(void *)contextInfo
+- (BOOL)presentError:(NSError *const)error
+            delegate:(id const)delegate
+  didPresentSelector:(SEL const)didPresentSelector
+         contextInfo:(void *const)contextInfo
 {
-    NSError *customizedError = [self willPresentError:error];
+    NSError *const customizedError = [self willPresentError:error];
     if (customizedError) {
         [[UIAlertView alertWithTitle:nil
                                error:customizedError
@@ -60,9 +60,9 @@
     return NO;
 }
 
-- (BOOL)presentError:(NSError *)error
+- (BOOL)presentError:(NSError *const)error
 {
-    NSError *customizedError = [self willPresentError:error];
+    NSError *const customizedError = [self willPresentError:error];
     if (customizedError) {
         [[UIAlertView alertWithTitle:nil error:customizedError] show];
         return YES;
@@ -70,7 +70,7 @@
     return NO;
 }
 
-- (NSError *)willPresentError:(NSError *)error
+- (NSError *)willPresentError:(NSError *const)error
 {
     if ([self.delegate respondsToSelector:@selector(application:willPresentError:)]) {
         return [(id)self.delegate application:self willPresentError:error];
