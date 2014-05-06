@@ -1,3 +1,6 @@
+
+link_with 'TravisDemo', 'Travis-DemoTests'
+
 pod 'ErrorKit/Default', :path => '../'
 pod 'ErrorKit/Accounts', :path => '../'
 pod 'ErrorKit/AdMob', :path => '../'
@@ -20,3 +23,6 @@ pod 'ErrorKit/TransitionKit', :path => '../'
 pod 'ErrorKit/iAD', :path => '../'
 pod 'ErrorKit/UIKit', :path => '../'
 pod 'ErrorKit/VeriJSON', :path => '../'
+
+pod 'AFIncrementalStore', "~> 0.5.1"
+

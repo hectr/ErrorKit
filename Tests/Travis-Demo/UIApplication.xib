@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
+            <connections>
+                <outlet property="delegate" destination="bYg-Ix-Cfg" id="h4M-LL-qlT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <customObject id="bYg-Ix-Cfg" userLabel="App Delegate" customClass="MRTravisAppDelegate">
+            <connections>
+                <outlet property="window" destination="Na2-4i-xf1" id="dH3-mN-cSU"/>
+            </connections>
+        </customObject>
+        <window opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" visibleAtLaunch="YES" id="Na2-4i-xf1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="rootViewController" destination="YfB-Tx-WHg" id="2h1-bt-WdQ"/>
+            </connections>
+        </window>
+        <navigationController definesPresentationContext="YES" id="YfB-Tx-WHg">
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <navigationBar key="navigationBar" contentMode="scaleToFill" id="A1k-6D-U1O">
+                <autoresizingMask key="autoresizingMask"/>
+            </navigationBar>
+            <viewControllers>
+                <tableViewController id="2m0-0E-KJn" customClass="MRJobsTableViewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5EF-Vl-EkM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="2m0-0E-KJn" id="8Xp-vH-lJX"/>
+                            <outlet property="delegate" destination="2m0-0E-KJn" id="PXa-nt-D56"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Item" id="LYC-GU-Ci6"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+            </viewControllers>
+        </navigationController>
+    </objects>
+</document>

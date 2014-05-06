@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Build" syncable="YES">
+        <attribute name="buildId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="finishedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="result" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inverse_build" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Job" inverseName="build" inverseEntity="Job" syncable="YES"/>
+        <relationship name="inverse_lastBuild" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repository" inverseName="lastBuild" inverseEntity="Repository" syncable="YES"/>
+        <relationship name="repository" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repository" inverseName="builds" inverseEntity="Repository" syncable="YES"/>
+    </entity>
+    <entity name="Job" representedClassName="MRJob" syncable="YES">
+        <attribute name="allowFailure" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="jobId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="local_orderDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="queue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="build" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Build" inverseName="inverse_build" inverseEntity="Build" syncable="YES"/>
+        <relationship name="repository" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repository" inverseName="jobs" inverseEntity="Repository" syncable="YES"/>
+    </entity>
+    <entity name="Repository" syncable="YES">
+        <attribute name="publicKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repositoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repositoryId" attributeType="String" syncable="YES"/>
+        <attribute name="slug" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="builds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Build" inverseName="repository" inverseEntity="Build" syncable="YES"/>
+        <relationship name="jobs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Job" inverseName="repository" inverseEntity="Job" syncable="YES"/>
+        <relationship name="lastBuild" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Build" inverseName="inverse_lastBuild" inverseEntity="Build" syncable="YES"/>
+    </entity>
+    <fetchRequest name="Repository" entity="Repository" predicateString="repositoryId == $REPOSITORY_ID"/>
+    <elements>
+        <element name="Build" positionX="-54" positionY="135" width="128" height="210"/>
+        <element name="Job" positionX="115" positionY="-18" width="128" height="165"/>
+        <element name="Repository" positionX="-288" positionY="-25" width="128" height="148"/>
+    </elements>
+</model>
