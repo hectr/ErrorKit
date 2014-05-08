@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   s.subspec 'AFNetworking' do |af|
     af.source_files = 'ErrorKit/AFNetworking'
     af.dependency 'AFNetworking', '~> 1.3.3'
-    af.dependency 'ErrorKit/Core'
+    af.dependency 'ErrorKit/HTTP'
     af.prefix_header_contents = '#define ERROR_KIT_AFNETWORKING 1'
   end
   
@@ -86,7 +86,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'JSONValues' do |jv|
     jv.source_files = 'ErrorKit/JSONValues'
-    jv.dependency 'ErrorKit/Core'
+    jv.dependency 'ErrorKit/NSException'
     jv.prefix_header_contents = '#define ERROR_KIT_JSON_VALUES 1'
   end
 
