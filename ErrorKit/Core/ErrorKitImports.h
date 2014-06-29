@@ -27,6 +27,8 @@
 
 #import <objc/runtime.h>
 
+#import "ErrorKit_Core.h"
+
 #ifdef ERROR_KIT_ACCOUNTS
 #import "ErrorKit_Accounts.h"
 #endif
@@ -45,10 +47,6 @@
 
 #ifdef ERROR_KIT_AVFOUNDATION
 #import "ErrorKit_AVFoundation.h"
-#endif
-
-#ifdef ERROR_KIT_CORE
-#import "ErrorKit_Core.h"
 #endif
 
 #ifdef ERROR_KIT_CORE_DATA
