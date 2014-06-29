@@ -161,7 +161,7 @@
     }
 }
 
-- (void)addRecoveryOption:(NSString *const)localizedRecoveryOption withBlock:(void(^)(NSError *))recoveryOptionAttempter
+- (void)addRecoveryOption:(NSString *const)localizedRecoveryOption withBlock:(void(^const)(NSError *))recoveryOptionAttempter
 {
     NSParameterAssert(localizedRecoveryOption);
     NSParameterAssert(recoveryOptionAttempter);
@@ -182,7 +182,7 @@
         [self.localizedRecoveryOptions arrayByAddingObject:localizedRecoveryOption];
 }
 
-- (void)addRecoveryOptions:(NSArray *const)localizedRecoveryOptions withBlock:(void(^)(NSError *, NSUInteger))recoveryOptionsAttempter
+- (void)addRecoveryOptions:(NSArray *const)localizedRecoveryOptions withBlock:(void(^const)(NSError *, NSUInteger))recoveryOptionsAttempter
 {
     NSParameterAssert(localizedRecoveryOptions);
     NSParameterAssert(recoveryOptionsAttempter);
@@ -206,9 +206,10 @@
 
 - (NSError *)error
 {
-    return [NSError errorWithDomain:self.domain
-                               code:self.code
-                           userInfo:self.userInfo];
+    NSError *const error = [NSError errorWithDomain:self.domain
+                                               code:self.code
+                                           userInfo:self.userInfo];
+    return error;
 }
 
 #pragma mark Accessor methods
@@ -399,7 +400,9 @@
 
 - (NSString *)debugString
 {
-    return [MRErrorFormatter debugStringWithDomain:self.domain code:self.code];
+    NSString *const debugString =
+    [MRErrorFormatter debugStringWithDomain:self.domain code:self.code];
+    return debugString;
 }
 
 - (BOOL)isCancelledError

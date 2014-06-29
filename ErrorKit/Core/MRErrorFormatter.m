@@ -359,12 +359,15 @@
 
 - (NSString *)description
 {
+    NSString *description;
     if (self.shortenStrings) {
-        return [NSString stringWithFormat:@"<%@: %p shortenStrings=1>"
-                                          , NSStringFromClass(self.class)
-                                          , self];
+        description = [NSString stringWithFormat:@"<%@: %p shortenStrings=1>"
+                            , NSStringFromClass(self.class)
+                            , self];
+    } else {
+        description = [super description];
     }
-    return [super description];
+    return description;
 }
 
 @end
@@ -386,5 +389,6 @@ NSString *MRErrorKitString(NSString *const key, NSString *const comment)
             table = @"ErrorKit";
         }
     });
-    return [bundle localizedStringForKey:key value:key table:table];
+    NSString *const string = [bundle localizedStringForKey:key value:key table:table];
+    return string;
 }

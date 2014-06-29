@@ -32,7 +32,7 @@
 
 @implementation UIResponder (ErrorKit_FacebookSDK)
 
-- (BOOL)handleFacebookAuthError:(NSError *const)error withLoginBlock:(void(^)(NSError *))loginBlock
+- (BOOL)handleFacebookAuthError:(NSError *const)error withLoginBlock:(void(^const)(NSError *))loginBlock
 {
     return [self.nextResponder handleFacebookAuthError:error withLoginBlock:loginBlock];
 }
@@ -42,7 +42,7 @@
     return [self.nextResponder handleFacebookRequestPermissionError:error];
 }
 
-- (BOOL)handleFacebookAPICallError:(NSError *const)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock
+- (BOOL)handleFacebookAPICallError:(NSError *const)error withPermissionBlock:(void(^const)(NSError *))permissionBlock andRetryBlock:(void(^const)(NSError *))retryBlock
 {
     return [self.nextResponder handleFacebookAPICallError:error withPermissionBlock:permissionBlock andRetryBlock:retryBlock];
 }

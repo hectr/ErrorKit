@@ -66,7 +66,8 @@
     } else {
         format = MRErrorKitString(@"'%@' is not optional and must be %@.", nil);
     }
-    return [NSString stringWithFormat:format, key, type];
+    NSString *const string = [NSString stringWithFormat:format, key, type];
+    return string;
 }
 
 @end

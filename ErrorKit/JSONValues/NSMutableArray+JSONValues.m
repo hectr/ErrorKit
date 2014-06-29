@@ -51,7 +51,8 @@
     builder.validationValue = value;
     builder.validationObject = object;
 #endif
-    return builder.error;
+    NSError *const error = builder.error;
+    return error;
 }
 
 - (BOOL)addObject:(id const)anObject withError:(NSError **const)errorPtr

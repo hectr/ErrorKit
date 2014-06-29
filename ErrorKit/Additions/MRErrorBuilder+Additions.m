@@ -32,12 +32,12 @@
 
 @implementation MRErrorBuilder (ErrorKit_Additions)
 
-- (void (^)(NSError *))onCancelledBlock
+- (void (^const)(NSError *))onCancelledBlock
 {
     return self.userInfo[MRErrorKitOnCancelledBlockKey];
 }
 
-- (void)setOnCancelledBlock:(void (^)(NSError *))onCancelledBlock
+- (void)setOnCancelledBlock:(void (^const)(NSError *))onCancelledBlock
 {
     [self setUserInfoValue:[onCancelledBlock copy] forKey:MRErrorKitOnCancelledBlockKey];
 }

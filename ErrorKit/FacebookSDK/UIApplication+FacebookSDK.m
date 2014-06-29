@@ -33,7 +33,7 @@
 @implementation UIApplication (ErrorKit_FacebookSDK)
 
 // TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
-- (BOOL)handleFacebookAuthError:(NSError *const)error withLoginBlock:(void(^)(NSError *))loginBlock
+- (BOOL)handleFacebookAuthError:(NSError *const)error withLoginBlock:(void(^const)(NSError *))loginBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
     if (error.fberrorShouldNotifyUser) {
@@ -84,7 +84,8 @@
         builder.localizedDescription  = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
         builder.localizedFailureReason = MRErrorKitString(@"Error. Please try again later.", nil);
     }
-    return [self presentError:builder.error];
+    NSError *const customizedError = builder.error;
+    return [self presentError:customizedError];
 }
 
 // TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
@@ -105,11 +106,12 @@
         builder.localizedDescription = MRErrorKitString(@"Permission Error", nil);
         builder.localizedFailureReason = MRErrorKitString(@"Unable to request permissions", nil);
     }
-    return [self presentError:builder.error];
+    NSError *const customizedError = builder.error;
+    return [self presentError:customizedError];
 }
 
 // TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
-- (BOOL)handleFacebookAPICallError:(NSError *const)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock
+- (BOOL)handleFacebookAPICallError:(NSError *const)error withPermissionBlock:(void(^const)(NSError *))permissionBlock andRetryBlock:(void(^const)(NSError *))retryBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
     if (error.fberrorCategory == FBErrorCategoryRetry ||
@@ -161,7 +163,8 @@
             builder.localizedFailureReason = MRErrorKitString(@"Unable to fullfill request. Please try again later.", nil);
         }
     }
-    return [self presentError:builder.error];
+    NSError *const customizedError = builder.error;
+    return [self presentError:customizedError];
 }
 
 @end

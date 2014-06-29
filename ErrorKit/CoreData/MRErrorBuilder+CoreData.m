@@ -131,7 +131,8 @@
         builder = [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain code:NSValidationMultipleErrorsError];
         builder.detailedErrors = @[ self.error, (errorOrNil.detailedErrors ?: errorOrNil) ];
     }
-    return builder.error;
+    NSError *const combinedError = builder.error;
+    return combinedError;
 }
 
 @end

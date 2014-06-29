@@ -39,7 +39,7 @@ NSString *const MRErrorKitLocalizedDismissButtonTitleKey = @"MRErrorKitLocalized
 
 @implementation NSError (ErrorKit_Additions)
 
-- (void (^)(NSError *))onCancelledBlock
+- (void (^const)(NSError *))onCancelledBlock
 {
     return self.userInfo[MRErrorKitOnCancelledBlockKey];
 }

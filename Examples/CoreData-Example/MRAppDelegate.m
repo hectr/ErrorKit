@@ -66,7 +66,8 @@
     } else if (error.code == NSPersistentStoreIncompatibleVersionHashError) {
         builder.localizedFailureReason = MRErrorKitString(@"Attempting to access data created with a different version of the application.", nil);
     }
-    return builder.error;
+    NSError *const customizedError = builder.error;
+    return customizedError;
 }
 
 #pragma mark - IBAction methods
@@ -92,7 +93,8 @@
 {
     NSFileManager *const defaultManager = NSFileManager.defaultManager;
     NSArray *const URLs = [defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-    return URLs.lastObject;
+    NSURL *const URL = URLs.lastObject;
+    return URL;
 }
 
 #pragma mark - Core Data stack

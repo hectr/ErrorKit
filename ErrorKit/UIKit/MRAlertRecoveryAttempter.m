@@ -44,9 +44,10 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 @implementation MRAlertRecoveryAttempter
 
-+ (instancetype)attempterWithBlock:(UIAlertView *(^)(NSError *, NSUInteger, BOOL *))handler
++ (instancetype)attempterWithBlock:(UIAlertView *(^const)(NSError *, NSUInteger, BOOL *))handler
 {
-    return [(MRAlertRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *const error, NSUInteger const recoveryOption, BOOL *const finished) {
+    MRAlertRecoveryAttempter *const attempter =
+    [(MRAlertRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *const error, NSUInteger const recoveryOption, BOOL *const finished) {
         BOOL didRecover = NO;
         UIAlertView *const alert = handler(error, recoveryOption, &didRecover);
         *finished = (alert == nil);
@@ -56,9 +57,10 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
         [alert show];
         return didRecover;
     }];
+    return attempter;
 }
 
-- (id)initWithBlock:(BOOL (^)(NSError *, NSUInteger, BOOL *))handler
+- (id)initWithBlock:(BOOL (^const)(NSError *, NSUInteger, BOOL *))handler
 {
     NSParameterAssert(handler);
     self = [super init];
@@ -151,10 +153,11 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 - (BOOL)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex
 {
     self.didRecover = self.recoveryHandler(error, recoveryOptionIndex, &_invokeDidRecoverSelector);
+    BOOL const recovered = self.didRecover;
     if (self.invokeDidRecoverSelector) {
-        [self invokeRecoverSelector:self.selector withDelegate:self.delegate success:self.didRecover contextInfo:self.contextInfo];
+        [self invokeRecoverSelector:self.selector withDelegate:self.delegate success:recovered contextInfo:self.contextInfo];
     }
-    return self.didRecover;
+    return recovered;
 }
 
 
@@ -174,40 +177,45 @@ static char kMRDelegateRecoveryAttempterAssociationKey;
 
 - (NSString *)description
 {
+    id const delegate = self.delegate;
+    id const recoveryHandler = self.recoveryHandler;
+    id const delegateHandler = self.delegateHandler;
     NSString *delegateString;
-    if (self.delegate) {
-        delegateString = [NSString stringWithFormat:@"delegate %p"
-                                                    , self.delegate];
+    if (delegate) {
+        delegateString = [NSString stringWithFormat:@"delegate %p" , delegate];
     } else {
         delegateString = @"";
     }
     NSMutableArray *const blocksComponents = [NSMutableArray arrayWithCapacity:2];
-    if (self.recoveryHandler) {
+    if (recoveryHandler) {
         [blocksComponents addObject:@"recovery block"];
     }
-    if (self.delegateHandler) {
+    if (delegateHandler) {
         [blocksComponents addObject:@"delegate block"];
     }
     NSString *blocksString = [blocksComponents componentsJoinedByString:@" and "];
     if (blocksComponents.count > 0){
+        NSString *const separator = (delegate ? @", " : @"");
         blocksString = [NSString stringWithFormat:@"with %@%@"
-                                                  , blocksString
-                                                  , (self.delegate ? @", " : @"")];
+                            , blocksString
+                            , separator];
     }
     NSString *associatedString;
     if (self.associatedObject) {
+        NSString *const separator = (delegate || recoveryHandler || delegateHandler ? @", " : @"");
         associatedString = [NSString stringWithFormat:( @", associated with %p%@")
-                            , self.associatedObject
-                            , (self.delegate || self.recoveryHandler || self.delegateHandler ? @", " : @"")];
+                                , self.associatedObject
+                                , separator];
     } else {
-        associatedString = (self.delegate || self.recoveryHandler || self.delegateHandler ? @", " : @"");
+        associatedString = (delegate || recoveryHandler || delegateHandler ? @", " : @"");
     }
-    return [NSString stringWithFormat:@"<%@: %p%@%@%@>"
-            , NSStringFromClass(self.class)
-            , self
-            , associatedString
-            , blocksString
-            , delegateString];
+    NSString *const description = [NSString stringWithFormat:@"<%@: %p%@%@%@>"
+                                        , NSStringFromClass(self.class)
+                                        , self
+                                        , associatedString
+                                        , blocksString
+                                        , delegateString];
+    return description;
 }
 
 @end

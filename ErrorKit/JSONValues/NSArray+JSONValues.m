@@ -44,7 +44,8 @@
     builder.validationValue = @(index);
     builder.validationObject = self;
 #endif
-    return builder.error;
+    NSError *const error = builder.error;
+    return error;
 }
 
 - (id)objectAtIndex:(NSUInteger const)index withError:(NSError **const)errorPtr

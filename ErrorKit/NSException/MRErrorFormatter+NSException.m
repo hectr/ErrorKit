@@ -62,7 +62,8 @@
 #endif
            };
     });
-    return (__localizedDescriptions[name] ?: MRErrorKitString(@"Exception caught", nil));
+    NSString *const string = (__localizedDescriptions[name] ?: MRErrorKitString(@"Exception caught", nil));
+    return string;
 }
 
 @end

@@ -56,7 +56,8 @@
         builder.validationObject = data;
 #endif
     }
-    return builder.error;
+    NSError *const validationError = builder.error;
+    return validationError;
 }
 
 + (NSError *)mr_validationErrorWithJSONObject:(id const)object pattern:(id const)pattern
@@ -76,7 +77,8 @@
         builder.validationValue = NSStringFromClass([object class]);
         builder.validationObject = object;
 #endif
-    return builder.error;
+    NSError *const validationError = builder.error;
+    return validationError;
 }
 
 + (NSArray *)arrayWithData:(NSData *const)data options:(NSJSONReadingOptions const)opt error:(NSError *__autoreleasing *const)errorPtr

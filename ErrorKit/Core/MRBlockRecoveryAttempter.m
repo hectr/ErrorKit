@@ -30,16 +30,18 @@
 
 @implementation MRBlockRecoveryAttempter
 
-+ (instancetype)attempterWithBlock:(void (^)(NSError *, NSUInteger, BOOL *))handler
++ (instancetype)attempterWithBlock:(void (^const)(NSError *, NSUInteger, BOOL *))handler
 {
-    return [(MRBlockRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *const error, NSUInteger const recoveryOption) {
+    MRBlockRecoveryAttempter *const attempter =
+    [(MRBlockRecoveryAttempter *)[self alloc] initWithBlock:^BOOL(NSError *const error, NSUInteger const recoveryOption) {
         BOOL didRecover = NO;
         handler(error, recoveryOption, &didRecover);
         return didRecover;
     }];
+    return attempter;
 }
 
-- (id)initWithBlock:(BOOL (^)(NSError *, NSUInteger))handler
+- (id)initWithBlock:(BOOL (^const)(NSError *, NSUInteger))handler
 {
     NSParameterAssert(handler);
     self = [super init];
@@ -64,17 +66,20 @@
 
 - (BOOL)attemptRecoveryFromError:(NSError *const)error optionIndex:(NSUInteger const)recoveryOptionIndex
 {
-    return self.recoveryHandler(error, recoveryOptionIndex);
+    BOOL const recovered = self.recoveryHandler(error, recoveryOptionIndex);
+    return recovered;
 }
 
 #pragma mark - NSObject
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@: %p, recovery block %p>"
-            , NSStringFromClass(self.class)
-            , self
-            , self.recoveryHandler];
+    NSString *const format = @"<%@: %p, recovery block %p>";
+    NSString *const description = [NSString stringWithFormat:format
+                                        , NSStringFromClass(self.class)
+                                        , self
+                                        , self.recoveryHandler];
+    return description;
 }
 
 @end

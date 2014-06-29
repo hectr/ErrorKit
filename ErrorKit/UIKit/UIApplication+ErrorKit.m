@@ -72,11 +72,14 @@
 
 - (NSError *)willPresentError:(NSError *const)error
 {
-    if ([self.delegate respondsToSelector:@selector(application:willPresentError:)]) {
-        return [(id)self.delegate application:self willPresentError:error];
+    NSError *customizedError;
+    id const delegate = self.delegate;
+    if ([delegate respondsToSelector:@selector(application:willPresentError:)]) {
+        customizedError = [delegate application:self willPresentError:error];
     } else {
-        return error;
+        customizedError = error;
     }
+    return customizedError;
 }
 
 @end

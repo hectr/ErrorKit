@@ -75,7 +75,8 @@
         builder.validationValue = value;
 #endif
     }
-    return builder.error;
+    NSError *const validationError = builder.error;
+    return validationError;
 }
 
 - (NSNumber *)numberForKey:(id const)aKey withError:(NSError **const)errorPtr

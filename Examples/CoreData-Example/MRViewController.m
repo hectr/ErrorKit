@@ -215,8 +215,11 @@ static NSString *const __letters[] =
 {
     NSFetchedResultsController *const resultsController = self.resultsController;
     NSArray *const sections = resultsController.sections;
-    id const sectionInfo = [sections objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    NSError *error;
+    id<NSFetchedResultsSectionInfo> const sectionInfo = [sections objectAtIndex:section withError:&error];
+    MRNotErrorAssert(error);
+    NSUInteger const numberOfObjects = sectionInfo.numberOfObjects;
+    return numberOfObjects;
 }
 
 // Returns a cell for the given index path.
@@ -373,7 +376,8 @@ static NSString *const __letters[] =
         builder.helpAnchor = ([builder.helpAnchor stringByAppendingString:@"\n\n"] ?: @"");
         builder.helpAnchor = [builder.helpAnchor stringByAppendingString:NSLocalizedString(@"By creating a new store you will lose all previously persited data.", nil)];
     }
-    return builder.error;
+    NSError *const customizedError = builder.error;
+    return customizedError;
 }
 
 #pragma mark NSObject methods

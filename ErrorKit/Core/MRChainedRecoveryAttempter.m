@@ -66,10 +66,12 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@: %p, next attempter %p>"
-            , NSStringFromClass(self.class)
-            , self
-            , self.nextAttempter];
+    NSString *const format = @"<%@: %p, next attempter %p>";
+    NSString *const description = [NSString stringWithFormat:format
+                                        , NSStringFromClass(self.class)
+                                        , self
+                                        , self.nextAttempter];
+    return description;
 }
 
 @end
