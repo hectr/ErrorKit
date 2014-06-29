@@ -51,9 +51,9 @@
 #define MRNotErrorAssert(error)                         \
     do {                                                \
         NSAssert(![(error) isKindOfClass:NSError.class] \
-                , @"%@ (code: %d, domain:%@)"           \
+                , @"%@ (code: %ld, domain:%@)"          \
                 , [error localizedDescription]          \
-                , [error code]                          \
+                , (long)[error code]                    \
                 , [error domain]);                      \
     } while(0)
 #else
