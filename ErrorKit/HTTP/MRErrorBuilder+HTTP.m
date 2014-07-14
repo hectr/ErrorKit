@@ -73,11 +73,9 @@
 
 - (BOOL)isHTTPError
 {
-#ifdef ERROR_KIT_AFNETWORKING
-    if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
+    if ([self.domain isEqualToString:@"AFNetworkingErrorDomain"]) {
         return YES;
     }
-#endif
     return [self.domain isEqualToString:NSURLErrorDomain];
 }
 

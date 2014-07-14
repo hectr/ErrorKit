@@ -39,7 +39,7 @@
 
 @interface MRErrorBuilder (ErrorKit_HTTP_Helper)
 
-/// Returns YES if the domain of the receiver is `NSURLErrorDomain` (or `AFNetworkingErrorDomain`).
+/// Returns YES if the domain of the receiver is `NSURLErrorDomain` (or `@"AFNetworkingErrorDomain"`).
 - (BOOL)isHTTPError;
 
 @end

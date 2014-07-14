@@ -191,7 +191,7 @@
 
 /**
  Returns YES if the error code corresponds to a cancelled operation in 
- `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, 
+ `NSURLErrorDomain` (or `@"AFNetworkingErrorDomain"`), `NSCocoaErrorDomain`, 
  `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
  **/
 - (BOOL)isCancelledError;

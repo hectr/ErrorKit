@@ -407,12 +407,6 @@
 
 - (BOOL)isCancelledError
 {
-#ifdef ERROR_KIT_AFNETWORKING
-    if ([self.domain isEqualToString:AFNetworkingErrorDomain]) {
-        return (self.code == NSURLErrorUserCancelledAuthentication ||
-                self.code == NSURLErrorCancelled);
-    }
-#endif
 #ifdef ERROR_KIT_CORE_LOCATION
     if ([self.domain isEqualToString:kCLErrorDomain]) {
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
@@ -433,7 +427,8 @@
         return (self.code == SKErrorPaymentCancelled);
     }
 #endif
-    if ([self.domain isEqualToString:NSURLErrorDomain]) {
+    if ([self.domain isEqualToString:NSURLErrorDomain]
+        || [self.domain isEqualToString:@"AFNetworkingErrorDomain"]) {
         return (self.code == NSURLErrorUserCancelledAuthentication ||
                 self.code == NSURLErrorCancelled);
     }

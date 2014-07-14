@@ -29,7 +29,7 @@
 
 /**
  Returns YES if the domain of the receiver is `NSURLErrorDomain`
- (or `AFNetworkingErrorDomain`).
+ (or `@"AFNetworkingErrorDomain"`).
  */
 - (BOOL)isHTTPError;
 

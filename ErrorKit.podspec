@@ -42,10 +42,17 @@ Pod::Spec.new do |s|
     ad.dependency 'ErrorKit/Core'
     ad.prefix_header_contents = '#define ERROR_KIT_ADMOB 1'
   end
-  
-  s.subspec 'AFNetworking' do |af|
+
+  s.subspec 'AFNetworking_v1' do |af|
     af.source_files = 'ErrorKit/AFNetworking'
     af.dependency 'AFNetworking', '~> 1.3.3'
+    af.dependency 'ErrorKit/HTTP'
+    af.prefix_header_contents = '#define ERROR_KIT_AFNETWORKING 1'
+  end
+
+  s.subspec 'AFNetworking' do |af|
+    af.source_files = 'ErrorKit/AFNetworking'
+    af.dependency 'AFNetworking', '~> 2.3.1'
     af.dependency 'ErrorKit/HTTP'
     af.prefix_header_contents = '#define ERROR_KIT_AFNETWORKING 1'
   end

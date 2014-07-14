@@ -77,7 +77,7 @@
 + (NSString *)stringForTitleFromError:(NSError *const)error;
 {
 #ifdef ERROR_KIT_AFNETWORKING
-    if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
+    if ([error.domain isEqualToString:@"AFNetworkingErrorDomain"]) {
         if (error.failingURLResponse) {
             NSInteger const code = error.failingURLResponse.statusCode;
             NSString *const localizedString = [NSHTTPURLResponse localizedStringForStatusCode:code];
@@ -95,7 +95,7 @@
 {
     NSMutableArray *const stringComponents = [NSMutableArray arrayWithCapacity:3];
 #ifdef ERROR_KIT_AFNETWORKING
-    if ([error.domain isEqualToString:AFNetworkingErrorDomain]) {
+    if ([error.domain isEqualToString:@"AFNetworkingErrorDomain"]) {
         if (error.failingURLResponse && error.localizedDescription) {
             [stringComponents addObject:error.localizedDescription];
         }
@@ -175,7 +175,8 @@
         return [MRErrorFormatter debugStringWithXMLParserCode:code];
     }
 #ifdef ERROR_KIT_HTTP
-    else if ([domain isEqualToString:NSURLErrorDomain]) {
+    else if ([domain isEqualToString:NSURLErrorDomain]
+             || [domain isEqualToString:@"AFNetworkingErrorDomain"]) {
       return [MRErrorFormatter debugStringWithURLCode:code];
     }
 #endif
@@ -187,11 +188,6 @@
 #ifdef ERROR_KIT_ADMOB
     else if ([domain isEqualToString:kGADErrorDomain]) {
         return [MRErrorFormatter debugStringWithAdmobCode:code];
-    }
-#endif
-#ifdef ERROR_KIT_AFNETWORKING
-    else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
-        return [MRErrorFormatter debugStringWithURLCode:code];
     }
 #endif
 #ifdef ERROR_KIT_AVFOUNDATION
@@ -255,7 +251,8 @@
         return [MRErrorFormatter stringWithXMLParserCode:code];
     }
 #ifdef ERROR_KIT_HTTP
-    else if ([domain isEqualToString:NSURLErrorDomain]) {
+    else if ([domain isEqualToString:NSURLErrorDomain]
+             || [domain isEqualToString:@"AFNetworkingErrorDomain"]) {
       return [MRErrorFormatter stringWithURLCode:code];
     }
 #endif
@@ -267,11 +264,6 @@
 #ifdef ERROR_KIT_ADMOB
     else if ([domain isEqualToString:kGADErrorDomain]) {
         return [MRErrorFormatter stringWithAdmobCode:code];
-    }
-#endif
-#ifdef ERROR_KIT_AFNETWORKING
-    else if ([domain isEqualToString:AFNetworkingErrorDomain]) {
-        return [MRErrorFormatter stringWithURLCode:code];
     }
 #endif
 #ifdef ERROR_KIT_AVFOUNDATION

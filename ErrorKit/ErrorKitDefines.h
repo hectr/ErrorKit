@@ -78,7 +78,7 @@
 #define ERROR_KIT_TRANSITION_KIT 1
 #endif
 
-#ifdef UIKIT_STATIC_INLINE
+#if defined(UIKIT_STATIC_INLINE) | defined(UIKIT_EXTERN)
 #define ERROR_KIT_UI_KIT 1
 #define ERROR_KIT_DEFAULT 1
 #endif
