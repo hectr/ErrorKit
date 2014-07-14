@@ -94,6 +94,14 @@
     return candidate;
 }
 
+- (BOOL)numberForKey:(id const)aKey block:(void(^const)(NSNumber *, NSError *))block
+{
+    NSError *error;
+    NSNumber *const number = [self numberForKey:aKey withError:&error];
+    block(number, error);
+    return (error == nil);
+}
+
 - (NSString *)stringForKey:(id const)aKey withError:(NSError **const)errorPtr
 {
     id candidate = self[aKey];
@@ -107,6 +115,14 @@
         candidate = nil;
     }
     return candidate;
+}
+
+- (BOOL)stringForKey:(id const)aKey block:(void(^const)(NSString *, NSError *))block
+{
+    NSError *error;
+    NSString *const string = [self stringForKey:aKey withError:&error];
+    block(string, error);
+    return (error == nil);
 }
 
 - (NSArray *)arrayForKey:(id const)aKey withError:(NSError **const)errorPtr
@@ -124,6 +140,14 @@
     return candidate;
 }
 
+- (BOOL)arrayForKey:(id const)aKey block:(void(^const)(NSArray *, NSError *))block
+{
+    NSError *error;
+    NSArray *const array = [self arrayForKey:aKey withError:&error];
+    block(array, error);
+    return (error == nil);
+}
+
 - (NSDictionary *)dictionaryForKey:(id const)aKey withError:(NSError **const)errorPtr
 {
     id candidate = self[aKey];
@@ -139,6 +163,13 @@
     return candidate;
 }
 
+- (BOOL)dictionaryForKey:(id const)aKey block:(void(^const)(NSDictionary *, NSError *))block;
+{
+    NSError *error;
+    NSDictionary *const dictionary = [self dictionaryForKey:aKey withError:&error];
+    block(dictionary, error);
+    return (error == nil);
+}
 
 @end
 

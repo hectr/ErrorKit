@@ -84,7 +84,7 @@
 + (NSArray *)arrayWithData:(NSData *const)data options:(NSJSONReadingOptions const)opt error:(NSError *__autoreleasing *const)errorPtr
 {
     NSArray *candidate;
-    if ([data isKindOfClass:NSData.data]) {
+    if ([data isKindOfClass:NSData.class]) {
         candidate = [self JSONObjectWithData:data options:opt error:errorPtr];
         if ([candidate isKindOfClass:NSArray.class]) {
             return candidate;
@@ -103,7 +103,7 @@
 + (NSDictionary *)dictionaryWithData:(NSData *const)data options:(NSJSONReadingOptions const)opt error:(NSError *__autoreleasing *const)errorPtr
 {
     NSDictionary *candidate;
-    if ([data isKindOfClass:NSData.data]) {
+    if ([data isKindOfClass:NSData.class]) {
         candidate = [self JSONObjectWithData:data options:opt error:errorPtr];
         if ([candidate isKindOfClass:NSDictionary.class]) {
             return candidate;

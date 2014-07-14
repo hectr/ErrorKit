@@ -44,6 +44,16 @@
 - (NSNumber *)numberForKey:(id)aKey withError:(NSError **)errorPtr;
 
 /**
+ Retrieves the `NSNumber` object associated with a given key.
+ 
+ @praram aKey The key for which to retrieve the corresponding value.
+ @param block A block executed synchronous with the number or an error as parameters.
+ 
+ @return YES if the number was passed to the block without error, NO otherwise.
+ */
+- (BOOL)numberForKey:(id)aKey block:(void(^)(NSNumber *number, NSError *error))block;
+
+/**
  Returns the `NSString` object associated with a given key.
  
  If there is a value associated with 'aKey', but it is not an `NSString` object,
@@ -57,6 +67,16 @@
  `aKey` is not an `NSString`.
  */
 - (NSString *)stringForKey:(id)aKey withError:(NSError **)errorPtr;
+
+/**
+ Retrieves the `NSString` object associated with a given key.
+ 
+ @praram aKey The key for which to retrieve the corresponding value.
+ @param block A block executed synchronous with the string or an error as parameters.
+ 
+ @return YES if the string was passed to the block without error, NO otherwise.
+ */
+- (BOOL)stringForKey:(id)aKey block:(void(^)(NSString *string, NSError *error))block;
 
 /**
  Returns the `NSArray` object associated with a given key.
@@ -74,6 +94,16 @@
 - (NSArray *)arrayForKey:(id)aKey withError:(NSError **)errorPtr;
 
 /**
+ Retrieves the `NSArray` object associated with a given key.
+ 
+ @praram aKey The key for which to retrieve the corresponding value.
+ @param block A block executed synchronous with the array or an error as parameters.
+ 
+ @return YES if the array was passed to the block without error, NO otherwise.
+ */
+- (BOOL)arrayForKey:(id)aKey block:(void(^)(NSArray *array, NSError *error))block;
+
+/**
  Returns the `NSDictionary` object associated with a given key.
  
  If there is a value associated with 'aKey', but it is not an `NSDictionary` 
@@ -88,5 +118,15 @@
  `aKey` is not an `NSDictionary`.
  */
 - (NSDictionary *)dictionaryForKey:(id)aKey withError:(NSError **)errorPtr;
+
+/**
+ Retrieves the `NSDictionary` object associated with a given key.
+ 
+ @praram aKey The key for which to retrieve the corresponding value.
+ @param block A block executed synchronous with the dictionary or an error as parameters.
+ 
+ @return YES if the dictionary was passed to the block without error, NO otherwise.
+ */
+- (BOOL)dictionaryForKey:(id)aKey block:(void(^)(NSDictionary *dictionary, NSError *error))block;
 
 @end

@@ -62,6 +62,14 @@
     return object;
 }
 
+- (BOOL)objectAtIndex:(NSUInteger const)index block:(void(^ const)(id, NSError *))block
+{
+    NSError *error;
+    id const object = [self objectAtIndex:index withError:&error];
+    block(object, error);
+    return (error == nil);
+}
+
 @end
 
 #endif

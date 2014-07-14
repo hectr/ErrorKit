@@ -43,4 +43,15 @@
  */
 - (id)objectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;
 
+/**
+ Retrieves the object located at index.
+ 
+ @param index An index within the bounds of the array.
+ @param block A block executed synchronous with the object or an error as parameters.
+ 
+ @return YES if the object was passed to the block without error, NO otherwise.
+ */
+- (BOOL)objectAtIndex:(NSUInteger)index block:(void(^)(id object, NSError *error))block;
+
+
 @end
