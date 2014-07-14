@@ -22,7 +22,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class NSManagedObject;
+@class NSManagedObject, MRErrorBuilder;
 
 
 /**
@@ -70,7 +70,24 @@
 
 
 /**
- This category adds methods that may help you decide whether or not to display 
+ Adds a method for creating an `NSError` object using a builder block.
+ */
+@interface NSError (ErrorKit_Builder)
+
+/**
+ Creates and initializes an `NSError` object with a given builder block.
+
+ @param block The builder block for configuring the error. `block` may be `nil`.
+
+ @return The product object of the builder passed as parameter to `block`.
+ */
++ (NSError *)buildError:(void(^)(MRErrorBuilder *builder))block;
+
+@end
+
+
+/**
+ This category adds methods that may help you decide whether or not to display
  an error dialog.
  */
 @interface NSError (ErrorKit_Helper)
@@ -83,7 +100,7 @@
 
 /**
  Returns YES if the error code corresponds to a cancelled operation in 
- `NSURLErrorDomain` (or `AFNetworkingErrorDomain`), `NSCocoaErrorDomain`, 
+ `NSURLErrorDomain` (or `@"AFNetworkingErrorDomain"`), `NSCocoaErrorDomain`, 
  `kCLErrorDomain`, `SKErrorDomain` or `FacebookSDKDomain`.
  */
 - (BOOL)isCancelledError;
