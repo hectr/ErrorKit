@@ -371,12 +371,13 @@
 
 NSString *MRErrorKitString(NSString *const key, NSString *const comment)
 {
-    static NSBundle *bundle = nil;
-    static NSString *table = nil;
+    static NSBundle *bundle;
+    static NSString *table;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *const path = [[NSBundle mainBundle] pathForResource:@"ErrorKit" ofType:@"bundle"];
-        bundle = ([NSBundle bundleWithPath:path] ?: [NSBundle mainBundle]);
+        NSBundle *const mainBundle = NSBundle.mainBundle;
+        NSString *const path = [mainBundle pathForResource:@"ErrorKit" ofType:@"bundle"];
+        bundle = ([NSBundle bundleWithPath:path] ?: mainBundle);
         if ([bundle pathForResource:@"ErrorKit" ofType:@"strings"]) {
             table = @"ErrorKit";
         }

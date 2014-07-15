@@ -1,4 +1,4 @@
-// ErrorKit_CoreData.h
+// NSFetchedResultsController+CoreData.h
 //
 // Copyright (c) 2013 Héctor Marqués
 //
@@ -20,15 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <CoreData/CoreData.h>
 
-#ifndef _ERRORKIT_COREDATA_H
-#define _ERRORKIT_COREDATA_H
-#endif
 
-#import "NSError+CoreData.h"
+/**
+ Adds a method for safely retrieving objects from an 
+ `NSFetchedResultsController` object.
+ 
+ @warning This extension requires the Core Data framework. Add a 
+ `CoreData/CoreData.h` import to the header prefix of the project.
+ */
+@interface NSFetchedResultsController (ErrorKit_CoreData)
 
-#import "MRErrorBuilder+CoreData.h"
+/**
+ Returns the object at the given index path in the fetch results.
+ 
+ If `indexPath` does not describe a valid index path in the fetch results, no 
+ exception is raised, but `errorPtr` will contain an `NSError` object.
+ 
+ @param indexPath An index path in the fetch results.
+ @param errorPtr A pointer to an `NSError` object or NULL. You do not need to
+ create an `NSError` object.
+ 
+ @return The object at a given index path in the fetch results.
+ */
+- (id)objectAtIndexPath:(NSIndexPath *)indexPath withError:(NSError **)errorPtr;
 
-#import "MRErrorFormatter+CoreData.h"
-
-#import "NSFetchedResultsController+CoreData.h"
+@end
