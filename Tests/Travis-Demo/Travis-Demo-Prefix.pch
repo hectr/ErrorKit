@@ -13,4 +13,8 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import "ErrorKit_Default.h"
+    #import "ErrorKit_CoreData.h"
+    #import "ErrorKitMacros.h"
 #endif

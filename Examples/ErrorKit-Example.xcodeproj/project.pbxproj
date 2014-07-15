@@ -52,6 +52,7 @@
 		845990F617FA4F65008ADCD2 /* NSDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990EF17FA4F65008ADCD2 /* NSDictionary+JSONValues.m */; };
 		845990F717FA4F65008ADCD2 /* NSMutableArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */; };
 		845990F817FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */; };
+		8459CED41975E212007F0181 /* NSFetchedResultsController+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459CED31975E212007F0181 /* NSFetchedResultsController+CoreData.m */; };
 		845F6DD5181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F6DD4181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m */; };
 		84AF451F181D836E00EFC96A /* MRErrorBuilder+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF451A181D836E00EFC96A /* MRErrorBuilder+Parse.m */; };
 		84AF4520181D836E00EFC96A /* MRErrorFormatter+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF451C181D836E00EFC96A /* MRErrorFormatter+Parse.m */; };
@@ -165,6 +166,8 @@
 		845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSMutableArray+JSONValues.m"; sourceTree = "<group>"; };
 		845990F217FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSMutableDictionary+JSONValues.h"; sourceTree = "<group>"; };
 		845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSMutableDictionary+JSONValues.m"; sourceTree = "<group>"; };
+		8459CED21975E212007F0181 /* NSFetchedResultsController+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFetchedResultsController+CoreData.h"; path = "../../ErrorKit/CoreData/NSFetchedResultsController+CoreData.h"; sourceTree = "<group>"; };
+		8459CED31975E212007F0181 /* NSFetchedResultsController+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFetchedResultsController+CoreData.m"; path = "../../ErrorKit/CoreData/NSFetchedResultsController+CoreData.m"; sourceTree = "<group>"; };
 		845F6DD3181B0B1300D33BDC /* NSJSONSerialization+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSJSONSerialization+JSONValues.h"; path = "../../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.h"; sourceTree = "<group>"; };
 		845F6DD4181B0B1300D33BDC /* NSJSONSerialization+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSJSONSerialization+JSONValues.m"; path = "../../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.m"; sourceTree = "<group>"; };
 		84AF4518181D836E00EFC96A /* ErrorKit_Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Parse.h; path = ../../ErrorKit/Parse/ErrorKit_Parse.h; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				845990F117FA4F65008ADCD2 /* NSMutableArray+JSONValues.m */,
 				845990F217FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.h */,
 				845990F317FA4F65008ADCD2 /* NSMutableDictionary+JSONValues.m */,
+				8459CED21975E212007F0181 /* NSFetchedResultsController+CoreData.h */,
+				8459CED31975E212007F0181 /* NSFetchedResultsController+CoreData.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				84220DFF17FE30DC0009C919 /* UIApplication+FacebookSDK.m in Sources */,
 				841438CE1802160F00EF0704 /* MRAbstractRecoveryAttempter.m in Sources */,
 				841438CF1802160F00EF0704 /* MRBlockRecoveryAttempter.m in Sources */,
+				8459CED41975E212007F0181 /* NSFetchedResultsController+CoreData.m in Sources */,
 				841438D01802160F00EF0704 /* MRChainedRecoveryAttempter.m in Sources */,
 				841438D11802160F00EF0704 /* MRErrorBuilder.m in Sources */,
 				841438D21802160F00EF0704 /* MRErrorFormatter.m in Sources */,

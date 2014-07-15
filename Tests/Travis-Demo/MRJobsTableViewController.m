@@ -2,7 +2,6 @@
 
 #import "MRJobsTableViewController.h"
 
-#import "ErrorKit_Default.h"
 #import "UIImageView+AFNetworking.h"
 #import "MRRepositoryTableViewController.h"
 #import "MRTravisAppDelegate.h"
@@ -93,7 +92,9 @@
 - (void)tableView:(UITableView *const)tableView didSelectRowAtIndexPath:(NSIndexPath *const)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSManagedObject *const job = [_fetchedResultsController objectAtIndexPath:indexPath];
+    NSError *error;
+    NSManagedObject *const job = [_fetchedResultsController objectAtIndexPath:indexPath withError:&error];
+    MRNotErrorAssert(error);
     NSManagedObject *const repository = [job valueForKey:@"repository"];
     MRRepositoryTableViewController *const vc =
     [[MRRepositoryTableViewController alloc] init];
@@ -133,7 +134,9 @@
         cell.detailTextLabel.numberOfLines = 3;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    NSManagedObject *const job = [_fetchedResultsController objectAtIndexPath:indexPath];
+    NSError *error;
+    NSManagedObject *const job = [_fetchedResultsController objectAtIndexPath:indexPath withError:&error];
+    MRNotErrorAssert(error);
     cell.textLabel.text = [NSString stringWithFormat:@"id:\t\t%@\nstate:\t%@\nqueue:\t%@", [job valueForKey:@"jobId"], [job valueForKey:@"state"], [job valueForKey:@"queue"]];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"repository: \n%@\n", [job valueForKeyPath:@"repository.repositoryId"]];
     return cell;

@@ -69,6 +69,8 @@
 		8425803C173AD50300AA1990 /* MRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84258039173AD50300AA1990 /* MRViewController.xib */; };
 		8425980D1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8425980C1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite */; };
 		8425980F1747F9E900D3EA64 /* CoreData-Example_v02.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */; };
+		843E4CDB1973EFC50030C5BC /* ErrorKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 843E4CDA1973EFC50030C5BC /* ErrorKit.bundle */; };
+		8459CED71975EBF7007F0181 /* NSFetchedResultsController+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459CED61975EBF7007F0181 /* NSFetchedResultsController+CoreData.m */; };
 		845F6DD8181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F6DD7181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m */; };
 		84AF4510181D563900EFC96A /* MRErrorFormatter+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF450F181D563900EFC96A /* MRErrorFormatter+Parse.m */; };
 		84AF4513181D7E5C00EFC96A /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4512181D7E5C00EFC96A /* NSError+Parse.m */; };
@@ -216,6 +218,11 @@
 		8425980C1747DCDC00D3EA64 /* CoreData-Example_v01.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v01.sqlite"; sourceTree = "<group>"; };
 		8425980E1747F9E900D3EA64 /* CoreData-Example_v02.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreData-Example_v02.sqlite"; sourceTree = "<group>"; };
 		842DA4F4180C6CAF00BC9545 /* ErrorKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKitMacros.h; path = ../ErrorKit/Core/ErrorKitMacros.h; sourceTree = "<group>"; };
+		843E4CDA1973EFC50030C5BC /* ErrorKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ErrorKit.bundle; path = ../../ErrorKit/Core/ErrorKit.bundle; sourceTree = "<group>"; };
+		843E4CDC1973F8DC0030C5BC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		843E4CDD1973F8E10030C5BC /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8459CED51975EBF7007F0181 /* NSFetchedResultsController+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFetchedResultsController+CoreData.h"; path = "../ErrorKit/CoreData/NSFetchedResultsController+CoreData.h"; sourceTree = "<group>"; };
+		8459CED61975EBF7007F0181 /* NSFetchedResultsController+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFetchedResultsController+CoreData.m"; path = "../ErrorKit/CoreData/NSFetchedResultsController+CoreData.m"; sourceTree = "<group>"; };
 		845F6DD6181B0C8300D33BDC /* NSJSONSerialization+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSJSONSerialization+JSONValues.h"; path = "../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.h"; sourceTree = "<group>"; };
 		845F6DD7181B0C8300D33BDC /* NSJSONSerialization+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSJSONSerialization+JSONValues.m"; path = "../ErrorKit/JSONValues/NSJSONSerialization+JSONValues.m"; sourceTree = "<group>"; };
 		84AF450E181D563900EFC96A /* MRErrorFormatter+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorFormatter+Parse.h"; path = "../ErrorKit/Parse/MRErrorFormatter+Parse.h"; sourceTree = "<group>"; };
@@ -251,6 +258,8 @@
 		840B608218037E2D0090A142 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8459CED51975EBF7007F0181 /* NSFetchedResultsController+CoreData.h */,
+				8459CED61975EBF7007F0181 /* NSFetchedResultsController+CoreData.m */,
 				840B608418037E420090A142 /* NSArray+JSONValues.h */,
 				840B608518037E420090A142 /* NSArray+JSONValues.m */,
 				840B608618037E420090A142 /* NSDictionary+JSONValues.h */,
@@ -342,6 +351,7 @@
 		84257FE6173ACDDB00AA1990 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				843E4CDA1973EFC50030C5BC /* ErrorKit.bundle */,
 				84257FF7173ACDDB00AA1990 /* CoreData_Example.xcdatamodeld */,
 				84258036173AD50300AA1990 /* CoreDataExample-Application.xib */,
 				84257FE7173ACDDB00AA1990 /* CoreData-Example-Info.plist */,
@@ -537,6 +547,10 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
+				ca,
+				de,
+				nb,
 			);
 			mainGroup = 84257FD1173ACDDB00AA1990;
 			productRefGroup = 84257FDB173ACDDB00AA1990 /* Products */;
@@ -553,6 +567,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843E4CDB1973EFC50030C5BC /* ErrorKit.bundle in Resources */,
 				84257FEA173ACDDB00AA1990 /* InfoPlist.strings in Resources */,
 				84257FF2173ACDDB00AA1990 /* Default.png in Resources */,
 				84257FF4173ACDDB00AA1990 /* Default@2x.png in Resources */,
@@ -606,6 +621,7 @@
 				840B60BD180380520090A142 /* MRErrorFormatter+iAD.m in Sources */,
 				840B60BF180380520090A142 /* MRErrorFormatter+JSONValues.m in Sources */,
 				84AF4513181D7E5C00EFC96A /* NSError+Parse.m in Sources */,
+				8459CED71975EBF7007F0181 /* NSFetchedResultsController+CoreData.m in Sources */,
 				840B60C0180380520090A142 /* MRErrorFormatter+MapKit.m in Sources */,
 				840B60C1180380520090A142 /* MRErrorFormatter+MessageUI.m in Sources */,
 				840B60C2180380520090A142 /* MRErrorFormatter+NSException.m in Sources */,
@@ -637,6 +653,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				84257FE9173ACDDB00AA1990 /* en */,
+				843E4CDC1973F8DC0030C5BC /* es */,
+				843E4CDD1973F8E10030C5BC /* ca */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

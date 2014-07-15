@@ -134,20 +134,20 @@ static NSString *const __letters[] =
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Company" inManagedObjectContext:moc];
     NSManagedObject *const company = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
     [company setValue:[NSString stringWithFormat:@"%@.%@."
-                                                , __letters[arc4random() % sizeof(__letters)/4]
-                                                , __letters[arc4random() % sizeof(__letters)/4]]
+                                                , __letters[arc4random() % sizeof(__letters)/sizeof(NSInteger)]
+                                                , __letters[arc4random() % sizeof(__letters)/sizeof(NSInteger)]]
                                           forKey:@"name"];
     entity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:moc];
     NSManagedObject *const project = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
     [project setValue:[NSString stringWithFormat:@"%@%d"
-                                                , __letters[arc4random() % sizeof(__letters)/4]
+                                                , __letters[arc4random() % sizeof(__letters)/sizeof(NSInteger)]
                                                 , arc4random()%10]
                                           forKey:@"name"];
     [project setValue:company forKey:@"company"];
     entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:moc];
     NSManagedObject *const employee = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
-    [employee setValue:__names[arc4random()%sizeof(__names)/4] forKey:@"firstName"];
-    [employee setValue:__surnames[arc4random()%sizeof(__surnames)/4] forKey:@"lastName"];
+    [employee setValue:__names[arc4random()%sizeof(__names)/sizeof(NSInteger)] forKey:@"firstName"];
+    [employee setValue:__surnames[arc4random()%sizeof(__surnames)/sizeof(NSInteger)] forKey:@"lastName"];
     [employee setValue:@(10000 + arc4random() % 490001) forKey:@"salary"];
     [employee setValue:company forKey:@"company"];
     [employee setValue:@(arc4random()%999) forKey:@"extension"];
