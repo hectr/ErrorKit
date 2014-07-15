@@ -125,7 +125,7 @@
 #endif
 
 #ifdef ERROR_KIT_ADMOB
-#import <Google-AdMob-Ads-SDK/GADRequestError.h>
+#import <Google-Mobile-Ads-SDK/GADRequestError.h>
 #endif
 
 #ifdef ERROR_KIT_AFNETWORKING
