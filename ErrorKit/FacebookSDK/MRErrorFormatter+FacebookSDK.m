@@ -55,8 +55,8 @@
             return mr_stringize_error_code(FBErrorAppEvents);
         case FBErrorSystemAPI:
             return mr_stringize_error_code(FBErrorSystemAPI);
-        case FBErrorPublishInstallResponse:
-            return mr_stringize_error_code(FBErrorPublishInstallResponse);
+        //case FBErrorPublishInstallResponse:
+        //    return mr_stringize_error_code(FBErrorPublishInstallResponse);
         case FBErrorAppActivatedWhilePendingAppCall:
             return mr_stringize_error_code(FBErrorAppActivatedWhilePendingAppCall);
         case FBErrorUntrustedURL:
@@ -92,8 +92,8 @@
             return MRErrorKitString(@"FBAppEvents Error", nil);
         case FBErrorSystemAPI:
             return MRErrorKitString(@"iOS API Call Error", nil);
-        case FBErrorPublishInstallResponse:
-            return MRErrorKitString(@"Publish Install Response Error", nil);
+        //case FBErrorPublishInstallResponse:
+        //    return MRErrorKitString(@"Publish Install Response Error", nil);
         case FBErrorAppActivatedWhilePendingAppCall:
             return MRErrorKitString(@"Activated While Waiting Error", nil);
         case FBErrorUntrustedURL:
