@@ -30,9 +30,9 @@
 
 #ifdef ERROR_KIT_FACEBOOK_SDK
 
+// TODO: https://developers.facebook.com/docs/ios/upgrading
 @implementation UIApplication (ErrorKit_FacebookSDK)
 
-// TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
 - (BOOL)handleFacebookAuthError:(NSError *const)error withLoginBlock:(void(^const)(NSError *))loginBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
@@ -88,7 +88,6 @@
     return [self presentError:customizedError];
 }
 
-// TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
 - (BOOL)handleFacebookRequestPermissionError:(NSError *const)error
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
@@ -110,7 +109,6 @@
     return [self presentError:customizedError];
 }
 
-// TODO: adopt recovery tactics from https://developers.facebook.com/docs/reference/api/errors/
 - (BOOL)handleFacebookAPICallError:(NSError *const)error withPermissionBlock:(void(^const)(NSError *))permissionBlock andRetryBlock:(void(^const)(NSError *))retryBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];

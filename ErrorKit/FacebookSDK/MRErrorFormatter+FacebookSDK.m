@@ -65,6 +65,8 @@
             return mr_stringize_error_code(FBErrorMalformedURL);
         case FBErrorSessionReconnectInProgess:
             return mr_stringize_error_code(FBErrorSessionReconnectInProgess);
+        case FBErrorOperationDisallowedForRestrictedTreament:
+            return mr_stringize_error_code(FBErrorOperationDisallowedForRestrictedTreament);
     }
     return @(code).stringValue;
 }
@@ -102,6 +104,7 @@
             return MRErrorKitString(@"Bad URL", nil);
         case FBErrorSessionReconnectInProgess:
             return MRErrorKitString(@"Session Busy", nil);
+        // TODO: case FBErrorOperationDisallowedForRestrictedTreament:
     }
     return MRErrorKitString(@"Facebook Error", nil);
 }
