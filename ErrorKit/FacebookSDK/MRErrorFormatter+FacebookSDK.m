@@ -55,8 +55,6 @@
             return mr_stringize_error_code(FBErrorAppEvents);
         case FBErrorSystemAPI:
             return mr_stringize_error_code(FBErrorSystemAPI);
-        //case FBErrorPublishInstallResponse:
-        //    return mr_stringize_error_code(FBErrorPublishInstallResponse);
         case FBErrorAppActivatedWhilePendingAppCall:
             return mr_stringize_error_code(FBErrorAppActivatedWhilePendingAppCall);
         case FBErrorUntrustedURL:
@@ -65,8 +63,6 @@
             return mr_stringize_error_code(FBErrorMalformedURL);
         case FBErrorSessionReconnectInProgess:
             return mr_stringize_error_code(FBErrorSessionReconnectInProgess);
-        case FBErrorOperationDisallowedForRestrictedTreament:
-            return mr_stringize_error_code(FBErrorOperationDisallowedForRestrictedTreament);
     }
     return @(code).stringValue;
 }
@@ -94,8 +90,6 @@
             return MRErrorKitString(@"FBAppEvents Error", nil);
         case FBErrorSystemAPI:
             return MRErrorKitString(@"iOS API Call Error", nil);
-        //case FBErrorPublishInstallResponse:
-        //    return MRErrorKitString(@"Publish Install Response Error", nil);
         case FBErrorAppActivatedWhilePendingAppCall:
             return MRErrorKitString(@"Activated While Waiting Error", nil);
         case FBErrorUntrustedURL:
@@ -104,7 +98,6 @@
             return MRErrorKitString(@"Bad URL", nil);
         case FBErrorSessionReconnectInProgess:
             return MRErrorKitString(@"Session Busy", nil);
-        // TODO: case FBErrorOperationDisallowedForRestrictedTreament:
     }
     return MRErrorKitString(@"Facebook Error", nil);
 }

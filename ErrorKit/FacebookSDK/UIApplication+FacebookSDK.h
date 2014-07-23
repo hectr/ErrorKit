@@ -27,7 +27,7 @@
  Use the methods added by this category instead of 
  `[UIApplication presentError:]` for easier handling of FacebookSDK errors.
  
- See <https://developers.facebook.com/docs/technical-guides/iossdk/errors/>.
+ See <https://developers.facebook.com/docs/ios/errors>.
  */
 @interface UIApplication (ErrorKit_FacebookSDK)
 

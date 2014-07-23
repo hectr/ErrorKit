@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ErrorKit"
-  s.version      = "0.2.1"
+  s.version      = "0.2.2"
   s.summary      = "Error Kit is a handy iOS library for making NSError handling easier."
   s.description  = <<-DESC
   Error Kit is a handy iOS library for making NSError handling easier.
@@ -54,6 +54,7 @@ Pod::Spec.new do |s|
     af.prefix_header_contents = '#define ERROR_KIT_AFNETWORKING 1'
   end
 
+
   s.subspec 'AVFoundation' do |av|
     av.source_files = 'ErrorKit/AVFoundation'
     av.dependency 'ErrorKit/Core'
@@ -76,10 +77,13 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'FacebookSDK' do |fb|
-    fb.source_files = 'ErrorKit/FacebookSDK'
-    fb.dependency 'Facebook-iOS-SDK', '< 3.17'
-    fb.dependency 'ErrorKit/UIKit'
-    fb.prefix_header_contents = '#define ERROR_KIT_FACEBOOK_SDK 1'
+    fb.dependency 'ErrorKit/FacebookSDK_v1'
+  end
+  
+  s.subspec 'FacebookSDK_v1' do |fb1|
+    fb1.source_files = 'ErrorKit/FacebookSDK'
+    fb1.dependency 'Facebook-iOS-SDK', '< 3.14.0'
+    fb1.dependency 'ErrorKit/UIKit'
   end
   
   s.subspec 'HTTP' do |ht|

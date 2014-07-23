@@ -30,12 +30,34 @@
 
 #ifdef ERROR_KIT_FACEBOOK_SDK
 
-// TODO: https://developers.facebook.com/docs/ios/upgrading
 @implementation UIApplication (ErrorKit_FacebookSDK)
 
 - (BOOL)handleFacebookAuthError:(NSError *const)error withLoginBlock:(void(^const)(NSError *))loginBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+#if ERROR_KIT_FACEBOOK_SDK_V2
+    if ([FBErrorUtility shouldNotifyUserForError:error]) {
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = [FBErrorUtility userMessageForError:error];
+    } else {
+        if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryUserCancelled) {
+            builder.localizedDescription = MRErrorKitString(@"Login cancelled", nil);
+            builder.localizedFailureReason = MRErrorKitString(@"You should log in to continue.", nil);
+            if (loginBlock) {
+                [builder addRecoveryOption:MRErrorKitString(@"Log in", nil) withBlock:loginBlock];
+            }
+        } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryAuthenticationReopenSession){
+            builder.localizedDescription = MRErrorKitString(@"Session Error", nil);
+            builder.localizedFailureReason = MRErrorKitString(@"Your current session is no longer valid. Please log in again.", nil);
+            if (loginBlock) {
+                [builder addRecoveryOption:MRErrorKitString(@"Log in", nil) withBlock:loginBlock];
+            }
+        } else {
+            builder.localizedDescription  = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+            builder.localizedFailureReason = MRErrorKitString(@"Please retry", nil);
+        }
+    }
+#else
     if (error.fberrorShouldNotifyUser) {
         if ([error.loginFailedReason isEqualToString:FBErrorLoginFailedReasonSystemDisallowedWithoutErrorValue]) {
             builder.localizedDescription = MRErrorKitString(@"App Disabled", nil);
@@ -84,6 +106,7 @@
         builder.localizedDescription  = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
         builder.localizedFailureReason = MRErrorKitString(@"Error. Please try again later.", nil);
     }
+#endif
     NSError *const customizedError = builder.error;
     return [self presentError:customizedError];
 }
@@ -91,6 +114,18 @@
 - (BOOL)handleFacebookRequestPermissionError:(NSError *const)error
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+#if ERROR_KIT_FACEBOOK_SDK_V2
+    if ([FBErrorUtility shouldNotifyUserForError:error] == YES){
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = [FBErrorUtility userMessageForError:error];
+    } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryUserCancelled) {
+        builder.localizedDescription = MRErrorKitString(@"Permission not granted", nil);
+        builder.localizedFailureReason = MRErrorKitString(@"Operation could not be completed because you didn't grant the necessary permissions.", nil);
+    } else {
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = MRErrorKitString(@"Please retry", nil);
+    }
+#else
     if (error.fberrorShouldNotifyUser) {
         builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
         builder.localizedFailureReason = error.fberrorUserMessage;
@@ -105,6 +140,7 @@
         builder.localizedDescription = MRErrorKitString(@"Permission Error", nil);
         builder.localizedFailureReason = MRErrorKitString(@"Unable to request permissions", nil);
     }
+#endif
     NSError *const customizedError = builder.error;
     return [self presentError:customizedError];
 }
@@ -112,6 +148,26 @@
 - (BOOL)handleFacebookAPICallError:(NSError *const)error withPermissionBlock:(void(^const)(NSError *))permissionBlock andRetryBlock:(void(^const)(NSError *))retryBlock
 {
     MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+#if ERROR_KIT_FACEBOOK_SDK_V2
+    if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryPermissions) {
+        builder.localizedDescription = MRErrorKitString(@"Permission Error", nil);
+        if (permissionBlock) {
+            [builder addRecoveryOption:MRErrorKitString(@"Grant permission", nil) withBlock:permissionBlock];
+        }
+    } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryRetry ||
+        [FBErrorUtility errorCategoryForError:error] == FBErrorCategoryThrottling) {
+        builder.localizedDescription = MRErrorKitString(@"Facebook Error", nil);
+        if (retryBlock) {
+            [builder addRecoveryOption:MRErrorKitString(@"Retry", nil) withBlock:retryBlock];
+        }
+    } else if ([FBErrorUtility shouldNotifyUserForError:error]) {
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = error.fberrorUserMessage;
+    } else {
+        builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
+        builder.localizedFailureReason = MRErrorKitString(@"Unable to fullfill request. Please try again later.", nil);
+    }
+#else
     if (error.fberrorCategory == FBErrorCategoryRetry ||
         error.fberrorCategory == FBErrorCategoryThrottling) {
         builder.localizedDescription = MRErrorKitString(@"Facebook Error", nil);
@@ -120,7 +176,6 @@
         }
     }
     if (error.fberrorShouldNotifyUser) {
-        //builder.localizedDescription = MRErrorKitString(@"Something Went Wrong", nil);
         builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
         builder.localizedFailureReason = error.fberrorUserMessage;
     } else if (error.fberrorCategory == FBErrorCategoryPermissions) {
@@ -136,8 +191,8 @@
             builder = nil;
         }
     } else {
-        NSNumber *code = nil;
-        NSNumber *subcode = nil;
+        NSNumber *code;
+        NSNumber *subcode;
         NSDictionary *const JSON = error.parsedJSONResponse;
         if ([JSON isKindOfClass:NSDictionary.class]) {
             NSDictionary *const body = JSON[@"body"];
@@ -156,11 +211,11 @@
                 [builder addRecoveryOption:MRErrorKitString(@"Log in", nil) withBlock:permissionBlock];
             }
         } else {
-            //builder.localizedDescription = MRErrorKitString(@"Unknown error", nil);
             builder.localizedDescription = [MRErrorFormatter stringWithDomain:error.domain code:error.code];
             builder.localizedFailureReason = MRErrorKitString(@"Unable to fullfill request. Please try again later.", nil);
         }
     }
+#endif
     NSError *const customizedError = builder.error;
     return [self presentError:customizedError];
 }
