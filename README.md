@@ -8,47 +8,56 @@ Its purpose is to help you write failure-aware applications with fewer and simpl
 Examples
 --------
 
-
 ### Macros
 
-    // Log error (if any)
-    MRLogError(error);
-    // Assert
-    MRNotErrorAssert(error);
-    
+```objc
+// Log error (if any)
+MRLogError(error);
+// Assert
+MRNotErrorAssert(error);
+```
+
 ### Access error values
 
-	NSString *helpAnchor = error.helpAnchor;
-    NSURLRequest *request = error.failingURLRequest;
-    NSArray *errors = error.detailedErrors;
-    // and so on...
-    // (supports most AFNetworking, AVFoundation, Core Data, Facebook SDK, JSONKit and Parse keys)
+```objc
+NSString *helpAnchor = error.helpAnchor;
+NSURLRequest *request = error.failingURLRequest;
+NSArray *errors = error.detailedErrors;
+// and so on...
+// (supports most AFNetworking, AVFoundation, Core Data, Facebook SDK, JSONKit and Parse keys)
+```
 
 ### Present error
 
-        if (!error.isCancelledError) {
-	        [[UIAlertView alertWithTitle:nil error:error] show];
-	    }
-        // or you can rely on responder chain and do:
-        // [self presentError:error];
+```objc
+if (!error.isCancelledError) {
+    [[UIAlertView alertWithTitle:nil error:error] show];
+}
+// or you can rely on responder chain and do:
+// [self presentError:error];
+```
 
 ### Attempt error recovery
 
-        if (error.code == NSURLErrorNotConnectedToInternet && error.isHTTPError) {
-	        MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
-	        builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection.", nil);
-	       [builder addRecoveryOption:NSLocalizedString(@"Retry", nil)
-	                        withBlock:^(NSError *error) {
-                [[HTTPClient sharedClient] resendRequest];
-            }];
-	        [self presentError:builder.error];
-	    }
+```objc
+if (error.code == NSURLErrorNotConnectedToInternet && error.isHTTPError) {
+    MRErrorBuilder *builder = [MRErrorBuilder builderWithError:error];
+    builder.localizedRecoverySuggestion = NSLocalizedString(@"Please check your internet connection.", nil);
+    [builder addRecoveryOption:NSLocalizedString(@"Retry", nil)
+                     withBlock:^(NSError *error) {
+        [[HTTPClient sharedClient] resendRequest];
+    }];
+    [self presentError:builder.error];
+}
+```
 
 ### *Stringize* error code
 
-    NSString *debugString = [MRErrorFormatter debugStringWithDomain:error.domain code:error.code]; // e.g. NSURLErrorNetworkConnectionLost
-    NSString *localizedString = [MRErrorFormatter stringWithDomain:error.domain code:error.code]; // e.g. Connection Lost
-    // (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Parse, Security, Store Kit, TransitionKit and VeriJSON codes)
+```objc
+NSString *debugString = [MRErrorFormatter debugStringWithDomain:error.domain code:error.code]; // e.g. NSURLErrorNetworkConnectionLost
+NSString *localizedString = [MRErrorFormatter stringWithDomain:error.domain code:error.code]; // e.g. Connection Lost
+// (supports most Accounts, Admob, AVFoundation, Core Data, Core Location, Facebook SDK, iAD, JSONKit, Map Kit, MessageUI, Parse, Security, Store Kit, TransitionKit and VeriJSON codes)
+```
 
 ### Other features
 
@@ -56,49 +65,59 @@ Examples
 
 ErrorKit provides handlers for Facebook authentication, request permission and API calls errors.
 
-    // UIResponder+FacebookSDK:
-    - (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock;
-    - (BOOL)handleFacebookRequestPermissionError:(NSError *)error;
-    - (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock;
+```objc
+// UIResponder+FacebookSDK:
+- (BOOL)handleFacebookAuthError:(NSError *)error withLoginBlock:(void(^)(NSError *))loginBlock;
+- (BOOL)handleFacebookRequestPermissionError:(NSError *)error;
+- (BOOL)handleFacebookAPICallError:(NSError *)error withPermissionBlock:(void(^)(NSError *))permissionBlock andRetryBlock:(void(^)(NSError *))retryBlock;
+```
 
 #### Use JSON safely
 
 ##### Serialize/Deserialize
 
-    // NSJSONSerialization+JSONValues:
-    + (NSData *)dataWithArray:(NSArray *)obj options:(NSJSONWritingOptions)opt error:(NSError **)errorPtr;
-    + (NSData *)dataWithDictionary:(NSDictionary *)obj options:(NSJSONWritingOptions)opt error:(NSError **)errorPtr;
-    + (NSArray *)arrayWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError **)errorPtr;
-    + (NSDictionary *)dictionaryWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError **)errorPtr;
+```objc
+// NSJSONSerialization+JSONValues:
++ (NSData *)dataWithArray:(NSArray *)obj options:(NSJSONWritingOptions)opt error:(NSError **)errorPtr;
++ (NSData *)dataWithDictionary:(NSDictionary *)obj options:(NSJSONWritingOptions)opt error:(NSError **)errorPtr;
++ (NSArray *)arrayWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError **)errorPtr;
++ (NSDictionary *)dictionaryWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError **)errorPtr;
+```
 
 ##### Access values
 
 ErrorKit also provides methods for retrieving values from dictionaries and arrays.
 
-    - (id)objectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;        
-    - (NSNumber *)numberForKey:(id)aKey withError:(NSError **)errorPtr;
-    - (NSString *)stringForKey:(id)aKey withError:(NSError **)errorPtr;
-    - (NSArray *)arrayForKey:(id)aKey withError:(NSError **)errorPtr;
-    - (NSDictionary *)dictionaryForKey:(id)aKey withError:(NSError **)errorPtr;
+```objc
+- (id)objectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;        
+- (NSNumber *)numberForKey:(id)aKey withError:(NSError **)errorPtr;
+- (NSString *)stringForKey:(id)aKey withError:(NSError **)errorPtr;
+- (NSArray *)arrayForKey:(id)aKey withError:(NSError **)errorPtr;
+- (NSDictionary *)dictionaryForKey:(id)aKey withError:(NSError **)errorPtr;
+```
     
 Alternatively you can use the block version of these methods.
 
-    - (BOOL)objectAtIndex:(NSUInteger)index block:(void(^)(id object, NSError *error))block;
-    - (BOOL)numberForKey:(id)aKey block:(void(^)(NSNumber *number, NSError *error))block;
-    // etc.
-    
+```objc
+- (BOOL)objectAtIndex:(NSUInteger)index block:(void(^)(id object, NSError *error))block;
+- (BOOL)numberForKey:(id)aKey block:(void(^)(NSNumber *number, NSError *error))block;
+// etc.
+```
+
 ##### Manipulate mutable collections
 
-    // NSMutableArray+JSONValues:
-    - (BOOL)addObject:(id)anObject withError:(NSError **)errorPtr;
-    - (BOOL)removeObjectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;
-    - (BOOL)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject error:(NSError **)errorPtr;
-    // etc.
-    
-    // NSMutableDictionary+JSONValues:
-    - (BOOL)setNumber:(NSNumber *)aNumber forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr;
-    - (BOOL)setString:(NSString *)aString forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr;
-    // etc.
+```objc
+// NSMutableArray+JSONValues:
+- (BOOL)addObject:(id)anObject withError:(NSError **)errorPtr;
+- (BOOL)removeObjectAtIndex:(NSUInteger)index withError:(NSError **)errorPtr;
+- (BOOL)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject error:(NSError **)errorPtr;
+// etc.
+
+// NSMutableDictionary+JSONValues:
+- (BOOL)setNumber:(NSNumber *)aNumber forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr;
+- (BOOL)setString:(NSString *)aString forKey:(id<NSCopying>)aKey withError:(NSError **)errorPtr;
+// etc.
+```
 
 > See *ErrorKit-Example* and *CoreData-Example* projects or browse online [documentation](http://hectr.github.com/ErrorKit/) for further reference.
 
