@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/hectr/ErrorKit.git", :tag => s.version.to_s }
   s.platform     = :ios, '5.0'
   s.requires_arc = true
-  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT=1' }
   
   s.source_files = 'ErrorKit/ErrorKit{,Defines}.h'
   
