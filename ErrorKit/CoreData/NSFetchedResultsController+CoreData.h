@@ -23,6 +23,8 @@
 #import <CoreData/CoreData.h>
 
 
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+
 /**
  Adds a method for safely retrieving objects from an 
  `NSFetchedResultsController` object.
@@ -47,3 +49,5 @@
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath withError:(NSError **)errorPtr;
 
 @end
+
+#endif

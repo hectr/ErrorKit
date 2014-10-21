@@ -28,7 +28,7 @@
 #endif
 
 
-#ifdef ERROR_KIT_CORE_DATA
+#if defined(ERROR_KIT_CORE_DATA) & defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 
 @implementation NSFetchedResultsController (ErrorKit_CoreData)
 
