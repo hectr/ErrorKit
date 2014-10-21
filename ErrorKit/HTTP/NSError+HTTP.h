@@ -22,6 +22,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 /**
  Adds `isHTTPError` method to `NSError` instances.
  */

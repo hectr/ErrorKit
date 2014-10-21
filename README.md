@@ -163,7 +163,7 @@ The **ErrorKit** specification provides the following subspecs:
 License
 -------
 
-**ErrorKit** is available under the MIT license. See the LICENSE file for more info.
+**ErrorKit** is available under the MIT license. See the *LICENSE* file for more info.
 
 Alternatives
 ============
