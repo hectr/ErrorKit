@@ -1,5 +1,5 @@
 
-link_with 'TravisDemo', 'Travis-DemoTests'
+link_with 'Travis-Demo', 'Travis-DemoTests'
 
 pod 'ErrorKit/Default', :path => '../'
 pod 'ErrorKit/Accounts', :path => '../'
@@ -9,7 +9,7 @@ pod 'ErrorKit/AVFoundation', :path => '../'
 pod 'ErrorKit/Core', :path => '../'
 pod 'ErrorKit/CoreData', :path => '../'
 pod 'ErrorKit/CoreLocation', :path => '../'
-pod 'ErrorKit/FacebookSDK', :path => '../'
+pod 'ErrorKit/FacebookSDK_v2', :path => '../'
 pod 'ErrorKit/HTTP', :path => '../'
 pod 'ErrorKit/JSONKit', :path => '../'
 pod 'ErrorKit/JSONValues', :path => '../'
