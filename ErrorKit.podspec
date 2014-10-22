@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ErrorKit"
-  s.version      = "0.2.2"
+  s.version      = "0.3.0"
   s.summary      = "Error Kit is a handy iOS library for making NSError handling easier."
   s.description  = <<-DESC
   Error Kit is a handy iOS library for making NSError handling easier.
@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '5.0'
   s.requires_arc = true
   
-  s.source_files = 'ErrorKit/ErrorKit{,Defines}.h'
-  
+  s.source_files = 'ErrorKit/ErrorKit.h'
+
   s.default_subspec = 'Default'
 
   s.subspec 'Core' do |co|
@@ -48,11 +48,11 @@ Pod::Spec.new do |s|
     af.dependency 'ErrorKit/AFNetworking_v1'
   end
 
-  s.subspec 'AFNetworking_v1' do |af|
-    af.source_files = 'ErrorKit/AFNetworking'
-    af.dependency 'AFNetworking', '~> 1.3.3'
-    af.dependency 'ErrorKit/HTTP'
-    af.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_AFNETWORKING=1' }
+  s.subspec 'AFNetworking_v1' do |af1|
+    af1.source_files = 'ErrorKit/AFNetworking'
+    af1.dependency 'AFNetworking', '~> 1.3.3'
+    af1.dependency 'ErrorKit/HTTP'
+    af1.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_AFNETWORKING=1 ERROR_KIT_AFNETWORKING_V1=1' }
   end
 
 
@@ -85,6 +85,14 @@ Pod::Spec.new do |s|
     fb1.source_files = 'ErrorKit/FacebookSDK'
     fb1.dependency 'Facebook-iOS-SDK', '< 3.14.0'
     fb1.dependency 'ErrorKit/UIKit'
+    fb1.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_FACEBOOK_SDK=1 ERROR_KIT_FACEBOOK_SDK_V1=1' }
+  end
+  
+  s.subspec 'FacebookSDK_v2' do |fb2|
+    fb2.source_files = 'ErrorKit/FacebookSDK'
+    fb2.dependency 'Facebook-iOS-SDK', '< 3.17.0'
+    fb2.dependency 'ErrorKit/UIKit'
+    fb2.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_FACEBOOK_SDK=1 ERROR_KIT_FACEBOOK_SDK_V2=1' }
   end
   
   s.subspec 'HTTP' do |ht|
