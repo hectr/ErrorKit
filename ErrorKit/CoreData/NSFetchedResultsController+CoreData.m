@@ -34,6 +34,7 @@
 
 + (NSError *)mr_rangeErrorWithIndexPath:(NSIndexPath *const)indexPath sectionInfo:(id<NSFetchedResultsSectionInfo>const)sectionInfo object:(id const)object
 {
+    NSParameterAssert(object);
     MRErrorBuilder *const builder =
     [MRErrorBuilder builderWithDomain:NSCocoaErrorDomain
                                  code:NSKeyValueValidationError];
@@ -42,11 +43,11 @@
     if (sectionInfo) {
         builder.validationKey = @"row";
         builder.validationValue = @(indexPath.row);
-        builder.affectedObjects = @[ self, sectionInfo ];
+        builder.affectedObjects = @[ object, sectionInfo ];
     } else {
         builder.validationKey = @"section";
         builder.validationValue = @(indexPath.section);
-        builder.affectedObjects = @[ self ];
+        builder.affectedObjects = @[ object ];
     }
     builder.validationObject = indexPath;
     NSError *const error = builder.error;
