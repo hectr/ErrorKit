@@ -25,7 +25,7 @@
 #define _ERRORKIT_UIKIT_H
 #endif
 
-#import "UIAlertView+ErrorKit.h"
+#import "UIAlertController+ErrorKit.h"
 
 #import "UIApplication+ErrorKit.h"
 

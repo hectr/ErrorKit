@@ -50,11 +50,11 @@
 {
     NSError *const customizedError = [self willPresentError:error];
     if (customizedError) {
-        [[UIAlertView alertWithTitle:nil
-                               error:customizedError
-                            delegate:delegate
-                  didRecoverSelector:didPresentSelector
-                         contextInfo:contextInfo] show];
+        [[UIAlertController alertWithTitle:nil
+                                     error:customizedError
+                                  delegate:delegate
+                        didRecoverSelector:didPresentSelector
+                               contextInfo:contextInfo] mr_show];
         return YES;
     }
     return NO;
@@ -64,7 +64,7 @@
 {
     NSError *const customizedError = [self willPresentError:error];
     if (customizedError) {
-        [[UIAlertView alertWithTitle:nil error:customizedError] show];
+        [[UIAlertController alertWithTitle:nil error:customizedError] mr_show];
         return YES;
     }
     return NO;
