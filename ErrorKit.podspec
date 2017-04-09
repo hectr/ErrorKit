@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ErrorKit"
-  s.version      = "0.3.1"
+  s.version      = "1.0.0"
   s.summary      = "Error Kit is a handy iOS library for making NSError handling easier."
   s.description  = <<-DESC
   Error Kit is a handy iOS library for making NSError handling easier.
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = "Héctor Marqués Ranea"
   s.source       = { :git => "https://github.com/hectr/ErrorKit.git", :tag => s.version.to_s }
-  s.platform     = :ios, '5.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
   
   s.source_files = 'ErrorKit/ErrorKit.h'
@@ -35,13 +35,6 @@ Pod::Spec.new do |s|
     ac.dependency 'ErrorKit/Core'
     ac.ios.frameworks = 'Accounts'
     ac.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_ACCOUNTS=1' }
-  end
-  
-  s.subspec 'AdMob' do |ad|
-    ad.source_files = 'ErrorKit/AdMob'
-    ad.dependency 'Google-Mobile-Ads-SDK', '~> 6.8.0'
-    ad.dependency 'ErrorKit/Core'
-    ad.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_ADMOB=1' }
   end
 
   s.subspec 'AFNetworking' do |af|
@@ -76,18 +69,7 @@ Pod::Spec.new do |s|
     cl.ios.frameworks = 'CoreLocation'
     cl.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_CORE_LOCATION=1' }
   end
-  
-  s.subspec 'FacebookSDK' do |fb|
-    fb.dependency 'ErrorKit/FacebookSDK_v2'
-  end
 
-  s.subspec 'FacebookSDK_v2' do |fb2|
-    fb2.source_files = 'ErrorKit/FacebookSDK'
-    fb2.dependency 'Facebook-iOS-SDK', '< 3.17.0'
-    fb2.dependency 'ErrorKit/UIKit'
-    fb2.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_FACEBOOK_SDK=1 ERROR_KIT_FACEBOOK_SDK_V2=1' }
-  end
-  
   s.subspec 'HTTP' do |ht|
     ht.source_files = 'ErrorKit/HTTP'
     ht.dependency 'ErrorKit/Core'
@@ -176,7 +158,10 @@ Pod::Spec.new do |s|
   
   s.subspec 'Default' do |df|
     df.source_files = 'ErrorKit/Default'
-    df.dependencies = 'ErrorKit/HTTP', 'ErrorKit/JSONValues', 'ErrorKit/NSException', 'ErrorKit/Additions'
+    df.dependency 'ErrorKit/HTTP'
+    df.dependency 'ErrorKit/JSONValues'
+    df.dependency 'ErrorKit/NSException'
+    df.dependency 'ErrorKit/Additions'
     df.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ERROR_KIT_DEFAULT=1' }
   end
 end

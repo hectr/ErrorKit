@@ -137,15 +137,15 @@ The **ErrorKit** specification provides the following subspecs:
 
 * **pod 'ErrorKit/Default'**: `#import <ErrorKit/ErrorKit_Default.h>`
 * **pod 'ErrorKit/Accounts'**: `#import <ErrorKit/ErrorKit_Accounts.h>`
-* **pod 'ErrorKit/AdMob'**: `#import <ErrorKit/ErrorKit_Admob.h>`
+* ~~**pod 'ErrorKit/AdMob'**: `#import <ErrorKit/ErrorKit_Admob.h>`~~
 * **pod 'ErrorKit/AFNetworking_v1'**: `#import <ErrorKit/ErrorKit_AFNetworking.h>`
 * ~~**pod 'ErrorKit/AFNetworking_v2'**: `#import <ErrorKit/ErrorKit_AFNetworking.h>`~~
 * **pod 'ErrorKit/AVFoundation'**: `#import <ErrorKit/ErrorKit_AVFoundation.h>`
 * **pod 'ErrorKit/Core'**: `#import <ErrorKit/ErrorKit_Core.h>`
 * **pod 'ErrorKit/CoreData'**: `#import <ErrorKit/ErrorKit_CoreData.h>`
 * **pod 'ErrorKit/CoreLocation'**: `#import <ErrorKit/ErrorKit_CoreLocation.h>`
-* **pod 'ErrorKit/FacebookSDK_v1'**: `#import <ErrorKit/ErrorKit_FacebookSDK.h>`
-* **pod 'ErrorKit/FacebookSDK_v2'**: `#import <ErrorKit/ErrorKit_FacebookSDK.h>`
+* ~~**pod 'ErrorKit/FacebookSDK_v1'**: `#import <ErrorKit/ErrorKit_FacebookSDK.h>`~~
+* ~~**pod 'ErrorKit/FacebookSDK_v2'**: `#import <ErrorKit/ErrorKit_FacebookSDK.h>`~~
 * **pod 'ErrorKit/HTTP'**: `#import <ErrorKit/ErrorKit_HTTP.h>`
 * **pod 'ErrorKit/JSONKit'**: `#import <ErrorKit/ErrorKit_JSONKit.h>`
 * **pod 'ErrorKit/JSONValues'**: `#import <ErrorKit/ErrorKit_JSONValues.h>`
