@@ -24,7 +24,7 @@
 #import "ErrorKit.h"
 
 
-@interface MRViewController () <UIAlertViewDelegate, UITextFieldDelegate> {
+@interface MRViewController () <UITextFieldDelegate> {
     NSMutableSet *_trustedDomains;
 }
 
@@ -101,32 +101,33 @@
 {
     __weak typeof(self) weakSelf = self;
     if (error.code == NSURLErrorCannotFindHost && error.isHTTPError) {
-        MRAlertRecoveryAttempter *const attempter =
-            [MRAlertRecoveryAttempter attempterWithBlock:^UIAlertView *(NSError *const error, NSUInteger const recoveryOption, BOOL *const didRecover) {
+        MRBlockRecoveryAttempter *const attempter =
+        [MRBlockRecoveryAttempter attempterWithBlock:^(NSError *error, NSUInteger recoveryOption, BOOL *didRecover) {
                 if (recoveryOption == 0) {
                     if (error.code == NSURLErrorCannotFindHost && error.isHTTPError) {
-                        UIAlertView *const alert =
-                        [[UIAlertView alloc]initWithTitle:MRErrorKitString(@"Connect to", nil)
-                                                  message:nil
-                                                 delegate:error.recoveryAttempter
-                                        cancelButtonTitle:MRErrorKitString(@"Cancel", nil)
-                                        otherButtonTitles:MRErrorKitString(@"Retry", nil), nil];
-                        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-                        [alert textFieldAtIndex:0].text = weakSelf.urlTextField.text;
-                        return alert;
+                        UIAlertController *const alert =
+                        [UIAlertController alertControllerWithTitle:MRErrorKitString(@"Connect to", nil)
+                                                            message:nil
+                                                     preferredStyle:UIAlertControllerStyleAlert];
+                        [alert addTextFieldWithConfigurationHandler:nil];
+                        UITextField *textField = alert.textFields.firstObject;
+                        textField.text = weakSelf.urlTextField.text;
+                        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:MRErrorKitString(@"Cancel", nil)
+                                                                               style:UIAlertActionStyleCancel
+                                                                             handler:nil];
+                        [alert addAction:cancelAction];
+                        UIAlertAction *retryAction = [UIAlertAction actionWithTitle:MRErrorKitString(@"Retry", nil)
+                                                                               style:UIAlertActionStyleDefault
+                                                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                                                 weakSelf.urlTextField.text = textField.text;
+                                                                                 [weakSelf connectAction:nil];
+                                                                             }];
+                        [alert addAction:retryAction];
+                        [alert mr_show];
+                        *didRecover = YES;
                     }
                 }
-                return nil;
             }];
-        attempter.delegateHandler = ^BOOL(UIAlertView *const alertView, NSInteger const buttonIndex, BOOL *const finished) {
-            *finished = YES;
-            if (buttonIndex != alertView.cancelButtonIndex) {
-                weakSelf.urlTextField.text = [alertView textFieldAtIndex:0].text;
-                [weakSelf connectAction:nil];
-                return YES;
-            }
-            return NO;
-        };
         MRErrorBuilder *const builder = [MRErrorBuilder builderWithError:error];
         builder.recoveryAttempter = attempter;
         builder.localizedRecoveryOptions = @[ MRErrorKitString(@"Change URL", nil) ];

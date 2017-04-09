@@ -43,14 +43,12 @@
 		840B60C4180380520090A142 /* MRErrorFormatter+StoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B605F18037DEF0090A142 /* MRErrorFormatter+StoreKit.m */; };
 		840B60C5180380520090A142 /* MRErrorFormatter+TransitionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B606118037DEF0090A142 /* MRErrorFormatter+TransitionKit.m */; };
 		840B60C6180380520090A142 /* MRErrorFormatter+VeriJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B606318037DEF0090A142 /* MRErrorFormatter+VeriJSON.m */; };
-		840B60C7180380520090A142 /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B603518037DD40090A142 /* UIAlertView+ErrorKit.m */; };
 		840B60C8180380520090A142 /* UIApplication+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B603718037DD40090A142 /* UIApplication+ErrorKit.m */; };
 		840B60C9180380520090A142 /* UIApplication+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B603918037DD40090A142 /* UIApplication+FacebookSDK.m */; };
 		840B60CA180380520090A142 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B603B18037DD40090A142 /* UIResponder+ErrorKit.m */; };
 		840B60CB180380520090A142 /* UIResponder+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B603D18037DD40090A142 /* UIResponder+FacebookSDK.m */; };
 		840B60CC180380520090A142 /* MRAbstractRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B602D18037D9D0090A142 /* MRAbstractRecoveryAttempter.m */; };
 		840B60CD180380520090A142 /* MRBlockRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B602F18037D9D0090A142 /* MRBlockRecoveryAttempter.m */; };
-		840B60CE180380520090A142 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B603118037D9D0090A142 /* MRAlertRecoveryAttempter.m */; };
 		840B60CF180380520090A142 /* MRChainedRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B603318037D9D0090A142 /* MRChainedRecoveryAttempter.m */; };
 		840B60D0180380590090A142 /* NSArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B608518037E420090A142 /* NSArray+JSONValues.m */; };
 		84257FDE173ACDDB00AA1990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84257FDD173ACDDB00AA1990 /* UIKit.framework */; };
@@ -77,6 +75,7 @@
 		84AF4516181D7EF000EFC96A /* MRErrorBuilder+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4515181D7EF000EFC96A /* MRErrorBuilder+Parse.m */; };
 		84FEF6AA1813E1B90092FB26 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEF6A91813E1B90092FB26 /* NSError+Additions.m */; };
 		84FEF6AE1813E1E90092FB26 /* MRErrorBuilder+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEF6AD1813E1E90092FB26 /* MRErrorBuilder+Additions.m */; };
+		C4126C441E9AE7F600302F52 /* UIAlertController+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4126C421E9AE7F600302F52 /* UIAlertController+ErrorKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,12 +83,8 @@
 		840B602D18037D9D0090A142 /* MRAbstractRecoveryAttempter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MRAbstractRecoveryAttempter.m; path = ../ErrorKit/Core/MRAbstractRecoveryAttempter.m; sourceTree = "<group>"; };
 		840B602E18037D9D0090A142 /* MRBlockRecoveryAttempter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRBlockRecoveryAttempter.h; path = ../ErrorKit/Core/MRBlockRecoveryAttempter.h; sourceTree = "<group>"; };
 		840B602F18037D9D0090A142 /* MRBlockRecoveryAttempter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MRBlockRecoveryAttempter.m; path = ../ErrorKit/Core/MRBlockRecoveryAttempter.m; sourceTree = "<group>"; };
-		840B603018037D9D0090A142 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRAlertRecoveryAttempter.h; path = ../ErrorKit/UIKit/MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
-		840B603118037D9D0090A142 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MRAlertRecoveryAttempter.m; path = ../ErrorKit/UIKit/MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
 		840B603218037D9D0090A142 /* MRChainedRecoveryAttempter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MRChainedRecoveryAttempter.h; path = ../ErrorKit/Core/MRChainedRecoveryAttempter.h; sourceTree = "<group>"; };
 		840B603318037D9D0090A142 /* MRChainedRecoveryAttempter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MRChainedRecoveryAttempter.m; path = ../ErrorKit/Core/MRChainedRecoveryAttempter.m; sourceTree = "<group>"; };
-		840B603418037DD40090A142 /* UIAlertView+ErrorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+ErrorKit.h"; path = "../ErrorKit/UIKit/UIAlertView+ErrorKit.h"; sourceTree = "<group>"; };
-		840B603518037DD40090A142 /* UIAlertView+ErrorKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+ErrorKit.m"; path = "../ErrorKit/UIKit/UIAlertView+ErrorKit.m"; sourceTree = "<group>"; };
 		840B603618037DD40090A142 /* UIApplication+ErrorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIApplication+ErrorKit.h"; path = "../ErrorKit/UIKit/UIApplication+ErrorKit.h"; sourceTree = "<group>"; };
 		840B603718037DD40090A142 /* UIApplication+ErrorKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ErrorKit.m"; path = "../ErrorKit/UIKit/UIApplication+ErrorKit.m"; sourceTree = "<group>"; };
 		840B603818037DD40090A142 /* UIApplication+FacebookSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIApplication+FacebookSDK.h"; path = "../ErrorKit/FacebookSDK/UIApplication+FacebookSDK.h"; sourceTree = "<group>"; };
@@ -238,6 +233,8 @@
 		84FEF6AB1813E1C90092FB26 /* ErrorKit_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorKit_Additions.h; path = ../ErrorKit/Additions/ErrorKit_Additions.h; sourceTree = "<group>"; };
 		84FEF6AC1813E1E90092FB26 /* MRErrorBuilder+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRErrorBuilder+Additions.h"; path = "../ErrorKit/Additions/MRErrorBuilder+Additions.h"; sourceTree = "<group>"; };
 		84FEF6AD1813E1E90092FB26 /* MRErrorBuilder+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MRErrorBuilder+Additions.m"; path = "../ErrorKit/Additions/MRErrorBuilder+Additions.m"; sourceTree = "<group>"; };
+		C4126C421E9AE7F600302F52 /* UIAlertController+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+ErrorKit.m"; path = "../ErrorKit/UIKit/UIAlertController+ErrorKit.m"; sourceTree = "<group>"; };
+		C4126C431E9AE7F600302F52 /* UIAlertController+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+ErrorKit.h"; path = "../ErrorKit/UIKit/UIAlertController+ErrorKit.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,8 +480,8 @@
 		84258034173AD3FA00AA1990 /* present */ = {
 			isa = PBXGroup;
 			children = (
-				840B603418037DD40090A142 /* UIAlertView+ErrorKit.h */,
-				840B603518037DD40090A142 /* UIAlertView+ErrorKit.m */,
+				C4126C421E9AE7F600302F52 /* UIAlertController+ErrorKit.m */,
+				C4126C431E9AE7F600302F52 /* UIAlertController+ErrorKit.h */,
 				840B603618037DD40090A142 /* UIApplication+ErrorKit.h */,
 				840B603718037DD40090A142 /* UIApplication+ErrorKit.m */,
 				840B603818037DD40090A142 /* UIApplication+FacebookSDK.h */,
@@ -504,8 +501,6 @@
 				840B602D18037D9D0090A142 /* MRAbstractRecoveryAttempter.m */,
 				840B602E18037D9D0090A142 /* MRBlockRecoveryAttempter.h */,
 				840B602F18037D9D0090A142 /* MRBlockRecoveryAttempter.m */,
-				840B603018037D9D0090A142 /* MRAlertRecoveryAttempter.h */,
-				840B603118037D9D0090A142 /* MRAlertRecoveryAttempter.m */,
 				840B603218037D9D0090A142 /* MRChainedRecoveryAttempter.h */,
 				840B603318037D9D0090A142 /* MRChainedRecoveryAttempter.m */,
 			);
@@ -629,15 +624,14 @@
 				840B60C4180380520090A142 /* MRErrorFormatter+StoreKit.m in Sources */,
 				840B60C5180380520090A142 /* MRErrorFormatter+TransitionKit.m in Sources */,
 				840B60C6180380520090A142 /* MRErrorFormatter+VeriJSON.m in Sources */,
-				840B60C7180380520090A142 /* UIAlertView+ErrorKit.m in Sources */,
 				840B60C8180380520090A142 /* UIApplication+ErrorKit.m in Sources */,
 				84AF4516181D7EF000EFC96A /* MRErrorBuilder+Parse.m in Sources */,
 				840B60C9180380520090A142 /* UIApplication+FacebookSDK.m in Sources */,
 				840B60CA180380520090A142 /* UIResponder+ErrorKit.m in Sources */,
 				840B60CB180380520090A142 /* UIResponder+FacebookSDK.m in Sources */,
 				840B60CC180380520090A142 /* MRAbstractRecoveryAttempter.m in Sources */,
+				C4126C441E9AE7F600302F52 /* UIAlertController+ErrorKit.m in Sources */,
 				840B60CD180380520090A142 /* MRBlockRecoveryAttempter.m in Sources */,
-				840B60CE180380520090A142 /* MRAlertRecoveryAttempter.m in Sources */,
 				840B60CF180380520090A142 /* MRChainedRecoveryAttempter.m in Sources */,
 				840B60D0180380590090A142 /* NSArray+JSONValues.m in Sources */,
 				84FEF6AA1813E1B90092FB26 /* NSError+Additions.m in Sources */,
