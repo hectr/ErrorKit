@@ -60,7 +60,7 @@ static NSString *const __letters[] =
     if (_managedObjectContext == nil) {
         self.resultsController.delegate = nil;
         self.resultsController = nil;
-        MRAppDelegate *const appDelegate = UIApplication.sharedApplication.delegate;
+        MRAppDelegate *const appDelegate = (MRAppDelegate *)UIApplication.sharedApplication.delegate;
         NSError *error = nil;
         _managedObjectContext = [appDelegate managedObjectContextWithError:&error];
         [self presentError:error];
@@ -101,7 +101,7 @@ static NSString *const __letters[] =
 // Removes the persistent store in use by the Core Data stack.
 - (IBAction)removePersistentStoreAction:(id const)sender
 {
-    MRAppDelegate *const appDelegate = UIApplication.sharedApplication.delegate;
+    MRAppDelegate *const appDelegate = (MRAppDelegate *)UIApplication.sharedApplication.delegate;
     NSError *error = nil;
     NSFileManager *const defaultManager = NSFileManager.defaultManager;
     NSURL *const storeURL = appDelegate.storeURL;
@@ -172,7 +172,7 @@ static NSString *const __letters[] =
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     UIApplication *const sharedApplication = UIApplication.sharedApplication;
-    MRAppDelegate *const appDelegate = sharedApplication.delegate;
+    MRAppDelegate *const appDelegate = (MRAppDelegate *)sharedApplication.delegate;
     if (actionSheet.cancelButtonIndex == buttonIndex) {
         return;
     } else if (actionSheet.destructiveButtonIndex == buttonIndex) {
@@ -284,6 +284,8 @@ static NSString *const __letters[] =
             NSIndexSet *const indexSet = [NSIndexSet indexSetWithIndex:sectionIndex];
             [self.tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
         } break;
+        case NSFetchedResultsChangeMove: break;
+        case NSFetchedResultsChangeUpdate: break;
     }
 }
 
@@ -326,7 +328,7 @@ static NSString *const __letters[] =
     if (![error.domain isEqualToString:NSCocoaErrorDomain]) {
         return error;
     }
-    MRAppDelegate *const appDelegate = UIApplication.sharedApplication.delegate;
+    MRAppDelegate *const appDelegate = (MRAppDelegate *)UIApplication.sharedApplication.delegate;
     MRErrorBuilder *const builder = [MRErrorBuilder builderWithDomain:error.domain code:error.code];
     if (error.underlyingError) {
         builder.localizedFailureReason = [MRErrorFormatter stringWithDomain:error.underlyingError.domain code:error.underlyingError.code];
