@@ -30,5 +30,3 @@
 #import "UIApplication+ErrorKit.h"
 
 #import "UIResponder+ErrorKit.h"
-
-#import "MRAlertRecoveryAttempter.h"
